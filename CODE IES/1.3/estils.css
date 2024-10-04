@@ -1,0 +1,25 @@
+body { font-family:Verdana;}
+h1 {size:20px;
+    color:#333}
+h2 {size:16px;
+    color:#666}
+
+table, th, td {
+        border: 1px solid black;
+        border-collapse:collapse
+
+}
+caption{color:#000;
+size:14px}
+
+th{color:white;
+    background-color: #666;
+size:12px}
+tr{background-color:#fff}
+
+address{color:blue;
+    text-underline-position: below;
+    size:12px}
+    th, td {
+        padding: 15px;
+      }
