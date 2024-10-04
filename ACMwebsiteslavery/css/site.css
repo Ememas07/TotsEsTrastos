@@ -1,0 +1,211 @@
+
+html {
+    font-size: 14px;
+}
+
+@font-face {
+    font-family: 'Nasalization';
+    src: url('../font/nasalization.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    background-color: #262730;
+    color: white;
+    padding: 10px 0;
+    border-bottom: 3px;
+    border-bottom-color: #ff0000;
+    border-bottom-style: outset;
+    width: 100%;
+    z-index: 5;
+    max-height: 80px;
+    min-height: 80px;
+}
+
+    .header img {
+        max-height: 53px;
+        max-width: 350px;
+        position: absolute;
+        top: 12px;
+    }
+
+    .header .right-side {
+        position: absolute;
+        right: 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    .header .top-bar-middle {
+        margin-right: 2vw;
+    }
+
+    .header a {
+        color: silver;
+        font-family: Nasalization;
+        margin-right: 1vw;
+        margin-left: 1vw;
+    }
+
+    .header #discordButton {
+        background: var(--unnamed-color-7289da) 0% 0% no-repeat padding-box;
+        border-radius: 22px;
+        opacity: 1;
+        color: white;
+        margin-right: 1vw;
+    }
+
+.menu-button {
+    display: none;
+    cursor: pointer;
+}
+
+.side-menu {
+    position: fixed;
+    display: none;
+    top: 60px; /* Adjust the top position as needed */
+    right: 5px; /* Adjust the right position as needed */
+    background-color: #262730; /* Background color of the menu */
+    border: 1px solid red; /* Border around the menu */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for a bit of depth */
+    padding: 10px; /* Padding inside the menu */
+    z-index: 1000; /* Ensure it stays on top */
+    min-width: 160px; /* Adjust the width as needed */
+}
+
+    /* Styling for the links inside the side menu */
+    .side-menu a {
+        display: block; /* Each link on a new line */
+        padding: 8px 10px; /* Padding for each link */
+        text-decoration: none; /* Remove underline */
+        color: silver; /* Text color */
+        border-bottom: 1px solid #eee; /* Bottom border for each link */
+    }
+
+        /* Remove the border from the last link */
+        .side-menu a:last-child {
+            border-bottom: none;
+        }
+
+        /* Change background color on hover */
+        .side-menu a:hover {
+            background-color: #f0f0f0;
+        }
+
+@media (max-width: 335px){
+    #accountButtonIcon {
+        display: block;
+        margin-right: 30px;
+        margin-left: 10px;
+    }
+    .account-text {
+        display: none;
+    }
+} 
+@media (max-width: 650px) {
+    #headerLogoSolo {
+        display: block;
+    }
+
+    #headerLogoLong {
+        display: none;
+    }
+}
+@media (max-width: 940px){
+    .middle-button-group {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+@media (min-width: 336px) {
+    .account-button {
+        display: none;
+    }
+    .account-text {
+        display: block;
+    }
+}
+@media (min-width: 651px) {
+    #headerLogoSolo {
+        display: none;
+    }
+
+    #headerLogoLong {
+        display: block;
+    }
+}
+@media (min-width: 941px){
+    .middle-button-group {
+        display: block;
+    }
+
+    .menu-button {
+        display: none;
+    }
+}
+
+/* FOOTER */
+
+.custom-footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #262730;
+    color: white;
+    padding: 10px 0;
+    border-top: 3px;
+    border-top-color: red;
+    border-top-style: inset;
+    font-family: Nasalization;
+    margin-top: auto;
+    font-size: min(max(2vw, 8px), 14px)
+}
+
+    .custom-footer .large-4.cell {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        color: silver;
+    }
+
+        .custom-footer .large-4.cell a {
+            color: silver;
+        }
+
+            .custom-footer .large-4.cell a:hover {
+                color: grey;
+            }
+
+
+#footerLogoFull {
+    width: max(80px, 7vw);
+}

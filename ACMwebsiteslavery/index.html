@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard - ACM Racing</title>
+    <link rel="icon" href="/res/acmLogo.png" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://use.typekit.net/eup5ljn.css" />
+    <link rel="stylesheet" href="/css/foundation.css?v=QBIGHoQqlWdolQ1Xlv47VUy6h9QiSV-M47PPgMtYWj0" />
+    <link rel="stylesheet" href="/css/site.css?v=NslBvEr-E0WS2Txn9xjGzShxpsMnUogw4dT3plS78q0" />
+</head>
+
+<body>
+    <header b-vmxssgnzal>
+        <nav b-vmxssgnzal class="header top-bar">
+            <div b-vmxssgnzal class="top-bar-left" data-responsive-toggle="responsive-menu">
+                <a href="/"><img src="/res/acmLogoLong.png" alt="logo" id="headerLogoLong" /></a>
+                <a href="/"><img src="/res/acmLogoSolo.png" alt="logo" id="headerLogoSolo" style="padding-left: 30px;" /></a>
+            </div>
+            <div b-vmxssgnzal class="right-side">
+                <div b-vmxssgnzal class="top-bar-middle">
+                    <div b-vmxssgnzal class="middle-button-group">
+                        <a href="/">Home</a> /
+                        <a href="/Index/Events">browse Events</a> /
+                        <a href="/Index/Leaderboard">Leaderboard</a>
+                    </div>
+                    <div b-vmxssgnzal class="menu-button" onclick="toggleMenu()">&#9776;</div>
+                    <div b-vmxssgnzal class="side-menu">
+                        <a href="/">Home</a>
+                        <a href="/Index/Events">Browse Events</a>
+                        <a href="/Index/Leaderboard">Leaderboard</a>
+                    </div>
+                </div>
+                <div b-vmxssgnzal class="top-bar-right">
+                        <a class="account-button" id="accountButton" href="/Account/Login"><i b-vmxssgnzal class="fa fa-user" id="accountButtonIcon"></i></a>
+                        <a class="account-text" id="discordButton" href="/Account/Login"><i b-vmxssgnzal class="fab fa-discord"></i> Login With Discord</a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main b-vmxssgnzal role="main" class="pb-3">
+        
+<head>
+    <link rel="stylesheet" href="/css/leaderboard.css?v=_eCgeYGZuuoIAT9cmowOa4CERGWJHgkhZcvqwDc04FU" />
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css" />
+</head>
+
+<body>
+    <div class="top-image">
+        <img src="/res/EventPageBanner.jpg" alt="Banner Images" />
+    </div>
+
+    <div class="container">
+        <div class="leaderboard">
+            <h1>Browse Leaderboard</h1>
+            <div class="grid-x grid-padding-x">
+                <div class="large-10 cell">
+                    <!-- Pagination -->
+                        <div class="pagination">
+
+                                    <span id="CurrentPage">1</span>
+                                    <a href="?sortBy=&page=2&pageSize=50">2</a>
+                                    <a href="?sortBy=&page=3&pageSize=50">3</a>
+                                    <a href="?sortBy=&page=4&pageSize=50">4</a>
+                                    <a href="?sortBy=&page=5&pageSize=50">5</a>
+                                    <a href="?sortBy=&page=6&pageSize=50">6</a>
+                                    <a href="?sortBy=&page=7&pageSize=50">7</a>
+                                    <a href="?sortBy=&page=8&pageSize=50">8</a>
+                                    <a href="?sortBy=&page=9&pageSize=50">9</a>
+                                    <a href="?sortBy=&page=10&pageSize=50">10</a>
+
+                                <a href="?sortBy=&page=2&pageSize=50">Next</a>
+                                <a href="?sortBy=&page=10&pageSize=50">Last</a>
+                        </div>
+                </div>
+                <div class="large-2 cell">
+                    <form method="get" id="sortForm" action="/Index/Leaderboard">
+                        <select name="sortBy" onchange="submitForm()" data-val="true" data-val-required="The SelectedCriteria field is required." id="SelectedCriteria">
+                        <option>Pace Rating</option>
+<option>ACM Rating</option>
+<option>Total Laps</option>
+<option>Q1 Discord Series Tally</option>
+<option>Q2 Discord Series Tally</option>
+<option>Q3 Discord Series Tally</option>
+</select>
+                        <input type="submit" value="Sort" />
+                    </form>
+                </div>
+            </div>
+
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Pace Rating</th>
+                        <th>ACM Rating</th>
+                        <th>Laps</th>
+                        <th>Q1 Discord Series</th>
+                        <th>Q2 Discord Series</th>
+                        <th>Q3 Discord Series</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>s.prior</td>
+                            <td>46.166533610026036</td>
+                            <td>238.83838348773614</td>
+                            <td>2539</td>
+                            <td>913.8405048748667</td>
+                            <td>2633.9454470307655</td>
+                            <td>264.9476340209792</td>
+                        </tr>
+                        <tr>
+                            <td>ryanblanchette</td>
+                            <td>53.404532788594565</td>
+                            <td>188.3958748635122</td>
+                            <td>2121</td>
+                            <td>101.33503355793749</td>
+                            <td>3259.595996776754</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>asap2015</td>
+                            <td>51.19173207600911</td>
+                            <td>174.85238327151512</td>
+                            <td>1650</td>
+                            <td>359.02788658398106</td>
+                            <td>3297.636697512095</td>
+                            <td>555.7451774250948</td>
+                        </tr>
+                        <tr>
+                            <td>gr4y_14</td>
+                            <td>76.68000040690103</td>
+                            <td>194.91581205095946</td>
+                            <td>1649</td>
+                            <td>902.737444233814</td>
+                            <td>1981.041135151133</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>harryg0</td>
+                            <td>38.07880058288574</td>
+                            <td>170.3627654970216</td>
+                            <td>1532</td>
+                            <td>1053.8914160902382</td>
+                            <td>1494.5295350129195</td>
+                            <td>206.665641326183</td>
+                        </tr>
+                        <tr>
+                            <td>shockz0r</td>
+                            <td>67.6528012084961</td>
+                            <td>146.7272832950224</td>
+                            <td>1421</td>
+                            <td>82.27338036732777</td>
+                            <td>553.7325982281337</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>marcmas</td>
+                            <td>26.234399884541826</td>
+                            <td>49.4852505745353</td>
+                            <td>1243</td>
+                            <td>0</td>
+                            <td>1918.5205092203307</td>
+                            <td>346.02938941262573</td>
+                        </tr>
+                        <tr>
+                            <td>lun.4.tic</td>
+                            <td>58.705467783610025</td>
+                            <td>180.22156436738393</td>
+                            <td>1208</td>
+                            <td>762.8673536884511</td>
+                            <td>874.17722194655</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>m0rell</td>
+                            <td>70.10986582438152</td>
+                            <td>158.38872629829794</td>
+                            <td>1162</td>
+                            <td>881.8082408567998</td>
+                            <td>1296.6665585684293</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>uzeby</td>
+                            <td>60.228800710042314</td>
+                            <td>127.86163145792364</td>
+                            <td>1099</td>
+                            <td>34.41379075397647</td>
+                            <td>3422.9065984944127</td>
+                            <td>313.4033522191409</td>
+                        </tr>
+                        <tr>
+                            <td>.nubble</td>
+                            <td>41.37479985555013</td>
+                            <td>131.91539043745678</td>
+                            <td>1081</td>
+                            <td>664.7714699964305</td>
+                            <td>1777.1124806241392</td>
+                            <td>360.19976887454186</td>
+                        </tr>
+                        <tr>
+                            <td>aleksandrastakhov</td>
+                            <td>63.59506591796876</td>
+                            <td>153.437273752841</td>
+                            <td>1079</td>
+                            <td>169.33182975442557</td>
+                            <td>996.8009968578169</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>ekstrabartek</td>
+                            <td>51.95479906717936</td>
+                            <td>128.07360611149622</td>
+                            <td>1052</td>
+                            <td>0</td>
+                            <td>2429.5381624986985</td>
+                            <td>207.29550805063758</td>
+                        </tr>
+                        <tr>
+                            <td>threadus</td>
+                            <td>51.88079991658528</td>
+                            <td>151.60962556344094</td>
+                            <td>1013</td>
+                            <td>891.4470138111972</td>
+                            <td>1376.2734193036458</td>
+                            <td>58.547637866744026</td>
+                        </tr>
+                        <tr>
+                            <td>altosis</td>
+                            <td>49.62000025431315</td>
+                            <td>125.0685540878602</td>
+                            <td>892</td>
+                            <td>376.02788658398106</td>
+                            <td>2283.094294441172</td>
+                            <td>500.48547523605936</td>
+                        </tr>
+                        <tr>
+                            <td>zackzzon</td>
+                            <td>77.09906667073568</td>
+                            <td>135.453026537841</td>
+                            <td>871</td>
+                            <td>0</td>
+                            <td>709.1053033408261</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>lyslily</td>
+                            <td>63.20293314615885</td>
+                            <td>131.04387451929006</td>
+                            <td>860</td>
+                            <td>74.8122615369474</td>
+                            <td>2493.7958509740815</td>
+                            <td>196.22636210547338</td>
+                        </tr>
+                        <tr>
+                            <td>luca_mari</td>
+                            <td>62.73213322957357</td>
+                            <td>119.82579923477188</td>
+                            <td>683</td>
+                            <td>199.02951211777116</td>
+                            <td>690.8758277187835</td>
+                            <td>98.16470891486367</td>
+                        </tr>
+                        <tr>
+                            <td>fatoldpixel</td>
+                            <td>55.63093297322591</td>
+                            <td>140.9304138919389</td>
+                            <td>618</td>
+                            <td>0</td>
+                            <td>430.0732956815678</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>foxlis77</td>
+                            <td>38.14666699727376</td>
+                            <td>102.29153794521987</td>
+                            <td>601</td>
+                            <td>404.8597657051018</td>
+                            <td>450.6507025153313</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>tonyshoulders</td>
+                            <td>37.102266794840496</td>
+                            <td>120.29915963870653</td>
+                            <td>554</td>
+                            <td>723.3040100534914</td>
+                            <td>491.3136036563396</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>kaarmasa</td>
+                            <td>66.12573384602864</td>
+                            <td>85.52920629241788</td>
+                            <td>540</td>
+                            <td>0</td>
+                            <td>1185.3036957426234</td>
+                            <td>174.7506879647122</td>
+                        </tr>
+                        <tr>
+                            <td>totallynottiddlyosprey221</td>
+                            <td>68.98826655069986</td>
+                            <td>83.7833809962744</td>
+                            <td>531</td>
+                            <td>501.32294202767997</td>
+                            <td>631.048694037379</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>z_u_u_l</td>
+                            <td>57.49613311767578</td>
+                            <td>128.84945468898442</td>
+                            <td>523</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>andrew_pryadko</td>
+                            <td>60.02000010172526</td>
+                            <td>79.51492351929573</td>
+                            <td>520</td>
+                            <td>0</td>
+                            <td>101.88862571968788</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>tom2808</td>
+                            <td>58.56146560668946</td>
+                            <td>122.50337968912476</td>
+                            <td>513</td>
+                            <td>0</td>
+                            <td>1167.5104855031802</td>
+                            <td>121.02831310704768</td>
+                        </tr>
+                        <tr>
+                            <td>patrickbijsters</td>
+                            <td>57.53386561075847</td>
+                            <td>122.69712007370714</td>
+                            <td>473</td>
+                            <td>147.90797362579576</td>
+                            <td>0</td>
+                            <td>103.25970218903544</td>
+                        </tr>
+                        <tr>
+                            <td>barrygibbons</td>
+                            <td>69.59080006917317</td>
+                            <td>116.62377988217004</td>
+                            <td>457</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>oberbonzepipapo</td>
+                            <td>56.651067454020186</td>
+                            <td>108.4819491153931</td>
+                            <td>429</td>
+                            <td>0</td>
+                            <td>681.4544039997713</td>
+                            <td>116.02831310704768</td>
+                        </tr>
+                        <tr>
+                            <td>mikhailsuloev</td>
+                            <td>53.632534077962234</td>
+                            <td>87.54893439822517</td>
+                            <td>427</td>
+                            <td>86.27570908794948</td>
+                            <td>116.04952814689129</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>juanalvarez1347</td>
+                            <td>31.87986701965332</td>
+                            <td>48.95238102038371</td>
+                            <td>420</td>
+                            <td>0</td>
+                            <td>126.58735344864527</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>dreher_80649</td>
+                            <td>75.81946614583333</td>
+                            <td>132.9742196347143</td>
+                            <td>401</td>
+                            <td>0</td>
+                            <td>361.6851495984506</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>sy1ine</td>
+                            <td>53.99266571044923</td>
+                            <td>72.16769397575365</td>
+                            <td>395</td>
+                            <td>36.064201885658164</td>
+                            <td>406.27973673725967</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>matt.c.y</td>
+                            <td>55.00813283284504</td>
+                            <td>118.90793323301168</td>
+                            <td>383</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>thedergg</td>
+                            <td>51.060400594075524</td>
+                            <td>101.69627806930976</td>
+                            <td>372</td>
+                            <td>152.78308610585543</td>
+                            <td>1102.0676784045302</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>damko3457</td>
+                            <td>81.97213256835938</td>
+                            <td>111.2596048340115</td>
+                            <td>359</td>
+                            <td>0</td>
+                            <td>1213.548411130944</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>djococo</td>
+                            <td>51.214132639567055</td>
+                            <td>119.7866415415387</td>
+                            <td>348</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>gavlar1</td>
+                            <td>12.044266624450682</td>
+                            <td>8.658189901620403</td>
+                            <td>342</td>
+                            <td>0</td>
+                            <td>405.2864869943282</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>darknesswithinn</td>
+                            <td>28.79693303426107</td>
+                            <td>26.43590439534877</td>
+                            <td>342</td>
+                            <td>9.274934205576486</td>
+                            <td>626.4910325733938</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>formulacringe</td>
+                            <td>69.72426635742187</td>
+                            <td>49.4243228778493</td>
+                            <td>341</td>
+                            <td>0</td>
+                            <td>980.4762099263837</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>hag24</td>
+                            <td>26.53973280588786</td>
+                            <td>81.03726630962369</td>
+                            <td>329</td>
+                            <td>625.320421426436</td>
+                            <td>0</td>
+                            <td>155.84037831710347</td>
+                        </tr>
+                        <tr>
+                            <td>ramseyconnely</td>
+                            <td>40.426265970865884</td>
+                            <td>100.60547718150295</td>
+                            <td>322</td>
+                            <td>0</td>
+                            <td>124.06491120246295</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>n.feverphxhybou74</td>
+                            <td>66.16333328247069</td>
+                            <td>96.14653437591872</td>
+                            <td>319</td>
+                            <td>0</td>
+                            <td>182.57362045151064</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>stijn96</td>
+                            <td>50.89013331095378</td>
+                            <td>100.41435913709734</td>
+                            <td>305</td>
+                            <td>137.9511180853474</td>
+                            <td>140.5461563493741</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>fabio.gallamini</td>
+                            <td>57.45893305460611</td>
+                            <td>58.021534894550854</td>
+                            <td>299</td>
+                            <td>0</td>
+                            <td>287.7787180851976</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>thecowmaster935</td>
+                            <td>61.57066731770833</td>
+                            <td>73.87208408633889</td>
+                            <td>296</td>
+                            <td>0</td>
+                            <td>777.1328818125291</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>actros81</td>
+                            <td>44.96866719563802</td>
+                            <td>94.54897797738377</td>
+                            <td>292</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>vegasj4040</td>
+                            <td>18.22706659952799</td>
+                            <td>87.05513507001376</td>
+                            <td>292</td>
+                            <td>266.3934769420788</td>
+                            <td>263.4700925653309</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>osully14</td>
+                            <td>48.3565321858724</td>
+                            <td>85.46743178731418</td>
+                            <td>287</td>
+                            <td>0</td>
+                            <td>198.70659180666897</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>athedivebomber</td>
+                            <td>15.62293312072754</td>
+                            <td>50.63531178508738</td>
+                            <td>286</td>
+                            <td>95.97212485558597</td>
+                            <td>227.35366336065417</td>
+                            <td>69.1980489984257</td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+        <script src="/lib/jquery/dist/jquery.min.js?v=_xUj-3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej_m4"></script>
+        <script src="/js/index.js?v=YvtuonB_3HMxM3SxYGeAJC8Y3ZmvoR811AB4ZnkjCC0"></script>
+        <script>
+            function submitForm() {
+                document.getElementById('sortForm').submit();
+            }
+        </script>
+    </div>
+</body>
+    </main>
+
+
+    <footer b-vmxssgnzal class="custom-footer title-bar">
+        <div b-vmxssgnzal class="container">
+            <div b-vmxssgnzal class="grid-x grid-padding-x">
+                <div b-vmxssgnzal class="large-8 medium-8 small-8 cell">
+                    <div b-vmxssgnzal>
+                        <img src="/res/acmLogoFull.png" alt="Logo" id="footerLogoFull" />
+                    </div>
+                </div>
+                <div b-vmxssgnzal class="large-4 medium-4 small-4 cell">
+                    <p b-vmxssgnzal>&copy; ACM Racing 2024<br b-vmxssgnzal />
+                        <a b-vmxssgnzal href="https://www.discord.gg/ZKPeyuvbMJ" target="_blank"><i b-vmxssgnzal class="fab fa-discord"></i> Join Our Discord</a><br b-vmxssgnzal />
+                        <a b-vmxssgnzal href=""><i b-vmxssgnzal class="fa fa-cookie"></i> Cookie Policy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/slick.js?v=2qgWw1xcRxXQ4Aq4JPh7_sNs_C6otuKIe2xYWgshu3k"></script>
+    <script src="/js/site.js?v=2F_xxMk_hpLNJUfuo7WmxbZtOzimrnWNaXGSQQUThQo"></script>
+    
+</body>
+</html>
