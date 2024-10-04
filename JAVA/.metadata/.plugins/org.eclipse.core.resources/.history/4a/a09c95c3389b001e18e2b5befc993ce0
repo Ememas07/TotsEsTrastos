@@ -1,0 +1,47 @@
+
+
+import javax.swing.JOptionPane;;
+public class Exercisi4 {
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+	String nom =JOptionPane.showInputDialog("Com te noms?");
+	String nom = input.nextLine();
+	System.out.print("Benvingut " +nom);
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

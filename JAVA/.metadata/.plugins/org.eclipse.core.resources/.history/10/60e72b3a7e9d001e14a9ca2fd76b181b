@@ -1,0 +1,70 @@
+import java.nio.charset.StandardCharsets;
+
+import javax.swing.JOptionPane;
+
+public class Exercisi8 {
+	public static void main(String[] args) {
+	String optionPaneInput = JOptionPane.showInputDialog("Introdueix un codi ASCII");
+	
+	char character = 'a' ;
+	
+	
+	int ascii = character;
+	
+//	String.getBytes(StandardCharsets.US_ASCII);
+	
+	
+	
+	
+	
+	System.out.println(ascii);
+
+	
+	
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

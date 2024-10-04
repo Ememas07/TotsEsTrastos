@@ -1,0 +1,62 @@
+import javax.swing.JOptionPane;
+
+public class Exercisi8 {
+	public static void main(String[] args) {
+	String OptionPaneInput = JOptionPane.showInputDialog("Introdueix un codi ASCII");
+	
+	
+	
+	
+	
+	
+	System.out.println(OptionPaneInput);
+
+	
+	
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

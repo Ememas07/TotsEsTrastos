@@ -1,0 +1,73 @@
+import javax.swing.JOptionPane;
+
+public class Exercisi13 {
+	public static void main(String[] args) {
+	String ventes = JOptionPane.showInputDialog("Número de ventes");
+	int numeroVentes = Integer.parseInt(ventes);
+	int contador = 1;
+	int acumulat = 0;
+	System.out.println("Ha seleccionat "+ventes +" ventes");
+	
+	
+	if(contador <numeroVentes){
+	while(contador <numeroVentes) {
+	String venta=JOptionPane.showInputDialog("Està fent la venta " +contador);
+	int ventaInt=Integer.parseInt(venta);
+	acumulat = acumulat+ventaInt;
+	contador++;
+	}
+	}else {
+	System.out.println(acumulat);
+	}
+	
+	
+	
+	
+	
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

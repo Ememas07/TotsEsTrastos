@@ -1,0 +1,8 @@
+@echo off
+color 2
+:hola
+type 2.txt
+pause
+cls
+type 1.txt
+goto hola

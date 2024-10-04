@@ -1,0 +1,49 @@
+
+
+import java.util.Scanner;
+public class Exercisi4 {
+	public static void main(String[] args) {
+	var input = new Scanner(System.in);
+	System.out.println("Com te noms?");
+	String nom = input.nextLine();
+	System.out.print("Benvingut " +nom);
+		
+		
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

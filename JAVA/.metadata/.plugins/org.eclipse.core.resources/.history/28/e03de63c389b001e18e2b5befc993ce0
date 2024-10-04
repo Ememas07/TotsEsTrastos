@@ -1,0 +1,54 @@
+
+
+import java.util.Scanner;
+public class Exercisi5 {
+	public static void main(String[] args) {
+	System.out.println("Computació de l'àrea d'un cercle");
+	
+	Scanner input = new Scanner(System.in);
+	System.out.println("Quin és el radi");
+	int radi = input.nextInt();
+	
+	
+	
+	
+	
+	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

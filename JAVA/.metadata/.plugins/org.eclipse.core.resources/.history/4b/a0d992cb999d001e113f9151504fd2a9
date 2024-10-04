@@ -1,0 +1,68 @@
+import javax.swing.JOptionPane;
+
+public class Exercisi14 {
+	public static void main(String[] args) {
+	System.out.println("Calculador d'equacions de segon grau");
+//	String numeroA = JOptionPane.showInputDialog("Numero A");
+	String numeroB = JOptionPane.showInputDialog("Numero B");
+	String numeroC = JOptionPane.showInputDialog("Numero C");
+	
+	
+	Int numeroA = Integer.parseInt(.showInputDialog("Numero A"));
+	
+	
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+
+public class Exercisi2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	int n1 = 14;
+	int n2 = 3;
+	int major = Math.max(n1, n2);
+	int menor = Math.min(n1, n2);
+	
+	
+	
+	
+	
+	
+	}
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

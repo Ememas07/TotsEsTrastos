@@ -1,0 +1,59 @@
+import javax.swing.JOptionPane;
+
+public class Exercisi8 {
+	public static void main(String[] args) {
+	String codi = JOptionPane.showInputDialog("Introdueix un caràcter");
+	char carac = (char) codi;
+	int char= Integer.parseInt(carac);
+	
+	System.out.println(char);
+	
+	
+	
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

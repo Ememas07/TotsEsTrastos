@@ -1,0 +1,59 @@
+import javax.swing.JOptionPane;
+
+public class Exercisi9 {
+	public static void main(String[] args) {
+	String optionPaneInput = JOptionPane.showInputDialog("Quin és el teu preu");
+	int inputInteger = Integer.parseInt(optionPaneInput);
+	int preuAmbIVA = inputInteger* Integer.parseInt(1.21);
+	
+	
+	
+	
+	
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

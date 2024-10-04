@@ -1,0 +1,56 @@
+import javax.swing.JOptionPane;
+
+public class Exercisi7 {
+	public static void main(String[] args) {
+	System.out.println("Nombre divisible per 2");
+	String num1 = JOptionPane.showInputDialog("Introdueix un codi ASCII");
+	int codi= Int.parseint(num1);
+	System.out.println(codi);
+	
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

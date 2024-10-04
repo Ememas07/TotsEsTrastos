@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "SQL SERVERCLASSE",
+            "database": "marcmas",
+            "username": "root",
+            "password": "mariando07"
+        }
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
+}
