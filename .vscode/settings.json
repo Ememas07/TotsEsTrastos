@@ -16,6 +16,5 @@
         }
     ],
     "java.debug.settings.onBuildFailureProceed": true
-}{
-    "python.analysis.typeCheckingMode": "off"
+    ,"python.analysis.typeCheckingMode": "off"
 }
