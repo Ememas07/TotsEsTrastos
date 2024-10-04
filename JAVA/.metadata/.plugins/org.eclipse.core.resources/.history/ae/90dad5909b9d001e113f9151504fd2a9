@@ -1,0 +1,76 @@
+import javax.swing.JOptionPane;
+
+public class Exercisi14 {
+	public static void main(String[] args) {
+	System.out.println("Calculador d'equacions de segon grau");
+
+	
+	
+	int A = Integer.parseInt(JOptionPane.showInputDialog("Numero A"));
+	int B = Integer.parseInt(JOptionPane.showInputDialog("Numero B"));
+	int C = Integer.parseInt(JOptionPane.showInputDialog("Numero C"));
+	if(-4*A*C <0 || 2*A == 0) {
+		System.out.println("No té solució");
+	}
+	
+	
+	
+	
+	
+	//Parts de l'equació: -b, -4ac, sqrt, 2a, 
+	
+	
+	
+
+	
+	
+
+	
+	
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+import java.nio.charset.StandardCharsets;
+
+import javax.swing.JOptionPane;
+
+public class Exercisi8 {
+	public static void main(String[] args) {
+	String optionPaneInput = JOptionPane.showInputDialog("Introdueix un codi ASCII");
+	
+	char caracter=optionPaneInput.charAt(0);
+	
+	
+//	char character = ;
+	
+	
+	int ascii = caracter;
+	
+//	String.getBytes(StandardCharsets.US_ASCII);
+	
+	
+	
+	
+	
+	System.out.println("La representació ascii de "+optionPaneInput +"és" +ascii);
+
+	
+	
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

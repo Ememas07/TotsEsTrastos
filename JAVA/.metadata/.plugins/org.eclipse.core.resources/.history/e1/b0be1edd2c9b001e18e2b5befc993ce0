@@ -1,0 +1,46 @@
+
+public class Exercisi4 {
+
+	public static void main(String[] args) {
+	String nom = "Josep"	;
+	System.out.print("Benvingut " +nom);
+			
+			
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

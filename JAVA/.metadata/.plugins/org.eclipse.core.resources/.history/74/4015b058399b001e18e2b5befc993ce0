@@ -1,0 +1,54 @@
+
+import javax.swing.JOptionPane;
+public class Exercisi5 {
+	public static void main(String[] args) {
+	System.out.println("Computació de l'àrea d'un cercle");
+	String radi =JOptionPane.QUESTION_MESSAGE("Radi?");
+	int radi2 = radi*radi;
+	System.out.println(radi2*Math.PI);
+	
+		
+	
+	
+	
+	
+	
+	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

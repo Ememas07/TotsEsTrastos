@@ -1,0 +1,64 @@
+import javax.swing.JOptionPane;
+
+public class Exercisi13 {
+	public static void main(String[] args) {
+	String ventes = JOptionPane.showInputDialog("Número de ventes");
+	int numeroVentes = Integer.parseInt(ventes);
+	int contador = 0;
+	System.out.println("Ha seleccionat " +ventes" ventes");
+	while(contador <numeroVentes) {
+	System.out.println();
+		
+	}
+		
+	
+	
+	
+	
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

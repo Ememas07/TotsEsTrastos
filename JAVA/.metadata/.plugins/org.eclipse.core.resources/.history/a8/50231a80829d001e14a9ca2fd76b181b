@@ -1,0 +1,60 @@
+
+
+public class Exercisi11 {
+	public static void main(String[] args) {
+	int numero = 0;
+	for (int numero = 0;numero <=99;numero++) {
+		System.out.println(numero);
+	}
+	
+	
+	
+	
+	
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
