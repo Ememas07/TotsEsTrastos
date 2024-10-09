@@ -26,8 +26,10 @@ public class Exercisi20 {
         System.out.println(">>" + contador);
 
         if (contador < 1) {
+
             System.out.println("El numero " + numero + " es primo");
         } else {
+
             System.out.println("El numero " + numero + " no es primo");
         }
 
