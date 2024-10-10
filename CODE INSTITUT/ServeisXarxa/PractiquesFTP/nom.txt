@@ -1,0 +1,15 @@
+Marc Mas Hernández
+Estic fent una práctica on esteim explicant com funcionen les connexions FTP amb el CMD.
+
+Llistat instruccions:
+ftp get
+delete
+debug
+glob
+hash
+mkdir
+mget
+rename
+quote
+close
+bye
