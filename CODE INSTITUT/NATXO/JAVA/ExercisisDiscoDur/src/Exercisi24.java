@@ -6,8 +6,14 @@ public class Exercisi24 {
         // ASCII. Muestralos en linea recta, separados por un espacio entre cada
         // carácter.
         String frase = "La lluvia en Sevilla es una maravilla";
-        String frasefinal = frase.replace("a", "e");
-        System.out.println(frasefinal);
+        Integer index = 0;
+        while (frase.length() > index) {
+            int codi = Integer.parseInt(frase);
+            char carac = (char) codi;
+            System.out.println(carac);
+
+        }
+
     }
 
 }
