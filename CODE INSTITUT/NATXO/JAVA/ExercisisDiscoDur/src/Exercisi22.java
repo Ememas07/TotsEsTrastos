@@ -5,18 +5,26 @@ public class Exercisi22 {
 
         String frase = "La lluvia en Sevilla es una maravilla";
         Integer index = 0;
+        Integer numerovocals = 0;
 
-        switch (frase.charAt(index)) {
-            case 'a':
-            case 'e':
-            case 'i':
-            case 'o':
-            case 'u':
+        while (frase.length() > index) {
+            switch (frase.charAt(index)) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    numerovocals = numerovocals + 1;
+                    index = index + 1;
+                    break;
 
-                break;
+                default:
+                    index = index + 1;
 
-            default:
-                break;
+                    break;
+            }
+
         }
+        System.out.println("La frase tiene " + numerovocals + " Vocales");
     }
 }
