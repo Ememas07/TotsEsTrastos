@@ -7,12 +7,15 @@ public class Exercisi24 {
         // carácter.
         String frase = "La lluvia en Sevilla es una maravilla";
         Integer index = 0;
+        String frasecanviada = "";
         while (frase.length() > index) {
-            int codi = Integer.parseInt(frase);
-            char carac = (char) codi;
-            System.out.println(carac);
+            char caracter = frase.charAt(index);
+            int ascii = caracter;
+            frasecanviada = frasecanviada + " " + ascii;
+            index = index + 1;
 
         }
+        System.out.println("Inici" + frasecanviada + " Final");
 
     }
 
