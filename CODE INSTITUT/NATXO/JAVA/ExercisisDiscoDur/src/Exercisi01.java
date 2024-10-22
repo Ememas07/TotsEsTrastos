@@ -15,6 +15,7 @@ public class Exercisi01 {
 		System.out.println(n1 / n2);
 		System.out.print("El resto es  ");
 		System.out.println(n1 % n2);
+		// commit
 
 	}
 
