@@ -1,0 +1,7 @@
+1. crear maquina
+2. apache
+3. FTP
+
+
+
+
