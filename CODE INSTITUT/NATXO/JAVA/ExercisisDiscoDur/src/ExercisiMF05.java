@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;;
+
 public class ExercisiMF05 {
     public static void main(String[] args) {
         // 5) Crea una aplicación que nos convierta un número en base decimal a binario.
@@ -9,6 +11,16 @@ public class ExercisiMF05 {
         // arriba. Veamos un ejemplo: si introducimos un 8 nos deberá devolver
         // 1000decimalabinario
 
+        Integer num = Integer.parseInt(JOptionPane.showInputDialog("Introdueix numero"));
+        Integer numactual = num;
+        Integer resto = 0;
+        String resultatactual = "";
+        while (numactual > 1) {
+            numactual = numactual / 2;
+            resto = numactual % 2;
+            resultatactual = resultatactual + resto;
+        }
+        System.out.println(resultatactual);
     }
 
 }

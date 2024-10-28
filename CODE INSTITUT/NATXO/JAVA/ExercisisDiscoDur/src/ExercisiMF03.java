@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public class ExercisiMF03 {
     public static void main(String[] args) {
         // 3) Crea una aplicación que nos pida un número por teclado y con un método se
@@ -7,6 +9,22 @@ public class ExercisiMF03 {
         // divisible entre 5, sin embargo, 17 si es primo. Un buen truco para calcular
         // la raíz cuadrada del numero e ir comprobando que si es divisible desde ese
         // numero hasta 1.
-        // Double numero1 = Double.parseDouble();
+        int numero1 = Integer.parseInt(JOptionPane.showInputDialog("Introduexi Numero"));
+        if (isPrime(numero1)) {
+            System.out.println("Es primer");
+        } else {
+            System.out.println("No es primer");
+        }
+    }
+
+    static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= num / 2; i++) {
+            if ((num % i) == 0)
+                return false;
+        }
+        return true;
     }
 }
