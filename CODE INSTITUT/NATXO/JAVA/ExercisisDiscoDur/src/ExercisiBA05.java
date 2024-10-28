@@ -2,13 +2,19 @@ import javax.swing.JOptionPane;
 
 public class ExercisiBA05 {
     public static void main(String[] args) {
-        Integer numero = Integer.parseInt(JOptionPane.showInputDialog("numero"));
-        String escala = "";
-        Integer contador = 1;
-        while (contador <= numero) {
-            escala = escala + contador;
-            contador = contador + 1;
-            System.out.println(escala);
+        Integer altura = Integer.parseInt(JOptionPane.showInputDialog("numero"));
+        for (int numeroespacios = altura,
+                numeroasteriscos = 1; numeroasteriscos <= (altura * 2) - 1; numeroespacios--, numeroasteriscos += 2) {
+            // Espacios
+            for (int i = 0; i < numeroespacios; i++) {
+                System.out.print(" ");
+            }
+            // Asteriscos
+            for (int j = numeroasteriscos; j != 0; j--) {
+                System.out.print("*");
+            }
+            System.out.println("");
+
         }
 
     }
