@@ -27,127 +27,108 @@
     <section>
         <div class="punt">
             <h2>EXPLICACIÓ DE LA PRÀCTICA 1</h2>
-            <p></p>
+            <p>Per la pràctica 1 ens hem connectat al servidor de gimensia amb filezilla i amb CMD</p>
             <img src="">
         </div>
         <div class="punt">
             <h2>FASES</h2>
             <ul>
-                <li>Instal·lació virtualbox i vagrant</li>
-                <li>Inicialització i preparació vagrant</li>
-                <li>Arrancam i entram a la màquina</li>
-                <li>Instal·lam apache</li>
-                <li>Arrancam apache</li>
-                <li>Comprovam que està funcional</li>
+                <li>Instal·lació FileZilla</li>
+                <li>Configuració de sitios</li>
+                <li>Creació de carpetes i arxius</li>
+                <li>Permisos</li>
+                <li>CMD</li>
 
             </ul>
         </div>
         <div class="punt">
-            <h2>FASE 1: Instal·lació Virtualbox i Vagrant</h2>
+            <h2>FASE 1: Instal·lació FileZilla</h2>
             <ul>
-                <li>Per començar hem d’instalar el vagrant i el virtualbox versió 7.0</li>
-                <li>Anirem a la pàgina de descàrregues del vagrant i ens descarregarem la darrera versió.</li>
+                <li>Per començar hem anat a la pàgina de filezilla i l'hem instal·lat</li>
             </ul>
         </div>
         <div class="punt">
-            <h2>FASE 2:  Inicialització  i preparació Vagrant</h2>
+            <h2>FASE 2: Configuració de sitios</h2>
             <ul>
-                <li>Després crearem una carpeta amb un nom que volguem (en el meu cas posarem apache-vm), i escriurem “vagrant init”</li>
-                <li>Això ens crearà un vagrantfile, i aquest vagrantfile nosaltres l’editarem.</li>
-                <li>Canviarem la linea de "config.vm.box" a "bento/ubuntu-22.04</li>
-                <li>Descomentarem les linees de:<ul>
-                    <li>config.vm.network "forwarded_port", guest: 80, host: 8080</li>
-                    <li>config.vm.network "public_network", ip: "10.0.100.161"</li>
-                    <li>config.vm.network "public_network"</li></ul>
+                <li>Anam a la configuració de sitios i configuram:</li>
+                    <ul>
+                        <li>Protocol: FTP</li>
+                        <li>Host: FTP.Gimnesia.net</li>
+                        <li>Port: 21</li>
+                        <li>User: Alumne.gimnesia.net</li>
+                        <li>Password: entradaFTP21</li>
+                    </ul>
+                <li>I pitjam connect</li>
             </ul>
         </div>
 
         <div class="punt">
-            <h2>FASE 3: Arrancam  i entram a la màquina</h2>
+            <h2>FASE 3: Creació de carpetes i arxius</h2>
             <ul>
-                <li>Feim un vagrant up</li>
-                <li>I després un vagrant ssh</li>
+                <li>Després hem creat totes les carpetes i arxius que tu has dit al servidor</li>
             </ul>
         </div>
         <div class="punt">
-            <h2>FASE 4: Instal·lam  i arrancam apache</h2>
+            <h2>FASE 4: Permisos</h2>
             <ul>
-                <li>Abans de res, farem un "sudo apt-get update" per actualitzar els paquets</li>
-                <li>Després, "sudo apt-get install apache2" per instalar el servidor de apache</li>
-                <li>finalment farem "sudo service apache2 start" per arrancar-lo</li>
+                <li>També varem configurar els permisos dels arxius</li>
             </ul>
         </div>
         <div class="punt">
-            <h2>FASE 5: Comprovam que funciona</h2>
+            <h2>FASE 5: CMD</h2>
             <ul>
-                <li>Si feim "sudo service apache2 status" podem comprovar si el server de apache funciona.</li>
-                <li>Podem provar de fer "curl localhost" per comprovar que realment funciona</li>
-                <li>Després podem fer un "IP A" per veure la IP de la màquina</li>
-                <li>I si introduim aquesta IP de la màquina a un navegador tocam poder vuere que l'apache2 s'ha instal·lat i funciona correctament</li>
+                <li>Per connectar-nos per cmd posam "ftp ftp.gimnesia.net"</li>
+                <li>Per fer un directori posam mkdir</li>
             </ul>
         </div>
     </section>
     <section>
         <div class="punt">
-            <h2>EXPLICACIÓ DE LA PRÀCTICA 3</h2>
-            <p> Per aquesta pràctica hem creat un servidor apache2 amb vagrant i virtualbox
-            </p>
+            <h2>EXPLICACIÓ DE LA PRÀCTICA 2</h2>
+            <p> Per aquesta pràctica hem configurat el nostre server de filezilla</p>
             <img src="">
         </div>
         <div class="punt">
             <h2>FASES</h2>
             <ul>
-                <li>Instal·lació virtualbox i vagrant</li>
-                <li>Inicialització i preparació vagrant</li>
-                <li>Arrancam i entram a la màquina</li>
-                <li>Instal·lam apache</li>
-                <li>Arrancam apache</li>
-                <li>Comprovam que està funcional</li>
-
+                <li>Instal·lació FileZilla server</li>
+                <li>Configuració inicial</li>
+                <li>Connexió al servidor</li>
+                <li>Permisos de grups, usuaris</li>
+                <li>Proves de connexió</li>
             </ul>
         </div>
         <div class="punt">
-            <h2>FASE 1: Instal·lació Virtualbox i Vagrant</h2>
+            <h2>FASE 1: Instal·lació FileZilla server</h2>
             <ul>
-                <li>Per començar hem d’instalar el vagrant i el virtualbox versió 7.0</li>
-                <li>Anirem a la pàgina de descàrregues del vagrant i ens descarregarem la darrera versió.</li>
+                <li>Anam a la pàgina oficial de filezilla server i la descarregam</li>
             </ul>
         </div>
         <div class="punt">
-            <h2>FASE 2:  Inicialització  i preparació Vagrant</h2>
+            <h2>FASE 2:  Configuració inicial</h2>
             <ul>
-                <li>Després crearem una carpeta amb un nom que volguem (en el meu cas posarem apache-vm), i escriurem “vagrant init”</li>
-                <li>Això ens crearà un vagrantfile, i aquest vagrantfile nosaltres l’editarem.</li>
-                <li>Canviarem la linea de "config.vm.box" a "bento/ubuntu-22.04</li>
-                <li>Descomentarem les linees de:<ul>
-                    <li>config.vm.network "forwarded_port", guest: 80, host: 8080</li>
-                    <li>config.vm.network "public_network", ip: "10.0.100.161"</li>
-                    <li>config.vm.network "public_network"</li></ul>
-            </ul>
-        </div>
-
-        <div class="punt">
-            <h2>FASE 3: Arrancam  i entram a la màquina</h2>
-            <ul>
-                <li>Feim un vagrant up</li>
-                <li>I després un vagrant ssh</li>
+                <li>Feim el configurador inicial</li>
+                <li>Pitjam connect to server i posam usuari, contrassenya i port d'administració</li>
             </ul>
         </div>
         <div class="punt">
-            <h2>FASE 4: Instal·lam  i arrancam apache</h2>
+            <h2>FASE 3: Proves de connexió</h2>
             <ul>
-                <li>Abans de res, farem un "sudo apt-get update" per actualitzar els paquets</li>
-                <li>Després, "sudo apt-get install apache2" per instalar el servidor de apache</li>
-                <li>finalment farem "sudo service apache2 start" per arrancar-lo</li>
+                <li>Primer provam de fer un ping a la màquina</li>
+                <li>Si funciona, també provam un tracert</li>
+                <li>Finalment provam de fer "ftp" i la IP de la màquina</li>
+                </ul>
+        </div>
+        <div class="punt">
+            <h2>FASE 4: Connexió al servidor</h2>
+            <ul>
+                <li>Anam a un altre màquina i posam la seva IP al filezilla client, posam un usuari i contrassenya i toca funcionar.</li>
             </ul>
         </div>
         <div class="punt">
-            <h2>FASE 5: Comprovam que funciona</h2>
+            <h2>FASE 5: Permisos de grups, usuaris</h2>
             <ul>
-                <li>Si feim "sudo service apache2 status" podem comprovar si el server de apache funciona.</li>
-                <li>Podem provar de fer "curl localhost" per comprovar que realment funciona</li>
-                <li>Després podem fer un "IP A" per veure la IP de la màquina</li>
-                <li>I si introduim aquesta IP de la màquina a un navegador tocam poder vuere que l'apache2 s'ha instal·lat i funciona correctament</li>
+                <li>Per administrar permisos de grups i usuaris se fa tot desde la part de "users" i "groups" del filezilla server</li>
             </ul>
         </div>
     </section>
