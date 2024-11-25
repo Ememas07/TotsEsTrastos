@@ -1,6 +1,3 @@
 #!/bin/bash
 echo BON DIA. ARA SUMARE DOS NUMEROS
-a=5
-b=8
-c=$((a+b))
-echo $c
+echo $(($1+$2))
