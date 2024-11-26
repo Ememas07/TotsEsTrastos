@@ -1,5 +1,4 @@
 #!/bin/bash
-echo BON DIA. ARA SUMARE DOS NUMEROS
 echo Numero 1?
 read n1
 echo Numero 2?
