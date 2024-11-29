@@ -1,5 +1,5 @@
 #!/bin/bash
-echo Llistar mida de carpeta usuari
+echo Llistar home de usuari
 echo Usuari?
 read user
-sudo du -sh /home/$user
+sudo ls -l /home/$user
