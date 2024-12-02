@@ -33,10 +33,10 @@ check(){
         sortir
 
     elif (($intento > $nombre)); then
-        echo el teu nombre és més alt que el nombre real
+        echo El nombre és més alt que el teu.
         check
     elif (($intento < $nombre)); then
-        echo el teu nombre és més baix que el nombre real
+        echo El nombre és més baix que el teu.
         check
     else
         echo error
