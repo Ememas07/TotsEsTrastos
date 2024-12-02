@@ -1,0 +1,268 @@
+{
+    "stages": {
+        "race1": {
+            "end_time": 1732998509,
+            "events": [
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": 15
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 4188,
+                    "time in readable format": "69:48"
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": 0
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 4188,
+                    "time in readable format": "69:48"
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": 11
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 4206,
+                    "time in readable format": "70:06"
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 352,
+                        "OtherParticipantId": 15
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 4207,
+                    "time in readable format": "70:07"
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 457,
+                        "OtherParticipantId": 11
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 4207,
+                    "time in readable format": "70:07"
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 945,
+                        "OtherParticipantId": 11
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 4207,
+                    "time in readable format": "70:07"
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 510,
+                        "OtherParticipantId": 15
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 4207,
+                    "time in readable format": "70:07"
+                }
+            ],
+            "results": [
+                {
+                    "attributes": {
+                        "FastestLapTime": 110028,
+                        "Lap": 17,
+                        "RacePosition": 1,
+                        "State": "Finished",
+                        "TotalTime": 1907241,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 110402,
+                        "Lap": 17,
+                        "RacePosition": 2,
+                        "State": "Finished",
+                        "TotalTime": 1907283,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 110304,
+                        "Lap": 17,
+                        "RacePosition": 3,
+                        "State": "Finished",
+                        "TotalTime": 1907342,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 111023,
+                        "Lap": 17,
+                        "RacePosition": 4,
+                        "State": "Finished",
+                        "TotalTime": 1907580,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 110861,
+                        "Lap": 17,
+                        "RacePosition": 5,
+                        "State": "Finished",
+                        "TotalTime": 1928246,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 110895,
+                        "Lap": 17,
+                        "RacePosition": 6,
+                        "State": "Finished",
+                        "TotalTime": 1934406,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 114981,
+                        "Lap": 17,
+                        "RacePosition": 7,
+                        "State": "Finished",
+                        "TotalTime": 2005944,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 115041,
+                        "Lap": 16,
+                        "RacePosition": 8,
+                        "State": "Finished",
+                        "TotalTime": 1909044,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 116091,
+                        "Lap": 16,
+                        "RacePosition": 9,
+                        "State": "Finished",
+                        "TotalTime": 1917042,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 117188,
+                        "Lap": 15,
+                        "RacePosition": 10,
+                        "State": "Finished",
+                        "TotalTime": 1979586,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 117328,
+                        "Lap": 14,
+                        "RacePosition": 11,
+                        "State": "Finished",
+                        "TotalTime": 1947613,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732998151
+                }
+            ],
+            "start_time": 1732996017
+        }
+    }
+}

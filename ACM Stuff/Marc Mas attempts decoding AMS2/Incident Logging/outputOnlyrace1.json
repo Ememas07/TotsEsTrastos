@@ -1,0 +1,4635 @@
+{
+    "stages": {
+        "race1": {
+            "end_time": 1732998509,
+            "events": [
+                {
+                    "attributes": {
+                        "NewState": "Disqualified",
+                        "PreviousState": "Racing"
+                    },
+                    "event_name": "State",
+                    "is_player": true,
+                    "name": "Unknown Relic",
+                    "participantid": 16,
+                    "refid": 58693,
+                    "time": 1732996139
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996215
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 636,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996215
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 684,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996215
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 729,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996215
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4891,
+                        "Lap": 0,
+                        "LapTime": 118134,
+                        "RacePosition": 1,
+                        "Sector1Time": 35350,
+                        "Sector2Time": 38420,
+                        "Sector3Time": 44364
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732996263
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4886,
+                        "Lap": 0,
+                        "LapTime": 118194,
+                        "RacePosition": 2,
+                        "Sector1Time": 35210,
+                        "Sector2Time": 38689,
+                        "Sector3Time": 44295
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732996263
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4899,
+                        "Lap": 0,
+                        "LapTime": 118269,
+                        "RacePosition": 3,
+                        "Sector1Time": 35513,
+                        "Sector2Time": 38557,
+                        "Sector3Time": 44199
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732996263
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4910,
+                        "Lap": 0,
+                        "LapTime": 118407,
+                        "RacePosition": 4,
+                        "Sector1Time": 35658,
+                        "Sector2Time": 38591,
+                        "Sector3Time": 44157
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732996264
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4917,
+                        "Lap": 0,
+                        "LapTime": 118729,
+                        "RacePosition": 5,
+                        "Sector1Time": 35930,
+                        "Sector2Time": 38663,
+                        "Sector3Time": 44137
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732996264
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4926,
+                        "Lap": 0,
+                        "LapTime": 119587,
+                        "RacePosition": 6,
+                        "Sector1Time": 36552,
+                        "Sector2Time": 38618,
+                        "Sector3Time": 44417
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732996265
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4945,
+                        "Lap": 0,
+                        "LapTime": 123567,
+                        "RacePosition": 7,
+                        "Sector1Time": 37350,
+                        "Sector2Time": 40960,
+                        "Sector3Time": 45257
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732996269
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4930,
+                        "Lap": 0,
+                        "LapTime": 124009,
+                        "RacePosition": 8,
+                        "Sector1Time": 38047,
+                        "Sector2Time": 40816,
+                        "Sector3Time": 45146
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996269
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4957,
+                        "Lap": 0,
+                        "LapTime": 128660,
+                        "RacePosition": 9,
+                        "Sector1Time": 40203,
+                        "Sector2Time": 41736,
+                        "Sector3Time": 46721
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732996274
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4942,
+                        "Lap": 0,
+                        "LapTime": 131572,
+                        "RacePosition": 10,
+                        "Sector1Time": 43877,
+                        "Sector2Time": 41625,
+                        "Sector3Time": 46070
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732996277
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4991,
+                        "Lap": 0,
+                        "LapTime": 133776,
+                        "RacePosition": 11,
+                        "Sector1Time": 42751,
+                        "Sector2Time": 44372,
+                        "Sector3Time": 46653
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732996279
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996287
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996287
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 556,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996287
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 523,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996287
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 803,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996287
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 326,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996289
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 5042,
+                        "Lap": 0,
+                        "LapTime": 149654,
+                        "RacePosition": 12,
+                        "Sector1Time": 38330,
+                        "Sector2Time": 60000,
+                        "Sector3Time": 51324
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996295
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996322
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 503,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996322
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 836,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996322
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 941,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996322
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 606,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996322
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 654,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996322
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 440,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996362
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 352,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996362
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 610,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996362
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 413,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996362
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4877,
+                        "Lap": 1,
+                        "LapTime": 111372,
+                        "RacePosition": 1,
+                        "Sector1Time": 28313,
+                        "Sector2Time": 38750,
+                        "Sector3Time": 44309
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732996375
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 1,
+                        "LapTime": 111297,
+                        "RacePosition": 2,
+                        "Sector1Time": 29238,
+                        "Sector2Time": 38163,
+                        "Sector3Time": 43896
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732996375
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4872,
+                        "Lap": 1,
+                        "LapTime": 111478,
+                        "RacePosition": 3,
+                        "Sector1Time": 29433,
+                        "Sector2Time": 38245,
+                        "Sector3Time": 43800
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732996375
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4870,
+                        "Lap": 1,
+                        "LapTime": 111362,
+                        "RacePosition": 4,
+                        "Sector1Time": 29409,
+                        "Sector2Time": 38264,
+                        "Sector3Time": 43689
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732996375
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4872,
+                        "Lap": 1,
+                        "LapTime": 111216,
+                        "RacePosition": 5,
+                        "Sector1Time": 29197,
+                        "Sector2Time": 38232,
+                        "Sector3Time": 43787
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732996375
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4874,
+                        "Lap": 1,
+                        "LapTime": 110879,
+                        "RacePosition": 6,
+                        "Sector1Time": 28500,
+                        "Sector2Time": 38322,
+                        "Sector3Time": 44057
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732996376
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 1,
+                        "LapTime": 116239,
+                        "RacePosition": 7,
+                        "Sector1Time": 29422,
+                        "Sector2Time": 40782,
+                        "Sector3Time": 46035
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732996385
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996391
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996391
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 899,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996391
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 302,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996391
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 388,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996391
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 495,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996391
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 467,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996392
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4854,
+                        "Lap": 1,
+                        "LapTime": 119069,
+                        "RacePosition": 8,
+                        "Sector1Time": 29821,
+                        "Sector2Time": 42206,
+                        "Sector3Time": 47042
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732996393
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4862,
+                        "Lap": 1,
+                        "LapTime": 117177,
+                        "RacePosition": 9,
+                        "Sector1Time": 29738,
+                        "Sector2Time": 41504,
+                        "Sector3Time": 45935
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732996394
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4882,
+                        "Lap": 1,
+                        "LapTime": 125130,
+                        "RacePosition": 10,
+                        "Sector1Time": 37858,
+                        "Sector2Time": 41686,
+                        "Sector3Time": 45586
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996394
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4876,
+                        "Lap": 1,
+                        "LapTime": 123299,
+                        "RacePosition": 11,
+                        "Sector1Time": 33438,
+                        "Sector2Time": 42891,
+                        "Sector3Time": 46970
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732996402
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996423
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 325,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996423
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 780,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996423
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 305,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996423
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": 15
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732996467
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": 0
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996467
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 598,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732996468
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 643,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732996468
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 396,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732996468
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": 11
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996485
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 352,
+                        "OtherParticipantId": 15
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732996486
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 457,
+                        "OtherParticipantId": 11
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996486
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 945,
+                        "OtherParticipantId": 11
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996486
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 510,
+                        "OtherParticipantId": 15
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732996486
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4870,
+                        "Lap": 2,
+                        "LapTime": 111163,
+                        "RacePosition": 1,
+                        "Sector1Time": 28486,
+                        "Sector2Time": 38414,
+                        "Sector3Time": 44263
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732996486
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4876,
+                        "Lap": 2,
+                        "LapTime": 111364,
+                        "RacePosition": 2,
+                        "Sector1Time": 28228,
+                        "Sector2Time": 38801,
+                        "Sector3Time": 44335
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732996486
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4874,
+                        "Lap": 2,
+                        "LapTime": 111435,
+                        "RacePosition": 3,
+                        "Sector1Time": 28561,
+                        "Sector2Time": 38397,
+                        "Sector3Time": 44477
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732996486
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4865,
+                        "Lap": 2,
+                        "LapTime": 111443,
+                        "RacePosition": 4,
+                        "Sector1Time": 28577,
+                        "Sector2Time": 38362,
+                        "Sector3Time": 44504
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732996486
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4871,
+                        "Lap": 2,
+                        "LapTime": 111646,
+                        "RacePosition": 5,
+                        "Sector1Time": 28667,
+                        "Sector2Time": 38753,
+                        "Sector3Time": 44226
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732996487
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4870,
+                        "Lap": 2,
+                        "LapTime": 112401,
+                        "RacePosition": 6,
+                        "Sector1Time": 28520,
+                        "Sector2Time": 39500,
+                        "Sector3Time": 44381
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732996488
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4866,
+                        "Lap": 2,
+                        "LapTime": 117869,
+                        "RacePosition": 7,
+                        "Sector1Time": 29623,
+                        "Sector2Time": 41361,
+                        "Sector3Time": 46885
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732996511
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4938,
+                        "Lap": 2,
+                        "LapTime": 130005,
+                        "RacePosition": 8,
+                        "Sector1Time": 28761,
+                        "Sector2Time": 40747,
+                        "Sector3Time": 60498
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732996515
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4904,
+                        "Lap": 2,
+                        "LapTime": 125111,
+                        "RacePosition": 9,
+                        "Sector1Time": 37646,
+                        "Sector2Time": 41933,
+                        "Sector3Time": 45532
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996519
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4870,
+                        "Lap": 2,
+                        "LapTime": 119472,
+                        "RacePosition": 10,
+                        "Sector1Time": 30747,
+                        "Sector2Time": 41852,
+                        "Sector3Time": 46874
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732996522
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4888,
+                        "Lap": 2,
+                        "LapTime": 130914,
+                        "RacePosition": 11,
+                        "Sector1Time": 41351,
+                        "Sector2Time": 41685,
+                        "Sector3Time": 47878
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732996525
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 882,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996526
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 676,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996526
+                },
+                {
+                    "attributes": {
+                        "NewState": "EnteringPits",
+                        "PreviousState": "Racing"
+                    },
+                    "event_name": "State",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996538
+                },
+                {
+                    "attributes": {
+                        "NewState": "Disqualified",
+                        "PreviousState": "EnteringPits"
+                    },
+                    "event_name": "State",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 1732996548
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4874,
+                        "Lap": 3,
+                        "LapTime": 111300,
+                        "RacePosition": 1,
+                        "Sector1Time": 28280,
+                        "Sector2Time": 38860,
+                        "Sector3Time": 44160
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732996597
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4870,
+                        "Lap": 3,
+                        "LapTime": 111219,
+                        "RacePosition": 2,
+                        "Sector1Time": 28308,
+                        "Sector2Time": 38611,
+                        "Sector3Time": 44300
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732996597
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4873,
+                        "Lap": 3,
+                        "LapTime": 110937,
+                        "RacePosition": 3,
+                        "Sector1Time": 28275,
+                        "Sector2Time": 38802,
+                        "Sector3Time": 43860
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732996597
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4873,
+                        "Lap": 3,
+                        "LapTime": 112047,
+                        "RacePosition": 4,
+                        "Sector1Time": 28260,
+                        "Sector2Time": 39702,
+                        "Sector3Time": 44085
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732996598
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4872,
+                        "Lap": 3,
+                        "LapTime": 112777,
+                        "RacePosition": 5,
+                        "Sector1Time": 28357,
+                        "Sector2Time": 38679,
+                        "Sector3Time": 45740
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732996600
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4872,
+                        "Lap": 3,
+                        "LapTime": 113182,
+                        "RacePosition": 6,
+                        "Sector1Time": 28441,
+                        "Sector2Time": 38441,
+                        "Sector3Time": 46300
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732996601
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4868,
+                        "Lap": 3,
+                        "LapTime": 117957,
+                        "RacePosition": 7,
+                        "Sector1Time": 29740,
+                        "Sector2Time": 41900,
+                        "Sector3Time": 46317
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732996629
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4864,
+                        "Lap": 3,
+                        "LapTime": 118677,
+                        "RacePosition": 8,
+                        "Sector1Time": 32658,
+                        "Sector2Time": 40560,
+                        "Sector3Time": 45459
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732996634
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4866,
+                        "Lap": 3,
+                        "LapTime": 115921,
+                        "RacePosition": 9,
+                        "Sector1Time": 29699,
+                        "Sector2Time": 40781,
+                        "Sector3Time": 45441
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996635
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4870,
+                        "Lap": 3,
+                        "LapTime": 116811,
+                        "RacePosition": 10,
+                        "Sector1Time": 29601,
+                        "Sector2Time": 41403,
+                        "Sector3Time": 45807
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732996642
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4885,
+                        "Lap": 3,
+                        "LapTime": 122238,
+                        "RacePosition": 11,
+                        "Sector1Time": 30500,
+                        "Sector2Time": 41119,
+                        "Sector3Time": 50619
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732996644
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4878,
+                        "Lap": 4,
+                        "LapTime": 111400,
+                        "RacePosition": 1,
+                        "Sector1Time": 28280,
+                        "Sector2Time": 38780,
+                        "Sector3Time": 44340
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732996709
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4871,
+                        "Lap": 4,
+                        "LapTime": 116182,
+                        "RacePosition": 2,
+                        "Sector1Time": 33275,
+                        "Sector2Time": 38600,
+                        "Sector3Time": 44307
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732996715
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4876,
+                        "Lap": 4,
+                        "LapTime": 117220,
+                        "RacePosition": 3,
+                        "Sector1Time": 34141,
+                        "Sector2Time": 38848,
+                        "Sector3Time": 44232
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732996715
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4869,
+                        "Lap": 4,
+                        "LapTime": 114900,
+                        "RacePosition": 4,
+                        "Sector1Time": 31780,
+                        "Sector2Time": 38626,
+                        "Sector3Time": 44494
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732996715
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4870,
+                        "Lap": 4,
+                        "LapTime": 114327,
+                        "RacePosition": 5,
+                        "Sector1Time": 31240,
+                        "Sector2Time": 38700,
+                        "Sector3Time": 44386
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732996715
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4886,
+                        "Lap": 4,
+                        "LapTime": 119920,
+                        "RacePosition": 6,
+                        "Sector1Time": 36880,
+                        "Sector2Time": 38740,
+                        "Sector3Time": 44300
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732996717
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4872,
+                        "Lap": 4,
+                        "LapTime": 115624,
+                        "RacePosition": 7,
+                        "Sector1Time": 28941,
+                        "Sector2Time": 40880,
+                        "Sector3Time": 45803
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732996749
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4849,
+                        "Lap": 4,
+                        "LapTime": 115224,
+                        "RacePosition": 8,
+                        "Sector1Time": 28927,
+                        "Sector2Time": 40799,
+                        "Sector3Time": 45498
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996751
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4878,
+                        "Lap": 4,
+                        "LapTime": 125370,
+                        "RacePosition": 9,
+                        "Sector1Time": 29860,
+                        "Sector2Time": 46670,
+                        "Sector3Time": 48840
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732996754
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4887,
+                        "Lap": 4,
+                        "LapTime": 123222,
+                        "RacePosition": 11,
+                        "Sector1Time": 29580,
+                        "Sector2Time": 47115,
+                        "Sector3Time": 46527
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732996765
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4905,
+                        "Lap": 4,
+                        "LapTime": 131516,
+                        "RacePosition": 11,
+                        "Sector1Time": 29648,
+                        "Sector2Time": 54949,
+                        "Sector3Time": 46919
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732996776
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732996794
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 589,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732996794
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 499,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732996794
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 541,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732996794
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 541,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732996794
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4877,
+                        "Lap": 5,
+                        "LapTime": 111441,
+                        "RacePosition": 1,
+                        "Sector1Time": 28340,
+                        "Sector2Time": 38780,
+                        "Sector3Time": 44321
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732996820
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 5,
+                        "LapTime": 111065,
+                        "RacePosition": 2,
+                        "Sector1Time": 28221,
+                        "Sector2Time": 38685,
+                        "Sector3Time": 44160
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732996826
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4877,
+                        "Lap": 5,
+                        "LapTime": 111202,
+                        "RacePosition": 3,
+                        "Sector1Time": 28434,
+                        "Sector2Time": 38724,
+                        "Sector3Time": 44045
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732996826
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4864,
+                        "Lap": 5,
+                        "LapTime": 110861,
+                        "RacePosition": 4,
+                        "Sector1Time": 28080,
+                        "Sector2Time": 38520,
+                        "Sector3Time": 44261
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732996826
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4873,
+                        "Lap": 5,
+                        "LapTime": 110895,
+                        "RacePosition": 5,
+                        "Sector1Time": 28204,
+                        "Sector2Time": 38550,
+                        "Sector3Time": 44141
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732996826
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4876,
+                        "Lap": 5,
+                        "LapTime": 111367,
+                        "RacePosition": 6,
+                        "Sector1Time": 28350,
+                        "Sector2Time": 38729,
+                        "Sector3Time": 44287
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732996829
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4868,
+                        "Lap": 5,
+                        "LapTime": 115568,
+                        "RacePosition": 7,
+                        "Sector1Time": 29200,
+                        "Sector2Time": 40749,
+                        "Sector3Time": 45619
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996866
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4893,
+                        "Lap": 5,
+                        "LapTime": 119438,
+                        "RacePosition": 8,
+                        "Sector1Time": 29177,
+                        "Sector2Time": 41101,
+                        "Sector3Time": 49160
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732996869
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4865,
+                        "Lap": 5,
+                        "LapTime": 117328,
+                        "RacePosition": 9,
+                        "Sector1Time": 29780,
+                        "Sector2Time": 41505,
+                        "Sector3Time": 46043
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732996871
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 5,
+                        "LapTime": 117725,
+                        "RacePosition": 10,
+                        "Sector1Time": 30880,
+                        "Sector2Time": 40959,
+                        "Sector3Time": 45886
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732996883
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4891,
+                        "Lap": 5,
+                        "LapTime": 136386,
+                        "RacePosition": 11,
+                        "Sector1Time": 39347,
+                        "Sector2Time": 41355,
+                        "Sector3Time": 55685
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732996912
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 6,
+                        "LapTime": 111363,
+                        "RacePosition": 1,
+                        "Sector1Time": 28330,
+                        "Sector2Time": 38713,
+                        "Sector3Time": 44320
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732996931
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4869,
+                        "Lap": 6,
+                        "LapTime": 110982,
+                        "RacePosition": 2,
+                        "Sector1Time": 28339,
+                        "Sector2Time": 38558,
+                        "Sector3Time": 44085
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732996937
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4877,
+                        "Lap": 6,
+                        "LapTime": 111198,
+                        "RacePosition": 3,
+                        "Sector1Time": 28235,
+                        "Sector2Time": 38663,
+                        "Sector3Time": 44300
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732996937
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4874,
+                        "Lap": 6,
+                        "LapTime": 111183,
+                        "RacePosition": 4,
+                        "Sector1Time": 28440,
+                        "Sector2Time": 38663,
+                        "Sector3Time": 44080
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732996937
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4873,
+                        "Lap": 6,
+                        "LapTime": 111243,
+                        "RacePosition": 5,
+                        "Sector1Time": 28586,
+                        "Sector2Time": 38497,
+                        "Sector3Time": 44160
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732996937
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4877,
+                        "Lap": 6,
+                        "LapTime": 111279,
+                        "RacePosition": 6,
+                        "Sector1Time": 28304,
+                        "Sector2Time": 38693,
+                        "Sector3Time": 44282
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732996940
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4864,
+                        "Lap": 6,
+                        "LapTime": 115305,
+                        "RacePosition": 7,
+                        "Sector1Time": 29247,
+                        "Sector2Time": 40913,
+                        "Sector3Time": 45145
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732996981
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4873,
+                        "Lap": 6,
+                        "LapTime": 118496,
+                        "RacePosition": 8,
+                        "Sector1Time": 29363,
+                        "Sector2Time": 40686,
+                        "Sector3Time": 48447
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732996987
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4885,
+                        "Lap": 6,
+                        "LapTime": 127298,
+                        "RacePosition": 9,
+                        "Sector1Time": 29698,
+                        "Sector2Time": 41800,
+                        "Sector3Time": 55800
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732996999
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 6,
+                        "LapTime": 116739,
+                        "RacePosition": 10,
+                        "Sector1Time": 29503,
+                        "Sector2Time": 41643,
+                        "Sector3Time": 45592
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732996999
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4872,
+                        "Lap": 6,
+                        "LapTime": 117188,
+                        "RacePosition": 11,
+                        "Sector1Time": 29985,
+                        "Sector2Time": 40935,
+                        "Sector3Time": 46268
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997029
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4877,
+                        "Lap": 7,
+                        "LapTime": 111417,
+                        "RacePosition": 1,
+                        "Sector1Time": 28338,
+                        "Sector2Time": 38734,
+                        "Sector3Time": 44345
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732997043
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4867,
+                        "Lap": 7,
+                        "LapTime": 110805,
+                        "RacePosition": 2,
+                        "Sector1Time": 28275,
+                        "Sector2Time": 38325,
+                        "Sector3Time": 44205
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732997048
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4881,
+                        "Lap": 7,
+                        "LapTime": 111810,
+                        "RacePosition": 3,
+                        "Sector1Time": 28268,
+                        "Sector2Time": 38581,
+                        "Sector3Time": 44961
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732997049
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4873,
+                        "Lap": 7,
+                        "LapTime": 111397,
+                        "RacePosition": 4,
+                        "Sector1Time": 28155,
+                        "Sector2Time": 38936,
+                        "Sector3Time": 44306
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732997049
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4881,
+                        "Lap": 7,
+                        "LapTime": 112957,
+                        "RacePosition": 5,
+                        "Sector1Time": 28185,
+                        "Sector2Time": 38472,
+                        "Sector3Time": 46300
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732997050
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4876,
+                        "Lap": 7,
+                        "LapTime": 110939,
+                        "RacePosition": 6,
+                        "Sector1Time": 28301,
+                        "Sector2Time": 38670,
+                        "Sector3Time": 43968
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732997051
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4863,
+                        "Lap": 7,
+                        "LapTime": 115486,
+                        "RacePosition": 7,
+                        "Sector1Time": 29275,
+                        "Sector2Time": 40927,
+                        "Sector3Time": 45284
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732997097
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4872,
+                        "Lap": 7,
+                        "LapTime": 116204,
+                        "RacePosition": 8,
+                        "Sector1Time": 30378,
+                        "Sector2Time": 40753,
+                        "Sector3Time": 45073
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732997103
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4874,
+                        "Lap": 7,
+                        "LapTime": 118185,
+                        "RacePosition": 9,
+                        "Sector1Time": 30166,
+                        "Sector2Time": 41643,
+                        "Sector3Time": 46376
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732997118
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4876,
+                        "Lap": 7,
+                        "LapTime": 127277,
+                        "RacePosition": 10,
+                        "Sector1Time": 30431,
+                        "Sector2Time": 42355,
+                        "Sector3Time": 54491
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997126
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 8,
+                        "LapTime": 115959,
+                        "RacePosition": 1,
+                        "Sector1Time": 30063,
+                        "Sector2Time": 41500,
+                        "Sector3Time": 44396
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732997159
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4878,
+                        "Lap": 8,
+                        "LapTime": 111232,
+                        "RacePosition": 2,
+                        "Sector1Time": 28352,
+                        "Sector2Time": 38759,
+                        "Sector3Time": 44122
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732997159
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4874,
+                        "Lap": 8,
+                        "LapTime": 110402,
+                        "RacePosition": 3,
+                        "Sector1Time": 27921,
+                        "Sector2Time": 38442,
+                        "Sector3Time": 44040
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732997159
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4866,
+                        "Lap": 8,
+                        "LapTime": 113459,
+                        "RacePosition": 4,
+                        "Sector1Time": 28121,
+                        "Sector2Time": 38317,
+                        "Sector3Time": 47021
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732997162
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4876,
+                        "Lap": 8,
+                        "LapTime": 112119,
+                        "RacePosition": 5,
+                        "Sector1Time": 28360,
+                        "Sector2Time": 38645,
+                        "Sector3Time": 45115
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732997162
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 8,
+                        "LapTime": 111375,
+                        "RacePosition": 6,
+                        "Sector1Time": 27896,
+                        "Sector2Time": 38378,
+                        "Sector3Time": 45101
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732997162
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4957,
+                        "Lap": 7,
+                        "LapTime": 149930,
+                        "RacePosition": 11,
+                        "Sector1Time": 29547,
+                        "Sector2Time": 56231,
+                        "Sector3Time": 64151
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997179
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4863,
+                        "Lap": 8,
+                        "LapTime": 115553,
+                        "RacePosition": 7,
+                        "Sector1Time": 29222,
+                        "Sector2Time": 40813,
+                        "Sector3Time": 45519
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732997213
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4893,
+                        "Lap": 8,
+                        "LapTime": 129165,
+                        "RacePosition": 8,
+                        "Sector1Time": 36598,
+                        "Sector2Time": 40664,
+                        "Sector3Time": 51902
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732997233
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4870,
+                        "Lap": 8,
+                        "LapTime": 121508,
+                        "RacePosition": 9,
+                        "Sector1Time": 29510,
+                        "Sector2Time": 45965,
+                        "Sector3Time": 46034
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732997239
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4854,
+                        "Lap": 8,
+                        "LapTime": 125896,
+                        "RacePosition": 10,
+                        "Sector1Time": 30964,
+                        "Sector2Time": 43016,
+                        "Sector3Time": 51916
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997252
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4877,
+                        "Lap": 9,
+                        "LapTime": 111061,
+                        "RacePosition": 1,
+                        "Sector1Time": 28191,
+                        "Sector2Time": 38652,
+                        "Sector3Time": 44218
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732997270
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4867,
+                        "Lap": 9,
+                        "LapTime": 111018,
+                        "RacePosition": 2,
+                        "Sector1Time": 28428,
+                        "Sector2Time": 38551,
+                        "Sector3Time": 44038
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732997270
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4872,
+                        "Lap": 9,
+                        "LapTime": 111340,
+                        "RacePosition": 3,
+                        "Sector1Time": 28365,
+                        "Sector2Time": 38567,
+                        "Sector3Time": 44408
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732997270
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 9,
+                        "LapTime": 111027,
+                        "RacePosition": 4,
+                        "Sector1Time": 28183,
+                        "Sector2Time": 38640,
+                        "Sector3Time": 44204
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732997273
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4869,
+                        "Lap": 9,
+                        "LapTime": 110960,
+                        "RacePosition": 5,
+                        "Sector1Time": 28303,
+                        "Sector2Time": 38503,
+                        "Sector3Time": 44154
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732997273
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 9,
+                        "LapTime": 111083,
+                        "RacePosition": 6,
+                        "Sector1Time": 28264,
+                        "Sector2Time": 38745,
+                        "Sector3Time": 44074
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732997273
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4914,
+                        "Lap": 8,
+                        "LapTime": 132274,
+                        "RacePosition": 11,
+                        "Sector1Time": 44500,
+                        "Sector2Time": 41389,
+                        "Sector3Time": 46385
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997311
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4862,
+                        "Lap": 9,
+                        "LapTime": 115873,
+                        "RacePosition": 7,
+                        "Sector1Time": 29460,
+                        "Sector2Time": 40823,
+                        "Sector3Time": 45590
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732997328
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 711,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997341
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 877,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997342
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4872,
+                        "Lap": 9,
+                        "LapTime": 115855,
+                        "RacePosition": 8,
+                        "Sector1Time": 29602,
+                        "Sector2Time": 40853,
+                        "Sector3Time": 45401
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732997348
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4869,
+                        "Lap": 9,
+                        "LapTime": 116453,
+                        "RacePosition": 9,
+                        "Sector1Time": 29465,
+                        "Sector2Time": 41279,
+                        "Sector3Time": 45709
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732997356
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4884,
+                        "Lap": 9,
+                        "LapTime": 128427,
+                        "RacePosition": 10,
+                        "Sector1Time": 37600,
+                        "Sector2Time": 43147,
+                        "Sector3Time": 47680
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997380
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4878,
+                        "Lap": 10,
+                        "LapTime": 111080,
+                        "RacePosition": 1,
+                        "Sector1Time": 28229,
+                        "Sector2Time": 38597,
+                        "Sector3Time": 44255
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732997381
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4871,
+                        "Lap": 10,
+                        "LapTime": 111187,
+                        "RacePosition": 2,
+                        "Sector1Time": 28320,
+                        "Sector2Time": 38585,
+                        "Sector3Time": 44282
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732997381
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4873,
+                        "Lap": 10,
+                        "LapTime": 111740,
+                        "RacePosition": 3,
+                        "Sector1Time": 29024,
+                        "Sector2Time": 38655,
+                        "Sector3Time": 44060
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732997382
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 10,
+                        "LapTime": 111042,
+                        "RacePosition": 4,
+                        "Sector1Time": 28186,
+                        "Sector2Time": 38595,
+                        "Sector3Time": 44261
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732997384
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4872,
+                        "Lap": 10,
+                        "LapTime": 119077,
+                        "RacePosition": 5,
+                        "Sector1Time": 28377,
+                        "Sector2Time": 38567,
+                        "Sector3Time": 52133
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732997392
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4884,
+                        "Lap": 10,
+                        "LapTime": 119272,
+                        "RacePosition": 6,
+                        "Sector1Time": 28381,
+                        "Sector2Time": 38613,
+                        "Sector3Time": 52279
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732997392
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4865,
+                        "Lap": 10,
+                        "LapTime": 116377,
+                        "RacePosition": 7,
+                        "Sector1Time": 29303,
+                        "Sector2Time": 40775,
+                        "Sector3Time": 46299
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732997445
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4945,
+                        "Lap": 9,
+                        "LapTime": 137972,
+                        "RacePosition": 11,
+                        "Sector1Time": 41497,
+                        "Sector2Time": 49868,
+                        "Sector3Time": 46608
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997449
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4864,
+                        "Lap": 10,
+                        "LapTime": 115701,
+                        "RacePosition": 8,
+                        "Sector1Time": 29265,
+                        "Sector2Time": 40676,
+                        "Sector3Time": 45759
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732997464
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4869,
+                        "Lap": 10,
+                        "LapTime": 116091,
+                        "RacePosition": 9,
+                        "Sector1Time": 29897,
+                        "Sector2Time": 40944,
+                        "Sector3Time": 45250
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732997472
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4879,
+                        "Lap": 11,
+                        "LapTime": 113322,
+                        "RacePosition": 1,
+                        "Sector1Time": 30390,
+                        "Sector2Time": 38655,
+                        "Sector3Time": 44278
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732997494
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 11,
+                        "LapTime": 113135,
+                        "RacePosition": 2,
+                        "Sector1Time": 30575,
+                        "Sector2Time": 38456,
+                        "Sector3Time": 44104
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732997494
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4876,
+                        "Lap": 11,
+                        "LapTime": 113622,
+                        "RacePosition": 3,
+                        "Sector1Time": 30939,
+                        "Sector2Time": 38759,
+                        "Sector3Time": 43924
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732997496
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4870,
+                        "Lap": 11,
+                        "LapTime": 111623,
+                        "RacePosition": 4,
+                        "Sector1Time": 28845,
+                        "Sector2Time": 38732,
+                        "Sector3Time": 44046
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732997496
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4877,
+                        "Lap": 11,
+                        "LapTime": 113624,
+                        "RacePosition": 5,
+                        "Sector1Time": 28259,
+                        "Sector2Time": 40901,
+                        "Sector3Time": 44463
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732997506
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4876,
+                        "Lap": 11,
+                        "LapTime": 113624,
+                        "RacePosition": 6,
+                        "Sector1Time": 29528,
+                        "Sector2Time": 39634,
+                        "Sector3Time": 44461
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732997506
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4848,
+                        "Lap": 10,
+                        "LapTime": 132287,
+                        "RacePosition": 10,
+                        "Sector1Time": 34576,
+                        "Sector2Time": 46644,
+                        "Sector3Time": 51067
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997513
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4865,
+                        "Lap": 11,
+                        "LapTime": 115170,
+                        "RacePosition": 7,
+                        "Sector1Time": 29259,
+                        "Sector2Time": 40758,
+                        "Sector3Time": 45153
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732997560
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4895,
+                        "Lap": 10,
+                        "LapTime": 124996,
+                        "RacePosition": 11,
+                        "Sector1Time": 29990,
+                        "Sector2Time": 41194,
+                        "Sector3Time": 53812
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997574
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4867,
+                        "Lap": 11,
+                        "LapTime": 116771,
+                        "RacePosition": 8,
+                        "Sector1Time": 29781,
+                        "Sector2Time": 41300,
+                        "Sector3Time": 45690
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732997581
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4873,
+                        "Lap": 11,
+                        "LapTime": 116608,
+                        "RacePosition": 9,
+                        "Sector1Time": 29534,
+                        "Sector2Time": 41294,
+                        "Sector3Time": 45780
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732997588
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4878,
+                        "Lap": 12,
+                        "LapTime": 111140,
+                        "RacePosition": 1,
+                        "Sector1Time": 28268,
+                        "Sector2Time": 38602,
+                        "Sector3Time": 44271
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732997605
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4870,
+                        "Lap": 12,
+                        "LapTime": 111315,
+                        "RacePosition": 2,
+                        "Sector1Time": 28421,
+                        "Sector2Time": 38552,
+                        "Sector3Time": 44342
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732997606
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4870,
+                        "Lap": 12,
+                        "LapTime": 110855,
+                        "RacePosition": 3,
+                        "Sector1Time": 28158,
+                        "Sector2Time": 38436,
+                        "Sector3Time": 44262
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732997607
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 12,
+                        "LapTime": 111198,
+                        "RacePosition": 4,
+                        "Sector1Time": 28200,
+                        "Sector2Time": 38532,
+                        "Sector3Time": 44466
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732997607
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4877,
+                        "Lap": 12,
+                        "LapTime": 111238,
+                        "RacePosition": 5,
+                        "Sector1Time": 28260,
+                        "Sector2Time": 38672,
+                        "Sector3Time": 44306
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732997617
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4894,
+                        "Lap": 12,
+                        "LapTime": 128744,
+                        "RacePosition": 6,
+                        "Sector1Time": 45101,
+                        "Sector2Time": 39349,
+                        "Sector3Time": 44294
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732997635
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4913,
+                        "Lap": 12,
+                        "LapTime": 121622,
+                        "RacePosition": 7,
+                        "Sector1Time": 28888,
+                        "Sector2Time": 47314,
+                        "Sector3Time": 45420
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732997682
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4874,
+                        "Lap": 12,
+                        "LapTime": 119948,
+                        "RacePosition": 8,
+                        "Sector1Time": 29417,
+                        "Sector2Time": 40836,
+                        "Sector3Time": 49695
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732997701
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4924,
+                        "Lap": 11,
+                        "LapTime": 191749,
+                        "RacePosition": 10,
+                        "Sector1Time": 43186,
+                        "Sector2Time": 84866,
+                        "Sector3Time": 63697
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997704
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4873,
+                        "Lap": 12,
+                        "LapTime": 116453,
+                        "RacePosition": 9,
+                        "Sector1Time": 29395,
+                        "Sector2Time": 41039,
+                        "Sector3Time": 46020
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732997705
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4878,
+                        "Lap": 13,
+                        "LapTime": 111158,
+                        "RacePosition": 1,
+                        "Sector1Time": 28249,
+                        "Sector2Time": 38675,
+                        "Sector3Time": 44234
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732997717
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4874,
+                        "Lap": 13,
+                        "LapTime": 111023,
+                        "RacePosition": 2,
+                        "Sector1Time": 28406,
+                        "Sector2Time": 38725,
+                        "Sector3Time": 43892
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732997717
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4873,
+                        "Lap": 13,
+                        "LapTime": 110028,
+                        "RacePosition": 3,
+                        "Sector1Time": 28144,
+                        "Sector2Time": 38310,
+                        "Sector3Time": 43574
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732997717
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 13,
+                        "LapTime": 110304,
+                        "RacePosition": 4,
+                        "Sector1Time": 28163,
+                        "Sector2Time": 38343,
+                        "Sector3Time": 43798
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732997717
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4920,
+                        "Lap": 11,
+                        "LapTime": 148966,
+                        "RacePosition": 11,
+                        "Sector1Time": 54240,
+                        "Sector2Time": 47681,
+                        "Sector3Time": 47045
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997723
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4876,
+                        "Lap": 13,
+                        "LapTime": 111319,
+                        "RacePosition": 5,
+                        "Sector1Time": 28323,
+                        "Sector2Time": 38696,
+                        "Sector3Time": 44300
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732997728
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997741
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997741
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997741
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 683,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997742
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 311,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997742
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 698,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997742
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 417,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997745
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 381,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997745
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4877,
+                        "Lap": 13,
+                        "LapTime": 111258,
+                        "RacePosition": 6,
+                        "Sector1Time": 28365,
+                        "Sector2Time": 38668,
+                        "Sector3Time": 44225
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732997746
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997765
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 851,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997765
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 652,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997765
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 350,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997765
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 515,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997773
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 525,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997773
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 420,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997773
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4896,
+                        "Lap": 13,
+                        "LapTime": 123522,
+                        "RacePosition": 7,
+                        "Sector1Time": 29038,
+                        "Sector2Time": 40659,
+                        "Sector3Time": 53825
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732997805
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 13,
+                        "LapTime": 115842,
+                        "RacePosition": 8,
+                        "Sector1Time": 29700,
+                        "Sector2Time": 40721,
+                        "Sector3Time": 45421
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732997817
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4866,
+                        "Lap": 13,
+                        "LapTime": 116741,
+                        "RacePosition": 9,
+                        "Sector1Time": 29779,
+                        "Sector2Time": 41278,
+                        "Sector3Time": 45685
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732997821
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4868,
+                        "Lap": 14,
+                        "LapTime": 111973,
+                        "RacePosition": 1,
+                        "Sector1Time": 28956,
+                        "Sector2Time": 39137,
+                        "Sector3Time": 43880
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732997829
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4878,
+                        "Lap": 14,
+                        "LapTime": 112120,
+                        "RacePosition": 2,
+                        "Sector1Time": 28910,
+                        "Sector2Time": 39156,
+                        "Sector3Time": 44054
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732997829
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4869,
+                        "Lap": 14,
+                        "LapTime": 111876,
+                        "RacePosition": 3,
+                        "Sector1Time": 29098,
+                        "Sector2Time": 38718,
+                        "Sector3Time": 44060
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732997829
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4881,
+                        "Lap": 14,
+                        "LapTime": 112780,
+                        "RacePosition": 4,
+                        "Sector1Time": 29606,
+                        "Sector2Time": 39379,
+                        "Sector3Time": 43794
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732997829
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4876,
+                        "Lap": 14,
+                        "LapTime": 115221,
+                        "RacePosition": 5,
+                        "Sector1Time": 28360,
+                        "Sector2Time": 42387,
+                        "Sector3Time": 44475
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732997844
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4895,
+                        "Lap": 12,
+                        "LapTime": 152427,
+                        "RacePosition": 10,
+                        "Sector1Time": 40988,
+                        "Sector2Time": 62976,
+                        "Sector3Time": 48463
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997857
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4879,
+                        "Lap": 14,
+                        "LapTime": 111271,
+                        "RacePosition": 6,
+                        "Sector1Time": 28315,
+                        "Sector2Time": 38680,
+                        "Sector3Time": 44276
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732997857
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4964,
+                        "Lap": 12,
+                        "LapTime": 155582,
+                        "RacePosition": 11,
+                        "Sector1Time": 58641,
+                        "Sector2Time": 43663,
+                        "Sector3Time": 53278
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997879
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 894,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997920
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 440,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997920
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 728,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997920
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 302,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997920
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4869,
+                        "Lap": 14,
+                        "LapTime": 114981,
+                        "RacePosition": 7,
+                        "Sector1Time": 29140,
+                        "Sector2Time": 40600,
+                        "Sector3Time": 45241
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732997920
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 584,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997921
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 565,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997926
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 379,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997926
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4869,
+                        "Lap": 14,
+                        "LapTime": 115041,
+                        "RacePosition": 8,
+                        "Sector1Time": 29174,
+                        "Sector2Time": 40834,
+                        "Sector3Time": 45033
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732997932
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4871,
+                        "Lap": 14,
+                        "LapTime": 116640,
+                        "RacePosition": 9,
+                        "Sector1Time": 29745,
+                        "Sector2Time": 41030,
+                        "Sector3Time": 45865
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732997938
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 408,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997939
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4877,
+                        "Lap": 15,
+                        "LapTime": 110983,
+                        "RacePosition": 1,
+                        "Sector1Time": 28234,
+                        "Sector2Time": 38556,
+                        "Sector3Time": 44193
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732997940
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4871,
+                        "Lap": 15,
+                        "LapTime": 111723,
+                        "RacePosition": 2,
+                        "Sector1Time": 28414,
+                        "Sector2Time": 38145,
+                        "Sector3Time": 45165
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732997941
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4873,
+                        "Lap": 15,
+                        "LapTime": 111431,
+                        "RacePosition": 3,
+                        "Sector1Time": 28217,
+                        "Sector2Time": 38259,
+                        "Sector3Time": 44955
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732997941
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 15,
+                        "LapTime": 112703,
+                        "RacePosition": 4,
+                        "Sector1Time": 28474,
+                        "Sector2Time": 38441,
+                        "Sector3Time": 45788
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732997941
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4877,
+                        "Lap": 15,
+                        "LapTime": 111285,
+                        "RacePosition": 5,
+                        "Sector1Time": 28331,
+                        "Sector2Time": 38685,
+                        "Sector3Time": 44270
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732997955
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4879,
+                        "Lap": 15,
+                        "LapTime": 111210,
+                        "RacePosition": 6,
+                        "Sector1Time": 28274,
+                        "Sector2Time": 38690,
+                        "Sector3Time": 44246
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732997968
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 625,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997989
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4887,
+                        "Lap": 13,
+                        "LapTime": 120281,
+                        "RacePosition": 10,
+                        "Sector1Time": 30843,
+                        "Sector2Time": 42344,
+                        "Sector3Time": 47094
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732997999
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732997999
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4861,
+                        "Lap": 15,
+                        "LapTime": 115080,
+                        "RacePosition": 7,
+                        "Sector1Time": 29086,
+                        "Sector2Time": 40934,
+                        "Sector3Time": 45060
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732998035
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4871,
+                        "Lap": 16,
+                        "LapTime": 112808,
+                        "RacePosition": 1,
+                        "Sector1Time": 28293,
+                        "Sector2Time": 40406,
+                        "Sector3Time": 44108
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732998052
+                },
+                {
+                    "attributes": {
+                        "NewState": "Finished",
+                        "PreviousState": "Racing"
+                    },
+                    "event_name": "State",
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732998052
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4867,
+                        "Lap": 16,
+                        "LapTime": 111702,
+                        "RacePosition": 2,
+                        "Sector1Time": 28116,
+                        "Sector2Time": 39454,
+                        "Sector3Time": 44133
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732998052
+                },
+                {
+                    "attributes": {
+                        "NewState": "Finished",
+                        "PreviousState": "Racing"
+                    },
+                    "event_name": "State",
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732998052
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4882,
+                        "Lap": 16,
+                        "LapTime": 111869,
+                        "RacePosition": 3,
+                        "Sector1Time": 28013,
+                        "Sector2Time": 40018,
+                        "Sector3Time": 43838
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732998053
+                },
+                {
+                    "attributes": {
+                        "NewState": "Finished",
+                        "PreviousState": "Racing"
+                    },
+                    "event_name": "State",
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732998053
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4872,
+                        "Lap": 16,
+                        "LapTime": 111347,
+                        "RacePosition": 4,
+                        "Sector1Time": 27963,
+                        "Sector2Time": 39388,
+                        "Sector3Time": 43996
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732998053
+                },
+                {
+                    "attributes": {
+                        "NewState": "Finished",
+                        "PreviousState": "Racing"
+                    },
+                    "event_name": "State",
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732998053
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4872,
+                        "Lap": 15,
+                        "LapTime": 122472,
+                        "RacePosition": 8,
+                        "Sector1Time": 29882,
+                        "Sector2Time": 41069,
+                        "Sector3Time": 51521
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732998054
+                },
+                {
+                    "attributes": {
+                        "NewState": "Finished",
+                        "PreviousState": "Racing"
+                    },
+                    "event_name": "State",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732998054
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4911,
+                        "Lap": 15,
+                        "LapTime": 124189,
+                        "RacePosition": 9,
+                        "Sector1Time": 29326,
+                        "Sector2Time": 49284,
+                        "Sector3Time": 45580
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732998062
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 16,
+                        "LapTime": 118490,
+                        "RacePosition": 5,
+                        "Sector1Time": 28320,
+                        "Sector2Time": 45906,
+                        "Sector3Time": 44264
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732998073
+                },
+                {
+                    "attributes": {
+                        "NewState": "Finished",
+                        "PreviousState": "Racing"
+                    },
+                    "event_name": "State",
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732998073
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4877,
+                        "Lap": 16,
+                        "LapTime": 111150,
+                        "RacePosition": 6,
+                        "Sector1Time": 28288,
+                        "Sector2Time": 38646,
+                        "Sector3Time": 44216
+                    },
+                    "event_name": "Lap",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732998080
+                },
+                {
+                    "attributes": {
+                        "NewState": "Finished",
+                        "PreviousState": "Racing"
+                    },
+                    "event_name": "State",
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732998080
+                },
+                {
+                    "attributes": {
+                        "NewState": "Finished",
+                        "PreviousState": "Racing"
+                    },
+                    "event_name": "State",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732998093
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4963,
+                        "Lap": 13,
+                        "LapTime": 235990,
+                        "RacePosition": 11,
+                        "Sector1Time": 52325,
+                        "Sector2Time": 138946,
+                        "Sector3Time": 44719
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732998093
+                },
+                {
+                    "attributes": {
+                        "NewState": "Finished",
+                        "PreviousState": "Racing"
+                    },
+                    "event_name": "State",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732998125
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4875,
+                        "Lap": 14,
+                        "LapTime": 125702,
+                        "RacePosition": 10,
+                        "Sector1Time": 35614,
+                        "Sector2Time": 42417,
+                        "Sector3Time": 47671
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732998125
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732998132
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732998132
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732998132
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732998132
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732998132
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732998132
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 996,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732998132
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 376,
+                        "OtherParticipantId": -1
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732998132
+                },
+                {
+                    "attributes": {
+                        "NewState": "Finished",
+                        "PreviousState": "Racing"
+                    },
+                    "event_name": "State",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "CountThisLapTimes": 1,
+                        "DistanceTravelled": 4863,
+                        "Lap": 16,
+                        "LapTime": 116016,
+                        "RacePosition": 7,
+                        "Sector1Time": 29168,
+                        "Sector2Time": 41309,
+                        "Sector3Time": 45538
+                    },
+                    "event_name": "Lap",
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "NewState": "EnteringPits",
+                        "PreviousState": "Racing"
+                    },
+                    "event_name": "State",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732998183
+                },
+                {
+                    "attributes": {
+                        "NewState": "InPits",
+                        "PreviousState": "EnteringPits"
+                    },
+                    "event_name": "State",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732998196
+                },
+                {
+                    "attributes": {
+                        "NewState": "ExitingPits",
+                        "PreviousState": "InPits"
+                    },
+                    "event_name": "State",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732998211
+                },
+                {
+                    "attributes": {
+                        "NewState": "Retired",
+                        "PreviousState": "ExitingPits"
+                    },
+                    "event_name": "State",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732998252
+                }
+            ],
+            "results": [
+                {
+                    "attributes": {
+                        "FastestLapTime": 110028,
+                        "Lap": 17,
+                        "RacePosition": 1,
+                        "State": "Finished",
+                        "TotalTime": 1907241,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": false,
+                    "name": "Lee Chorley  (AI)",
+                    "participantid": 1,
+                    "refid": 26688,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 110402,
+                        "Lap": 17,
+                        "RacePosition": 2,
+                        "State": "Finished",
+                        "TotalTime": 1907283,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": false,
+                    "name": "Thiago Izequiel  (AI)",
+                    "participantid": 6,
+                    "refid": 26688,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 110304,
+                        "Lap": 17,
+                        "RacePosition": 3,
+                        "State": "Finished",
+                        "TotalTime": 1907342,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": false,
+                    "name": "Giancarlo Rampanelli  (AI)",
+                    "participantid": 2,
+                    "refid": 26688,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 111023,
+                        "Lap": 17,
+                        "RacePosition": 4,
+                        "State": "Finished",
+                        "TotalTime": 1907580,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": false,
+                    "name": "Ilya Malyuev  (AI)",
+                    "participantid": 3,
+                    "refid": 26688,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 110861,
+                        "Lap": 17,
+                        "RacePosition": 5,
+                        "State": "Finished",
+                        "TotalTime": 1928246,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": false,
+                    "name": "Gregory Boundy  (AI)",
+                    "participantid": 5,
+                    "refid": 26688,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 110895,
+                        "Lap": 17,
+                        "RacePosition": 6,
+                        "State": "Finished",
+                        "TotalTime": 1934406,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": false,
+                    "name": "Dave Stephenson  (AI)",
+                    "participantid": 4,
+                    "refid": 26688,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 114981,
+                        "Lap": 17,
+                        "RacePosition": 7,
+                        "State": "Finished",
+                        "TotalTime": 2005944,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": true,
+                    "name": "Shockz0r",
+                    "participantid": 19,
+                    "refid": 62147,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 115041,
+                        "Lap": 16,
+                        "RacePosition": 8,
+                        "State": "Finished",
+                        "TotalTime": 1909044,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 116091,
+                        "Lap": 16,
+                        "RacePosition": 9,
+                        "State": "Finished",
+                        "TotalTime": 1917042,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 117188,
+                        "Lap": 15,
+                        "RacePosition": 10,
+                        "State": "Finished",
+                        "TotalTime": 1979586,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": true,
+                    "name": "Threadus",
+                    "participantid": 17,
+                    "refid": 9670,
+                    "time": 1732998151
+                },
+                {
+                    "attributes": {
+                        "FastestLapTime": 117328,
+                        "Lap": 14,
+                        "RacePosition": 11,
+                        "State": "Finished",
+                        "TotalTime": 1947613,
+                        "VehicleId": 1982976051
+                    },
+                    "is_player": true,
+                    "name": "[ACM] LysLily",
+                    "participantid": 18,
+                    "refid": 57985,
+                    "time": 1732998151
+                }
+            ],
+            "start_time": 1732996017
+        }
+    }
+}

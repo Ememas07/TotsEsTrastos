@@ -1,0 +1,101 @@
+{
+    "stages": {
+        "race1": {
+            "end_time": 1732998509,
+            "events": [
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": 15
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "Harryg0",
+                    "participantid": 0,
+                    "refid": 26688,
+                    "time": 450,
+                    "time in readable format": "07:30"
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": 0
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 450,
+                    "time in readable format": "07:30"
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 1000,
+                        "OtherParticipantId": 11
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 468,
+                    "time in readable format": "07:48"
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 352,
+                        "OtherParticipantId": 15
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 469,
+                    "time in readable format": "07:49"
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 457,
+                        "OtherParticipantId": 11
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 469,
+                    "time in readable format": "07:49"
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 945,
+                        "OtherParticipantId": 11
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "cairo.k.s.07",
+                    "participantid": 15,
+                    "refid": 36354,
+                    "time": 469,
+                    "time in readable format": "07:49"
+                },
+                {
+                    "attributes": {
+                        "CollisionMagnitude": 510,
+                        "OtherParticipantId": 15
+                    },
+                    "event_name": "Impact",
+                    "is_player": true,
+                    "name": "The Nubble Telescope",
+                    "participantid": 11,
+                    "refid": 62084,
+                    "time": 469,
+                    "time in readable format": "07:49"
+                }
+            ],
+            "start_time": 1732996017
+        }
+    }
+}
