@@ -1,5 +1,5 @@
 import java.io.FileReader;
-
+import java.io.IOException;
 
 public class ExercisiFitxers01 {
     // ) Crea un fichero de texto con el nombre y contenido que tu quieras. Ahora
@@ -8,15 +8,17 @@ public class ExercisiFitxers01 {
     // tiene el siguiente texto «Esto es una prueba», deberá mostrar
     // «Estoesunaprueba».
     public static void main(String[] args) {
-        final String nomFichero="../../JAVA/FitxersDeText/hola.txt";
-        try(FileReader fr=new FileReader (nomFichero)){
-            int valor=fr.read();
-            while(valor!=-1){
-                if(valor!=32){
-                    System.out.print((char)valor);
+        final String nomFichero = "C:\\Users\\MMH\\Documents\\CODE\\CODE INSTITUT\\NATXO\\JAVA\\FitxersDeText\\hola.txt";
+        try (FileReader fr = new FileReader(nomFichero)) {
+            int valor = fr.read();
+            while (valor != -1) {
+                if (valor != 32) {
+                    System.out.print((char) valor);
                 }
-                valor=fr.read();
+                valor = fr.read();
             }
+        }catch(IOException e){
+        System.out.println("Problemas con el E/S");
         }
     }
 }
