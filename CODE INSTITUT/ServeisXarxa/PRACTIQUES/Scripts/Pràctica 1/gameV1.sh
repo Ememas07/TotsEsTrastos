@@ -13,7 +13,7 @@ fi
 inici(){
     read -p "What's your name? " nom
     nombre=$(($((RANDOM))%100))
-    check    
+    check
 }
 
 check(){
@@ -24,10 +24,10 @@ check(){
         sortir
 
     elif (($intento > $nombre)); then
-        echo The number you inserted is higher than the solution.
+        echo No! Go Lower!
         check
     elif (($intento < $nombre)); then
-        echo The number you inserted is lower than the solution.
+        echo No! Go Higher!
         check
     else
         echo error
