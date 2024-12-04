@@ -22,8 +22,7 @@ check(){
         check
     elif (($intento == $nombre)); then
         iteracions=$(($iteracions+1))
-        echo "Enhorabona $nom, has guanyat en $iteracions intents!"
-        echo "$nom ha guanyat amb $iteracions intents" >> Puntuacions.txt
+        finalitzar
         sortir
     elif (($intento > $nombre)); then
         echo "$intento" >> NombresProvats.txt
@@ -44,6 +43,33 @@ sortir(){
     return
 }
 #!/bin/bash
+finalitzar(){
+echo "Enhorabona $nom, has guanyat en $iteracions intents!"
+echo "#                       $nom - $iteracions                      #" >> Puntuacions.txt
+
+echo "Taula de guanyadors:"
+
+# Create a temporary file to store the best score for the user
+best_score=$(grep -w $nom Puntuacions.txt | sort | head -n 1)
+
+# Check if the user already has an entry in MillorsPuntuacions.txt
+if grep -q -w "$nom" MillorsPuntuacions.txt; then
+  # If the user exists, update their entry only if the current score is better
+  grep -v -w "$nom" MillorsPuntuacions.txt > MillorsPuntuacions.tmp
+  echo "$best_score" >> MillorsPuntuacions.tmp
+  mv MillorsPuntuacions.tmp MillorsPuntuacions.txt
+else
+  # If the user does not exist, just add their best score
+  echo "$best_score" >> MillorsPuntuacions.txt
+fi
+
+cat PartSuperior.txt
+cat MillorsPuntuacions.txt
+cat PartInferior.txt
+
+}
+
+
 
 # Function to display the title screen
 # Gra6 CHATGPT

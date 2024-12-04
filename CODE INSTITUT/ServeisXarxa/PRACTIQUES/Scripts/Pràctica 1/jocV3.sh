@@ -22,8 +22,7 @@ check(){
         check
     elif (($intento == $nombre)); then
         iteracions=$(($iteracions+1))
-        echo "Enhorabona $nom, has guanyat en $iteracions intents!"
-        echo "$nom ha guanyat amb $iteracions intents" >> Puntuacions.txt
+        finalitzar
         sortir
     elif (($intento > $nombre)); then
         echo "$intento" >> NombresProvats.txt
@@ -44,6 +43,17 @@ sortir(){
     return
 }
 #!/bin/bash
+finalitzar(){
+echo "Enhorabona $nom, has guanyat en $iteracions intents!"
+echo "#                       $nom - $iteracions                      #" >> Puntuacions.txt
+echo Taula de guanyadors:
+grep -w $nom Puntuacions.txt | sort | head -n 1 >> MillorsPuntuacions.txt
+cat PartSuperior.txt
+cat MillorsPuntuacions.txt
+cat PartInferior.txt
+}
+
+
 
 # Function to display the title screen
 # Gra6 CHATGPT
