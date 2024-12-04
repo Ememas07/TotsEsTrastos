@@ -1,22 +1,39 @@
 #!/bin/bash
 startup(){
+    read -p "Fins a quin numero vols que arribi?" mesalt
+    read -p "Quantes vegades vols executar el programa? " executions
+    echo > TaulaIntentosAUTO.txt
     clear
-    upper=99
+    upper=$(($mesalt-1))
     lower=0
     iteracions=0
-    echo > NombresProvats.txt
+    intents="" # Variable per guardar tots els intents
     title_screen
-    inici
+    for ((i=1; i<=executions; i++)); do
+        clear
+        echo "Execució $i..."
+        echo > NombresProvats.txt
+        upper=$(($mesalt-1))
+        lower=0
+        iteracions=0
+        intents=""
+        inici
+    done
 }
 
 inici(){
     nom=IA
-    nombre=$(($((RANDOM))%100))
+    nombre=$(($((RANDOM))%$mesalt))
     check
+    
 }
 check(){
-    echo $resultat
     intento=$(((lower + upper) / 2))
+    if [[ -z $intents ]]; then
+        intents="$intento"
+    else
+        intents="$intents,$intento"
+    fi
     # Check if the number has already been tried
     if grep -Fxq "$intento" NombresProvats.txt; then
         echo "Ja has provat aquest número! Intenta-ho amb un altre."
@@ -27,13 +44,11 @@ check(){
         sortir
     elif (($intento > $nombre)); then
         echo "$intento" >> NombresProvats.txt
-        echo "No! Més baix!"
         upper=$((intento - 1))
         iteracions=$(($iteracions+1))
         check
     elif (($intento < $nombre)); then
         echo "$intento" >> NombresProvats.txt
-        echo "No! Més alt!"
         lower=$((intento + 1))
         iteracions=$(($iteracions+1))
         check
@@ -48,28 +63,16 @@ sortir(){
 #!/bin/bash
 finalitzar(){
 echo "Enhorabona $nom, has guanyat en $iteracions intents!"
-echo "#                       $nom - $iteracions                      #" >> Puntuacions.txt
+echo "TAULA DE INTENTOS"
 
-echo "Taula de guanyadors:"
 
-# Create a temporary file to store the best score for the user
-best_score=$(grep -w $nom Puntuacions.txt | sort | head -n 1)
-
-# Check if the user already has an entry in MillorsPuntuacions.txt
-if grep -q -w "$nom" MillorsPuntuacions.txt; then
-  # If the user exists, update their entry only if the current score is better
-  grep -v -w "$nom" MillorsPuntuacions.txt > MillorsPuntuacions.tmp
-  echo "$best_score" >> MillorsPuntuacions.tmp
-  mv MillorsPuntuacions.tmp MillorsPuntuacions.txt
-else
-  # If the user does not exist, just add their best score
-  echo "$best_score" >> MillorsPuntuacions.txt
-fi
-
-cat PartSuperior.txt
-cat MillorsPuntuacions.txt
-cat PartInferior.txt
-
+echo "#######################################################"
+echo "#                                                     #"
+echo $intents - $iteracions iteracions a $nombre, entre 0 i $mesalt>> TaulaIntentosAUTO.txt
+sort -t'-' -k2n "TaulaIntentosAUTO.txt"
+echo "#                                                     #"
+echo "#######################################################"
+    
 }
 
 
@@ -96,8 +99,6 @@ title_screen() {
 
 
 echo INICI DEL JOC
-echo 1. Iniciar
-echo 2. Sortir
 startup
 
 
