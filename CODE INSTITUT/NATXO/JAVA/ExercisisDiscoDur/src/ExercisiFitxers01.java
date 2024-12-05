@@ -8,7 +8,8 @@ public class ExercisiFitxers01 {
     // tiene el siguiente texto «Esto es una prueba», deberá mostrar
     // «Estoesunaprueba».
     public static void main(String[] args) {
-        final String nomFichero = "C:\\Users\\MMH\\Documents\\CODE\\CODE INSTITUT\\NATXO\\JAVA\\FitxersDeText\\hola.txt";
+        // final String nomFichero = "C:\\Users\\MMH\\Documents\\CODE\\CODE INSTITUT\\NATXO\\JAVA\\FitxersDeText\\hola.txt";
+        final String nomFichero = "C:/Users/MMH/Documents/CODE/CODE INSTITUT/NATXO/JAVA/FitxersDeText/hola.txt";
         try (FileReader fr = new FileReader(nomFichero)) {
             int valor = fr.read();
             while (valor != -1) {
