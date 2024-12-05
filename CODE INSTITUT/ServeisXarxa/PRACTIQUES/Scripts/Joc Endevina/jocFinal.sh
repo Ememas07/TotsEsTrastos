@@ -1,4 +1,7 @@
 #!/bin/bash
+echo INICI DEL JOC
+startup
+
 startup(){
     clear
     iteracions=0
@@ -6,7 +9,19 @@ startup(){
     title_screen
     inici
 }
-
+title_screen() {
+    clear
+    echo "#######################################################"
+    echo "#                                                     #"
+    echo "#         Benvingut a Endevina!                       #"
+    echo "#                                                     #"
+    echo "#     Hauràs d'endevinar un numero entre 0 i 100 !    #"
+    echo "#                                                     #"
+    echo "#######################################################"
+    echo ""
+    echo "Pitja Intro per entrar al joc..."
+    read -r
+}
 inici(){
     read -p "Tria un nom: " nom
     nom=$(echo $nom | tr -d ' ')
@@ -39,51 +54,28 @@ check(){
         echo "Error: Entrada no vàlida."
     fi
 }
-
-sortir(){
-    return
-}
-#!/bin/bash
 finalitzar(){
 echo "Enhorabona $nom, has guanyat en $iteracions intents!"
 echo "#                       $nom - $iteracions                      #" >> Puntuacions.txt
-
 echo "Taula de guanyadors:"
-
 # Create a temporary file to store the best score for the user
 best_score=$(grep -w $nom Puntuacions.txt | sort | head -n 1)
-
 # Check if the user already has an entry in MillorsPuntuacions.txt
 if grep -q -w "$nom" MillorsPuntuacions.txt; then
-  # If the user exists, update their entry only if the current score is better
-  grep -v -w "$nom" MillorsPuntuacions.txt > MillorsPuntuacions.tmp
-  echo "$best_score" >> MillorsPuntuacions.tmp
-  mv MillorsPuntuacions.tmp MillorsPuntuacions.txt
+# If the user exists, update their entry only if the current score is better
+grep -v -w "$nom" MillorsPuntuacions.txt > MillorsPuntuacions.tmp
+echo "$best_score" >> MillorsPuntuacions.tmp
+mv MillorsPuntuacions.tmp MillorsPuntuacions.txt
 else
-  # If the user does not exist, just add their best score
-  echo "$best_score" >> MillorsPuntuacions.txt
+# If the user does not exist, just add their best score
+echo "$best_score" >> MillorsPuntuacions.txt
 fi
-
 part_superior
 cat MillorsPuntuacions.txt
 part_inferior
-
 }
-
-# Function to display the title screen
-# Gra6 CHATGPT
-title_screen() {
-    clear
-    echo "#######################################################"
-    echo "#                                                     #"
-    echo "#         Benvingut a Endevina!                       #"
-    echo "#                                                     #"
-    echo "#     Hauràs d'endevinar un numero entre 0 i 100 !    #"
-    echo "#                                                     #"
-    echo "#######################################################"
-    echo ""
-    echo "Pitja Intro per entrar al joc..."
-    read -r
+sortir(){
+    return
 }
 part_superior(){
     echo "#######################################################"
@@ -93,9 +85,4 @@ part_inferior(){
     echo "#                                                     #"
     echo "#######################################################"
 }
-
-echo INICI DEL JOC
-startup
-
-
 
