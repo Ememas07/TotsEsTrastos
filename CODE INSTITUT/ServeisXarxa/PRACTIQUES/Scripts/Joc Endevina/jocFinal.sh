@@ -29,7 +29,6 @@ inici(){
     check
 }
 check(){
-    echo $resultat
     read -p "Tria un nombre: " intento
 
     # Check if the number has already been tried
@@ -74,9 +73,6 @@ part_superior
 cat MillorsPuntuacions.txt
 part_inferior
 }
-sortir(){
-    return
-}
 part_superior(){
     echo "#######################################################"
     echo "#                                                     #"
@@ -85,4 +81,6 @@ part_inferior(){
     echo "#                                                     #"
     echo "#######################################################"
 }
-
+sortir(){
+    return
+}
