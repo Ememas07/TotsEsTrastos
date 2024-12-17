@@ -59,18 +59,18 @@ echo "#                       $nom - $iteracions                      #" >> Punt
 echo "Taula de guanyadors:"
 # Create a temporary file to store the best score for the user
 best_score=$(grep -w $nom Puntuacions.txt | sort | head -n 1)
-# Check if the user already has an entry in MillorsPuntuacions.txt
-if grep -q -w "$nom" MillorsPuntuacions.txt; then
+# Check if the user already has an entry in ranquing.txt
+if grep -q -w "$nom" ranquing.txt; then
 # If the user exists, update their entry only if the current score is better
-grep -v -w "$nom" MillorsPuntuacions.txt > MillorsPuntuacions.tmp
-echo "$best_score" >> MillorsPuntuacions.tmp
-mv MillorsPuntuacions.tmp MillorsPuntuacions.txt
+grep -v -w "$nom" ranquing.txt > ranquing.tmp
+echo "$best_score" >> ranquing.tmp
+mv ranquing.tmp ranquing.txt
 else
 # If the user does not exist, just add their best score
-echo "$best_score" >> MillorsPuntuacions.txt
+echo "$best_score" >> ranquing.txt
 fi
 part_superior
-cat MillorsPuntuacions.txt
+cat ranquing.txt6
 part_inferior
 }
 part_superior(){

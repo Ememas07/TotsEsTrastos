@@ -16,5 +16,8 @@
         }
     ],
     "java.debug.settings.onBuildFailureProceed": true
-    ,"python.analysis.typeCheckingMode": "off"
+    ,"python.analysis.typeCheckingMode": "off",
+    "vsicons.associations.files": [
+  { "icon": "css", "extensions": ["css", "custom.css"], "format": "svg", "overrides": "css" }
+]
 }
