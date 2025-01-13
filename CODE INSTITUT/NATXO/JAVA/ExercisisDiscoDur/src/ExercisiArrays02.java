@@ -6,4 +6,5 @@ public class ExercisiArrays02 {
     // números entre los que tenga que generar), para mostrar el contenido y la suma
     // del array y un método privado para generar número aleatorio (lo puedes usar
     // para otros ejercicios).
+    
 }
