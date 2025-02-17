@@ -7,7 +7,6 @@ public class Exercisi30 {
         String frase = JOptionPane.showInputDialog("inserti frase");
         String cas = JOptionPane
                 .showInputDialog("per majusculas, pitja M (majuscula), per minuscula, pitja m (minuscula) )");
-
         switch (cas) {
             case "M":
                 frase = frase.toUpperCase();
