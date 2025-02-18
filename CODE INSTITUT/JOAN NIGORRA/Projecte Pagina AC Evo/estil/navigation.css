@@ -23,3 +23,9 @@
 .nav li a:hover {
 background-color: #111;
 }
+
+footer{
+        background-color: darkgray;
+        color:black;
+        text-align: right;
+}
