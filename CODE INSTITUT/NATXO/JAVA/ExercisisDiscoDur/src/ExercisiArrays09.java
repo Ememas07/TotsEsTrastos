@@ -1,9 +1,48 @@
-public class ExercisiArrays09 {
-    // 9) Calcula la letra de un DNI, pediremos el DNI por teclado y nos devolverá
-    // el DNI completo. Para calcular la letra, cogeremos el resto de dividir
-    // nuestro dni entre 23, el resultado debe estar entre 0 y 22. Haz un método
-    // donde según el resultado de la anterior formula busque en un array de
-    // caracteres la posición que corresponda a la letra. Esta es la tabla de
-    // caracteres:
+import javax.swing.JOptionPane;
 
+public class ExercisiArrays09 {
+    // Array de caracteres según la tabla oficial del DNI español
+    private static final char[] LETRAS_DNI = {
+            'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X',
+            'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'
+    };
+
+    public static void main(String[] args) {
+        // Pedir el número del DNI
+        String input = JOptionPane.showInputDialog(null, "Introduce el número del DNI (8 dígitos):");
+        int dniNumero;
+
+        // Validar la entrada
+        try {
+            dniNumero = Integer.parseInt(input);
+
+            // Validar que sea un número de 8 dígitos
+            while (dniNumero < 0 || dniNumero > 99999999) {
+                input = JOptionPane.showInputDialog(null,
+                        "El DNI debe ser un número positivo de 8 dígitos.\nIntroduce el número del DNI:");
+                dniNumero = Integer.parseInt(input);
+            }
+
+            // Calcular la letra y mostrar resultado
+            char letra = calcularLetraDNI(dniNumero);
+            String dniCompleto = String.format("%08d", dniNumero) + letra;
+
+            JOptionPane.showMessageDialog(null,
+                    "El DNI completo es: " + dniCompleto);
+
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: Debes introducir un número válido",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    // Método para calcular la letra del DNI
+    public static char calcularLetraDNI(int numero) {
+        // Calcular el resto de dividir entre 23
+        int posicion = numero % 23;
+        // Devolver la letra correspondiente según la posición
+        return LETRAS_DNI[posicion];
+    }
 }
