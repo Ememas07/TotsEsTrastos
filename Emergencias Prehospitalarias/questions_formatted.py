@@ -1788,5 +1788,2155 @@ questions = [
                 "D) Porque permiten que la reanimación sea más rápida"
             ],
             "correct": "B) Porque se ha demostrado que mejoran el rendimiento del equipo, la calidad de la RCP y la seguridad del paciente"
-        }
+        },
+  {
+    "text": "(Intro) Según el manual, la formación en RCP utilizando dispositivos de retroalimentación ayuda a:",
+    "options": [
+      "A) Reducir el coste de la formación",
+      "B) Potenciar y facilitar el entrenamiento en las habilidades necesarias para una RCP de calidad",
+      "C) Eliminar la necesidad de instructores",
+      "D) Acortar la duración de los cursos a la mitad"
+    ],
+    "correct": "B) Potenciar y facilitar el entrenamiento en las habilidades necesarias para una RCP de calidad"
+  },
+  {
+    "text": "(Habilidades no técnicas) En el acrónimo \"I PASS THE BATON\", ¿qué significa la 'T' de \"THE\"?",
+    "options": [
+      "A) Treatment (Tratamiento)",
+      "B) Timing (Tiempo/Urgencia)",
+      "C) Team (Equipo)",
+      "D) Triage (Triaje)"
+    ],
+    "correct": "B) Timing (Tiempo/Urgencia)"
+  },
+  {
+    "text": "(Habilidades no técnicas) ¿Cuál de las siguientes es una de las tres categorías principales evaluadas por la herramienta TEAM™?",
+    "options": [
+      "A) Conocimiento teórico",
+      "B) Destreza manual",
+      "C) Liderazgo",
+      "D) Velocidad de respuesta"
+    ],
+    "correct": "C) Liderazgo"
+  },
+  {
+    "text": "(Prehospitalaria) En el contexto post-RCE prehospitalario, si no se puede mantener una vía aérea con IOT, ¿cuál es el objetivo de etCO2 con ventilación mecánica protectora?",
+    "options": [
+      "A) 20-25 mmHg",
+      "B) 25-30 mmHg",
+      "C) 30-40 mmHg",
+      "D) 45-55 mmHg"
+    ],
+    "correct": "C) 30-40 mmHg"
+  },
+  {
+    "text": "(Prehospitalaria) El estilo \"Utstein\" se refiere a:",
+    "options": [
+      "A) Un tipo de desfibrilador portátil",
+      "B) Una técnica de compresión torácica",
+      "C) Un sistema uniforme de recogida de datos de PCR para permitir comparaciones",
+      "D) Un protocolo de comunicación entre ambulancia y hospital"
+    ],
+    "correct": "C) Un sistema uniforme de recogida de datos de PCR para permitir comparaciones"
+  },
+  {
+    "text": "(Deterioro) Según la tabla de ejemplo de EAP del manual, una frecuencia respiratoria de 30 resp/min en un paciente sin EPOC puntuaría:",
+    "options": [
+      "A) 0 puntos",
+      "B) 1 punto",
+      "C) 2 puntos",
+      "D) 3 puntos"
+    ],
+    "correct": "D) 3 puntos"
+  },
+  {
+    "text": "(Deterioro) Una de las causas de obstrucción de la vía aérea es la depresión del sistema nervioso central. ¿Cómo causa esto la obstrucción?",
+    "options": [
+      "A) Por un aumento masivo de secreciones",
+      "B) Por un espasmo de las cuerdas vocales",
+      "C) Por la pérdida de los reflejos protectores y el tono muscular faríngeo",
+      "D) Por edema cerebral"
+    ],
+    "correct": "C) Por la pérdida de los reflejos protectores y el tono muscular faríngeo"
+  },
+  {
+    "text": "(Intrahospitalaria) En un paciente que sufre una PCR en el hospital, ¿cuál es el objetivo de tiempo para administrar la primera descarga si está indicada?",
+    "options": [
+      "A) Menos de 1 minuto",
+      "B) Menos de 3 minutos",
+      "C) Menos de 5 minutos",
+      "D) Menos de 10 minutos"
+    ],
+    "correct": "B) Menos de 3 minutos"
+  },
+  {
+    "text": "(Algoritmo SVA) En una PCR por hipotermia grave (Tª < 30ºC), ¿cómo se modifica la administración de adrenalina?",
+    "options": [
+      "A) Se administra el doble de la dosis",
+      "B) No se administra hasta que la temperatura sea ≥ 30ºC",
+      "C) Se administra cada minuto",
+      "D) Se administra por vía intramuscular"
+    ],
+    "correct": "B) No se administra hasta que la temperatura sea ≥ 30ºC"
+  },
+  {
+    "text": "(Vía Aérea) ¿Cuál es la presión de aspiración máxima recomendada en niños para evitar lesiones?",
+    "options": [
+      "A) 50 mmHg",
+      "B) 100 mmHg",
+      "C) 150 mmHg",
+      "D) 200 mmHg"
+    ],
+    "correct": "B) 100 mmHg"
+  },
+  {
+    "text": "(Vía Aérea) El introductor de Frova es una herramienta útil en casos de:",
+    "options": [
+      "A) Obstrucción por cuerpo extraño",
+      "B) Vía aérea difícil con un Cormack-Lehane II o III",
+      "C) Necesidad de una vía aérea quirúrgica",
+      "D) Pacientes pediátricos exclusivamente"
+    ],
+    "correct": "B) Vía aérea difícil con un Cormack-Lehane II o III"
+  },
+  {
+    "text": "(Desfibrilación) En un niño, la dosis de energía recomendada para las descargas de desfibrilación a partir de la 5ª descarga, si la FV es refractaria, puede aumentarse hasta:",
+    "options": [
+      "A) 4 J/kg",
+      "B) 6 J/kg",
+      "C) 8 J/kg",
+      "D) 10 J/kg"
+    ],
+    "correct": "C) 8 J/kg"
+  },
+  {
+    "text": "(Desfibrilación) ¿Cómo afecta la PEEP (presión positiva teleespiratoria) a la desfibrilación?",
+    "options": [
+      "A) Aumenta la impedancia transtorácica y disminuye su efectividad",
+      "B) Disminuye la impedancia transtorácica y aumenta su efectividad",
+      "C) No tiene ningún efecto sobre la desfibrilación",
+      "D) Mejora el contacto de los parches con la piel"
+    ],
+    "correct": "A) Aumenta la impedancia transtorácica y disminuye su efectividad"
+  },
+  {
+    "text": "(Estimulación) ¿Qué modo de marcapasos transcutáneo se inhibirá si detecta un QRS espontáneo?",
+    "options": [
+      "A) Asíncrono",
+      "B) A demanda",
+      "C) Fijo",
+      "D) Universal"
+    ],
+    "correct": "B) A demanda"
+  },
+  {
+    "text": "(Arritmias) En un paciente ESTABLE con FA de >48h de evolución, el objetivo inicial del tratamiento es:",
+    "options": [
+      "A) Cardioversión eléctrica inmediata",
+      "B) Cardioversión farmacológica con Flecainida",
+      "C) Control de la frecuencia cardíaca (ej. con betabloqueantes) y anticoagulación",
+      "D) Administrar adenosina para confirmar el diagnóstico"
+    ],
+    "correct": "C) Control de la frecuencia cardíaca (ej. con betabloqueantes) y anticoagulación"
+  },
+  {
+    "text": "(SCA) En un paciente con sospecha de SCA e IAMSEST, la escala de riesgo GRACE evalúa el riesgo de:",
+    "options": [
+      "A) Sangrado durante la ICP",
+      "B) Muerte intrahospitalaria y a los seis meses",
+      "C) Necesidad de cirugía de bypass",
+      "D) Desarrollar insuficiencia cardíaca"
+    ],
+    "correct": "B) Muerte intrahospitalaria y a los seis meses"
+  },
+  {
+    "text": "(SCA) ¿Qué es el Síndrome de Brugada?",
+    "options": [
+      "A) Una enfermedad coronaria aterosclerótica",
+      "B) Una canalopatía (alteración genética cardíaca) que predispone a arritmias ventriculares y muerte súbita",
+      "C) Una complicación mecánica del infarto de miocardio",
+      "D) Una forma de miocarditis"
+    ],
+    "correct": "B) Una canalopatía (alteración genética cardíaca) que predispone a arritmias ventriculares y muerte súbita"
+  },
+  {
+    "text": "(Situaciones Especiales) En un paciente traumático con hemorragia masiva, ¿cuál es la dosis inicial recomendada de ácido tranexámico?",
+    "options": [
+      "A) 100 mg en bolo",
+      "B) 500 mg en bolo",
+      "C) 1 g en 10 minutos",
+      "D) 2 g en perfusión"
+    ],
+    "correct": "C) 1 g en 10 minutos"
+  },
+  {
+    "text": "(Situaciones Especiales) La causa de muerte más frecuente en una víctima de avalancha que sufre una PCR es:",
+    "options": [
+      "A) Hipotermia",
+      "B) Asfixia",
+      "C) Trauma",
+      "D) Hemorragia"
+    ],
+    "correct": "B) Asfixia"
+  },
+  {
+    "text": "(Pediátrica) La fórmula \"4 + (edad en años / 4)\" se utiliza para calcular el calibre de:",
+    "options": [
+      "A) Una sonda nasogástrica",
+      "B) Un tubo endotraqueal sin balón en niños > 2 años",
+      "C) Un catéter venoso periférico",
+      "D) Una aguja intraósea"
+    ],
+    "correct": "B) Un tubo endotraqueal sin balón en niños > 2 años"
+  },
+  {
+    "text": "(E-RCP) ¿Qué es el \"tiempo de bajo flujo\" (low-flow)?",
+    "options": [
+      "A) El tiempo desde el colapso hasta que se inicia la RCP",
+      "B) El tiempo desde que se inicia la RCP hasta que se establece el soporte con ECMO",
+      "C) El tiempo que tarda el equipo de E-RCP en llegar",
+      "D) El flujo de sangre inicial programado en la consola de ECMO"
+    ],
+    "correct": "B) El tiempo desde que se inicia la RCP hasta que se establece el soporte con ECMO"
+  },
+  {
+    "text": "(Cuidados Post-RCP) ¿Qué es la Escala de Rankin Modificada (mRS)?",
+    "options": [
+      "A) Una escala para medir el grado de sedación",
+      "B) Una escala para valorar el grado de incapacidad funcional tras un evento neurológico",
+      "C) Una escala para predecir el riesgo de sangrado",
+      "D) Una escala para clasificar la insuficiencia cardíaca"
+    ],
+    "correct": "B) Una escala para valorar el grado de incapacidad funcional tras un evento neurológico"
+  },
+  {
+    "text": "(Fármacos) ¿Qué fármaco se debe evitar en una taquicardia de QRS ancho que podría ser una FA preexcitada?",
+    "options": [
+      "A) Procainamida",
+      "B) Ibutilida",
+      "C) Verapamilo",
+      "D) Amiodarona (con precaución)"
+    ],
+    "correct": "C) Verapamilo"
+  },
+  {
+    "text": "(Ecografía) El \"punto pulmonar\" (lung point) en la ecografía torácica es un signo patognomónico de:",
+    "options": [
+      "A) Edema pulmonar",
+      "B) Neumonía",
+      "C) Neumotórax",
+      "D) Derrame pleural"
+    ],
+    "correct": "C) Neumotórax"
+  },
+  {
+    "text": "(Capnografía) En un paciente intubado con broncoespasmo severo, ¿qué forma adoptará la curva de capnografía?",
+    "options": [
+      "A) Será completamente plana",
+      "B) La fase ascendente y la meseta tendrán una pendiente ascendente lenta (\"aleta de tiburón\")",
+      "C) La fase ascendente será casi vertical",
+      "D) Aparecerá una muesca en la meseta"
+    ],
+    "correct": "B) La fase ascendente y la meseta tendrán una pendiente ascendente lenta (\"aleta de tiburón\")"
+  },
+  {
+    "text": "(Habilidades no técnicas) ¿Qué significa el concepto de \"modelo mental compartido\"?",
+    "options": [
+      "A) Que todos los miembros del equipo tienen la misma opinión personal",
+      "B) Que todos los miembros del equipo tienen un entendimiento común de los objetivos, tareas y coordinación necesaria",
+      "C) Que solo el líder tiene el plan de acción en mente",
+      "D) Un tipo de simulación mental para practicar la RCP"
+    ],
+    "correct": "B) Que todos los miembros del equipo tienen un entendimiento común de los objetivos, tareas y coordinación necesaria"
+  },
+  {
+    "text": "(Prehospitalaria) En un paciente con RCE tras una PCR, ¿qué se debe hacer si se detecta hipertermia en el ámbito prehospitalario?",
+    "options": [
+      "A) Iniciar enfriamiento activo con suero frío IV",
+      "B) No tratarla hasta llegar al hospital",
+      "C) Tratarla activamente con enfriamiento externo y antitérmicos, ya que es deletérea",
+      "D) Ignorarla, ya que es una respuesta fisiológica normal"
+    ],
+    "correct": "C) Tratarla activamente con enfriamiento externo y antitérmicos, ya que es deletérea"
+  },
+  {
+    "text": "(Algoritmo SVA) La FV refractaria se define como la FV que persiste después de:",
+    "options": [
+      "A) Una descarga",
+      "B) Dos descargas",
+      "C) Tres o más descargas",
+      "D) La administración de amiodarona"
+    ],
+    "correct": "C) Tres o más descargas"
+  },
+  {
+    "text": "(Vía Aérea) ¿Cuál es la principal desventaja de una mascarilla laríngea de primera generación en comparación con una de segunda?",
+    "options": [
+      "A) Es más difícil de insertar",
+      "B) No aísla la vía aérea de la digestiva, aumentando el riesgo de aspiración",
+      "C) Requiere inflado con una presión muy alta",
+      "D) Solo puede ser usada por anestesiólogos"
+    ],
+    "correct": "B) No aísla la vía aérea de la digestiva, aumentando el riesgo de aspiración"
+  },
+  {
+    "text": "(Arritmias) Un paciente con TV monomórfica estable no responde a amiodarona. ¿Qué otro fármaco antiarrítmico se podría considerar?",
+    "options": [
+      "A) Adenosina",
+      "B) Diltiazem",
+      "C) Procainamida",
+      "D) Digoxina"
+    ],
+    "correct": "C) Procainamida"
+  },
+  {
+    "text": "(SCA) ¿En qué pacientes está indicado el uso de IECAs/ARA2 como prevención secundaria tras un SCA?",
+    "options": [
+      "A) Solo en pacientes con hipertensión arterial",
+      "B) En todos los pacientes salvo contraindicación, especialmente si hay disfunción del VI, diabetes o ERC",
+      "C) Solo en pacientes mayores de 65 años",
+      "D) Únicamente si el paciente no tolera las estatinas"
+    ],
+    "correct": "B) En todos los pacientes salvo contraindicación, especialmente si hay disfunción del VI, diabetes o ERC"
+  },
+  {
+    "text": "(Situaciones Especiales) En la intoxicación por betabloqueantes o calcioantagonistas refractaria a las medidas habituales, ¿qué fármaco se puede considerar?",
+    "options": [
+      "A) Naloxona",
+      "B) Atropina",
+      "C) Glucagón",
+      "D) Flumazenilo"
+    ],
+    "correct": "C) Glucagón"
+  },
+  {
+    "text": "(Pediátrica) En la RCP de un niño, la profundidad de las compresiones debe ser:",
+    "options": [
+      "A) Al menos 5 cm",
+      "B) Un cuarto del diámetro anteroposterior del tórax",
+      "C) Un tercio del diámetro anteroposterior del tórax",
+      "D) La misma que en un lactante"
+    ],
+    "correct": "C) Un tercio del diámetro anteroposterior del tórax"
+  },
+  {
+    "text": "(E-RCP) El objetivo de una cánula de reperfusión distal durante la canulación arterial femoral para ECMO es:",
+    "options": [
+      "A) Aumentar el flujo de la ECMO",
+      "B) Prevenir la isquemia de la extremidad canulada",
+      "C) Medir la presión arterial distal",
+      "D) Facilitar la retirada de la cánula"
+    ],
+    "correct": "B) Prevenir la isquemia de la extremidad canulada"
+  },
+  {
+    "text": "(Cuidados Post-RCP) ¿Qué es el \"aturdimiento miocárdico\" (myocardial stunning) post-PCR?",
+    "options": [
+      "A) Una rotura de la pared libre del ventrículo",
+      "B) Una disfunción contráctil global y transitoria del miocardio",
+      "C) Una arritmia ventricular recurrente",
+      "D) Una pericarditis"
+    ],
+    "correct": "B) Una disfunción contráctil global y transitoria del miocardio"
+  },
+  {
+    "text": "(Ética) La toma de decisiones compartida implica que la decisión final es tomada por:",
+    "options": [
+      "A) El médico, tras informar al paciente",
+      "B) El paciente, tras un proceso de deliberación con el médico donde se exponen opciones, beneficios y riesgos",
+      "C) Los familiares, independientemente de la capacidad del paciente",
+      "D) El comité de ética del hospital"
+    ],
+    "correct": "B) El paciente, tras un proceso de deliberación con el médico donde se exponen opciones, beneficios y riesgos"
+  },
+  {
+    "text": "(Ecografía) Durante la RCP, el protocolo FEER (Focused Echocardiographic Evaluation in Resuscitation) recomienda realizar la exploración ecocardiográfica:",
+    "options": [
+      "A) De forma continua durante las compresiones",
+      "B) Durante la pausa de 10 segundos para el análisis del ritmo y pulso",
+      "C) Solo antes de iniciar la RCP",
+      "D) Solo después de conseguir la RCE"
+    ],
+    "correct": "B) Durante la pausa de 10 segundos para el análisis del ritmo y pulso"
+  },
+  {
+    "text": "(Capnografía) ¿Qué indica una curva de capnografía con una muesca en la meseta espiratoria (fase III)?",
+    "options": [
+      "A) Obstrucción del tubo endotraqueal",
+      "B) Fuga en el manguito del tubo",
+      "C) El inicio de la respiración espontánea en un paciente con bloqueo neuromuscular residual",
+      "D) Hiperventilación"
+    ],
+    "correct": "C) El inicio de la respiración espontánea en un paciente con bloqueo neuromuscular residual"
+  },
+  {
+    "text": "(Vía Aérea) ¿Cuál de estos dispositivos de vía aérea NO requiere inflado de un balón?",
+    "options": [
+      "A) Mascarilla laríngea clásica",
+      "B) Tubo laríngeo",
+      "C) Mascarilla laríngea i-Gel®",
+      "D) Tubo endotraqueal"
+    ],
+    "correct": "C) Mascarilla laríngea i-Gel®"
+  },
+  {
+    "text": "(Desfibrilación) En un paciente con mucho vello torácico, si no se dispone de rasuradora, ¿qué técnica se puede emplear con los parches adhesivos?",
+    "options": [
+      "A) Colocar los parches directamente sobre el vello",
+      "B) Usar gel adicional para mejorar el contacto",
+      "C) La técnica \"arrancar y pegar\": pegar un juego de parches y arrancarlo rápidamente para eliminar el vello, y luego colocar un segundo juego",
+      "D) No desfibrilar y centrarse solo en las compresiones"
+    ],
+    "correct": "C) La técnica \"arrancar y pegar\": pegar un juego de parches y arrancarlo rápidamente para eliminar el vello, y luego colocar un segundo juego"
+  },
+  {
+    "text": "(Arritmias) ¿Cuál es la energía inicial recomendada para una cardioversión sincronizada de un flutter auricular?",
+    "options": [
+      "A) 20-50 J",
+      "B) 70-120 J",
+      "C) 150 J",
+      "D) 200 J"
+    ],
+    "correct": "B) 70-120 J"
+  },
+  {
+    "text": "(SCA) ¿Qué es la angina inestable?",
+    "options": [
+      "A) Dolor torácico que aparece con el esfuerzo y cede con el reposo",
+      "B) Dolor torácico isquémico de nueva aparición, que empeora o aparece en reposo, sin elevación de biomarcadores (definición clásica)",
+      "C) Un infarto de miocardio completado",
+      "D) Dolor torácico de origen no cardíaco"
+    ],
+    "correct": "B) Dolor torácico isquémico de nueva aparición, que empeora o aparece en reposo, sin elevación de biomarcadores (definición clásica)"
+  },
+  {
+    "text": "(Situaciones Especiales) En la PCR en una paciente gestante, ¿cuál es el riesgo principal para la vía aérea?",
+    "options": [
+      "A) Edema de glotis",
+      "B) Mayor riesgo de regurgitación y broncoaspiración, y mayor riesgo de IOT fallida",
+      "C) Traumatismo facial",
+      "D) Obstrucción por cuerpo extraño"
+    ],
+    "correct": "B) Mayor riesgo de regurgitación y broncoaspiración, y mayor riesgo de IOT fallida"
+  },
+  {
+    "text": "(Pediátrica) ¿Por qué la bradicardia es un ritmo de PCR tan importante en niños?",
+    "options": [
+      "A) Porque es el ritmo más frecuente y si la FC es < 60 lpm con signos de hipoperfusión, se deben iniciar compresiones",
+      "B) Porque siempre es de origen cardíaco primario",
+      "C) Porque no responde a la adrenalina",
+      "D) Porque requiere desfibrilación inmediata"
+    ],
+    "correct": "A) Porque es el ritmo más frecuente y si la FC es < 60 lpm con signos de hipoperfusión, se deben iniciar compresiones"
+  },
+  {
+    "text": "(E-RCP) ¿Qué hallazgo en una TC craneal precoz post-PCR es un signo de muy mal pronóstico?",
+    "options": [
+      "A) Hematoma subdural pequeño",
+      "B) Edema cerebral difuso con pérdida de la diferenciación sustancia gris-blanca",
+      "C) Calcificaciones en los ganglios basales",
+      "D) Atrofia cortical leve"
+    ],
+    "correct": "B) Edema cerebral difuso con pérdida de la diferenciación sustancia gris-blanca"
+  },
+  {
+    "text": "(Cuidados Post-RCP) ¿Cuál es el objetivo de glucemia recomendado en el paciente post-PCR?",
+    "options": [
+      "A) < 110 mg/dL",
+      "B) 140 - 180 mg/dL",
+      "C) 180 - 220 mg/dL",
+      "D) > 250 mg/dL"
+    ],
+    "correct": "B) 140 - 180 mg/dL"
+  },
+  {
+    "text": "(Habilidades no técnicas) Si el líder del equipo asigna una tarea a \"alguien\", es un ejemplo de:",
+    "options": [
+      "A) Buena comunicación, ya que da autonomía al equipo",
+      "B) Mala comunicación, ya que no se dirige a una persona concreta y puede llevar a que nadie realice la tarea",
+      "C) Comunicación en bucle cerrado",
+      "D) Uso de la herramienta SBAR"
+    ],
+    "correct": "B) Mala comunicación, ya que no se dirige a una persona concreta y puede llevar a que nadie realice la tarea"
+  },
+  {
+    "text": "(Algoritmo SVA) La onda J de Osborn en el ECG es un hallazgo característico de:",
+    "options": [
+      "A) Hiperpotasemia",
+      "B) Hipotermia",
+      "C) TEP masivo",
+      "D) Intoxicación por digoxina"
+    ],
+    "correct": "B) Hipotermia"
+  },
+  {
+    "text": "(Vía Aérea) ¿Cuál es una contraindicación para el uso de una cánula nasofaríngea?",
+    "options": [
+      "A) Paciente con vómitos",
+      "B) Sospecha de fractura de base de cráneo",
+      "C) Paciente inconsciente",
+      "D) Paciente con barba"
+    ],
+    "correct": "B) Sospecha de fractura de base de cráneo"
+  },
+  {
+    "text": "(Desfibrilación) En un paciente pediátrico, si no se dispone de parches pediátricos, se pueden usar los de adulto en posición anteroposterior siempre que:",
+    "options": [
+      "A) Se corte el excedente de los parches",
+      "B) Los parches no se toquen entre sí",
+      "C) Se reduzca la energía a la mitad",
+      "D) Se use solo un parche"
+    ],
+    "correct": "B) Los parches no se toquen entre sí"
+  },
+  {
+    "text": "(Arritmias) En una bradicardia sintomática, la atropina es menos efectiva si el bloqueo AV es:",
+    "options": [
+      "A) A nivel del nodo AV (suprahisiano)",
+      "B) De origen vagal",
+      "C) A nivel distal (infrahisiano), como en un Mobitz II o BAV completo con QRS ancho",
+      "D) En el contexto de un infarto inferior"
+    ],
+    "correct": "C) A nivel distal (infrahisiano), como en un Mobitz II o BAV completo con QRS ancho"
+  },
+  {
+    "text": "(SCA) ¿Qué es una complicación mecánica de un IAM?",
+    "options": [
+      "A) Una arritmia ventricular",
+      "B) Una rotura estructural del corazón (ej. pared libre, septo, músculo papilar)",
+      "C) Un bloqueo de rama",
+      "D) Pericarditis"
+    ],
+    "correct": "B) Una rotura estructural del corazón (ej. pared libre, septo, músculo papilar)"
+  },
+  {
+    "text": "(Situaciones Especiales) En una PCR por ahogamiento, ¿qué se debe hacer si se sospecha lesión cervical?",
+    "options": [
+      "A) No iniciar RCP hasta que llegue un equipo con collarín",
+      "B) Iniciar RCP priorizando las compresiones y abrir la vía aérea con tracción mandibular, sin hiperextender el cuello",
+      "C) Colocar al paciente en posición lateral de seguridad",
+      "D) Inmovilizar la cabeza con las rodillas del reanimador"
+    ],
+    "correct": "B) Iniciar RCP priorizando las compresiones y abrir la vía aérea con tracción mandibular, sin hiperextender el cuello"
+  },
+  {
+    "text": "(Pediátrica) ¿Cuál es la primera acción ante un niño con bradicardia severa (<60 lpm) y mala perfusión?",
+    "options": [
+      "A) Administrar atropina",
+      "B) Iniciar compresiones torácicas",
+      "C) Asegurar una oxigenación y ventilación efectivas",
+      "D) Preparar el marcapasos transcutáneo"
+    ],
+    "correct": "C) Asegurar una oxigenación y ventilación efectivas"
+  },
+  {
+    "text": "(Cuidados Post-RCP) ¿Por qué se debe evitar la hiperoxia en el paciente post-RCE?",
+    "options": [
+      "A) Porque es cara",
+      "B) Porque puede aumentar el daño por reperfusión y la lesión neuronal",
+      "C) Porque causa hipocapnia",
+      "D) Porque no tiene ningún efecto"
+    ],
+    "correct": "B) Porque puede aumentar el daño por reperfusión y la lesión neuronal"
+  },
+  {
+    "text": "(Ética) Si un paciente tiene un documento de voluntades anticipadas válido donde rechaza la RCP, y sufre una PCR presenciada, ¿cuál es la actuación correcta?",
+    "options": [
+      "A) Iniciar la RCP porque es una emergencia",
+      "B) Respetar la voluntad del paciente y no iniciar la RCP",
+      "C) Iniciar la RCP y consultar al comité de ética",
+      "D) Pedir a la familia que anule el documento"
+    ],
+    "correct": "B) Respetar la voluntad del paciente y no iniciar la RCP"
+  },
+  {
+    "text": "(Ecografía) El \"signo del código de barras\" o \"de la estratosfera\" en la ecografía pulmonar en modo M indica:",
+    "options": [
+      "A) Pulmón normal",
+      "B) Edema pulmonar",
+      "C) Neumotórax",
+      "D) Consolidación neumónica"
+    ],
+    "correct": "C) Neumotórax"
+  },
+  {
+    "text": "(Fármacos) ¿Qué efecto tiene la administración de bicarbonato sódico sobre el etCO2 durante la RCP?",
+    "options": [
+      "A) Lo disminuye transitoriamente",
+      "B) Lo aumenta transitoriamente",
+      "C) No lo modifica",
+      "D) Lo anula completamente"
+    ],
+    "correct": "B) Lo aumenta transitoriamente"
+  },
+  {
+    "text": "(Algoritmo SVA) La principal razón para no administrar de forma rutinaria grandes volúmenes de fluidos durante la RCP es:",
+    "options": [
+      "A) Pueden causar sobrecarga de volumen si no hay hipovolemia",
+      "B) No hay tiempo para canalizar una vía",
+      "C) Es mejor administrar sangre directamente",
+      "D) Los fluidos fríos pueden causar hipotermia"
+    ],
+    "correct": "A) Pueden causar sobrecarga de volumen si no hay hipovolemia"
+  },
+  {
+    "text": "(Vía Aérea) Un paciente intubado presenta súbitamente desaturación y aumento de las presiones en la vía aérea. Tras descartar problemas del ventilador, ¿qué causa se debe sospechar primero?",
+    "options": [
+      "A) Obstrucción del tubo endotraqueal",
+      "B) Extubación accidental",
+      "C) Neumotórax a tensión",
+      "D) Todas las anteriores deben ser consideradas"
+    ],
+    "correct": "D) Todas las anteriores deben ser consideradas"
+  },
+  {
+    "text": "(Arritmias) ¿Qué es una taquicardia por reentrada intranodal (TRNAV)?",
+    "options": [
+      "A) Una taquicardia ventricular",
+      "B) Una taquicardia supraventricular que utiliza un circuito de reentrada dentro del nodo AV",
+      "C) Una fibrilación auricular",
+      "D) Un ritmo de escape de la unión"
+    ],
+    "correct": "B) Una taquicardia supraventricular que utiliza un circuito de reentrada dentro del nodo AV"
+  },
+  {
+    "text": "(SCA) La elevación del ST en las derivaciones II, III y aVF corresponde a un infarto de cara:",
+    "options": [
+      "A) Anterior",
+      "B) Lateral",
+      "C) Septal",
+      "D) Inferior"
+    ],
+    "correct": "D) Inferior"
+  },
+  {
+    "text": "(Situaciones Especiales) En un paciente con sospecha de intoxicación por opiáceos que está en parada respiratoria pero aún tiene pulso, ¿cuál es la intervención más importante?",
+    "options": [
+      "A) Administrar naloxona y ventilar al paciente",
+      "B) Iniciar compresiones torácicas",
+      "C) Administrar un bolo de fluidos",
+      "D) Desfibrilar"
+    ],
+    "correct": "A) Administrar naloxona y ventilar al paciente"
+  },
+  {
+    "text": "(Pediátrica) ¿Se puede usar un DEA en un lactante menor de 1 año?",
+    "options": [
+      "A) No, está contraindicado",
+      "B) Sí, si el DEA tiene un modo pediátrico o parches/atenuador pediátrico",
+      "C) Sí, pero solo en modo manual",
+      "D) Solo si la causa es cardíaca"
+    ],
+    "correct": "B) Sí, si el DEA tiene un modo pediátrico o parches/atenuador pediátrico"
+  },
+  {
+    "text": "(E-RCP) ¿Cuál es una contraindicación absoluta para la E-RCP?",
+    "options": [
+      "A) Ritmo inicial de Fibrilación Ventricular",
+      "B) PCR presenciada",
+      "C) Enfermedad terminal o oncológica sin opciones curativas",
+      "D) Edad de 65 años"
+    ],
+    "correct": "C) Enfermedad terminal o oncológica sin opciones curativas"
+  },
+  {
+    "text": "(Cuidados Post-RCP) ¿Qué es el \"síndrome post-UCI\"?",
+    "options": [
+      "A) Una infección nosocomial adquirida en la UCI",
+      "B) Un conjunto de problemas físicos, cognitivos y psicológicos que persisten tras una enfermedad crítica",
+      "C) La dependencia del ventilador tras una estancia prolongada",
+      "D) La insuficiencia renal que requiere diálisis tras el alta de la UCI"
+    ],
+    "correct": "B) Un conjunto de problemas físicos, cognitivos y psicológicos que persisten tras una enfermedad crítica"
+  },
+  {
+    "text": "(Desfibrilación) ¿Cuál es el principal riesgo para los reanimadores durante una desfibrilación?",
+    "options": [
+      "A) Inhalación de humos",
+      "B) Sufrir una descarga eléctrica accidental por contacto con el paciente",
+      "C) Contagio de infecciones",
+      "D) Exposición a radiación"
+    ],
+    "correct": "B) Sufrir una descarga eléctrica accidental por contacto con el paciente"
+  },
+  {
+    "text": "(Algoritmo SVA) En el algoritmo de SVA, el análisis del ritmo se realiza cada:",
+    "options": [
+      "A) 1 minuto",
+      "B) 2 minutos",
+      "C) 3 minutos",
+      "D) 5 minutos"
+    ],
+    "correct": "B) 2 minutos"
+  },
+  {
+    "text": "(Vía Aérea) La principal complicación de la cricotiroidotomía es:",
+    "options": [
+      "A) La infección",
+      "B) El sangrado y la creación de una falsa vía",
+      "C) La lesión de las cuerdas vocales",
+      "D) El neumotórax"
+    ],
+    "correct": "B) El sangrado y la creación de una falsa vía"
+  },
+  {
+    "text": "(SCA) ¿Cuál es la primera medida farmacológica antiagregante que debe recibir un paciente con sospecha de SCA?",
+    "options": [
+      "A) Clopidogrel",
+      "B) Ticagrelor",
+      "C) AAS (Ácido Acetilsalicílico) masticado",
+      "D) Abciximab"
+    ],
+    "correct": "C) AAS (Ácido Acetilsalicílico) masticado"
+  },
+  {
+    "text": "(Situaciones Especiales) ¿Por qué la PCR en el postoperatorio de cirugía cardíaca tiene una tasa de supervivencia relativamente alta?",
+    "options": [
+      "A) Porque los pacientes son más jóvenes",
+      "B) Porque las causas suelen ser rápidamente reversibles (ej. taponamiento, arritmias) y el equipo está preparado",
+      "C) Porque siempre se utiliza ECMO",
+      "D) Porque no se realizan compresiones torácicas"
+    ],
+    "correct": "B) Porque las causas suelen ser rápidamente reversibles (ej. taponamiento, arritmias) y el equipo está preparado"
+  },
+  {
+    "text": "(Pediátrica) Un niño con una frecuencia cardíaca de 50 lpm, pálido, con relleno capilar enlentecido y pulsos débiles, está en:",
+    "options": [
+      "A) Ritmo sinusal normal para su edad",
+      "B) Bradicardia con mala perfusión (shock bradicárdico)",
+      "C) Parada cardíaca",
+      "D) Taquicardia supraventricular"
+    ],
+    "correct": "B) Bradicardia con mala perfusión (shock bradicárdico)"
+  },
+  {
+    "text": "(Cuidados Post-RCP) En la valoración pronóstica, ¿qué puede interferir con la exploración neurológica y debe ser descartado?",
+    "options": [
+      "A) La sedación residual",
+      "B) El dolor",
+      "C) La fiebre",
+      "D) La hipertensión"
+    ],
+    "correct": "A) La sedación residual"
+  },
+  {
+    "text": "(Formación) El término \"fidelidad\" en la simulación clínica se refiere a:",
+    "options": [
+      "A) La lealtad del instructor hacia el alumno",
+      "B) El grado de realismo del escenario o maniquí de simulación",
+      "C) La duración de la sesión de simulación",
+      "D) La marca del equipo de simulación"
+    ],
+    "correct": "B) El grado de realismo del escenario o maniquí de simulación"
+  },
+  {
+    "text": "(Fármacos) ¿En qué situación está indicado el uso de glucagón, además de la hipoglucemia?",
+    "options": [
+      "A) Intoxicación por digoxina",
+      "B) Intoxicación por betabloqueantes o calcioantagonistas",
+      "C) Bradicardia de origen vagal",
+      "D) Tormenta arrítmica"
+    ],
+    "correct": "B) Intoxicación por betabloqueantes o calcioantagonistas"
+  },
+  {
+    "text": "(Capnografía) ¿Es útil la capnografía en un paciente no intubado?",
+    "options": [
+      "A) No, solo funciona con un tubo endotraqueal",
+      "B) Sí, se pueden usar cánulas nasales especiales para muestrear el aire espirado y monitorizar la ventilación",
+      "C) Sí, colocando el sensor en la frente del paciente",
+      "D) Solo en pacientes pediátricos"
+    ],
+    "correct": "B) Sí, se pueden usar cánulas nasales especiales para muestrear el aire espirado y monitorizar la ventilación"
+  },
+  {
+    "text": "(Ecografía) En un paciente con sospecha de TEP como causa de PCR, ¿qué hallazgo ecográfico en las venas de las piernas apoyaría el diagnóstico?",
+    "options": [
+      "A) Flujo venoso normal",
+      "B) Presencia de una trombosis venosa profunda (TVP)",
+      "C) Arterias calcificadas",
+      "D) Ausencia de venas visibles"
+    ],
+    "correct": "B) Presencia de una trombosis venosa profunda (TVP)"
+  },
+  {
+    "text": "(Habilidades no técnicas) ¿Cuál es el primer paso en el algoritmo de actuación de HNT en la PCR?",
+    "options": [
+      "A) Designar un líder",
+      "B) Repartir roles",
+      "C) Declarar la PCR y solicitar ayuda",
+      "D) Planificar actuaciones"
+    ],
+    "correct": "C) Declarar la PCR y solicitar ayuda"
+  },
+  {
+    "text": "(Prehospitalaria) En un paciente post-RCE que desarrolla convulsiones, ¿cuál es el tratamiento prehospitalario de elección?",
+    "options": [
+      "A) Administrar propofol",
+      "B) Iniciar enfriamiento inmediato",
+      "C) Administrar una benzodiacepina (ej. midazolam)",
+      "D) Realizar una intubación orotraqueal"
+    ],
+    "correct": "C) Administrar una benzodiacepina (ej. midazolam)"
+  },
+  {
+    "text": "(Deterioro) Si un paciente consciente tose enérgicamente durante un atragantamiento, la acción correcta es:",
+    "options": [
+      "A) Realizar la maniobra de Heimlich inmediatamente",
+      "B) Darle 5 golpes en la espalda",
+      "C) Animarle a seguir tosiendo y vigilarlo",
+      "D) Introducir los dedos para sacar el objeto"
+    ],
+    "correct": "C) Animarle a seguir tosiendo y vigilarlo"
+  },
+  {
+    "text": "(Algoritmo SVA) Si se administra amiodarona para una FV/TVSP refractaria, ¿se debe suspender la adrenalina?",
+    "options": [
+      "A) Sí, son incompatibles",
+      "B) No, la adrenalina se sigue administrando cada 3-5 minutos según el algoritmo",
+      "C) Se reduce la dosis de adrenalina a la mitad",
+      "D) Se cambia la adrenalina por vasopresina"
+    ],
+    "correct": "B) No, la adrenalina se sigue administrando cada 3-5 minutos según el algoritmo"
+  },
+  {
+    "text": "(Vía Aérea) La ventilación con bolsa-mascarilla en un paciente con laringectomía total se debe realizar:",
+    "options": [
+      "A) A través de la boca y la nariz",
+      "B) A través del estoma cervical",
+      "C) No es posible ventilar a estos pacientes",
+      "D) A través de la nariz, tapando la boca"
+    ],
+    "correct": "B) A través del estoma cervical"
+  },
+  {
+    "text": "(Desfibrilación) ¿Cuál es el objetivo de la sincronización en la cardioversión eléctrica?",
+    "options": [
+      "A) Aumentar la energía de la descarga",
+      "B) Evitar que la descarga coincida con la onda T (periodo vulnerable) para no inducir una FV",
+      "C) Administrar la descarga durante la onda P",
+      "D) Reducir el dolor de la descarga"
+    ],
+    "correct": "B) Evitar que la descarga coincida con la onda T (periodo vulnerable) para no inducir una FV"
+  },
+  {
+    "text": "(Arritmias) Un ritmo regular, con QRS estrecho, a 50 lpm y sin ondas P visibles, es probablemente un:",
+    "options": [
+      "A) Ritmo sinusal",
+      "B) Bloqueo AV de primer grado",
+      "C) Ritmo de la unión (nodal)",
+      "D) Ritmo idioventricular"
+    ],
+    "correct": "C) Ritmo de la unión (nodal)"
+  },
+  {
+    "text": "(SCA) En la fibrinolisis para el SCACEST, el fármaco se considera efectivo si:",
+    "options": [
+      "A) El paciente deja de tener dolor",
+      "B) Se resuelven los cambios del ECG (reducción de la elevación del ST > 50%)",
+      "C) Los niveles de troponina descienden",
+      "D) La presión arterial se normaliza"
+    ],
+    "correct": "B) Se resuelven los cambios del ECG (reducción de la elevación del ST > 50%)"
+  },
+  {
+    "text": "(Situaciones Especiales) En una PCR en un paciente obeso, una dificultad añadida es:",
+    "options": [
+      "A) Las compresiones torácicas son más fáciles",
+      "B) La vía aérea suele ser más fácil de manejar",
+      "C) La desfibrilación es más efectiva",
+      "D) Las compresiones pueden ser más agotadoras y el manejo de la vía aérea más difícil"
+    ],
+    "correct": "D) Las compresiones pueden ser más agotadoras y el manejo de la vía aérea más difícil"
+  },
+  {
+    "text": "(Pediátrica) ¿Cuál es la principal causa de shock en niños?",
+    "options": [
+      "A) Cardiogénico",
+      "B) Anafiláctico",
+      "C) Hipovolémico (a menudo por gastroenteritis o hemorragia)",
+      "D) Séptico"
+    ],
+    "correct": "C) Hipovolémico (a menudo por gastroenteritis o hemorragia)"
+  },
+  {
+    "text": "(E-RCP) ¿Qué significa el término \"puente a recuperación\" en el contexto de la ECMO?",
+    "options": [
+      "A) Que la ECMO se usa hasta que se encuentra un donante para trasplante",
+      "B) Que el soporte ECMO se mantiene hasta que el órgano (corazón/pulmón) recupera su función",
+      "C) Que se usa como puente a una decisión sobre la limitación del tratamiento",
+      "D) Que es un puente para el traslado a otro hospital"
+    ],
+    "correct": "B) Que el soporte ECMO se mantiene hasta que el órgano (corazón/pulmón) recupera su función"
+  },
+  {
+    "text": "(E-RCP) ¿Qué es la \"donación en asistolia no controlada\" (Maastricht tipo II)?",
+    "options": [
+      "A) La donación tras muerte encefálica",
+      "B) La donación tras una LTSV planificada en la UCI",
+      "C) La donación de un paciente que sufre una PCEH y no responde a la RCP, manteniéndose el soporte para preservar los órganos",
+      "D) La donación de órganos en vida"
+    ],
+    "correct": "C) La donación de un paciente que sufre una PCEH y no responde a la RCP, manteniéndose el soporte para preservar los órganos"
+  },
+  {
+    "text": "(Cuidados Post-RCP) ¿Por qué no se recomienda el recalentamiento rápido de un paciente que presenta hipotermia espontánea tras una RCE?",
+    "options": [
+      "A) Porque la hipotermia post-RCE puede ser neuroprotectora y se debe evitar un recalentamiento no controlado",
+      "B) Porque el recalentamiento puede causar arritmias",
+      "C) Porque es mejor esperar a que el cuerpo se recaliente solo",
+      "D) Porque los dispositivos de calentamiento son caros"
+    ],
+    "correct": "A) Porque la hipotermia post-RCE puede ser neuroprotectora y se debe evitar un recalentamiento no controlado"
+  },
+  {
+    "text": "(Glosario) La sigla \"MCP\" en el contexto de la cardiología se refiere a:",
+    "options": [
+      "A) Miocardiopatía",
+      "B) Masaje Cardíaco Precoz",
+      "C) Marcapasos",
+      "D) Monitorización Cardíaca Prehospitalaria"
+    ],
+    "correct": "C) Marcapasos"
+  },
+  {
+    "text": "(Fármacos) ¿Qué efecto tiene el glucagón en el corazón, que lo hace útil en la intoxicación por betabloqueantes?",
+    "options": [
+      "A) Tiene un efecto inotrópico y cronotrópico positivo independiente de los receptores beta-adrenérgicos",
+      "B) Bloquea la acción de los betabloqueantes",
+      "C) Aumenta la glucemia, dando energía al miocardio",
+      "D) Causa vasodilatación coronaria"
+    ],
+    "correct": "A) Tiene un efecto inotrópico y cronotrópico positivo independiente de los receptores beta-adrenérgicos"
+  },
+  {
+    "text": "(Capnografía) ¿Qué puede indicar un aumento progresivo del etCO2 durante la RCP, sin un salto brusco?",
+    "options": [
+      "A) Una mejora en la calidad de las compresiones o del gasto cardíaco generado",
+      "B) Una extubación inminente",
+      "C) El desarrollo de hipertermia maligna",
+      "D) El efecto de la amiodarona"
+    ],
+    "correct": "A) Una mejora en la calidad de las compresiones o del gasto cardíaco generado"
+  },
+  {
+    "text": "(Ecografía) ¿Qué es el \"signo de McConnell\" en la ecocardiografía?",
+    "options": [
+      "A) Un signo de taponamiento cardíaco",
+      "B) Un signo de disfunción del ventrículo derecho (acinesia de la pared libre con preservación de la contractilidad apical) sugestivo de TEP",
+      "C) Un signo de rotura del septo interventricular",
+      "D) Un signo de hipovolemia"
+    ],
+    "correct": "B) Un signo de disfunción del ventrículo derecho (acinesia de la pared libre con preservación de la contractilidad apical) sugestivo de TEP"
+  },
+  {
+    "text": "(Algoritmo SVA) En la PCR por intoxicación con anestésicos locales, ¿se debe modificar la dosis de adrenalina?",
+    "options": [
+      "A) Sí, se debe duplicar la dosis",
+      "B) Sí, se deben considerar dosis más bajas (< 1 mcg/kg) para evitar arritmias",
+      "C) No, se usa la dosis estándar",
+      "D) No se debe usar adrenalina"
+    ],
+    "correct": "B) Sí, se deben considerar dosis más bajas (< 1 mcg/kg) para evitar arritmias"
+  },
+  {
+    "text": "(Vía Aérea) Un paciente con barba presenta una fuga masiva durante la ventilación con bolsa-mascarilla. ¿Cuál es la mejor solución inmediata?",
+    "options": [
+      "A) Aumentar la presión de la ventilación",
+      "B) Usar una mascarilla más pequeña",
+      "C) La técnica de dos reanimadores (uno sella la mascarilla con ambas manos y el otro ventila)",
+      "D) Rasurar al paciente, aunque se retrase la ventilación"
+    ],
+    "correct": "C) La técnica de dos reanimadores (uno sella la mascarilla con ambas manos y el otro ventila)"
+  },
+  {
+    "text": "(Desfibrilación) La probabilidad de que una desfibrilación sea exitosa disminuye un 10-12% por cada:",
+    "options": [
+      "A) Segundo de retraso",
+      "B) Minuto de retraso sin RCP",
+      "C) Ciclo de RCP",
+      "D) Grado de temperatura corporal por debajo de lo normal"
+    ],
+    "correct": "B) Minuto de retraso sin RCP"
+  },
+  {
+    "text": "(Arritmias) ¿Qué fármaco se usa para el control de la frecuencia en una FA en un paciente con insuficiencia cardíaca severa?",
+    "options": [
+      "A) Verapamilo",
+      "B) Betabloqueantes",
+      "C) Digoxina o Amiodarona",
+      "D) Adenosina"
+    ],
+    "correct": "C) Digoxina o Amiodarona"
+  },
+  {
+    "text": "(SCA) ¿Cuál es la principal diferencia entre un SCASEST y una angina inestable?",
+    "options": [
+      "A) La presencia de dolor torácico",
+      "B) Los cambios en el ECG",
+      "C) La elevación de los biomarcadores de necrosis miocárdica (troponinas) en el SCASEST",
+      "D) La edad del paciente"
+    ],
+    "correct": "C) La elevación de los biomarcadores de necrosis miocárdica (troponinas) en el SCASEST"
+  },
+  {
+    "text": "(Situaciones Especiales) En una PCR por electrocución con corriente alterna (AC), el ritmo inicial más probable es:",
+    "options": [
+      "A) Asistolia",
+      "B) Actividad Eléctrica Sin Pulso",
+      "C) Fibrilación Ventricular",
+      "D) Bradicardia extrema"
+    ],
+    "correct": "C) Fibrilación Ventricular"
+  },
+  {
+    "text": "(Pediátrica) ¿Cuál es la primera medida ante un niño que presenta una bradicardia sintomática?",
+    "options": [
+      "A) Administrar atropina",
+      "B) Optimizar la vía aérea, la respiración y la oxigenación",
+      "C) Iniciar compresiones torácicas",
+      "D) Preparar el desfibrilador"
+    ],
+    "correct": "B) Optimizar la vía aérea, la respiración y la oxigenación"
+  },
+  {
+    "text": "(E-RCP) ¿Cuál es un riesgo asociado al flujo no pulsátil de la ECMO?",
+    "options": [
+      "A) Aumento de la presión de perfusión coronaria",
+      "B) Reducción de la postcarga del ventrículo izquierdo",
+      "C) Aumento de la postcarga del ventrículo izquierdo y posible sobredistensión",
+      "D) Mejora de la función renal"
+    ],
+    "correct": "C) Aumento de la postcarga del ventrículo izquierdo y posible sobredistensión"
+  },
+  {
+    "text": "(Cuidados Post-RCP) ¿Qué es una \"reacción bifásica\" en el contexto de la anafilaxia?",
+    "options": [
+      "A) La aparición de dos síntomas diferentes a la vez",
+      "B) El retorno de los síntomas horas después de la resolución aparente del episodio inicial",
+      "C) Una alergia a dos sustancias diferentes",
+      "D) La respuesta a la adrenalina seguida de una respuesta a los corticoides"
+    ],
+    "correct": "B) El retorno de los síntomas horas después de la resolución aparente del episodio inicial"
+  },
+  {
+    "text": "(Ética) ¿Se puede considerar fútil una RCP en un paciente con una PCR por hipotermia severa, incluso si la parada es prolongada?",
+    "options": [
+      "A) Sí, después de 20 minutos se considera fútil",
+      "B) No, en la hipotermia se debe continuar la RCP hasta que el paciente esté recalentado (\"no está muerto hasta que está caliente y muerto\")",
+      "C) Depende de la edad del paciente",
+      "D) Solo si la temperatura es inferior a 24ºC"
+    ],
+    "correct": "B) No, en la hipotermia se debe continuar la RCP hasta que el paciente esté recalentado (\"no está muerto hasta que está caliente y muerto\")"
+  },
+  {
+    "text": "(Glosario) La sigla \"TEP\" se refiere a:",
+    "options": [
+      "A) Terapia Eléctrica Programada",
+      "B) Tensión Elevada Pulmonar",
+      "C) Tromboembolismo Pulmonar",
+      "D) Tratamiento Expectante Paliativo"
+    ],
+    "correct": "C) Tromboembolismo Pulmonar"
+  },
+  {
+    "text": "(Fármacos) ¿Cuál es el principal efecto adverso de los opiáceos que puede conducir a una PCR?",
+    "options": [
+      "A) Taquicardia ventricular",
+      "B) Hipertensión severa",
+      "C) Depresión respiratoria",
+      "D) Insuficiencia renal"
+    ],
+    "correct": "C) Depresión respiratoria"
+  },
+  {
+    "text": "(Capnografía) ¿Cuál es la utilidad de la capnografía en un paciente con asma?",
+    "options": [
+      "A) No es útil en el asma",
+      "B) La forma de la curva (ascenso lento, \"aleta de tiburón\") puede indicar el grado de broncoespasmo",
+      "C) Mide la saturación de oxígeno",
+      "D) Sirve para administrar la medicación inhalada"
+    ],
+    "correct": "B) La forma de la curva (ascenso lento, \"aleta de tiburón\") puede indicar el grado de broncoespasmo"
+  },
+  {
+    "text": "(Ecografía) ¿Qué indica un \"septo en D\" en la ecocardiografía?",
+    "options": [
+      "A) Una comunicación interventricular",
+      "B) Una sobrecarga de presión del ventrículo derecho que aplana el septo",
+      "C) Una hipertrofia del ventrículo izquierdo",
+      "D) Un hallazgo normal"
+    ],
+    "correct": "B) Una sobrecarga de presión del ventrículo derecho que aplana el septo"
+  },
+  {
+    "text": "(Algoritmo SVA) En una PCR donde se sospecha intoxicación por antidepresivos tricíclicos, ¿qué dos tratamientos específicos se deben considerar?",
+    "options": [
+      "A) Naloxona y Flumazenilo",
+      "B) Bicarbonato sódico e hiperventilación",
+      "C) Calcio y Magnesio",
+      "D) Fibrinolisis y antiagregantes"
+    ],
+    "correct": "B) Bicarbonato sódico e hiperventilación"
+  },
+  {
+    "text": "(Vía Aérea) Un paciente intubado muerde el tubo, obstruyéndolo. ¿Cuál es la solución más inmediata?",
+    "options": [
+      "A) Retirar el tubo",
+      "B) Insertar una cánula orofaríngea como bloque de mordida",
+      "C) Aumentar la presión del ventilador",
+      "D) Administrar un bloqueante neuromuscular"
+    ],
+    "correct": "B) Insertar una cánula orofaríngea como bloque de mordida"
+  },
+  {
+    "text": "(Desfibrilación) ¿Cuál es la principal ventaja de los electrodos autoadhesivos sobre las palas de desfibrilación?",
+    "options": [
+      "A) Son más baratos",
+      "B) Permiten una desfibrilación más segura (manos libres) y una monitorización continua",
+      "C) Conducen mejor la electricidad",
+      "D) Se pueden usar sin gel"
+    ],
+    "correct": "B) Permiten una desfibrilación más segura (manos libres) y una monitorización continua"
+  },
+  {
+    "text": "(Arritmias) ¿Qué es un \"ritmo de escape\"?",
+    "options": [
+      "A) Una taquicardia supraventricular",
+      "B) Un ritmo lento que se origina en un marcapasos subsidiario (nodo AV o ventrículo) cuando el marcapasos principal falla",
+      "C) Una fibrilación ventricular",
+      "D) Una extrasístole aislada"
+    ],
+    "correct": "B) Un ritmo lento que se origina en un marcapasos subsidiario (nodo AV o ventrículo) cuando el marcapasos principal falla"
+  },
+  {
+    "text": "(SCA) ¿Qué es una complicación eléctrica de un IAM?",
+    "options": [
+      "A) Rotura del músculo papilar",
+      "B) Shock cardiogénico",
+      "C) Arritmias ventriculares (FV/TV) o bradiarritmias",
+      "D) Pericarditis"
+    ],
+    "correct": "C) Arritmias ventriculares (FV/TV) o bradiarritmias"
+  },
+  {
+    "text": "(Situaciones Especiales) En la atención a una PCR en un avión comercial, la ayuda médica puede provenir de:",
+    "options": [
+      "A) Solo de la tripulación de cabina",
+      "B) Pasajeros que sean profesionales sanitarios y/o contacto con un servicio médico en tierra (telemedicina)",
+      "C) El piloto, que recibe formación específica",
+      "D) No se puede recibir ayuda externa"
+    ],
+    "correct": "B) Pasajeros que sean profesionales sanitarios y/o contacto con un servicio médico en tierra (telemedicina)"
+  },
+  {
+    "text": "(Pediátrica) ¿Cuál es la dosis de un bolo de fluidos en un niño en PCR por hipovolemia?",
+    "options": [
+      "A) 5 ml/kg",
+      "B) 10 ml/kg",
+      "C) 20 ml/kg",
+      "D) 50 ml/kg"
+    ],
+    "correct": "C) 20 ml/kg"
+  },
+  {
+    "text": "(E-RCP) ¿Qué es una \"PCR refractaria\"?",
+    "options": [
+      "A) Una PCR que dura más de 5 minutos",
+      "B) Una PCR que no responde a las maniobras de SVA convencionales (RCP, desfibrilación, fármacos)",
+      "C) Una PCR de origen no cardíaco",
+      "D) Una PCR en un paciente con enfermedad terminal"
+    ],
+    "correct": "B) Una PCR que no responde a las maniobras de SVA convencionales (RCP, desfibrilación, fármacos)"
+  },
+  {
+    "text": "(Cuidados Post-RCP) La presencia de un reflejo corneal ausente a las 72h post-PCR es un signo de:",
+    "options": [
+      "A) Buen pronóstico",
+      "B) Mal pronóstico",
+      "C) Necesidad de lubricación ocular",
+      "D) Muerte encefálica"
+    ],
+    "correct": "B) Mal pronóstico"
+  },
+  {
+    "text": "(Habilidades no técnicas) ¿Por qué es crucial la \"conciencia situacional\" en una emergencia?",
+    "options": [
+      "A) Para poder documentar el caso correctamente",
+      "B) Para poder anticipar problemas y tomar decisiones informadas basadas en una percepción global del entorno",
+      "C) Para mantener la calma",
+      "D) Para seguir las órdenes del líder sin dudar"
+    ],
+    "correct": "B) Para poder anticipar problemas y tomar decisiones informadas basadas en una percepción global del entorno"
+  },
+  {
+    "text": "(Prehospitalaria) En un paciente con RCE que presenta un SCACEST, el objetivo de los cuidados prehospitalarios es:",
+    "options": [
+      "A) Iniciar la fibrinolisis en la ambulancia",
+      "B) Estabilizar al paciente y transportarlo rápidamente a un hospital con capacidad de ICP, prealertando al equipo",
+      "C) Administrar un betabloqueante y esperar la evolución",
+      "D) Realizar un ecocardiograma en la ambulancia"
+    ],
+    "correct": "B) Estabilizar al paciente y transportarlo rápidamente a un hospital con capacidad de ICP, prealertando al equipo"
+  },
+  {
+    "text": "(Deterioro) ¿Cuál es el primer paso en el manejo de un paciente con una reacción anafiláctica?",
+    "options": [
+      "A) Administrar corticoides",
+      "B) Evaluar el ABCDE y retirar el alérgeno si es posible",
+      "C) Canalizar una vía venosa",
+      "D) Administrar un antihistamínico"
+    ],
+    "correct": "B) Evaluar el ABCDE y retirar el alérgeno si es posible"
+  },
+  {
+    "text": "(Algoritmo SVA) En una PCR por Torsade de Pointes, ¿qué fármaco es el tratamiento de elección?",
+    "options": [
+      "A) Amiodarona",
+      "B) Lidocaína",
+      "C) Calcio",
+      "D) Sulfato de magnesio"
+    ],
+    "correct": "D) Sulfato de magnesio"
+  },
+  {
+    "text": "(Vía Aérea) ¿Cuál es una complicación tardía de una cricotiroidotomía?",
+    "options": [
+      "A) Sangrado",
+      "B) Estenosis subglótica",
+      "C) Infección",
+      "D) Enfisema subcutáneo"
+    ],
+    "correct": "B) Estenosis subglótica"
+  },
+  {
+    "text": "(Desfibrilación) En un paciente pediátrico, ¿dónde se deben colocar los parches de desfibrilación si son demasiado grandes para la posición anterolateral?",
+    "options": [
+      "A) Uno en el pecho y otro en el abdomen",
+      "B) En posición anteroposterior",
+      "C) No se deben usar",
+      "D) En las extremidades"
+    ],
+    "correct": "B) En posición anteroposterior"
+  },
+  {
+    "text": "(Arritmias) Un paciente con historia de infarto presenta una taquicardia regular de QRS ancho. Se debe asumir que es una:",
+    "options": [
+      "A) Taquicardia Supraventricular con aberrancia",
+      "B) Taquicardia Ventricular hasta que se demuestre lo contrario",
+      "C) Fibrilación Auricular",
+      "D) Taquicardia Sinusal"
+    ],
+    "correct": "B) Taquicardia Ventricular hasta que se demuestre lo contrario"
+  },
+  {
+    "text": "(SCA) ¿Qué es la \"angioplastia primaria\"?",
+    "options": [
+      "A) La administración de fibrinolíticos",
+      "B) La cirugía de bypass coronario",
+      "C) La intervención coronaria percutánea (con balón y/o stent) como primera estrategia de reperfusión en un SCACEST",
+      "D) Un tipo de rehabilitación cardíaca"
+    ],
+    "correct": "C) La intervención coronaria percutánea (con balón y/o stent) como primera estrategia de reperfusión en un SCACEST"
+  },
+  {
+    "text": "(Situaciones Especiales) ¿Cuál es el objetivo principal del manejo del paciente traumatizado con hemorragia?",
+    "options": [
+      "A) Administrar 2 litros de cristaloides lo más rápido posible",
+      "B) Detener el sangrado (control de la hemorragia)",
+      "C) Realizar una TC de cuerpo completo",
+      "D) Mantener al paciente caliente"
+    ],
+    "correct": "B) Detener el sangrado (control de la hemorragia)"
+  },
+  {
+    "text": "(Pediátrica) ¿Cuál es el signo más fiable de PCR en un niño para un reanimador lego?",
+    "options": [
+      "A) Ausencia de pulso",
+      "B) Piel pálida o cianótica",
+      "C) Inconsciencia y ausencia de respiración normal (no respira o solo jadea/boquea)",
+      "D) Pupilas dilatadas"
+    ],
+    "correct": "C) Inconsciencia y ausencia de respiración normal (no respira o solo jadea/boquea)"
+  },
+  {
+    "text": "(E-RCP) Una vez iniciada la E-RCP, la perfusión del cerebro depende principalmente de:",
+    "options": [
+      "A) El gasto cardíaco residual del paciente",
+      "B) El flujo de sangre generado por la bomba de ECMO",
+      "C) La calidad de las compresiones torácicas, que continúan",
+      "D) La presión arterial media"
+    ],
+    "correct": "B) El flujo de sangre generado por la bomba de ECMO"
+  },
+  {
+    "text": "(Cuidados Post-RCP) ¿Es recomendable la ventilación mecánica protectora (bajo volumen tidal) en pacientes post-PCR sin SDRA?",
+    "options": [
+      "A) No, se deben usar volúmenes altos para expandir los pulmones",
+      "B) Sí, es una estrategia razonable para minimizar la lesión pulmonar asociada a la ventilación",
+      "C) Solo si el paciente es obeso",
+      "D) Solo si la causa de la PCR fue respiratoria"
+    ],
+    "correct": "B) Sí, es una estrategia razonable para minimizar la lesión pulmonar asociada a la ventilación"
+  },
+  {
+    "text": "(Glosario) La sigla \"AESP\" se refiere a:",
+    "options": [
+      "A) Asistencia Eléctrica Sostenida Programada",
+      "B) Actividad Eléctrica Sin Pulso",
+      "C) Aporte Extra de Solución Salina",
+      "D) Algoritmo de Emergencia y Soporte Precoz"
+    ],
+    "correct": "B) Actividad Eléctrica Sin Pulso"
+  },
+  {
+    "text": "(Fármacos) ¿Cuál es el principal riesgo de la administración de succinilcolina en un paciente con hiperpotasemia?",
+    "options": [
+      "A) Puede causar un aumento aún mayor y potencialmente mortal del potasio sérico",
+      "B) Puede causar hipotensión severa",
+      "C) Puede causar bradicardia",
+      "D) No tiene riesgos en la hiperpotasemia"
+    ],
+    "correct": "A) Puede causar un aumento aún mayor y potencialmente mortal del potasio sérico"
+  },
+  {
+    "text": "(Capnografía) Un paciente intubado en ventilación mecánica presenta una curva de etCO2 que no vuelve a cero en la inspiración. ¿Qué indica?",
+    "options": [
+      "A) Una RCE",
+      "B) Reinhalación de CO2 (ej. por un fallo en la válvula espiratoria del ventilador)",
+      "C) Hipoventilación",
+      "D) Es un patrón normal"
+    ],
+    "correct": "B) Reinhalación de CO2 (ej. por un fallo en la válvula espiratoria del ventilador)"
+  },
+  {
+    "text": "(Ecografía) ¿Qué es una ventana acústica en ecografía?",
+    "options": [
+      "A) El tipo de transductor utilizado",
+      "B) Un área del cuerpo donde se puede colocar el transductor para obtener imágenes de un órgano sin la interferencia de hueso o aire",
+      "C) El software del ecógrafo",
+      "D) El gel de ultrasonidos"
+    ],
+    "correct": "B) Un área del cuerpo donde se puede colocar el transductor para obtener imágenes de un órgano sin la interferencia de hueso o aire"
+  },
+  {
+    "text": "(Algoritmo SVA) La duración de las maniobras de RCP antes de considerar la futilidad en una asistolia persistente sin causa reversible es, como mínimo, de:",
+    "options": [
+      "A) 10 minutos",
+      "B) 15 minutos",
+      "C) 20 minutos",
+      "D) 30 minutos"
+    ],
+    "correct": "C) 20 minutos"
+  },
+  {
+    "text": "(Vía Aérea) ¿Por qué un tubo endotraqueal con balón se prefiere en la RCP del adulto?",
+    "options": [
+      "A) Porque es más fácil de insertar",
+      "B) Porque protege la vía aérea de la aspiración y permite una ventilación eficaz sin fugas",
+      "C) Porque no necesita fiador",
+      "D) Porque es más barato"
+    ],
+    "correct": "B) Porque protege la vía aérea de la aspiración y permite una ventilación eficaz sin fugas"
+  },
+  {
+    "text": "(Desfibrilación) En la secuencia de desfibrilación, ¿cuándo se debe reanudar las compresiones tras una descarga?",
+    "options": [
+      "A) Después de comprobar el pulso",
+      "B) Inmediatamente, sin comprobar el ritmo ni el pulso",
+      "C) Después de administrar una dosis de adrenalina",
+      "D) Cuando el DEA lo indique, lo que puede tardar varios segundos"
+    ],
+    "correct": "B) Inmediatamente, sin comprobar el ritmo ni el pulso"
+  },
+  {
+    "text": "(Arritmias) ¿Cuál de las siguientes condiciones NO es un \"signo adverso\" en un paciente con una arritmia?",
+    "options": [
+      "A) Shock o hipotensión",
+      "B) Síncope",
+      "C) Frecuencia cardíaca de 110 lpm en un paciente ansioso pero con presión normal",
+      "D) Insuficiencia cardíaca aguda"
+    ],
+    "correct": "C) Frecuencia cardíaca de 110 lpm en un paciente ansioso pero con presión normal"
+  },
+  {
+    "text": "(SCA) ¿Qué es el \"remodelado ventricular\" post-infarto?",
+    "options": [
+      "A) La recuperación completa de la función cardíaca",
+      "B) Un cambio en la forma, tamaño y grosor del ventrículo izquierdo como respuesta al daño",
+      "C) La formación de un aneurisma",
+      "D) La aparición de una nueva arritmia"
+    ],
+    "correct": "B) Un cambio en la forma, tamaño y grosor del ventrículo izquierdo como respuesta al daño"
+  },
+  {
+    "text": "(Situaciones Especiales) En la PCR de un paciente con una sobredosis de cocaína, se debe tener especial precaución con el uso de:",
+    "options": [
+      "A) Benzodiacepinas",
+      "B) Betabloqueantes (por el riesgo de vasoconstricción coronaria sin oposición)",
+      "C) Nitroglicerina",
+      "D) Oxígeno"
+    ],
+    "correct": "B) Betabloqueantes (por el riesgo de vasoconstricción coronaria sin oposición)"
+  },
+  {
+    "text": "(Pediátrica) ¿Cuál es la causa más común de PCR intrahospitalaria en niños?",
+    "options": [
+      "A) Arritmias primarias",
+      "B) Progresión de la insuficiencia respiratoria o del shock",
+      "C) Trauma",
+      "D) Intoxicaciones"
+    ],
+    "correct": "B) Progresión de la insuficiencia respiratoria o del shock"
+  },
+  {
+    "text": "(E-RCP) ¿Qué es el \"tiempo desde la PCR hasta la entrada en ECMO\"?",
+    "options": [
+      "A) Tiempo de no flujo",
+      "B) Tiempo de bajo flujo",
+      "C) Tiempo total de la PCR",
+      "D) Tiempo de isquemia caliente"
+    ],
+    "correct": "B) Tiempo de bajo flujo"
+  },
+  {
+    "text": "(Cuidados Post-RCP) Si un paciente post-PCR desarrolla fiebre (>37.7ºC) a pesar de las medidas de control de temperatura, ¿qué se debe hacer?",
+    "options": [
+      "A) Ignorarla, es una respuesta normal",
+      "B) Tratarla activamente para mantener la normotermia",
+      "C) Suspender la sedación",
+      "D) Iniciar antibióticos de amplio espectro"
+    ],
+    "correct": "B) Tratarla activamente para mantener la normotermia"
+  },
+  {
+    "text": "(Habilidades no técnicas) ¿Cuál de las siguientes es una barrera para una comunicación eficaz?",
+    "options": [
+      "A) Usar un lenguaje claro y conciso",
+      "B) La comunicación en bucle cerrado",
+      "C) El ruido excesivo y las interrupciones",
+      "D) Hablar en voz alta y clara"
+    ],
+    "correct": "C) El ruido excesivo y las interrupciones"
+  },
+  {
+    "text": "(Prehospitalaria) ¿Cuál es la finalidad de un \"debriefing en caliente\" (hot debrief)?",
+    "options": [
+      "A) Realizar una evaluación formal y detallada del caso",
+      "B) Permitir una discusión breve e inmediata tras el evento para abordar el rendimiento y el bienestar del equipo",
+      "C) Completar el informe de asistencia",
+      "D) Comunicar el caso al hospital receptor"
+    ],
+    "correct": "B) Permitir una discusión breve e inmediata tras el evento para abordar el rendimiento y el bienestar del equipo"
+  },
+  {
+    "text": "(Deterioro) En el abordaje ABCDE, un relleno capilar > 2 segundos es un signo de:",
+    "options": [
+      "A) Buena perfusión (C)",
+      "B) Mala perfusión (C)",
+      "C) Problema respiratorio (B)",
+      "D) Alteración neurológica (D)"
+    ],
+    "correct": "B) Mala perfusión (C)"
+  },
+  {
+    "text": "(Algoritmo SVA) En una PCR, ¿es prioritario obtener un acceso venoso central?",
+    "options": [
+      "A) Sí, siempre es la primera opción",
+      "B) No, se prefiere un acceso venoso periférico o intraóseo por ser más rápidos y seguros",
+      "C) Solo en PCR de origen cardíaco",
+      "D) Solo si la RCP dura más de 10 minutos"
+    ],
+    "correct": "B) No, se prefiere un acceso venoso periférico o intraóseo por ser más rápidos y seguros"
+  },
+  {
+    "text": "(Vía Aérea) ¿Qué es una mascarilla laríngea tipo Fastrach®?",
+    "options": [
+      "A) Un dispositivo supraglótico diseñado para facilitar la intubación a ciegas a su través",
+      "B) Una mascarilla facial para ventilación no invasiva",
+      "C) Un tipo de cánula de traqueostomía",
+      "D) Un dispositivo para administrar oxígeno a alto flujo"
+    ],
+    "correct": "A) Un dispositivo supraglótico diseñado para facilitar la intubación a ciegas a su través"
+  },
+  {
+    "text": "(Desfibrilación) La energía administrada por un desfibrilador se mide en:",
+    "options": [
+      "A) Voltios (V)",
+      "B) Amperios (A)",
+      "C) Ohmios (Ω)",
+      "D) Julios (J)"
+    ],
+    "correct": "D) Julios (J)"
+  },
+  {
+    "text": "(Arritmias) Un paciente presenta una taquicardia de QRS estrecho, regular y estable. Tras fallar las maniobras vagales, se administra adenosina y el ritmo se ralentiza mostrando ondas de flutter. ¿Cuál es el siguiente paso?",
+    "options": [
+      "A) Administrar otra dosis de adenosina",
+      "B) Tratar como un flutter auricular (ej. control de frecuencia con betabloqueantes/calcioantagonistas)",
+      "C) Realizar una cardioversión eléctrica",
+      "D) Administrar amiodarona"
+    ],
+    "correct": "B) Tratar como un flutter auricular (ej. control de frecuencia con betabloqueantes/calcioantagonistas)"
+  },
+  {
+    "text": "(SCA) ¿Qué es la \"trombólisis facilitada\" en el SCACEST?",
+    "options": [
+      "A) Administrar media dosis de fibrinolítico antes de la ICP",
+      "B) Una estrategia que ya no se recomienda",
+      "C) Realizar una angioplastia y luego administrar fibrinolíticos",
+      "D) El uso de antiagregantes potentes junto con la fibrinolisis"
+    ],
+    "correct": "B) Una estrategia que ya no se recomienda"
+  },
+  {
+    "text": "(Situaciones Especiales) En una PCR en una víctima de ahogamiento, se puede encontrar una gran cantidad de espuma en la vía aérea. ¿Qué se debe hacer?",
+    "options": [
+      "A) No ventilar para evitar empeorar la situación",
+      "B) Aspirar la espuma y continuar con la ventilación",
+      "C) Iniciar solo compresiones",
+      "D) Colocar al paciente boca abajo"
+    ],
+    "correct": "B) Aspirar la espuma y continuar con la ventilación"
+  },
+  {
+    "text": "(Pediátrica) La causa más común de obstrucción de la vía aérea por cuerpo extraño en niños es:",
+    "options": [
+      "A) Piezas de juguetes",
+      "B) Alimentos (ej. frutos secos, salchichas)",
+      "C) Monedas",
+      "D) Globos"
+    ],
+    "correct": "B) Alimentos (ej. frutos secos, salchichas)"
+  },
+  {
+    "text": "(E-RCP) ¿Es la E-RCP un tratamiento curativo por sí mismo?",
+    "options": [
+      "A) Sí, restaura la función cardíaca permanentemente",
+      "B) No, es una medida de soporte (\"puente\") que permite ganar tiempo para tratar la causa subyacente de la PCR",
+      "C) Sí, reemplaza la función del corazón y los pulmones a largo plazo",
+      "D) Depende de la causa de la PCR"
+    ],
+    "correct": "B) No, es una medida de soporte (\"puente\") que permite ganar tiempo para tratar la causa subyacente de la PCR"
+  },
+  {
+    "text": "(Cuidados Post-RCP) ¿Qué es el \"despertar tardío\" (delayed awakening) post-PCR?",
+    "options": [
+      "A) El paciente se despierta durante la RCP",
+      "B) Una recuperación de la conciencia que puede tardar varios días, influenciada por la sedación y la lesión cerebral",
+      "C) El paciente finge estar en coma",
+      "D) Un signo de mal pronóstico inevitable"
+    ],
+    "correct": "B) Una recuperación de la conciencia que puede tardar varios días, influenciada por la sedación y la lesión cerebral"
+  },
+  {
+    "text": "(Ética) ¿Qué se debe hacer si se encuentra un documento de voluntades anticipadas durante una RCP ya iniciada?",
+    "options": [
+      "A) Ignorarlo y continuar la RCP",
+      "B) Detener la RCP inmediatamente",
+      "C) Evaluar la validez y aplicabilidad del documento a la situación actual, y actuar en consecuencia",
+      "D) Pedir a la familia que decida"
+    ],
+    "correct": "C) Evaluar la validez y aplicabilidad del documento a la situación actual, y actuar en consecuencia"
+  },
+  {
+    "text": "(Fármacos) ¿Cuál es una indicación para el uso de cloruro cálcico en la PCR?",
+    "options": [
+      "A) Asistolia",
+      "B) Fibrilación Ventricular",
+      "C) Hipocalcemia, hiperpotasemia o intoxicación por calcioantagonistas",
+      "D) Hipovolemia"
+    ],
+    "correct": "C) Hipocalcemia, hiperpotasemia o intoxicación por calcioantagonistas"
+  },
+  {
+    "text": "(Ecografía) Para realizar una pericardiocentesis ecoguiada, la aproximación más segura suele ser:",
+    "options": [
+      "A) La que ofrezca la ventana más corta y segura hasta el derrame, evitando estructuras vitales",
+      "B) Siempre subxifoidea",
+      "C) Siempre paraesternal",
+      "D) Siempre apical"
+    ],
+    "correct": "A) La que ofrezca la ventana más corta y segura hasta el derrame, evitando estructuras vitales"
+  },
+  {
+    "text": "(Capnografía) ¿Cuál es el principal factor que determina el valor del etCO2 durante una RCP de calidad?",
+    "options": [
+      "A) La frecuencia de las ventilaciones",
+      "B) El flujo sanguíneo pulmonar (gasto cardíaco generado por las compresiones)",
+      "C) La temperatura del paciente",
+      "D) La dosis de adrenalina"
+    ],
+    "correct": "B) El flujo sanguíneo pulmonar (gasto cardíaco generado por las compresiones)"
+  },
+  {
+    "text": "(Vía Aérea) ¿Qué es un TET (Tubo Endotraqueal) anillado o armado?",
+    "options": [
+      "A) Un tubo con un balón extra",
+      "B) Un tubo con un refuerzo metálico en espiral para evitar que se acode",
+      "C) Un tubo diseñado para la intubación nasal",
+      "D) Un tubo con un canal para aspiración"
+    ],
+    "correct": "B) Un tubo con un refuerzo metálico en espiral para evitar que se acode"
+  },
+  {
+    "text": "(Desfibrilación) ¿Se debe continuar la RCP mientras el DEA está analizando el ritmo?",
+    "options": [
+      "A) Sí, para no perder tiempo",
+      "B) No, se debe detener todo movimiento para evitar artefactos en el análisis",
+      "C) Solo si el paciente es un niño",
+      "D) Depende del modelo de DEA"
+    ],
+    "correct": "B) No, se debe detener todo movimiento para evitar artefactos en el análisis"
+  },
+  {
+    "text": "(Arritmias) Un paciente con FA crónica desarrolla un BAV completo. El ritmo ventricular será:",
+    "options": [
+      "A) Rápido e irregular",
+      "B) Rápido y regular",
+      "C) Lento y regular (un ritmo de escape)",
+      "D) Ausente (asistolia)"
+    ],
+    "correct": "C) Lento y regular (un ritmo de escape)"
+  },
+  {
+    "text": "(SCA) ¿Qué es la \"onda de Pardee\"?",
+    "options": [
+      "A) Una onda T invertida",
+      "B) La onda Q patológica",
+      "C) La elevación del ST monofásica y convexa típica de un IAMCEST agudo",
+      "D) La onda U prominente"
+    ],
+    "correct": "C) La elevación del ST monofásica y convexa típica de un IAMCEST agudo"
+  },
+  {
+    "text": "(Situaciones Especiales) En un paciente con sospecha de intoxicación por monóxido de carbono, ¿cuál es el tratamiento de elección?",
+    "options": [
+      "A) Ventilación mecánica con PEEP alta",
+      "B) Administrar oxígeno al 100%, y considerar oxígeno hiperbárico",
+      "C) Administrar azul de metileno",
+      "D) Realizar un lavado gástrico"
+    ],
+    "correct": "B) Administrar oxígeno al 100%, y considerar oxígeno hiperbárico"
+  },
+  {
+    "text": "(Pediátrica) ¿Cuál de estos es un signo de insuficiencia respiratoria en un niño?",
+    "options": [
+      "A) Taquicardia",
+      "B) Aleteo nasal, tiraje y quejido espiratorio",
+      "C) Piel caliente y seca",
+      "D) Hipertensión"
+    ],
+    "correct": "B) Aleteo nasal, tiraje y quejido espiratorio"
+  },
+  {
+    "text": "(E-RCP) ¿Qué es el \"destete\" (weaning) de la ECMO?",
+    "options": [
+      "A) El proceso de retirar el soporte de ECMO cuando el paciente ha recuperado la función orgánica",
+      "B) La limpieza del circuito",
+      "C) El cambio del oxigenador",
+      "D) La conexión inicial del paciente a la máquina"
+    ],
+    "correct": "A) El proceso de retirar el soporte de ECMO cuando el paciente ha recuperado la función orgánica"
+  },
+  {
+    "text": "(Cuidados Post-RCP) ¿Cuál es la finalidad de realizar un EEG continuo en un paciente en coma post-PCR?",
+    "options": [
+      "A) Medir la presión intracraneal",
+      "B) Detectar estatus epiléptico no convulsivo y monitorizar la actividad cerebral",
+      "C) Inducir el sueño",
+      "D) Es una prueba de pronóstico únicamente"
+    ],
+    "correct": "B) Detectar estatus epiléptico no convulsivo y monitorizar la actividad cerebral"
+  },
+  {
+    "text": "(Glosario) La sigla \"IAMCEST\" se refiere a:",
+    "options": [
+      "A) Infarto Agudo de Miocardio con Extrasístoles Sinusales y Taquicardia",
+      "B) Intervención Arterial Miocárdica con Stent",
+      "C) Infarto Agudo de Miocardio con Elevación del Segmento ST",
+      "D) Insuficiencia Aguda Miocárdica con Edema y Shock"
+    ],
+    "correct": "C) Infarto Agudo de Miocardio con Elevación del Segmento ST"
+  },
+  {
+    "text": "(Fármacos) ¿Qué es una emulsión lipídica intravenosa y para qué se usa en SVA?",
+    "options": [
+      "A) Una fuente de nutrición; para la hipoglucemia",
+      "B) Una solución de grasas; como antídoto en la intoxicación por anestésicos locales",
+      "C) Un sedante; para la agitación",
+      "D) Un expansor de volumen; para el shock hipovolémico"
+    ],
+    "correct": "B) Una solución de grasas; como antídoto en la intoxicación por anestésicos locales"
+  },
+  {
+    "text": "(Capnografía) En un paciente con RCE y ventilación mecánica, ¿qué puede indicar un descenso gradual del etCO2?",
+    "options": [
+      "A) Mejora de la perfusión",
+      "B) Hipoventilación",
+      "C) Empeoramiento del gasto cardíaco o desarrollo de un TEP",
+      "D) Fiebre"
+    ],
+    "correct": "C) Empeoramiento del gasto cardíaco o desarrollo de un TEP"
+  },
+  {
+    "text": "(Ecografía) Para evaluar el tamaño y la función del ventrículo derecho, ¿cuál es la mejor ventana ecocardiográfica?",
+    "options": [
+      "A) Subxifoidea",
+      "B) Paraesternal eje largo",
+      "C) Apical de cuatro cámaras",
+      "D) Supraesternal"
+    ],
+    "correct": "C) Apical de cuatro cámaras"
+  },
+  {
+    "text": "(Algoritmo SVA) ¿Por qué no se recomienda la administración de fármacos por vía endotraqueal?",
+    "options": [
+      "A) Porque es una técnica muy difícil",
+      "B) Porque la absorción del fármaco es errática e impredecible",
+      "C) Porque causa neumonitis química",
+      "D) Porque los fármacos no son estériles"
+    ],
+    "correct": "B) Porque la absorción del fármaco es errática e impredecible"
+  },
+  {
+    "text": "(Vía Aérea) Un paciente tiene una cánula de traqueostomía y entra en parada respiratoria. ¿Cómo se le ventila?",
+    "options": [
+      "A) Retirando la cánula e intubando por la boca",
+      "B) A través de la boca, tapando el estoma",
+      "C) Conectando la bolsa de ventilación directamente a la cánula de traqueostomía",
+      "D) No es posible ventilarlo"
+    ],
+    "correct": "C) Conectando la bolsa de ventilación directamente a la cánula de traqueostomía"
+  },
+  {
+    "text": "(Desfibrilación) La \"impedancia transtorácica\" es:",
+    "options": [
+      "A) La energía necesaria para desfibrilar",
+      "B) La resistencia que ofrece el tórax al paso de la corriente eléctrica",
+      "C) La distancia entre los parches",
+      "D) Un indicador de la función cardíaca"
+    ],
+    "correct": "B) La resistencia que ofrece el tórax al paso de la corriente eléctrica"
+  },
+  {
+    "text": "(Arritmias) ¿Qué es el \"masaje del seno carotídeo\"?",
+    "options": [
+      "A) Una técnica de compresión torácica",
+      "B) Una maniobra vagal para intentar frenar una TSV",
+      "C) Una forma de comprobar el pulso",
+      "D) Una técnica de rehabilitación"
+    ],
+    "correct": "B) Una maniobra vagal para intentar frenar una TSV"
+  },
+  {
+    "text": "(SCA) ¿Qué es la \"onda de Pardee\"?",
+    "options": [
+      "A) Una onda T invertida",
+      "B) La onda Q patológica",
+      "C) La elevación del ST monofásica y convexa típica de un IAMCEST agudo",
+      "D) La onda U prominente"
+    ],
+    "correct": "C) La elevación del ST monofásica y convexa típica de un IAMCEST agudo"
+  },
+  {
+    "text": "(Situaciones Especiales) ¿Cuál de las \"4H\" es la causa más frecuente de PCR en niños?",
+    "options": [
+      "A) Hipovolemia",
+      "B) Hipoxia",
+      "C) Hipotermia",
+      "D) Hipo/Hiperpotasemia"
+    ],
+    "correct": "B) Hipoxia"
+  },
+  {
+    "text": "(Pediátrica) La reanimación del recién nacido comienza con los pasos iniciales de estabilización: proporcionar calor, secar, estimular y...",
+    "options": [
+      "A) Iniciar compresiones",
+      "B) Administrar adrenalina",
+      "C) Despejar la vía aérea si es necesario",
+      "D) Canalizar la vena umbilical"
+    ],
+    "correct": "C) Despejar la vía aérea si es necesario"
+  },
+  {
+    "text": "(E-RCP) ¿Qué es la \"recirculación\" en el contexto de la ECMO?",
+    "options": [
+      "A) El paso de la sangre por el circuito",
+      "B) La aspiración de sangre ya oxigenada por la cánula de drenaje, reduciendo la eficacia del soporte",
+      "C) El proceso de destete de la ECMO",
+      "D) La coagulación del circuito"
+    ],
+    "correct": "B) La aspiración de sangre ya oxigenada por la cánula de drenaje, reduciendo la eficacia del soporte"
+  },
+  {
+    "text": "(Cuidados Post-RCP) ¿Cuál de los siguientes es un factor de confusión que debe excluirse antes de realizar una valoración pronóstica neurológica?",
+    "options": [
+      "A) Hipertensión arterial",
+      "B) El efecto residual de fármacos sedantes",
+      "C) Género masculino",
+      "D) Edad < 50 años"
+    ],
+    "correct": "B) El efecto residual de fármacos sedantes"
+  },
+  {
+    "text": "(Ética) La decisión de NO iniciar una RCP en un paciente con una enfermedad terminal avanzada y una ONIR documentada es:",
+    "options": [
+      "A) Una forma de eutanasia",
+      "B) Una decisión éticamente apropiada que respeta la autonomía y evita la futilidad",
+      "C) Una negligencia médica",
+      "D) Una decisión que solo puede tomar un juez"
+    ],
+    "correct": "B) Una decisión éticamente apropiada que respeta la autonomía y evita la futilidad"
+  },
+  {
+    "text": "(Fármacos) ¿En qué circunstancia la dopamina a dosis bajas (< 5 mcg/kg/min) tiene un efecto predominantemente dopaminérgico?",
+    "options": [
+      "A) En el shock cardiogénico",
+      "B) Se creía que mejoraba el flujo renal, pero este concepto está en desuso y no se recomienda para proteger el riñón",
+      "C) En el shock séptico",
+      "D) En la bradicardia"
+    ],
+    "correct": "B) Se creía que mejoraba el flujo renal, pero este concepto está en desuso y no se recomienda para proteger el riñón"
+  },
+  {
+    "text": "(Ecografía) ¿Qué es el \"signo de la VCI\" en la evaluación de la volemia?",
+    "options": [
+      "A) El diámetro de la VCI y su colapso con la respiración pueden estimar la presión de la aurícula derecha",
+      "B) La presencia de un trombo en la VCI",
+      "C) La visualización de la VCI en la ventana apical",
+      "D) La medición del flujo en la VCI con Doppler"
+    ],
+    "correct": "A) El diámetro de la VCI y su colapso con la respiración pueden estimar la presión de la aurícula derecha"
+  },
+  {
+    "text": "(Capnografía) ¿Qué indica un valor de etCO2 > 45 mmHg en un paciente con ventilación estable?",
+    "options": [
+      "A) Hiperventilación",
+      "B) Hipoventilación o aumento de la producción de CO2",
+      "C) Normoventilación",
+      "D) Es un valor normal"
+    ],
+    "correct": "B) Hipoventilación o aumento de la producción de CO2"
+  },
+  {
+    "text": "(Vía Aérea) Un paciente está en PCR y se le coloca un DSG. Si hay una fuga masiva de aire durante la ventilación, ¿qué se debe hacer?",
+    "options": [
+      "A) Aumentar la frecuencia de las ventilaciones",
+      "B) Retirar el DSG y volver a la ventilación con bolsa-mascarilla, o reintentar la colocación del DSG",
+      "C) Continuar a pesar de la fuga",
+      "D) Iniciar solo compresiones"
+    ],
+    "correct": "B) Retirar el DSG y volver a la ventilación con bolsa-mascarilla, o reintentar la colocación del DSG"
+  },
+  {
+    "text": "(Desfibrilación) ¿Se puede usar un DEA en un paciente con el pecho mojado por la lluvia?",
+    "options": [
+      "A) No, es demasiado peligroso",
+      "B) Sí, siempre que se seque el tórax antes de aplicar los parches",
+      "C) Sí, el agua no afecta al funcionamiento",
+      "D) Solo si la lluvia es ligera"
+    ],
+    "correct": "B) Sí, siempre que se seque el tórax antes de aplicar los parches"
+  },
+  {
+    "text": "(Arritmias) ¿Qué es una \"onda delta\" en el ECG?",
+    "options": [
+      "A) Una onda que aparece en la hipotermia",
+      "B) Un empastamiento al inicio del QRS, signo de preexcitación ventricular (ej. WPW)",
+      "C) Una onda que sigue a la onda T",
+      "D) Una alteración de la onda P"
+    ],
+    "correct": "B) Un empastamiento al inicio del QRS, signo de preexcitación ventricular (ej. WPW)"
+  },
+  {
+    "text": "(SCA) ¿Qué es la \"reperfusión\"?",
+    "options": [
+      "A) La administración de oxígeno",
+      "B) La restauración del flujo sanguíneo en una arteria ocluida",
+      "C) La rehabilitación cardíaca",
+      "D) La prevención de un segundo infarto"
+    ],
+    "correct": "B) La restauración del flujo sanguíneo en una arteria ocluida"
+  },
+  {
+    "text": "(Situaciones Especiales) En una PCR en un paciente con un traumatismo torácico penetrante, ¿qué causa reversible debe sospecharse y tratarse inmediatamente?",
+    "options": [
+      "A) Hipoxia",
+      "B) Taponamiento cardíaco",
+      "C) Hipotermia",
+      "D) Hiperpotasemia"
+    ],
+    "correct": "B) Taponamiento cardíaco"
+  },
+  {
+    "text": "(Pediátrica) ¿Cuál es la principal diferencia entre el shock \"frío\" y el shock \"caliente\" en pediatría?",
+    "options": [
+      "A) La temperatura del niño",
+      "B) El shock frío cursa con vasoconstricción periférica (piel fría, pulsos débiles) y el caliente con vasodilatación (piel caliente, pulsos saltones)",
+      "C) El shock frío es cardiogénico y el caliente es hipovolémico",
+      "D) No hay diferencia"
+    ],
+    "correct": "B) El shock frío cursa con vasoconstricción periférica (piel fría, pulsos débiles) y el caliente con vasodilatación (piel caliente, pulsos saltones)"
+  },
+  {
+    "text": "(E-RCP) ¿Qué es la \"anticoagulación del paciente\" durante la E-RCP?",
+    "options": [
+      "A) La administración de antiagregantes",
+      "B) La administración de heparina para evitar la trombosis tanto en el circuito como en el paciente",
+      "C) Un procedimiento opcional",
+      "D) La retirada de sangre para reducir la coagulación"
+    ],
+    "correct": "B) La administración de heparina para evitar la trombosis tanto en el circuito como en el paciente"
+  },
+  {
+    "text": "(Cuidados Post-RCP) ¿Qué es un \"estado mioclónico\" post-PCR?",
+    "options": [
+      "A) Sacudidas musculares breves e involuntarias, que a menudo indican una lesión cerebral anóxica grave",
+      "B) Temblores por el frío",
+      "C) Convulsiones tónico-clónicas generalizadas",
+      "D) Un signo de recuperación"
+    ],
+    "correct": "A) Sacudidas musculares breves e involuntarias, que a menudo indican una lesión cerebral anóxica grave"
+  },
+  {
+    "text": "(Habilidades no técnicas) ¿Por qué es importante el \"debriefing\" para el bienestar del equipo?",
+    "options": [
+      "A) Porque permite identificar al miembro más débil del equipo",
+      "B) Porque proporciona un foro de apoyo para procesar un evento estresante",
+      "C) Porque es un requisito para la facturación",
+      "D) Porque sustituye la necesidad de apoyo psicológico formal"
+    ],
+    "correct": "B) Porque proporciona un foro de apoyo para procesar un evento estresante"
+  },
+  {
+    "text": "(Prehospitalaria) En un paciente con RCE y estabilidad hemodinámica, ¿cuál es el siguiente paso en el manejo de la vía aérea si la ventilación con bolsa-mascarilla es adecuada?",
+    "options": [
+      "A) Intubación orotraqueal de emergencia",
+      "B) Se puede mantener la ventilación con bolsa-mascarilla o un DSG durante el traslado",
+      "C) Realizar una cricotiroidotomía",
+      "D) No es necesario hacer nada más en la vía aérea"
+    ],
+    "correct": "B) Se puede mantener la ventilación con bolsa-mascarilla o un DSG durante el traslado"
+  },
+  {
+    "text": "(Deterioro) En el abordaje ABCDE, un paciente que solo responde a estímulos dolorosos se clasifica como:",
+    "options": [
+      "A) A (Alerta)",
+      "B) V (Respuesta Verbal)",
+      "C) D (Dolor)",
+      "D) N (No responde)"
+    ],
+    "correct": "C) D (Dolor)"
+  },
+  {
+    "text": "(Algoritmo SVA) La dosis de 1 mg de adrenalina en el adulto corresponde a:",
+    "options": [
+      "A) 1 ml de la dilución 1:1.000",
+      "B) 10 ml de la dilución 1:10.000",
+      "C) 1 ml de la dilución 1:100.000",
+      "D) 10 ml de la dilución 1:1.000"
+    ],
+    "correct": "B) 10 ml de la dilución 1:10.000"
+  },
+  {
+    "text": "(Vía Aérea) ¿Cuál es la principal ventaja de un videolaringoscopio en la formación?",
+    "options": [
+      "A) Permite que el instructor y el alumno vean la misma imagen, facilitando la enseñanza",
+      "B) Son más resistentes que los laringoscopios directos",
+      "C) No requieren baterías",
+      "D) Son de un solo uso, por lo que son más higiénicos"
+    ],
+    "correct": "A) Permite que el instructor y el alumno vean la misma imagen, facilitando la enseñanza"
+  },
+  {
+    "text": "(Desfibrilación) En un desfibrilador manual, si se activa el modo \"sincronizado\" (SYNC) para una cardioversión, ¿qué pasará si el paciente entra en FV?",
+    "options": [
+      "A) El dispositivo no descargará, ya que no puede detectar una onda R para sincronizarse",
+      "B) El dispositivo descargará de forma asíncrona automáticamente",
+      "C) La energía de la descarga se reducirá a la mitad",
+      "D) El dispositivo se apagará"
+    ],
+    "correct": "A) El dispositivo no descargará, ya que no puede detectar una onda R para sincronizarse"
+  },
+  {
+    "text": "(Arritmias) ¿Cuál de las siguientes es una causa metabólica de bradicardia?",
+    "options": [
+      "A) Hipertiroidismo",
+      "B) Fiebre",
+      "C) Hipotiroidismo severo (mixedema)",
+      "D) Ansiedad"
+    ],
+    "correct": "C) Hipotiroidismo severo (mixedema)"
+  },
+  {
+    "text": "(SCA) ¿Qué es una \"intervención coronaria percutánea\" (ICP)?",
+    "options": [
+      "A) La cirugía de bypass",
+      "B) Un procedimiento para tratar las estenosis coronarias con un catéter, balón y/o stent",
+      "C) Un ecocardiograma",
+      "D) Una prueba de esfuerzo"
+    ],
+    "correct": "B) Un procedimiento para tratar las estenosis coronarias con un catéter, balón y/o stent"
+  },
+  {
+    "text": "(Situaciones Especiales) En un paciente con PCR y sospecha de intoxicación por opiáceos, ¿cuál es el primer paso?",
+    "options": [
+      "A) Administrar Naloxona",
+      "B) Iniciar RCP de alta calidad según el algoritmo estándar",
+      "C) Realizar un lavado gástrico",
+      "D) Esperar al análisis de tóxicos"
+    ],
+    "correct": "B) Iniciar RCP de alta calidad según el algoritmo estándar"
+  },
+  {
+    "text": "(Pediátrica) ¿Qué es el \"triángulo de evaluación pediátrica\" (TEP)?",
+    "options": [
+      "A) Un método para diagnosticar arritmias",
+      "B) Una herramienta de evaluación visual y auditiva rápida (Apariencia, Respiración, Circulación cutánea) para determinar si un niño está \"enfermo\" o \"no enfermo\"",
+      "C) Un protocolo para el manejo del trauma pediátrico",
+      "D) Un dispositivo para medir la presión arterial"
+    ],
+    "correct": "B) Una herramienta de evaluación visual y auditiva rápida (Apariencia, Respiración, Circulación cutánea) para determinar si un niño está \"enfermo\" o \"no enfermo\""
+  },
+  {
+    "text": "(E-RCP) ¿Cuál es el principal objetivo del soporte con ECMO-VA?",
+    "options": [
+      "A) Oxigenar la sangre únicamente",
+      "B) Proporcionar soporte circulatorio y de intercambio gaseoso",
+      "C) Reemplazar la función renal",
+      "D) Enfriar al paciente"
+    ],
+    "correct": "B) Proporcionar soporte circulatorio y de intercambio gaseoso"
+  },
+  {
+    "text": "(Cuidados Post-RCP) En el pronóstico multimodal, ¿qué indica la ausencia bilateral de la onda N20 de los potenciales evocados somatosensoriales (PESS)?",
+    "options": [
+      "A) Un pronóstico neurológico favorable",
+      "B) Un pronóstico neurológico desfavorable, con alta especificidad",
+      "C) Actividad convulsiva",
+      "D) Muerte encefálica"
+    ],
+    "correct": "B) Un pronóstico neurológico desfavorable, con alta especificidad"
+  },
+  {
+    "text": "(Ética) La decisión de retirar el soporte vital en un paciente con un pronóstico neurológico catastrófico e irreversible se considera:",
+    "options": [
+      "A) Homicidio",
+      "B) Una forma de adecuación del esfuerzo terapéutico para evitar la futilidad",
+      "C) Una decisión que solo puede tomar la familia",
+      "D) Una medida de ahorro de costes"
+    ],
+    "correct": "B) Una forma de adecuación del esfuerzo terapéutico para evitar la futilidad"
+  },
+  {
+    "text": "(Fármacos) ¿Qué efecto adverso cardiovascular puede tener el salbutamol a dosis altas?",
+    "options": [
+      "A) Bradicardia",
+      "B) Taquicardia e hipopotasemia",
+      "C) Hipertensión",
+      "D) Bloqueo AV"
+    ],
+    "correct": "B) Taquicardia e hipopotasemia"
+  },
+  {
+    "text": "(Ecografía) ¿Qué es el modo M en ecografía?",
+    "options": [
+      "A) Un modo para medir la velocidad del flujo sanguíneo",
+      "B) Un modo de imagen en movimiento que muestra el movimiento de las estructuras a lo largo de una única línea de ultrasonido en el tiempo",
+      "C) Un modo de imagen en 3D",
+      "D) El modo de encendido del ecógrafo"
+    ],
+    "correct": "B) Un modo de imagen en movimiento que muestra el movimiento de las estructuras a lo largo de una única línea de ultrasonido en el tiempo"
+  },
+  {
+    "text": "(Capnografía) En un paciente con RCE, ¿qué puede indicar un aumento súbito del gradiente entre PaCO2 y etCO2?",
+    "options": [
+      "A) Una mejora del estado pulmonar",
+      "B) Un descenso del gasto cardíaco o un aumento del espacio muerto (ej. TEP)",
+      "C) Hiperventilación",
+      "D) Hipoventilación"
+    ],
+    "correct": "B) Un descenso del gasto cardíaco o un aumento del espacio muerto (ej. TEP)"
+  },
+  {
+    "text": "(Vía Aérea) ¿Cuál es el principal riesgo de ventilar a un paciente demasiado rápido (hiperventilación) durante una PCR?",
+    "options": [
+      "A) Aumenta la presión intratorácica, disminuye el retorno venoso y el gasto cardíaco",
+      "B) Puede causar alcalosis respiratoria, lo que es beneficioso",
+      "C) Es la forma más eficaz de oxigenar",
+      "D) No tiene riesgos significativos"
+    ],
+    "correct": "A) Aumenta la presión intratorácica, disminuye el retorno venoso y el gasto cardíaco"
+  },
+  {
+    "text": "(Desfibrilación) La corriente que llega al miocardio es inversamente proporcional a:",
+    "options": [
+      "A) La energía seleccionada",
+      "B) La impedancia transtorácica",
+      "C) El tamaño de los parches",
+      "D) La presión aplicada sobre las palas"
+    ],
+    "correct": "B) La impedancia transtorácica"
+  },
+  {
+    "text": "(Arritmias) ¿Cuál de estos ritmos es una taquicardia irregular de complejo QRS ancho?",
+    "options": [
+      "A) Taquicardia ventricular monomórfica",
+      "B) Flutter auricular con conducción 2:1",
+      "C) Fibrilación auricular con bloqueo de rama preexistente",
+      "D) Taquicardia sinusal"
+    ],
+    "correct": "C) Fibrilación auricular con bloqueo de rama preexistente"
+  },
+  {
+    "text": "(SCA) ¿Qué es una \"complicación tardía\" de un infarto de miocardio?",
+    "options": [
+      "A) Fibrilación ventricular en la primera hora",
+      "B) Un aneurisma ventricular o insuficiencia cardíaca crónica",
+      "C) Rotura cardíaca en las primeras 24 horas",
+      "D) Shock cardiogénico agudo"
+    ],
+    "correct": "B) Un aneurisma ventricular o insuficiencia cardíaca crónica"
+  },
+  {
+    "text": "(Situaciones Especiales) ¿Cuál es el principal componente del tratamiento en el síndrome neuroléptico maligno?",
+    "options": [
+      "A) Antibióticos",
+      "B) Antivirales",
+      "C) Suspender el fármaco causante, medidas de soporte y a veces fármacos como dantroleno o bromocriptina",
+      "D) Antidepresivos"
+    ],
+    "correct": "C) Suspender el fármaco causante, medidas de soporte y a veces fármacos como dantroleno o bromocriptina"
+  },
+  {
+    "text": "(Pediátrica) ¿Qué es el \"quejido\" (grunting) en un lactante con dificultad respiratoria?",
+    "options": [
+      "A) Un sonido normal al dormir",
+      "B) Un intento de mantener una presión positiva al final de la espiración (auto-PEEP) para mantener los alvéolos abiertos",
+      "C) Un signo de dolor abdominal",
+      "D) El inicio del llanto"
+    ],
+    "correct": "B) Un intento de mantener una presión positiva al final de la espiración (auto-PEEP) para mantener los alvéolos abiertos"
+  },
+  {
+    "text": "(E-RCP) Durante el soporte con ECMO-VA, el paciente debe estar:",
+    "options": [
+      "A) Despierto y colaborando",
+      "B) Siempre con bloqueo neuromuscular",
+      "C) Anticoagulado para prevenir la trombosis del circuito",
+      "D) Sin ningún tipo de monitorización"
+    ],
+    "correct": "C) Anticoagulado para prevenir la trombosis del circuito"
+  },
+  {
+    "text": "(Cuidados Post-RCP) ¿Qué es la \"donación en asistolia controlada\" (Maastricht tipo III)?",
+    "options": [
+      "A) La donación de un paciente que sufre una PCR inesperada",
+      "B) La donación de órganos tras el diagnóstico de muerte encefálica",
+      "C) La donación de órganos tras la limitación del tratamiento de soporte vital y la parada cardíaca prevista en la UCI",
+      "D) La donación de un paciente en muerte aparente por hipotermia"
+    ],
+    "correct": "C) La donación de órganos tras la limitación del tratamiento de soporte vital y la parada cardíaca prevista en la UCI"
+  }
 ]
