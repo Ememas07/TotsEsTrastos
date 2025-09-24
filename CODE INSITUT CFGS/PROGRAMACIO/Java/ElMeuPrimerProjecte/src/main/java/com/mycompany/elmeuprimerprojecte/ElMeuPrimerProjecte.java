@@ -77,23 +77,58 @@ public class ElMeuPrimerProjecte {
 
         // Activitat 8
 
-        System.out.println("Plou? (respon amb 'true' or 'false')");
+        // System.out.println("Plou? (respon amb 'true' or 'false')");
+        // Scanner s = new Scanner(System.in);
+        // Boolean plou = s.nextBoolean();
+        // System.out.println("Has acabat les feines? (respon amb 'true' or 'false')");
+        // Scanner s2 = new Scanner(System.in);
+        // Boolean feines = s2.nextBoolean();
+        // System.out.println("Has d'anar a classe? (respon amb 'true' or 'false')");
+        // Scanner s3 = new Scanner(System.in);
+        // Boolean classe = s3.nextBoolean();
+
+        // if (plou == false && feines == true && classe == false) {
+        //     System.out.println("Pots sortir de casa");
+        // } else {
+        //     System.out.println("No pots sortir de casa");
+        // }
+
+        // Activitat 9
+
+        // System.out.println("Indica un numero");
+        // Scanner s = new Scanner(System.in);
+        // Integer numero = s.nextInt();
+        // System.out.println("L'absolut del teu nombre es "+Math.abs(numero));
+        
+        // Activitat 10
+
+        // System.out.println("Nota 1");
+        // Scanner s = new Scanner(System.in);
+        // Integer nota1 = s.nextInt();
+        // System.out.println("Nota 2");
+        // Scanner s2 = new Scanner(System.in);
+        // Integer nota2 = s2.nextInt();
+        // System.out.println("Nota 3");
+        // Scanner s3 = new Scanner(System.in);
+        // Integer nota3 = s3.nextInt();
+        // Double mitjaDecimals = (nota1.doubleValue() + nota2.doubleValue() + nota3.doubleValue()) / 3;
+        // Integer mitjaEnters = (nota1 + nota2 + nota3) / 3;
+        // System.out.println("La teva mitja amb decimals es "+mitjaDecimals);
+        // System.out.println("La teva mitja sense decimals es "+mitjaEnters);
+
+        // Activitat 11
+
+        System.out.println("Indica un numero");
         Scanner s = new Scanner(System.in);
-        Boolean plou = s.nextBoolean();
-        System.out.println("Has acabat les feines? (respon amb 'true' or 'false')");
+        Integer numero1 = s.nextInt();
+        System.out.println("Indica un altre numero");
         Scanner s2 = new Scanner(System.in);
-        Boolean feines = s2.nextBoolean();
-        System.out.println("Has d'anar a classe? (respon amb 'true' or 'false')");
-        Scanner s3 = new Scanner(System.in);
-        Boolean classe = s3.nextBoolean();
-
-        if (plou == false && feines == true && classe == false) {
-            System.out.println("Pots sortir de casa");
+        Integer numero2 = s2.nextInt();
+        if (numero1 == numero2) {
+            System.out.println("Aquests dos enters son iguals");
         } else {
-            System.out.println("No pots sortir de casa");
+            System.out.println("Aquests dos enters no son iguals");
         }
-
-
         
         
     }
