@@ -19,5 +19,8 @@
     ,"python.analysis.typeCheckingMode": "off",
     "vsicons.associations.files": [
   { "icon": "css", "extensions": ["css", "custom.css"], "format": "svg", "overrides": "css" }
+],
+"java.project.sourcePaths": [
+    "CODE INSITUT CFGS/PROGRAMACIO/JAVA"
 ]
 }
