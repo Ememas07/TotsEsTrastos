@@ -22,11 +22,9 @@ public class Ud1Act14MarcMas {
         Scanner s = new Scanner(System.in);
         Integer distancia1 = s.nextInt();
         System.out.println("Indiqui la segona distancia, en centimetres");
-        Scanner s2 = new Scanner(System.in);
-        Integer distancia2 = s2.nextInt();
+        Integer distancia2 = s.nextInt();
         System.out.println("Indiqui la tercera distancia, en metres");
-        Scanner s3 = new Scanner(System.in);
-        Integer distancia3 = s3.nextInt();
+        Integer distancia3 = s.nextInt();
         Double sumaDistancies = ((double) distancia1 / 10) + distancia2 + ((double) distancia3 * 100);
         System.out.println("La suma de les distancies en centimetres es "+sumaDistancies);
         

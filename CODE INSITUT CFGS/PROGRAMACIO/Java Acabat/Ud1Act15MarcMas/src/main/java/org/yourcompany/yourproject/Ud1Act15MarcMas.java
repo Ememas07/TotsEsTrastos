@@ -17,11 +17,9 @@ public class Ud1Act15MarcMas {
         Scanner s = new Scanner(System.in);
         Integer nFormigues = s.nextInt();
         System.out.println("Indiqui el nombre de aranyes");
-        Scanner s2 = new Scanner(System.in);
-        Integer nAranyes = s2.nextInt();
+        Integer nAranyes = s.nextInt();
         System.out.println("Indiqui el nombre de centpeus");
-        Scanner s3 = new Scanner(System.in);
-        Integer nCentpeus = s3.nextInt();
+        Integer nCentpeus = s.nextInt();
         Double sumaPotes = (double) nFormigues * 6 + (double) nAranyes * 8 + (double) nCentpeus * 100;
         System.out.println("La suma de les potes es "+sumaPotes);
     }
