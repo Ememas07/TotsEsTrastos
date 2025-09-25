@@ -1,0 +1,28 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package org.yourcompany.yourproject;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Marc Mas
+ */
+public class Activitat5 {
+
+   public static void main(String[] args) {
+        // Activitat 5
+        
+        System.out.println("Mitjana aritmètica de dos enters");
+        System.out.println("Numero 1");
+        Scanner s = new Scanner(System.in);
+        Integer nota1 = s.nextInt();
+        System.out.println("Numero 2");
+        Integer nota2 = s.nextInt();
+        Integer mitjaArit = (nota1 + nota2) / 2;
+        System.out.println("La mitja de les teves notes es "+mitjaArit);        
+        
+    }
+}
