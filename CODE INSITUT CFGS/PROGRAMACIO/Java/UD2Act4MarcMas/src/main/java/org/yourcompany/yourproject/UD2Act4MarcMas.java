@@ -32,12 +32,12 @@ public class UD2Act4MarcMas {
         } else { // N2 major que N1
             if (n2 > n3) { // N2 major que N1 i major que N3
                 if (n3 > n1) { // N2 major que N1, N3 major que N1
-                    System.out.println(+n2 + " " + n3 + " " + n1);
+                    System.out.println(+n2 + " > " + n3 + " > " + n1);
                 } else {
-                    System.out.println(+n2 + " " + n1 + " " + n3);
+                    System.out.println(+n2 + " > " + n1 + " > " + n3);
                 }
             } else { // N3 es major que N2 i N1
-                System.out.println(+n3 + " " + n2 + " " + n1);
+                System.out.println(+n3 + " > " + n2 + " > " + n1);
             }
         }
     }
