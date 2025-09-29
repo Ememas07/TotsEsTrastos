@@ -17,7 +17,7 @@ public class Activitat10 {
 
         System.out.println("Indica un numero");
         Scanner s = new Scanner(System.in);
-        Integer numero = s.nextInt();
+        Double numero = s.nextDouble();
         System.out.println("L'absolut del teu nombre es "+Math.abs(numero));
     }
 }
