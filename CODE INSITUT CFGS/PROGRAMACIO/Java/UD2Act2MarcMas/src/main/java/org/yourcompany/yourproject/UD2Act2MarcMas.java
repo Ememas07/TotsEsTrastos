@@ -18,10 +18,10 @@ public class UD2Act2MarcMas {
         Integer n1 = s.nextInt();
         System.out.println("Introdueixi un altre numero");
         Integer n2 = s.nextInt();
+        String noIguals = " no ";
         if (n1 == n2) {
-            System.out.println("El numeros son iguals");
-        } else {
-            System.out.println("El numeros no son iguals");
+            noIguals = " ";
         }
+        System.out.println("El numeros"+noIguals+"son iguals");
     }
 }

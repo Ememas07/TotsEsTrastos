@@ -17,17 +17,15 @@ public class UD2Act1MarcMas {
         System.out.println("Introdueixi un numero positiu o negatiu");
         Scanner s = new Scanner(System.in);
         Integer n1 = s.nextInt();
-        String parellImparell;
+        String parellImparell = "Parell";         
         if (n1 % 2 == 1) {
             parellImparell = "Imparell";          
-        }else{
-            parellImparell = "Parell";          
         }
+        String positiuNegatiu = "Negatiu";
         if (n1 > 0) {
-            System.out.println("El numero es positiu i "+parellImparell);
-        } else{
-            System.out.println("El numero es negatiu i "+parellImparell);
+            positiuNegatiu = "Positiu";
         }
+        System.out.println("El numero es "+positiuNegatiu+" i "+parellImparell);
         
     }
 }
