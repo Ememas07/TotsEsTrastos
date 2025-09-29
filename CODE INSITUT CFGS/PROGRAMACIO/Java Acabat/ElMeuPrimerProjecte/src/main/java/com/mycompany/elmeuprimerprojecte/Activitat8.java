@@ -23,7 +23,13 @@ public class Activitat8 {
         esParell = numero % 2 == 0;
         esSenar = !esParell;
         System.out.println("Es Parell? "+esParell);
-        System.out.println("Es Senar? "+esSenar);     
+        System.out.println("Es Senar? "+esSenar);
+        
+        // Manera sense MODULO
+        // Integer test1 = numero - ((numero/2) * 2);
+        // boolean esParell = test1 == 0;
+        // System.out.println(esParell);
+
 
         // if (numero % 2 == 1) {
         //     System.out.println("Senar");            
