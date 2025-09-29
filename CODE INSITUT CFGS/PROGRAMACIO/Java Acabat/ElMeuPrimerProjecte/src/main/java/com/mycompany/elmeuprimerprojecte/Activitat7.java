@@ -19,7 +19,7 @@ public class Activitat7 {
         Scanner s = new Scanner(System.in);
         Integer edat = s.nextInt();
         boolean majoria = edat >= 18;
-        System.out.println("Aquesta persona és major d'edat? "+majoria);            
+        System.out.println("Aquesta persona es major d'edat? "+majoria);            
         // if (edat >= 18) {
         //     System.out.println("Ets major d'edat");            
         // } else{
