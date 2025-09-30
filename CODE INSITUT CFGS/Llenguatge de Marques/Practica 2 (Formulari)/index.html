@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari d'inscripció</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            Formulari d'inscripció
+        </h1>
+    </header>
+
+    <form action="">
+        <fieldset>
+            <p>Dades Personals</p>
+            <table>
+                <tr>
+                    <td>
+                        <label for="name">Nom Complet</label>
+                    </td>
+                    <td>
+                        <input type="text" name="name" id="name"> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="username">Nom d'usuari</label>
+                    </td>
+                    <td>
+                        <input type="text" name="username" id="username"> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Correu electrònic</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" id="email"> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="agegroup">Franja d'edat</label>
+                    </td>
+                    <td>
+                        Menor de 18 anys:<input type="radio" name="age" id="under18"> <br>
+                        Entre 18 i 24 anys:<input type="radio" name="age" id="1824"> <br>
+                        Entre 24 i 36 anys:<input type="radio" name="age" id="2436"> <br>
+                        Entre 36 i 48 anys:<input type="radio" name="age" id="3648"> <br>
+                        Major de 48 anys:<input type="radio" name="age" id="over48"> <br>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <table>
+                <tr>
+                    <td>
+                        <label for="name">Nombre de participants</label>
+                    </td>
+                    <td>
+                        <input type="number" name="number" id="number">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+
+
+        <button type="submit">
+            Enviar formulari
+        </button>
+    </form>
+
+
+
+
+</body>
+
+</html>
