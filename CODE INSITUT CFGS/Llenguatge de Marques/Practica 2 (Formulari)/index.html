@@ -17,8 +17,8 @@
 
     <form action="">
         <fieldset>
-            <p>Dades Personals</p>
-            <table>
+            <h3>Dades Personals</h3>
+            <table id="dadespersonals">
                 <tr>
                     <td>
                         <label for="name">Nom Complet</label>
@@ -43,21 +43,40 @@
                         <input type="email" name="email" id="email"> <br>
                     </td>
                 </tr>
-                <tr>
+                <tr id="franjaedat">
                     <td>
                         <label for="agegroup">Franja d'edat</label>
                     </td>
                     <td>
                         Menor de 18 anys:<input type="radio" name="age" id="under18"> <br>
-                        Entre 18 i 24 anys:<input type="radio" name="age" id="1824"> <br>
-                        Entre 24 i 36 anys:<input type="radio" name="age" id="2436"> <br>
-                        Entre 36 i 48 anys:<input type="radio" name="age" id="3648"> <br>
+                    </td>
+                    <td>
+                        18-24 anys:<input type="radio" name="age" id="1824"> <br>
+                    </td>
+                    <td>
+                        24-36 anys:<input type="radio" name="age" id="2436"> <br>
+                    </td>
+                    <td>
+                        36-48 anys:<input type="radio" name="age" id="3648"> <br>
+                    </td>
+                    <td>
                         Major de 48 anys:<input type="radio" name="age" id="over48"> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="comments">Altra informació sobre tu</label>
+                    </td>
+                    <td>
+                        <textarea>
+
+                        </textarea>
                     </td>
                 </tr>
             </table>
         </fieldset>
         <fieldset>
+            <h3>Informació de l'esdeveniment</h3>
             <table>
                 <tr>
                     <td>
@@ -67,9 +86,34 @@
                         <input type="number" name="number" id="number">
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <label for="location">Ubicació</label>
+                    </td>
+                    <td>
+                        <input type="text" name="location" id="location"> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="datetime">Dia (DD/MM/AAAA)</label>
+                    </td>
+                    <td>
+                        <input type="datetime" name="datetime" id="datetime">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="URL">Enllaç a informació rellevant</label>
+                    </td>
+                    <td>
+                        <input type="url" name="url" id="url">
+                    </td>
+                </tr>
             </table>
         </fieldset>
-
+        <label for="tic">Acceptes els termes i condicions?</label>
+        <input type="checkbox" name="tic" id="tic"> <br>
 
 
         <button type="submit">
