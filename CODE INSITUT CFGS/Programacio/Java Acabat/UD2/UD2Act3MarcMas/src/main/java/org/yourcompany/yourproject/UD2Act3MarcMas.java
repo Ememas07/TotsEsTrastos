@@ -1,7 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package org.yourcompany.yourproject;
 
 import java.util.Scanner;
@@ -16,10 +15,10 @@ public class UD2Act3MarcMas {
         // Activitat 3
         Scanner s = new Scanner(System.in);
         System.out.println("Introdueixi un numero");
-        Double n1 = s.nextDouble();
-        if (n1 <= 1 && n1 >= -1 && n1 != 0) {
+        Double n1 = s.nextDouble(); // Llegesc input d'usuari
+        if (n1 < 1 && n1 > -1 && n1 != 0) { //si el nombre es major a -1, menor que 1, i no es 0 és quasi-zero
             System.out.println("El numero es quasi-zero");
-        } else{
+        } else {
             System.out.println("El numero no es quasi-zero");
         }
     }

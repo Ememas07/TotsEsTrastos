@@ -1,7 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package org.yourcompany.yourproject;
 
 import java.util.Scanner;
@@ -14,11 +13,11 @@ public class UD2Act9MarcMas {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.println("Introdueix un DNI sense la lletra");
+        System.out.println("Introdueix un DNI sense la lletra"); //deman un integer amb el DNI
         Integer input = s.nextInt();
-        Integer resto = (input % 23);
-        String lletra = "";
-        switch (resto) {
+        Integer resto = (input % 23); //calcul el residu amb l'operacio de modulo
+        String lletra = ""; //inicialitz variable lletra
+        switch (resto) { //switch amb totes les opcions posibles de resiuds
             case 0:
                 lletra = "T";
                 break;
@@ -87,11 +86,13 @@ public class UD2Act9MarcMas {
                 break;
             case 22:
                 lletra = "E";
-                break;            
+                break;
             default:
-                System.out.println("Error");
+                System.out.println("Error"); //si no cau a cap dels 22 resiuds, imprimir error
         }
-        System.out.println("El teu DNI complet es "+input+lletra);
+        if (lletra != "") { //si la lletra no està buida (cosa que no pot passar si no hi ha cap error) imprimim el DNI
+            System.out.println("El teu DNI complet es " + input + lletra); //un pic tenim el DNI amb la lletra, l'imprimim
+        }
 
     }
 }

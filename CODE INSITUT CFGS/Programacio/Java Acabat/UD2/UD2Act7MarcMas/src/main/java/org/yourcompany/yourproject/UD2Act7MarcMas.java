@@ -13,16 +13,16 @@ public class UD2Act7MarcMas {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.println("Introdueix un dia");
-        Integer dia = s.nextInt();
+        System.out.println("Introdueix un dia"); 
+        Integer dia = s.nextInt(); //deman un dia per consola
         System.out.println("Introdueix un mes");
-        String mes = s.next();
-        mes = mes.toLowerCase();
+        String mes = s.next(); //deman un mes per console en format de string (per fer comprovacions mes tard)
+        mes = mes.toLowerCase(); //el convertesc a minuscules per el switch
         System.out.println("Introdueix un any");
-        Integer any = s.nextInt();
-        Integer mes2 = 0;
-        Integer diesDelMes = 0;
-        switch (mes) {
+        Integer any = s.nextInt(); //deman un any per consola
+        Integer mes2 = 0; //Inicialitz una variable de mes2 per tenir el mes en integer, que assignaré al switch
+        Integer diesDelMes = 0; //Inicitalitzada una altra variable que canviaré al switch
+        switch (mes) { //si el mes es el mes escrit o el nombre, assignaré el valor del mes a "mes2" i el nombre de dies que té aquest mes
             case "gener", "1":
                 mes2 = 1;
                 diesDelMes = 31;
@@ -75,9 +75,9 @@ public class UD2Act7MarcMas {
                 mes2 = 0;
 
         }
-        String errors = "";
+        String errors = ""; //variable buida per posar-hi errors més tard
         if (dia > diesDelMes) {
-            errors += "el dia introduit no es valid ";
+            errors += "el dia introduit no es valid "; //afegesc els missatges d'errors a la variable
         }
         if (mes2 == 0) {
             errors += "el mes introduit no es valid ";
@@ -85,7 +85,7 @@ public class UD2Act7MarcMas {
         if (any < 0) {
             errors += "l'any introduit no es valid ";
         }
-        if (errors != "") {
+        if (errors != "") { //si la variable errors no conté res, es que no n'hi ha, en canvi, si no està buida, imprimesc els errors 
             System.out.println(errors);
         } else {
             System.out.println("La teva data es " + dia + " / " + mes2 + " / " + any);
