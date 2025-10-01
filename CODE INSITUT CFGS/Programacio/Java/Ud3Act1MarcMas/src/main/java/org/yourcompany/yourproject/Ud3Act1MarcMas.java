@@ -12,15 +12,18 @@ import java.util.Scanner;
 public class Ud3Act1MarcMas {
 
     public static void main(String[] args) {
-        System.out.println("Introdueixi un numero");
         Scanner s = new Scanner(System.in);
-        Integer n = s.nextInt();
-        while (n != 0) {
-            if (true) {
-                
+        System.out.println("Introdueixi un numero"); //deman el primer nombre per consola i l'agaf com a double
+        Double n = s.nextDouble();
+        while (n != 0) { //si n NO es 0, entram
+            if (n % 2 == 0) { //si el nombre es divisible entre 0 es parell
+                System.out.println("El nombre es Parell");
+            } else { // si no, imparell
+                System.out.println("El nombre es Senar");
             }
-            n = s.nextInt();
-
+            System.out.println("El teu nombre al quadrat es " + Math.pow(n, 2)); //calcul el nombre al quadrat
+            System.out.println("Introdueixi un numero"); //deman el seguent nombre 
+            n = s.nextDouble();
         }
     }
 }

@@ -1,8 +1,9 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package org.yourcompany.yourproject;
+
+import java.util.Scanner;
 
 /**
  *
@@ -11,6 +12,28 @@ package org.yourcompany.yourproject;
 public class Ud3Act3MarcMas {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Scanner s = new Scanner(System.in);
+        System.out.println("Introdueixi un nombre"); //deman el primer nombre per consola i l'agaf com a int
+        Integer n = s.nextInt();
+        Integer rondes = 0; //inicialitzam variables
+        Integer punts = 0;
+        Integer solucio = (int) (Math.random() * 100); //Math.random genera un nombre entre 0.0 i 1.0, el multiplicare per 100 per tenir un valor entre 0 i 100
+        if (solucio == 0) {
+            solucio = 1; //per evitar que el random doni 0
+        }
+        while (n != solucio) { //si n no es igual que la solucio, entram
+            if (n > solucio) {
+                System.out.println("El teu nombre es mes alt que la solucio");
+                punts += (n-solucio);
+            } else {
+                System.out.println("El teu nombre es mes baix que la solucio");
+                punts += (solucio-n); //sumam la diferencia entre punts i el nombre introduit (o viceversa)
+            }
+            rondes++; //sumam una ronda
+            System.out.println("Introdueixi un altre"); //deman el primer nombre per consola i l'agaf com a int
+            n = s.nextInt();
+        }
+        //un pic encertam el nombre, surtim
+        System.out.println("Enhorabona! La teva puntuacio es de "+rondes+" Rondes - "+punts+" Punts");
     }
 }
