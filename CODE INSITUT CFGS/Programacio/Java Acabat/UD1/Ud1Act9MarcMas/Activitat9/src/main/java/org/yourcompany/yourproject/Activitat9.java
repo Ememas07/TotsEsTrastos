@@ -15,9 +15,9 @@ public class Activitat9 {
     public static void main(String[] args) {
         // Activitat 9
 
-        System.out.println("Plou? (respon amb 'true' or 'false')");
         Scanner s = new Scanner(System.in);
-        Boolean plou = s.nextBoolean();
+        System.out.println("Plou? (respon amb 'true' or 'false')");
+        Boolean plou = s.nextBoolean(); 
         System.out.println("Has acabat les feines? (respon amb 'true' or 'false')");
         Boolean feines = s.nextBoolean();
         System.out.println("Has d'anar a classe? (respon amb 'true' or 'false')");
