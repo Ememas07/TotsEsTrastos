@@ -13,7 +13,7 @@ public class UD2Act7MarcMas {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.println("Introdueix un dia"); 
+        System.out.println("Introdueix un dia");
         Integer dia = s.nextInt(); //deman un dia per consola
         System.out.println("Introdueix un mes");
         String mes = s.next(); //deman un mes per console en format de string (per fer comprovacions mes tard)
@@ -88,7 +88,25 @@ public class UD2Act7MarcMas {
         if (errors != "") { //si la variable errors no conté res, es que no n'hi ha, en canvi, si no està buida, imprimesc els errors 
             System.out.println(errors);
         } else {
-            System.out.println("La teva data es " + dia + " / " + mes2 + " / " + any);
+            String dia2 = dia.toString();
+            if (dia < 10) {
+                dia2 = "0" + dia.toString();
+            }
+            String mes3 = mes2.toString();
+            if (mes2 < 10) {
+                mes3 = "0" + mes2.toString();
+            }
+            String any2 = any.toString();
+            if (any < 1000) {
+                any2 = "0" + any.toString();
+                if (any < 100) {
+                    any2 = "00" + any.toString();
+                    if (any < 10) {
+                        any2 = "000" + any.toString();
+                    }
+                }
+            }
+            System.out.println("La teva data es " + dia2 + " / " + mes3 + " / " + any2);
         }
 
     }
