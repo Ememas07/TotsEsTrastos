@@ -16,14 +16,14 @@ public class UD2Act7MarcMas {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Introdueix un dia");
-        Integer dia = s.nextInt(); //deman un dia per consola
+        Byte dia = s.nextByte(); //deman un dia per consola
         System.out.println("Introdueix un mes");
         String mes = s.next(); //deman un mes per console en format de string (per fer comprovacions mes tard)
         mes = mes.toLowerCase(); //el convertesc a minuscules per el switch
         System.out.println("Introdueix un any");
-        Integer any = s.nextInt(); //deman un any per consola
-        Integer mes2 = 0; //Inicialitz una variable de mes2 per tenir el mes en integer, que assignaré al switch
-        Integer diesDelMes = 0; //Inicitalitzada una altra variable que canviaré al switch
+        Byte any = s.nextByte(); //deman un any per consola
+        Byte mes2 = 0; //Inicialitz una variable de mes2 per tenir el mes en integer, que assignaré al switch
+        Byte diesDelMes = 0; //Inicitalitzada una altra variable que canviaré al switch
         switch (mes) { //si el mes es el mes escrit o el nombre, assignaré el valor del mes a "mes2" i el nombre de dies que té aquest mes
             case "gener", "1", "01":
                 mes2 = 1;
