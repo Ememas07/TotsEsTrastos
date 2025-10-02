@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Marc Mas
  */
-public class Activitat9 {
+public class Ud1Act9MarcMas {
 
     public static void main(String[] args) {
         // Activitat 9
@@ -25,7 +25,7 @@ public class Activitat9 {
 
         // boolean potsSortir = (plou == false && feines == true && classe == false) ? true : false;
 
-        boolean potsSortir = (plou == false && feines == true && classe == false);
+        boolean potsSortir = ((plou == false && feines == true) || classe == true);
         System.out.println("Pots sortir? "+potsSortir);
 
         // if (plou == false && feines == true && classe == false) {
