@@ -22,13 +22,11 @@ public class Ud1Act9MarcMas {
         Boolean feines = s.nextBoolean();
         System.out.println("Has d'anar a classe? (respon amb 'true' or 'false')");
         Boolean classe = s.nextBoolean();
-
-        // boolean potsSortir = (plou == false && feines == true && classe == false) ? true : false;
-
         boolean potsSortir = ((plou == false && feines == true) || classe == true);
         System.out.println("Pots sortir? "+potsSortir);
 
-        // if (plou == false && feines == true && classe == false) {
+        // Manera amb IFs
+        // if (plou == false && feines == true && classe == false) { 
         //     System.out.println("Pots sortir de casa");
         // } else {
         //     System.out.println("No pots sortir de casa");

@@ -18,16 +18,14 @@ public class Ud1Act14MarcMas {
         ○ La segona, en centímetres
         ○ La tercera, en metres
         ● Dissenya un programa que mostri la suma de les tres longituds en centímetres*/
-        System.out.println("Indiqui la primera distancia, en milimetres");
         Scanner s = new Scanner(System.in);
-        Integer distancia1 = s.nextInt();
+        System.out.println("Indiqui la primera distancia, en milimetres");
+        Integer mm = s.nextInt(); //agaf els milimetres per consola
         System.out.println("Indiqui la segona distancia, en centimetres");
-        Integer distancia2 = s.nextInt();
+        Integer cm = s.nextInt(); //agaf els centimetres per consola
         System.out.println("Indiqui la tercera distancia, en metres");
-        Integer distancia3 = s.nextInt();
-        Double sumaDistancies = ((double) distancia1 / 10) + distancia2 + ((double) distancia3 * 100);
-        System.out.println("La suma de les distancies en centimetres es "+sumaDistancies);
-        
-
+        Integer m = s.nextInt(); //agaf els metres per consola
+        Float sumaDistancies = ((float) mm / 10) + cm + ((float) m * 100); //faig la suma total
+        System.out.println("La suma de les distancies en centimetres es " + sumaDistancies); //imprimesc per consola
     }
 }
