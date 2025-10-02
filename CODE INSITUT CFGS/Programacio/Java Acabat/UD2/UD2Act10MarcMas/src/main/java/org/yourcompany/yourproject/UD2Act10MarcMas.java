@@ -14,7 +14,7 @@ public class UD2Act10MarcMas {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Quants d'alumnes seran"); //demanam nombre d'alumnes
-        Integer alumnes = s.nextInt();
+        Short alumnes = s.nextShort();
         Integer costTotal = 0; //inicialitzam variables de cost total i per alumne
         Integer costAlumne = 0;
         if (alumnes >= 30) { //si hi ha més de 30 alumnes, posam cost per alumne a 95

@@ -21,7 +21,7 @@ public class UD2Act7MarcMas {
         String mes = s.next(); //deman un mes per console en format de string (per fer comprovacions mes tard)
         mes = mes.toLowerCase(); //el convertesc a minuscules per el switch
         System.out.println("Introdueix un any");
-        Byte any = s.nextByte(); //deman un any per consola
+        Short any = s.nextShort(); //deman un any per consola
         Byte mes2 = 0; //Inicialitz una variable de mes2 per tenir el mes en integer, que assignaré al switch
         Byte diesDelMes = 0; //Inicitalitzada una altra variable que canviaré al switch
         switch (mes) { //si el mes es el mes escrit o el nombre, assignaré el valor del mes a "mes2" i el nombre de dies que té aquest mes
@@ -92,7 +92,7 @@ public class UD2Act7MarcMas {
             System.out.println(errors);
         } else {
             LocalDate dataCompleta = LocalDate.of(any,mes2,dia); //creare una variable de format LocalDate per despres formatejarlo
-            String dataFormatada = dataCompleta.format(DateTimeFormatter.ISO_LOCAL_DATE); //el formateig
+            String dataFormatada = dataCompleta.format(DateTimeFormatter.ofPattern("dd/MM/YYYY")); //el formateig
             System.out.println(dataFormatada); //l'imprimesc
 
 
