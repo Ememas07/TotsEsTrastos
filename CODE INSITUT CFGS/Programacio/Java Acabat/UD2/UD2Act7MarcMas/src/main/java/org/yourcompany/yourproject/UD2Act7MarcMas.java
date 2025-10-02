@@ -74,9 +74,9 @@ public class UD2Act7MarcMas {
                 diesDelMes = 31;
                 break;
             default:
-                mes2 = 0;
+                mes2 = 0; //si no entra a cap dels anteriors, posam el mes a 0 (perque boti l'error) i posa els dies a 31 perque no boti l'error de dia sempre i quan sigui un dia valid
                 diesDelMes = 31;
-
+                break;
         }
         String errors = ""; //variable buida per posar-hi errors més tard
         if (dia > diesDelMes) {
@@ -91,9 +91,9 @@ public class UD2Act7MarcMas {
         if (errors != "") { //si la variable errors no conté res, es que no n'hi ha, en canvi, si no està buida, imprimesc els errors 
             System.out.println(errors);
         } else {
-            LocalDate dataCompleta = LocalDate.of(any,mes2,dia);
-            String dataFormatada = dataCompleta.format(DateTimeFormatter.ISO_LOCAL_DATE);
-            System.out.println(dataFormatada);
+            LocalDate dataCompleta = LocalDate.of(any,mes2,dia); //creare una variable de format LocalDate per despres formatejarlo
+            String dataFormatada = dataCompleta.format(DateTimeFormatter.ISO_LOCAL_DATE); //el formateig
+            System.out.println(dataFormatada); //l'imprimesc
 
 
 
