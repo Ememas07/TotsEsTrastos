@@ -18,6 +18,7 @@ public class Ud1Act14MarcMas {
         ○ La segona, en centímetres
         ○ La tercera, en metres
         ● Dissenya un programa que mostri la suma de les tres longituds en centímetres*/
+        System.out.println("Calculadora de distancies en centimetres");
         Scanner s = new Scanner(System.in);
         System.out.println("Indiqui la primera distancia, en milimetres");
         Integer mm = s.nextInt(); //agaf els milimetres per consola

@@ -13,6 +13,7 @@ public class Ud1Act15MarcMas {
 
     public static void main(String[] args) {
         // Activitat 15
+        System.out.println("Calculadora de potes capturades");
         Scanner s = new Scanner(System.in); 
         System.out.println("Indiqui el nombre de formigues capturades ");
         Short nFormigues = s.nextShort(); //agaf nombre per consola
