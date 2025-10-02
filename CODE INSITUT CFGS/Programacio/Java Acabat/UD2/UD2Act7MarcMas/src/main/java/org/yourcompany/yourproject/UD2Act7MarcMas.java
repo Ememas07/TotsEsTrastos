@@ -3,6 +3,8 @@
  */
 package org.yourcompany.yourproject;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 /**
@@ -23,39 +25,39 @@ public class UD2Act7MarcMas {
         Integer mes2 = 0; //Inicialitz una variable de mes2 per tenir el mes en integer, que assignaré al switch
         Integer diesDelMes = 0; //Inicitalitzada una altra variable que canviaré al switch
         switch (mes) { //si el mes es el mes escrit o el nombre, assignaré el valor del mes a "mes2" i el nombre de dies que té aquest mes
-            case "gener", "1":
+            case "gener", "1", "01":
                 mes2 = 1;
                 diesDelMes = 31;
                 break;
-            case "febrer", "2":
+            case "febrer", "2", "02":
                 mes2 = 2;
                 diesDelMes = 28;
                 break;
-            case "març", "3":
+            case "març", "3", "03":
                 mes2 = 3;
                 diesDelMes = 31;
                 break;
-            case "abril", "4":
+            case "abril", "4", "04":
                 mes2 = 4;
                 diesDelMes = 30;
                 break;
-            case "maig", "5":
+            case "maig", "5", "05":
                 mes2 = 5;
                 diesDelMes = 31;
                 break;
-            case "juny", "6":
+            case "juny", "6", "06":
                 mes2 = 6;
                 diesDelMes = 30;
                 break;
-            case "juliol", "7":
+            case "juliol", "7", "07":
                 mes2 = 7;
                 diesDelMes = 31;
                 break;
-            case "sgost", "8":
+            case "sgost", "8", "08":
                 mes2 = 8;
                 diesDelMes = 31;
                 break;
-            case "septembre", "setembre", "9":
+            case "septembre", "setembre", "9", "09":
                 mes2 = 9;
                 diesDelMes = 30;
                 break;
@@ -73,6 +75,7 @@ public class UD2Act7MarcMas {
                 break;
             default:
                 mes2 = 0;
+                diesDelMes = 31;
 
         }
         String errors = ""; //variable buida per posar-hi errors més tard
@@ -88,25 +91,32 @@ public class UD2Act7MarcMas {
         if (errors != "") { //si la variable errors no conté res, es que no n'hi ha, en canvi, si no està buida, imprimesc els errors 
             System.out.println(errors);
         } else {
-            String dia2 = dia.toString();
-            if (dia < 10) {
-                dia2 = "0" + dia.toString();
-            }
-            String mes3 = mes2.toString();
-            if (mes2 < 10) {
-                mes3 = "0" + mes2.toString();
-            }
-            String any2 = any.toString();
-            if (any < 1000) {
-                any2 = "0" + any.toString();
-                if (any < 100) {
-                    any2 = "00" + any.toString();
-                    if (any < 10) {
-                        any2 = "000" + any.toString();
-                    }
-                }
-            }
-            System.out.println("La teva data es " + dia2 + " / " + mes3 + " / " + any2);
+            LocalDate dataCompleta = LocalDate.of(any,mes2,dia);
+            String dataFormatada = dataCompleta.format(DateTimeFormatter.ISO_LOCAL_DATE);
+            System.out.println(dataFormatada);
+
+
+
+            // String dia2 = dia.toString(); manera arcaica i manual
+            // if (dia < 10) {
+            //     dia2 = "0" + dia.toString();
+            // }
+            // String mes3 = mes2.toString();
+            // if (mes2 < 10) {
+            //     mes3 = "0" + mes2.toString();
+            // }
+            // String any2 = any.toString();
+            // if (any < 1000) {
+            //     any2 = "0" + any.toString();
+            //     if (any < 100) {
+            //         any2 = "00" + any.toString();
+            //         if (any < 10) {
+            //             any2 = "000" + any.toString();
+            //         }
+            //     }
+            // }
+            // System.out.println("La teva data es " + dia2 + " / " + mes3 + " / " + any2);
+            
         }
 
     }
