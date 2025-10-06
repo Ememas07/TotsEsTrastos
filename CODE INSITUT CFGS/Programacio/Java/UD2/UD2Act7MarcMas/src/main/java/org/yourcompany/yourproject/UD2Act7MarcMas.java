@@ -14,6 +14,7 @@ import java.util.Scanner;
 public class UD2Act7MarcMas {
 
     public static void main(String[] args) {
+        System.out.println("Formatejador de dates");
         Scanner s = new Scanner(System.in);
         System.out.println("Introdueix un dia");
         Byte dia = s.nextByte(); //deman un dia per consola

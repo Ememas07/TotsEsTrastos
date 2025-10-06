@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class UD2Act9MarcMas {
 
     public static void main(String[] args) {
+        System.out.println("Calculador de lletra del DNI");
         Scanner s = new Scanner(System.in);
         System.out.println("Introdueix un DNI sense la lletra"); //deman un integer amb el DNI
         Integer input = s.nextInt();

@@ -13,6 +13,7 @@ public class UD2Act3MarcMas {
 
     public static void main(String[] args) {
         // Activitat 3
+        System.out.println("Comprovador de numeros quasi-zero");
         Scanner s = new Scanner(System.in);
         System.out.println("Introdueixi un numero");
         Float n1 = s.nextFloat(); // Llegesc input d'usuari

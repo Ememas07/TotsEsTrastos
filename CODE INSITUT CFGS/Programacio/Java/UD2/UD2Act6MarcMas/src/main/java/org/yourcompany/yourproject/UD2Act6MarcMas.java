@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class UD2Act6MarcMas {
 
     public static void main(String[] args) {
+        System.out.println("Calculador de llargaria del nombre");
         Scanner s = new Scanner(System.in);
         System.out.println("Introdueix un numero entre -99.999 i 99.999"); //deman un nombre per comanda
         Integer numero = s.nextInt();

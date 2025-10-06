@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class UD2Act10MarcMas {
 
     public static void main(String[] args) {
+        System.out.println("Calculadora de preu de viatge per alumne");
         Scanner s = new Scanner(System.in);
         System.out.println("Quants d'alumnes seran"); //demanam nombre d'alumnes
         Short alumnes = s.nextShort();
