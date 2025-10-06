@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class UD2Act8MarcMas {
 
     public static void main(String[] args) {
+        System.out.println("Calculadora de temps un segon després");
         Scanner s = new Scanner(System.in);
         System.out.println("Introdueix una hora");
         Integer hh = s.nextInt(); //variable hores demanada per consola
@@ -41,6 +42,18 @@ public class UD2Act8MarcMas {
             // i el residu serà sempre una hora correcta (en aquest cas, 8)
         }
 
-        System.out.println("Un segon mes tard seran les " + hh + ":" + mm + ":" + ss); //imprimesc l'hora desrprés de verificar que és vàlida
+        System.out.print("Un segon mes tard seran les "); //imprimesc l'hora desrprés de verificar que és vàlida
+        if (hh < 10) {
+            System.out.print("0"); //si l'hora es menor a 10, afegim un 0
+        }
+        System.out.print(hh + ":");
+        if (mm < 10) {
+            System.out.print("0"); //si el minut es menor a 10, afegim un 0
+        }
+        System.out.print(mm + ":");
+        if (ss < 10) {
+            System.out.print("0"); //si el segon es menor a 10, afegim un 0
+        }
+        System.out.print(ss);
     }
 }
