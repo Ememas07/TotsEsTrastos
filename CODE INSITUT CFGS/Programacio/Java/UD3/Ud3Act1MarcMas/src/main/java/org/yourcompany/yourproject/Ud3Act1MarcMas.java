@@ -12,8 +12,10 @@ import java.util.Scanner;
 public class Ud3Act1MarcMas {
 
     public static void main(String[] args) {
+        System.out.println("Comprovador de parell o senar i calculadora al quadrat");
+        System.out.println("Introdueixi un 0 per acabar el programa");
         Scanner s = new Scanner(System.in);
-        System.out.println("Introdueixi un numero"); //deman el primer nombre per consola i l'agaf com a double
+        System.out.println("Introdueixi un numero"); //deman el primer nombre per consola i l'agaf com a float
         float n = s.nextFloat();
         while (n != 0) { //si n NO es 0, entram
             if (n % 2 == 0) { //si el nombre es divisible entre 0 es parell

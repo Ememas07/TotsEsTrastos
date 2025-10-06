@@ -12,8 +12,10 @@ import java.util.Scanner;
 public class Ud3Act3MarcMas {
 
     public static void main(String[] args) {
+        System.out.println("Joc d'aproximació");
+        System.out.println("L'ordinador generarà un nombre enter entre 0 i 100, i l'has d'endivinar.");
         Scanner s = new Scanner(System.in);
-        System.out.println("Introdueixi un nombre"); //deman el primer nombre per consola i l'agaf com a int
+        System.out.println("Introdueixi un nombre"); //deman el primer nombre per consola i l'agaf com a byte
         Byte n = s.nextByte();
         Byte rondes = 0; //inicialitzam variables
         Integer punts = 0;
@@ -30,7 +32,7 @@ public class Ud3Act3MarcMas {
                 punts += (solucio-n); //sumam la diferencia entre punts i el nombre introduit (o viceversa)
             }
             rondes++; //sumam una ronda
-            System.out.println("Introdueixi un altre"); //deman el primer nombre per consola i l'agaf com a int
+            System.out.println("Introdueixi un altre"); //deman el primer nombre per consola i l'agaf com a byte
             n = s.nextByte();
         }
         //un pic encertam el nombre, surtim

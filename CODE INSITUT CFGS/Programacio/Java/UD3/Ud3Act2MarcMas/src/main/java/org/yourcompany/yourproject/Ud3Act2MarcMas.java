@@ -12,8 +12,10 @@ import java.util.Scanner;
 public class Ud3Act2MarcMas {
 
     public static void main(String[] args) {
+        System.out.println("Calculadora de varies dades amb edats d'alumnes");
+        System.out.println("Introdueixi un nombre negatiu per acabar.");
         Scanner s = new Scanner(System.in);
-        System.out.println("Introdueixi una edat "); //deman el primer nombre per consola i l'agaf com a double
+        System.out.println("Introdueixi una edat "); //deman el primer nombre per consola i l'agaf com a float
         float n = s.nextFloat();
         Integer sumaTotal = 0; //inicialitzam variables
         Float mitjanaEdats = (float) 0;
