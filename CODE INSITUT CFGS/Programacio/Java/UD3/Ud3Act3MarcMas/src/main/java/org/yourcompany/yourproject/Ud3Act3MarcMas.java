@@ -19,7 +19,7 @@ public class Ud3Act3MarcMas {
         Byte n = s.nextByte();
         Byte rondes = 0; //inicialitzam variables
         Integer punts = 0;
-        Integer solucio = (int) (Math.random() * 100); //Math.random genera un nombre entre 0.0 i 1.0, el multiplicare per 100 per tenir un valor entre 0 i 100
+        Integer solucio = (int) (Math.random() * 100); //Math.random genera un nombre entre 0.0 i 1.0, el multiplicare per 100 per tenir un valor entre 1 i 100
         if (solucio == 0) {
             solucio = 1; //per evitar que el random doni 0
         }
