@@ -4,8 +4,12 @@ html {
     color: white;
 }
 
-nav a {
+a {
     color: cyan;
+}
+
+a:hover {
+    color: aquamarine;
 }
 
 header h1 {
@@ -28,13 +32,22 @@ nav ul a {
 }
 
 nav ul {
-    background-color: darkred;
+    background-color: transparent;
 }
 
-nav ul a:hover {
-    color: aquamarine;
-}
-table td{
-    text-align: left;
+table td {
     padding: 10px;
+}
+
+footer {
+    background-color: black;
+}
+
+footer table {
+    width: 100%;
+}
+
+footer table tr {
+    display: flex;
+    justify-content: space-between;
 }

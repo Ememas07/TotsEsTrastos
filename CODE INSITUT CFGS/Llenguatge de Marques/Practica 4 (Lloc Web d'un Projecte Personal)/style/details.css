@@ -1,0 +1,12 @@
+.results td {
+    text-align: left;
+}
+.inactive td{
+    padding: 0px;
+}
+.liveries td{
+    text-align: center;
+}
+.liveries img{
+    width: 30vw;
+}
