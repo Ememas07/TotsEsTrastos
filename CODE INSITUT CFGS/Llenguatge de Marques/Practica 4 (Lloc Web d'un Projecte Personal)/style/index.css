@@ -9,3 +9,7 @@ img {
 table td {
     text-align: center;
 }
+
+.instagram a img{
+    width:30px;
+}
