@@ -16,7 +16,7 @@ public class Ud3Act4MarcMas {
         System.out.println("Introdueix la suma correcta per continuar.");
         System.out.println("En cas d'error, el joc acabara");
         Scanner s = new Scanner(System.in);
-        Short puntuacio = -1; //inicialitzam variables, puntuacio comença a -1 perque en començar el bucle ja suma 1
+        Short puntuacio = -1; //inicialitzam variables, puntuacio comença a -1 perque en el bucle suma 1 la primera vegada hagui encertat o no
         Integer suma1 = 0;
         Integer suma2 = 0;
         Integer solucio = 0;
