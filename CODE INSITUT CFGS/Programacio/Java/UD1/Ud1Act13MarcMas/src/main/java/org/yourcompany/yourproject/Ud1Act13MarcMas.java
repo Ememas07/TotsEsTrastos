@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class Ud1Act13MarcMas {
 
     public static void main(String[] args) {
+        final Double IVA = 0.21;
         // Activitat 13
         Scanner s = new Scanner(System.in);
         System.out.println("Introdueixi 3");
@@ -19,7 +20,6 @@ public class Ud1Act13MarcMas {
         System.out.println("Opcio 2: Calcular quina part d'un preu total es IVA");
         System.out.println("introdueix 1  o 2");
         Byte seleccio = s.nextByte();
-        final Double IVA = 0.21;
         switch (seleccio) {
             case 1:
                 System.out.println("Calculadora de preu amb IVA");
