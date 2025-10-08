@@ -20,10 +20,7 @@ public class Ud3Act3MarcMas {
         Byte n = s.nextByte();
         Byte rondes = 0; //inicialitzam variables
         Integer punts = 0;
-        Integer solucio = (int) (Math.random() * 100); //Math.random genera un nombre entre 0.0 i 1.0, el multiplicare per 100 per tenir un valor entre 1 i 100
-        if (solucio == 0) {
-            solucio = 1; //per evitar que el random doni 0
-        }
+        Integer solucio = 1 + (int) (Math.random() * 100); //Gener un nombre entre 1 i 100
         while ((int) n != solucio && (int) n != -1) { //si n no es igual que la solucio, entram
             if (n > solucio) {
                 System.out.println("El teu nombre es mes alt que la solucio");
