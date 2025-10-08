@@ -23,7 +23,7 @@ public class Ud3Act1MarcMas {
             } else { // si no, imparell
                 System.out.println("El nombre es Senar");
             }
-            System.out.println("El teu nombre al quadrat es " + Math.pow(n, 2)); //calcul el nombre al quadrat
+            System.out.println("El teu nombre al quadrat es " + (n*n)); //calcul el nombre al quadrat
             System.out.println("Introdueixi un numero"); //deman el seguent nombre 
             n = s.nextFloat();
         }
