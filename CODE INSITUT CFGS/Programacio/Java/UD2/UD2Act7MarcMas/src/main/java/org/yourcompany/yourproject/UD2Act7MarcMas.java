@@ -3,8 +3,6 @@
  */
 package org.yourcompany.yourproject;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 /**
@@ -79,45 +77,46 @@ public class UD2Act7MarcMas {
                 diesDelMes = 31;
                 break;
         }
-        String errors = ""; //variable buida per posar-hi errors més tard
+        Byte errors = 0; //variable errors, començara a 0 i empraré més tard per si hi ha un error o no
         if (dia > diesDelMes) {
-            errors += "el dia introduit no es valid "; //afegesc els missatges d'errors a la variable
+            System.out.print("el dia introduit no es valid"); //imprimesc missatge d'error i pos 1 a la variable
+            errors = 1;
         }
         if (mes2 == 0) {
-            errors += "el mes introduit no es valid ";
+            System.out.print(" el mes introduit no es valid");
+            errors = 1;
         }
         if (any < 0) {
-            errors += "l'any introduit no es valid ";
+            System.out.print(" l'any introduit no es valid");
+            errors = 1;
         }
-        if (errors != "") { //si la variable errors no conté res, es que no n'hi ha, en canvi, si no està buida, imprimesc els errors 
-            System.out.println(errors);
-        } else {
-            LocalDate dataCompleta = LocalDate.of(any,mes2,dia); //creare una variable de format LocalDate per despres formatejarlo
-            String dataFormatada = dataCompleta.format(DateTimeFormatter.ofPattern("dd/MM/YYYY")); //el formateig
-            System.out.println(dataFormatada); //l'imprimesc
+        if (errors == 0) { //si la variable errors no conté res, es que no n'hi ha, en canvi, si no està buida, imprimesc els errors 
 
+            //emprar char, diaR, prefixes, NO PRINTLN
+            // LocalDate dataCompleta = LocalDate.of(any,mes2,dia); //creare una variable de format LocalDate per despres formatejarlo
+            // String dataFormatada = dataCompleta.format(DateTimeFormatter.ofPattern("dd/MM/YYYY")); //el formateig
+            // System.out.println(dataFormatada); //l'imprimesc
+            
 
-
-            // String dia2 = dia.toString(); // manera arcaica i manual
+            // String dia2 = dia; // manera arcaica i manual
             // if (dia < 10) {
-            //     dia2 = "0" + dia.toString();
+            //     dia2 = "0" + dia;
             // }
-            // String mes3 = mes2.toString();
+            // String mes3 = mes2;
             // if (mes2 < 10) {
-            //     mes3 = "0" + mes2.toString();
+            //     mes3 = "0" + mes2;
             // }
-            // String any2 = any.toString();
+            // String any2 = any;
             // if (any < 1000) {
-            //     any2 = "0" + any.toString();
+            //     any2 = "0" + any;
             //     if (any < 100) {
-            //         any2 = "00" + any.toString();
+            //         any2 = "00" + any;
             //         if (any < 10) {
-            //             any2 = "000" + any.toString();
+            //             any2 = "000" + any;
             //         }
             //     }
             // }
             // System.out.println("La teva data es " + dia2 + " / " + mes3 + " / " + any2);
-            
         }
 
     }

@@ -18,12 +18,21 @@ public class UD2Act6MarcMas {
         Integer numero = s.nextInt();
         if (numero > 99999 || numero < -99999) { //si el nombre està defora del rang, imprimesc l'error
             System.out.println("Nombre massa gran");
-        } else { 
+        } else {
             if (numero < 0) { //si el nombre es negatiu, el torn a positiu per no tenir el signe
                 numero = -numero;
             }
-            String llargaria = numero.toString(); //convertesc de int a string per desprer cridar a length()
-            System.out.println("El teu numero te " + llargaria.length() + " xifres"); //imprimesc resultat per pantalla
+            if (numero > 9999) {
+                System.out.println("El teu numero te 5 xifres"); //imprimesc resultat per pantalla
+            } else if (numero > 999) {
+                System.out.println("El teu numero te 4 xifres"); //imprimesc resultat per pantalla
+            } else if (numero > 99) {
+                System.out.println("El teu numero te 3 xifres"); //imprimesc resultat per pantalla
+            } else if (numero > 9) {
+                System.out.println("El teu numero te 2 xifres"); //imprimesc resultat per pantalla
+            } else {
+                System.out.println("El teu numero te 1 xifra"); //imprimesc resultat per pantalla
+            }
         }
     }
 }
