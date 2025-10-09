@@ -92,31 +92,24 @@ public class UD2Act7MarcMas {
         }
         if (errors == 0) { //si la variable errors no conté res, es que no n'hi ha, en canvi, si no està buida, imprimesc els errors 
 
-            //emprar char, diaR, prefixes, NO PRINTLN
-            // LocalDate dataCompleta = LocalDate.of(any,mes2,dia); //creare una variable de format LocalDate per despres formatejarlo
-            // String dataFormatada = dataCompleta.format(DateTimeFormatter.ofPattern("dd/MM/YYYY")); //el formateig
-            // System.out.println(dataFormatada); //l'imprimesc
-            
-
-            // String dia2 = dia; // manera arcaica i manual
-            // if (dia < 10) {
-            //     dia2 = "0" + dia;
-            // }
-            // String mes3 = mes2;
-            // if (mes2 < 10) {
-            //     mes3 = "0" + mes2;
-            // }
-            // String any2 = any;
-            // if (any < 1000) {
-            //     any2 = "0" + any;
-            //     if (any < 100) {
-            //         any2 = "00" + any;
-            //         if (any < 10) {
-            //             any2 = "000" + any;
-            //         }
-            //     }
-            // }
-            // System.out.println("La teva data es " + dia2 + " / " + mes3 + " / " + any2);
+            if (dia < 10) { //si dia, mes, o any son menors a 10, afegim un 0, si l'any es menor a 100, afegim un altre 0, i si es menor a 1000 afegim un altre 0 encara
+                System.out.print("0");
+            }
+            System.out.print(dia + " / "); // i anam imprimint entre 0 i variables
+            if (mes2 < 10) {
+                System.out.print("0"); 
+            }
+            System.out.print(mes + " / ");
+            if (any < 1000) {
+                System.out.print("0");
+            }
+            if (any < 100) {
+                System.out.print("0");
+            }
+            if (any < 10) {
+                System.out.print("0");
+            }
+            System.out.print(any);
         }
 
     }
