@@ -17,82 +17,79 @@ public class UD2Act9MarcMas {
         System.out.println("Introdueix un DNI sense la lletra"); //deman un integer amb el DNI
         Integer input = s.nextInt();
         Integer resto = (input % 23); //calcul el residu amb l'operacio de modulo
-        String lletra = ""; //inicialitz variable lletra
+        System.out.print("El teu DNI sencer es " + input); //inicialitz variable lletra
         switch (resto) { //switch amb totes les opcions posibles de resiuds
             case 0:
-                lletra = "T";
+                System.out.print("T");
                 break;
             case 1:
-                lletra = "R";
+                System.out.print("R");
                 break;
             case 2:
-                lletra = "W";
+                System.out.print("W");
                 break;
             case 3:
-                lletra = "A";
+                System.out.print("A");
                 break;
             case 4:
-                lletra = "G";
+                System.out.print("G");
                 break;
             case 5:
-                lletra = "M";
+                System.out.print("M");
                 break;
             case 6:
-                lletra = "Y";
+                System.out.print("Y");
                 break;
             case 7:
-                lletra = "F";
+                System.out.print("F");
                 break;
             case 8:
-                lletra = "P";
+                System.out.print("P");
                 break;
             case 9:
-                lletra = "D";
+                System.out.print("D");
                 break;
             case 10:
-                lletra = "X";
+                System.out.print("X");
                 break;
             case 11:
-                lletra = "B";
+                System.out.print("B");
                 break;
             case 12:
-                lletra = "N";
+                System.out.print("N");
                 break;
             case 13:
-                lletra = "J";
+                System.out.print("J");
                 break;
             case 14:
-                lletra = "Z";
+                System.out.print("Z");
                 break;
             case 15:
-                lletra = "S";
+                System.out.print("S");
                 break;
             case 16:
-                lletra = "Q";
+                System.out.print("Q");
                 break;
             case 17:
-                lletra = "V";
+                System.out.print("V");
                 break;
             case 18:
-                lletra = "H";
+                System.out.print("H");
                 break;
             case 19:
-                lletra = "L";
+                System.out.print("L");
                 break;
             case 20:
-                lletra = "C";
+                System.out.print("C");
                 break;
             case 21:
-                lletra = "K";
+                System.out.print("K");
                 break;
             case 22:
-                lletra = "E";
+                System.out.print("E");
                 break;
             default:
                 System.out.println("Error"); //si no cau a cap dels 22 resiuds, imprimir error
-        }
-        if (lletra != "") { //si la lletra no està buida (cosa que no pot passar si no hi ha cap error) imprimim el DNI
-            System.out.println("El teu DNI complet es " + input + lletra); //un pic tenim el DNI amb la lletra, l'imprimim
         }
 
     }
