@@ -28,7 +28,7 @@ public class Ud3Act4MarcMas {
             // el multiplicare per 10 per tenir un valor entre 0 i 10
             // i sumaré 1 perque sigui entre 1 i 10
             solucio = suma1 + suma2; // calcul la solucio correcta
-            System.out.println(suma1 + " + " + suma2 + " = ?"); //deman el nombre per consola i l'agaf com a byte
+            System.out.print(suma1 + " + " + suma2 + " =  "); //deman el nombre per consola i l'agaf com a byte
             input = s.nextByte();
             puntuacio++;
         } while ((int) input == solucio);
