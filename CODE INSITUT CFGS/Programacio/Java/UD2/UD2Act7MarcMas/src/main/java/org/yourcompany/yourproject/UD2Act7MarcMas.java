@@ -98,7 +98,7 @@ public class UD2Act7MarcMas {
 
 
 
-            // String dia2 = dia.toString(); manera arcaica i manual
+            // String dia2 = dia.toString(); // manera arcaica i manual
             // if (dia < 10) {
             //     dia2 = "0" + dia.toString();
             // }
