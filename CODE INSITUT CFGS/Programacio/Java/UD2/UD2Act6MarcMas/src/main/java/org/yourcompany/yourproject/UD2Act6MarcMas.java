@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Marc Mas
  */
-public class UD2Act6MarcMas {
+public class Ud2Act6MarcMas {
 
     public static void main(String[] args) {
         System.out.println("Calculador de llargaria del nombre");

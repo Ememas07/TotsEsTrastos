@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Marc Mas
  */
-public class UD2Act8MarcMas {
+public class Ud2Act8MarcMas {
 
     public static void main(String[] args) {
         System.out.println("Calculadora de temps un segon després");

@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Marc Mas
  */
-public class UD2Act10MarcMas {
+public class Ud2Act10MarcMas {
 
     public static void main(String[] args) {
         System.out.println("Calculadora de preu de viatge per alumne");

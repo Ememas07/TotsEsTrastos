@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Marc Mas
  */
-public class UD2Act2MarcMas {
+public class Ud2Act2MarcMas {
 
     public static void main(String[] args) {
         // Activitat 2

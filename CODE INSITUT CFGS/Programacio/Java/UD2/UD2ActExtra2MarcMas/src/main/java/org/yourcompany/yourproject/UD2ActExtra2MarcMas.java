@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Marc Mas
  */
-public class UD2ActExtra2MarcMas {
+public class Ud2ActExtra2MarcMas {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);

@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Marc Mas
  */
-public class UD2Act9MarcMas {
+public class Ud2Act9MarcMas {
 
     public static void main(String[] args) {
         System.out.println("Calculador de lletra del DNI");

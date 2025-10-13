@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Marc Mas
  */
-public class UD2Act7MarcMas {
+public class Ud2Act7MarcMas {
 
     public static void main(String[] args) {
         System.out.println("Formatejador de dates");
