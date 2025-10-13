@@ -13,13 +13,13 @@ public class Ud2ActExtra1MarcMas {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.println("Introdueix una temperatura en graus Celsius");
-        Integer temp = s.nextInt();
-        if (temp <= 14) {
+        System.out.println("Introdueix una temperatura en graus Celsius"); //informacio a l'usuari
+        Integer temp = s.nextInt(); //agafam per consola
+        if (temp <= 14) { //si esta per davall de 14 o a 14, fa fred
             System.out.println("Fa fred");
-        } else if (temp >= 15 && temp <= 25) {
+        } else if (temp >= 15 && temp <= 25) { //si esta entre 15 i 25 (inclosos), es templat
             System.out.println("Es templat");
-        } else {
+        } else { //si no, fa calor (mes de 25)
             System.out.println("Fa calor");
         }
     }

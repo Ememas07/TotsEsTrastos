@@ -14,102 +14,168 @@ public class Ud2Act7MarcMas {
     public static void main(String[] args) {
         System.out.println("Formatejador de dates");
         Scanner s = new Scanner(System.in);
-        System.out.println("Introdueix un dia");
-        Byte dia = s.nextByte(); //deman un dia per consola
-        System.out.println("Introdueix un mes");
-        String mes = s.next(); //deman un mes per console en format de string (per fer comprovacions mes tard)
-        mes = mes.toLowerCase(); //el convertesc a minuscules per el switch
-        System.out.println("Introdueix un any");
-        Short any = s.nextShort(); //deman un any per consola
-        Byte mes2 = 0; //Inicialitz una variable de mes2 per tenir el mes en integer, que assignaré al switch
-        Byte diesDelMes = 0; //Inicitalitzada una altra variable que canviaré al switch
-        switch (mes) { //si el mes es el mes escrit o el nombre, assignaré el valor del mes a "mes2" i el nombre de dies que té aquest mes
-            case "gener", "1", "01":
-                mes2 = 1;
-                diesDelMes = 31;
+        System.out.println("Quina versio vols emprar? introdueix 0 per la versio avançada o 1 per la versio simplificada");
+        Byte versio = s.nextByte(); //agafan la versio
+        switch (versio) {
+            case 0:
+                System.out.println("Introdueix un dia");
+                Byte dia = s.nextByte(); //deman un dia per consola
+                System.out.println("Introdueix un mes");
+                String mes = s.next(); //deman un mes per console en format de string (per fer comprovacions mes tard)
+                mes = mes.toLowerCase(); //el convertesc a minuscules per el switch
+                System.out.println("Introdueix un any");
+                Short any = s.nextShort(); //deman un any per consola
+                Byte mes2 = 0; //Inicialitz una variable de mes2 per tenir el mes en integer, que assignaré al switch
+                Byte diesDelMes = 0; //Inicitalitzada una altra variable que canviaré al switch
+                switch (mes) { //si el mes es el mes escrit o el nombre, assignaré el valor del mes a "mes2" i el nombre de dies que té aquest mes
+                    case "gener", "1", "01":
+                        mes2 = 1;
+                        diesDelMes = 31;
+                        break;
+                    case "febrer", "2", "02":
+                        mes2 = 2;
+                        diesDelMes = 28;
+                        break;
+                    case "març", "3", "03":
+                        mes2 = 3;
+                        diesDelMes = 31;
+                        break;
+                    case "abril", "4", "04":
+                        mes2 = 4;
+                        diesDelMes = 30;
+                        break;
+                    case "maig", "5", "05":
+                        mes2 = 5;
+                        diesDelMes = 31;
+                        break;
+                    case "juny", "6", "06":
+                        mes2 = 6;
+                        diesDelMes = 30;
+                        break;
+                    case "juliol", "7", "07":
+                        mes2 = 7;
+                        diesDelMes = 31;
+                        break;
+                    case "sgost", "8", "08":
+                        mes2 = 8;
+                        diesDelMes = 31;
+                        break;
+                    case "septembre", "setembre", "9", "09":
+                        mes2 = 9;
+                        diesDelMes = 30;
+                        break;
+                    case "octubre", "10":
+                        mes2 = 10;
+                        diesDelMes = 31;
+                        break;
+                    case "novembre", "11":
+                        mes2 = 11;
+                        diesDelMes = 30;
+                        break;
+                    case "decembre", "desembre", "12":
+                        mes2 = 12;
+                        diesDelMes = 31;
+                        break;
+                    default:
+                        mes2 = 0; //si no entra a cap dels anteriors, posam el mes a 0 (perque boti l'error) i posa els dies a 31 perque no boti l'error de dia sempre i quan sigui un dia valid
+                        diesDelMes = 31;
+                        break;
+                }
+                Byte errors = 0; //variable errors, començara a 0 i empraré més tard per si hi ha un error o no
+                if (dia > diesDelMes) {
+                    System.out.print("el dia introduit no es valid"); //imprimesc missatge d'error i pos 1 a la variable
+                    errors = 1;
+                }
+                if (mes2 == 0) {
+                    System.out.print(" el mes introduit no es valid");
+                    errors = 1;
+                }
+                if (any < 0) {
+                    System.out.print(" l'any introduit no es valid");
+                    errors = 1;
+                }
+                if (errors == 0) { //si la variable errors no conté res, es que no n'hi ha, en canvi, si no està buida, imprimesc els errors 
+
+                    if (dia < 10) { //si dia, mes, o any son menors a 10, afegim un 0, si l'any es menor a 100, afegim un altre 0, i si es menor a 1000 afegim un altre 0 encara
+                        System.out.print("0");
+                    }
+                    System.out.print(dia + " / "); // i anam imprimint entre 0 i variables
+                    if (mes2 < 10) {
+                        System.out.print("0");
+                    }
+                    System.out.print(mes + " / ");
+                    if (any < 1000) {
+                        System.out.print("0");
+                    }
+                    if (any < 100) {
+                        System.out.print("0");
+                    }
+                    if (any < 10) {
+                        System.out.print("0");
+                    }
+                    System.out.print(any);
+                }
                 break;
-            case "febrer", "2", "02":
-                mes2 = 2;
-                diesDelMes = 28;
-                break;
-            case "març", "3", "03":
-                mes2 = 3;
-                diesDelMes = 31;
-                break;
-            case "abril", "4", "04":
-                mes2 = 4;
-                diesDelMes = 30;
-                break;
-            case "maig", "5", "05":
-                mes2 = 5;
-                diesDelMes = 31;
-                break;
-            case "juny", "6", "06":
-                mes2 = 6;
-                diesDelMes = 30;
-                break;
-            case "juliol", "7", "07":
-                mes2 = 7;
-                diesDelMes = 31;
-                break;
-            case "sgost", "8", "08":
-                mes2 = 8;
-                diesDelMes = 31;
-                break;
-            case "septembre", "setembre", "9", "09":
-                mes2 = 9;
-                diesDelMes = 30;
-                break;
-            case "octubre", "10":
-                mes2 = 10;
-                diesDelMes = 31;
-                break;
-            case "novembre", "11":
-                mes2 = 11;
-                diesDelMes = 30;
-                break;
-            case "decembre", "desembre", "12":
-                mes2 = 12;
-                diesDelMes = 31;
+            case 1:
+                System.out.println("Introdueix un dia");
+                Byte simpleDia = s.nextByte(); //deman un dia per consola
+                System.out.println("Introdueix un mes");
+                Byte simpleMes = s.nextByte(); //deman un mes per consola
+                System.out.println("Introdueix un any");
+                Short simpleAny = s.nextShort(); //deman un any per consola
+                Byte simpleDiesDelMes = 0; //Inicitalitzada una altra variable que canviaré al switch
+                switch (simpleMes) { //switch per assignar els dies a cada mes 
+                    case 1, 3, 5, 7, 8, 10, 12:
+                        simpleDiesDelMes = 31;
+                        break;
+                    case 2:
+                        simpleDiesDelMes = 28;
+                        break;
+                    case 4, 6, 9, 11:
+                        simpleDiesDelMes = 30;
+                        break;
+                    default:
+                        simpleMes = 0; //si no entra a cap dels anteriors, posam el mes a 0 (perque boti l'error) 
+                        diesDelMes = 31; // i posa els dies a 31 perque no boti l'error de dia sempre i quan sigui un dia valid
+                        break;
+                }
+                Byte simpleErrors = 0; //variable errors, començara a 0 i empraré més tard per si hi ha un error o no
+                if (simpleDia > simpleDiesDelMes) {
+                    System.out.print("el dia introduit no es valid"); //imprimesc missatge d'error i pos 1 a la variable
+                    errors = 1;
+                }
+                if (simpleMes == 0) {
+                    System.out.print(" el mes introduit no es valid");
+                    errors = 1;
+                }
+                if (simpleAny < 0) {
+                    System.out.print(" l'any introduit no es valid");
+                    errors = 1;
+                }
+                if (simpleErrors == 0) { //si la variable errors no conté res, es que no n'hi ha, en canvi, si no està buida, imprimesc els errors 
+
+                    if (simpleDia < 10) { //si dia, mes, o any son menors a 10, afegim un 0, si l'any es menor a 100, afegim un altre 0, i si es menor a 1000 afegim un altre 0 encara
+                        System.out.print("0");
+                    }
+                    System.out.print(simpleDia + " / "); // i anam imprimint entre 0 i variables
+                    if (simpleMes < 10) {
+                        System.out.print("0");
+                    }
+                    System.out.print(simpleMes + " / ");
+                    if (simpleAny < 1000) {
+                        System.out.print("0");
+                    }
+                    if (simpleAny < 100) {
+                        System.out.print("0");
+                    }
+                    if (simpleAny < 10) {
+                        System.out.print("0");
+                    }
+                    System.out.print(simpleAny);
+                }
                 break;
             default:
-                mes2 = 0; //si no entra a cap dels anteriors, posam el mes a 0 (perque boti l'error) i posa els dies a 31 perque no boti l'error de dia sempre i quan sigui un dia valid
-                diesDelMes = 31;
-                break;
-        }
-        Byte errors = 0; //variable errors, començara a 0 i empraré més tard per si hi ha un error o no
-        if (dia > diesDelMes) {
-            System.out.print("el dia introduit no es valid"); //imprimesc missatge d'error i pos 1 a la variable
-            errors = 1;
-        }
-        if (mes2 == 0) {
-            System.out.print(" el mes introduit no es valid");
-            errors = 1;
-        }
-        if (any < 0) {
-            System.out.print(" l'any introduit no es valid");
-            errors = 1;
-        }
-        if (errors == 0) { //si la variable errors no conté res, es que no n'hi ha, en canvi, si no està buida, imprimesc els errors 
-
-            if (dia < 10) { //si dia, mes, o any son menors a 10, afegim un 0, si l'any es menor a 100, afegim un altre 0, i si es menor a 1000 afegim un altre 0 encara
-                System.out.print("0");
-            }
-            System.out.print(dia + " / "); // i anam imprimint entre 0 i variables
-            if (mes2 < 10) {
-                System.out.print("0"); 
-            }
-            System.out.print(mes + " / ");
-            if (any < 1000) {
-                System.out.print("0");
-            }
-            if (any < 100) {
-                System.out.print("0");
-            }
-            if (any < 10) {
-                System.out.print("0");
-            }
-            System.out.print(any);
+                System.out.println("introdueix la versio correctament! 0 per versio avançada, 1 per versio simplificada");
         }
 
     }

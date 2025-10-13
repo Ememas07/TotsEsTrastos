@@ -18,9 +18,9 @@ public class Ud2Act3MarcMas {
         System.out.println("Introdueixi un numero");
         Float n1 = s.nextFloat(); // Llegesc input d'usuari
         if (n1 < 1 && n1 > -1 && n1 != 0) { //si el nombre es major a -1, menor que 1, i no es 0 és quasi-zero
-            System.out.println("El numero es quasi-zero");
+            System.out.println("Ja que el nombre " + n1 + " esta entre 1 i -1, es quasi-zero");
         } else {
-            System.out.println("El numero no es quasi-zero");
+            System.out.println("El nombre no es quasi-zero, ja que no esta a l'interval (-1,1)");
         }
     }
 }
