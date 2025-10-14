@@ -1,0 +1,80 @@
+table,
+td {
+    border-style: solid;
+}
+
+table {
+    width: 99%;
+}
+
+td,
+th {
+    text-align: center;
+    width: 15vw;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+tr,
+th {
+    background-color: gray;
+    border-color: gray;
+    border-style: solid 1px;
+}
+
+td:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.hora {
+    display: flex;
+    justify-content: space-around;
+    border-style: none;
+}
+td.hora:hover{
+    transform: scale(1);
+    box-shadow: 0 0 0;
+}
+
+td.pati {
+    border-style: dashed;
+    background-color: gray;
+}
+
+td.pati:hover {
+    transform: scale(1.02);
+}
+
+.programacio {
+    background-color: red;
+}
+
+.marques {
+    background-color: aqua;
+}
+
+.digitalitzacio {
+    background-color: greenyellow;
+
+}
+
+.bbdd {
+    background-color: yellow;
+
+}
+
+.sistemes {
+    background-color: violet;
+
+}
+
+.ipo {
+    background-color: pink;
+
+}
+
+.entorns {
+    background-color: blue;
+}
