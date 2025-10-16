@@ -20,17 +20,19 @@ public class Ud2Act10MarcMas {
         Integer costAlumne = 0;
         if (alumnes >= 30) { //si hi ha més de 30 alumnes, posam cost per alumne a 95
             costAlumne = 95;
-            if (alumnes >= 50) { //si n'hi ha mes de 50, a 70
-                costAlumne = 70;
-                if (alumnes >= 100) { //si n'hi ha mes de 100, a 65
-                    costAlumne = 65;
-                }
-            }
-            costTotal = costAlumne * alumnes; //calculam el cost total multiplicant cost per alumne per el nombre d'alumnes
-        } else { //si no hi ha mes de 30 alumnes, posam cost total a 4000 i calculam preu per alumne
+        }
+        if (alumnes >= 50) { //si n'hi ha mes de 50, a 70
+            costAlumne = 70;
+        }
+        if (alumnes >= 100) { //si n'hi ha mes de 100, a 65
+            costAlumne = 65;
+        }
+        costTotal = costAlumne * alumnes; //calculam el cost total multiplicant cost per alumne per el nombre d'alumnes
+        if (alumnes < 30) { //si no hi ha mes de 30 alumnes, posam cost total a 4000 i calculam preu per alumne
             costTotal = 4000;
             costAlumne = (4000 / alumnes);
         }
-        System.out.println("El cost total es de " + costTotal + " i aixo equival a " + costAlumne + " per alumne"); //imprimim resultat final
+        System.out.println(
+                "El cost total es de " + costTotal + " i aixo equival a " + costAlumne + " per alumne"); //imprimim resultat final
     }
 }
