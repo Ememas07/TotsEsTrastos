@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        #scheduleTable {
+            width: 100%;
+            height: 100vh; /* 100% viewport height */
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        #scheduleTable td.hora {
+            width: 10% !important; /* Hours = 10% */
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+        #scheduleTable td {
+            width: 90% !important; /* Content = 90% */
+            vertical-align: top;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        #scheduleTable .pati td {
+            background-color: #e8f4f8;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+    <title>Mas, Marc - E4X - Horari</title>
+</head>
+
+<body>
+    <table id="scheduleTable">
+        <thead style="display: none;">
+            <th>Hora</th>
+            <th>Dilluns</th>
+            <th>Dimarts</th>
+            <th>Dimecres</th>
+            <th>Dijous</th>
+            <th>Divendres</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="hora">15:00-15:55</td>
+                <td class="programacio" rowspan="2">Programació</td>
+                <td class="marques" rowspan="2">Llenguatge de Marques i sistemes de gestió d'informació</td>
+                <td class="digitalitzacio">Digitalització</td>
+                <td class="programacio" rowspan="2">Programació</td>
+                <td class="bbdd" rowspan="2">Bases de Dades</td>
+            </tr>
+            <tr>
+                <td class="hora">15:55-16:50</td>
+                <td class="programacio">Programació</td>
+            </tr>
+            <tr class="pati">
+                <td class="hora">16:50-17:05</td>
+                <td class="pati" colspan="6">Pati I</td>
+            </tr>
+            <tr>
+                <td class="hora">17:05-18:00</td>
+                <td class="programacio">Programació</td>
+                <td class="marques">Llenguatge de Marques i sistemes de gestió d'informació</td>
+                <td class="programacio" rowspan="2">Programació</td>
+                <td class="bbdd" rowspan="2">Bases de Dades</td>
+                <td class="programacio">Programació</td>
+            </tr>
+            <tr>
+                <td class="hora">18:00-18:55</td>
+                <td class="bbdd">Bases de Dades</td>
+                <td class="ipo">Itinerari Personal per a l'ocupabilitat</td>
+                <td class="entorns">Entorns de desenvolupament</td>
+            </tr>
+            <tr class="pati">
+                <td class="hora">18:55-19:10</td>
+                <td class="pati" colspan="6">Pati II</td>
+            </tr>
+            <tr>
+                <td class="hora">19:10-20:05</td>
+                <td class="sistemes" rowspan="2">Sistemes informàtics</td>
+                <td class="ipo" rowspan="2">Itinerari Personal per a l'ocupabilitat</td>
+                <td class="entorns" rowspan="2">Entorns de desenvolupament</td>
+                <td class="marques" rowspan="2">Llenguatge de Marques i sistemes de gestió d'informació</td>
+                <td class="sistemes" rowspan="2">Sistemes informàtics</td>
+            </tr>
+            <tr>
+                <td class="hora">20:05-21:00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            showTodayClasses();
+        });
+
+        function showTodayClasses() {
+            const table = document.getElementById('scheduleTable');
+            const rows = table.querySelectorAll('tbody tr');
+            const today = new Date().getDay();
+            
+            // Map days to column index (0=Dilluns, 1=Dimarts, etc.)
+            let dayColumnIndex = -1;
+            if (today === 1) dayColumnIndex = 0;  // Dilluns
+            else if (today === 2) dayColumnIndex = 1; // Dimarts  
+            else if (today === 3) dayColumnIndex = 2; // Dimecres
+            else if (today === 4) dayColumnIndex = 3; // Dijous
+            else if (today === 5) dayColumnIndex = 4; // Divendres
+            
+            // Weekend: show only hours
+            if (dayColumnIndex === -1) {
+                rows.forEach(row => {
+                    const cells = row.querySelectorAll('td');
+                    cells.forEach((cell, index) => {
+                        cell.style.display = index === 0 ? '' : 'none';
+                    });
+                });
+                return;
+            }
+            
+            rows.forEach(row => {
+                const cells = Array.from(row.querySelectorAll('td'));
+                
+                // Always show hour (index 0)
+                cells[0].style.display = '';
+                
+                if (row.classList.contains('pati')) {
+                    // Pati: show only hour + today's column (colspan=1 for pati)
+                    cells.forEach((cell, index) => {
+                        if (index === 0 || index === dayColumnIndex + 1) {
+                            cell.style.display = '';
+                        } else {
+                            cell.style.display = 'none';
+                        }
+                    });
+                    const patiCell = row.querySelector('.pati');
+                    if (patiCell) {
+                        patiCell.setAttribute('colspan', '1'); // Only today's column
+                    }
+                    return;
+                }
+                
+                let hasContentToday = false;
+                const todayCell = cells[dayColumnIndex + 1];
+                if (todayCell && todayCell.textContent.trim() !== '') {
+                    hasContentToday = true;
+                }
+                
+                // Show/hide cells
+                cells.forEach((cell, index) => {
+                    if (index === 0) {
+                        cell.style.display = '';
+                    } else if (index === dayColumnIndex + 1) {
+                        cell.style.display = hasContentToday ? '' : 'none';
+                    } else {
+                        cell.style.display = 'none';
+                    }
+                });
+                
+                // Hide row if no content today
+                row.style.display = hasContentToday ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>
