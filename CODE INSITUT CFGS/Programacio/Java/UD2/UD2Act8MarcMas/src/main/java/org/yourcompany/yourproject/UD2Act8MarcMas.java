@@ -22,21 +22,20 @@ public class Ud2Act8MarcMas {
         Integer ss = s.nextInt() + 1; //variable segons demanada per consola, i sumaré 1 ja que ho demana l'enunciat
 
         if (ss >= 60) {
-            ss = ss % 60;
+            ss %= 60;
             //si hi ha més de 60 segons, dividesc per 60 i agafaré el residu,
             // per exemple, si pos un 67, dividire per 60
             // i el residu serà sempre un segon valid (en aquest cas, 7)
-
-            mm = mm + 1; //també afegiré un minut si el valor es més de 60
+            mm += 1; //també afegiré un minut si el valor es més de 60
 
         }
         if (mm >= 60) {
-            mm = mm % 60;
-            hh = hh + 1;
+            mm %= 60;
+            hh += 1;
             // mateixa llògica que amb els segons, i sumaré una hora
         }
         if (hh >= 24) {
-            hh = hh % 24;
+            hh %= 24;
             //si hi ha més de 24 hores, dividesc per 24 i agafaré el residu,
             // per exemple, si pos un 32, dividire per 24
             // i el residu serà sempre una hora correcta (en aquest cas, 8)
