@@ -89,6 +89,39 @@ public class Ud3ActEx1MarcMas {
                 switch (orientacio) {
                     case 1:
                         for (int i = altura; i > 0; i--) { //bucle 1 per definir la quantiat de pixels verticals
+                            if (grafics == 2) {
+                                switch (i) {
+                                    case 1:
+                                        rellenador = '.';
+                                        break;
+                                    case 2:
+                                        rellenador = ':';
+                                        break;
+                                    case 3:
+                                        rellenador = '-';
+                                        break;
+                                    case 4:
+                                        rellenador = '=';
+                                        break;
+                                    case 5:
+                                        rellenador = '+';
+                                        break;
+                                    case 6:
+                                        rellenador = '*';
+                                        break;
+                                    case 7:
+                                        rellenador = '#';
+                                        break;
+                                    case 8:
+                                        rellenador = '%';
+                                        break;
+                                    case 9:
+                                        rellenador = '@';
+                                        break;
+                                    default:
+                                        rellenador = '*';
+                                }
+                            }
                             for (int a = i; a > 0; a--) { // bucle 2 per la horizontal, imprimeix en linea i agafa el valor del bucle anterior.
                                 // per exemple, si tenim i = 4, en pinta 4, despres printa el bot de linea, se li resta 1 a "i", i torna a començar fins a 0
                                 // tendrem i = 3, en pinta 3, després bot de linea, i aixi succesivament
@@ -99,6 +132,39 @@ public class Ud3ActEx1MarcMas {
                         break;
                     case 2:
                         for (int i = 0; i < altura; i++) { //bucle 1 per definir la quantiat de pixels verticals
+                            if (grafics == 2) {
+                                switch (i) {
+                                    case 1:
+                                        rellenador = '.';
+                                        break;
+                                    case 2:
+                                        rellenador = ':';
+                                        break;
+                                    case 3:
+                                        rellenador = '-';
+                                        break;
+                                    case 4:
+                                        rellenador = '=';
+                                        break;
+                                    case 5:
+                                        rellenador = '+';
+                                        break;
+                                    case 6:
+                                        rellenador = '*';
+                                        break;
+                                    case 7:
+                                        rellenador = '#';
+                                        break;
+                                    case 8:
+                                        rellenador = '%';
+                                        break;
+                                    case 9:
+                                        rellenador = '@';
+                                        break;
+                                    default:
+                                        rellenador = '*';
+                                }
+                            }
                             for (int a = i; a > 0; a--) { // bucle 2 per la horizontal, imprimeix en linea i agafa el valor del bucle anterior.
                                 // per exemple, si tenim i = 4, en pinta 4, despres printa el bot de linea, se li resta 1 a "i", i torna a començar fins a 0
                                 // tendrem i = 3, en pinta 3, després bot de linea, i aixi succesivament
@@ -109,6 +175,39 @@ public class Ud3ActEx1MarcMas {
                         break;
                     case 3:
                         for (int i = 0; i < altura; i++) { // bucle per iterar quantes vegades verticals necessitem
+                            if (grafics == 2) {
+                                switch (i) {
+                                    case 1:
+                                        rellenador = '.';
+                                        break;
+                                    case 2:
+                                        rellenador = ':';
+                                        break;
+                                    case 3:
+                                        rellenador = '-';
+                                        break;
+                                    case 4:
+                                        rellenador = '=';
+                                        break;
+                                    case 5:
+                                        rellenador = '+';
+                                        break;
+                                    case 6:
+                                        rellenador = '*';
+                                        break;
+                                    case 7:
+                                        rellenador = '#';
+                                        break;
+                                    case 8:
+                                        rellenador = '%';
+                                        break;
+                                    case 9:
+                                        rellenador = '@';
+                                        break;
+                                    default:
+                                        rellenador = '*';
+                                }
+                            }
                             buits = i; //la variable de buits sera la variable "i" cada vegada
                             caracters = altura - i; //la variable de caracters sera l'altura - 1 (ja que i va pujant i altura no canvia)
                             //com funciona: si tenim la primera linea, tenim "10" l'altura ara mateix es 10, i volem fer 9 caracters i un buit
@@ -129,6 +228,39 @@ public class Ud3ActEx1MarcMas {
                         break;
                     case 4:
                         for (int i = altura; i > 0; i--) { // bucle per iterar quantes vegades verticals necessitem
+                            if (grafics == 2) {
+                                switch (i) {
+                                    case 1:
+                                        rellenador = '.';
+                                        break;
+                                    case 2:
+                                        rellenador = ':';
+                                        break;
+                                    case 3:
+                                        rellenador = '-';
+                                        break;
+                                    case 4:
+                                        rellenador = '=';
+                                        break;
+                                    case 5:
+                                        rellenador = '+';
+                                        break;
+                                    case 6:
+                                        rellenador = '*';
+                                        break;
+                                    case 7:
+                                        rellenador = '#';
+                                        break;
+                                    case 8:
+                                        rellenador = '%';
+                                        break;
+                                    case 9:
+                                        rellenador = '@';
+                                        break;
+                                    default:
+                                        rellenador = '*';
+                                }
+                            }
                             buits = i - 1; //la variable de buits sera la variable "i" cada vegada
                             caracters = altura - i + 1; //la variable de caracters sera l'altura - i +1
                             //com funciona: si tenim la primera linea, tenim "10" l'altura ara mateix es 10, i volem fer 9 buits i una estrella
