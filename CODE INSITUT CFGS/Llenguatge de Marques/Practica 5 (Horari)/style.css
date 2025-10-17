@@ -13,13 +13,18 @@ th {
     width: 15vw;
     transition: all 0.2s ease-in-out;
     position: relative;
+    height: 9vh;
 }
 
 tr,
 th {
-    background-color: gray;
-    border-color: gray;
+    background-color: lightgray;
+    border-color: black;
     border-style: solid 1px;
+}
+
+.pati2 {
+    height: 1vh;
 }
 
 td:hover {
@@ -33,14 +38,15 @@ td:hover {
     justify-content: space-around;
     border-style: none;
 }
-td.hora:hover{
+
+td.hora:hover {
     transform: scale(1);
     box-shadow: 0 0 0;
 }
 
 td.pati {
     border-style: dashed;
-    background-color: gray;
+    background-color: lightgreen;
 }
 
 td.pati:hover {
@@ -76,5 +82,5 @@ td.pati:hover {
 }
 
 .entorns {
-    background-color: blue;
+    background-color: orange;
 }
