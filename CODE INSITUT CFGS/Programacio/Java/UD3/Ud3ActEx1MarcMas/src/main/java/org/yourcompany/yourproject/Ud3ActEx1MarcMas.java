@@ -68,59 +68,38 @@ public class Ud3ActEx1MarcMas {
         Integer caracters = 0;
         Integer amplada = 0;
         switch (grafics) {
-            case 1: // asteriscs
+            case 1 -> // asteriscs
                 rellenador = '*';
-                break;
-            case 2: //degradat
+            case 2 -> //degradat
                 rellenador = ' ';
-                break;
-            case 3: //personalitzat
+            case 3 -> {
+                //personalitzat
                 System.out.println("Quin caracter vols emprar?");
                 rellenador = s.next().charAt(0);
-                break;
-            case 4: //contorn (TODO)
+            }
+            case 4 -> //contorn (TODO)
                 rellenador = '*';
-                break;
-            default:
-                System.out.println("Input no valid");
+            default -> System.out.println("Input no valid");
         }
         switch (tipusTriangle) {
-            case 1: //rectangle amb 4 tipus
+            case 1 -> {
+                //rectangle amb 4 tipus
                 switch (orientacio) {
-                    case 1:
+                    case 1 -> {
                         for (int i = altura; i > 0; i--) { //bucle 1 per definir la quantiat de pixels verticals
                             if (grafics == 2) {
-                                switch (i) {
-                                    case 1:
-                                        rellenador = '.';
-                                        break;
-                                    case 2:
-                                        rellenador = ':';
-                                        break;
-                                    case 3:
-                                        rellenador = '-';
-                                        break;
-                                    case 4:
-                                        rellenador = '=';
-                                        break;
-                                    case 5:
-                                        rellenador = '+';
-                                        break;
-                                    case 6:
-                                        rellenador = '*';
-                                        break;
-                                    case 7:
-                                        rellenador = '#';
-                                        break;
-                                    case 8:
-                                        rellenador = '%';
-                                        break;
-                                    case 9:
-                                        rellenador = '@';
-                                        break;
-                                    default:
-                                        rellenador = '*';
-                                }
+                                rellenador = switch (i) {
+                                    case 1 -> '.';
+                                    case 2 -> ':';
+                                    case 3 -> '-';
+                                    case 4 -> '=';
+                                    case 5 -> '+';
+                                    case 6 -> '*';
+                                    case 7 -> '#';
+                                    case 8 -> '%';
+                                    case 9 -> '@';
+                                    default -> '*';
+                                };
                             }
                             for (int a = i; a > 0; a--) { // bucle 2 per la horizontal, imprimeix en linea i agafa el valor del bucle anterior.
                                 // per exemple, si tenim i = 4, en pinta 4, despres printa el bot de linea, se li resta 1 a "i", i torna a començar fins a 0
@@ -129,41 +108,22 @@ public class Ud3ActEx1MarcMas {
                             }
                             System.out.println("");
                         }
-                        break;
-                    case 2:
+                }
+                    case 2 -> {
                         for (int i = 0; i < altura; i++) { //bucle 1 per definir la quantiat de pixels verticals
                             if (grafics == 2) {
-                                switch (i) {
-                                    case 1:
-                                        rellenador = '.';
-                                        break;
-                                    case 2:
-                                        rellenador = ':';
-                                        break;
-                                    case 3:
-                                        rellenador = '-';
-                                        break;
-                                    case 4:
-                                        rellenador = '=';
-                                        break;
-                                    case 5:
-                                        rellenador = '+';
-                                        break;
-                                    case 6:
-                                        rellenador = '*';
-                                        break;
-                                    case 7:
-                                        rellenador = '#';
-                                        break;
-                                    case 8:
-                                        rellenador = '%';
-                                        break;
-                                    case 9:
-                                        rellenador = '@';
-                                        break;
-                                    default:
-                                        rellenador = '*';
-                                }
+                                rellenador = switch (i) {
+                                    case 1 -> '.';
+                                    case 2 -> ':';
+                                    case 3 -> '-';
+                                    case 4 -> '=';
+                                    case 5 -> '+';
+                                    case 6 -> '*';
+                                    case 7 -> '#';
+                                    case 8 -> '%';
+                                    case 9 -> '@';
+                                    default -> '*';
+                                };
                             }
                             for (int a = i; a > 0; a--) { // bucle 2 per la horizontal, imprimeix en linea i agafa el valor del bucle anterior.
                                 // per exemple, si tenim i = 4, en pinta 4, despres printa el bot de linea, se li resta 1 a "i", i torna a començar fins a 0
@@ -172,41 +132,22 @@ public class Ud3ActEx1MarcMas {
                             }
                             System.out.println("");
                         }
-                        break;
-                    case 3:
+                }
+                    case 3 -> {
                         for (int i = 0; i < altura; i++) { // bucle per iterar quantes vegades verticals necessitem
                             if (grafics == 2) {
-                                switch (i) {
-                                    case 1:
-                                        rellenador = '.';
-                                        break;
-                                    case 2:
-                                        rellenador = ':';
-                                        break;
-                                    case 3:
-                                        rellenador = '-';
-                                        break;
-                                    case 4:
-                                        rellenador = '=';
-                                        break;
-                                    case 5:
-                                        rellenador = '+';
-                                        break;
-                                    case 6:
-                                        rellenador = '*';
-                                        break;
-                                    case 7:
-                                        rellenador = '#';
-                                        break;
-                                    case 8:
-                                        rellenador = '%';
-                                        break;
-                                    case 9:
-                                        rellenador = '@';
-                                        break;
-                                    default:
-                                        rellenador = '*';
-                                }
+                                rellenador = switch (i) {
+                                    case 1 -> '.';
+                                    case 2 -> ':';
+                                    case 3 -> '-';
+                                    case 4 -> '=';
+                                    case 5 -> '+';
+                                    case 6 -> '*';
+                                    case 7 -> '#';
+                                    case 8 -> '%';
+                                    case 9 -> '@';
+                                    default -> '*';
+                                };
                             }
                             buits = i; //la variable de buits sera la variable "i" cada vegada
                             caracters = altura - i; //la variable de caracters sera l'altura - 1 (ja que i va pujant i altura no canvia)
@@ -225,41 +166,22 @@ public class Ud3ActEx1MarcMas {
                             System.out.println("");
 
                         }
-                        break;
-                    case 4:
+                }
+                    case 4 -> {
                         for (int i = altura; i > 0; i--) { // bucle per iterar quantes vegades verticals necessitem
                             if (grafics == 2) {
-                                switch (i) {
-                                    case 1:
-                                        rellenador = '.';
-                                        break;
-                                    case 2:
-                                        rellenador = ':';
-                                        break;
-                                    case 3:
-                                        rellenador = '-';
-                                        break;
-                                    case 4:
-                                        rellenador = '=';
-                                        break;
-                                    case 5:
-                                        rellenador = '+';
-                                        break;
-                                    case 6:
-                                        rellenador = '*';
-                                        break;
-                                    case 7:
-                                        rellenador = '#';
-                                        break;
-                                    case 8:
-                                        rellenador = '%';
-                                        break;
-                                    case 9:
-                                        rellenador = '@';
-                                        break;
-                                    default:
-                                        rellenador = '*';
-                                }
+                                rellenador = switch (i) {
+                                    case 1 -> '.';
+                                    case 2 -> ':';
+                                    case 3 -> '-';
+                                    case 4 -> '=';
+                                    case 5 -> '+';
+                                    case 6 -> '*';
+                                    case 7 -> '#';
+                                    case 8 -> '%';
+                                    case 9 -> '@';
+                                    default -> '*';
+                                };
                             }
                             buits = i - 1; //la variable de buits sera la variable "i" cada vegada
                             caracters = altura - i + 1; //la variable de caracters sera l'altura - i +1
@@ -278,12 +200,11 @@ public class Ud3ActEx1MarcMas {
                             System.out.println("");
 
                         }
-                        break;
-                    default:
-                        System.out.println("Input no valid!");
                 }
-                break;
-            case 2:
+                    default -> System.out.println("Input no valid!");
+                }
+            }
+            case 2 -> {
                 for (int i = 0; i < altura; i++) { // bucle per iterar quantes vegades verticals necessitem
                     amplada = i;
                     buits = i; //la variable de buits sera la variable "i" cada vegada
@@ -303,11 +224,10 @@ public class Ud3ActEx1MarcMas {
                     System.out.println("");
 
                 }
-                break;
-            case 3:
-                break;
-            default:
-                System.out.println("Input no valid!");
+            }
+            case 3 -> {
+            }
+            default -> System.out.println("Input no valid!");
         }
 
     }
