@@ -71,8 +71,8 @@ public class Ud3ActEx1MarcMas {
             case 1: // asteriscs
                 rellenador = '*';
                 break;
-            case 2: //degradat (TODO)
-                rellenador = '*';
+            case 2: //degradat
+                rellenador = ' ';
                 break;
             case 3: //personalitzat
                 System.out.println("Quin caracter vols emprar?");
@@ -85,7 +85,7 @@ public class Ud3ActEx1MarcMas {
                 System.out.println("Input no valid");
         }
         switch (tipusTriangle) {
-            case 1:
+            case 1: //rectangle amb 4 tipus
                 switch (orientacio) {
                     case 1:
                         for (int i = altura; i > 0; i--) { //bucle 1 per definir la quantiat de pixels verticals
