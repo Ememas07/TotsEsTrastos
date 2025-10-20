@@ -52,11 +52,8 @@ public class Ud3ActEx1MarcMas {
         Scanner s = new Scanner(System.in);
         System.out.println("Programa per imprimir un triangle rectangle amb altura per pantalla");
         System.out.println("Preparacio del triangle");
-        System.out.println("Quina orientacio vols?");
-        System.out.println("1 per punt cap abaix, 2 per punta cap amunt, 3 per part plana a la dreta, 4 per punta cap amunt i part plana a la dreta");
-        Byte orientacio = s.nextByte();
         System.out.println("Tipus de triangle:");
-        System.out.println("1 per triangle rectangle, 2 per triangle simetric cap avall, 3 per triangle simetric cap abaix");
+        System.out.println("1 per triangle rectangle, 2 per triangle simetric cap avall, 3 per triangle simetric cap amunt");
         Byte tipusTriangle = s.nextByte();
         System.out.println("Variants Grafiques");
         System.out.println("1 per emprar asteriscs, 2 per emprar un degradat, 3 per emprar un caracter personalitzat, 4 per nomes el contorn");
@@ -79,26 +76,41 @@ public class Ud3ActEx1MarcMas {
             }
             case 4 -> //contorn (TODO)
                 rellenador = '*';
-            default -> System.out.println("Input no valid");
+            default ->
+                System.out.println("Input no valid");
         }
         switch (tipusTriangle) {
             case 1 -> {
+                System.out.println("Quina orientacio vols?");
+                System.out.println("1 per punt cap abaix, 2 per punta cap amunt, 3 per part plana a la dreta, 4 per punta cap amunt i part plana a la dreta");
+                Byte orientacio = s.nextByte();
                 //rectangle amb 4 tipus
                 switch (orientacio) {
                     case 1 -> {
+                        // triangle rectangle estandar
                         for (int i = altura; i > 0; i--) { //bucle 1 per definir la quantiat de pixels verticals
                             if (grafics == 2) {
                                 rellenador = switch (i) {
-                                    case 1 -> '.';
-                                    case 2 -> ':';
-                                    case 3 -> '-';
-                                    case 4 -> '=';
-                                    case 5 -> '+';
-                                    case 6 -> '*';
-                                    case 7 -> '#';
-                                    case 8 -> '%';
-                                    case 9 -> '@';
-                                    default -> '*';
+                                    case 1 ->
+                                        '.';
+                                    case 2 ->
+                                        ':';
+                                    case 3 ->
+                                        '-';
+                                    case 4 ->
+                                        '=';
+                                    case 5 ->
+                                        '+';
+                                    case 6 ->
+                                        '*';
+                                    case 7 ->
+                                        '#';
+                                    case 8 ->
+                                        '%';
+                                    case 9 ->
+                                        '@';
+                                    default ->
+                                        '*';
                                 };
                             }
                             for (int a = i; a > 0; a--) { // bucle 2 per la horizontal, imprimeix en linea i agafa el valor del bucle anterior.
@@ -108,21 +120,32 @@ public class Ud3ActEx1MarcMas {
                             }
                             System.out.println("");
                         }
-                }
+                    }
                     case 2 -> {
+                        // triangle rectangle punta cap avall
                         for (int i = 0; i < altura; i++) { //bucle 1 per definir la quantiat de pixels verticals
                             if (grafics == 2) {
                                 rellenador = switch (i) {
-                                    case 1 -> '.';
-                                    case 2 -> ':';
-                                    case 3 -> '-';
-                                    case 4 -> '=';
-                                    case 5 -> '+';
-                                    case 6 -> '*';
-                                    case 7 -> '#';
-                                    case 8 -> '%';
-                                    case 9 -> '@';
-                                    default -> '*';
+                                    case 1 ->
+                                        '.';
+                                    case 2 ->
+                                        ':';
+                                    case 3 ->
+                                        '-';
+                                    case 4 ->
+                                        '=';
+                                    case 5 ->
+                                        '+';
+                                    case 6 ->
+                                        '*';
+                                    case 7 ->
+                                        '#';
+                                    case 8 ->
+                                        '%';
+                                    case 9 ->
+                                        '@';
+                                    default ->
+                                        '*';
                                 };
                             }
                             for (int a = i; a > 0; a--) { // bucle 2 per la horizontal, imprimeix en linea i agafa el valor del bucle anterior.
@@ -132,21 +155,32 @@ public class Ud3ActEx1MarcMas {
                             }
                             System.out.println("");
                         }
-                }
+                    }
                     case 3 -> {
+                        // triangle rectangle fixat a la dreta
                         for (int i = 0; i < altura; i++) { // bucle per iterar quantes vegades verticals necessitem
                             if (grafics == 2) {
                                 rellenador = switch (i) {
-                                    case 1 -> '.';
-                                    case 2 -> ':';
-                                    case 3 -> '-';
-                                    case 4 -> '=';
-                                    case 5 -> '+';
-                                    case 6 -> '*';
-                                    case 7 -> '#';
-                                    case 8 -> '%';
-                                    case 9 -> '@';
-                                    default -> '*';
+                                    case 1 ->
+                                        '.';
+                                    case 2 ->
+                                        ':';
+                                    case 3 ->
+                                        '-';
+                                    case 4 ->
+                                        '=';
+                                    case 5 ->
+                                        '+';
+                                    case 6 ->
+                                        '*';
+                                    case 7 ->
+                                        '#';
+                                    case 8 ->
+                                        '%';
+                                    case 9 ->
+                                        '@';
+                                    default ->
+                                        '*';
                                 };
                             }
                             buits = i; //la variable de buits sera la variable "i" cada vegada
@@ -166,21 +200,32 @@ public class Ud3ActEx1MarcMas {
                             System.out.println("");
 
                         }
-                }
+                    }
                     case 4 -> {
+                        // triangle rectangle fixat a la dreta i punta cap avall
                         for (int i = altura; i > 0; i--) { // bucle per iterar quantes vegades verticals necessitem
                             if (grafics == 2) {
                                 rellenador = switch (i) {
-                                    case 1 -> '.';
-                                    case 2 -> ':';
-                                    case 3 -> '-';
-                                    case 4 -> '=';
-                                    case 5 -> '+';
-                                    case 6 -> '*';
-                                    case 7 -> '#';
-                                    case 8 -> '%';
-                                    case 9 -> '@';
-                                    default -> '*';
+                                    case 1 ->
+                                        '.';
+                                    case 2 ->
+                                        ':';
+                                    case 3 ->
+                                        '-';
+                                    case 4 ->
+                                        '=';
+                                    case 5 ->
+                                        '+';
+                                    case 6 ->
+                                        '*';
+                                    case 7 ->
+                                        '#';
+                                    case 8 ->
+                                        '%';
+                                    case 9 ->
+                                        '@';
+                                    default ->
+                                        '*';
                                 };
                             }
                             buits = i - 1; //la variable de buits sera la variable "i" cada vegada
@@ -200,34 +245,58 @@ public class Ud3ActEx1MarcMas {
                             System.out.println("");
 
                         }
-                }
-                    default -> System.out.println("Input no valid!");
+                    }
+                    default ->
+                        System.out.println("Input no valid!");
                 }
             }
             case 2 -> {
-                for (int i = 0; i < altura; i++) { // bucle per iterar quantes vegades verticals necessitem
-                    amplada = i;
-                    buits = i; //la variable de buits sera la variable "i" cada vegada
-                    caracters = altura - i; //la variable de caracters sera l'altura - 1 (ja que i va pujant i altura no canvia)
-                    //com funciona: si tenim la primera linea, tenim "10" l'altura ara mateix es 10, i volem fer 9 caracters i un buit
-                    //per lo tant, volem que les variables per la  linea siguin "9 (caracters)" i "1 (buit)"
-                    //9 caracters = l'altura menys i, ja que altura no canvia i "i" ja pujant
-                    //1 buit = la variable i, ja que comença a 0 i va pujant
-                    //un pic tenim les variables, feim un bucle que imprimirà, o un espai (per cada buit) o el caracter que volguem
+                //triangle simetric cap abaix
+                // triangle rectangle estandar
+                for (int i = altura; i > 0; i--) { //bucle 1 per definir la quantiat de pixels verticals
+                    if (grafics == 2) {
+                        rellenador = switch (i) {
+                            case 1 ->
+                                '.';
+                            case 2 ->
+                                ':';
+                            case 3 ->
+                                '-';
+                            case 4 ->
+                                '=';
+                            case 5 ->
+                                '+';
+                            case 6 ->
+                                '*';
+                            case 7 ->
+                                '#';
+                            case 8 ->
+                                '%';
+                            case 9 ->
+                                '@';
+                            default ->
+                                '*';
+                        };
+                    }
+                    // for (int a = i; a > 0; a--) { // bucle 2 per la horizontal, imprimeix en linea i agafa el valor del bucle anterior.
+                    //     // per exemple, si tenim i = 4, en pinta 4, despres printa el bot de linea, se li resta 1 a "i", i torna a començar fins a 0
+                    //     // tendrem i = 3, en pinta 3, després bot de linea, i aixi succesivament
+                    //     System.out.print(i + " " + a + " ");
+                    // }
+                    Integer mitat = i / 2;
 
-                    for (; buits > 0; buits--) {
-                        System.out.print(" ");
-                    }
-                    for (; caracters > 0; caracters--) {
-                        System.out.print(rellenador);
-                    }
+                    // for (int a = i / 2; a > 0; a--) {
+                    //     // System.out.print(i + " " + a + " ");
+                    // }
                     System.out.println("");
-
                 }
             }
+
             case 3 -> {
+                //triangle simetric cap amunt
             }
-            default -> System.out.println("Input no valid!");
+            default ->
+                System.out.println("Input no valid!");
         }
 
     }
