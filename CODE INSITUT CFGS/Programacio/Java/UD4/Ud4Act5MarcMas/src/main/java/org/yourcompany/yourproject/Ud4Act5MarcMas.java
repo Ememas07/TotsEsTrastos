@@ -19,12 +19,16 @@ import java.util.Scanner;
 public class Ud4Act5MarcMas {
 
     private static boolean esPrimer(int n) {
-        for (int i = 2; i < n; i++) { //començam dividint entre dos i anirem sumant
-            if (n % i == 0) { //dividim N entre I, que començara a 2, si la divisio dona 0 com a residu, o sigui, el nombre SI es divisible, retornam false
-                return false;
+        if (n > 1) {
+            for (int i = 2; i < n; i++) { //començam dividint entre dos i anirem sumant
+                if (n % i == 0) { //dividim N entre I, que començara a 2, si la divisio dona 0 com a residu, o sigui, el nombre SI es divisible, retornam false
+                    return false;
+                }
             }
+            return true; //si el bucle anterior no bota mai, no es divisible entre cap nombre aixi que es primer   
+        } else {
+            return false;
         }
-        return true; //si el bucle anterior no bota mai, no es divisible entre cap nombre aixi que es primer
     }
 
     public static void main(String[] args) {
@@ -32,7 +36,7 @@ public class Ud4Act5MarcMas {
         Scanner s = new Scanner(System.in); //iniciam scanner
         System.out.println("Quin nombre vol comprovar?"); // demanam el nombre
         Integer n = s.nextInt(); //assignam
-        System.out.println("El nombre '"+n+"' es primer? "+esPrimer(n));
+        System.out.println("El nombre '" + n + "' es primer? " + esPrimer(n));
     }
 
 }

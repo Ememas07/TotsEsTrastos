@@ -63,7 +63,6 @@ public class Ud3ActEx1MarcMas {
         char rellenador = ' ';
         Integer buits = 0; //emprarem aquestes dues variables per saber quants de caracters hem d'imprimir de cada tipus (per els casos de alineació a la dreta)
         Integer caracters = 0;
-        Integer amplada = 0;
         switch (grafics) {
             case 1 -> // asteriscs
                 rellenador = '*';
@@ -112,13 +111,24 @@ public class Ud3ActEx1MarcMas {
                                     default ->
                                         '*';
                                 };
+                            } else if (grafics == 4) {
+                                for (int a = i; a > 0; a--) { //per pintar el contorn 
+                                    if (a == i || a == 1 || i == altura) { //si A == i (principi de linea) o A == 1 (final de linea) o i == altura (primera linea)
+                                        System.out.print(rellenador); //pintam
+                                    } else {
+                                        System.out.print(" "); //pintam espai
+                                    }
+                                }
+                                System.out.println("");
+                            } else {
+                                for (int a = i; a > 0; a--) { // bucle 2 per la horizontal, imprimeix en linea i agafa el valor del bucle anterior.
+                                    // per exemple, si tenim i = 4, en pinta 4, despres printa el bot de linea, se li resta 1 a "i", i torna a començar fins a 0
+                                    // tendrem i = 3, en pinta 3, després bot de linea, i aixi succesivament
+                                    System.out.print(rellenador);
+                                }
+                                System.out.println("");
+
                             }
-                            for (int a = i; a > 0; a--) { // bucle 2 per la horizontal, imprimeix en linea i agafa el valor del bucle anterior.
-                                // per exemple, si tenim i = 4, en pinta 4, despres printa el bot de linea, se li resta 1 a "i", i torna a començar fins a 0
-                                // tendrem i = 3, en pinta 3, després bot de linea, i aixi succesivament
-                                System.out.print(rellenador);
-                            }
-                            System.out.println("");
                         }
                     }
                     case 2 -> {
@@ -147,13 +157,23 @@ public class Ud3ActEx1MarcMas {
                                     default ->
                                         '*';
                                 };
+                            } else if (grafics == 4) {
+                                for (int a = i; a > 0; a--) { //per pintar el contorn 
+                                    if (a == i || a == 1 || i == altura) { //si A == i (principi de linea) o A == 1 (final de linea) o i == altura (primera linea)
+                                        System.out.print(rellenador); //pintam
+                                    } else {
+                                        System.out.print(" "); //pintam espai
+                                    }
+                                }
+                                System.out.println("");
+                            } else {
+                                for (int a = i; a > 0; a--) { // bucle 2 per la horizontal, imprimeix en linea i agafa el valor del bucle anterior.
+                                    // per exemple, si tenim i = 4, en pinta 4, despres printa el bot de linea, se li resta 1 a "i", i torna a començar fins a 0
+                                    // tendrem i = 3, en pinta 3, després bot de linea, i aixi succesivament
+                                    System.out.print(rellenador);
+                                }
+                                System.out.println("");
                             }
-                            for (int a = i; a > 0; a--) { // bucle 2 per la horizontal, imprimeix en linea i agafa el valor del bucle anterior.
-                                // per exemple, si tenim i = 4, en pinta 4, despres printa el bot de linea, se li resta 1 a "i", i torna a començar fins a 0
-                                // tendrem i = 3, en pinta 3, després bot de linea, i aixi succesivament
-                                System.out.print(rellenador);
-                            }
-                            System.out.println("");
                         }
                     }
                     case 3 -> {
@@ -182,22 +202,46 @@ public class Ud3ActEx1MarcMas {
                                     default ->
                                         '*';
                                 };
-                            }
-                            buits = i; //la variable de buits sera la variable "i" cada vegada
-                            caracters = altura - i; //la variable de caracters sera l'altura - 1 (ja que i va pujant i altura no canvia)
-                            //com funciona: si tenim la primera linea, tenim "10" l'altura ara mateix es 10, i volem fer 9 caracters i un buit
-                            //per lo tant, volem que les variables per la  linea siguin "9 (caracters)" i "1 (buit)"
-                            //9 caracters = l'altura menys i, ja que altura no canvia i "i" ja pujant
-                            //1 buit = la variable i, ja que comença a 0 i va pujant
-                            //un pic tenim les variables, feim un bucle que imprimirà, o un espai (per cada buit) o el caracter que volguem
-
-                            for (; buits > 0; buits--) {
-                                System.out.print(" ");
-                            }
-                            for (; caracters > 0; caracters--) {
+                            } else if (grafics == 4) {
+                                buits = i; //la variable de buits sera la variable "i" cada vegada
+                                caracters = altura - i; //la variable de caracters sera l'altura - 1 (ja que i va pujant i altura no canvia)
+                                //com funciona: si tenim la primera linea, tenim "10" l'altura ara mateix es 10, i volem fer 9 caracters i un buit
+                                //per lo tant, volem que les variables per la  linea siguin "9 (caracters)" i "1 (buit)"
+                                //9 caracters = l'altura menys i, ja que altura no canvia i "i" ja pujant
+                                //1 buit = la variable i, ja que comença a 0 i va pujant
+                                //un pic tenim les variables, feim un bucle que imprimirà, o un espai (per cada buit) o el caracter que volguem
+                                for (; buits > 0; buits--) {
+                                    System.out.print(" ");
+                                    if (buits == 1 || i == 0) {
+                                        System.out.print(rellenador);
+                                    }
+                                }
+                                for (; caracters > 1; caracters--) {
+                                    if (i == 0) {
+                                        System.out.print(rellenador);
+                                    } else {
+                                        System.out.print(" ");
+                                    }
+                                }
                                 System.out.print(rellenador);
+                                System.out.println("");
+                            } else {
+                                buits = i; //la variable de buits sera la variable "i" cada vegada
+                                caracters = altura - i; //la variable de caracters sera l'altura - 1 (ja que i va pujant i altura no canvia)
+                                //com funciona: si tenim la primera linea, tenim "10" l'altura ara mateix es 10, i volem fer 9 caracters i un buit
+                                //per lo tant, volem que les variables per la  linea siguin "9 (caracters)" i "1 (buit)"
+                                //9 caracters = l'altura menys i, ja que altura no canvia i "i" ja pujant
+                                //1 buit = la variable i, ja que comença a 0 i va pujant
+                                //un pic tenim les variables, feim un bucle que imprimirà, o un espai (per cada buit) o el caracter que volguem
+
+                                for (; buits > 0; buits--) {
+                                    System.out.print(" ");
+                                }
+                                for (; caracters > 0; caracters--) {
+                                    System.out.print(rellenador);
+                                }
+                                System.out.println("");
                             }
-                            System.out.println("");
 
                         }
                     }
@@ -227,33 +271,58 @@ public class Ud3ActEx1MarcMas {
                                     default ->
                                         '*';
                                 };
-                            }
-                            buits = i - 1; //la variable de buits sera la variable "i" cada vegada
-                            caracters = altura - i + 1; //la variable de caracters sera l'altura - i +1
-                            //com funciona: si tenim la primera linea, tenim "10" l'altura ara mateix es 10, i volem fer 9 buits i una estrella
-                            //per lo tant, volem que les variables siguin "9" i "1"
-                            //9 = l'altura menys 1, pero més envant volem que vagi baixant, aixi que agafarem "i" (ja que i anira decrementant)
-                            //1 = si tenim, per exemple, 10 d'altura, i restam i (començaria a 0), però volem que sigui 1, aixi que sumarem 1
-                            //un pic tenim les variables, feim un bucle que imprimirà, o un espai (per cada buit) o el caracter que volguem
-
-                            for (; buits > 0; buits--) {
-                                System.out.print(" ");
-                            }
-                            for (; caracters > 0; caracters--) {
+                            } else if (grafics == 4) {
+                                buits = i -1; //la variable de buits sera la variable "i" cada vegada
+                                caracters = altura - i +1; //la variable de caracters sera l'altura - 1 (ja que i va pujant i altura no canvia)
+                                //com funciona: si tenim la primera linea, tenim "10" l'altura ara mateix es 10, i volem fer 9 caracters i un buit
+                                //per lo tant, volem que les variables per la  linea siguin "9 (caracters)" i "1 (buit)"
+                                //9 caracters = l'altura menys i, ja que altura no canvia i "i" ja pujant
+                                //1 buit = la variable i, ja que comença a 0 i va pujant
+                                //un pic tenim les variables, feim un bucle que imprimirà, o un espai (per cada buit) o el caracter que volguem
+                                for (; buits > 0; buits--) {
+                                    System.out.print(" ");
+                                    if (buits == 1 || i == 1) {
+                                        System.out.print(rellenador);
+                                    }
+                                }
+                                for (; caracters > 1; caracters--) {
+                                    if (i == 1) {
+                                        System.out.print(rellenador);
+                                    } else {
+                                        System.out.print(" ");
+                                    }
+                                }
                                 System.out.print(rellenador);
-                            }
-                            System.out.println("");
+                                System.out.println("");
+                            } else {
+                                buits = i - 1; //la variable de buits sera la variable "i" cada vegada
+                                caracters = altura - i + 1; //la variable de caracters sera l'altura - i +1
+                                //com funciona: si tenim la primera linea, tenim "10" l'altura ara mateix es 10, i volem fer 9 buits i una estrella
+                                //per lo tant, volem que les variables siguin "9" i "1"
+                                //9 = l'altura menys 1, pero més envant volem que vagi baixant, aixi que agafarem "i" (ja que i anira decrementant)
+                                //1 = si tenim, per exemple, 10 d'altura, i restam i (començaria a 0), però volem que sigui 1, aixi que sumarem 1
+                                //un pic tenim les variables, feim un bucle que imprimirà, o un espai (per cada buit) o el caracter que volguem
 
+                                for (; buits > 0; buits--) {
+                                    System.out.print(" ");
+                                }
+                                for (; caracters > 0; caracters--) {
+                                    System.out.print(rellenador);
+                                }
+                                System.out.println("");
+
+                            }
                         }
                     }
+
                     default ->
                         System.out.println("Input no valid!");
                 }
             }
             case 2 -> {
                 //triangle simetric cap abaix
-                // triangle rectangle estandar
-                for (int i = altura; i > 0; i--) { //bucle 1 per definir la quantiat de pixels verticals
+                Integer mitat = altura / 2;
+                for (int i = altura; i > 0; i -= 2) { //bucle 1 per definir la quantiat de pixels verticals
                     if (grafics == 2) {
                         rellenador = switch (i) {
                             case 1 ->
@@ -278,22 +347,72 @@ public class Ud3ActEx1MarcMas {
                                 '*';
                         };
                     }
-                    // for (int a = i; a > 0; a--) { // bucle 2 per la horizontal, imprimeix en linea i agafa el valor del bucle anterior.
-                    //     // per exemple, si tenim i = 4, en pinta 4, despres printa el bot de linea, se li resta 1 a "i", i torna a començar fins a 0
-                    //     // tendrem i = 3, en pinta 3, després bot de linea, i aixi succesivament
-                    //     System.out.print(i + " " + a + " ");
-                    // }
-                    Integer mitat = i / 2;
+                    for (int b = (altura / 2 - mitat); b > 0; b--) {
+                        // empram l'altura / 2 per sabre quin es el total de asteriscs que hem de pintar a cada banda a la primera fila
+                        // ja que pintare en format, per exemple, 5 i 5 enlloc de nomes 10
+                        // calcul la diferencia entre el principi i a quina altura esteim
+                        // per exemple, si tenim 10, començara amb 5 i 5, i pintarem 10 caracters (el bucle les pinta de dos en dos)
+                        // despres restarem 1, i tendrem 4 i 4, el calcul de "altura / 2 - mitat" sera 5 -4 = 1
+                        // pintarem 1 espai, i despres pintarem 4 * 2 (8) asteriscs, i aixi quedara el triangle
 
-                    // for (int a = i / 2; a > 0; a--) {
-                    //     // System.out.print(i + " " + a + " ");
-                    // }
+                        System.out.print(" ");
+                    }
+                    for (int a = mitat; a > 0; a--) {
+                        System.out.print(rellenador);
+                        System.out.print(rellenador);
+                    }
                     System.out.println("");
+                    mitat -= 1;
                 }
             }
 
             case 3 -> {
                 //triangle simetric cap amunt
+                Integer mitat = altura / 2;
+                for (int i = altura; i > 0; i -= 2) { //bucle 1 per definir la quantiat de pixels verticals
+                    if (grafics == 2) {
+                        rellenador = switch (i) {
+                            case 1 ->
+                                '.';
+                            case 2 ->
+                                ':';
+                            case 3 ->
+                                '-';
+                            case 4 ->
+                                '=';
+                            case 5 ->
+                                '+';
+                            case 6 ->
+                                '*';
+                            case 7 ->
+                                '#';
+                            case 8 ->
+                                '%';
+                            case 9 ->
+                                '@';
+                            default ->
+                                '*';
+                        };
+                    }
+                    for (int a = mitat; a > 0; a--) {
+                        System.out.print(" ");
+                    }
+                    for (int b = (altura / 2 - mitat); b > 0; b--) {
+                        // empram l'altura / 2 per sabre quin es el total de asteriscs que hem de pintar a cada banda a la primera fila
+                        // ja que pintare en format, per exemple, 5 i 5 enlloc de simplement emprar 10
+                        // calcul la diferencia entre el principi i a quina altura esteim
+                        // per exemple, si tenim 10, començara amb 5 i 5, i pintarem 10 caracters (el bucle les pinta de dos en dos)
+                        // despres restarem 1, i tendrem 4 i 4, el calcul de "altura / 2 - mitat" sera 5 -4 = 1
+                        // pintarem 1 espai, i despres pintarem 4 * 2 (8) asteriscs, i aixi quedara el triangle
+
+                        // la logica per el triangle cap amunt es igual, pero giram els asteriscs i els espais de bucle, es a dir,
+                        // ara el bucle "a" imprimeix espais i el bucle "b" imprimeix asteriscs
+                        System.out.print(rellenador);
+                        System.out.print(rellenador);
+                    }
+                    System.out.println("");
+                    mitat -= 1;
+                }
             }
             default ->
                 System.out.println("Input no valid!");
