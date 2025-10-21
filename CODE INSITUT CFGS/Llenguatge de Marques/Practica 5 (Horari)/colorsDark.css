@@ -3,11 +3,10 @@ tr,
 th {
     background-color: black;
     color: white;
-    border-color: lightgray;
 }
 
 .programacio {
-    background-color: darkred;
+    background-color: darkmagenta;
 }
 
 .marques {
