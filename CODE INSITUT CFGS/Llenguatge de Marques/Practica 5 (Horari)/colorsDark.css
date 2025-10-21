@@ -1,0 +1,43 @@
+html,
+tr,
+th {
+    background-color: black;
+    color: white;
+    border-color: lightgray;
+}
+
+.programacio {
+    background-color: darkred;
+}
+
+.marques {
+    background-color: darkblue;
+}
+
+.digitalitzacio {
+    background-color: darkcyan;
+
+}
+
+.bbdd {
+    background-color: brown;
+
+}
+
+.sistemes {
+    background-color: darkviolet;
+
+}
+
+.ipo {
+    background-color: darkolivegreen;
+
+}
+
+.entorns {
+    background-color: darkorange;
+}
+
+td.pati {
+    background-color: darkgoldenrod;
+}

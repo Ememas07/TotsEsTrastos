@@ -4,8 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleLight.css" id="theme">
     <title>Mas, Marc - E4X - Horari</title>
+    <script>
+        function canviarTema() {
+            const themeLink = document.getElementById('theme');
+            const temaActual = themeLink.getAttribute('href');
+            if (temaActual === 'styleLight.css') {
+                themeLink.setAttribute('href', 'styleDark.css');
+            } else {
+                themeLink.setAttribute('href', 'styleLight.css');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -134,6 +145,7 @@
             </td>
         </tr>
     </table>
+    <button onclick="canviarTema()">Canviar Tema</button>
 </body>
 
 </html>
