@@ -33,7 +33,7 @@ public class Ud4ActRecursivitatMarcMas {
     public static int potencia(int x, int y) {
         y--;
         if (y > 0) {
-            x *= potencia(x, y); 
+            x *= potencia(x, y);
         }
         return x;
     }
@@ -74,7 +74,9 @@ public class Ud4ActRecursivitatMarcMas {
         Integer y = s.nextInt();
         y = Math.abs(y);
         System.out.println("El resultat de la multiplicacio " + x + "*" + y + " es " + multiplicacio(x, y));
-        if (y > x) {
+        if (y == 0) {
+            System.out.println("No se pot dividir per 0!");
+        } else if (y > x) {
             System.out.println("El divisor introduit es mes gran que el dividend, aixi que el resultat de la divisio seria menor a 1");
         } else {
             System.out.println("El resultat de la divisio " + x + "/" + y + " es " + divisio(x, y));
