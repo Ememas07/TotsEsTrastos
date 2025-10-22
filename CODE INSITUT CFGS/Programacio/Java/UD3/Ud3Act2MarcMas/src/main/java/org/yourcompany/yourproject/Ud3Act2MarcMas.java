@@ -15,8 +15,8 @@ public class Ud3Act2MarcMas {
         System.out.println("Calculadora de varies dades amb edats d'alumnes");
         System.out.println("Introdueixi un nombre negatiu per acabar.");
         Scanner s = new Scanner(System.in);
-        System.out.println("Introdueixi una edat "); //deman el primer nombre per consola i l'agaf com a float
-        float n = s.nextFloat();
+        System.out.println("Introdueixi una edat "); //deman el primer nombre per consola i l'agaf com a short
+        Short n = s.nextShort();
         Integer sumaTotal = 0; //inicialitzam variables
         Float mitjanaEdats = (float) 0;
         Byte nombreAlumnes = 0;
@@ -28,7 +28,7 @@ public class Ud3Act2MarcMas {
                 majorsEdat++;
             }
             System.out.println("Introdueixi la seguent edat"); //deman el seguent nombre 
-            n = s.nextFloat();
+            n = s.nextShort();
         }
         mitjanaEdats = sumaTotal / (float) nombreAlumnes;
         //un pic N es negatiu, surtim i donam totes les dades a l'usuari

@@ -34,11 +34,11 @@ public class Ud3Act3MarcMas {
             n = s.nextByte();
         }
         //un pic encertam el nombre o ens rendim, surtim
-        if ((int) n != -1) {
-            System.out.println("Enhorabona! La teva puntuacio es de " + rondes + " Rondes - " + punts + " Punts");
-        } else {
+        if ((int) n == -1) {
             System.out.println("T'has rendit :(");
             System.out.println("La teva puntuacio es de " + rondes + " Rondes - " + punts + " Punts");
+        } else {
+            System.out.println("Enhorabona! La teva puntuacio es de " + rondes + " Rondes - " + punts + " Punts");
         }
     }
 }
