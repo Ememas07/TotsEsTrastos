@@ -17,7 +17,7 @@ public class Ud4ActRecursivitatMarcMas {
         if (y > 0) {
             x += multiplicacio(x, y);
         }
-        return x;
+        return x; //si y es 0, retornam x directament
     }
 
     public static int divisio(int x, int y) {
@@ -27,7 +27,7 @@ public class Ud4ActRecursivitatMarcMas {
         if (x > 0 && x >= y) {
             resultat = 1 + divisio(x - y, y);
         }
-        return resultat;
+        return resultat; //si x es 0 o x es major a o igual a y, retornam 0
     }
 
     public static int potencia(int x, int y) {
@@ -35,21 +35,21 @@ public class Ud4ActRecursivitatMarcMas {
         if (y > 0) {
             x *= potencia(x, y);
         }
-        return x;
+        return x; //si y no es major a 0, retornam x
     }
 
     public static int factorial(int x) {
         if (x > 1) {
             x *= factorial(x - 1);
         }
-        return x;
+        return x; //si x no es major a 1, retornam x
     }
 
     public static int fibonacci(int x) {
         if (x > 1) {
             x = fibonacci(x - 1) + fibonacci(x - 2);
         }
-        return x;
+        return x; //si x no es major a 1, retornam x
     }
 
     public static int sumatori(int x) {
@@ -60,7 +60,7 @@ public class Ud4ActRecursivitatMarcMas {
         if (x < y) {
             x += sumatori(x + 1, y);
         }
-        return x;
+        return x; //si x es major que y, retornam x
     }
 
     public static void main(String[] args) {
