@@ -6,17 +6,19 @@ package org.yourcompany.yourproject;
 import java.util.Scanner;
 
 /**
- * RECURSIVITAT Crea la funció mostraPars(int n) que mostri per consola els
- * primers n nombres parells.
+ * RECURSIVITAT
+ *
+ * Crea la funció mostraPars(int n) que mostri per consola els primers n nombres
+ * parells.
  *
  * @author Marc Mas
  */
 public class Ud4Act8MarcMas {
 
-    private static void mostraPars(int n) {
+    public static void mostraPars(int n) {
         if (n != 0) {
             n -= 1;
-            System.out.print(n*2);
+            System.out.print(n * 2 + ", ");
             mostraPars(n);
         }
     }
