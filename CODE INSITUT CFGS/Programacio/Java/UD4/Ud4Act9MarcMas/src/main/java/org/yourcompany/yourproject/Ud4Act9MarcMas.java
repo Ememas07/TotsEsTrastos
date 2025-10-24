@@ -17,18 +17,36 @@ import java.util.Scanner;
  */
 public class Ud4Act9MarcMas {
 
+    public static Integer calcularSegons(int d, int h, int m, int v) {
+        if (v == 1) {
+            Integer s = 0;
+            if (d != 0) {
+                h += 24;
+                d--;
+            }
+            if (h != 0) {
+                m += 60;
+                h--;
+            }
+            if (m != 0) {
+                s += 60 + calcularSegons(d, h, m - 1, 1);
+            }
+            return s;
+        } else {
+            return calcularSegons(d, h, m);
+        }
+    }
+
     public static Integer calcularSegons(int d, int h, int m) {
         Integer s = 0;
         if (d != 0) {
-            h += 24;
-            d--;
+            s += 86400 * d;
         }
         if (h != 0) {
-            m += 60;
-            h--;
+            s += 3600 * h;
         }
         if (m != 0) {
-            s += 60 + calcularSegons(d, h, m - 1);
+            s += 60 + calcularSegons(0, 0, m - 1);
         }
         return s;
     }
@@ -36,12 +54,16 @@ public class Ud4Act9MarcMas {
     public static void main(String[] args) {
         System.out.println("Programa per calcular segons a traves de dies hores i minuts"); //informacio a l'usuari
         Scanner s = new Scanner(System.in); //iniciam scanner
+        System.out.println("Quina versio vols emprar?");
+        System.out.println("1 per versio incial (pot explotar a partir de 3 dies)");
+        System.out.println("2 per versio millorada amb mes robustesa");
+        Integer v = s.nextInt(); // versio del programa
         System.out.println("Quants de dies?"); // demanam nombre de dies
         Integer d = s.nextInt(); //assignam
         System.out.println("Quantes hores?"); // demanam nombre de hores
         Integer h = s.nextInt(); //assignam
         System.out.println("Quants de minuts?"); // demanam nombre de minuts
         Integer m = s.nextInt(); //assignam
-        System.out.println(calcularSegons(d, h, m));
+        System.out.println(calcularSegons(d, h, m, v));
     }
 }

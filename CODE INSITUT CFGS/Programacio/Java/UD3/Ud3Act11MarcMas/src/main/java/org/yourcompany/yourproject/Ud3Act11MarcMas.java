@@ -25,10 +25,12 @@ public class Ud3Act11MarcMas {
         System.out.print("Els nombres primers desde l'1 fins al " + input + " son:"); //posam un output sense bot de linea
         for (int i = 2; i < input; i++) { //bucle incial, anira desde 2 (1 no es primer) fins a input 
             esPrimer = true; //posam que esPrimer es veritat per ara, i despres, si no es primer ho marcarem
-            for (int n = 2; n < i; n++) { //segon bucle, comença a 2 ja que no volem dividir per 1 cada vegada
-                if (i % n == 0 && esPrimer == true) { //si es divisible entre qualsevol nombre desde 2 fins a i (que anira pujant), el marcam com a no primer
+            Integer n = 2; //començam a comprovar desde 2
+            while (n < i && esPrimer == true) { //segon bucle, comença a 2 ja que no volem dividir per 1 cada vegada
+                if (i % n == 0) { //si es divisible entre qualsevol nombre desde 2 fins a i (que anira pujant), el marcam com a no primer
                     esPrimer = false;
                 }
+                n++;
             }
             if (esPrimer == true) { //en cas de que no hagui caigut mai al bucle anterior, imprimim el nombre i una coma
                 System.out.print(i + ", ");
