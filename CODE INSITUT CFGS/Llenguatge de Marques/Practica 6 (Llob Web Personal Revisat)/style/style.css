@@ -3,21 +3,26 @@ html {
     background-color: darkred;
     color: white;
 }
-h2{
+
+h2 {
     padding-left: 10px;
     font-size: 20px;
 }
+
 a {
     color: cyan;
 }
-td a{
-    color:white;
+
+td a {
+    color: white;
     text-decoration-line: none;
 }
-footer td a{
-    color:aqua;
+
+footer td a {
+    color: aqua;
     text-decoration-line: none;
 }
+
 a:hover {
     color: aquamarine;
 }
@@ -28,6 +33,19 @@ img {
 
 table td {
     text-align: center;
+}
+
+table {
+    width: 95vw;
+}
+
+td img {
+    width: 100%;
+}
+
+.mainpage {
+    text-align: right;
+    border-style: solid;
 }
 
 .instagram a img {
@@ -49,8 +67,7 @@ header img {
 
 
 nav {
-    position: fixed;
-    top: 40px;
+    top: 200px;
     right: 30px;
 }
 
@@ -113,9 +130,20 @@ footer table tr {
 fieldset {
     border-style: hidden;
 }
-.imglivery{
+
+.imglivery {
     display: flex;
 }
-video{
+
+video {
     width: 98vw;
+}
+
+form {
+    background-color: rgb(69, 69, 141);
+}
+
+form div{
+    text-align: center;
+    padding: 20px;
 }
