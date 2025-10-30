@@ -169,6 +169,7 @@ public class Ud1a4ProvaPractica1MODv2MarcMas {
             preuTotal = preuTotalRajoles;
         }
         final float IVA = 1.21f;
+
         System.out.println("La superficie del terra es " + superficieTerra);
         System.out.println("La superficie de les parets es " + superficieParets);
         System.out.println("Hi haura " + nRajolesTerra + " Rajoles al terra");
