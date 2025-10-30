@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Marc Mas
+ * @author Mewtwo
  */
 public class Ud1a4ProvaPractica1MODv2MarcMas {
 
