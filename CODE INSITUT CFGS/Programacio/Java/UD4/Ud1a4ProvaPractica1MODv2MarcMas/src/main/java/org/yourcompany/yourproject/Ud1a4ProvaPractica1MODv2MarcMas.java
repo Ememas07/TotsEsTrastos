@@ -19,23 +19,46 @@ public class Ud1a4ProvaPractica1MODv2MarcMas {
         return area(longitud, amplada);
     }
 
-    public static float areaParets(float longitud, float amplada, float altura, int tipusPorta, float areaFinestra) {
-        float area = (area(longitud, amplada) * 2) + (area(amplada, altura) * 2); //area de dues parets + area de les altres dues parets
-        if (tipusPorta == 1) { // 1 es adaptada
-            area -= (1.2 * 2);
-        } else {
-            area -= (0.8 * 2);
-        }
-        area -= areaFinestra; //restam l'area de la finestra
-        return area;
+    public static float areaRajoles(float ampladaRajola, float longitudRajola) {
+        return area(ampladaRajola, longitudRajola);
     }
 
-    public static float calcularFinestra(float ampladaFinestra, float alturaFinestra) {
+    public static float areaFinestra(float ampladaFinestra, float alturaFinestra) {
         return area(alturaFinestra, alturaFinestra);
     }
 
-    public static float areaRajoles(float ampladaRajola, float longitudRajola) {
-        return area(ampladaRajola, longitudRajola);
+    public static float areaPorta(Integer tipusPorta, float alturaBany, float ampladaBany) {
+        Scanner s = new Scanner(System.in);
+        switch (tipusPorta) {
+            case 1 -> { //adaptada
+                return (float) (1.2 * 2);
+            }
+            case 2 -> { //normal
+                return (float) (0.8 * 2);
+            }
+            case 3 -> { //personalitzada
+                float pAlt = 0f;
+                float pAmp = 0f;
+                System.out.println("Altura de la porta?");
+                pAlt = s.nextFloat();
+                pAlt = validacio(pAlt, 0.8f, alturaBany);
+                System.out.println("Amplada de la porta?");
+                pAmp = s.nextFloat();
+                pAmp = validacio(pAmp, 1f, ampladaBany);
+                return pAlt * pAmp;
+            }
+            default -> {
+                return 0f;
+            }
+        }
+
+    }
+
+    public static float areaParets(float longitudBany, float ampladaBany, float alturaBany, float areaPorta, float areaFinestra) {
+        float area = (area(longitudBany, ampladaBany) * 2) + (area(ampladaBany, alturaBany) * 2); //area d1e dues parets + area de les altres dues parets
+        area -= areaPorta; //restam l'àrea de la porta
+        area -= areaFinestra; //restam l'area de la finestra
+        return area;
     }
 
     public static Integer nombreRajoles(float area, float areaRajoles) {
@@ -51,13 +74,17 @@ public class Ud1a4ProvaPractica1MODv2MarcMas {
         }
     }
 
-    public static Integer tempsInstalacio(float area) {
-        float h = area / 60; //60m^2 per hora
+    public static Integer tempsInstalacio(float area, float metresHora) {
+        float h = area / metresHora; //h = hores
         if ((int) h == h) {
             return (int) h;
         } else {
             return (int) h + 1;
         }
+    }
+
+    public static float preuInstalacio(int hores, float preuHora) {
+        return hores * preuHora;
     }
 
     public static float validacio(float var, float min, float max) {
@@ -81,68 +108,67 @@ public class Ud1a4ProvaPractica1MODv2MarcMas {
         return validacio(var, (float) min, 999999999);
     }
 
-    // a l'original totes les variable float estan declarades com a "float var = 0.0"
-    // per compilar, afegire una F a cada valor
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Programa per calcular pressupost d'un bany");
         System.out.println("Per favor, introdueixi tots els valors en metres");
-        float l = 0.0f;
+        float l = 0f;
         System.out.println("Longitut del bany?");
         l = s.nextFloat();
         l = validacio(l, 2, 10);
 
-        float amp = 0.0f;
+        float amp = 0f;
         System.out.println("Amplada del bany?");
         amp = s.nextFloat();
         amp = validacio(amp, 2, 10);
 
-        float alt = 0.0f;
+        float alt = 0f;
         System.out.println("Altura del bany?");
         alt = s.nextFloat();
         amp = validacio(amp, 2, 10);
 
         Integer tipusPorta = 0;
-        System.out.println("Quina porta vol? 1 per porta adaptada, 2 per porta normal");
+        System.out.println("Quina porta vol? 1 per porta adaptada, 2 per porta normal, 3 per porta personalitzada");
         tipusPorta = s.nextInt();
-        tipusPorta = validacio(tipusPorta, 1, 2);
+        tipusPorta = validacio(tipusPorta, 1, 3);
+        float areaPorta = areaPorta(tipusPorta, alt, amp);
 
-        float fAlt = 0.0f;
+        float fAlt = 0f;
         System.out.println("Altura de la finestra?");
         fAlt = s.nextFloat();
         fAlt = validacio(fAlt, 1, (int) alt);
 
-        float fAmp = 0.0f;
+        float fAmp = 0f;
         System.out.println("Amplada de la finestra?");
         fAmp = s.nextFloat();
         fAmp = validacio(fAmp, 1, (int) amp);
 
-        float rAmpT = 0.0f;
+        float rAmpT = 0f;
         System.out.println("Amplada de la rajola del terra?");
         rAmpT = s.nextFloat();
         rAmpT = validacio(rAmpT, 0.05f, 1f);
 
-        float rLonT = 0.0f;
+        float rLonT = 0f;
         System.out.println("Longitut de la rajola del terra?");
         rLonT = s.nextFloat();
         rLonT = validacio(rLonT, 0.05f, 1f);
 
-        float rAmpP = 0.0f;
+        float rAmpP = 0f;
         System.out.println("Amplada de la rajola de paret?");
         rAmpP = s.nextFloat();
         rAmpP = validacio(rAmpP, 0.05f, 1f);
 
-        float rLonP = 0.0f;
+        float rLonP = 0f;
         System.out.println("Longitut rajola de paret?");
         rLonP = s.nextFloat();
         rLonP = validacio(rLonP, 0.05f, 1f);
 
-        float preuRajolaT = 0.0f;
+        float preuRajolaT = 0f;
         System.out.println("Preu per rajola de terra (sense IVA)");
         preuRajolaT = s.nextFloat();
         preuRajolaT = validacio(preuRajolaT, 0);
 
-        float preuRajolaP = 0.0f;
+        float preuRajolaP = 0f;
         System.out.println("Preu per rajola de paret (sense IVA)");
         preuRajolaP = s.nextFloat();
         preuRajolaP = validacio(preuRajolaP, 0);
@@ -153,23 +179,21 @@ public class Ud1a4ProvaPractica1MODv2MarcMas {
         instalacio = validacio(instalacio, 1, 2);
 
         float superficieTerra = areaTerra(l, amp);
-        float superficieParets = areaParets(l, amp, alt, tipusPorta, calcularFinestra(fAmp, fAlt));
+        float superficieParets = areaParets(l, amp, alt, areaPorta, areaFinestra(fAmp, fAlt));
         Integer nRajolesTerra = nombreRajoles(superficieTerra, areaRajoles(rAmpT, rLonT));
         Integer nRajolesParets = nombreRajoles(superficieParets, areaRajoles(rAmpP, rLonP));
         float preuTotalRajolaT = nRajolesTerra * preuRajolaT;
         float preuTotalRajolaP = nRajolesParets * preuRajolaP;
-        float preuInstalacioT = tempsInstalacio(superficieTerra) * 60;
-        float preuInstalacioP = tempsInstalacio(superficieParets) * 60;
+        float preuInstalacioT = preuInstalacio(tempsInstalacio(superficieTerra, 60f), 60f);
+        float preuInstalacioP = preuInstalacio(tempsInstalacio(superficieParets, 60f), 60f);
         float preuTotalRajoles = preuTotalRajolaP + preuTotalRajolaT;
         float preuTotalInstalacio = preuInstalacioP + preuInstalacioT;
         float preuTotal = 0;
+        preuTotal = preuTotalRajoles;
         if (instalacio == 1) {
-            preuTotal = preuTotalRajoles + preuTotalInstalacio;
-        } else {
-            preuTotal = preuTotalRajoles;
+            preuTotal += preuTotalInstalacio;
         }
         final float IVA = 1.21f;
-
         System.out.println("La superficie del terra es " + superficieTerra);
         System.out.println("La superficie de les parets es " + superficieParets);
         System.out.println("Hi haura " + nRajolesTerra + " Rajoles al terra");
