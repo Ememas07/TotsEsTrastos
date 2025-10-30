@@ -1,7 +1,7 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-package com.mycompany.ud1a4provapractica1modmarcmas;
+package org.yourcompany.yourproject;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Mewtwo
  */
-public class Ud1a4ProvaPractica1MODMarcMas {
+public class Ud1a4ProvaPractica1MODv1MarcMas {
 
     public static float areaTerra(float l, float amp) {
         return (l * amp);
