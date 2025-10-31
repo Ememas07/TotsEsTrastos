@@ -41,12 +41,14 @@ public class Ud4Act9MarcMas {
         Integer s = 0;
         if (d != 0) {
             s += 86400 * d;
+            d = 0;
         }
         if (h != 0) {
             s += 3600 * h;
+            h = 0;
         }
         if (m != 0) {
-            s += 60 + calcularSegons(0, 0, m - 1);
+            s += 60 + calcularSegons(d, h, m - 1);
         }
         return s;
     }
