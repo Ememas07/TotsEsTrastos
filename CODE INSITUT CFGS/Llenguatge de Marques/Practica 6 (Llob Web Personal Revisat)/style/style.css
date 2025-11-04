@@ -4,6 +4,7 @@ html {
     color: white;
 }
 
+
 h2 {
     padding-left: 10px;
     font-size: 20px;
@@ -143,7 +144,15 @@ form {
     background-color: rgb(69, 69, 141);
 }
 
-form div{
+form div {
     text-align: center;
     padding: 20px;
+}
+
+div a img {
+    width: 30vw;
+}
+
+.igequip {
+    text-align: left;
 }
