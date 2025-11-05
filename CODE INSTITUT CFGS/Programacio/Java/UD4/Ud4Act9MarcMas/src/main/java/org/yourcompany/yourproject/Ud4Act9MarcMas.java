@@ -17,6 +17,7 @@ import java.util.Scanner;
  */
 public class Ud4Act9MarcMas {
 
+    // RECURSIVE 
     public static Integer calcularSegons(int d, int h, int m, int v) {
         if (v == 1) {
             Integer s = 0;
@@ -36,7 +37,6 @@ public class Ud4Act9MarcMas {
             return calcularSegons(d, h, m);
         }
     }
-
     public static Integer calcularSegons(int d, int h, int m) {
         Integer s = 0;
         if (d != 0) {
@@ -52,6 +52,24 @@ public class Ud4Act9MarcMas {
         }
         return s;
     }
+
+    // NO RECURSIVE
+    // public static Integer calcularSegons(int d, int h, int m) {
+    //     Integer s = 0;
+    //     if (d != 0) {
+    //         s += 86400 * d;
+    //         d = 0;
+    //     }
+    //     if (h != 0) {
+    //         s += 3600 * h;
+    //         h = 0;
+    //     }
+    //     if (m != 0) {
+    //         s += 60 * d;
+    //         m = 0;
+    //     }
+    //     return s;
+    // }
 
     public static void main(String[] args) {
         System.out.println("Programa per calcular segons a traves de dies hores i minuts"); //informacio a l'usuari

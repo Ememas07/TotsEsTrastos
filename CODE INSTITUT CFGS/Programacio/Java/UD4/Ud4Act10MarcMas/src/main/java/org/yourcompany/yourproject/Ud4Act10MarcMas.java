@@ -21,6 +21,7 @@ import java.util.Scanner;
  */
 public class Ud4Act10MarcMas {
 
+    // RECURSIVITAT
     public static void calcularNombres(int n, int min, int max) {
         System.out.print((min + (int) (Math.random() * max))); //calculam i imprimim el nombre
         // es igual que si fessim:
@@ -33,6 +34,19 @@ public class Ud4Act10MarcMas {
             calcularNombres(n, min, max);
         }
     }
+    // NO RECURSIVITAT
+    // public static void calcularNombres(int n, int min, int max) {
+
+    //     while (n > 0) {
+    //         System.out.print((min + (int) (Math.random() * max))); //calculam i imprimim el nombre
+    //         // es igual que si fessim:
+    //         // Integer x = 0; //generam variable
+    //         // x = min + (int) (Math.random() * max); //generam nombre aleatori
+    //         // System.out.print(x); //imprimim el nombre
+    //         System.out.print(", ");
+    //         n--; //restam 1 a n
+    //     }
+    // }
 
     public static void main(String[] args) {
         System.out.println("Programa per calcular nombres enters a un rang determinat"); //informacio a l'usuari

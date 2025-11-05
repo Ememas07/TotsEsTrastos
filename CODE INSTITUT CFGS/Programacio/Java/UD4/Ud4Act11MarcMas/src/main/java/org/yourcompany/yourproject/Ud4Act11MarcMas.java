@@ -56,8 +56,18 @@ public class Ud4Act11MarcMas {
             calcularNombres(n - 1, min, max);
         }
     }
-
-    
+    // VERSIO SENSE RECURSIVITAT
+    // public static void calcularNombres(int n, int min, int max) {
+    //     while (n > 1) {
+    //         if (min == 0 && max == 0) { //si min i max son 0, imprimirem nombres decimals entre 1 i 0
+    //             System.out.print(Math.random()); //calculam i imprimim el nombre
+    //         } else { //si min i max no son 0, farem la funcio amb min i max
+    //             System.out.print((min + (int) (Math.random() * max))); //calculam i imprimim el nombre
+    //         }
+    //         System.out.print(", ");
+    //         n -= 1;
+    //     }
+    // }
 
     public static void main(String[] args) {
         System.out.println("Programa per calcular nombres enters a un rang determinat (o entre 0 i 1)"); //informacio a l'usuari

@@ -15,6 +15,7 @@ import java.util.Scanner;
  */
 public class Ud4Act8MarcMas {
 
+//RECURSIVE
     public static void mostraPars(int n) {
         if (n != 0) {
             n -= 1;
@@ -23,6 +24,13 @@ public class Ud4Act8MarcMas {
         }
     }
 
+// NO RECURSIVE
+    // public static void mostraPars(int n) {
+    //     while (n > 1) {
+    //         System.out.print(n * 2 + ", ");
+    //         n--;
+    //     }
+    // }
     public static void main(String[] args) {
         System.out.println("Programa per mostrar per consola els primers N nombres parells"); //informacio a l'usuari
         Scanner s = new Scanner(System.in); //iniciam scanner
