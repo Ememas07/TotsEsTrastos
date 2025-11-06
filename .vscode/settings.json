@@ -22,5 +22,6 @@
 ],
 "java.project.sourcePaths": [
     "CODE INSITUT CFGS/PROGRAMACIO"
-]
+],
+"java+.runConfig.vmOptions": "-Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8"
 }
