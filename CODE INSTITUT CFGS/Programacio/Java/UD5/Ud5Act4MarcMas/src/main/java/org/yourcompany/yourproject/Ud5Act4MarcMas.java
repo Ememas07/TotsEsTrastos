@@ -22,7 +22,6 @@ public class Ud5Act4MarcMas {
             }
         }
         return maxim; //retornam el maxim
-
     }
 
     public static void main(String[] args) {
@@ -35,6 +34,6 @@ public class Ud5Act4MarcMas {
             System.out.println("Introdueixi un nombre enter");
             arrayNombres[i] = s.nextInt();
         }
-        System.out.println(maxim(arrayNombres));
+        System.out.println(maxim(arrayNombres)); //imprimim el maxim
     }
 }
