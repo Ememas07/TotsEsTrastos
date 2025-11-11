@@ -12,7 +12,6 @@ package org.yourcompany.yourproject;
  * @author Marc Mas
  */
 public class Ud5Act1MarcMas {
-
     public static void main(String[] args) {
         int taulaAleatoris[] = new int[10]; //cream array
         int suma = 0;
