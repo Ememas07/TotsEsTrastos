@@ -22,7 +22,7 @@ public class BogoSort {
                     i++;
                     iteracions++;
                 }
-                System.out.println("Iteracio " + iteracions);
+                System.out.print("Iteracio " + iteracions + "     ");
             }
         }
         for (int i = 0; i < taulaAleatoria.length; i++) {
@@ -50,7 +50,7 @@ public class BogoSort {
     public static void main(String[] args) {
         int taulaAleatoris[] = new int[5]; //cream array
         for (int i = 0; i < taulaAleatoris.length; i++) { //recorrem tot l'array
-            taulaAleatoris[i] = (int) (1 + Math.random() * 100); //omplim amb nombres de 1 a 100
+            taulaAleatoris[i] = (int) (1 + Math.random() * 1000); //omplim amb nombres de 1 a 100
         }
         bogoSort(taulaAleatoris);
     }
