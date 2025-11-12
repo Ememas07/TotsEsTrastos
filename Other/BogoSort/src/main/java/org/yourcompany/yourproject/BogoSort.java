@@ -22,7 +22,7 @@ public class BogoSort {
                     i++; //sumam 1 al bucle
                     iteracions++; //sumam iteracions
                 }
-                // System.out.print("Iteracio " + iteracions + "     "); //print de iteracions perque es gracios
+                System.out.print("Iteracio " + iteracions + "     "); //print de iteracions perque es gracios
             }
         }
         System.out.println("");
@@ -62,7 +62,7 @@ public class BogoSort {
     }
 
     public static void main(String[] args) {
-        int taulaAleatoris[] = new int[5]; //cream array
+        int taulaAleatoris[] = new int[6]; //cream array
         omplirTaula(taulaAleatoris, 1, 100);
         bogoSort(taulaAleatoris);
         imprimirTaula(taulaAleatoris);
