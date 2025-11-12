@@ -10,9 +10,9 @@ package org.yourcompany.yourproject;
 public class BubbleSort {
 
     public static void bubbleSort(int[] taula) {
-        for (int i = 0; i < taula.length - 1; i++) {
-            for (int j = 0; j < taula.length - i - 1; j++) {
-                if (taula[j] > taula[j + 1]) {
+        for (int i = 0; i < taula.length - 1; i++) { //va de 0 fins al final
+            for (int j = 0; j < taula.length - i - 1; j++) { //va de 0 fins al final -1 (ja que anam amb parelles)
+                if (taula[j] > taula[j + 1]) { //si no estan ordenats, les gir
                     int temp = taula[j];
                     taula[j] = taula[j + 1];
                     taula[j + 1] = temp;
