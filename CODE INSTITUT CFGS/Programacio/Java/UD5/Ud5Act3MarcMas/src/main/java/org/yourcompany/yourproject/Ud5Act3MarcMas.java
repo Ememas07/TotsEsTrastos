@@ -21,7 +21,7 @@ public class Ud5Act3MarcMas {
         System.out.println("quants de nombres vol introduir?"); //demanam mida array
         int midaArray = 0;
         midaArray = s.nextInt();
-        int arrayNombres[] = new int[midaArray]; //cream array amb la mida introduida per l'usuaro
+        int arrayNombres[] = new int[midaArray]; //cream array amb la mida introduida per l'usuari
         for (int i = 0; i < arrayNombres.length; i++) { //recorrem l'array i l'omplim amb ints
             System.out.println("Introdueixi un nombre enter");
             arrayNombres[i] = s.nextInt();
