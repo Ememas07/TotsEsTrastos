@@ -24,7 +24,7 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        int taulaAleatoris[] = new int[5]; //cream array
+        int taulaAleatoris[] = new int[10]; //cream array
         for (int i = 0; i < taulaAleatoris.length; i++) { //recorrem tot l'array
             taulaAleatoris[i] = (int) (1 + Math.random() * 100); //omplim amb nombres de 1 a 100
         }
