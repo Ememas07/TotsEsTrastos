@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author alumne
  */
-public class Ud5MiniPracticaOrdenacioMarcmas {
+public class Ud5MiniPracticaOrdenacioMarcMas {
 
     public static void bubbleSort(int taula[]) {
         long horaStart = System.currentTimeMillis();
@@ -27,7 +27,6 @@ public class Ud5MiniPracticaOrdenacioMarcmas {
         long horaEnd = System.currentTimeMillis();
         long deltaTime = horaEnd - horaStart; // deltaTime es la diferencia entre el temps de arrancada i el temps de finalitzacio de la funcio
         imprimirDades(deltaTime, comparatives, intercanvis);
-
     }
 
     public static void selectionSort(int taula[]) {
