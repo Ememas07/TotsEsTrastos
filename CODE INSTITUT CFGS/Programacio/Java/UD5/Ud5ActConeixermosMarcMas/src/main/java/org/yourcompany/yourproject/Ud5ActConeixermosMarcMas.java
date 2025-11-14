@@ -40,7 +40,9 @@ public class Ud5ActConeixermosMarcMas {
         menu();
     }
 
-    public static void print(String text, int colorText, int colorBg) {
+    public static void color(int colorSeleccionat, int estilColor) {
+
+        // BLACK = "0";
         // RED = "1";
         // GREEN = "2";
         // YELLOW = "3";
@@ -48,34 +50,58 @@ public class Ud5ActConeixermosMarcMas {
         // PURPLE = "5";
         // CYAN = "6";
         // WHITE = "7";
-        switch (colorText) {
-            case 1:
-                System.out.print(ANSI_RED_TEXT);
-                break;
-            
-            default:
-                throw new AssertionError();
+        String colorText[] = new String[8];
+        colorText[0] = ANSI_BLACK_TEXT;
+        colorText[1] = ANSI_RED_TEXT;
+        colorText[2] = ANSI_GREEN_TEXT;
+        colorText[3] = ANSI_YELLOW_TEXT;
+        colorText[4] = ANSI_BLUE_TEXT;
+        colorText[5] = ANSI_PURPLE_TEXT;
+        colorText[6] = ANSI_CYAN_TEXT;
+        colorText[7] = ANSI_WHITE_TEXT;
+
+        String colorBg[] = new String[8];
+        colorBg[0] = ANSI_BLACK_BACKGROUND;
+        colorBg[1] = ANSI_RED_BACKGROUND;
+        colorBg[2] = ANSI_GREEN_BACKGROUND;
+        colorBg[3] = ANSI_YELLOW_BACKGROUND;
+        colorBg[4] = ANSI_BLUE_BACKGROUND;
+        colorBg[5] = ANSI_PURPLE_BACKGROUND;
+        colorBg[6] = ANSI_CYAN_BACKGROUND;
+        colorBg[7] = ANSI_WHITE_BACKGROUND;
+
+        if (estilColor == 1) { //1 = color de text
+            System.out.print(colorText[colorSeleccionat]);
+        } else { //0/2 == color de fondo
+            System.out.print(colorBg[colorSeleccionat]);
         }
 
+    }
+
+    public static void resetColor() {
+        System.out.print(ANSI_RESET);
     }
 
     public static void menu() {
         Scanner s = new Scanner(System.in);
         boolean continuar = true;
         int opcio = 1;
-        while (opcio != 0) {
+        while (continuar) {
             cls();
+            color(3, 1);
             System.out.println("Hola! som en Marc");
+            color(4, 1);
             System.out.println("Que vols saber?");
-            System.out.println("Introdueix 0 per sortir");
-            System.out.println("1. Pel·lícules d’imatge real");
-            System.out.println("2. Pel·lícules d’animació");
-            System.out.println("3. Series d'imatge real");
-            System.out.println("4. Series d'animacio");
-            System.out.println("5. Llibres");
-            System.out.println("6. Comics");
-            System.out.println("7. Videojocs \"actuals\"");
-            System.out.println("8. Videojocs \"retro\"");
+            System.out.println("0: Sortir");
+            System.out.println("1: Pel·lícules d’imatge real");
+            System.out.println("2: Pel·lícules d’animació");
+            System.out.println("3: Series d'imatge real");
+            System.out.println("4: Series d'animacio");
+            System.out.println("5: Llibres");
+            System.out.println("6: Comics");
+            System.out.println("7: Videojocs \"actuals\"");
+            System.out.println("8: Videojocs \"retro\"");
+            resetColor();
             opcio = s.nextInt();
             switch (opcio) {
                 case 0 ->
@@ -103,13 +129,16 @@ public class Ud5ActConeixermosMarcMas {
     }
 
     public static void intro(String tipus, int estil) {
-        Scanner s = new Scanner(System.in);
-        String temp = "";
         if (estil == 1) {
             System.out.println("Les meves 3 " + tipus + " son:");
         } else {
             System.out.println("Els meus 3 " + tipus + " son:");
         }
+    }
+
+    public static void esperarInput() {
+        Scanner s = new Scanner(System.in);
+        String temp = "";
         System.out.println("Introdueix qualsevol caracter per seguir");
         temp = s.next();
     }
@@ -118,6 +147,7 @@ public class Ud5ActConeixermosMarcMas {
         System.out.println("1: " + n1);
         System.out.println("2: " + n2);
         System.out.println("3: " + n3);
+        esperarInput();
     }
 
     public static void pelisReals() {
