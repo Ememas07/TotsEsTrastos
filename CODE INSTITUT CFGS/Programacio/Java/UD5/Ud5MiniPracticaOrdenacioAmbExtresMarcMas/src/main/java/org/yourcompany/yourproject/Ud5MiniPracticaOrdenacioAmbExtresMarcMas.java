@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author alumne
+ * @author Marc Mas
  */
 public class Ud5MiniPracticaOrdenacioAmbExtresMarcMas {
 
