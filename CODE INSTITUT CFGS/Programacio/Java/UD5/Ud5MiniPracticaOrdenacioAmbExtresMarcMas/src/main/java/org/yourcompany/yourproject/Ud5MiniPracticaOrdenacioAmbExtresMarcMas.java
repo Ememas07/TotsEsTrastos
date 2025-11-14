@@ -27,7 +27,6 @@ public class Ud5MiniPracticaOrdenacioAmbExtresMarcMas {
         long horaEnd = System.currentTimeMillis();
         long deltaTime = horaEnd - horaStart; // deltaTime es la diferencia entre el temps de arrancada i el temps de finalitzacio de la funcio
         imprimirDades(deltaTime, comparatives, intercanvis);
-
     }
 
     public static void selectionSort(int taula[], int debugMode) {
@@ -48,7 +47,6 @@ public class Ud5MiniPracticaOrdenacioAmbExtresMarcMas {
         long horaEnd = System.currentTimeMillis();
         long deltaTime = horaEnd - horaStart; // deltaTime es la diferencia entre el temps de arrancada i el temps de finalitzacio de la funcio
         imprimirDades(deltaTime, comparatives, intercanvis);
-
     }
 
     public static void insertionSort(int taula[], int debugMode) {
