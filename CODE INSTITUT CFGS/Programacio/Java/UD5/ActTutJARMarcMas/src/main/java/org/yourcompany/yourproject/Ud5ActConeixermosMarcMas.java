@@ -88,15 +88,19 @@ public class Ud5ActConeixermosMarcMas {
         int opcio = 1;
         while (continuar) {
             cls();
-            color(3, 1);
+            color(7, 1);
+            color(1, 2);
             System.out.println("Hola! som en Marc");
+            resetColor();
             color(4, 1);
             System.out.println("Que vols saber?");
             System.out.println("0: Sortir");
+            color(6, 1);
             System.out.println("1: Pel·lícules d’imatge real");
             System.out.println("2: Pel·lícules d’animació");
             System.out.println("3: Series d'imatge real");
             System.out.println("4: Series d'animacio");
+            color(3, 1);
             System.out.println("5: Llibres");
             System.out.println("6: Comics");
             System.out.println("7: Videojocs \"actuals\"");
@@ -125,6 +129,7 @@ public class Ud5ActConeixermosMarcMas {
                 default ->
                     menu();
             }
+            resetColor();
         }
     }
 
@@ -151,42 +156,50 @@ public class Ud5ActConeixermosMarcMas {
     }
 
     public static void pelisReals() {
+        color(1, 1);
         intro("Pel·licules d'imatge Real", 1);
         top3("Le Mans 66", "Gran Turismo", "Top Gun: Maverick");
     }
 
     public static void pelisAnimacio() {
+        color(2, 2);
         intro("Pel·licules d'animacio", 1);
         top3("Cars", "Cars 3", "Mortadelo i Filemon contra Jimmy el Cachondo");
     }
 
     public static void seriesReals() {
+        color(2, 1);
         intro("Series d'imatge Real", 1);
         top3("Top Gear", "New Amsterdam", "The Good Doctor");
     }
 
     public static void seriesAnimacio() {
+        color(5, 1);
         intro("Series d'animacio", 1);
         top3("Doraemon", "Bob Esponja", "Gumball");
     }
 
     public static void llibres() {
+        color(6, 2);
         intro("Llibres", 2);
-        top3("Conexiones", "Nocturn a 4 mans", "");
+        top3("Conexiones", "Nocturn a 4 mans", "El metode gronholm");
     }
 
     public static void comics() {
+        color(5, 2);
         intro("Comics", 2);
         top3("Mortadelo i Filemon", "Asterix i Cleopatra", "*Dragon Ball");
         System.out.println("No he llegit dragon ball, pero m'agradaria");
     }
 
     public static void videojocsActuals() {
+        color(3, 1);
         intro("Videojocs actuals", 2);
         top3("Battlefield 6", "iRacing", "Assetto Corsa EVO");
     }
 
     public static void videojocsRetro() {
+        color(6, 1);
         intro("Videojocs retro", 2);
         top3("Super Mario Bros 3", "Tetris", "Pacman");
     }
