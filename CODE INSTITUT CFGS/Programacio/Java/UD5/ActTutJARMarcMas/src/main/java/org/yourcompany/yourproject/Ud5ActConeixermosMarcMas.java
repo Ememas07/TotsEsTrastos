@@ -30,8 +30,11 @@ public class Ud5ActConeixermosMarcMas {
     public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
     public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
-    public static void cls() {
-        for (int i = 0; i < 100; i++) {
+    public static final int ALTARIAPANTALLA = 25;
+
+    public static void cls(int lineesEscrites) {
+        int buits = ALTARIAPANTALLA - lineesEscrites - 1;
+        for (int i = 0; i < buits; i++) {
             System.out.println("");
         }
     }
@@ -87,7 +90,6 @@ public class Ud5ActConeixermosMarcMas {
         boolean continuar = true;
         int opcio = 1;
         while (continuar) {
-            cls();
             color(7, 1);
             color(1, 2);
             System.out.println("Hola! som en Marc");
@@ -105,8 +107,10 @@ public class Ud5ActConeixermosMarcMas {
             System.out.println("6: Comics");
             System.out.println("7: Videojocs \"actuals\"");
             System.out.println("8: Videojocs \"retro\"");
+            cls(11);
             resetColor();
             opcio = s.nextInt();
+            cls(5);
             switch (opcio) {
                 case 0 ->
                     continuar = false;
