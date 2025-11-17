@@ -7,8 +7,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>25</maven.compiler.release>
-        <exec.mainClass>org.yourcompany.yourproject.ActTutJARMarcMas</exec.mainClass>
-    </properties>
+        <exec.mainClass>org.yourcompany.yourproject.Ud5ActConeixermosMarcMas</exec.mainClass>
+    </properties> 
     <build>
         <plugins>
             <plugin>
@@ -19,7 +19,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>org.yourcompany.yourproject.ActTutJARMarcMas</mainClass>
+                            <mainClass>org.yourcompany.yourproject.Ud5ActConeixermosMarcMas</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

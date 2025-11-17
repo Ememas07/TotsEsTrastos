@@ -9,4 +9,4 @@ $pswindow.buffersize = $newsize # Set the new Buffer Size as active.
 $newsize = $pswindow.windowsize # Get the UI's current Window Size.
 $newsize.width = 25            # Set the new Window Width to 150 columns.
 $pswindow.windowsize = $newsize # Set the new Window Size as active.
-java -jar ./target/ActTutJARMarcMas-1.0-SNAPSHOT.jar
+java -jar ./target/Ud5ActConeixermosMarcMas.jar
