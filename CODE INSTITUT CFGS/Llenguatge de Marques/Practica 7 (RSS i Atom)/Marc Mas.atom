@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed language="es" xmlns="http://www.w3.org/2005/Atom">
+    <title>Canal Atom</title>
+    <id>http://127.0.0.1:5500/CODE%20INSTITUT%20CFGS/Llenguatge%20de%20Marques/RSS%20i%20Atom/test.atom</id>
+    <link
+        href="http://127.0.0.1:5500/CODE%20INSTITUT%20CFGS/Llenguatge%20de%20Marques/RSS%20i%20Atom/test.atom" />
+    <updated>2025-11-11T11:11:11Z</updated>
+    <author>
+        <name>
+            Marc Mas
+        </name>
+    </author>
+    <entry>
+        <title>El temps a Maria de la Salut</title>
+        <link
+            href="https://www.aemet.es/es/eltiempo/prediccion/municipios/maria-de-la-salut-id07035" />
+        <id>https://www.aemet.es/es/eltiempo/prediccion/municipios/maria-de-la-salut-id07035</id>
+        <updated>2025-11-11T11:11:11Z</updated>
+        <summary>Aquí té el temps a Maria de la Salut</summary>
+        <author>
+            <name>
+                Marc Mas
+            </name>
+        </author>
+    </entry>
+    <entry>
+        <title>Galeria Pagina</title>
+        <link
+            href="http://127.0.0.1:5500/CODE%20INSTITUT%20CFGS/Llenguatge%20de%20Marques/Practica%206%20(Lloc%20Web%20Personal%20Revisat)/pages/gallery.html" />
+        <id>http://127.0.0.1:5500/CODE%20INSTITUT%20CFGS/Llenguatge%20de%20Marques/Practica%206%20(Lloc%20Web%20Personal%20Revisat)/pages/gallery.html</id>
+        <updated>2025-11-11T11:11:11Z</updated>
+        <author>
+            <name>
+                Marc Mas
+            </name>
+        </author>
+        <summary>Aquí té una galeria de Chimera Racing Team</summary>
+    </entry>
+</feed>
