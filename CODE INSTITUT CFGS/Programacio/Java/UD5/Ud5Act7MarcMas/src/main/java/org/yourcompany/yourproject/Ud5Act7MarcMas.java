@@ -3,6 +3,7 @@
  */
 package org.yourcompany.yourproject;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -18,10 +19,11 @@ import java.util.Scanner;
 public class Ud5Act7MarcMas {
 
     public static int[] senseRepetits(int[] t) {
-        int taulaNeta[] = new int[t.length];
+        int taulaNeta[] = new int[0];
         for (int i = 0; i < t.length; i++) {
             if (!nombreDuplicat(t, t[i], i)) {
-                taulaNeta[i] = t[i];
+                taulaNeta = Arrays.copyOf(taulaNeta, taulaNeta.length + 1);
+                taulaNeta[taulaNeta.length -1] = t[i];
             }
         }
         return taulaNeta;
@@ -40,7 +42,7 @@ public class Ud5Act7MarcMas {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Programa que mostra els nombres no repetits d'un array");
-        int arrayNombres[] = new int[5];
+        int arrayNombres[] = new int[10];
         for (int i = 0; i < arrayNombres.length; i++) { //recorrem l'array i l'omplim amb ints
             System.out.println("Introdueixi un nombre enter");
             arrayNombres[i] = s.nextInt();
