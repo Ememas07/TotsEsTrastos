@@ -10,43 +10,38 @@ import java.util.Scanner;
  *
  * Llegir i emmagatzemar n nombres enters a una taula.
  *
- * D’aquesta taula se’n faran dos ○ La primera amb els valors parells
+ * D'aquesta taula se'n faran dos ○ La primera amb els valors parells
  *
  * La segona amb els valors senars
  *
- * Ambdues taules s’han de mostrar amb els valors ordenats
+ * Ambdues taules s'han de mostrar amb els valors ordenats
  *
  * @author Marc Mas
  */
 public class Ud5Act8MarcMas {
 
-    public static void insertarValor(int[] taulaSenars, int valor) {
-        taulaSenars = Arrays.copyOf(taulaSenars, taulaSenars.length + 1);
-        taulaSenars[taulaSenars.length - 1] = valor;
-    }
-
     public static void imprimirArray(int[] t) {
-        for (int i = 0; i < t.length; i++) {
-            System.out.print(t[i] + ", ");
+        for (int i = 0; i < t.length; i++) { //recorrem tot l'array
+            System.out.print(t[i] + ", "); //imprimim un nombre i posam una ,
         }
-        System.out.println("");
+        System.out.println(""); //imprimim una linea buida al final
     }
 
     public static void separarParellsSenars(int[] t) {
-        int taulaSenars[] = new int[0];
+        int taulaSenars[] = new int[0]; //cream dos arrays, un de parells i un de senars
         int taulaParells[] = new int[0];
-        for (int i = 0; i < t.length; i++) {
-            if (t[i] % 2 == 0) {
-                taulaParells = Arrays.copyOf(taulaParells, taulaParells.length + 1);
-                taulaParells[taulaParells.length - 1] = t[i];
+        for (int i = 0; i < t.length; i++) { //durant tot l'array original 
+            if (t[i] % 2 == 0) { //is el nombre es parell
+                taulaParells = Arrays.copyOf(taulaParells, taulaParells.length + 1); //copiam l'array, el feim mes llarg
+                taulaParells[taulaParells.length - 1] = t[i]; //i assignam el valor nou al darrer index del nou array
             } else {
-                taulaSenars = Arrays.copyOf(taulaSenars, taulaSenars.length + 1);
-                taulaSenars[taulaSenars.length - 1] = t[i];
+                taulaSenars = Arrays.copyOf(taulaSenars, taulaSenars.length + 1); //copiam l'array, el feim mes llarg
+                taulaSenars[taulaSenars.length - 1] = t[i]; //i assignam el valor nou al darrer index del nou array
             }
         }
-        Arrays.sort(taulaParells);
+        Arrays.sort(taulaParells); //ordenam l'array
         Arrays.sort(taulaSenars);
-        System.out.println("Taula Parells:");
+        System.out.println("Taula Parells:"); //imprimim l'array
         imprimirArray(taulaParells);
         System.out.println("Taula Senars:");
         imprimirArray(taulaSenars);
@@ -57,7 +52,7 @@ public class Ud5Act8MarcMas {
         System.out.println("Programa que mostra els nombres no repetits d'un array");
         int arrayNombres[] = new int[10];
         for (int i = 0; i < arrayNombres.length; i++) { //recorrem l'array i l'omplim amb ints
-            // System.out.println("Introdueixi un nombre enter"); //en cas de voler omplir l'array manualment
+            // System.out.println("Introdueixi un nombre enter"); //en cas de voler omplir l'array manualment, descomentar aquesta linea i la seguent
             // arrayNombres[i] = s.nextInt();
             arrayNombres[i] = (int) (1 + Math.random() * 10);
         }

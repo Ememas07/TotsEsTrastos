@@ -6,11 +6,11 @@ package org.yourcompany.yourproject;
 import java.util.Scanner;
 
 /**
- * Fer un programa que demani a l’usuari quants nombres vol introduir.
+ * Fer un programa que demani a l'usuari quants nombres vol introduir.
  *
  * A continuació, introduir per teclat aquella quantitat de nombres enters.
  *
- * A continuació, mostrar els nombres en l’ordre invers al que s’han introduït
+ * A continuació, mostrar els nombres en l'ordre invers al que s'han introduït
  *
  * @author Marc Mas
  */

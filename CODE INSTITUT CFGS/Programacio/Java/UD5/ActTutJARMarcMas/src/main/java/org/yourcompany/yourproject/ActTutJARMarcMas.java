@@ -98,8 +98,8 @@ public class ActTutJARMarcMas {
             System.out.println("Que vols saber?");
             System.out.println("0: Sortir");
             color(6, 1);
-            System.out.println("1: Pel·lícules d’imatge real");
-            System.out.println("2: Pel·lícules d’animació");
+            System.out.println("1: Pel·lícules d'imatge real");
+            System.out.println("2: Pel·lícules d'animació");
             System.out.println("3: Series d'imatge real");
             System.out.println("4: Series d'animacio");
             color(3, 1);

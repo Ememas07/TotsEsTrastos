@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * Escriu la funció: byte primitiva(byte[] aposta, byte[] combGuanyadora).
  *
- * La funció ha de tornar el nombre d’encerts (posicions iguals) entre les dues
+ * La funció ha de tornar el nombre d'encerts (posicions iguals) entre les dues
  * taules
  *
  * @author Marc Mas
