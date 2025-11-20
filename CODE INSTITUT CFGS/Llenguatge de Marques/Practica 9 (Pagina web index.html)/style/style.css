@@ -1,9 +1,15 @@
-html{
+html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-table{
+
+table {
     width: 95vw;
 }
-table img{
+
+table img {
     width: 100%;
+}
+
+img {
+    width: 30vw;
 }
