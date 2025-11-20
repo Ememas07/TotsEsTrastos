@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari d'inscripció</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            Formulari d'inscripció
+        </h1>
+    </header>
+
+    <form action="">
+        <fieldset>
+            <h3>Dades Personals</h3>
+            <table id="dadespersonals">
+                <tr>
+                    <td>
+                        <label for="name">Nom Complet</label>
+                    </td>
+                    <td>
+                        <input type="text" name="name" id="name"> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dni">DNI</label>
+                    </td>
+                    <td>
+                        <input type="text" name="dni" id="dni"> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="username">Nom d'usuari</label>
+                    </td>
+                    <td>
+                        <input type="text" name="username" id="username"> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Correu electrònic</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" id="email"> <br>
+                    </td>
+                </tr>
+                <tr id="franjaedat">
+                    <td>
+                        <label for="agegroup">Franja d'edat</label>
+                    </td>
+                    <td>
+                        <label for="under18">Menor de 18 anys</label>
+                        <input type="radio" name="age" id="under18"> <br>
+                    </td>
+                    <td>
+                        <label for="1824">18-24 anys:</label>
+                        <input type="radio" name="age" id="1824"> <br>
+                    </td>
+                    <td>
+                        <label for="2436">24-36 anys:</label>
+                        <input type="radio" name="age" id="2436"> <br>
+                    </td>
+                    <td>
+                        <label for="3648">36-48 anys:</label>
+                        <input type="radio" name="age" id="3648"> <br>
+                    </td>
+                    <td>
+                        <label for="over48">Major de 48 anys:</label>
+                        <input type="radio" name="age" id="over48"> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="comments">Altra informació sobre tu</label>
+                    </td>
+                    <td>
+                        <textarea>
+
+                        </textarea>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <h3>Informació de l'esdeveniment</h3>
+            <table>
+                <tr>
+                    <td>
+                        <label for="name">Nombre de participants</label>
+                    </td>
+                    <td>
+                        <input type="number" name="number" id="number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="location">Ubicació</label>
+                    </td>
+                    <td>
+                        <input type="text" name="location" id="location"> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="datetime">Dia (DD/MM/AAAA)</label>
+                    </td>
+                    <td>
+                        <input type="datetime" name="datetime" id="datetime">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="URL">Enllaç a informació rellevant</label>
+                    </td>
+                    <td>
+                        <input type="url" name="url" id="url">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <h3>Altres</h3>
+            <label for="tic">Acceptes els termes i condicions?</label>
+            <input type="checkbox" name="tic" id="tic"> <br>
+        </fieldset>
+
+
+        <button type="submit">
+            Enviar formulari
+        </button>
+    </form>
+
+
+
+
+</body>
+
+</html>

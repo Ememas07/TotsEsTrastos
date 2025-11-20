@@ -1,0 +1,48 @@
+table {
+    width: 99%;
+}
+
+td,
+th {
+    text-align: center;
+    width: 15vw;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    height: 9vh;
+}
+
+tr,
+th {
+    border-style: solid 1px;
+}
+
+.pati2 {
+    height: 1vh;
+}
+
+td:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.hora {
+    display: flex;
+    justify-content: space-around;
+    border-style: none;
+}
+
+td.hora:hover {
+    transform: scale(1);
+    box-shadow: 0 0 0;
+}
+
+td.pati:hover {
+    transform: scale(1.02);
+}
+
+button{
+    position: fixed;
+    bottom:10px;
+    right:25px;
+}

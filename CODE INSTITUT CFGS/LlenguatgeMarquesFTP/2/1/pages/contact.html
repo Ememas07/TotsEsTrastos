@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pàgina Principal</title>
+    <link rel="icon" href="../media/CRTLogoTransparent.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <header>
+        <table>
+            <tr>
+                <td>
+                    <a href="../index.html">
+                        <img src="../media/CRTLogoTransparent.png" alt="Logo d'un Chimera que treu flames per la boca">
+                    </a>
+                </td>
+                <td>
+                    <h1>Chimera Racing Team</h1>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <nav>
+        <ul>
+            <a href="contact.html">Contacte</a>
+            <a href="gallery.html">Galeria</a>
+            <a href="details.html">Detalls</a>
+        </ul>
+    </nav>
+    <main>
+        <form action="">
+            <fieldset>
+                <h2>Dades Personals</h2>
+                <table id="dadespersonals">
+                    <tr>
+                        <td>
+                            <label for="name">Nom Complet</label>
+                        </td>
+                        <td>
+                            <input type="text" name="name" id="name"> <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="username">Nom d'usuari</label>
+                        </td>
+                        <td>
+                            <input type="text" name="username" id="username"> <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="nationality">Nacionalitat</label>
+                        </td>
+                        <td>
+                            <input type="text" name="nationality" id="nationality"> <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Correu electrònic</label>
+                        </td>
+                        <td>
+                            <input type="email" name="email" id="email"> <br>
+                        </td>
+                    </tr>
+                    <tr id="franjaedat">
+                        <td>
+                            <label for="agegroup">Franja d'edat</label>
+                        </td>
+                        <td>
+                            <label for="under18">Menor de 18 anys</label>
+                            <input type="radio" name="age" id="under18"> <br>
+                        </td>
+                        <td>
+                            <label for="1824">18-24 anys:</label>
+                            <input type="radio" name="age" id="1824"> <br>
+                        </td>
+                        <td>
+                            <label for="2436">24-36 anys:</label>
+                            <input type="radio" name="age" id="2436"> <br>
+                        </td>
+                        <td>
+                            <label for="3648">36-48 anys:</label>
+                            <input type="radio" name="age" id="3648"> <br>
+                        </td>
+                        <td>
+                            <label for="over48">Major de 48 anys:</label>
+                            <input type="radio" name="age" id="over48"> <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="comments">Altra informació sobre tu</label>
+                        </td>
+                        <td>
+                            <textarea>
+
+                        </textarea>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <h2>Altres</h2>
+                <label for="tic">Acceptes els termes i condicions?</label>
+                <input type="checkbox" name="tic" id="tic"> <br>
+            </fieldset>
+
+            <button type="submit">
+                Enviar formulari
+            </button>
+        </form>
+    </main>
+    <footer>
+        <table>
+            <tr>
+                <td>
+                    © Pàgina creada per Marc Mas per a Chimera Racing Team 2025
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+
+</html>
