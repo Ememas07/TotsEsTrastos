@@ -12,7 +12,6 @@ import java.util.Scanner;
 public class ActTutJARMarcMas {
 
     public static final String ANSI_RESET = "\u001B[0m";
-
     public static final String ANSI_BLACK_TEXT = "\u001B[30m";
     public static final String ANSI_RED_TEXT = "\u001B[31m";
     public static final String ANSI_GREEN_TEXT = "\u001B[32m";
@@ -45,14 +44,6 @@ public class ActTutJARMarcMas {
 
     public static void color(int colorSeleccionat, int estilColor) {
 
-        // BLACK = "0";
-        // RED = "1";
-        // GREEN = "2";
-        // YELLOW = "3";
-        // BLUE = "4";
-        // PURPLE = "5";
-        // CYAN = "6";
-        // WHITE = "7";
         String colorText[] = new String[8];
         colorText[0] = ANSI_BLACK_TEXT;
         colorText[1] = ANSI_RED_TEXT;
