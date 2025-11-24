@@ -121,7 +121,7 @@ public class Ud1a5Pra1rTriMarcMas {
         if (index > 0) {
             // Element X trobat a la posició Y
         } else {
-            // Element X no trobat”, però no s’ha de mostrar -1.
+            // Element X no trobat”, però no s'ha de mostrar -1.
         }
         return index;
     }
@@ -129,7 +129,7 @@ public class Ud1a5Pra1rTriMarcMas {
     public static void divisorsNombre(int[] array) {
         // Els divisors de X són A, B, C, … i Z
 
-        // No mostris els resultats d’una posició, si ja has calculat els divisors d’aquell nombre.
+        // No mostris els resultats d'una posició, si ja has calculat els divisors d'aquell nombre.
     }
 
     public static void multiplesTres(int[] array) {
