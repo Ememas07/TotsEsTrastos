@@ -65,7 +65,6 @@ public class Ud1a5Pra1rTriMarcMas {
 
     public static int[] llevarDarrerValor(int[] array) {
         int[] array2 = copiarArray(array, array.length - 1);
-        System.out.println("Success");
         return array2;
     }
 
@@ -82,7 +81,6 @@ public class Ud1a5Pra1rTriMarcMas {
             return copiarArray(arrayOriginal);
         } else {
             int[] array2 = new int[midaArrayNou];
-            System.out.println(array2.length);
             for (int i = 0; i < arrayOriginal.length && i < array2.length; i++) {
                 array2[i] = arrayOriginal[i];
             }
@@ -117,14 +115,14 @@ public class Ud1a5Pra1rTriMarcMas {
 
     public static int[] ordenacioAvançada(int[] array, int algorisme) {
         if (algorisme == 1) {
-            mergeSort(array);
+            return mergeSort(array);
         } else {
-            quickSort(array);
+            return quickSort(array);
         }
-        return array;
     }
 
     public static int[] mergeSort(int[] arrayOriginal) {
+        int arrayOrdenat[] = new int[0];
         /* com funciona mergesort
         1: divideix l'array en dues mitats, fins que cada item esta tot sol
         2: va agafant els items de 2 en 2 i les junta en arrays temporals ordenats
@@ -135,47 +133,42 @@ public class Ud1a5Pra1rTriMarcMas {
         2358 1479 ->
         12345789
          */
-        if (arrayOriginal.length == 1) {
-            return arrayOriginal;
-        }
-        int array1[] = new int[0];
-        int array2[] = new int[0];
+        // if (arrayOriginal.length == 1) {
+        //     return arrayOriginal;
+        // }
+        int arrayA[] = new int[0];
+        int arrayB[] = new int[0];
         for (int i = 0; i < arrayOriginal.length; i++) {
-            if (i < (arrayOriginal.length / 2)) { //primera mitat va a array1
-                array1 = insertarValor(arrayOriginal[i], array1);
-            } else { //segona mitat va a array2
-                array2 = insertarValor(arrayOriginal[i], array2);
+            if (i < arrayOriginal.length / 2) {
+                arrayA = insertarValor(arrayOriginal[i], arrayA);
+            } else {
+                arrayB = insertarValor(arrayOriginal[i], arrayB);
             }
         }
-        return merge(array1, array2);
-        // array1 = mergeSort(array1);
-        // array2 = mergeSort(array2);
+        imprimirArray(arrayA);
+        imprimirArray(arrayB);
+        if (arrayA.length > 1) {
+            arrayA = mergeSort(arrayA);
+        }
+        if (arrayB.length > 1) {
+            arrayB = mergeSort(arrayB);
+        }
+        return juntarArrays(arrayA, arrayB);
     }
 
-    public static int[] merge(int[] arrayA, int[] arrayB) {
-        int[] arrayComplet = new int[0];
-        System.out.println("Merge");
+    public static int[] juntarArrays(int[] arrayA, int[] arrayB) {
+        int arrayJunt[] = new int[0];
         while (arrayA.length > 1 && arrayB.length > 1) {
             if (arrayA[0] > arrayB[0]) {
-                System.out.println("ArrayA > ArrayB");
-                moureValor(arrayB, arrayComplet);
+                arrayJunt = insertarValor(arrayB[0], arrayJunt);
+                arrayB = llevarDarrerValor(arrayB);
             } else {
-                moureValor(arrayA, arrayComplet);
+                arrayJunt = insertarValor(arrayA[0], arrayJunt);
+                arrayA = llevarDarrerValor(arrayA);
             }
         }
-        while (arrayA.length > 1) {
-            moureValor(arrayA, arrayComplet);
-        }
-        while (arrayB.length > 1) {
-            moureValor(arrayB, arrayComplet);
-        }
-        return arrayComplet;
-    }
 
-    public static void moureValor(int[] arrayDesde, int[] arrayCapA) {
-        System.out.print("Moure");
-        arrayCapA = insertarValor(arrayDesde[0], arrayDesde);
-        arrayDesde = llevarDarrerValor(arrayDesde);
+        return arrayJunt;
     }
 
     public static int[] quickSort(int[] array) {
