@@ -125,6 +125,7 @@ public class Ud1a5Pra1rTriMarcMas {
     }
 
     public static int[] mergeSort(int[] arrayOriginal) {
+        int[] test = new int[0];
 
         /* com funciona mergesort
         1: divideix l'array en dues mitats, fins que cada item esta tot sol
@@ -136,75 +137,72 @@ public class Ud1a5Pra1rTriMarcMas {
         2358 1479 ->
         12345789
          */
-        // imprimirArray(arrayOriginal);
-        if (arrayOriginal.length == 1) {
-            int arrayCopia[] = copiarArray(arrayOriginal);
-            return arrayCopia;
-        }
-        int midaArrayA = 0;
-        if (arrayOriginal.length % 2 == 0) {
-            midaArrayA = arrayOriginal.length / 2;
-        } else {
-            midaArrayA = arrayOriginal.length / 2 + 1;
-        }
-        int arrayA[] = new int[(int) midaArrayA];
-        int arrayB[] = new int[(int) (arrayOriginal.length / 2)];
-        int index = 0;
-        for (int i = 0; i < arrayA.length; i++) {
-            arrayA[i] = arrayOriginal[index];
-            index++;
-        }
-        for (int i = 0; i < arrayB.length; i++) {
-            arrayB[i] = arrayOriginal[index];
-            index++;
-        }
-
-        arrayA = mergeSort(arrayA);
-        arrayB = mergeSort(arrayB);
-        return juntarArrays(arrayA, arrayB);
+        return test;
     }
 
-    public static int[] juntarArrays(int[] arrayA, int[] arrayB) {
-        int arrayJunt[] = new int[arrayA.length + arrayB.length];
-        System.out.println("Imprimir A");
-        imprimirArray(arrayA);
-        System.out.println("Imprimir B");
-        imprimirArray(arrayB);
-        int index = 0;
-        while (arrayA.length > 1 && arrayB.length > 1) {
-            if (arrayA[0] > arrayB[0]) {
-                System.out.println("If 1");
-                arrayJunt[index] = arrayB[0];
-                arrayB = llevarPrimerValor(arrayB);
-                System.out.println("arrayJunt 1");
-                imprimirArray(arrayJunt);
-            } else {
-                System.out.println("If 2");
-                arrayJunt[index] = arrayA[0];
-                arrayA = llevarPrimerValor(arrayA);
-                System.out.println("arrayJunt 2");
-                imprimirArray(arrayJunt);
-            }
-            index++;
-        }
-        while (arrayA.length > 1) {
-            arrayJunt[index] = arrayA[0];
-            arrayA = llevarPrimerValor(arrayA);
-            index++;
-        }
-        while (arrayB.length > 1) {
-            arrayJunt[index] = arrayB[0];
-            arrayB = llevarPrimerValor(arrayB);
-            index++;
-        }
-        System.out.println("Imprimir Junt");
-        imprimirArray(arrayJunt);
-        return copiarArray(arrayJunt);
+    public static void girarNombres(int[] array, int indexA, int indexB) {
+        int temp = array[indexA];
+        array[indexA] = array[indexB];
+        array[indexB] = temp;
     }
 
     public static int[] quickSort(int[] array) {
+        return quickSort(array, 0, array.length);
+    }
 
-        return array;
+    public static int[] quickSort(int[] array, int min, int max) {
+        int[] taulaOrdenada = copiarArray(array);
+        int indexPivot = (int) taulaOrdenada.length / 2; //emprare el nombre denmig com a pivot
+        // agaf un pivot, moc fins al final
+        // agafam 3
+        // 2 6 5 '3' 8 7 1 0
+        // 2 6 5 0 8 7 1 '3'
+        // agafes el PRIMER nombre mes GRAN que el pivot desde la esquerra
+        // agafes el PRIMER nombre mes PETIT que el pivot desde la dreta 
+        // gires
+        // atures quan itemfromLeft > itemfromRight 
+        // itemfromLeft swapWith pivot
+        girarNombres(taulaOrdenada, indexPivot, taulaOrdenada.length - 1); //vull girar el pivot amb el darrer nombre
+        int index = 0;
+        int indexEsquerra = 0;
+        int indexDreta = 0;
+        while (taulaOrdenada[index] < taulaOrdenada[indexPivot] && index < taulaOrdenada.length) {
+            index++;
+        }
+        indexEsquerra = index;
+        index = taulaOrdenada.length - 2; //-1 per el darrer valor, -2 per el pivot
+        while (taulaOrdenada[index] > taulaOrdenada[indexPivot] && index > 0) {
+            index--;
+        }
+        indexDreta = index;
+        System.out.println("Antes de ordenar");
+        imprimirArray(taulaOrdenada);
+        System.out.println("Despres de ordenar");
+        girarNombres(taulaOrdenada, indexDreta, indexEsquerra);
+
+        return taulaOrdenada;
+        // return taulaOrdenada;
+        // if (comprovarOrdenacio(taulaOrdenada)) {
+        //     return taulaOrdenada;
+        // } else {
+        //     int midaArrayL = 0;
+        //     if ((int) (taulaOrdenada.length / 2) % 2 == 0) {
+        //         midaArrayL = (int) taulaOrdenada.length / 2;
+        //     } else {
+        //         midaArrayL = (int) taulaOrdenada.length / 2 + 1;
+        //     }
+        //     int[] arrayL = new int[midaArrayL];
+        //     for (int i = 0; i < arrayL.length; i++) {
+        //         // arrayL = quickSort(arrayL);
+        //         quickSort(arrayL);
+        //     }
+        //     int[] arrayR = new int[(int) (taulaOrdenada.length / 2)];
+        //     for (int i = arrayR.length - 1; i < taulaOrdenada.length; i++) {
+        //         // arrayR = quickSort(arrayR);
+        //         quickSort(arrayR);
+        //     }
+        // }
+        // return taulaOrdenada;
     }
 
     public static int cercaBinaria(int[] array, int clau) {
