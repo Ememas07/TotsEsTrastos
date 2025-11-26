@@ -118,7 +118,7 @@ public class Ud1a5Pra1rTriMarcMas {
 
     public static int[] ordenacioAvançada(int[] array, int algorisme) {
         if (algorisme == 1) {
-            return mergeSort(array);
+            return mergeSort(array); // NO FUNCIONA
         } else {
             return quickSort(array);
         }
