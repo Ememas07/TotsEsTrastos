@@ -63,8 +63,11 @@ public class Ud1a5Pra1rTriMarcMas {
         return array2;
     }
 
-    public static int[] llevarDarrerValor(int[] array) {
-        int[] array2 = copiarArray(array, array.length - 1);
+    public static int[] llevarPrimerValor(int[] array) {
+        int[] array2 = new int[array.length - 1];
+        for (int i = 1; i < array2.length; i++) {
+            array2[i - 1] = array[i];
+        }
         return array2;
     }
 
@@ -122,7 +125,7 @@ public class Ud1a5Pra1rTriMarcMas {
     }
 
     public static int[] mergeSort(int[] arrayOriginal) {
-        int arrayOrdenat[] = new int[0];
+
         /* com funciona mergesort
         1: divideix l'array en dues mitats, fins que cada item esta tot sol
         2: va agafant els items de 2 en 2 i les junta en arrays temporals ordenats
@@ -133,42 +136,70 @@ public class Ud1a5Pra1rTriMarcMas {
         2358 1479 ->
         12345789
          */
-        // if (arrayOriginal.length == 1) {
-        //     return arrayOriginal;
-        // }
-        int arrayA[] = new int[0];
-        int arrayB[] = new int[0];
-        for (int i = 0; i < arrayOriginal.length; i++) {
-            if (i < arrayOriginal.length / 2) {
-                arrayA = insertarValor(arrayOriginal[i], arrayA);
-            } else {
-                arrayB = insertarValor(arrayOriginal[i], arrayB);
-            }
+        // imprimirArray(arrayOriginal);
+        if (arrayOriginal.length == 1) {
+            int arrayCopia[] = copiarArray(arrayOriginal);
+            return arrayCopia;
         }
-        imprimirArray(arrayA);
-        imprimirArray(arrayB);
-        if (arrayA.length > 1) {
-            arrayA = mergeSort(arrayA);
+        int midaArrayA = 0;
+        if (arrayOriginal.length % 2 == 0) {
+            midaArrayA = arrayOriginal.length / 2;
+        } else {
+            midaArrayA = arrayOriginal.length / 2 + 1;
         }
-        if (arrayB.length > 1) {
-            arrayB = mergeSort(arrayB);
+        int arrayA[] = new int[(int) midaArrayA];
+        int arrayB[] = new int[(int) (arrayOriginal.length / 2)];
+        int index = 0;
+        for (int i = 0; i < arrayA.length; i++) {
+            arrayA[i] = arrayOriginal[index];
+            index++;
         }
+        for (int i = 0; i < arrayB.length; i++) {
+            arrayB[i] = arrayOriginal[index];
+            index++;
+        }
+
+        arrayA = mergeSort(arrayA);
+        arrayB = mergeSort(arrayB);
         return juntarArrays(arrayA, arrayB);
     }
 
     public static int[] juntarArrays(int[] arrayA, int[] arrayB) {
-        int arrayJunt[] = new int[0];
+        int arrayJunt[] = new int[arrayA.length + arrayB.length];
+        System.out.println("Imprimir A");
+        imprimirArray(arrayA);
+        System.out.println("Imprimir B");
+        imprimirArray(arrayB);
+        int index = 0;
         while (arrayA.length > 1 && arrayB.length > 1) {
             if (arrayA[0] > arrayB[0]) {
-                arrayJunt = insertarValor(arrayB[0], arrayJunt);
-                arrayB = llevarDarrerValor(arrayB);
+                System.out.println("If 1");
+                arrayJunt[index] = arrayB[0];
+                arrayB = llevarPrimerValor(arrayB);
+                System.out.println("arrayJunt 1");
+                imprimirArray(arrayJunt);
             } else {
-                arrayJunt = insertarValor(arrayA[0], arrayJunt);
-                arrayA = llevarDarrerValor(arrayA);
+                System.out.println("If 2");
+                arrayJunt[index] = arrayA[0];
+                arrayA = llevarPrimerValor(arrayA);
+                System.out.println("arrayJunt 2");
+                imprimirArray(arrayJunt);
             }
+            index++;
         }
-
-        return arrayJunt;
+        while (arrayA.length > 1) {
+            arrayJunt[index] = arrayA[0];
+            arrayA = llevarPrimerValor(arrayA);
+            index++;
+        }
+        while (arrayB.length > 1) {
+            arrayJunt[index] = arrayB[0];
+            arrayB = llevarPrimerValor(arrayB);
+            index++;
+        }
+        System.out.println("Imprimir Junt");
+        imprimirArray(arrayJunt);
+        return copiarArray(arrayJunt);
     }
 
     public static int[] quickSort(int[] array) {
