@@ -153,97 +153,73 @@ public class Ud1a5Pra1rTriMarcMas {
         array[indexB] = temp;
     }
 
-    public static int nombreDreta(int[] array, int pivot) {
-        // int index = array.length - 1;
+    public static int[] quickSort(int array[]) {
+        int[] taulaOrdenada = copiarArray(array);
+        return quickSort(taulaOrdenada, 0, taulaOrdenada.length - 1);
 
-        int index = array.length - 1;
-        // while (array[index] > pivot && index > 0) {
-        while (array[index] > pivot && index > 0) {
-            index--;
-        }
-        return index;
-    }
-
-    public static int nombreEsquerra(int[] array, int pivot) {
-        // int index = 0;
-        int index = 0;
-        // while (array[index] < pivot && index < array.length - 1) {
-        while (array[index] < pivot && index < array.length - 1) {
-            index++;
-        }
-        return index;
-    }
-
-    public static int[] quickSort(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 100);
-            // return quickSort(array, 0, 5);
-        }
-        return quickSort(array, 0, array.length);
     }
 
     public static int[] quickSort(int[] array, int min, int max) {
-        // agaf un pivot, moc fins al final
-        // agafam 3
-        // 2 6 5 '3' 8 7 1 0
-        // 2 6 5 0 8 7 1 '3'
-        // agafes el PRIMER nombre mes GRAN que el pivot desde la esquerra
-        // agafes el PRIMER nombre mes PETIT que el pivot desde la dreta 
-        // gires
-        // atures quan itemfromLeft > itemfromRight 
-
-        int[] taula = copiarArray(array);
-        imprimirArray(taula);
-        int pivotIndex = max - 1;
-        if (pivotIndex < 0) {
-            return taula;
-        }
-        int pivot = taula[pivotIndex];
-        int indexEsquerra = 0;
-        int indexDreta = 0;
-        do {
-            indexDreta = nombreDreta(taula, pivot);
-            System.out.println("A: " + indexDreta);
-            indexEsquerra = nombreEsquerra(taula, pivot);
-            System.out.println("B: " + indexEsquerra);
-            if (indexDreta > indexEsquerra) {
-                girarNombres(taula, indexDreta, indexEsquerra);
-            }
-        } while (indexDreta > indexEsquerra);
         if (min < max) {
-            taula = quickSort(taula, min, pivotIndex - 1);
-            taula = quickSort(taula, pivotIndex + 1, max - 1);
+            int pivot = calcularPivot(array, min, max);
+            quickSort(array, min, pivot - 1);
+            quickSort(array, pivot + 1, max);
         }
-        return taula;
+        return array;
+    }
 
+    public static int calcularPivot(int[] taula, int min, int max) {
+        int pivot = taula[max];
+        int i = min - 1;
+        for (int j = min; j < max; j++) {
+            if (taula[j] <= pivot) {
+                i++;
+                girarNombres(taula, i, j);
+            }
+        }
+
+        girarNombres(taula, i + 1, max);
+        return i + 1;
     }
 
     public static int cercaBinaria(int[] array, int clau, int min, int max) {
+        imprimirArray(array);
         if (!comprovarOrdenacio(array)) {
             System.out.println("No es pot fer cerca binaria sense ordenar!");
             return -1;
         }
-        int index = max / 2;
-        if (index == -1) {
+        //cerca binaria, vull comprovar l'element del mig de l'array
+        int index = (int) ((max - min) / 2) + min;
+        System.out.println(max - min);
+        System.out.println((max - min) / 2);
+        if ((max - min) % 2 == 1 && max - min != 0) {
+            index += 1;
+        }
+        System.out.println("Index: " + index);
+        System.out.println("Min: " + min);
+        System.out.println("Max: " + max);
+        if (index < 0) {
             System.out.println("Error");
             return index;
         }
         if (array[index] == clau) {
+            System.out.println("Element " + array[index] + " trobat a la posició " + index);
             return index;
             // Element X trobat a la posició Y
         }
-        if (clau > array[index]) {
-            min = (int) max / 2;
+        if (clau < array[index]) {
+            max = index;
         } else {
-            max = (int) max / 2;
+            min = index;
         }
-
         cercaBinaria(array, clau, min, max);
         return index;
     }
 
     public static int cercaBinaria(int[] array, int clau) {
-        return cercaBinaria(array, clau, 0, array.length);
+        int[] array2 = {2, 4, 6, 8, 14, 16, 25};
+        array = copiarArray(array2);
+        return cercaBinaria(array, clau, 0, array.length - 1);
     }
 
     public static void divisorsNombre(int[] array) {
@@ -316,7 +292,7 @@ public class Ud1a5Pra1rTriMarcMas {
                     case 2 -> {
                         System.out.println("Quin nombre vol cercar?");
                         int clau = s.nextInt();
-                        cercaBinaria(array, clau, 0, 0);
+                        cercaBinaria(array, clau);
                     }
                     case 3 -> {
                         divisorsNombre(array);
@@ -405,4 +381,66 @@ public class Ud1a5Pra1rTriMarcMas {
 //             imprimirArray(taula);
 //         }
 //     }
-        // }
+// }
+// public static int nombreDreta(int[] array, int pivot, int min, int max) {
+//     int index = max - 1;
+//     while (array[index] > pivot && index > min) {
+//         index--;
+//     }
+//     return index;
+// }
+// public static int nombreDreta(int[] array, int pivot) {
+//     return nombreDreta(array, pivot, 0, array.length);
+// }
+// public static int nombreEsquerra(int[] array, int pivot, int min, int max) {
+//     int index = min;
+//     while (index < max - 1 && array[index] < pivot) {
+//         index++;
+//     }
+//     return index;
+// }
+// public static int nombreEsquerra(int[] array, int pivot) {
+//     return nombreDreta(array, pivot, 0, array.length);
+// }
+// public static int[] quickSort(int[] array) {
+//     // for (int i = 0; i < array.length; i++) {
+//     //     array[i] = (int) (Math.random() * 100);
+//     //     // return quickSort(array, 0, 5);
+//     // }
+//     return quickSort(array, 0, array.length);
+// }
+// public static int[] quickSort(int[] array, int min, int max) {
+//     // agaf un pivot, moc fins al final
+//     // agafam 3
+//     // 2 6 5 '3' 8 7 1 0
+//     // 2 6 5 0 8 7 1 '3'
+//     // agafes el PRIMER nombre mes GRAN que el pivot desde la esquerra
+//     // agafes el PRIMER nombre mes PETIT que el pivot desde la dreta 
+//     // gires
+//     // atures quan itemfromLeft > itemfromRight 
+//     int[] taula = copiarArray(array);
+//     imprimirArray(taula);
+//     int pivotIndex = max - 1;
+//     if (pivotIndex < 0) {
+//         return taula;
+//     }
+//     int pivot = taula[pivotIndex];
+//     int indexEsquerra = 0;
+//     int indexDreta = 0;
+//     do {
+//         indexDreta = nombreDreta(taula, pivot);
+//         // indexDreta = nombreDreta(taula, pivot, min, max);
+//         System.out.println("A: " + indexDreta);
+//         // indexEsquerra = nombreEsquerra(taula, pivot, min, max);
+//         indexEsquerra = nombreEsquerra(taula, pivot);
+//         System.out.println("B: " + indexEsquerra);
+//         if (indexDreta > indexEsquerra) {
+//             girarNombres(taula, indexDreta, indexEsquerra);
+//         }
+//     } while (indexDreta > indexEsquerra);
+//     if (min < max) {
+//         taula = quickSort(taula, min, pivotIndex - 1);
+//         taula = quickSort(taula, pivotIndex + 1, max - 1);
+//     }
+//     return taula;
+    // }
