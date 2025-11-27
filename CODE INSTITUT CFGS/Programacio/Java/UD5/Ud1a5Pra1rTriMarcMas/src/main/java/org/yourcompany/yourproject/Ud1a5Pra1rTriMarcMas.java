@@ -56,8 +56,10 @@ public class Ud1a5Pra1rTriMarcMas {
                 nombres = insertarValor(input, nombres);
             } while (input != 0);
         } else {
-            int[] nombres2 = {34, 56, 21, 23, 50, 2, 5, 8, 3, 7, 0};
-            nombres = copiarArray(nombres2);
+            for (int i = 0; i < 10; i++) {
+                input = (int) (Math.random() * 100);
+                nombres = insertarValor(input, nombres);
+            }
         }
         return nombres;
     }
@@ -154,7 +156,7 @@ public class Ud1a5Pra1rTriMarcMas {
     public static int nombreDreta(int[] array, int pivot) {
         // int index = array.length - 1;
 
-        int index = array.length - 1;   
+        int index = array.length - 1;
         // while (array[index] > pivot && index > 0) {
         while (array[index] > pivot && index > 0) {
             index--;
@@ -188,13 +190,11 @@ public class Ud1a5Pra1rTriMarcMas {
         // atures quan itemfromLeft > itemfromRight 
 
         int[] taula = copiarArray(array);
-        System.out.println("Abans");
-        int pivotIndex = (int) (max - min) / 2;
+        int pivotIndex = max - 1;
         if (pivotIndex < 0) {
             return taula;
         }
         int pivot = taula[pivotIndex];
-        System.out.println("Pivot " + pivot);
         int indexEsquerra = 0;
         int indexDreta = 0;
         do {
@@ -204,14 +204,8 @@ public class Ud1a5Pra1rTriMarcMas {
                 girarNombres(taula, indexDreta, indexEsquerra);
             }
         } while (indexDreta > indexEsquerra);
-
-        System.out.println("TAULA:");
-        imprimirArray(taula);
-
         if (min < max) {
-            System.out.println("Entrada dreta");
             taula = quickSort(taula, min, pivotIndex - 1);
-            System.out.println("Entrada esquerra");
             taula = quickSort(taula, pivotIndex + 1, max - 1);
         }
         return taula;
