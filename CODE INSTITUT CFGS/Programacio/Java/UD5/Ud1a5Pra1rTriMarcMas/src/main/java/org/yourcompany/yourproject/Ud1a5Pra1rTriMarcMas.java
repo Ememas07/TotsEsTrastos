@@ -192,9 +192,9 @@ public class Ud1a5Pra1rTriMarcMas {
         System.out.println("Min: " + min);
         System.out.println("Max: " + max);
         int pivot = (taula[min] + taula[(int) ((max - min) / 2) + min] + taula[max - 1]) / 3;
-        if (max - min == 1 || taula[min] == pivot || taula[max - 1] == pivot) {
-            return taula;
-        }
+        // if (max - min == 1 || taula[min] == pivot || taula[max - 1] == pivot) {
+        //     return taula;
+        // }
         // int pivot = (taula[0] + taula[(int) taula.length / 2] + taula[taula.length - 1]) / 3;
         System.out.println("Pivot " + pivot);
         int indexEsquerra = 0;
@@ -207,16 +207,22 @@ public class Ud1a5Pra1rTriMarcMas {
             }
         } while (indexDreta > indexEsquerra);
 
-        System.out.println("Primer numero mes gran: " + taula[indexEsquerra]);
-
+        // System.out.println("Primer numero mes gran: " + taula[indexEsquerra]);
         // // casi funciona !!
-        taula = quickSort(taula, 0, indexDreta);
-        taula = quickSort(taula, indexEsquerra, taula.length);
-        if (indexDreta > 1) {
+        imprimirArray(taula);
+        int opcio = 0;
+        Scanner s = new Scanner(System.in);
+        while (!comprovarOrdenacio(taula)) {
+            System.out.println("Part a ordenar (1 es esquerra)");
+            opcio = s.nextInt();
+            System.out.println("Primer nombre desordenat:");
+            // System.out.println(taula[primerIndexDesordenat(taula)]);
+            if (opcio == 1) {
+                if (indexDreta > 0) {
+                    taula = quickSort(taula, 0, indexDreta);
+                }
+            }
         }
-        if (indexEsquerra > 1) {
-        }
-
         // if (indexEsquerra > 1) {
         //     taula = quickSort(taula, indexDreta + 1, taula.length);
         // }
@@ -236,6 +242,14 @@ public class Ud1a5Pra1rTriMarcMas {
         imprimirArray(subTaulaEsq);
          */
         return taula;
+    }
+
+    public static int primerIndexDesordenat(int[] array) {
+        int index = 0;
+        while (array[index] < array[index + 1]) {
+            index++;
+        }
+        return index;
     }
 
     public static int cercaBinaria(int[] array, int clau) {
