@@ -45,9 +45,9 @@ public class Ud1a5Pra1rTriMarcMas {
 
     public static int[] demanarNombres() {
         Scanner s = new Scanner(System.in);
-        int[] nombres = new int[0];
         int input = 0;
         System.out.println("Debug mode = 1");
+        int[] nombres = new int[0];
         if (s.nextInt() != 1) {
             do {
                 System.out.println("Introdueixi un nombre");
@@ -56,12 +56,9 @@ public class Ud1a5Pra1rTriMarcMas {
                 nombres = insertarValor(input, nombres);
             } while (input != 0);
         } else {
-            for (int i = 0; i < 10; i++) {
-                input = (int) (Math.random() * 100);
-                nombres = insertarValor(input, nombres);
-            }
+            int[] nombres2 = {34, 56, 21, 23, 50, 2, 5, 8, 3, 7, 0};
+            nombres = copiarArray(nombres2);
         }
-
         return nombres;
     }
 
@@ -155,7 +152,10 @@ public class Ud1a5Pra1rTriMarcMas {
     }
 
     public static int nombreDreta(int[] array, int pivot) {
+        // int index = array.length - 1;
+        
         int index = array.length - 1;
+        // while (array[index] > pivot && index > 0) {
         while (array[index] > pivot && index > 0) {
             index--;
         }
@@ -163,7 +163,9 @@ public class Ud1a5Pra1rTriMarcMas {
     }
 
     public static int nombreEsquerra(int[] array, int pivot) {
+        // int index = 0;
         int index = 0;
+        // while (array[index] < pivot && index < array.length - 1) {
         while (array[index] < pivot && index < array.length - 1) {
             index++;
         }
@@ -176,9 +178,6 @@ public class Ud1a5Pra1rTriMarcMas {
     }
 
     public static int[] quickSort(int[] array, int min, int max) {
-        if (array.length == 1) {
-            return array;
-        }
         // agaf un pivot, moc fins al final
         // agafam 3
         // 2 6 5 '3' 8 7 1 0
@@ -187,15 +186,14 @@ public class Ud1a5Pra1rTriMarcMas {
         // agafes el PRIMER nombre mes PETIT que el pivot desde la dreta 
         // gires
         // atures quan itemfromLeft > itemfromRight 
-        // itemfromLeft swapWith pivot
+
         int[] taula = copiarArray(array);
-        System.out.println("Min: " + min);
-        System.out.println("Max: " + max);
-        int pivot = (taula[min] + taula[(int) ((max - min) / 2) + min] + taula[max - 1]) / 3;
-        // if (max - min == 1 || taula[min] == pivot || taula[max - 1] == pivot) {
-        //     return taula;
-        // }
-        // int pivot = (taula[0] + taula[(int) taula.length / 2] + taula[taula.length - 1]) / 3;
+        System.out.println("Abans");
+        int pivotIndex = (int) (max - min) / 2;
+        if (pivotIndex < 0) {
+            return taula;
+        }
+        int pivot = taula[pivotIndex];
         System.out.println("Pivot " + pivot);
         int indexEsquerra = 0;
         int indexDreta = 0;
@@ -207,60 +205,45 @@ public class Ud1a5Pra1rTriMarcMas {
             }
         } while (indexDreta > indexEsquerra);
 
-        // System.out.println("Primer numero mes gran: " + taula[indexEsquerra]);
-        // // casi funciona !!
+        System.out.println("TAULA:");
         imprimirArray(taula);
-        int opcio = 0;
-        Scanner s = new Scanner(System.in);
-        while (!comprovarOrdenacio(taula)) {
-            System.out.println("Part a ordenar (1 es esquerra)");
-            opcio = s.nextInt();
-            System.out.println("Primer nombre desordenat:");
-            // System.out.println(taula[primerIndexDesordenat(taula)]);
-            if (opcio == 1) {
-                if (indexDreta > 0) {
-                    taula = quickSort(taula, 0, indexDreta);
-                }
-            }
+
+        if (max > min) {
+            System.out.println("Entrada dreta");
+            taula = quickSort(taula, min, pivotIndex - 1);
+            System.out.println("Entrada esquerra");
+            taula = quickSort(taula, pivotIndex + 1, max - 1);
         }
-        // if (indexEsquerra > 1) {
-        //     taula = quickSort(taula, indexDreta + 1, taula.length);
-        // }
-        // SUBDIVISIO
-        /* aixo funciona, pero no serveix per quickSort lol
-        System.out.println("Crear subtaula amb nombres mes petits");
-        int subTaulaEsq[] = copiarArray(taula, indexEsquerra);
-        // int subTaulaEsq[] = new int[taula.length];
-        // for (int i = 0; i < indexEsquerra; i++) {
-        //     subTaulaEsq[i] = taula[i];
-        // }
-        // imprimirArray(taula);
-        System.out.println("Antes");
-        imprimirArray(subTaulaEsq);
-        subTaulaEsq = quickSort(subTaulaEsq);
-        System.out.println("Despues");
-        imprimirArray(subTaulaEsq);
-         */
         return taula;
+
     }
 
-    public static int primerIndexDesordenat(int[] array) {
-        int index = 0;
-        while (array[index] < array[index + 1]) {
-            index++;
+    public static int cercaBinaria(int[] array, int clau, int min, int max) {
+        if (!comprovarOrdenacio(array)) {
+            System.out.println("No es pot fer cerca binaria sense ordenar!");
+            return -1;
         }
+        int index = max / 2;
+        if (index == -1) {
+            System.out.println("Error");
+            return index;
+        }
+        if (array[index] == clau) {
+            return index;
+            // Element X trobat a la posició Y
+        }
+        if (clau > array[index]) {
+            min = (int) max / 2;
+        } else {
+            max = (int) max / 2;
+        }
+
+        cercaBinaria(array, clau, min, max);
         return index;
     }
 
     public static int cercaBinaria(int[] array, int clau) {
-
-        int index = 0;
-        if (index > 0) {
-            // Element X trobat a la posició Y
-        } else {
-            // Element X no trobat”, però no s'ha de mostrar -1.
-        }
-        return index;
+        return cercaBinaria(array, clau, 0, array.length);
     }
 
     public static void divisorsNombre(int[] array) {
@@ -333,7 +316,7 @@ public class Ud1a5Pra1rTriMarcMas {
                     case 2 -> {
                         System.out.println("Quin nombre vol cercar?");
                         int clau = s.nextInt();
-                        cercaBinaria(array, clau);
+                        cercaBinaria(array, clau, 0, 0);
                     }
                     case 3 -> {
                         divisorsNombre(array);
@@ -355,3 +338,71 @@ public class Ud1a5Pra1rTriMarcMas {
     // System.out.println("test");
     // resetColor(); //deixa de pintar en color
 }
+
+// restos de quicksort
+/* int test{};
+        // int[] test2;
+        // int test3 = new int[10];
+        // int[] test4 = {1,2,3};
+        // System.out.println("Primer numero mes gran: " + taula[indexEsquerra]);
+        // // casi funciona !!
+        // imprimirArray(taula);
+        // int opcio = 0;
+        // int finalSort = 0;
+        // Scanner s = new Scanner(System.in);
+        // while (opcio != 2) {
+        //     System.out.println("Part a ordenar (1 es esquerra)");
+        //     opcio = s.nextInt();
+        //     if (opcio == 1) {
+        //         if (indexDreta > 0) {
+        //             System.out.println("Antes");
+        //             imprimirArray(taula);
+        //             taula = quickSort(taula, primerIndexDesordenat(taula), indexDreta);
+        //             System.out.println("Despues");
+        //             imprimirArray(taula);
+        //             System.out.println("Els nombres fins a " + primerIndexDesordenat(taula) + " Estan ordenats");
+        //         } else {
+        //             System.out.println("Else");
+        //             imprimirArray(taula);
+        //             System.out.println("Els nombres fins a " + primerIndexDesordenat(taula) + " Estan ordenats");
+        //         }
+        //     }
+        // }
+        // if (indexEsquerra > 1) {
+        //     taula = quickSort(taula, indexDreta + 1, taula.length);
+        // }
+        // SUBDIVISIO
+        /* aixo funciona, pero no serveix per quickSort lol
+        System.out.println("Crear subtaula amb nombres mes petits");
+        int subTaulaEsq[] = copiarArray(taula, indexEsquerra);
+        // int subTaulaEsq[] = new int[taula.length];
+        // for (int i = 0; i < indexEsquerra; i++) {
+        //     subTaulaEsq[i] = taula[i];
+        // }
+        // imprimirArray(taula);
+        System.out.println("Antes");
+        imprimirArray(subTaulaEsq);
+        subTaulaEsq = quickSort(subTaulaEsq);
+        System.out.println("Despues");
+        imprimirArray(subTaulaEsq);
+ */
+// casi funciona !!
+// int opcio = 0;
+// int finalSort = 0;
+// Scanner s = new Scanner(System.in);
+// while (opcio != 2) {
+//     System.out.println("Part a ordenar (1 es esquerra)");
+//     opcio = s.nextInt();
+//     if (opcio == 1) {
+//         if (indexDreta > 0) {
+//             System.out.println("Antes");
+//             imprimirArray(taula);
+//             taula = quickSort(taula, 0, indexDreta);
+//             System.out.println("Despues");
+//             imprimirArray(taula);
+//         } else {
+//             System.out.println("Else");
+//             imprimirArray(taula);
+//         }
+//     }
+        // }
