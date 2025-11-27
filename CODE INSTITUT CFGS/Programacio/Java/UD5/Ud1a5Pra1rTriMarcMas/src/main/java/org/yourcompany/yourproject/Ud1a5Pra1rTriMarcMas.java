@@ -154,34 +154,30 @@ public class Ud1a5Pra1rTriMarcMas {
         array[indexB] = temp;
     }
 
-    public static int[] quickSort(int[] array) {
-        return quickSort(array, 0, array.length, false);
-    }
-
     public static int nombreDreta(int[] array, int pivot) {
-        int[] taula = copiarArray(array);
-        int index = array.length - 2;
-        while (taula[index] > pivot && index > 0) {
+        int index = array.length - 1;
+        while (array[index] > pivot && index > 0) {
             index--;
         }
-        System.out.println("El primer nombre menor que " + pivot + " es " + taula[index]);
         return index;
     }
 
     public static int nombreEsquerra(int[] array, int pivot) {
-        int[] taula = copiarArray(array);
         int index = 0;
-        while (taula[index] < pivot && index < array.length - 1) {
+        while (array[index] < pivot && index < array.length - 1) {
             index++;
         }
-        System.out.println("El primer nombre major que " + pivot + " es " + taula[index]);
         return index;
     }
 
-    public static int[] quickSort(int[] array, int min, int max, boolean debug) {
-        int[] taula = copiarArray(array);
-        int indexPivot = (int) taula.length / 2; //emprare el nombre denmig com a pivot
-        System.out.println("Pivot " + taula[indexPivot]);
+    public static int[] quickSort(int[] array) {
+        return quickSort(array, 0, array.length, 0);
+    }
+
+    public static int[] quickSort(int[] array, int min, int max, int debug) {
+        if (array.length == 1) {
+            return array;
+        }
         // agaf un pivot, moc fins al final
         // agafam 3
         // 2 6 5 '3' 8 7 1 0
@@ -191,35 +187,72 @@ public class Ud1a5Pra1rTriMarcMas {
         // gires
         // atures quan itemfromLeft > itemfromRight 
         // itemfromLeft swapWith pivot
-        girarNombres(taula, indexPivot, taula.length - 1); //vull girar el pivot amb el darrer nombre
-        int index = 0;
+        int[] taula = copiarArray(array);
+        System.out.println("Min: " + min);
+        System.out.println("Max: " + max);
+        int pivot = (taula[min] + taula[(int) ((max - min) / 2)] + taula[max - 1]) / 3;
+        // int pivot = (taula[0] + taula[(int) taula.length / 2] + taula[taula.length - 1]) / 3;
+        System.out.println("Pivot " + pivot);
         int indexEsquerra = 0;
         int indexDreta = 0;
-        do {
-            indexDreta = nombreDreta(taula, taula[taula.length - 1]);
-            indexEsquerra = nombreEsquerra(taula, taula[taula.length - 1]);
-            System.out.println("Antes de ordenar");
-            imprimirArray(taula);
-            System.out.println("Despres de ordenar");
-            if (indexDreta > indexEsquerra) {
-                girarNombres(taula, indexDreta, indexEsquerra);
-                imprimirArray(taula);
-            }
-            System.out.println("Index Dreta: " + indexDreta);
-            System.out.println("Index Esquerra: " + indexEsquerra);
-        } while (indexDreta > indexEsquerra);
-        girarNombres(taula, taula.length - 1, indexEsquerra);
-        // if (!comprovarOrdenacio(taula)) {
-        if (debug) {
-            System.out.println("SubTaula Esquerra");
-            imprimirArray(taula);
+        if (debug > 1) {
+            do {
+                indexDreta = nombreDreta(taula, pivot);
+                indexEsquerra = nombreEsquerra(taula, pivot);
+                if (indexDreta > indexEsquerra) {
+                    girarNombres(taula, indexDreta, indexEsquerra);
+                }
+            } while (indexDreta > indexEsquerra);
         } else {
-            int[] subTaulaEsquerra = copiarArray(taula);
-            subTaulaEsquerra = quickSort(subTaulaEsquerra, 0, indexEsquerra, true);
+            do {
+                indexDreta = nombreDreta(taula, pivot);
+                System.out.println("Nombre dreta: " + indexDreta);
+                indexEsquerra = nombreEsquerra(taula, pivot);
+                System.out.println("Nombre esquerra: " + indexEsquerra);
+                if (indexDreta > indexEsquerra) {
+                    System.out.println("Taula antes");
+                    imprimirArray(taula);
+                    girarNombres(taula, indexDreta, indexEsquerra);
+                    System.out.println("Taula despues");
+                    imprimirArray(taula);
+                }
+            } while (indexDreta > indexEsquerra);
         }
-        // }
-        return taula;
 
+        if (!comprovarOrdenacio(taula)) {
+            if (debug < 10) {
+                debug++;
+                int i = 0;
+                while (indexEsquerra > 0 && i < 10) {
+                    i++;
+                    int subTaulaEsq[] = quickSort(taula, 0, indexEsquerra, debug);
+                    imprimirArray(subTaulaEsq);
+                }
+                i = 0;
+                while (indexDreta > 0 && i < 10) {
+                    i++;
+                    int subTaulaDreta[] = quickSort(taula, indexEsquerra, taula.length, debug);
+                    imprimirArray(subTaulaDreta);
+                }
+            }
+        }
+
+
+        /* aixo funciona, pero no serveix per quickSort lol
+        System.out.println("Crear subtaula amb nombres mes petits");
+        int subTaulaEsq[] = copiarArray(taula, indexEsquerra);
+        // int subTaulaEsq[] = new int[taula.length];
+        // for (int i = 0; i < indexEsquerra; i++) {
+        //     subTaulaEsq[i] = taula[i];
+        // }
+        // imprimirArray(taula);
+        System.out.println("Antes");
+        imprimirArray(subTaulaEsq);
+        subTaulaEsq = quickSort(subTaulaEsq);
+        System.out.println("Despues");
+        imprimirArray(subTaulaEsq);
+         */
+        return taula;
     }
 
     public static int cercaBinaria(int[] array, int clau) {
