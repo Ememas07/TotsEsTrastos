@@ -153,8 +153,8 @@ public class Ud1a5Pra1rTriMarcMas {
 
     public static int nombreDreta(int[] array, int pivot) {
         // int index = array.length - 1;
-        
-        int index = array.length - 1;
+
+        int index = array.length - 1;   
         // while (array[index] > pivot && index > 0) {
         while (array[index] > pivot && index > 0) {
             index--;
@@ -208,7 +208,7 @@ public class Ud1a5Pra1rTriMarcMas {
         System.out.println("TAULA:");
         imprimirArray(taula);
 
-        if (max > min) {
+        if (min < max) {
             System.out.println("Entrada dreta");
             taula = quickSort(taula, min, pivotIndex - 1);
             System.out.println("Entrada esquerra");
