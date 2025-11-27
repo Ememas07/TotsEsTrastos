@@ -175,8 +175,11 @@ public class Ud1a5Pra1rTriMarcMas {
     }
 
     public static int[] quickSort(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) (Math.random() * 100);
+            // return quickSort(array, 0, 5);
+        }
         return quickSort(array, 0, array.length);
-        // return quickSort(array, 0, 5);
     }
 
     public static int[] quickSort(int[] array, int min, int max) {
@@ -190,6 +193,7 @@ public class Ud1a5Pra1rTriMarcMas {
         // atures quan itemfromLeft > itemfromRight 
 
         int[] taula = copiarArray(array);
+        imprimirArray(taula);
         int pivotIndex = max - 1;
         if (pivotIndex < 0) {
             return taula;
@@ -199,7 +203,9 @@ public class Ud1a5Pra1rTriMarcMas {
         int indexDreta = 0;
         do {
             indexDreta = nombreDreta(taula, pivot);
+            System.out.println("A: " + indexDreta);
             indexEsquerra = nombreEsquerra(taula, pivot);
+            System.out.println("B: " + indexEsquerra);
             if (indexDreta > indexEsquerra) {
                 girarNombres(taula, indexDreta, indexEsquerra);
             }
