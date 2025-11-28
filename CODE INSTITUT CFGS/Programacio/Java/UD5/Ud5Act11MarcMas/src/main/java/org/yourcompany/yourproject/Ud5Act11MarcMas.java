@@ -63,6 +63,8 @@ public class Ud5Act11MarcMas {
     //     System.out.println(""); //bot de linea
     //     return encerts == correcta.length; //equivalent a fer un "if encerts == correcta.length return true i return false si no"
     // }
+
+    
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Joc de La Cambra Secreta");

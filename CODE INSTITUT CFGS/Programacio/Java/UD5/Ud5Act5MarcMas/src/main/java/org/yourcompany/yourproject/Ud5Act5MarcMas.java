@@ -41,7 +41,7 @@ public class Ud5Act5MarcMas {
         int taulaOrdenada[] = ficaParells(longitud, max);//taulaOrdenada sera el resultat de la variable
         System.out.println("Aqui te la seva taula ordenada");
         for (int i = 0; i < taulaOrdenada.length; i++) {
-            System.out.println(taulaOrdenada[i]); //imprimim tots els valors
+            System.out.print(taulaOrdenada[i] + ", "); //imprimim tots els valors
         }
 
     }

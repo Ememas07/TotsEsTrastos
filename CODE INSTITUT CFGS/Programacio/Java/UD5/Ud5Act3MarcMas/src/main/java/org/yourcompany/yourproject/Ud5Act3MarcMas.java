@@ -18,7 +18,7 @@ public class Ud5Act3MarcMas {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.println("quants de nombres vol introduir?"); //demanam mida array
+        System.out.println("Quants de nombres vol introduir?"); //demanam mida array
         int midaArray = 0;
         midaArray = s.nextInt();
         int arrayNombres[] = new int[midaArray]; //cream array amb la mida introduida per l'usuari
@@ -27,7 +27,7 @@ public class Ud5Act3MarcMas {
             arrayNombres[i] = s.nextInt();
         }
         for (int i = arrayNombres.length - 1; i >= 0; i--) { //recorrem array amb ordre invers, amb >= perque també volem el valor a 0
-            System.out.println(arrayNombres[i]); //anam imprimint tots els valors
+            System.out.print(arrayNombres[i] + ", "); //anam imprimint tots els valors
         }
     }
 }
