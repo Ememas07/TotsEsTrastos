@@ -13,6 +13,7 @@ import java.util.Scanner;
  */
 public class Ud1a5Pra1rTriMarcMas {
 
+    // codis ANSI per colors
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK_TEXT = "\u001B[30m";
     public static final String ANSI_RED_TEXT = "\u001B[31m";
@@ -23,6 +24,7 @@ public class Ud1a5Pra1rTriMarcMas {
     public static final String ANSI_CYAN_TEXT = "\u001B[36m";
     public static final String ANSI_WHITE_TEXT = "\u001B[37m";
 
+    //funcio de color per pintar amb un color especific
     public static void color(int colorSeleccionat) {
 
         String colorText[] = new String[8];
@@ -43,20 +45,21 @@ public class Ud1a5Pra1rTriMarcMas {
         System.out.print(ANSI_RESET);
     }
 
-    public static int[] demanarNombres() {
+    public static int[] demanarNombres() { //demanarem nombres fins que s'introduesqui un 0
         Scanner s = new Scanner(System.in);
         int input = 0;
-        System.out.println("Debug mode = 1");
-        int[] nombres = new int[0];
-        if (s.nextInt() != 1) {
+        System.out.println("Per generar un array aleatori amb 10 entrades de 0 a 100, introdueixi -1"); //com a extra, mode de debugging
+        System.out.println("Per introduir el nombres manualment introdueixi qualsevol altre nombre");
+        int[] nombres = new int[0]; //generam un array amb longitut 0, l'anirem ampliant
+        if (s.nextInt() != -1) { //si NO hem activat el mode de debugging, anam demanant valors fins a introduir un 0
             do {
                 System.out.println("Introdueixi un nombre");
                 System.out.println("Per aturar d'introduir nombres, introdueixi 0");
                 input = s.nextInt();
-                nombres = insertarValor(input, nombres);
+                nombres = insertarValor(input, nombres); //anam insertant els valors a nombres
             } while (input != 0);
         } else {
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 10; i++) { //si hem posat mode debug, generam un array de 10 posicions amb nombres de 0 a 100
                 input = (int) (Math.random() * 100);
                 nombres = insertarValor(input, nombres);
             }
@@ -64,66 +67,79 @@ public class Ud1a5Pra1rTriMarcMas {
         return nombres;
     }
 
-    public static int[] insertarValor(int input, int[] array) {
-        int[] array2 = copiarArray(array, array.length + 1);
-        array2[array.length] = input;
+    public static int[] insertarValor(int input, int[] array) { //per insertar valors
+        int[] array2 = copiarArray(array, array.length + 1); // copiam l'array amb una posicio mes
+        array2[array.length] = input; // assignam a la darrera posicio el valor que volem insertar
         return array2;
     }
 
-    public static int[] llevarPrimerValor(int[] array) {
-        int[] array2 = new int[array.length - 1];
-        for (int i = 1; i < array2.length; i++) {
-            array2[i - 1] = array[i];
-        }
-        return array2;
-    }
-
-    public static int[] copiarArray(int[] array) {
+    public static int[] copiarArray(int[] array) { //copia de array amb mides iguals
         int[] array2 = new int[array.length];
-        for (int i = 0; i < array2.length; i++) {
+        for (int i = 0; i < array2.length; i++) { //recorrem tot l'array i ho copiam a array2
             array2[i] = array[i];
         }
         return array2;
     }
 
-    public static int[] copiarArray(int[] arrayOriginal, int midaArrayNou) {
+    public static int[] copiarArray(int[] arrayOriginal, int midaArrayNou) { //sobrecarrega, en cas de voler una mida diferent
         if (midaArrayNou == arrayOriginal.length) {
             return copiarArray(arrayOriginal);
         } else {
-            int[] array2 = new int[midaArrayNou];
-            for (int i = 0; i < arrayOriginal.length && i < array2.length; i++) {
+            int[] array2 = new int[midaArrayNou]; //cream un array amb la mida nova
+            for (int i = 0; i < arrayOriginal.length && i < array2.length; i++) { //com no sabem si sera mes curt o mes llarg, comprovam que no estiguem mirant un valor que no existeix a un dels dos arrays
                 array2[i] = arrayOriginal[i];
             }
             return array2;
         }
     }
 
+    public static boolean arraysIguals(int[] ar1, int[] ar2) {
+        if (ar1.length == ar2.length) { //si las mides son iguals, comprovam, si no ho son no feim res i retornam false
+            for (int i = 0; i < ar1.length; i++) { //recorrem tot l'array, i anam comprovant si totes les posicions son iguals
+                if (ar1[i] != ar2[i]) {
+                    return false; //si una d'elles no es igual, retornam false
+                }
+            }
+            return true; //si hem completat l'array i no hem sortit del bucle, els arrays son iguals
+        }
+        return false;
+    }
+
     public static void imprimirArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) { //recorrem tot l'array i imprimim tots els valors un darrera l'altre amb comes
             System.out.print(array[i] + ", ");
         }
         System.out.println("");
-
     }
 
-    public static void main(String[] args) throws UnsupportedEncodingException {
+    public static void main(String[] args) throws UnsupportedEncodingException { //throws UnsupportedEncoding -> per poder tenir accents
         System.setOut(new PrintStream(System.out, true, "UTF-8"));
-        int[] nombres = demanarNombres();
+        int[] nombres = demanarNombres(); // cream un array amb la funcio demanarNombres i cridam el menu amb ell
         menu(nombres);
     }
 
-    public static boolean comprovarOrdenacio(int[] array) {
-        int index = 0;
-        while (index < (array.length - 1)) {
-            if (array[index] > array[index + 1]) {
+    public static boolean comprovarOrdenacio(int[] array) { //per saber si un array esta ordenat o no
+        // int index = 0;
+        // while (index < (array.length - 1)) {
+        //     if (array[index] > array[index + 1]) {
+        //         return false;
+        //     }
+        //     index++;
+        // }
+
+        for (int i = 0; i < array.length - 1; i++) { //recorrem tot l'array
+            if (array[i] > array[i + 1]) { //si el nombre actual es mes gran que el seguent, no esta en ordre
                 return false;
             }
-            index++;
         }
-        return true;
+        return true; //si no hem sortit, esta ordenat
     }
 
-    public static int[] ordenacioAvançada(int[] array, int algorisme) {
+    public static int[] ordenacioAvançada(int[] array) {
+        return ordenacioAvançada(array, 0); //si no tenim algoritme, farem quickSort (mergeSort per ara no funciona)
+    }
+
+    public static int[] ordenacioAvançada(int[] array, int algorisme) { //si especificam algorisme, si es 1 farem mergeSort, si no, quickSort
         if (algorisme == 1) {
             return mergeSort(array); // NO FUNCIONA
         } else {
@@ -131,7 +147,7 @@ public class Ud1a5Pra1rTriMarcMas {
         }
     }
 
-    public static int[] mergeSort(int[] arrayOriginal) {
+    public static int[] mergeSort(int[] arrayOriginal) { //no funciona
         int[] test = new int[0];
 
         /* com funciona mergesort
@@ -183,69 +199,160 @@ public class Ud1a5Pra1rTriMarcMas {
     }
 
     public static int cercaBinaria(int[] array, int clau, int min, int max) {
-        imprimirArray(array);
         if (!comprovarOrdenacio(array)) {
             System.out.println("No es pot fer cerca binaria sense ordenar!");
             return -1;
         }
-        //cerca binaria, vull comprovar l'element del mig de l'array
+        //cerca binaria, vull comprovar l'element del mig de l'array (entre els dos nombres que esteim comprovant)
+        // exemple: si anam entre 0 i 10, volem mirar el numero 5, si anam entre 5 i 10, volem mirar l'element 7 (10/5 = 2 + 5 = 7)
         int index = (int) ((max - min) / 2) + min;
-        System.out.println(max - min);
-        System.out.println((max - min) / 2);
-        if ((max - min) % 2 == 1 && max - min != 0) {
-            index += 1;
-        }
-        System.out.println("Index: " + index);
-        System.out.println("Min: " + min);
-        System.out.println("Max: " + max);
-        if (index < 0) {
+        if (index < 0) { //si l'index es negatiu donam un error i surtim
             System.out.println("Error");
             return index;
         }
-        if (array[index] == clau) {
+
+        if (array[index] == clau) { //si trobam l'element, ho mostram per pantalla
             System.out.println("Element " + array[index] + " trobat a la posició " + index);
-            return index;
             // Element X trobat a la posició Y
+            return index;
         }
-        if (clau < array[index]) {
+        if (min == max) { //si no l'hem trobat i només esteim mirant un nombre, confirmam que l'element no hi és
+            System.out.println("Element " + clau + " no trobat!");
+            //Element X no trobat
+            return -1;
+        }
+        if (clau < array[index]) { //si la clau es mes petita que el nombre que hem comprovat, llevam la meitat superior de l'array
             max = index;
-        } else {
-            min = index;
+        } else { // si no, llevam la meitat inferior + 1 (hem comprovat el 5 de 0 a 10, la seguent comparativa serà de 6 (5 ja està comprovat) a 10 )
+            min = index + 1;
         }
-        cercaBinaria(array, clau, min, max);
+        cercaBinaria(array, clau, min, max); //com no hem sortit, tornam a cridar la funció
         return index;
     }
 
     public static int cercaBinaria(int[] array, int clau) {
-        int[] array2 = {2, 4, 6, 8, 14, 16, 25};
-        array = copiarArray(array2);
-        return cercaBinaria(array, clau, 0, array.length - 1);
+        return cercaBinaria(array, clau, 0, array.length - 1); //sobrecarrega, cridam l'array sencer
+    }
+
+    public static int cercaSequencial(int[] array, int clau) {
+        int i = 0;
+        while (i < array.length) {
+            if (array[i] == clau) {
+                return i;
+            }
+            i++;
+        }
+        return -1;
     }
 
     public static void divisorsNombre(int[] array) {
-        // Els divisors de X són A, B, C, … i Z
-
-        // No mostris els resultats d'una posició, si ja has calculat els divisors d'aquell nombre.
+        int[] nombresMostrats = new int[0];
+        for (int i = 0; i < array.length; i++) {
+            calcularDivisors(array[i], nombresMostrats);
+            nombresMostrats = insertarValor(array[i], nombresMostrats);
+        }
     }
 
-    public static void multiplesTres(int[] array) {
-        int arrayMultiples[] = new int[0];
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] % 3 == 0) {
-                insertarValor(array[i], arrayMultiples);
+    public static void calcularDivisors(int nombre, int[] nombresMostrats) {
+
+        if (cercaSequencial(nombresMostrats, nombre) == -1) { //si ja hem mostrat el numero, no feim res
+            int[] divisorsNombre = new int[0];
+            for (int i = 1; i < nombre; i++) {
+                if (nombre % i == 0) {
+                    // System.out.println(nombre + " es divisible per " + i);
+                    divisorsNombre = insertarValor(i, divisorsNombre);
+                }
+            }
+            if (divisorsNombre.length > 2) {
+                System.out.print("Els divisors de " + nombre + " són ");
+                for (int i = 0; i < divisorsNombre.length - 1; i++) {
+                    System.out.print(divisorsNombre[i] + ", ");
+                }
+                System.out.print("i ");
+                System.out.println(divisorsNombre[divisorsNombre.length - 1]);
+            } else {
+                System.out.println("El nombre " + nombre + " és primer, no té divisors");
             }
         }
     }
 
-    public static void menorsIMajors(int[] array) {
+    public static int[] multiplesTres(int[] array) {
+        int arrayMultiples[] = new int[0]; //cream un array de longitut 0
+        if (!comprovarOrdenacio(array)) {
+            for (int i = 0; i < array.length; i++) { //recorrem tot l'array
+                if (array[i] % 3 == 0) {
+                    arrayMultiples = insertarValor(array[i], arrayMultiples); //anam omplint el nou array cada vegada que el valor sigui multiple de 3
+                }
+            }
+        } else {
+            System.out.println("L'array introduit està ordenat!");
+            System.out.println("Aquesta opció no es possible si està ordenat");
+            arrayMultiples = copiarArray(array);
+        }
+        return arrayMultiples;
+    }
 
+    public static void menorsIMajors(int[] array) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Introdueixi un numero");
+        int input = s.nextInt();
+        while (valorMin(array) > input && input < valorMax(array)) {
+            System.out.println("Introdueixi un numero valid entre els valors minim i maxim de l'array!");
+            input = s.nextInt();
+        }
+        System.out.println("Array original: ");
+        imprimirArray(array);
+        System.out.print("Input de l'usuari: ");
+        System.out.println(input);
+        mostrarMenors(array, input);
+        mostrarMajors(array, input);
+    }
+
+    public static void mostrarMenors(int[] array, int input) {
+        System.out.println("Nombre inferiors a " + input + ":");
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < input) {
+                System.out.print(array[i] + ", ");
+            }
+        }
+        System.out.println("");
+    }
+
+    public static void mostrarMajors(int[] array, int input) {
+        System.out.println("Nombre superiors a " + input + ":");
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > input) {
+                System.out.print(array[i] + ", ");
+            }
+        }
+        System.out.println("");
+    }
+
+    public static int valorMin(int[] array) {
+        int minim = array[0]; //el primer valor sera sempre el primer valor de l'array, ja que no vull posar un nombre massa baix mai
+        for (int i = 1; i < array.length; i++) { //recorrem tot l'array, si trobam un nombre més petit que l'actual, el canviam
+            if (minim < array[i]) {
+                minim = array[i];
+            }
+        }
+        return minim;
+    }
+
+    public static int valorMax(int[] array) {
+        int maxim = array[0]; //el primer valor sera sempre el primer valor de l'array, ja que no vull posar un nombre massa alt mai
+        for (int i = 1; i < array.length; i++) { //recorrem tot l'array, si trobam un nombre més gran que l'actual, el canviam
+            if (maxim > array[i]) {
+                maxim = array[i];
+            }
+        }
+        return maxim;
     }
 
     public static void donarColor(boolean opcio) {
-        donarColor(opcio, (byte) 2, (byte) 1); //sobrecarregada de la funcio amb colors estandar, vermell i verd
+        donarColor(opcio, (byte) 2, (byte) 1); //sobrecarrega de la funcio amb colors estandar, vermell i verd
     }
 
-    public static void donarColor(boolean opcio, byte colorTrue, byte colorFalse) { //per donar color als missatges
+    public static void donarColor(boolean opcio, byte colorTrue, byte colorFalse) { //per donar color als missatges, li passariem quin color hem d'emprar (si el de true o el de false) i els dos colors que s'empraràn
         if (opcio) {
             color(colorTrue);
         } else {
@@ -259,11 +366,11 @@ public class Ud1a5Pra1rTriMarcMas {
         boolean comprovarOpcio1 = false; // boolean per saber si hem la opcio 1 o no 
         boolean sortir = false; //per saber si hem de seguir dins el bucle del menu o no
         while (!sortir) {
-            donarColor(comprovarOrdenacio(array)); //si l'array esta ordenat, 
+            donarColor(comprovarOrdenacio(array)); //si l'array esta ordenat, pintarem aquesta opcio en verd, si no, la pintarem en vermell 
             System.out.println("1. Ordenació avançada d'array");
             resetColor();
 
-            donarColor(comprovarOpcio1);
+            donarColor(comprovarOpcio1); //si hem fet l'opcio 1 abans, podem fer cerca binaria, aixi que pintarem verd, si no, vermell
             System.out.println("2. Cerca binaria");
             resetColor();
 
@@ -274,6 +381,11 @@ public class Ud1a5Pra1rTriMarcMas {
             resetColor();
 
             System.out.println("5. Mostrar Menors i Majors a un nombre");
+            resetColor();
+
+            System.out.println("6. Re-introduir array de nombres");
+
+            resetColor();
             System.out.println("Introdueix qualsevol nombre negatiu per sortir");
             int opcio = s.nextInt();
             if (opcio < 0) {
@@ -281,11 +393,12 @@ public class Ud1a5Pra1rTriMarcMas {
             } else {
                 switch (opcio) {
                     case 1 -> {
-                        System.out.println("Quin algoritme vol emprar?");
-                        System.out.println("1: MergeSort");
-                        System.out.println("2: QuickSort");
-                        int algorisme = s.nextInt();
-                        int[] arrayOrdenat = ordenacioAvançada(array, algorisme);
+                        // System.out.println("Quin algoritme vol emprar?"); // si tengués dos algoritmes funcionals, podria fer aixo, pero no les tenc
+                        // System.out.println("1: MergeSort");
+                        // System.out.println("2: QuickSort");
+                        // int algorisme = s.nextInt();
+                        // int[] arrayOrdenat = ordenacioAvançada(array,algorisme);
+                        int[] arrayOrdenat = ordenacioAvançada(array);
                         comprovarOpcio1 = true;
                         imprimirArray(arrayOrdenat);
                     }
@@ -298,23 +411,32 @@ public class Ud1a5Pra1rTriMarcMas {
                         divisorsNombre(array);
                     }
                     case 4 -> {
-                        multiplesTres(array);
+                        int[] arrayMultiples3 = multiplesTres(array);
+                        System.out.println("Array original:");
+                        imprimirArray(array);
+                        System.out.println("Multiples de 3:");
+                        imprimirArray(arrayMultiples3);
                     }
                     case 5 -> {
                         menorsIMajors(array);
+                    }
+                    case 6 -> {
+                        int[] arrayNou = demanarNombres(); //cream un array nou on guardarem tots els nombres
+                        if (!arraysIguals(arrayNou, array)) {
+                            array = copiarArray(arrayNou); //si els arrays NO son iguals, guardarem arrayNou com el array a emprar per les altres opcions
+                        }
                     }
                 }
             }
         }
     }
-
-    // color(2, 1); //comença a pintar verd
-    // System.out.println("test");
-    // color(1, 1); //comença a pintar vermell
-    // System.out.println("test");
-    // resetColor(); //deixa de pintar en color
 }
 
+// color(2, 1); //comença a pintar verd
+// System.out.println("test");
+// color(1, 1); //comença a pintar vermell
+// System.out.println("test");
+// resetColor(); //deixa de pintar en color
 // restos de quicksort
 /* int test{};
         // int[] test2;
