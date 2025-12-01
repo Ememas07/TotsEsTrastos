@@ -66,7 +66,7 @@ public class Ud6Act7MarcMas {
     public static String llevarAccents(String frase) {
         String novaFrase = "";
         char caracter = ' ';
-        for (int i = 0; i < frase.length(); i++) { //recorrem tot el string de forma inversa, del final cap al principi
+        for (int i = 0; i < frase.length(); i++) {
             caracter = llevarAccents(frase.charAt(i));
             novaFrase += caracter; //afegim els caracters a la nova frase
         }
@@ -75,7 +75,7 @@ public class Ud6Act7MarcMas {
 
     public static String llevarEspais(String frase) {
         String novaFrase = "";
-        for (int i = 0; i < frase.length(); i++) { //recorrem tot el string de forma inversa, del final cap al principi
+        for (int i = 0; i < frase.length(); i++) {
             if (!Character.isWhitespace(frase.charAt(i))) {
                 novaFrase += frase.charAt(i); //afegim els caracters a la nova frase
             }
@@ -83,11 +83,20 @@ public class Ud6Act7MarcMas {
         return novaFrase;
     }
 
+    public static String llevarPuntuacio(String frase) {
+        String novaFrase = "";
+        for (int i = 0; i < frase.length(); i++) {
+            if (frase.charAt(i) != '.' && frase.charAt(i) != ',') {
+                novaFrase += frase.charAt(i);
+            }
+        }
+        return novaFrase;
+    }
+
     public static String inversor(String frase) {
         String fraseInvertida = "";
-        char caracter = ' ';
         for (int i = frase.length() - 1; i > -1; i--) { //recorrem tot el string de forma inversa, del final cap al principi
-            fraseInvertida += caracter; //afegim els caracters a la frase invertida
+            fraseInvertida += frase.charAt(i); //afegim els caracters a la frase invertida
         }
         return fraseInvertida;
     }
@@ -104,14 +113,22 @@ public class Ud6Act7MarcMas {
         return true;
     }
 
+    public static String netejar(String frase) {
+        frase = llevarAccents(frase);
+        frase = llevarEspais(frase);
+        frase = llevarPuntuacio(frase);
+        frase = frase.toLowerCase();
+        return frase;
+    }
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Comprovador de frases capicua");
         System.out.println("Introdueixi la seva frase");
         String frase = s.nextLine(); //agafam la frase per consola
-        frase = llevarAccents(frase);
+        String fraseNeta = netejar(frase);
         System.out.print("La frase \"" + frase + "\" ");
-        if (!sonIguals(frase, inversor(frase))) {
+        if (!sonIguals(fraseNeta, inversor(fraseNeta))) {
             System.out.print("no ");
         }
         System.out.println("es capicua");
