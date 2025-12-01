@@ -15,7 +15,6 @@ package org.yourcompany.yourproject;
  * @author Marc Mas
  */
 public class Ud6Act8MarcMas {
-
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
