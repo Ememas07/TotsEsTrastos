@@ -13,7 +13,7 @@ public class Ud1Act14MarcMas {
 
     public static void main(String[] args) {
         // Activitat 14
-        /*Solicita a l’usuari tres distàncies:
+        /*Solicita a l'usuari tres distàncies:
         ○ La primera, en milímetres
         ○ La segona, en centímetres
         ○ La tercera, en metres

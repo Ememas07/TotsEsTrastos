@@ -4,7 +4,7 @@
 package org.yourcompany.yourproject;
 
 /**
- * Fes un programa que demani un text a l’usuari i indiqui, per a cada lletra
+ * Fes un programa que demani un text a l'usuari i indiqui, per a cada lletra
  * que apareix a la frase, quantes vegades hi apareix.
  *
  * Per a simplificar converteix tot el text a minúscules i substitueix els

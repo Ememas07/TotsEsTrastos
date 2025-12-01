@@ -4,7 +4,7 @@
 package org.yourcompany.yourproject;
 
 /**
- * Escriure un programa que demani una frase i una paraula a l’usuari. S’hade
+ * Escriure un programa que demani una frase i una paraula a l'usuari. S'hade
  * cercar quantes vegades apareix la paraula dins la frase.
  *
  * @author Marc Mas

@@ -8,8 +8,9 @@ package org.yourcompany.yourproject;
  *
  * La mecànica del joc és la següent:
  *
- * El primer jugador introdueix la contrasenya ● El segon jugador ha d’introduir
- * paraules fins que l’encerta.
+ * El primer jugador introdueix la contrasenya
+ *
+ * El segon jugador ha d'introduir paraules fins que l'encerta.
  *
  * Per ajudar el segon jugador, el programa mostrarà les lletres coincidents i
  * amb asteriscs les que no ho siguin.

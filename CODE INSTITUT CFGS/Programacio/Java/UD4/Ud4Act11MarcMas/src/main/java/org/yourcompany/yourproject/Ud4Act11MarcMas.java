@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * RECURSIVITAT
  *
- * Sobrecarrega la funció de l’activitat 4.10 per a que l’únic paràmetre sigui
+ * Sobrecarrega la funció de l'activitat 4.10 per a que l'únic paràmetre sigui
  * la quantitat de nombres aleatoris a mostrar per consola.
  *
  * Els nombres aleatoris seran decimals entre 0 i 1.

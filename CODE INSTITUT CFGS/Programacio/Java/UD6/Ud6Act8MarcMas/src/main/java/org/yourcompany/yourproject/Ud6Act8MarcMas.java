@@ -10,7 +10,7 @@ package org.yourcompany.yourproject;
  * Per exemple: amb un decalatge de 3, la A se substituiria per la D, la B
  * esdevindria E, i així successivament
  *
- * Demanar a l’usuari quin decalatge vol i quin text vol xifrar per teclat.
+ * Demanar a l'usuari quin decalatge vol i quin text vol xifrar per teclat.
  *
  * @author Marc Mas
  */

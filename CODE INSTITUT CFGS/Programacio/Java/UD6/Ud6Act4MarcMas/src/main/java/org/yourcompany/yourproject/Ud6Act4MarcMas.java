@@ -4,7 +4,7 @@
 package org.yourcompany.yourproject;
 
 /**
- * Dissenyar una aplicació que demani l’usuari que introdueixi una frase per
+ * Dissenyar una aplicació que demani l'usuari que introdueixi una frase per
  * teclat i la mostri invertida.
  *
  * Per exemple: “Hola mon” seria “nom aloH”

@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Marc Mas
  *
- * Partint de l’Activitat 3.10:
+ * Partint de l'Activitat 3.10:
  *
  *
  * Orientació:
@@ -32,7 +32,7 @@ import java.util.Scanner;
  * Fes que cada línia del triangle tingui un caràcter diferent (ex: *, +, -, .)
  * per simular un degradat visual.
  *
- * Permet que l’usuari triï quin caràcter vol utilitzar per dibuixar el triangle
+ * Permet que l'usuari triï quin caràcter vol utilitzar per dibuixar el triangle
  * (ex: *, #, @, etc.).
  *
  * Dibuixa només el contorn del triangle (sense omplir-lo), com si fos una
@@ -40,7 +40,7 @@ import java.util.Scanner;
  *
  * Menú:
  *
- * Deixa que l’usuari triï el tipus (rectangle o isòsceles), orientació del
+ * Deixa que l'usuari triï el tipus (rectangle o isòsceles), orientació del
  * triangle (esquerra, dreta, adalt, abaix) i gràfics del triangle (degradat,
  * caràcter, contorn, etc.).
  *

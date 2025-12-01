@@ -8,8 +8,8 @@ package org.yourcompany.yourproject;
  *
  * Per a simplificar suposarem que no hi ha accents a la frase.
  *
- * Si l’usuari introdueix accents, el programa els ha de canviar per les vocals.
- * També s’han de llevar espais o caràcters estranys. Només volem lletres
+ * Si l'usuari introdueix accents, el programa els ha de canviar per les vocals.
+ * També s'han de llevar espais o caràcters estranys. Només volem lletres
  * bàsiques.
  *
  * Una paraula capicua o políndroma pot ser: “Anna”, “Llull” o la frase “Meló

@@ -4,7 +4,7 @@
 package org.yourcompany.yourproject;
 
 /**
- * Escriure un programa que demani el nom complet a l’usuari i el mostri sense
+ * Escriure un programa que demani el nom complet a l'usuari i el mostri sense
  * cap vocal, sigui majúscula, minúscula o amb accents.
  *
  * @author Marc Mas

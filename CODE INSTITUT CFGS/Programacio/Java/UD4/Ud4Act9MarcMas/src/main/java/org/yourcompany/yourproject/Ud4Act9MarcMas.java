@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * RECURSIVITAT
  *
- * Escriu una funció amb paràmetres d’entrada una quantitat de dies, hores i
+ * Escriu una funció amb paràmetres d'entrada una quantitat de dies, hores i
  * minuts.
  *
  * La funció ha de calcular el nombre de segons que hi ha.
