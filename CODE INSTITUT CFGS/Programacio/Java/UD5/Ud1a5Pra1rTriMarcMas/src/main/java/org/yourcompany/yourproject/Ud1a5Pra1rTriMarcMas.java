@@ -41,6 +41,17 @@ public class Ud1a5Pra1rTriMarcMas {
 
     }
 
+    public static void imprimirTemps(long tempsInici, long tempsFinal) {
+        long temps = tempsFinal - tempsInici;
+        System.out.println("La funcio ha tardat un total de " + temps + "ms en executar-se");
+        long s = 0;
+        long m = 0;
+        m = temps / 60000;
+        s = temps / 1000 - m * 60;
+        temps -= m * 60000 + s * 1000;
+        System.out.println("La funcio ha tardat " + m + " minuts, " + s + " segons i " + temps + "ms ");
+    }
+
     public static void resetColor() {
         System.out.print(ANSI_RESET);
     }
@@ -48,7 +59,7 @@ public class Ud1a5Pra1rTriMarcMas {
     public static int[] demanarNombres() { //demanarem nombres fins que s'introduesqui un 0
         Scanner s = new Scanner(System.in);
         int input = 0;
-        System.out.println("Per generar un array aleatori amb 10 entrades de 0 a 100, introdueixi -1"); //com a extra, mode de debugging
+        System.out.println("Per generar un array aleatori, introdueixi -1"); //com a extra, mode de debugging
         System.out.println("Per introduir el nombres manualment introdueixi qualsevol altre nombre");
         int[] nombres = new int[0]; //generam un array amb longitut 0, l'anirem ampliant
         if (s.nextInt() != -1) { //si NO hem activat el mode de debugging, anam demanant valors fins a introduir un 0
@@ -59,10 +70,20 @@ public class Ud1a5Pra1rTriMarcMas {
                 nombres = insertarValor(input, nombres); //anam insertant els valors a nombres
             } while (input != 0);
         } else {
-            for (int i = 0; i < 10; i++) { //si hem posat mode debug, generam un array de 10 posicions amb nombres de 0 a 100
-                input = (int) (Math.random() * 100);
+            System.out.println("Quants de numeros vol que hi hagui a l'array?");
+            int quantitatNumeros = s.nextInt();
+            System.out.println("Quin vol que sigui el nombre minim?");
+            int minim = s.nextInt();
+            System.out.println("Quin vol que sigui el nombre maxim?");
+            int maxim = s.nextInt();
+            long tempsInici = System.currentTimeMillis();
+            for (int i = 0; i < quantitatNumeros; i++) { //si hem posat mode debug, generam un array de 10 posicions amb nombres de 0 a 100
+                input = (int) (Math.random() * maxim) + minim;
                 nombres = insertarValor(input, nombres);
             }
+            long tempsFinal = System.currentTimeMillis();
+            System.out.println("He acabat de generar el array");
+            imprimirTemps(tempsInici, tempsFinal);
         }
         return nombres;
     }
@@ -180,7 +201,7 @@ public class Ud1a5Pra1rTriMarcMas {
         }
 
         if (array[index] == clau) { //si trobam l'element, ho mostram per pantalla
-            System.out.println("Element " + array[index] + " trobat a la posició " + index + 1);
+            System.out.println("Element " + array[index] + " trobat a la posició " + (index + 1));
             // Element X trobat a la posició Y
             return index;
         }
@@ -237,7 +258,7 @@ public class Ud1a5Pra1rTriMarcMas {
                 System.out.print(" i "); //imprimim una "i" per el format especial
                 System.out.println(divisorsNombre[divisorsNombre.length - 1]); //imprimim el darrer valor de l'array
             } else {
-                if (nombre != 0) {
+                if (nombre == 0) {
                     System.out.println("Es complicat dir si el 0 té divisors o no."); // no se pot dividir entre 0 però tots els nombres per 0 donen 0 aixi que...
                 } else {
                     System.out.println("El nombre " + nombre + " és primer, no té divisors");  //si no té més de dos divisors, significa que els seus divisors son "1" i ell mateix
@@ -285,7 +306,7 @@ public class Ud1a5Pra1rTriMarcMas {
                 System.out.print(array[i] + ", ");
             }
         }
-        System.out.println(""); 
+        System.out.println("");
     }
 
     public static void mostrarMajors(int[] array, int input) {
@@ -365,10 +386,14 @@ public class Ud1a5Pra1rTriMarcMas {
                         if (!comprovarOrdenacio(array)) { //si l'array no esta ordenat, executarem el codi
                             System.out.println("Array original:");
                             imprimirArray(array); //imprimim array original
+                            long tempsInici = System.currentTimeMillis();
                             arrayOrdenat = quickSort(array); // ordenam l'array
+                            long tempsFinal = System.currentTimeMillis();
                             comprovarOpcio1 = true; //un pic haguem fet ordenat, marcam opcio1 com a true per poder fer binary search
                             System.out.println("Array ordenat:");
                             imprimirArray(arrayOrdenat); //imprimim array ordenat
+                            System.out.println("Temps a ordenar el array:");
+                            imprimirTemps(tempsInici, tempsFinal);
                         } else {
                             System.out.println("L'array ja esta ordenat!"); //si esta ordenat, mostram missatge a l'usuari i no feim res mes
                         }
@@ -378,7 +403,11 @@ public class Ud1a5Pra1rTriMarcMas {
                             if (comprovarOrdenacio(arrayOrdenat)) { //comprovam que l'array estigui ordenat abans de fer res
                                 System.out.println("Quin nombre vol cercar?");
                                 int clau = s.nextInt(); //agafam clau de cerca per consola 
+                                long tempsInici = System.currentTimeMillis();
                                 cercaBinaria(arrayOrdenat, clau); //cercam el nombre
+                                long tempsFinal = System.currentTimeMillis();
+                                System.out.println("He Temps de cerca:");
+                                imprimirTemps(tempsInici, tempsFinal);
                             } else {
                                 //si l'array no esta ordenat, no podem emprar cerca binaria i retornarem -1 com a error
                                 System.out.println("No es pot fer cerca binaria sense ordenar!");
@@ -388,15 +417,23 @@ public class Ud1a5Pra1rTriMarcMas {
                         }
                     }
                     case 3 -> { // Cas 3: Mostrar divisors d'un nombre
+                        long tempsInici = System.currentTimeMillis();
                         divisorsNombre(array);
+                        long tempsFinal = System.currentTimeMillis();
+                        System.out.println("Temps a calcular els divisors:");
+                        imprimirTemps(tempsInici, tempsFinal);
                     }
                     case 4 -> { // Cas 4: Imprimim tots els multiples de 3 d'un array
                         if (!comprovarOrdenacio(array)) { //si l'array no esta ordenat, executarem el codi
+                            long tempsInici = System.currentTimeMillis();
                             int[] arrayMultiples3 = multiplesTres(array); //cream un nou array i executam la funcio
+                            long tempsFinal = System.currentTimeMillis();
                             System.out.println("Array original:");
                             imprimirArray(array); //mostram array original
                             System.out.println("Multiples de 3:");
                             imprimirArray(arrayMultiples3); //mostram array canviat
+                            System.out.println("Temps a calcular el array:");
+                            imprimirTemps(tempsInici, tempsFinal);
                         } else {
                             System.out.println("L'array esta ordenat, no pots emprar aquesta opcio!"); //si no esta ordenat, mostram missatge d'error
                         }

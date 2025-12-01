@@ -37,6 +37,7 @@ public class Ud4Act9MarcMas {
             return calcularSegons(d, h, m);
         }
     }
+    
     public static Integer calcularSegons(int d, int h, int m) {
         Integer s = 0;
         if (d != 0) {
