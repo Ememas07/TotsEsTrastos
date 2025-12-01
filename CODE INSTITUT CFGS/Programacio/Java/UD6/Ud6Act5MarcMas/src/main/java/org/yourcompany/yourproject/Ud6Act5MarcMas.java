@@ -40,7 +40,6 @@ public class Ud6Act5MarcMas {
         System.out.println("Aquest programa retornara el seu nom sense vocals");
         System.out.println("Introdueixi el seu nom complet");
         String frase = s.nextLine(); //agafam la frase per consola
-        System.out.println(frase);
         System.out.println("El seu nom sense vocals seria: " + reconversor(frase)); // imprimim per l'usuari
     }
 }
