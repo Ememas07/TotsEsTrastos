@@ -63,23 +63,57 @@ public class Ud6Act7MarcMas {
         return c;
     }
 
+    public static String llevarAccents(String frase) {
+        String novaFrase = "";
+        char caracter = ' ';
+        for (int i = 0; i < frase.length(); i++) { //recorrem tot el string de forma inversa, del final cap al principi
+            caracter = llevarAccents(frase.charAt(i));
+            novaFrase += caracter; //afegim els caracters a la nova frase
+        }
+        return novaFrase;
+    }
+
+    public static String llevarEspais(String frase) {
+        String novaFrase = "";
+        for (int i = 0; i < frase.length(); i++) { //recorrem tot el string de forma inversa, del final cap al principi
+            if (!Character.isWhitespace(frase.charAt(i))) {
+                novaFrase += frase.charAt(i); //afegim els caracters a la nova frase
+            }
+        }
+        return novaFrase;
+    }
+
     public static String inversor(String frase) {
         String fraseInvertida = "";
         char caracter = ' ';
         for (int i = frase.length() - 1; i > -1; i--) { //recorrem tot el string de forma inversa, del final cap al principi
-        
-        
-
-            fraseInvertida += frase.charAt(i); //afegim els caracters a la frase invertida
+            fraseInvertida += caracter; //afegim els caracters a la frase invertida
         }
         return fraseInvertida;
     }
 
+    public static boolean sonIguals(String frase1, String frase2) {
+        if (frase1.length() != frase2.length()) {
+            return false;
+        }
+        for (int i = 0; i < frase1.length(); i++) {
+            if (frase1.charAt(i) != frase2.charAt(i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.println("Inversor de frases");
+        System.out.println("Comprovador de frases capicua");
         System.out.println("Introdueixi la seva frase");
         String frase = s.nextLine(); //agafam la frase per consola
-        System.out.println("La teva frase al reves seria: " + inversor(frase)); // imprimim la sortida de la funcio
+        frase = llevarAccents(frase);
+        System.out.print("La frase \"" + frase + "\" ");
+        if (!sonIguals(frase, inversor(frase))) {
+            System.out.print("no ");
+        }
+        System.out.println("es capicua");
     }
 }
