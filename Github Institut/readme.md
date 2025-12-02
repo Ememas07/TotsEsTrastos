@@ -1,1 +1,0 @@
-He fet aquest repositori de github per la practica de markdown_github, també hi he afegit les carpetes del FTP i he fet un readme per cada practica
