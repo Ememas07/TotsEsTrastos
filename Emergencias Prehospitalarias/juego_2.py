@@ -5,6 +5,7 @@ import textwrap
 import random
 from questions_formatted_two import questions  # Import the questions list
 # Initialize Pygame
+
 pygame.init()
 
 # Screen dimensions
