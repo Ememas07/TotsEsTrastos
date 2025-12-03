@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Canal RSS</title>
+        <link>http://127.0.0.1:5500/CODE%20INSTITUT%20CFGS/Llenguatge%20de%20Marques/RSS%20i%20Atom/test.rss</link>
+        <description>test</description>
+        <language>es</language>
+        <item>
+            <title>El temps a Maria de la Salut</title>
+            <link>https://www.aemet.es/es/eltiempo/prediccion/municipios/maria-de-la-salut-id07035</link>
+            <guid>https://www.aemet.es/es/eltiempo/prediccion/municipios/maria-de-la-salut-id07035</guid>
+            <description>Aquí té el temps a Maria de la Salut</description>
+        </item>
+        <item>
+            <title>Galeria Pagina</title>
+            <link>http://127.0.0.1:5500/CODE%20INSTITUT%20CFGS/Llenguatge%20de%20Marques/Practica%206%20(Lloc%20Web%20Personal%20Revisat)/pages/gallery.html</link>
+            <guid>http://127.0.0.1:5500/CODE%20INSTITUT%20CFGS/Llenguatge%20de%20Marques/Practica%206%20(Lloc%20Web%20Personal%20Revisat)/pages/gallery.html</guid>
+            <description>Aquí té una galeria de Chimera Racing Team</description>
+        </item>
+    </channel>
+</rss>

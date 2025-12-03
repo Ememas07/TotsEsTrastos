@@ -1,0 +1,111 @@
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: darkred;
+    color: white;
+}
+h2{
+    padding-left: 10px;
+    font-size: 20px;
+}
+a {
+    color: cyan;
+}
+
+a:hover {
+    color: aquamarine;
+}
+
+img {
+    width: 50vw;
+}
+
+table td {
+    text-align: center;
+}
+
+.instagram a img {
+    width: 30px;
+}
+
+header h1 {
+    font-size: 20px;
+    text-align: left;
+}
+
+header {
+    background-color: #680000;
+}
+
+header img {
+    width: 10vw;
+}
+
+
+nav {
+    position: fixed;
+    top: 40px;
+    right: 30px;
+}
+
+nav ul a {
+    padding: 10px;
+}
+
+nav ul {
+    background-color: transparent;
+}
+
+table td {
+    padding: 10px;
+}
+
+footer {
+    padding-left: 30px;
+    background-color: black;
+}
+
+footer table {
+    width: 100%;
+}
+
+footer table tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+.members td {
+    text-align: left;
+}
+
+.galeria img {
+    display: flex;
+    width: 100%;
+}
+
+.galeria {
+    width: 100%
+}
+
+.results td {
+    text-align: left;
+}
+
+.inactive td {
+    padding: 0px;
+    text-align: left;
+}
+
+.liveries td {
+    text-align: center;
+}
+
+.liveries img {
+    width: 50%;
+}
+
+fieldset {
+    border-style: hidden;
+}
+.imglivery{
+    display: flex;
+}

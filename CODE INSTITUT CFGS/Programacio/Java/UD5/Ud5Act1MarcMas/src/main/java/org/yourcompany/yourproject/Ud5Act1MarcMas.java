@@ -4,8 +4,8 @@
 package org.yourcompany.yourproject;
 
 /**
- * Crear una taula de longitud 10 que s’inicialitzarà amb nombres aleatoris de
- * l’1 al 100.
+ * Crear una taula de longitud 10 que s'inicialitzarà amb nombres aleatoris de
+ * l'1 al 100.
  *
  * Mostrar la suma de tots els elements de la taula
  *

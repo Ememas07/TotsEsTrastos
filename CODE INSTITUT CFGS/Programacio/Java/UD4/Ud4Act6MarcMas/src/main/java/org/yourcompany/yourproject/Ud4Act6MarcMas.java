@@ -15,7 +15,7 @@ import java.util.Scanner;
  * El tercer valor és un int. Valdrà 1 per la suma, 2 per la resta, 3 per la
  * multiplicació i 4 per la divisió.
  *
- * La funció retorna el resultat de l’operació
+ * La funció retorna el resultat de l'operació
  *
  * @author Marc Mas
  */

@@ -6,9 +6,9 @@ package org.yourcompany.yourproject;
 import java.util.Scanner;
 
 /**
- * Fer un programa que demani a l’usuari 5 nombres decimals.
+ * Fer un programa que demani a l'usuari 5 nombres decimals.
  *
- * A continuació, mostrar els nombres en el mateix ordre que s’han introduit
+ * A continuació, mostrar els nombres en el mateix ordre que s'han introduit
  *
  * @author Marc Mas
  */
