@@ -250,7 +250,7 @@ public class Ud5MiniPracticaPenjatMarcMas {
             index++;
         }
         if (jugadorActual == -1) {
-            jugadorActual = (int) (Math.random() * opcions[1]); //calculam jugador aleatori
+            jugadorActual = (int) (Math.random() * opcions[1]); //calculam jugador aleatori si no n'hi ha cap amb multiplicador
         }
         String paraulaSecreta = "";
         if (opcions[0] == 0) { //jugam contra maquina
