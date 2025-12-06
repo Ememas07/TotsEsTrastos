@@ -162,7 +162,7 @@ public class Ud5MiniPracticaPenjatMarcMas {
                             int canviarNom = s.nextInt();
                             if (canviarNom == 1) {
                                 System.out.println("Introdueix nou nom per: " + llistaJugadors[i]);
-                                llistaJugadors[i] = s.next();
+                                llistaJugadors[i] = s.next() + s.nextLine();
                             }
                         }
                     }
@@ -191,22 +191,22 @@ public class Ud5MiniPracticaPenjatMarcMas {
             System.out.println("[ " + opcions[2] + " lletres ]");
         }
         System.out.print("5. Majuscules / Minscules");
-        if (opcions[3] == 1) {
-            System.out.println("[Si]");
-        } else {
+        if (opcions[3] == 0) {
             System.out.println("[No]");
+        } else {
+            System.out.println("[Si]");
         }
         System.out.print("6. Dibuix");
-        if (opcions[4] == 1) {
+        if (opcions[4] == 0) {
             System.out.println("[Forca + Penjat]");
         } else {
             System.out.println("[Penjat]");
         }
         System.out.print("7. Llista d'errades: ");
-        if (opcions[5] == 1) {
-            System.out.println("[Si]");
-        } else {
+        if (opcions[5] == 0) {
             System.out.println("[No]");
+        } else {
+            System.out.println("[Si]");
         }
         System.out.print("8. Noms dels jugadors: ");
         for (int i = 0; i < llistaJugadors.length - 1; i++) {
@@ -224,7 +224,7 @@ public class Ud5MiniPracticaPenjatMarcMas {
     }
 
     public static void main(String[] args) {
-        int[] opcions = {1, 6, 4, 0, 0, 0}; //opcions per defecte
+        int[] opcions = {1, 6, 4, 0, 0, 1}; //opcions per defecte
         String[] llistaJugadors = new String[opcions[1]];
         for (int i = 0; i < opcions[1]; i++) {
             llistaJugadors[i] = ("Jugador " + (i + 1));
@@ -266,12 +266,18 @@ public class Ud5MiniPracticaPenjatMarcMas {
             opcions[2] = paraulaSecreta.length();
             cls();
         }
+        if (opcions[3] == 0) {
+            paraulaSecreta = paraulaSecreta.toLowerCase();
+        }
         boolean perdut = false;
         int lletresRepetides = 0;
         do {
             System.out.println("Jugador Actual: " + nomJugadors[jugadorActual]);
             System.out.println("Introdueixi la seva lletra");
             char input = s.next().charAt(0);
+            if (opcions[3] == 0) {
+                input = Character.toLowerCase(input);
+            }
             int ocurrences = comprovarParaula(input, paraulaSecreta, lletresProvades, lletresEncertades, puntsJugadors[jugadorActual]);
             encerts += ocurrences;
             if (ocurrences == 0) { //la paraula no surt cap vegada, no hem encertat
@@ -296,12 +302,16 @@ public class Ud5MiniPracticaPenjatMarcMas {
             // cas 0: lletra nova
 
             if (opcions[5] == 1) {
+                System.out.print("Paraules errades: ");
                 imprimirArray(lletresProvades);
+                System.out.println("");
             }
 
             for (int i = 0; i < nomJugadors.length; i++) {
                 if (i == jugadorActual) {
-                    System.out.print(">");
+                    System.out.print("> ");
+                } else {
+                    System.out.print("  ");
                 }
                 System.out.println("Puntuacio: (" + nomJugadors[i] + "): " + puntsJugadors[i][0]);
             }
@@ -315,10 +325,10 @@ public class Ud5MiniPracticaPenjatMarcMas {
         } else {
             if (perdut) {
                 puntsJugadors[introdueixParaula][0] += paraulaSecreta.length();
-                System.out.println("Ha guanyat el jugador que ha posat la paraula");
+                System.out.println(nomJugadors[introdueixParaula] + " ha guanyat la ronda! ");
             } else {
                 puntsJugadors[jugadorActual][2]++; //sumam multiplicador al jugador que ha endivinat la paraula
-                System.out.println("Ha guanyat el jugador que endivinava");
+                System.out.println(nomJugadors[jugadorActual] + " ha guanyat la ronda! ");
             }
         }
         System.out.println("Que vol fer?");
@@ -472,6 +482,9 @@ public class Ud5MiniPracticaPenjatMarcMas {
         if (repetida) {
             puntsJugadors = actualitzarPunts(puntsJugadors, -1);
         } else {
+            if (estaDinsArray(lletresErrades, input)) {
+                
+            }
             puntsJugadors = actualitzarPunts(puntsJugadors, vegades);
         }
         return vegades;
