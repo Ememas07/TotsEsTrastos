@@ -3,6 +3,7 @@
  */
 package com.mycompany.ud5minipracticapenjatmarcmas;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -39,25 +40,34 @@ public class Ud5MiniPracticaPenjatMarcMas {
             "programari", "configurar", "compilacio", "informacio", "programant",
             "interficie"};
         switch (longitut) {
-            case 3:
+            case 3 -> {
                 return l3;
-            case 4:
+            }
+            case 4 -> {
                 return l4;
-            case 5:
+            }
+            case 5 -> {
                 return l5;
-            case 6:
+            }
+            case 6 -> {
                 return l6;
-            case 7:
+            }
+            case 7 -> {
                 return l7;
-            case 8:
+            }
+            case 8 -> {
                 return l8;
-            case 9:
+            }
+            case 9 -> {
                 return l9;
-            case 10:
+            }
+            case 10 -> {
                 return l10;
-            default:
+            }
+            default -> {
                 System.out.println("Longitut no valida retornant llista de longitut 3!");
                 return l3;
+            }
         }
     }
 
@@ -73,73 +83,74 @@ public class Ud5MiniPracticaPenjatMarcMas {
         System.out.println("└------------------------┘");
     }
 
-    public static void menu(int[] opcions, String[] llistaJugadors) {
+    public static void menu(int[] opcions, String[] llistaJugadors, int[][] puntsJugadors, boolean sortir) {
         Scanner s = new Scanner(System.in);
-        boolean sortir = false;
         while (!sortir) {
             cls();
+            puntsJugadors = canviarTaulaPunts(puntsJugadors, opcions[1]);
             imprimirMenu(opcions, llistaJugadors);
             int opcio = s.nextInt();
             while (opcio > 8 && opcio < 0) {
                 System.out.println("Opcio invalida!");
             }
-            if (opcions[0] == 1) {
+            if (opcions[0] == 0) {
                 opcions[1] = 1;
             }
             switch (opcio) {
-                case 0:
+                case 0 -> {
                     System.out.println("Esta segur que vol sortir?");
                     System.out.println("introdueixi -1 si vol sortir");
                     int confirmarSortida = s.nextInt();
                     if (confirmarSortida == -1) {
                         sortir = true;
                     }
-                    break;
-                case 1:
+                }
+                case 1 -> {
                     if (opcions[2] > 10 && opcions[2] < 3) {
                         System.out.println("La longitut no es valida per PvE! ");
                     } else {
-                        jugar(opcions, llistaJugadors);
+                        sortir = true;
+                        jugar(opcions, llistaJugadors, puntsJugadors);
                     }
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     System.out.println("Configurant Mode de joc");
                     System.out.println("0: PvE");
                     System.out.println("1: PvP");
                     opcions[0] = s.nextInt();
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     System.out.println("Configurant Nombre de jugadors");
                     opcions[1] = s.nextInt();
                     llistaJugadors = new String[opcions[1]];
                     for (int i = 0; i < opcions[1]; i++) {
-                        llistaJugadors[i] = ("Jugador " + i);
+                        llistaJugadors[i] = ("Jugador " + (i + 1));
                     }
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     System.out.println("Configurant longitut:");
                     System.out.println("Introdueixi la nova longitut");
                     opcions[2] = s.nextInt();
-                    break;
-                case 5:
+                }
+                case 5 -> {
                     System.out.println("Configurant Majuscules");
                     System.out.println("0: No es sensible");
                     System.out.println("1: Es sensible");
                     opcions[3] = s.nextInt();
-                    break;
-                case 6:
+                }
+                case 6 -> {
                     System.out.println("Configurant Dibuix");
                     System.out.println("0: Forca + Penjat");
                     System.out.println("1: Nomes Penjat");
                     opcions[4] = s.nextInt();
-                    break;
-                case 7:
+                }
+                case 7 -> {
                     System.out.println("Configurant Llista d'errades");
                     System.out.println("0: No");
                     System.out.println("1: Si");
                     opcions[5] = s.nextInt();
-                    break;
-                case 8:
+                }
+                case 8 -> {
                     System.out.println("Configurant Noms de jugadors");
                     if (opcions[1] < 1) {
                         System.out.println("Configura el numero de jugadors bé!");
@@ -155,7 +166,7 @@ public class Ud5MiniPracticaPenjatMarcMas {
                             }
                         }
                     }
-                    break;
+                }
             }
         }
     }
@@ -213,142 +224,62 @@ public class Ud5MiniPracticaPenjatMarcMas {
     }
 
     public static void main(String[] args) {
-        int[] opcions = {0, 1, 4, 0, 0, 0};
+        int[] opcions = {1, 6, 4, 0, 0, 0}; //opcions per defecte
         String[] llistaJugadors = new String[opcions[1]];
         for (int i = 0; i < opcions[1]; i++) {
             llistaJugadors[i] = ("Jugador " + (i + 1));
         }
-        menu(opcions, llistaJugadors);
+        int puntsJugadors[][] = new int[llistaJugadors.length][3];
+
+        menu(opcions, llistaJugadors, puntsJugadors, false);
     }
 
-    // public static void menu(boolean mode, int numJugadors, int longitut, boolean sensitiu, boolean dibuix, boolean llistaErrors, String[] llistaJugadors) {
-    //     Scanner s = new Scanner(System.in);
-    //     boolean sortir = false;
-    //     while (!sortir) {
-    //         cls();
-    //         imprimirMenu(mode, numJugadors, longitut, sensitiu, dibuix, llistaErrors, llistaJugadors);
-    //         int opcio = s.nextInt();
-    //         while (opcio > 8 && opcio < 0) {
-    //             System.out.println("Opcio invalida!");
-    //         }
-    //         if (mode) {
-    //             numJugadors = 1;
-    //         }
-    //         switch (opcio) {
-    //             case 0:
-    //                 System.out.println("Esta segur que vol sortir?");
-    //                 System.out.println("introdueixi -1 si vol sortir");
-    //                 int confirmarSortida = s.nextInt();
-    //                 if (confirmarSortida == -1) {
-    //                     sortir = true;
-    //                 }
-    //                 break;
-    //             case 1:
-    //                 if (longitut > 10 && longitut < 3) {
-    //                     System.out.println("La longitut no es valida per PvE! ");
-    //                 } else {
-    //                     jugar(mode, numJugadors, longitut, sensitiu, dibuix, llistaErrors, llistaJugadors);
-    //                 }
-    //                 break;
-    //             case 2:
-    //                 mode = !mode;
-    //                 break;
-    //             case 3:
-    //                 System.out.println("Configurant Nombre de jugadors");
-    //                 numJugadors = s.nextInt();
-    //                 llistaJugadors = new String[numJugadors];
-    //                 for (int i = 0; i < numJugadors; i++) {
-    //                     llistaJugadors[i] = ("Jugador " + i);
-    //                 }
-    //                 break;
-    //             case 4:
-    //                 System.out.println("Configurant longitut:");
-    //                 System.out.println("Introdueixi la nova longitut");
-    //                 longitut = s.nextInt();
-    //                 break;
-    //             case 5:
-    //                 sensitiu = !sensitiu;
-    //                 break;
-    //             case 6:
-    //                 dibuix = !dibuix;
-    //                 break;
-    //             case 7:
-    //                 llistaErrors = !llistaErrors;
-    //                 break;
-    //             case 8:
-    //                 System.out.println("Configurant Noms de jugadors");
-    //                 if (numJugadors < 1) {
-    //                     System.out.println("Configura el numero de jugadors bé!");
-    //                 } else {
-    //                     for (int i = 0; i < numJugadors; i++) {
-    //                         System.out.println("Configurant: " + llistaJugadors[i]);
-    //                         System.out.println("Vol canviar el nom?");
-    //                         System.out.println("1 Per si, 0 per No");
-    //                         int canviarNom = s.nextInt();
-    //                         if (canviarNom == 1) {
-    //                             System.out.println("Introdueix nou nom per: " + llistaJugadors[i]);
-    //                             llistaJugadors[i] = s.next();
-    //                         }
-    //                     }
-    //                 }
-    //                 break;
-    //         }
-    //     }
-    // }
-    public static void jugar(int[] opcions, String[] nomJugadors) {
+    public static void jugar(int[] opcions, String[] nomJugadors, int[][] puntsJugadors) {
         Scanner s = new Scanner(System.in);
         System.out.println(opcions[1]);
         char[] lletresProvades = {};
         char[] lletresEncertades = {};
-        int jugadorPrincipal = 0;
+        int introdueixParaula = 0;
         int encerts = 0;
+        int jugadorActual = -1;
+        int index = 0;
+        while (index < puntsJugadors.length && jugadorActual == -1) {
+            if (puntsJugadors[index][2] > 1) { //miram si algun jugador té multiplicador, si hi ha algu que el tengui, el posam com a actual
+                jugadorActual = index;
+            }
+            index++;
+        }
+        if (jugadorActual == -1) {
+            jugadorActual = (int) (Math.random() * opcions[1]); //calculam jugador aleatori
+        }
         String paraulaSecreta = "";
-        int[] punts = new int[0];
-        int combo[] = new int[0];
         if (opcions[0] == 0) { //jugam contra maquina
             String[] paraulesValides = llistaParaules(opcions[2]);
             paraulaSecreta = paraulesValides[(int) (Math.random() * paraulesValides.length)];
-            punts = new int[1];
-            combo = new int[1];
         } else { //jugam contra un altre jugador
-            jugadorPrincipal = (int) (Math.random() * nomJugadors.length);
-            System.out.println(nomJugadors[jugadorPrincipal] + ", tria una paraula");
+            do {
+                introdueixParaula = (int) (Math.random() * opcions[1]);
+            } while (introdueixParaula == jugadorActual); //no volem que el jugador que posa la paraula sigui el primer a endivinar
+            System.out.println(nomJugadors[introdueixParaula] + ", tria una paraula");
             System.out.println("Quina vol que sigui la paraula a endivinar?");
             paraulaSecreta = s.next();
             opcions[2] = paraulaSecreta.length();
             cls();
-            punts = new int[opcions[1]];
-            combo = new int[opcions[1]];
         }
         boolean perdut = false;
         int lletresRepetides = 0;
-        int jugadorActual = 0;
         do {
-            /*
-            if (numJugadors > 1) {
-                if (jugadorActual == jugadorPrincipal) {
-                    jugadorActual++;
-                }
-                if (jugadorActual == nomJugadors.length) {
-                    jugadorActual = -1;
-                }
-                jugadorActual++;
-                //logica per girar jugadors aniria aqui, inacabat
-            } */
             System.out.println("Jugador Actual: " + nomJugadors[jugadorActual]);
             System.out.println("Introdueixi la seva lletra");
             char input = s.next().charAt(0);
-            int ocurrences = comprovarParaula(input, paraulaSecreta, lletresProvades, lletresEncertades);
+            int ocurrences = comprovarParaula(input, paraulaSecreta, lletresProvades, lletresEncertades, puntsJugadors[jugadorActual]);
             encerts += ocurrences;
-            int casPuntuacio = 0;
             if (ocurrences == 0) { //la paraula no surt cap vegada, no hem encertat
-                combo[jugadorActual] = 0; //hem fallat la lletra
+                puntsJugadors[jugadorActual][1] = 0; //hem fallat la lletra
                 if (estaDinsArray(lletresProvades, input)) {
-                    casPuntuacio = 2; //cas 2: lletra repetida
                     lletresRepetides++;
                 } else {
-                    casPuntuacio = 1; //cas 1: lletra no repeteida
-                    lletresProvades = insertarValor(lletresProvades, input);
+                    lletresProvades = insertarValor(lletresProvades, input); //si no esta a l'array de lletres errades, l'afegim
                 }
                 int errades = lletresProvades.length + lletresRepetides;
                 if (opcions[4] == 1) {
@@ -358,21 +289,22 @@ public class Ud5MiniPracticaPenjatMarcMas {
                     perdut = true;
                 }
                 dibuixar(errades);
-            } else if (!estaDinsArray(lletresEncertades, input)) {
-                combo[jugadorActual]++;
-                lletresEncertades = insertarValor(lletresEncertades, input);
+                jugadorActual = girarJugadors(opcions[1], jugadorActual, introdueixParaula); //si ha fallat, giram el jugador
+            } else {
+                lletresEncertades = insertarValor(lletresEncertades, input); //si la lletra NO està a l'array de lletres encertades, l'afegim
             }
             // cas 0: lletra nova
-            punts[jugadorActual] = actualitzarPunts(punts[jugadorActual], casPuntuacio, combo[jugadorActual], 1, ocurrences);
+
             if (opcions[5] == 1) {
                 imprimirArray(lletresProvades);
             }
-            System.out.println("Puntuacio: (" + nomJugadors[jugadorActual] + "): " + punts[jugadorActual]);
-            /*if (jugadorActual == nomJugadors.length) {
-                jugadorActual = -1;
-            }
-             jugadorActual++; */
 
+            for (int i = 0; i < nomJugadors.length; i++) {
+                if (i == jugadorActual) {
+                    System.out.print(">");
+                }
+                System.out.println("Puntuacio: (" + nomJugadors[i] + "): " + puntsJugadors[i][0]);
+            }
         } while (encerts != opcions[2] && !perdut);
         if (opcions[1] == 1) {
             if (perdut) {
@@ -382,8 +314,10 @@ public class Ud5MiniPracticaPenjatMarcMas {
             }
         } else {
             if (perdut) {
+                puntsJugadors[introdueixParaula][0] += paraulaSecreta.length();
                 System.out.println("Ha guanyat el jugador que ha posat la paraula");
             } else {
+                puntsJugadors[jugadorActual][2]++; //sumam multiplicador al jugador que ha endivinat la paraula
                 System.out.println("Ha guanyat el jugador que endivinava");
             }
         }
@@ -393,24 +327,52 @@ public class Ud5MiniPracticaPenjatMarcMas {
         System.out.println("2: Sortir");
         int opcio = s.nextInt();
         switch (opcio) {
-            case 1:
-                jugar(opcions, nomJugadors);
-                break;
+            case 0 -> {
+                menu(opcions, nomJugadors, puntsJugadors, false);
+            }
+            case 1 ->
+                jugar(opcions, nomJugadors, puntsJugadors);
+            case 2 -> {
+                System.out.println("Segur que vol sortir? Introdueixi -1");
+                int sortidaJugar = s.nextInt();
+                if (sortidaJugar != -1) {
+                    menu(opcions, nomJugadors, puntsJugadors, false);
+                }
+            }
         }
     }
 
-    public static int actualitzarPunts(int punts, int cas, int combo, int multiplicador, int ocurrences) {
-        switch (cas) {
-            case 0:
-                punts += (ocurrences + combo) * multiplicador;
-                break;
-            case 1:
-                punts -= 1;
-                break;
-            case 2:
-                punts -= 3;
-                break;
+    public static int girarJugadors(int numJugadors, int jugadorActual, int introdueixParaula) {
+        if (numJugadors == 1) {
+            return 0;
         }
+        jugadorActual++;
+        if (jugadorActual == introdueixParaula) {
+            jugadorActual++;
+        }
+        if (jugadorActual >= numJugadors) {
+            if (introdueixParaula == 0) {
+                jugadorActual = 1;
+            } else {
+                jugadorActual = 0;
+            }
+        }
+        return jugadorActual;
+    }
+
+    public static int[] actualitzarPunts(int[] punts, int ocurrences) {
+        if (ocurrences > 0) {
+            punts[0] += (ocurrences + punts[1]) * punts[2];
+        } else if (ocurrences == 0) {
+            punts[0] -= 1;
+        } else {
+            punts[0] -= 3;
+        }
+        System.out.println("Puntuació:");
+        System.out.println("Encerts (lletra actual): " + ocurrences);
+        System.out.println("Combo: " + punts[1]);
+        System.out.println("Multiplicador: " + punts[2]);
+
         return punts;
     }
 
@@ -446,19 +408,8 @@ public class Ud5MiniPracticaPenjatMarcMas {
     }
 
     public static char[] insertarValor(char[] taula, char valor) {
-        char[] taulaNova = new char[taula.length + 1];
-        for (int i = 0; i < taula.length; i++) {
-            taulaNova[i] = taula[i];
-        }
+        char[] taulaNova = Arrays.copyOf(taula, taula.length + 1);
         taulaNova[taulaNova.length - 1] = valor;
-        return taulaNova;
-    }
-
-    public static char[] copiarArray(char[] taula) {
-        char[] taulaNova = new char[taula.length];
-        for (int i = 0; i < taula.length; i++) {
-            taulaNova[i] = taula[i];
-        }
         return taulaNova;
     }
 
@@ -478,27 +429,51 @@ public class Ud5MiniPracticaPenjatMarcMas {
     }
 
     public static void imprimirArray(String[] taula) {
-        for (int i = 0; i < taula.length; i++) {
-            System.out.println(taula[i]);
+        for (String valor : taula) {
+            System.out.println(valor);
         }
     }
 
-    public static int comprovarParaula(char input, String secreta, char[] lletresErrades, char[] lletresEncertades) {
+    public static int[][] canviarTaulaPunts(int[][] arrayOriginal, int nombreJugadors) {
+        int[][] taulaNova = new int[nombreJugadors][3];
+        for (int i = 0; i < arrayOriginal.length && i < taulaNova.length; i++) {
+            for (int j = 0; j < arrayOriginal[0].length && i < taulaNova[0].length; j++) {
+                taulaNova[i][j] = arrayOriginal[i][j]; //copia de l'array original primer
+            }
+        }
+        for (int i = 0; i < taulaNova.length; i++) {
+            if (taulaNova[i][2] == 0) { //revisam que no hi hagui cap multiplicador a 0 a la nova taula, i si n'hi ha cap, el posam a 1
+                taulaNova[i][2] = 1;
+            }
+        }
+        return taulaNova;
+    }
+
+    public static int comprovarParaula(char input, String secreta, char[] lletresErrades, char[] lletresEncertades, int[] puntsJugadors) {
         int vegades = 0;
-        for (int i = 0; i < secreta.length(); i++) { //recorrem el input i la taula d'encerts i el comprovam contra cada posicio de la paraula secrta
-            if (!estaDinsArray(lletresEncertades, input)) {
-                if (estaDinsArray(lletresEncertades, secreta.charAt(i)) || input == secreta.charAt(i)) {
-                    if (input == secreta.charAt(i)) {
-                        vegades++;
-                    }
-                    System.out.print(secreta.charAt(i));
-                } else {
-                    System.out.print("_");
+        boolean repetida = false;
+        for (int i = 0; i < secreta.length(); i++) {
+            if (secreta.charAt(i) == input) {
+                if (!estaDinsArray(lletresEncertades, input)) {
+                    lletresEncertades = insertarValor(lletresEncertades, input); //si la lletra NO està a l'array de lletres encertades, l'afegim
+                }
+                vegades++; //per cada lletra endivinada, sumam una vegada
+            }
+            if (estaDinsArray(lletresEncertades, secreta.charAt(i))) { //recorrem tot l'array de lletres encertades i les mostram
+                System.out.print(secreta.charAt(i));
+            } else {
+                System.out.print("_");
+                if (estaDinsArray(lletresErrades, input)) {
+                    repetida = true;
                 }
             }
         }
         System.out.println("");
-
+        if (repetida) {
+            puntsJugadors = actualitzarPunts(puntsJugadors, -1);
+        } else {
+            puntsJugadors = actualitzarPunts(puntsJugadors, vegades);
+        }
         return vegades;
     }
 }
