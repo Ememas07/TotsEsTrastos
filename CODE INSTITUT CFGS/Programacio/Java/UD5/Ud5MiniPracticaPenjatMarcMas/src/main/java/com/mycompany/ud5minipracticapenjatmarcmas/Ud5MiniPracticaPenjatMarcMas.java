@@ -462,19 +462,22 @@ public class Ud5MiniPracticaPenjatMarcMas {
     public static int comprovarParaula(char input, String secreta, char[] lletresErrades, char[] lletresEncertades, int[] puntsJugadors) {
         int vegades = 0;
         boolean repetida = false;
-        for (int i = 0; i < secreta.length(); i++) {
-            if (secreta.charAt(i) == input) {
-                if (!estaDinsArray(lletresEncertades, input)) {
-                    lletresEncertades = insertarValor(lletresEncertades, input); //si la lletra NO està a l'array de lletres encertades, l'afegim
+        boolean lletraNova = true;
+        if (!estaDinsArray(lletresEncertades, input)) {
+            for (int i = 0; i < secreta.length(); i++) {
+                if (secreta.charAt(i) == input) {
+                    if (!estaDinsArray(lletresEncertades, input)) {
+                        lletresEncertades = insertarValor(lletresEncertades, input); //si la lletra NO està a l'array de lletres encertades, l'afegim
+                    }
+                    vegades++; //per cada lletra endivinada, sumam una vegada
                 }
-                vegades++; //per cada lletra endivinada, sumam una vegada
-            }
-            if (estaDinsArray(lletresEncertades, secreta.charAt(i))) { //recorrem tot l'array de lletres encertades i les mostram
-                System.out.print(secreta.charAt(i));
-            } else {
-                System.out.print("_");
-                if (estaDinsArray(lletresErrades, input)) {
-                    repetida = true;
+                if (estaDinsArray(lletresEncertades, secreta.charAt(i))) { //recorrem tot l'array de lletres encertades i les mostram
+                    System.out.print(secreta.charAt(i));
+                } else {
+                    System.out.print("_");
+                    if (estaDinsArray(lletresErrades, input)) {
+                        repetida = true;
+                    }
                 }
             }
         }
@@ -482,9 +485,6 @@ public class Ud5MiniPracticaPenjatMarcMas {
         if (repetida) {
             puntsJugadors = actualitzarPunts(puntsJugadors, -1);
         } else {
-            if (estaDinsArray(lletresErrades, input)) {
-                
-            }
             puntsJugadors = actualitzarPunts(puntsJugadors, vegades);
         }
         return vegades;
