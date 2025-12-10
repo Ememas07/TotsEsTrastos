@@ -5,7 +5,7 @@
 package org.yourcompany.yourproject;
 
 /**
- *
+ * Llegir el fitxer de text Main.java de qualque projecte terminat i mostra-lo per pantalla.
  * @author Marc Mas
  */
 public class Ud10Act2MarcMas {

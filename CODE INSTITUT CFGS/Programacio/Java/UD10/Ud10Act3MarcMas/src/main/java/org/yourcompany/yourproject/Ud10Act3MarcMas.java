@@ -5,7 +5,7 @@
 package org.yourcompany.yourproject;
 
 /**
- *
+ * Copia l'activitat 10.2, però empra un flux de text amb buffer.
  * @author Marc Mas
  */
 public class Ud10Act3MarcMas {
