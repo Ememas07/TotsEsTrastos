@@ -18,13 +18,11 @@ import java.util.Scanner;
  */
 public class Ud6Act8MarcMas {
 
-    public static final char[] abecedari = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-
     public static String xifrador(String frase, int decalatge) {
         char[] caracters = frase.toCharArray();
-        String fraseNova = "";
-        for (int i = 0; i < caracters.length; i++) {
-            if (Character.isAlphabetic(caracters[i])) {
+        String fraseNova = ""; //cream una frase buida
+        for (int i = 0; i < caracters.length; i++) { //recorrem la frase com a un array
+            if (Character.isAlphabetic(caracters[i])) { //si el caracter es part de l'alfabet, el xifram, si no, l'afegim a la frase talment
                 fraseNova += xifrador(caracters[i], decalatge);
             } else {
                 fraseNova += caracters[i];
@@ -35,7 +33,10 @@ public class Ud6Act8MarcMas {
     }
 
     public static char xifrador(char lletra, int decalatge) {
-        char lletraNova = (char) (lletra + decalatge);
+        char lletraNova = (char) (lletra + decalatge); //sumam el decalatge
+        if (lletraNova > 26) { //si ens sortim de l'abecedari, restam 26 per tornar a començar-lo
+            lletraNova = (char) (lletraNova - 26);
+        }
         return lletraNova;
     }
 
@@ -43,11 +44,11 @@ public class Ud6Act8MarcMas {
         Scanner s = new Scanner(System.in);
         System.out.println("Programa per fer xifratge Cesar");
         System.out.println("Quina frase vol xifrar?");
-        String frase = s.nextLine();
+        String frase = s.nextLine(); //demananam la frase
         System.out.println("Quin decalatge vol?");
-        int decalatge = s.nextInt();
+        int decalatge = s.nextInt(); //i el decalatge
         System.out.println("Aqui te la seva frase xifrada:");
-        String fraseXifrada = xifrador(frase, decalatge);
+        String fraseXifrada = xifrador(frase, decalatge); //i xifram
         System.out.println(fraseXifrada);
 
     }
