@@ -1,0 +1,1 @@
+Aquesta es una pagina personal amb l'estil d'una altre pagina pero amb atom i rss afegits

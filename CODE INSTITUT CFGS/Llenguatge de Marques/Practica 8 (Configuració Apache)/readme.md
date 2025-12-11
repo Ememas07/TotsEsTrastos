@@ -1,0 +1,1 @@
+Per aquesta practica haviem de configurar un parell de coses amb un .htaccess

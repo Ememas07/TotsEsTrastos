@@ -1,0 +1,1 @@
+Aquesta practica es una pagina de ressenya d'un item

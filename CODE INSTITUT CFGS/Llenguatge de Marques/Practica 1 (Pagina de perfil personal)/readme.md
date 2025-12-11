@@ -1,0 +1,1 @@
+Aquesta practica es una bateria de fotos
