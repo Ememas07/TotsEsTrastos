@@ -23,7 +23,7 @@
     <h1 style="color:orange"> Objectius d'aprenentatge </h1>
     <img src="./image.png">
 </center>
-<ol style="font-size: 30px;">
+<ol style="font-size: 15px;">
     <li>
         Reconèixer les arquitectures i tecnologies de programació sobre clients web.
     </li>
