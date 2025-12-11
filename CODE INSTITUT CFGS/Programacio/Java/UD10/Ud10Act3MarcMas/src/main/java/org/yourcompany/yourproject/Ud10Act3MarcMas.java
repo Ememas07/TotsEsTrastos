@@ -24,7 +24,7 @@ public class Ud10Act3MarcMas {
             while ((c = fitxer.readLine()) != null) { //llegim linea, si no es null, imprimim
                 System.out.println(c);
             }
-            fitxer.close(); //tancam 
+            fitxer.close(); //tancam el fitxer
         } catch (FileNotFoundException e) {
             System.out.println("No s'ha trobat el fitxer!");
         } catch (IOException ex) {

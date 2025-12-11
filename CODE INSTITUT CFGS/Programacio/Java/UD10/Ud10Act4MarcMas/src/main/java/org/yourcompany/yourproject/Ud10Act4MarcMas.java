@@ -79,9 +79,8 @@ public class Ud10Act4MarcMas {
             String c;
             String[] numeros = null;
             while ((c = fitxer.readLine()) != null) {
-                numeros = c.split(" ");
+                StringToFloats(c.split(" "));
             }
-            StringToFloats(numeros);
             fitxer.close();
         } catch (FileNotFoundException e) {
             System.out.println("No s'ha trobat el fitxer!");
