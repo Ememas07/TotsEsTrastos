@@ -20,14 +20,14 @@ public class Ud10Act3MarcMas {
             BufferedReader fitxer = new BufferedReader(new FileReader(
                     "..\\Ud10Act2MarcMas\\src\\main\\java\\org\\yourcompany\\yourproject\\Ud10Act2MarcMas.java" //main.java de la act2
             ));
-            String c; //inicialitzam la variable
-            while ((c = fitxer.readLine()) != null) { //llegim linea, si no es null, imprimim
+            String c; //inicialitzam la variable com a string (sera una linea)
+            while ((c = fitxer.readLine()) != null) { //llegim linea, si no es null, imprimim la linea sencera
                 System.out.println(c);
             }
             fitxer.close(); //tancam el fitxer
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) { //si no trobam el fitxer
             System.out.println("No s'ha trobat el fitxer!");
-        } catch (IOException ex) {
+        } catch (IOException ex) { //o tenim un error de IO
             System.out.println("Error de IO!");
         }
     }

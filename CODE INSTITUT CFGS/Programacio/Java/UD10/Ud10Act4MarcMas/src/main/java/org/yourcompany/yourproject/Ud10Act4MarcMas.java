@@ -74,17 +74,17 @@ public class Ud10Act4MarcMas {
     public static void main(String[] args) {
         try {
             BufferedReader fitxer = new BufferedReader(new FileReader(
-                    "src\\main\\java\\org\\yourcompany\\yourproject\\NombresReals.txt"
+                    "src\\main\\java\\org\\yourcompany\\yourproject\\NombresReals.txt" //especificam el fitxer que volem llegir i emprarem un BufferedReader
             ));
-            String c;
-            String[] numeros = null;
-            while ((c = fitxer.readLine()) != null) {
-                StringToFloats(c.split(" "));
+            String c;  // inicialitzam la variable com a string (sera una linea)
+            String[] numeros = null; //cream un array de Strings buit
+            while ((c = fitxer.readLine()) != null) { //llegim linea, si no es null
+                StringToFloats(c.split(" ")); //cridam la funcio de StringToFloats amb un array de Strings cridat per el c.split, que donarà cada numero
             }
-            fitxer.close();
-        } catch (FileNotFoundException e) {
+            fitxer.close(); //tancam el fitxer
+        } catch (FileNotFoundException e) { //si no trobam el fitxer
             System.out.println("No s'ha trobat el fitxer!");
-        } catch (IOException ex) {
+        } catch (IOException ex) { //o tenim un error de IO
             System.out.println("Error de IO!");
         }
     }
