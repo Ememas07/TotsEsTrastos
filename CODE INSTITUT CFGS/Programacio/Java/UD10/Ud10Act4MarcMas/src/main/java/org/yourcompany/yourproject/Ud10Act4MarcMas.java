@@ -21,30 +21,29 @@ import java.io.IOException;
 public class Ud10Act4MarcMas {
 
     public static float[] StringToFloats(String[] array) {
-        float taula[] = new float[array.length];
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(StringToFloats(array[i]));
+        float taula[] = new float[array.length]; //cream un array de floats
+        for (int i = 0; i < array.length; i++) { // recorrem tot l'array i l'omplim amb floats
+            taula[i] = StringToFloats(array[i]); 
         }
-
         return taula;
     }
 
     public static float StringToFloats(String text) {
         float numero = 0;
-        String[] separat = text.split("\\.");
-        String entera = separat[0];
-        String decimal = separat[1];
-        for (int i = entera.length(); i > 0; i--) {
-            numero += StringToFloats(entera.charAt(i - 1)) * i;
+        String[] separat = text.split("\\."); //separam la part entera i decimal
+        String entera = separat[0]; //part entera (abans del punt)
+        String decimal = separat[1]; //part decimal (despres del punt)
+        for (int i = entera.length(); i > 0; i--) { //tota la part entera
+            numero += (float) (StringToFloats(entera.charAt(i - 1))) * i; //sumam la part entera
         }
-        for (int i = decimal.length(); i > 0; i--) {
-            numero += (StringToFloats(decimal.charAt(i - 1))) / (i * 10);
+        for (int i = decimal.length(); i > 0; i--) { //tota la part decimal
+            numero += (float) ((StringToFloats(decimal.charAt(i - 1)))) / (i * 10); //sumam la part decimal
         }
         return numero;
     }
 
-    public static float StringToFloats(char text) {
-        return switch (text) {
+    public static int StringToFloats(char text) {
+        return switch (text) { //switch de 0 a 9 que retorna el nombre en float per després
             case '0' ->
                 0;
             case '1' ->
@@ -77,9 +76,12 @@ public class Ud10Act4MarcMas {
                     "src\\main\\java\\org\\yourcompany\\yourproject\\NombresReals.txt" //especificam el fitxer que volem llegir i emprarem un BufferedReader
             ));
             String c;  // inicialitzam la variable com a string (sera una linea)
-            String[] numeros = null; //cream un array de Strings buit
+            float taula[] = null;
             while ((c = fitxer.readLine()) != null) { //llegim linea, si no es null
-                StringToFloats(c.split(" ")); //cridam la funcio de StringToFloats amb un array de Strings cridat per el c.split, que donarà cada numero
+                taula = StringToFloats(c.split(" ")); //cridam la funcio de StringToFloats amb un array de Strings cridat per el c.split, que donarà cada numero
+                for (int i = 0; i < taula.length; i++) {
+                    System.out.println(taula[i]);
+                }
             }
             fitxer.close(); //tancam el fitxer
         } catch (FileNotFoundException e) { //si no trobam el fitxer
