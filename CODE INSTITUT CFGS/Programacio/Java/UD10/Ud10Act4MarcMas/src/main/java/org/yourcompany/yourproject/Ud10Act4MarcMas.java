@@ -20,16 +20,16 @@ import java.io.IOException;
  */
 public class Ud10Act4MarcMas {
 
-    public static float[] StringToFloats(String[] array) {
-        float taula[] = new float[array.length]; //cream un array de floats
+    public static double[] StringToFloats(String[] array) {
+        double taula[] = new double[array.length]; //cream un array de floats
         for (int i = 0; i < array.length; i++) { // recorrem tot l'array i l'omplim amb floats
             taula[i] = StringToFloats(array[i]);
         }
         return taula;
     }
 
-    public static float StringToFloats(String text) {
-        float numero = 0;
+    public static double StringToFloats(String text) {
+        double numero = 0;
         String[] separat = text.split("\\."); //separam la part entera i decimal
         String entera = separat[0]; //part entera (abans del punt)
         String decimal = separat[1]; //part decimal (despres del punt)
@@ -40,15 +40,12 @@ public class Ud10Act4MarcMas {
             // el multiplicam per 10^(length-1-i) = multiplicarem per 1, o per 10, o per 100, depenent de quina xifra es ja que te diferents valors
             // aixo significa: primer valor multiplicat per 10^0 (1), segon valor per 10^1 (10), tecer valor per 10^2 (100... etc)
         }
-        for (int i = 0; i < decimal.length(); i++) {
-            float temp = 0;
-            temp = (float) (Math.pow(10, decimal.length() - i + 1));
-            System.out.println("temp4 " + temp);
-            System.out.println("temp5 " + temp);
-
-            // System.out.println((float) (StringToFloats(decimal.charAt(i)) * (1 / (Math.pow(10, i)))));
-            numero += (float) (StringToFloats(decimal.charAt(i)) * (1 / (Math.pow(10, decimal.length() - 1 - i)))); //ACABAR
-            //mateixa operacio, pero la potencia es inversa, primer nombre per 
+        for (int i = decimal.length(); i > 0; i--) { //recorrem la part entera
+            // System.out.println(decimal.charAt(i - 1));
+            numero += (double) (StringToFloats(decimal.charAt(i - 1)) / (Math.pow(10, i)));
+            // operacio: Cast a float de:
+            // executam funcio de StringToFloat d'un caracter de la part entera
+            // el dividim per 10^i = dividirem per 1, o per 10, o per 100, depenent de quina xifra es ja que te diferents valors
         }
         return numero;
     }
@@ -86,7 +83,7 @@ public class Ud10Act4MarcMas {
                     "src\\main\\java\\org\\yourcompany\\yourproject\\NombresReals.txt" //especificam el fitxer que volem llegir i emprarem un BufferedReader
             ));
             String c;  // inicialitzam la variable com a string (sera una linea)
-            float taula[] = null;
+            double taula[] = null;
             float suma = 0f;
             while ((c = fitxer.readLine()) != null) { //llegim linea, si no es null
                 taula = StringToFloats(c.split(" ")); //cridam la funcio de StringToFloats amb un array de Strings cridat per el c.split, que donarà cada numero
