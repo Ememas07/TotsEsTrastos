@@ -34,15 +34,14 @@ public class Ud10Act4MarcMas {
         String entera = separat[0]; //part entera (abans del punt)
         String decimal = separat[1]; //part decimal (despres del punt)
         for (int i = 0; i < entera.length(); i++) { //recorrem la part entera
-            numero += (float) (StringToFloats(entera.charAt(i)) * (Math.pow(10, entera.length() - 1 - i)));
+            numero += (float) (StringToDouble(entera.charAt(i)) * (Math.pow(10, entera.length() - 1 - i)));
             // operacio: Cast a float de:
             // executam funcio de StringToFloat d'un caracter de la part entera
             // el multiplicam per 10^(length-1-i) = multiplicarem per 1, o per 10, o per 100, depenent de quina xifra es ja que te diferents valors
             // aixo significa: primer valor multiplicat per 10^0 (1), segon valor per 10^1 (10), tecer valor per 10^2 (100... etc)
         }
         for (int i = decimal.length(); i > 0; i--) { //recorrem la part entera
-            // System.out.println(decimal.charAt(i - 1));
-            numero += (double) (StringToFloats(decimal.charAt(i - 1)) / (Math.pow(10, i)));
+            numero += (double) (StringToDouble(decimal.charAt(i - 1)) / (Math.pow(10, i)));
             // operacio: Cast a float de:
             // executam funcio de StringToFloat d'un caracter de la part entera
             // el dividim per 10^i = dividirem per 1, o per 10, o per 100, depenent de quina xifra es ja que te diferents valors
@@ -50,7 +49,7 @@ public class Ud10Act4MarcMas {
         return numero;
     }
 
-    public static int StringToFloats(char text) {
+    public static int StringToDouble(char text) {
         return switch (text) { //switch de 0 a 9 que retorna el nombre en float per després
             case '0' ->
                 0;
@@ -95,7 +94,6 @@ public class Ud10Act4MarcMas {
             double mitjana = suma / taula.length;
             System.out.println("La suma es " + suma);
             System.out.println("La mitjana es " + mitjana);
-
         } catch (FileNotFoundException e) { //si no trobam el fitxer
             System.out.println("No s'ha trobat el fitxer!");
         } catch (IOException ex) { //o tenim un error de IO

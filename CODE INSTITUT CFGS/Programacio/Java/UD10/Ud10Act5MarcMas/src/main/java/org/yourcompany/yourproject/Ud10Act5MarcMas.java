@@ -54,9 +54,6 @@ public class Ud10Act5MarcMas {
         String[] numeros = linea.split(" "); // la separam per espais
         for (String numero : numeros) { //per cada valor de la taula numeros, agafam
             suma += (StringToInts((numero)));
-            // for (int j = numero.length(); j > 0; j--) {
-            // suma += (StringToInts((char) (numero.charAt(j - 1)))) * j; //sumam la part entera
-            // }
         }
         float mitjana = suma / (float) numeros.length;
         System.out.println("Suma: " + suma);
