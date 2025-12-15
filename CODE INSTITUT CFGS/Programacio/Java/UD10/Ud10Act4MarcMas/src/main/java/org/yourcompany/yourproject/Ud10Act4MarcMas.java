@@ -84,7 +84,7 @@ public class Ud10Act4MarcMas {
             ));
             String c;  // inicialitzam la variable com a string (sera una linea)
             double taula[] = null;
-            float suma = 0f;
+            double suma = 0.0;
             while ((c = fitxer.readLine()) != null) { //llegim linea, si no es null
                 taula = StringToFloats(c.split(" ")); //cridam la funcio de StringToFloats amb un array de Strings cridat per el c.split, que donarà cada numero
                 for (int i = 0; i < taula.length; i++) {
@@ -92,7 +92,7 @@ public class Ud10Act4MarcMas {
                 }
             }
             fitxer.close(); //tancam el fitxer
-            float mitjana = suma / taula.length;
+            double mitjana = suma / taula.length;
             System.out.println("La suma es " + suma);
             System.out.println("La mitjana es " + mitjana);
 

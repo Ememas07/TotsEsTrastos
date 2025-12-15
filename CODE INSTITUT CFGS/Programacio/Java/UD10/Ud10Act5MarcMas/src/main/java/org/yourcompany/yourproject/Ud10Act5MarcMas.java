@@ -46,8 +46,10 @@ public class Ud10Act5MarcMas {
     }
 
     public static void main(String[] args) {
+        System.out.println("Programa que fa una suma de nombres enters introduits en una linea per consola");
         Scanner s = new Scanner(System.in);
         int suma = 0;
+        System.out.println("Introdueix una linea de nombres enters");
         String linea = s.nextLine(); // agafam tota la linea 
         String[] numeros = linea.split(" "); // la separam per espais
         for (String numero : numeros) { //per cada valor de la taula numeros, agafam
