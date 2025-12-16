@@ -1,0 +1,1 @@
+console.log('Este mensaje sólo se ve en la consola');

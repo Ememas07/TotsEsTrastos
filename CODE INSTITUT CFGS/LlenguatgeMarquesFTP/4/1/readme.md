@@ -1,0 +1,1 @@
+Hem fet una practica per aprendre a obrir la consola del navegador per veure errors de js
