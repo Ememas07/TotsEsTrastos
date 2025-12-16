@@ -1,1 +1,1 @@
-Haviem de replicar un document pdf amb markdown
+un index per el servidor per poder anar entre repositoris i tal
