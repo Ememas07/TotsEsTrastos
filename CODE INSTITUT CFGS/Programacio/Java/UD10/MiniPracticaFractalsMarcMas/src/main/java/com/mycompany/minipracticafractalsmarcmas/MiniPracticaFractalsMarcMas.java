@@ -3,8 +3,23 @@
  */
 package com.mycompany.minipracticafractalsmarcmas;
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.BasicStroke;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+import javax.swing.Box;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -42,7 +57,7 @@ public class MiniPracticaFractalsMarcMas {
         JComboBox<String> fractalSelector = new JComboBox<>(fractalTypes);
 
         SpinnerNumberModel iterationModel
-                = new SpinnerNumberModel(1, 1, 10, 1);
+                = new SpinnerNumberModel(1, 1, 100, 1);
         JSpinner iterationSpinner = new JSpinner(iterationModel);
 
         topPanel.add(new JLabel("Fractal:"));
@@ -162,31 +177,48 @@ class FractalPanel extends JPanel {
 
     private void drawKochLine(Graphics2D g, int depth) {
         // TODO: Implement Koch line
-        if (depth > 1) {
-            drawKochLine(g, depth * 2, 350, 350, 0, 10, 5);
-        } else {
-            drawKochLine(g, depth, 350, 350, 0, 10, 5);
-        }
+        drawKochLine(g, depth, 50, 350, 0, 600, 5);
     }
 
     private void drawKochLine(Graphics2D g, int depth, double x, double y, double a, double l, double w) {
         if (depth == 1) {
             drawPolarLine(g, x, y, a, l, (int) w, Color.decode("#FF0000"));
         } else {
-            double x2 = x + l * Math.cos(Math.toRadians(a));
-            double y2 = y + l * Math.sin(Math.toRadians(a));
-            drawPolarLine(g, x2, y2, a + 45, l, (int) w, Color.decode("#FF0000"));
-            double x3 = x2 + l * Math.cos(Math.toRadians(a));
-            double y3 = y2 + l * Math.sin(Math.toRadians(a));
-            drawPolarLine(g, x3, y3, a - 45, l, (int) w, Color.decode("#FF0000"));
-            double x4 = x3 + l * Math.cos(Math.toRadians(a));
-            double y4 = y3 + l * Math.sin(Math.toRadians(a));
-            drawPolarLine(g, x4, y4, a, l, (int) w, Color.decode("#FF0000"));
+            drawKochLine(g, depth - 1, x, y, a, (l * 0.33), w);
+            double x2 = x + (l * 0.33) * Math.cos(Math.toRadians(a));
+            double y2 = y + (l * 0.33) * Math.sin(Math.toRadians(a));
+            double a2 = a - 60;
+            drawKochLine(g, depth - 1, x2, y2, a2, (l * 0.33), w);
+            double x3 = x2 + (l * 0.33) * Math.cos(Math.toRadians(a2));
+            double y3 = y2 + (l * 0.33) * Math.sin(Math.toRadians(a2));
+            double a3 = a + 60;
+            drawKochLine(g, depth - 1, x3, y3, a3, (l * 0.33), w);
+            double x4 = x3 + (l * 0.33) * Math.cos(Math.toRadians(a3));
+            double y4 = y3 + (l * 0.33) * Math.sin(Math.toRadians(a3));
+            double a4 = a;
+            drawKochLine(g, depth - 1, x4, y4, a4, (l * 0.33), w);
         }
     }
 
     private void drawKochSnowflake(Graphics2D g, int depth) {
         // TODO: Implement Koch snowflake
+        //KOCKHLINE A, KOCHLINE A+120, KOCHLINE A+240
+        drawKochSnowflake(g, depth, 50, 350, 0, 600, 5);
+    }
+
+    private void drawKochSnowflake(Graphics2D g, int depth, double x, double y, double a, double l, double w) {
+        if (depth == 1) {
+            drawPolarLine(g, x, y, a, l, (int) w, Color.decode("#FF0000"));
+        } else {
+            drawKochLine(g, depth - 1, x, y, a, (l * 0.33), w);
+            double x2 = x + (l * 0.33) * Math.cos(Math.toRadians(a));
+            double y2 = y + (l * 0.33) * Math.sin(Math.toRadians(a));
+            double a2 = a + 120;
+            drawKochLine(g, depth - 1, x2, y2, a2, (l * 0.33), w);
+            double x3 = x2 + (l * 0.33) * Math.cos(Math.toRadians(a2));
+            double y3 = y2 + (l * 0.33) * Math.sin(Math.toRadians(a2));
+            drawKochLine(g, depth - 1, x3, y3, a + 240, (l * 0.33), w);
+        }
     }
 
     private void drawSierpinski(Graphics2D g, int depth) {
