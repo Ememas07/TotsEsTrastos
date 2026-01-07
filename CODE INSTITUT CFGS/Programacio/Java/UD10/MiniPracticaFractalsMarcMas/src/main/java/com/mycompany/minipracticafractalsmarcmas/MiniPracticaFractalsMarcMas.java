@@ -203,21 +203,21 @@ class FractalPanel extends JPanel {
     private void drawKochSnowflake(Graphics2D g, int depth) {
         // TODO: Implement Koch snowflake
         //KOCKHLINE A, KOCHLINE A+120, KOCHLINE A+240
-        drawKochSnowflake(g, depth, 50, 350, 0, 600, 5);
+        drawKochSnowflake(g, depth, 50, 150, 0, 400, 5);
     }
 
     private void drawKochSnowflake(Graphics2D g, int depth, double x, double y, double a, double l, double w) {
         if (depth == 1) {
             drawPolarLine(g, x, y, a, l, (int) w, Color.decode("#FF0000"));
         } else {
-            drawKochLine(g, depth - 1, x, y, a, (l * 0.33), w);
-            double x2 = x + (l * 0.33) * Math.cos(Math.toRadians(a));
-            double y2 = y + (l * 0.33) * Math.sin(Math.toRadians(a));
+            drawKochLine(g, depth - 1, x, y, a, l, w);
+            double x2 = x + l * Math.cos(Math.toRadians(a));
+            double y2 = y + l * Math.sin(Math.toRadians(a));
             double a2 = a + 120;
-            drawKochLine(g, depth - 1, x2, y2, a2, (l * 0.33), w);
-            double x3 = x2 + (l * 0.33) * Math.cos(Math.toRadians(a2));
-            double y3 = y2 + (l * 0.33) * Math.sin(Math.toRadians(a2));
-            drawKochLine(g, depth - 1, x3, y3, a + 240, (l * 0.33), w);
+            drawKochLine(g, depth - 1, x2, y2, a2, l, w);
+            double x3 = x2 + l * Math.cos(Math.toRadians(a2));
+            double y3 = y2 + l * Math.sin(Math.toRadians(a2));
+            drawKochLine(g, depth - 1, x3, y3, a + 240, l, w);
         }
     }
 
