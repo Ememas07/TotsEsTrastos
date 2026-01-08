@@ -12,9 +12,7 @@ CREATE TABLE Assignatura(
 )
 
 CREATE TABLE Inscripció(
-    dni int(8),
-    CodAssig VARCHAR(10),
+    dni int(8) FOREIGN KEY REFERENCES Alumne(dni),
+    CodAssig VARCHAR(10) FOREIGN KEY REFERENCES Assignatura(CodAssig),
     Qualificació INT(2),
-    constraint fk_dniAlumne FOREIGN KEY(dni) references Alumne(dni),
-    constraint fk_codAssig FOREIGN KEY(CodAssig) references Assignatura(CodAssig)
 )
