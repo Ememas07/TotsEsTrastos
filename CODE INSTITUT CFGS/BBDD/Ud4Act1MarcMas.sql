@@ -15,7 +15,7 @@ CREATE TABLE Inscripció (
     dni int(8),
     CodAssig VARCHAR(10),
     Qualificació INT(2),
-    constraint PRIMARY KEY (dni, CodAssig),
-    constraint FOREIGN KEY(dni) references Alumne(dni),
-    constraint FOREIGN KEY(CodAssig) references Assignatura(CodAssig)
+    PRIMARY KEY (dni, CodAssig),
+    FOREIGN KEY(dni) references Alumne(dni),
+    FOREIGN KEY(CodAssig) references Assignatura(CodAssig)
 )
