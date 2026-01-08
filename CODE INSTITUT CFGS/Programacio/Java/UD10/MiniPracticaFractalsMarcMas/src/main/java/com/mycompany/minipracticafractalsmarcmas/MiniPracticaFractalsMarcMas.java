@@ -224,4 +224,20 @@ class FractalPanel extends JPanel {
     private void drawSierpinski(Graphics2D g, int depth) {
         // TODO: Implementar Sierpiński triangle
     }
+
+    private void drawSierpinski(Graphics2D g, int depth, double x, double y, double a, double l, double w) {
+        if (depth == 1) {
+            drawPolarLine(g, x, y, a, l, (int) w, Color.decode("#FF0000"));
+            double x2 = x + l * Math.cos(Math.toRadians(a));
+            double y2 = y + l * Math.sin(Math.toRadians(a));
+            double a2 = a + 120;
+            drawPolarLine(g, x2, y2, a2, l, (int) w, Color.decode("#FF0000"));
+            double x3 = x2 + l * Math.cos(Math.toRadians(a2));
+            double y3 = y2 + l * Math.sin(Math.toRadians(a2));
+            drawPolarLine(g, x3, y3, a2 + 120, l, (int) w, Color.decode("#FF0000"));
+        } else{
+
+            
+        }
+    }
 }
