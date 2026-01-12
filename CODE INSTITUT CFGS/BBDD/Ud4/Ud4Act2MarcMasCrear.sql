@@ -42,7 +42,7 @@ CREATE TABLE Cliente (
 )
 
 CREATE TABLE Venta (
-    CodVenta int(10) PRIMARY KEY,
+    CodVenta int(10) PRIMARY KEY AUTO_INCREMENT,
     Fecha DATETIME NOT NULL,
     dniVend int(8),
     dniCl int(8),
@@ -51,7 +51,7 @@ CREATE TABLE Venta (
 )
 
 CREATE TABLE Producto (
-    CodProducto int(10) PRIMARY KEY,
+    CodProducto int(10) PRIMARY KEY AUTO_INCREMENT,
     Descripcion VARCHAR(300) NOT NULL,
     Descuento INT(3),
     IVA INT(3) NOT NULL
