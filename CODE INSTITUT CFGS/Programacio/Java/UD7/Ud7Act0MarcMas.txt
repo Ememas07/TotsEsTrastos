@@ -1,0 +1,37 @@
+Es vol dissenyar una agenda que permeti consultar les dates d’un calendari per a un any concret i apuntar cites a unes hores concretes.
+
+Es pot pensar en l’agenda com un llibre en què es van passant pàgines endavant o endarrere, cadascuna de les quals correspon a un dia. 
+En cada pàgina es poden escriure cites establertes per a unes hores d’inici i de finalització determinades
+
+Quines serien les classes, els atributs i les operacions que pot fer cada objecte?
+
+Agenda:
+Atributs
+- Any
+Operacions:
+Consultar (dia)
+Avançar (dia)
+Tornar enrere (dia)
+
+
+Mes: 
+Atributs:
+- Nom 
+- Numero
+Operacions:
+    
+
+Dies:
+Atributs
+- Numero
+Operacions:
+
+
+Cites:
+Atributs
+- Nom
+- Hora Inici
+- Hora finalització
+Operacions:
+Crear Cita (dia)
+Eliminar Cita (dia)
