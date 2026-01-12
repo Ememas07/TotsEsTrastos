@@ -24,10 +24,25 @@ ALTER TABLE cliente MODIFY Telefono int(9) UNIQUE NOT NULL;
 ALTER TABLE director 
 ADD CHECK (dni > 999999),
 ADD CHECK (dni < 100000000);
+ALTER TABLE cliente
+ADD CHECK (dni > 999999),
+ADD CHECK (dni < 100000000);
+ALTER TABLE vendedor 
+ADD CHECK (dni > 999999),
+ADD CHECK (dni < 100000000);
 
 
 -- d) A la taula Venda el DNI del venedor ha de ser diferent del DNI del client.
+ALTER TABLE venta
+ADD CHECK (dniVend != dniCl)
 
 -- e) A la taula Producte la descripció és única i per a les claus foranes Família i Genere s'inclou la restricció d'integritat referencial ON DELETE SET NULL.
 
+ALTER TABLE producto
+MODIFY Descripcion VARCHAR(300) UNIQUE NOT NULL;
+-- les claus foranes les varem llevar
+
 -- f) A la taula LineaVenda, el camp numLinea es limita al rang [1-99].
+ALTER TABLE lineaventa
+ADD CHECK (numLinea > 0),
+ADD CHECK (numLinea < 100);
