@@ -9,9 +9,6 @@ Agenda:
 Atributs
 - Any
 Operacions:
-Consultar (dia)
-Avançar (dia)
-Tornar enrere (dia)
 
 
 Mes: 
@@ -25,6 +22,7 @@ Dies:
 Atributs
 - Numero
 Operacions:
+Consultar
 
 
 Cites:
@@ -33,5 +31,5 @@ Atributs
 - Hora Inici
 - Hora finalització
 Operacions:
-Crear Cita (dia)
-Eliminar Cita (dia)
+Crear Cita 
+Eliminar Cita
