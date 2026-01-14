@@ -27,7 +27,7 @@ public class Gestor {
     }
 
     public static Gestor crearGestor() {
-        Scanner s = new Scanner(System.in);
+        Scanner s = new Scanner(System.in); //cream un gestor amb totes les dades introduides per consola
         System.out.println("Introdueix el nom del gestor");
         String nom = s.nextLine();
         System.out.println("introdueix el nombre de telefon del gestor");

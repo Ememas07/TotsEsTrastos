@@ -25,10 +25,10 @@ public class Ud7Act5MarcMas {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Creant compte Bancari");
-        CompteBancari c = CompteBancari.crearCompte();
+        CompteBancari c = CompteBancari.crearCompte(); //crear un compte, que demanarà les dades a l'usuari i el guardam a la variable C
         System.out.println("Quina operacio vol fer?");
-        int opcio = 0;
-        while (opcio > -1) {
+        int opcio = 0; 
+        while (opcio > -1) { //-1 sortirà 
             try {
                 System.out.println("1: Treure doblers");
                 System.out.println("2: Ingressar doblers");
@@ -38,27 +38,27 @@ public class Ud7Act5MarcMas {
                 System.out.println("-1: Sortir ");
                 opcio = s.nextInt();
                 switch (opcio) {
-                    case 1 -> {
+                    case 1 -> { //treure doblers
                         System.out.println("Quants de doblers vol treure?");
                         int quantitat = s.nextInt();
                         c.treureDoblers(quantitat);
                     }
-                    case 2 -> {
+                    case 2 -> { //aficar doblers
                         System.out.println("Quants de doblers vol ingressar?");
                         int quantitat = s.nextInt();
                         c.ingressarDoblers(quantitat);
                     }
-                    case 3 -> {
+                    case 3 -> { //mostrar informacio
                         c.mostrarInformacio();
                         //     System.out.println(c.saldo); // Saldo es privat, per lo qual aquesta linea donarà un error 
                     }
-                    case 4 -> {
+                    case 4 -> { //canviar nom del banc
                         System.out.println("Quin es el nou banc?");
                         s.next();
                         String nomBanc = s.nextLine();
                         c.setNomBanc(nomBanc);
                     }
-                    case 5 -> {
+                    case 5 -> { //cream i canviam el gestor
                         Gestor g = Gestor.crearGestor();
                         c.canviarGestor(g);
                     }

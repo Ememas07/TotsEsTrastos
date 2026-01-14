@@ -14,7 +14,7 @@ public class Dni {
 
     public Dni(int digits) {
         this.digits = digits;
-        this.lletra = lletres.charAt(digits % 23);
+        this.lletra = lletres.charAt(digits % 23); //calculam el modulo 23 i assignam 
     }
 
     int digits;

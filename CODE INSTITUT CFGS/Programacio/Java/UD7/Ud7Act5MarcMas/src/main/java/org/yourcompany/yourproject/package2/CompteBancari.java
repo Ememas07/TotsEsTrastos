@@ -25,6 +25,8 @@ public class CompteBancari {
         this.nomBanc = nomBanc;
         this.gestor = gestor;
     }
+    
+    //sobrecarregues
 
     public CompteBancari(Dni dni, String nomTitular, int saldo, String nomBanc) {
         this(dni, nomTitular, saldo, nomBanc, null);
@@ -42,39 +44,41 @@ public class CompteBancari {
         this(dni, "Pepito de los Palotes", saldo, "Banca March");
     }
 
-    public static CompteBancari crearCompte() {
+    
+
+    public static CompteBancari crearCompte() { //cream un compte, demanant tots els parametres a l'usuari
         Scanner s = new Scanner(System.in);
         System.out.println("Introdueix el seu nom");
         String nom = s.nextLine();
         System.out.println("Quin banc empra?");
         String nomBanc = s.nextLine();
         System.out.println("Introdueix el seu DNI");
-        int numerosDni = s.nextInt();
-        Dni dni = new Dni(numerosDni);
-        System.out.println("S'ha creat el compte amb el nom " + nom);
+        int numerosDni = s.nextInt(); //només demanarem el numero, i calcularem la lletra a l'objecte separat DNI
+        Dni dni = new Dni(numerosDni); //cream aquest objecte
+        System.out.println("S'ha creat el compte amb el nom " + nom); //mostram el nom a l'usuari i cream el compte
         return new CompteBancari(dni, nom, nomBanc);
     }
 
     public void treureDoblers(int quantitat) {
-        if (quantitat > importMaxim()) {
+        if (quantitat > importMaxim()) { //si ens passam de l'import imposat per el gestor
             System.out.println("No pots moure tants de doblers a la vegada!");
         } else {
-            if (quantitat > this.saldo) {
+            if (quantitat > this.saldo) { //si volem treure més doblers del que tenim
                 System.out.println("No tens doblers suficients!");
             } else {
-                System.out.println("Has tret " + quantitat + " euros del banc");
+                System.out.println("Has tret " + quantitat + " euros del banc"); //treim els doblers del compte
                 this.saldo -= quantitat;
-                System.out.println("Saldo actual: " + this.saldo);
+                System.out.println("Saldo actual: " + this.saldo); //mostram saldo nou
             }
         }
     }
 
     public void ingressarDoblers(int quantitat) {
-        if (quantitat > importMaxim()) {
+        if (quantitat > importMaxim()) { //si ens passam de l'import imposat per el gestor
             System.out.println("No pots moure tants de doblers a la vegada!");
         } else {
-            this.saldo += quantitat;
-            System.out.println("Ara tens " + this.saldo + " euros al compte");
+            this.saldo += quantitat; //sumam els doblers
+            System.out.println("Ara tens " + this.saldo + " euros al compte"); //mostram saldo nou
         }
     }
 
@@ -101,7 +105,7 @@ public class CompteBancari {
     }
 
     public int importMaxim() {
-        if (gestor != null) {
+        if (gestor != null) { //si tenim gestor, empram el valor corresponent, si no, 10000
             return gestor.getImportMaxim();
         } else {
             return 10000;
