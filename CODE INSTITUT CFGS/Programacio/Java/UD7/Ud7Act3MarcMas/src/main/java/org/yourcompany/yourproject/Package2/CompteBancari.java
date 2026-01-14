@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package org.yourcompany.yourproject;
+package org.yourcompany.yourproject.package2;
 
 import java.util.Scanner;
 
@@ -13,8 +13,8 @@ import java.util.Scanner;
 public class CompteBancari {
 
     Dni dni;
-    String nomTitular;
-    int saldo;
+    public String nomTitular;
+    private int saldo;
 
     public CompteBancari(Dni dni, String nomTitular, int saldo) {
         this.dni = dni;
@@ -22,7 +22,15 @@ public class CompteBancari {
         this.saldo = saldo;
     }
 
-    static CompteBancari crearCompte() {
+    public CompteBancari(Dni dni, String nomTitular) {
+        this(dni, nomTitular, 0);
+    }
+
+    public CompteBancari(Dni dni, int saldo) {
+        this(dni, "Pepito de los Palotes", saldo);
+    }
+
+    public static CompteBancari crearCompte() {
         Scanner s = new Scanner(System.in);
         System.out.println("Introdueix el seu nom");
         String nom = s.nextLine();
@@ -30,10 +38,10 @@ public class CompteBancari {
         int numerosDni = s.nextInt();
         Dni dni = new Dni(numerosDni);
         System.out.println("S'ha creat el compte amb el nom " + nom);
-        return new CompteBancari(dni, nom, 0);
+        return new CompteBancari(dni, nom);
     }
 
-    void treureDoblers(int quantitat) {
+    public void treureDoblers(int quantitat) {
         if (quantitat > this.saldo) {
             System.out.println("No tens doblers suficients!");
         } else {
@@ -43,15 +51,14 @@ public class CompteBancari {
         }
     }
 
-    void ingressarDoblers(int quantitat) {
+    public void ingressarDoblers(int quantitat) {
         this.saldo += quantitat;
         System.out.println("Ara tens " + this.saldo + " euros al compte");
     }
 
-    void mostrarInformacio() {
+    public void mostrarInformacio() {
         System.out.println("Nom: " + this.nomTitular);
         System.out.println("DNI: " + this.dni.imprimir());
         System.out.println("Saldo: " + this.saldo);
     }
-    
 }
