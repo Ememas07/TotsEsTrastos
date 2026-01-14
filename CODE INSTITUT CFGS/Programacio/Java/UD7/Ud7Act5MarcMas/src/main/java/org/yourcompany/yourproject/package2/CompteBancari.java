@@ -56,18 +56,26 @@ public class CompteBancari {
     }
 
     public void treureDoblers(int quantitat) {
-        if (quantitat > this.saldo) {
-            System.out.println("No tens doblers suficients!");
+        if (quantitat > importMaxim()) {
+            System.out.println("No pots moure tants de doblers a la vegada!");
         } else {
-            System.out.println("Has tret " + quantitat + " euros del banc");
-            this.saldo -= quantitat;
-            System.out.println("Saldo actual: " + this.saldo);
+            if (quantitat > this.saldo) {
+                System.out.println("No tens doblers suficients!");
+            } else {
+                System.out.println("Has tret " + quantitat + " euros del banc");
+                this.saldo -= quantitat;
+                System.out.println("Saldo actual: " + this.saldo);
+            }
         }
     }
 
     public void ingressarDoblers(int quantitat) {
-        this.saldo += quantitat;
-        System.out.println("Ara tens " + this.saldo + " euros al compte");
+        if (quantitat > importMaxim()) {
+            System.out.println("No pots moure tants de doblers a la vegada!");
+        } else {
+            this.saldo += quantitat;
+            System.out.println("Ara tens " + this.saldo + " euros al compte");
+        }
     }
 
     public void mostrarInformacio() {
@@ -80,7 +88,7 @@ public class CompteBancari {
         System.out.println("Import maxim : " + importMaxim());
     }
 
-    public void canviarGestor(Gestor gestor){
+    public void canviarGestor(Gestor gestor) {
         this.gestor = gestor;
     }
 
