@@ -22,6 +22,14 @@ public class CompteBancari {
         this.saldo = saldo;
     }
 
+    public CompteBancari(Dni dni, String nomTitular) {
+        this(dni, nomTitular, 0);
+    }
+
+    public CompteBancari(Dni dni, int saldo) {
+        this(dni, "Pepito de los Palotes", saldo);
+    }
+
     static CompteBancari crearCompte() {
         Scanner s = new Scanner(System.in);
         System.out.println("Introdueix el seu nom");
@@ -30,7 +38,7 @@ public class CompteBancari {
         int numerosDni = s.nextInt();
         Dni dni = new Dni(numerosDni);
         System.out.println("S'ha creat el compte amb el nom " + nom);
-        return new CompteBancari(dni, nom, 0);
+        return new CompteBancari(dni, nom);
     }
 
     void treureDoblers(int quantitat) {
