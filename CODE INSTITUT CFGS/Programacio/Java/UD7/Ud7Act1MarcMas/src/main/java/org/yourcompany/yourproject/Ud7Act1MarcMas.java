@@ -6,14 +6,17 @@ package org.yourcompany.yourproject;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/*
-Dissenyar la classe CompteBancari, que emmagatzema les dades: DNI, nomTitular i saldo. Les operacions típiques d'aquesta compta són:
-○ Crear un compte. Es necessita el DNI i nom del titular, el saldo és 0
-○ Treure doblers: s'ha d'indicar si és possible o no, en funció del saldo
-○ Ingressar doblers
-○ Mostrar informació
- */
 /**
+ * Dissenyar la classe CompteBancari, que emmagatzema les dades: DNI, nomTitular
+ * i saldo. Les operacions típiques d'aquesta compta són:
+ *
+ * Crear un compte. Es necessita el DNI i nom del titular, el saldo és 0
+ *
+ * Treure doblers: s'ha d'indicar si és possible o no, en funció del saldo
+ *
+ * Ingressar doblers
+ *
+ * Mostrar informació
  *
  * @author Marc Mas
  */
@@ -29,7 +32,7 @@ public class Ud7Act1MarcMas {
             try {
                 System.out.println("1: Treure doblers");
                 System.out.println("2: Ingressar doblers");
-                System.out.println("3: Mostrar informació");
+                System.out.println("3: Mostrar informacio");
                 System.out.println("-1: Sortir ");
                 opcio = s.nextInt();
                 switch (opcio) {

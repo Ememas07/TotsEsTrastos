@@ -8,14 +8,17 @@ import java.util.Scanner;
 
 import org.yourcompany.yourproject.package2.CompteBancari;
 
-/*
-Dissenyar la classe CompteBancari, que emmagatzema les dades: DNI, nomTitular i saldo. Les operacions típiques d'aquesta compta són:
-○ Crear un compte. Es necessita el DNI i nom del titular, el saldo és 0
-○ Treure doblers: s'ha d'indicar si és possible o no, en funció del saldo
-○ Ingressar doblers
-○ Mostrar informació
- */
 /**
+ * Modificar la visibilitat de la classe CompteBancari per a que sigui visible
+ * des de classes externes i la visibilitat dels seus atributs per a que:
+ *
+ * saldo no sigui visible per a altres classes.
+ *
+ * nom sigui públic per a qualsevol classe
+ *
+ * dni només sigui visible per a classes veinades
+ *
+ * Escriu un programa que comprovi la visibilitat dels atributs
  *
  * @author Marc Mas
  */
@@ -31,7 +34,7 @@ public class Ud7Act3MarcMas {
             try {
                 System.out.println("1: Treure doblers");
                 System.out.println("2: Ingressar doblers");
-                System.out.println("3: Mostrar informació");
+                System.out.println("3: Mostrar informacio");
                 System.out.println("-1: Sortir ");
                 opcio = s.nextInt();
                 switch (opcio) {

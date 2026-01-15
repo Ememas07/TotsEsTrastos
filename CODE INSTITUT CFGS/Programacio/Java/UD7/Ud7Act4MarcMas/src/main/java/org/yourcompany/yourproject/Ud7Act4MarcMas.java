@@ -8,14 +8,13 @@ import java.util.Scanner;
 
 import org.yourcompany.yourproject.package2.CompteBancari;
 
-/*
-Dissenyar la classe CompteBancari, que emmagatzema les dades: DNI, nomTitular i saldo. Les operacions típiques d'aquesta compta són:
-○ Crear un compte. Es necessita el DNI i nom del titular, el saldo és 0
-○ Treure doblers: s'ha d'indicar si és possible o no, en funció del saldo
-○ Ingressar doblers
-○ Mostrar informació
- */
 /**
+ * Tots els comptes corrents amb les que es va a treballar pertanyen al mateix
+ * banc.
+ *
+ * Afegir un atribut que emmagatzemi el nom del banc a la classe CompteBancari.
+ *
+ * Dissenyar un mètode que permeti recuperar i modifica el nom del banc.
  *
  * @author Marc Mas
  */
@@ -31,7 +30,7 @@ public class Ud7Act4MarcMas {
             try {
                 System.out.println("1: Treure doblers");
                 System.out.println("2: Ingressar doblers");
-                System.out.println("3: Mostrar informació");
+                System.out.println("3: Mostrar informacio");
                 System.out.println("4: Canviar Banc");
                 System.out.println("-1: Sortir ");
                 opcio = s.nextInt();

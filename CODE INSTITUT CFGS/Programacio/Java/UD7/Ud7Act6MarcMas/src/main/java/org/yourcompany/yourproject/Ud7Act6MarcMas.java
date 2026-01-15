@@ -7,6 +7,16 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
+ * Escriu un programa que llegeixi per teclat una hora qualssevol i un nombre n
+ * que representa la quantitat de segons.
+ *
+ * El programa mostrarà l'hora introduïda i les n següents, en intervals de un
+ * segon.
+ *
+ * Per a això hem de dissenyar la classe Hora, que disposa dels atributs hora,
+ * minut i segon.
+ *
+ * Els valors dels atributs es controlaran mitjançant mètodes get i set.
  *
  * @author Marc Mas
  */
