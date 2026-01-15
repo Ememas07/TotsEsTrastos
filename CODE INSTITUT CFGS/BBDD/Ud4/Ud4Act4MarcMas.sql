@@ -16,6 +16,12 @@ CREATE TABLE Profesor_Idiomas (
     Foreign Key (dni) REFERENCES Profesor (dni)
 )
 
+CREATE TABLE CicloForm (
+    codCiclo INT(10) PRIMARY KEY,
+    Nombre VARCHAR(30) NOT NULL,
+    Tipo VARCHAR(30) NOT NULL
+)
+
 CREATE TABLE Asignatura (
     codAsig INT(10) PRIMARY KEY,
     Nombre VARCHAR(30) NOT NULL,
@@ -24,12 +30,6 @@ CREATE TABLE Asignatura (
     codCiclo INT(10),
     Foreign Key (dni_profesor) REFERENCES Profesor (dni),
     Foreign Key (codCiclo) REFERENCES CicloForm (codCiclo)
-)
-
-CREATE TABLE CicloForm (
-    codCiclo INT(10) PRIMARY KEY,
-    Nombre VARCHAR(30) NOT NULL,
-    Tipo VARCHAR(30) NOT NULL
 )
 
 Create TABLE Alumno (
@@ -45,7 +45,7 @@ Create TABLE Alumno (
 CREATE TABLE Matricula (
     id_Alumno_Matricula INT(10) PRIMARY KEY AUTO_INCREMENT,
     dni_Alumno INT(8),
-    codAsig int (10),
+    codAsig int(10),
     Foreign Key (dni_alumno) REFERENCES Alumno (dni),
     Foreign Key (codAsig) REFERENCES Asignatura (codAsig)
 )
