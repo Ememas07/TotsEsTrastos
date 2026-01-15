@@ -14,8 +14,8 @@ function nombrePrimer() {
 
 function comprovar() {
     if (nombrePrimer()) {
-        console.log("El nombre es primer")
+        alert("El nombre es primer")
     } else {
-        console.log("El nombre no es primer")
+        alert("El nombre no es primer")
     }
 }
