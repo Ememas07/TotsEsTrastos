@@ -6,6 +6,8 @@ package org.yourcompany.yourproject;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import org.Hora.Hora;
+
 /**
  * Escriu un programa que llegeixi per teclat una hora qualssevol i un nombre n
  * que representa la quantitat de segons.

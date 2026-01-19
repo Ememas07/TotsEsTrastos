@@ -3,15 +3,26 @@
  */
 package org.yourcompany.yourproject;
 
+import java.util.Date;
+
+import org.Dni.Dni;
+import org.Maquinaria.Locomotora;
+import org.Maquinaria.Tren;
+import org.Personal.CapEstacio;
+import org.Personal.Maquinista;
+import org.Personal.Mecanic;
+
 /**
  * Hem rebut l'encàrrec d'un client per definir els paquets i les classes
  * necessàries (només implementar els atributs i els constructors) per gestionar
  * una empresa ferroviària, on es distingeixen dos grans grups: el personal i la
- * maquinària. ● Al primer s'ubiquen tots els empleats de l'empresa, que es
- * classifiquen en tres grups: els maquinistes, els mecànics i els caps
- * d'estació. De cadascun d'ells cal guardar:
+ * maquinària.
  *
- * aquinistes: el nom, el DNI, el sou i el rang que tenen adquirit.
+ * Al primer s'ubiquen tots els empleats de l'empresa, que es classifiquen en
+ * tres grups: els maquinistes, els mecànics i els caps d'estació. De cadascun
+ * d'ells cal guardar:
+ *
+ * Maquinistes: el nom, el DNI, el sou i el rang que tenen adquirit.
  *
  * Mecànics: el seu nom, telèfon (per contactar en cas d'urgència) i en quina
  * especialitat desenvolupen la feina (aquesta pot ser: frens, hidràulica,
@@ -45,6 +56,10 @@ package org.yourcompany.yourproject;
 public class Ud7Act9MarcMas {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        CapEstacio ce = new CapEstacio("marc", new Dni(12345678), new Date(2008, 12, 31));
+        Mecanic mec = new Mecanic("Marc", 123456789, Mecanic.Especialitats.MOTOR);
+        Maquinista maq = new Maquinista("Marc", new Dni(12345678), 1300, Maquinista.Rangs.RANG1);
+        Locomotora loc = new Locomotora("0622CG3", 300, 2008, mec);
+        Tren tren = Tren.crearTren(loc, 3);
     }
 }

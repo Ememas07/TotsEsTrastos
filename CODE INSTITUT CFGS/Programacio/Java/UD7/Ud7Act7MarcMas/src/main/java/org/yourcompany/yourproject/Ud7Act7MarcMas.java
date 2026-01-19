@@ -8,6 +8,8 @@ import java.io.UnsupportedEncodingException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import org.text.Text;
+
 /**
  * Dissenya la classe Text que gestiona una cadena de caracters amb algunes
  * característiques.

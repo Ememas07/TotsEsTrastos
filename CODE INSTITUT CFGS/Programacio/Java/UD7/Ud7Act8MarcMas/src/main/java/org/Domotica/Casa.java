@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package org.yourcompany.yourproject;
+package org.Domotica;
 
 import java.util.Scanner;
 
@@ -20,15 +20,18 @@ public class Casa {
         this.nombreBombilles = nombreBombilles;
         this.Bombilles = Bombilles;
         this.estatGeneral = estatGeneral;
-
     }
 
     public Casa(int nombreBombilles) {
+        this(nombreBombilles, crearArrayBombilles(nombreBombilles), true);
+    }
+
+    public static Bombilla[] crearArrayBombilles(int nombreBombilles) {
         Bombilla[] Bombilles = new Bombilla[nombreBombilles];
         for (int i = 0; i < Bombilles.length; i++) {
             Bombilles[i] = new Bombilla(false); //cream dos arrays de bombilles, i les posam a totes com a false ja que la casa estarà tota apagada
         }
-        this(nombreBombilles, Bombilles, true);
+        return Bombilles;
     }
 
     public static Casa construirCasa() {

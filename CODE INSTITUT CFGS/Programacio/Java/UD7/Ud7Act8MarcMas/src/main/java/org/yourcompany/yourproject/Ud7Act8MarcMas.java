@@ -6,6 +6,8 @@ package org.yourcompany.yourproject;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import org.Domotica.Casa;
+
 /**
  * Modelar una casa amb moltes bombilles, de tal manera que cada una es pot
  * encendre o apagar individualment.
@@ -44,7 +46,7 @@ public class Ud7Act8MarcMas {
                         byte info = s.nextByte();
                         if (info == 1) {
                             c.mostrarInformacio(true);
-                        } else{
+                        } else {
                             c.mostrarInformacio(false);
                         }
                     }
