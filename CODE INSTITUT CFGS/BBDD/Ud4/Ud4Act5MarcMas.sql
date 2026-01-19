@@ -26,7 +26,7 @@ CREATE TABLE Venta(
     dni_empleado INT(8),
     dni_cliente INT(8),
     codMovil INT(10),
-    cantidad INT(5),
+    cantidad INT(5) not null,
     Foreign Key (dni_empleado) REFERENCES Empleado(dni),
     Foreign Key (dni_cliente) REFERENCES Cliente(dni),
     Foreign Key (codMovil) REFERENCES Movil(codMovil)

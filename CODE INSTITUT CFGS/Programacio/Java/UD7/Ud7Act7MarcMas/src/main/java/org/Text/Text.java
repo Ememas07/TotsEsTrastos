@@ -29,7 +29,7 @@ public class Text {
     }
 
     public void afegirPrincipi(String cadena) {
-        if (cadena.length() + text.length() > longitut) {
+        if (cadena.length() + text.length() > longitut) { //si la longitut 
             System.out.println("La cadena total seria massa llarga!");
         } else {
             this.text = cadena + this.text;

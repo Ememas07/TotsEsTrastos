@@ -23,7 +23,7 @@ public class Tren {
     public static Tren crearTren(Locomotora loc, int nVagons) {
         Vago[] Vagons = new Vago[5];
         for (int i = 0; i < nVagons; i++) {
-            Vagons[i] = new Vago(0622, 300.0f, 0.0f, Vago.Mercaderies.EXPLOSIUS);
+            Vagons[i] = new Vago(0622, 300.0f, 0.0f, Vago.Mercaderies.EXPLOSIUS); //cream un array de 5 posicions, i ficam X vagons com sigui necessari
         }
         return new Tren(loc, Vagons, nVagons);
     }
