@@ -1,0 +1,5 @@
+Cortado - 0.75
+Tacat - 3.5
+Espresso - 1.5
+Total Bill: 5.75
+Paid by: Marc mas
