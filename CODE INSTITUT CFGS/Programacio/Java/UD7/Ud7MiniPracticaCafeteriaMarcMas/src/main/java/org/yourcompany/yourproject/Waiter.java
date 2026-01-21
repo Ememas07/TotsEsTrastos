@@ -54,6 +54,12 @@ public class Waiter {
         m.powerMachine();
     }
 
+    public void getOrderSummary() {
+        for (Coffee servedCoffee : servedCoffees) {
+            System.out.println(servedCoffee.getName() + " - " + servedCoffee.getPrice()); //recorrem array i imprimim tots els cafès m
+        }
+    }
+
     public float getBill() {
         float price = 0f;
         for (Coffee servedCoffee : servedCoffees) { //per cada cafè a la llista de cafès, sumam el preu

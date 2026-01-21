@@ -3,9 +3,6 @@
  */
 package org.yourcompany.yourproject;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.InputMismatchException;
@@ -44,6 +41,7 @@ public class Ud7MiniPracticaCafeteriaMarcMas {
             }
         }
         System.out.println("Hey! you have to pay!");
+        w.getOrderSummary();
         System.out.println("Total Bill: " + w.getBill());
         w.writeBill(s);
         w.powerMachine(m); //apagam la cafetera
