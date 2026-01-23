@@ -1,0 +1,1 @@
+Hem aprés a emprar querySelector, createElement i appendChild
