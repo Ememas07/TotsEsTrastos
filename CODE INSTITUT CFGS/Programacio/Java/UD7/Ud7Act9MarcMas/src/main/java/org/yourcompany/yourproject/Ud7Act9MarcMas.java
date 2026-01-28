@@ -72,7 +72,7 @@ public class Ud7Act9MarcMas {
                 opcio = s.nextInt();
                 switch (opcio) { //switch per triar les opcions
                     case 1 -> {
-                        CapEstacio ce = new CapEstacio("marc", new Dni(12345678), new Date(2008, 12, 31));
+                        CapEstacio ce = new CapEstacio("Marc", new Dni(12345678), new Date(2008, 12, 31));
                     }
                     case 2 -> {
                         Mecanic mec = new Mecanic("Marc", 123456789, Mecanic.Especialitats.MOTOR);
@@ -83,11 +83,11 @@ public class Ud7Act9MarcMas {
                     }
                     case 4 -> {
                         Mecanic mec2 = new Mecanic("Marc", 123456789, Mecanic.Especialitats.MOTOR);
-                        Locomotora loc = new Locomotora("0622CG3", 300, 2008, mec2);
+                        Locomotora loc = new Locomotora("0622CGP", 300, 2008, mec2);
                     }
                     case 5 -> {
                         Mecanic mec3 = new Mecanic("Marc", 123456789, Mecanic.Especialitats.MOTOR);
-                        Locomotora loc2 = new Locomotora("0622CG3", 300, 2008, mec3);
+                        Locomotora loc2 = new Locomotora("0622CGP", 300, 2008, mec3);
                         Tren tren = Tren.crearTren(loc2, 3);
                     }
                 }
