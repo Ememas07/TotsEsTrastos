@@ -72,6 +72,12 @@ public class Llista {
             System.out.println("L'index insertat no és valid!");
         }
     }
+    
+    public void insertarEnmig(int[] numeros, int index) {
+        for (int i = 0; i < numeros.length; i++) {
+            insertarEnmig(numeros[i], index+i);  
+        }
+    }
 
     public void eliminarElement(int index) {
         try {

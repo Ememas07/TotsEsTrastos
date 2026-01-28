@@ -106,12 +106,26 @@ public class Ud7Act10MarcMas {
                         }
                         l.insertarFinal(llista);
                     }
-                    case 6 -> { //eliminar index
+                    case 6 -> { //insertar enmig (multiple)
+                        System.out.println("Quants de nombres vol inserir?");
+                        int quantitat = s.nextInt();
+                        int numero;
+                        System.out.println("A quin index?");
+                        int index = s.nextInt();
+                        int[] llista = new int[quantitat];
+                        for (int i = 0; i < llista.length; i++) {
+                            System.out.println("Insertant numero " + (i + 1));
+                            numero = s.nextInt();
+                            llista[i] = numero;
+                        }
+                        l.insertarEnmig(llista, index);
+                    }
+                    case 7 -> { //eliminar index
                         System.out.println("Quin index vol eliminar?");
                         int index = s.nextInt();
                         l.eliminarElement(index);
                     }
-                    case 7 -> { //obtenir index
+                    case 8 -> { //obtenir index
                         System.out.println("Quin index vol obtenir?");
                         int index = s.nextInt();
                         int resultat = l.obtenirElement(index);
@@ -119,7 +133,7 @@ public class Ud7Act10MarcMas {
                             System.out.println("L'element " + index + " es " + resultat);
                         }
                     }
-                    case 8 -> { //cercar nombre
+                    case 9 -> { //cercar nombre
                         System.out.println("Quin nombre vol cercar?");
                         int numero = s.nextInt();
                         int resultat = l.cercarElement(numero);
@@ -129,10 +143,10 @@ public class Ud7Act10MarcMas {
                             System.out.println("S'ha trobat a la posicio " + resultat);
                         }
                     }
-                    case 9 -> { //mostrar
+                    case 10 -> { //mostrar
                         l.mostrarElements();
                     }
-                    case 10 -> { //omplir aleatori
+                    case 11 -> { //omplir aleatori
                         System.out.println("Quants de nombres vol?");
                         int numeros = s.nextInt();
                         l.omplirAleatori(numeros);
