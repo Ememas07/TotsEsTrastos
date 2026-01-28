@@ -4,6 +4,8 @@
 package org.yourcompany.yourproject;
 
 import java.util.Date;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 import org.Dni.Dni;
 import org.Maquinaria.Locomotora;
@@ -56,10 +58,42 @@ import org.Personal.Mecanic;
 public class Ud7Act9MarcMas {
 
     public static void main(String[] args) {
-        CapEstacio ce = new CapEstacio("marc", new Dni(12345678), new Date(2008, 12, 31));
-        Mecanic mec = new Mecanic("Marc", 123456789, Mecanic.Especialitats.MOTOR);
-        Maquinista maq = new Maquinista("Marc", new Dni(12345678), 1300, Maquinista.Rangs.RANG1);
-        Locomotora loc = new Locomotora("0622CG3", 300, 2008, mec);
-        Tren tren = Tren.crearTren(loc, 3);
+        Scanner s = new Scanner(System.in);
+        System.out.println("Quina operacio vol fer?");
+        int opcio = 0;
+        while (opcio > -1) { //-1 sortirà 
+            try {
+                System.out.println("1: Crear cap estacio");
+                System.out.println("2: Crear Mecanic");
+                System.out.println("3: Crear Maquinista");
+                System.out.println("4: Crear Locomotora");
+                System.out.println("5: Crear Tren");
+                System.out.println("-1: Sortir");
+                opcio = s.nextInt();
+                switch (opcio) { //switch per triar les opcions
+                    case 1 -> {
+                        CapEstacio ce = new CapEstacio("marc", new Dni(12345678), new Date(2008, 12, 31));
+                    }
+                    case 2 -> {
+                        Mecanic mec = new Mecanic("Marc", 123456789, Mecanic.Especialitats.MOTOR);
+                    }
+                    case 3 -> {
+                        Maquinista maq = new Maquinista("Marc", new Dni(12345678), 1300, Maquinista.Rangs.RANG1);
+
+                    }
+                    case 4 -> {
+                        Mecanic mec2 = new Mecanic("Marc", 123456789, Mecanic.Especialitats.MOTOR);
+                        Locomotora loc = new Locomotora("0622CG3", 300, 2008, mec2);
+                    }
+                    case 5 -> {
+                        Mecanic mec3 = new Mecanic("Marc", 123456789, Mecanic.Especialitats.MOTOR);
+                        Locomotora loc2 = new Locomotora("0622CG3", 300, 2008, mec3);
+                        Tren tren = Tren.crearTren(loc2, 3);
+                    }
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Introdueixi un numero valid!");
+            }
+        }
     }
 }
