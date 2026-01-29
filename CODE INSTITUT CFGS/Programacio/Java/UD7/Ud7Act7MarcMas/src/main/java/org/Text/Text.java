@@ -25,11 +25,11 @@ public class Text {
     }
 
     public Text(int longitut) {
-        this(longitut, "");
+        this(longitut, ""); //cream un text, sense text 
     }
 
     public void afegirPrincipi(String cadena) {
-        if (cadena.length() + text.length() > longitut) { //si la longitut 
+        if ((cadena.length() + text.length()) > longitut) { //si la longitut total seria mes llarga que la especificada, no deixam executar
             System.out.println("La cadena total seria massa llarga!");
         } else {
             this.text = cadena + this.text;
@@ -38,12 +38,12 @@ public class Text {
     }
 
     public void afegirPrincipi(char caracter) {
-        String c = "" + caracter;
+        String c = "" + caracter; //afegim un caracter passat a string
         afegirPrincipi(c);
     }
 
     public void afegirFinal(String cadena) {
-        if (cadena.length() + text.length() > longitut) {
+        if ((cadena.length() + text.length()) > longitut) { //si la longitut total seria mes llarga que la especificada, no deixam executar
             System.out.println("La cadena total seria massa llarga!");
         } else {
             this.text += cadena;
@@ -57,7 +57,7 @@ public class Text {
     }
 
     public void mostrarText() {
-        System.out.println("Text actual:");
+        System.out.print("Text actual:");
         System.out.println(this.text);
     }
 
@@ -132,6 +132,8 @@ public class Text {
 
         text += (data.getYear() + 1900) + " "; //ens mostra l"any desde l"any 1900, jo vull l"any complet
 
+        // les linees seguents son format
+        // si un num no té dos digits, afegim un 0, 9 -> 09, 3 -> 03, 10 -> 10 (no afecta) 
         if (data.getHours() < 9) {
             text += "0";
         }

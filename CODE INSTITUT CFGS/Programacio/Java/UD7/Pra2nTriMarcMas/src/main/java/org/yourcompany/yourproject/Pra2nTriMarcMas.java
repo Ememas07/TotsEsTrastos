@@ -19,6 +19,7 @@ public class Pra2nTriMarcMas {
         System.out.println("Benvingut a la meva pràctica del segon trimestre!");
         Text textBrut = new Text("text.txt");
         textBrut.separarParaules();
+        textBrut.netejarParaules();
         textBrut.mostrarParaules();
     }
 }

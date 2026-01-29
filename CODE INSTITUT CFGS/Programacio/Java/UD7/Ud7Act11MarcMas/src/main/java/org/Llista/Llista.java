@@ -24,7 +24,7 @@ public class Llista {
 
     public void omplirAleatori(int mida) {
         int numero;
-        for (int i = 0; i < mida; i++) {
+        for (int i = 0; i < mida; i++) { //recorrem l'array i insertam al final amb numeros de 0 a 100
             numero = (int) (Math.random() * 100);
             insertarFinal(numero);
         }
@@ -32,7 +32,7 @@ public class Llista {
 
     public void insertarPrincipi(int[] insercions) {
         for (int i = 0; i < insercions.length; i++) {
-            this.insertarPrincipi(insercions[i]);
+            this.insertarPrincipi(insercions[i]); //recorrem l'array i aficam al principi un per un
         }
     }
 

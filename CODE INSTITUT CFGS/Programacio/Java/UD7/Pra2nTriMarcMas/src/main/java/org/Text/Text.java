@@ -45,4 +45,10 @@ public class Text {
         }
     }
 
+    public void netejarParaules() {
+        for (Paraula paraula : paraules) {
+            paraula.netejarParaula();
+        }
+    }
+
 }
