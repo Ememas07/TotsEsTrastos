@@ -33,8 +33,12 @@ public class Text {
 
     public Paraula[] separarParaules() {
         while (arxiu.hasNext()) {
-            paraules = Arrays.copyOf(paraules, paraules.length + 1);
-            paraules[paraules.length - 1] = new Paraula(arxiu.next());
+            Paraula p = new Paraula(arxiu.next());
+            p.netejarParaula();
+            if (p.getText() != null) {
+                paraules = Arrays.copyOf(paraules, paraules.length + 1);
+                paraules[paraules.length - 1] = p;
+            }
         }
         return paraules;
     }
@@ -45,9 +49,37 @@ public class Text {
         }
     }
 
+    public void mostrarParaulesUniques() {
+        Paraula[] emprades = new Paraula[0];
+        for (Paraula paraula : paraules) {
+            boolean jaEmprada = false;
+            for (Paraula emprada : emprades) {
+                if (paraula.getText().equals(emprada.getText())) {
+                    jaEmprada = true;
+                }
+            }
+            if (!jaEmprada) {
+                emprades = Arrays.copyOf(emprades, emprades.length + 1);
+                emprades[emprades.length - 1] = paraula;
+                paraula.escriureParaula();
+            }
+        }
+        for (Paraula emprada : emprades) {
+        }
+    }
+
     public void netejarParaules() {
         for (Paraula paraula : paraules) {
             paraula.netejarParaula();
+        }
+    }
+
+    public Paraula getParaula(int i) {
+        if (i > paraules.length) {
+            System.out.println("Aquesta paraula no existeix!");
+            return new Paraula("-1");
+        } else {
+            return paraules[i];
         }
     }
 

@@ -26,16 +26,20 @@ public class Paraula {
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
             c = Character.toLowerCase(c); //passam a minuscules
-            if (posicioAlfabet(c) > 0) { //si esta al nostre alfabet, retornara un nombre positio, aixi que sumarem frequencia i afegim al text nou
+            if (posicioAlfabet(c) > -1) { //si esta al nostre alfabet, retornara un nombre positio, aixi que sumarem frequencia i afegim al text nou
                 this.frequencia[posicioAlfabet(c)] += 1;
                 nouText += c;
             } //si no, no afegim res (netejant)
         }
-        text = nouText;
+        if (nouText.isBlank() || nouText.isEmpty() || nouText == "") {
+            text = null;
+        } else {
+            text = nouText;
+        }
     }
 
     public void escriureParaula() {
-        System.out.println(text);
+        System.out.println(this.text);
     }
 
     private int posicioAlfabet(char c) {
@@ -46,4 +50,17 @@ public class Paraula {
         }
         return -1; //si no, -1
     }
+
+    public void mostrarFrecuencies() {
+        for (int i = 0; i < frequencia.length; i++) {
+            if (frequencia[i] != 0) { //si la frecuencia no es 0, imprimim la lletra i la frecuencia
+                System.out.println("Lletra: " + ALFABET.charAt(i) + " apareix " + frequencia[i] + " vegades ");
+            }
+        }
+    }
+
+    public String getText() {
+        return this.text;
+    }
+
 }
