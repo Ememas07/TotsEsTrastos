@@ -64,7 +64,35 @@ public class Text {
                 paraula.escriureParaula();
             }
         }
-        for (Paraula emprada : emprades) {
+    }
+
+    public void setOcurrencies() {
+        for (Paraula paraula : paraules) {
+            if (paraula.getOcurrencies() == 0) {
+                int ocurrencies = 0;
+                for (int i = 0; i < paraules.length - 1; i++) {
+                    if (paraula.getText().equals(paraules[i].getText())) {
+                        ocurrencies++;
+                    }
+                }
+                paraula.setOcurrencies(ocurrencies);
+            }
+        }
+    }
+
+    public void mostraOcurrencies(Paraula p) {
+        System.out.println("La paraula " + p.getText() + " apareix: " + p.getOcurrencies() + " vegades");
+    }
+
+    public void mostraOcurrencies(String text) {
+        mostraOcurrencies(new Paraula(text));
+    }
+
+    public void mostrarPalindroms() {
+        for (Paraula paraula : paraules) {
+            if (paraula.esPalindrom()) {
+                System.out.println(paraula.getText());
+            }
         }
     }
 
@@ -77,7 +105,7 @@ public class Text {
     public Paraula getParaula(int i) {
         if (i > paraules.length) {
             System.out.println("Aquesta paraula no existeix!");
-            return new Paraula("-1");
+            return new Paraula("");
         } else {
             return paraules[i];
         }

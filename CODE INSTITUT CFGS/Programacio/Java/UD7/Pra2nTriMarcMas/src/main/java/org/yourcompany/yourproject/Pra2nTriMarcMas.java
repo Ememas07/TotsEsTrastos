@@ -24,12 +24,17 @@ public class Pra2nTriMarcMas {
         textBrut.separarParaules();
         textBrut.mostrarParaules();
         textBrut.mostrarParaulesUniques();
+        System.out.println("Palindroms:");
+        textBrut.mostrarPalindroms();
+        textBrut.setOcurrencies();
         int sortir = 0;
         while (sortir != -1) {
             sortir = s.nextInt();
-            if (sortir > 0) {
+            if (sortir > -1) {
                 Paraula p = textBrut.getParaula(sortir);
-                p.mostrarFrecuencies();
+                if (!p.getText().equals("")) {
+                    p.estadistiques();
+                }
             }
         }
     }

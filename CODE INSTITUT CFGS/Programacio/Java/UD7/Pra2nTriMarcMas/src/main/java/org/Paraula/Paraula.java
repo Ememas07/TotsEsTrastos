@@ -14,11 +14,28 @@ public class Paraula {
     String text;
     int[] frequencia;
     int longitut;
+    boolean esPalindrom;
+    int ocurrencies;
 
     public Paraula(String text) {
         this.text = text;
         this.longitut = text.length();
         this.frequencia = new int[ALFABET.length()];
+        this.esPalindrom = esPalindrom();
+        this.ocurrencies = 0;
+    }
+
+    public boolean esPalindrom() {
+        if (text.length() < 3) {
+            return false;
+        }
+        String text2 = this.text;
+        for (int i = 0; i < text.length() / 2; i++) {
+            if (text.charAt(i) != text2.charAt(text2.length() - 1 - i)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void netejarParaula() {
@@ -59,8 +76,27 @@ public class Paraula {
         }
     }
 
+    public void estadistiques() {
+        System.out.println("Paraula: " + this.text);
+        System.out.println("Longitut: " + this.longitut);
+        System.out.println("La paraula apareix " + this.ocurrencies + " vegades");
+        if (!this.esPalindrom) {
+            System.out.print("No ");
+        }
+        System.out.println("Es palindroma");
+        mostrarFrecuencies();
+    }
+
     public String getText() {
         return this.text;
+    }
+
+    public int getOcurrencies() {
+        return this.ocurrencies;
+    }
+
+    public void setOcurrencies(int n) {
+        this.ocurrencies = n;
     }
 
 }
