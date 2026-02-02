@@ -5,7 +5,7 @@ package org.yourcompany.yourproject;
 
 /**
  *
- * @author alumne
+ * @author Marc Mas
  */
 public class FiniteStateMachineMarcMas {
 

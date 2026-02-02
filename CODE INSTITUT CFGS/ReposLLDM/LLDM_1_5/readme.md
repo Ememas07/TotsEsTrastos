@@ -1,0 +1,1 @@
+Aquesta es una practica d'un lloc web d'un projecte personal
