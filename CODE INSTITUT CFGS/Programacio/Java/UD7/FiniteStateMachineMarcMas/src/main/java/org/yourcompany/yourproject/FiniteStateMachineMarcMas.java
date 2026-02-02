@@ -20,9 +20,9 @@ public class FiniteStateMachineMarcMas {
             ATTACKING,
             HIT,
             DEAD,
+            GUARDING,
+            PARRYING,
             DOUBLE_JUMP,
-            PARRY,
-            GUARD,
         }
 
         enum Input {
@@ -33,7 +33,9 @@ public class FiniteStateMachineMarcMas {
             DAMAGE,
             DEATH,
             GROUND,
-            TIME
+            TIME,
+            PARRY,
+            GUARD,
         }
 
         // DOUBLE JUMP
@@ -71,9 +73,9 @@ public class FiniteStateMachineMarcMas {
                     TransitionFromJumping(input);
                 case DOUBLE_JUMP ->
                     TransitionFromDoubleJump(input);
-                case PARRY ->
+                case PARRYING ->
                     TransitionFromParry(input);
-                case GUARD ->
+                case GUARDING ->
                     TransitionFromGuard(input);
             };
         }
@@ -92,6 +94,10 @@ public class FiniteStateMachineMarcMas {
                     State.HIT;
                 case TIME ->
                     State.IDLE;
+                case PARRY ->
+                    State.PARRYING;
+                case GUARD ->
+                    State.GUARDING;
                 default ->
                     state;
             };
@@ -135,6 +141,8 @@ public class FiniteStateMachineMarcMas {
                     State.HIT;
                 case TIME ->
                     State.IDLE;
+                case JUMP ->
+                    State.DOUBLE_JUMP;
                 default ->
                     state;
             };
@@ -148,6 +156,8 @@ public class FiniteStateMachineMarcMas {
                     State.HIT;
                 case TIME ->
                     State.IDLE;
+                case JUMP ->
+                    State.JUMPING;
                 case DEATH ->
                     State.DEAD;
                 default ->
@@ -161,6 +171,21 @@ public class FiniteStateMachineMarcMas {
                     State.WALKING;
                 case TIME ->
                     State.IDLE;
+                case JUMP ->
+                    State.JUMPING;
+                default ->
+                    state;
+            };
+        }
+
+        public State TransitionFromJumping(Input input) {
+            return switch (input) {
+                case TIME ->
+                    State.FALLING;
+                case JUMP ->
+                    State.DOUBLE_JUMP;
+                case DAMAGE ->
+                    State.HIT;
                 default ->
                     state;
             };
@@ -168,10 +193,10 @@ public class FiniteStateMachineMarcMas {
 
         public State TransitionFromDoubleJump(Input input) {
             return switch (input) {
-                case JUMP ->
-                    State.DOUBLE_JUMP;
                 case TIME ->
                     State.FALLING;
+                case DAMAGE ->
+                    State.HIT;
                 default ->
                     state;
             };
@@ -187,10 +212,11 @@ public class FiniteStateMachineMarcMas {
                     state;
             };
         }
+
         public State TransitionFromGuard(Input input) {
             return switch (input) {
-                case ATTACK ->
-                    State.GUARD;
+                case WALK ->
+                    State.WALKING;
                 case TIME ->
                     State.IDLE;
                 default ->
@@ -198,16 +224,6 @@ public class FiniteStateMachineMarcMas {
             };
         }
 
-        public State TransitionFromJumping(Input input) {
-            return switch (input) {
-                case TIME ->
-                    State.FALLING;
-                case DAMAGE ->
-                    State.HIT;
-                default ->
-                    state;
-            };
-        }
     }
 
     public static void main(String[] args) {
@@ -219,14 +235,17 @@ public class FiniteStateMachineMarcMas {
             Player.Input.TIME,
             Player.Input.JUMP,
             Player.Input.TIME,
+            Player.Input.JUMP,
+            Player.Input.TIME,
             Player.Input.ATTACK,
-            Player.Input.DAMAGE,
-        };
+            Player.Input.JUMP,
+            Player.Input.JUMP,
+            Player.Input.DAMAGE,};
 
         for (Player.Input script1 : script) {
-            System.out.println("Estat Anterior: "+player.state+" Input: "+script1);
+            System.out.println("Estat Anterior: " + player.state + " Input: " + script1);
             player.handle(script1);
-            System.out.println("Estat despres: "+player.state);
+            System.out.println("Estat despres: " + player.state);
         }
     }
 }
