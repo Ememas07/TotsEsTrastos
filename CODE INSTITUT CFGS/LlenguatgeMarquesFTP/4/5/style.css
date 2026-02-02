@@ -1,0 +1,14 @@
+img {
+    display: flex;
+    margin: auto;
+    width: 80vw;
+}
+
+div {
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.amagat {
+    display: none;
+}

@@ -172,12 +172,12 @@ class FractalPanel extends JPanel {
 
     private void drawCanopy(Graphics2D g, int depth) {
         // TODO: Implement fractal Canopy
-        drawCanopy(g, depth, 450, 600, 270, 50, 20);
+        drawCanopy(g, depth, getWidth() / 2, getHeight() - 50, 270, 50, 20);
     }
 
     private void drawKochLine(Graphics2D g, int depth) {
         // TODO: Implement Koch line
-        drawKochLine(g, depth, 50, 350, 0, 600, 5);
+        drawKochLine(g, depth, 50, getHeight() - 100, 0, getWidth() - 100, 5);
     }
 
     private void drawKochLine(Graphics2D g, int depth, double x, double y, double a, double l, double w) {
@@ -203,7 +203,7 @@ class FractalPanel extends JPanel {
     private void drawKochSnowflake(Graphics2D g, int depth) {
         // TODO: Implement Koch snowflake
         //KOCKHLINE A, KOCHLINE A+120, KOCHLINE A+240
-        drawKochSnowflake(g, depth, 50, 150, 0, 400, 5);
+        drawKochSnowflake(g, depth + 1, 100, 50, 0, getWidth() - 200, 5);
     }
 
     private void drawKochSnowflake(Graphics2D g, int depth, double x, double y, double a, double l, double w) {
@@ -223,5 +223,29 @@ class FractalPanel extends JPanel {
 
     private void drawSierpinski(Graphics2D g, int depth) {
         // TODO: Implementar Sierpiński triangle
+        drawSierpinski(g, depth, 50, 150, 0, 400, 5);
+    }
+
+    private void drawSierpinski(Graphics2D g, int depth, double x, double y, double a, double l, double w) {
+        if (depth == 1) {
+            drawPolarLine(g, x, y, a, l, (int) w, Color.decode("#FF0000"));
+            double x2 = x + l * Math.cos(Math.toRadians(a));
+            double y2 = y + l * Math.sin(Math.toRadians(a));
+            double a2 = a + 120;
+            drawPolarLine(g, x2, y2, a2, l, (int) w, Color.decode("#FF0000"));
+            double x3 = x2 + l * Math.cos(Math.toRadians(a2));
+            double y3 = y2 + l * Math.sin(Math.toRadians(a2));
+            drawPolarLine(g, x3, y3, a2 + 120, l, (int) w, Color.decode("#FF0000"));
+        } else {
+            drawSierpinski(g, depth - 1, x / 2, y / 2, a, l, w);
+            double x2 = x + l * Math.cos(Math.toRadians(a));
+            double y2 = y + l * Math.sin(Math.toRadians(a));
+            double a2 = a + 120;
+            drawSierpinski(g, depth - 1, x2 / 2, y2 / 2, a2, l, w);
+            double x3 = x2 + l * Math.cos(Math.toRadians(a2));
+            double y3 = y2 + l * Math.sin(Math.toRadians(a2));
+            double a3 = a + 120;
+            drawSierpinski(g, depth - 1, x3 / 2, y3 / 2, a3, l, w);
+        }
     }
 }

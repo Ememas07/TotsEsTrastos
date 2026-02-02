@@ -1,0 +1,1 @@
+Hem fet un programa de javascript per comprovar quin dels dos nombres es major 

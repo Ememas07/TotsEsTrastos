@@ -1,0 +1,45 @@
+html,
+tr,
+th {
+    color: black;
+    background-color: white;
+    border-color: black;
+    border-style: solid 1px;
+}
+
+td.pati {
+    border-style: dashed;
+    background-color: lightgreen;
+}
+
+.programacio {
+    background-color: red;
+}
+
+.marques {
+    background-color: aqua;
+}
+
+.digitalitzacio {
+    background-color: greenyellow;
+
+}
+
+.bbdd {
+    background-color: yellow;
+
+}
+
+.sistemes {
+    background-color: violet;
+
+}
+
+.ipo {
+    background-color: pink;
+
+}
+
+.entorns {
+    background-color: orange;
+}

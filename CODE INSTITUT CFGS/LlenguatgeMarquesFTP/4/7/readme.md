@@ -1,0 +1,1 @@
+Hem aprés a emprar getElementById per fer una frase que es pot ocultar

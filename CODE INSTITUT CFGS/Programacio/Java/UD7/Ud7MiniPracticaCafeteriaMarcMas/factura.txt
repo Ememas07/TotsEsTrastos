@@ -1,0 +1,5 @@
+Capuccino - 2.0
+Cafè amb llet - 1.0
+Espresso - 1.5
+Total Bill: 4.5
+Paid by: Max

@@ -1,0 +1,1 @@
+Hem fet un parell d'exercisis que ja haviem fet amb Java però fets amb javascript

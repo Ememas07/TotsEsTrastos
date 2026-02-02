@@ -1,0 +1,1 @@
+Hem fet un programa per saber si un nombre es primer o no

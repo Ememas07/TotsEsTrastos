@@ -1,0 +1,1 @@
+Hem fet un carrusel d'imatges amb javascript

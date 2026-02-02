@@ -29,7 +29,6 @@ public class Ud6Act8MarcMas {
             }
         }
         return fraseNova;
-
     }
 
     public static char xifrador(char lletra, int decalatge) {
@@ -47,9 +46,9 @@ public class Ud6Act8MarcMas {
         String frase = s.nextLine(); //demananam la frase
         System.out.println("Quin decalatge vol?");
         int decalatge = s.nextInt(); //i el decalatge
+        decalatge += 26;
         System.out.println("Aqui te la seva frase xifrada:");
         String fraseXifrada = xifrador(frase, decalatge); //i xifram
         System.out.println(fraseXifrada);
-
     }
 }

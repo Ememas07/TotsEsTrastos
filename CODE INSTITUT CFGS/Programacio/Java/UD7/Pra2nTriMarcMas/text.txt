@@ -1,0 +1,372 @@
+
+WikipediaThe Free Encyclopedia
+Search Wikipedia
+Search
+Donate
+Create account
+Log in
+Contents hide
+(Top)
+History
+Michelin Pilot Challenge
+Class structure
+
+Sports Prototype classes
+Grand Touring Prototype (GTP)
+Le Mans Prototype 2 (LMP2)
+Grand Touring classes
+GT Daytona Pro (GTD Pro)
+GT Daytona (GTD)
+Former classes
+
+Sports Prototype classes
+Daytona Prototype International (DPi)
+Prototype (P)
+Prototype Challenge (PC)
+Le Mans Prototype 3 (LMP3)
+Grand Touring classes
+GT Le Mans (GTLM)
+Circuits
+Champions
+
+Drivers
+Teams
+Manufacturers
+See also
+References
+External links
+IMSA SportsCar Championship
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Appearance hide
+Text
+
+Small
+
+Standard
+
+Large
+Width
+
+Standard
+
+Wide
+Color (beta)
+
+Automatic
+
+Light
+
+Dark
+From Wikipedia, the free encyclopedia
+This article is about the 21st-century IMSA sports car championship series. For the 20th century IMSA sports car championship series, see IMSA GT Championship.
+IMSA SportsCar Championship
+
+Country	United States United States
+Canada Canada
+Region	North America
+Inaugural season	
+2014
+Prototype Classes	Grand Touring Prototype (GTP) & Le Mans Prototype 2 (LMP2)
+GT Classes	GT Daytona Pro (GTD Pro) & GT Daytona (GTD)
+Teams	44
+Constructors	GTP:
+Porsche • Cadillac • Aston Martin • BMW • Acura (HRC US) • Lamborghini
+
+GTD Pro:
+Aston Martin • BMW • Chevrolet & Pratt Miller • Lamborghini • Lexus • Porsche • Ford • Mercedes-Benz • Ferrari
+
+GTD:
+Aston Martin • BMW • Chevrolet & Pratt Miller • Lamborghini • Lexus • Porsche • Ford • Mercedes-Benz • Ferrari
+Chassis manufacturers	GTP:
+Multimatic • Dallara • Oreca • Ligier
+
+LMP2:
+Oreca
+Engine manufacturers	LMP2:
+Gibson
+Tire suppliers	Continental (2014–2018 Prototype and GTD)
+Michelin (2014–2018 GTLM; 2019–present all classes)
+Drivers' champion	GTP:
+Australia Matt Campbell
+France Mathieu Jaminet
+LMP2:
+United States P.J. Hyett
+United States Dane Cameron
+GTD Pro:
+Spain Antonio García
+United Kingdom Alexander Sims
+GTD:
+Switzerland Philip Ellis
+United States Russell Ward
+Makes' champion	GTP: Germany Porsche
+GTD Pro: United States Corvette
+GTD: Germany Mercedes-AMG
+Teams' champion	GTP: Germany Porsche Penske Motorsport
+LMP2: United States AO Racing
+GTD Pro: United States Corvette Racing by Pratt Miller Motorsports
+GTD: United States Winward Racing
+Official website	imsa.com/weathertech/
+ Current season
+The IMSA SportsCar Championship, currently known as the IMSA WeatherTech SportsCar Championship under sponsorship, is a sports car racing series based in the United States and Canada and organized by the International Motor Sports Association (IMSA). It is considered the pinnacle of sports car racing in North America, attracting top-tier manufacturers, teams and drivers. The championship features prototypes and GT cars competing across various classes and consists of both long-distance endurance races and shorter sprint races.
+
+The series traces its roots to the IMSA GT Championship, which began in 1971 and ran until 1998. From the late 1990s until 2013, top-level sports car racing in North America was split between the high-tech American Le Mans Series and the low-cost Rolex Sports Car Series. These two series were merged in 2014 to form the United SportsCar Championship,[1] which was subsequently renamed as the IMSA SportsCar Championship in 2016. Rolex SA's Tudor brand was the title sponsor of the championship in 2014 and 2015,[2] and WeatherTech has served as title sponsor since 2016.[3]
+
+The season begins with its premier race, the Rolex 24 at Daytona, the last weekend of January and ends with the Petit Le Mans, another North American Endurance Cup race, in early October.
+
+History
+On September 5, 2012, it was announced that the Grand-Am Road Racing sanctioning body would merge with the Braselton-based International Motor Sports Association, and as such, both bodies would merge their premiere sports car series, the Rolex Sports Car Series and American Le Mans Series respectively, with plans to debut in 2014. On November 20, 2012, the merger committee announced that SME Branding were selected to develop the name, logo and identity of the new series.[4]
+
+
+2014 Sahlen's Six Hours of the Glen
+On January 8, 2013, the two series' announced a preliminary class structure for the new merged series. Grand-Am's Daytona Prototype category and IMSA's P2 would combine into a single-prototype class, with allowances for the unique DeltaWing to also compete in the new class. The Le Mans Prototype Challenge class of single spec cars from the American Le Mans Series would continue as is, although the cars were to switch to Grand-Am's Continental Tires.[5] The GT class of the American Le Mans Series would remain unchanged, while Grand-Am's GT class would form another GT class, and be combined with the American Le Mans GTC category.[6] The only category of cars not represented in the new series is the American Le Mans Series' P1 category.
+
+The reveal date for the new series was March 14, 2013 at the Chateau Élan Hotel and Conference Center at Sebring International Raceway, two days before the 12 Hours of Sebring. American Le Mans CEO Scott Atherton announced the new sanctioning body would remain IMSA while Ed Bennett revealed the new titles for the series' five classes. SME Branding Senior Partner Ed O'Hara then announced the new United SportsCar Racing title and logo, a name submitted through a contest won by Louis Satterlee of Florida, a racer in the Florida Karting Championship Series.[7]
+
+
+2020 6 Hours of Road Atlanta
+On August 9, 2013, Fox Sports 1 announced it had signed a TV contract with IMSA to televise the entire USCC season between 2014 and 2018.[8]
+
+On September 12, 2013, Tudor was announced as the title sponsor for the series, which was named the United SportsCar Championship. On August 8, 2015, WeatherTech was announced as the new title sponsor for the series, renaming the series to the WeatherTech SportsCar Championship, starting with the 2016 season.[9]
+
+Beginning with the 2019 season, the series is covered exclusively by NBC Sports in the United States. The NBC broadcast network will air nine hours of coverage annually, with the majority of the coverage airing on NBCSN. CNBC and the NBC Sports app will provide supplemental coverage.[10][11] Beginning with 2022, USA Network replaced NBCSN as the cable home to the series.
+
+Michelin Pilot Challenge
+Main article: Michelin Pilot Challenge
+Originally based on a Canadian series before being acquired by Grand-Am, the Continental Tire Sports Car Challenge (originally known as Grand-Am Cup) is a production-based touring car series. The series is split into two classes known as Grand Sport (GS), intended for large capacity GT-style cars, and Street Tuner (ST), consisting of smaller sedans and coupes, some of which are front-wheel drive. The IMSA Continental Tire Sports Car Challenge until 2013 supported some Rolex Series races but also headlined some of its own dates. This series continued with the United SportsCar Championship after the merger and is somewhat comparable to the old Trans Am Series.
+
+Class structure
+
+A chart tracking class changes, 2014 to 2027.
+There are four classes in the IMSA SportsCar Championship series, featuring two sports prototype categories and two grand tourer classes. Some races may only use selected classes of cars, for example: Any class car may be permitted entry at Daytona, while at the Northeast Grand Prix only the GT Daytona Pro (GTD Pro) and GT Daytona (GTD) are entered. Grand Touring Prototype (GTP), Le Mans Prototype 2 (LMP2), and Grand Touring Daytona (GTD) classes are compatible with regulations for the 24 Hours of Le Mans.
+
+Classes are also distinguished by regulations on driver lineups, using a rating system. GTP and GTD Pro have no restrictions; however, teams competing in LMP2 can only field one gold driver, and teams competing in GTD must field one "amateur" driver with a bronze or silver rating.[12]
+
+Sports Prototype classes
+Grand Touring Prototype (GTP)
+
+A BMW M Hybrid V8 GTP at Sahlen's Six Hours of the Glen.
+The flagship class of the championship that replaced the DPi (Daytona Prototype International) class starting in 2023, featuring cars built to IMSA's LMDh and Automobile Club de l'Ouest's Le Mans Hypercar regulations.
+
+Le Mans Prototype 2 (LMP2)
+
+An Oreca 07 LMP2 at Sahlen's Six Hours of the Glen.
+A class introduced since 2019 after being split from the DPi class (2019–2022), it features pro-am driver lineups. The class features cars built by Automobile Club de l'Ouest's (ACO) 4 licensed manufacturers (Riley-Multimatic, Ligier, Oreca and Dallara) to the specifications of the FIA/ACO 2017 Global LMP2 regulations.
+
+Grand Touring classes
+GT Daytona Pro (GTD Pro)
+
+An Aston Martin Vantage AMR GT3 GTD Pro at Sahlen's Six Hours of the Glen.
+A class that utilizes the FIA GT3 specifications that replaced the GTLM class starting in the 2022 Season. No driver class restriction in the GTD Pro class.
+
+GT Daytona (GTD)
+
+A BMW M4 GT3 GTD at Sahlen's Six Hours of the Glen.
+A class since 2016 that uses same specification cars as GTD Pro, but at least 1 silver or bronze driver must be in a team. And more than 1 platinum driver in a team is prohibited.
+
+Former classes
+There were five classes formerly used in the IMSA SportsCar Championship series, featuring four sports prototype categories and one grand tourer class.
+
+Sports Prototype classes
+Daytona Prototype International (DPi)
+
+A Mazda RT24-P DPi at Petit Le Mans.
+The former flagship class of the championship from 2019 to 2022, featuring cars built to IMSA's Daytona Prototype International regulations, which are based upon the 2017 Le Mans Prototype LMP2 cars. Previously, the DPi's had competed against their base LMP2 counterparts in the Prototype class from 2017 to 2018. Starting in 2019 the LMP2 cars were split into a separate class. The Prototype class had originally consisted of Grand-Am's Daytona Prototypes with the American Le Mans Series LMP2 prototypes, and the DeltaWing, before the original Daytona Prototypes, and the DeltaWing were phased out of competition at the end of 2016, and replaced by the new DPi cars. Starting in 2023, the DPi class was replaced by the GTP class in an effort to further improve the racing in the Prototype class, as well as create a closer bond to the FIA World Endurance Championship.
+
+Prototype (P)
+
+A Coyote Corvette DP Prototype at Mobil 1 Twelve Hours of Sebring.
+The former flagship class of the championship from 2014 to 2018 before splitting into two separate classes in 2019, featuring cars built to which included classes of prototypes carried over from the previous motorsport category series of the American Le Mans Series and the Grand-Am Rolex Sports Car Series. These cars were Daytona Prototypes, LMP2 prototypes & the Nissan DeltaWing. Starting in 2017 the original Daytona Prototypes, and the DeltaWing were phased out of competition, and replaced by the new DPi cars. At the end of the 2018 WeatherTech SportsCar Championship season this class would be split into two separate classes, DPi & LMP2 for the following season in 2019.[citation needed]
+
+Prototype Challenge (PC)
+
+A Oreca FLM09 Prototype Challenge at Mobil 1 Twelve Hours of Sebring.
+This was a one-make spec class in which all cars that drivers and teams used were Oreca FLM09 LMPC's powered by 6.2L Chevrolet V8 engines which made 430 hp each. This class would be used from the 2014 season until the end of the 2017 season.[citation needed]
+
+Le Mans Prototype 3 (LMP3)
+
+A Ligier JS P320 LMP3 at Sahlen's Six Hours of the Glen.
+Introduced in the 2021 season, having been in the IMSA Prototype Challenge category as one of the feeder series to the IMSA WeatherTech SportsCar Championship, this class of prototypes features cars built according to ACO's 2020 LMP3 Generation II ruleset specifications from manufacturers such as Ligier, ADESS, Ginetta & Duqueine Engineering. The class was removed after the 2023 season due to the growth in grid sizes.[13]
+
+Grand Touring classes
+GT Le Mans (GTLM)
+
+A Porsche 911 RSR GTLM at Petit Le Mans.
+A continuation of the ALMS GT class, it consisted of cars matching the ACO's GTE specification and competed in the series between the 2014 and 2021 seasons.
+
+Circuits
+2025 IMSA WeatherTech SportsCar Championship map.DaytonaDaytonaSebringSebringLong BeachLong BeachMid-OhioMid-OhioLaguna SecaLaguna SecaDetroitDetroitWatkins GlenWatkins GlenMosportMosportLime RockLime RockRoad AmericaRoad AmericaVIRVIRRoad AtlantaRoad AtlantaKansasKansasIndianapolisIndianapolisCOTACOTACharlotteCharlotte
+Races in the IMSA WeatherTech SportsCar Championship as of 2025.
+  Red dots: current sprint circuits
+  Orange dots: current North American Endurance Cup circuits
+  Blue dots: former circuits
+Main article: List of IMSA SportsCar Championship circuits
+Course	Years
+Canadian Tire Motorsport Park	2014–2019, 2022–present
+Charlotte Motor Speedway	2020
+Circuit of the Americas	2014–2017
+Daytona International Speedway	2014–present
+Detroit Belle Isle Street Circuit	2014–2019, 2021–2022
+Detroit Downtown Street Circuit	2024–present
+Indianapolis Motor Speedway	2014, 2023–present
+Kansas Speedway	2014
+Lime Rock Park	2015–2019, 2021–2023
+Long Beach Street Circuit	2014–2019, 2021–present
+Michelin Raceway Road Atlanta	2014–present
+Mid-Ohio Sports Car Course	2018–2022
+Road America	2014–present
+Sebring International Raceway	2014–present
+Virginia International Raceway	2014–present
+Watkins Glen International	2014–2019, 2021–present
+WeatherTech Raceway Laguna Seca	2014–present
+Champions
+Main article: List of IMSA SportsCar Championship champions
+Drivers
+Season	P	PC	GTLM	GTD
+2014	Portugal João Barbosa
+Brazil Christian Fittipaldi	United States Jon Bennett
+United States Colin Braun	Canada Kuno Wittmer	United States Dane Cameron
+2015	Portugal João Barbosa
+Brazil Christian Fittipaldi	United States Jon Bennett
+United States Colin Braun	France Patrick Pilet	United States Townsend Bell
+United States Bill Sweedler
+2016	United States Dane Cameron
+United States Eric Curran	Venezuela Alex Popow
+Netherlands Renger van der Zande	United Kingdom Oliver Gavin
+United States Tommy Milner	Italy Alessandro Balzan
+Denmark Christina Nielsen
+2017	United States Jordan Taylor
+United States Ricky Taylor	United States James French
+Mexico Patricio O'Ward	Spain Antonio García
+Denmark Jan Magnussen	Italy Alessandro Balzan
+Denmark Christina Nielsen
+2018	United States Eric Curran
+Brazil Felipe Nasr	Not held	Spain Antonio García
+Denmark Jan Magnussen	United States Bryan Sellers
+United States Madison Snow
+Season	DPi	LMP2	GTLM	GTD
+2019	United States Dane Cameron
+Colombia Juan Pablo Montoya	United States Matt McMurry	New Zealand Earl Bamber
+Belgium Laurens Vanthoor	Germany Mario Farnbacher
+United States Trent Hindman
+2020	United States Ricky Taylor
+Brazil Hélio Castroneves	United States Patrick Kelly	Spain Antonio García
+United States Jordan Taylor	Germany Mario Farnbacher
+United States Matt McMurry
+Season	DPi	LMP2	LMP3	GTLM	GTD
+2021	Brazil Pipo Derani
+Brazil Felipe Nasr	United States Ben Keating
+Denmark Mikkel Jensen	United States Gar Robinson	Spain Antonio García
+United States Jordan Taylor	Canada Zacharie Robichon
+Belgium Laurens Vanthoor
+Season	DPi	LMP2	LMP3	GTD Pro	GTD
+2022	United Kingdom Oliver Jarvis
+United Kingdom Tom Blomqvist	Canada John Farano	United States Jon Bennett
+United States Colin Braun	Australia Matt Campbell
+France Mathieu Jaminet	Canada Roman De Angelis
+Season	GTP	LMP2	LMP3	GTD Pro	GTD
+2023	Brazil Pipo Derani
+United Kingdom Alexander Sims	United States Ben Keating
+France Paul-Loup Chatin	United States Gar Robinson	United Kingdom Jack Hawksworth
+United Kingdom Ben Barnicoat	United States Bryan Sellers
+United States Madison Snow
+Season	GTP	LMP2	GTD Pro	GTD
+2024	Brazil Felipe Nasr
+United States Dane Cameron	France Tom Dillmann
+United States Nick Boulle	Germany Laurin Heinrich	Switzerland Philip Ellis
+United States Russell Ward
+2025	Australia Matt Campbell
+France Mathieu Jaminet	United States P.J. Hyett
+United States Dane Cameron	Spain Antonio García
+United Kingdom Alexander Sims	Switzerland Philip Ellis
+United States Russell Ward
+Teams
+Season	P	PC	GTLM	GTD
+2014	United States #5 Action Express Racing	United States #54 CORE Autosport	United States #93 SRT Motorsports	United States #94 Turner Motorsport
+2015	United States #5 Action Express Racing	United States #54 CORE Autosport	Germany #911 Porsche North America	United States #63 Scuderia Corsa
+2016	United States #31 Action Express Racing	United States #8 Starworks Motorsport	United States #4 Corvette Racing	United States #63 Scuderia Corsa
+2017	United States #10 Wayne Taylor Racing	United States #38 Performance Tech Motorsports	United States #3 Corvette Racing	United States #63 Scuderia Corsa
+2018	United States #31 Whelen Engineering Racing	Not held	United States #3 Corvette Racing	United States #48 Paul Miller Racing
+Season	DPi	LMP2	GTLM	GTD
+2019	United States #6 Acura Team Penske	United States #52 PR1/Mathiasen Motorsports	Germany #912 Porsche GT Team	United States #86 Meyer Shank Racing with Curb-Agajanian
+2020	United States #7 Acura Team Penske	United States #52 PR1/Mathiasen Motorsports	United States #3 Corvette Racing	United States #86 Meyer Shank Racing with Curb-Agajanian
+Season	DPi	LMP2	LMP3	GTLM	GTD
+2021	United States #31 Whelen Engineering Racing	United States #52 PR1/Mathiasen Motorsports	United States #74 Riley Motorsports	United States #3 Corvette Racing	Canada #9 Pfaff Motorsports
+Season	DPi	LMP2	LMP3	GTD Pro	GTD
+2022	United States #60 Meyer Shank Racing with Curb-Agajanian	United States #8 Tower Motorsports	United States #54 CORE Autosport	Canada #9 Pfaff Motorsports	United States #27 The Heart of Racing
+Season	GTP	LMP2	LMP3	GTD Pro	GTD
+2023	United States #31 Whelen Engineering Racing	United States #52 PR1/Mathiasen Motorsports	United States #74 Riley Motorsports	United States #14 Vasser Sullivan	United States #1 Paul Miller Racing
+Season	GTP	LMP2	GTD Pro	GTD
+2024	Germany #7 Porsche Penske Motorsport	Poland #52 Inter Europol by PR1/Mathiasen Motorsports	United States #77 AO Racing	United States #57 Winward Racing
+2025	Germany #6 Porsche Penske Motorsport	United States #99 AO Racing	United States #3 Corvette Racing by Pratt Miller Motorsports	United States #57 Winward Racing
+Manufacturers
+Season	P	GTLM	GTD
+2014	United States Chevrolet	Germany Porsche	Germany Porsche
+2015	United States Chevrolet	Germany Porsche	Italy Ferrari
+2016	United States Chevrolet	United States Chevrolet	Germany Audi
+2017	United States Cadillac	United States Chevrolet	Italy Ferrari
+2018	United States Cadillac	United States Ford	Italy Lamborghini
+Season	DPi	GTLM	GTD
+2019	Japan Acura	Germany Porsche	Italy Lamborghini
+2020	Japan Acura	United States Chevrolet	Japan Acura
+2021	United States Cadillac	United States Chevrolet	Germany Porsche
+Season	DPi	GTD Pro	GTD
+2022	Japan Acura	Germany Porsche	Germany BMW
+Season	GTP	GTD Pro	GTD
+2023	United States Cadillac	Japan Lexus	Germany BMW
+2024	Germany Porsche	Germany Porsche	Germany Mercedes-AMG
+2025	Germany Porsche	United States Chevrolet	Germany Mercedes-AMG
+See also
+World Sportscar Championship
+FIA World Endurance Championship
+SCCA National Sports Car Championship
+United States Road Racing Championship
+IMSA GT Championship
+Grand-Am Road Racing
+Rolex Sports Car Series
+American Le Mans Series
+Asian Le Mans Series
+European Le Mans Series
+References
+ "United SportsCar Racing To Debut In 2014". American Le Mans Series. Archived from the original on 18 March 2013. Retrieved 14 March 2013.
+ "Tudor Named Title Sponsor". Sportscar 365. John Dagys Media, LLC. 12 September 2013. Retrieved 12 September 2013.
+ DiZinno, Tony (8 August 2015). "WeatherTech Named New Title Sponsor of IMSA SportsCar". Sportscar365. John Dagys Media, LLC. Archived from the original on 11 October 2015. Retrieved 9 August 2015.
+ "SME Branding Selected To Develop Identity for GRAND-AM, ALMS Merger". Retrieved 14 March 2013.
+ "ALMS: Continental Named New Spec PC Tire". ALMS Communications. 1 March 2013. Archived from the original on 4 March 2013. Retrieved 14 March 2013.
+ "GRAND-AM, ALMS Announce 2014 Class Structure". American Le Mans Series. Archived from the original on 4 May 2013. Retrieved 14 March 2013.
+ "LOUIS SATTERLEE - 2012 FLORIDA KARTING CHAMPIONSHIP SERIES REVIEW". Karting News Worldwide. 7 July 2012. Archived from the original on 18 February 2014. Retrieved 2 February 2014.
+ "FOX to air United SportsCar Racing". Fox Sports Interactive Media, LLC. 9 August 2013. Archived from the original on 16 August 2013. Retrieved 9 August 2013.
+ "WeatherTech Joins IMSA In Multiyear Partnership". Daytona Beach, FL: IMSA. 8 August 2015. Archived from the original on 11 May 2018. Retrieved 9 August 2015.
+ Pruett, Marshall (30 April 2018). "IMSA moving to NBC Sports in 2019". Racer. Racer Media and Marketing, Inc. Archived from the original on 8 May 2018. Retrieved 9 May 2018.
+ "IMSA Moves to NBC Sports in New Six-Year TV Deal – Sportscar365". Archived from the original on 16 October 2018. Retrieved 16 October 2018.
+ Oreovicz, John (19 March 2024). "Class Warfare: GTD PRO, GTD Cars Race Together Yet Separately". IMSA. Retrieved 12 April 2025.
+ Thukral, Rachit (4 May 2023). "IMSA drops LMP3 class from 2024 amid GTP growth". motorsport.com. Motorsport Network. Retrieved 3 August 2023.
+External links
+
+Wikimedia Commons has media related to IMSA SportsCar Championship.
+IMSA official site
+WeatherTech SportsCar Championship official site
+vte
+International Motor Sports Association seasons
+vte
+IMSA SportsCar Championship
+vte
+Champions of the IMSA SportsCar Championship
+vte
+IMSA SportsCar Championship race venues (2014–present)
+vte
+Races of the IMSA SportsCar Championship (2014–present)
+vte
+Fox Sports
+Categories: WeatherTech SportsCar ChampionshipAuto racing series in the United StatesAuto racing series in CanadaSports car racing seriesGroup GT3International Motor Sports Association2014 establishments in the United StatesRecurring sporting events established in 2014
+This page was last edited on 22 January 2026, at 01:11 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike 4.0 License; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+Privacy policyAbout WikipediaDisclaimersContact WikipediaLegal & safety contactsCode of ConductDevelopersStatisticsCookie statementMobile view
+Wikimedia Foundation
+Powered by MediaWiki
