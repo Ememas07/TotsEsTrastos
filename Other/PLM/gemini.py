@@ -145,14 +145,14 @@ def export_to_csv(data, file_path, total_laps):
         print(f"❌ Error: Could not write to the file '{file_path}'.")
 
 # --- Main Execution ---
-input_file = 'input.json'
+input_file = 'input4.json'
 lap_data, num_laps = process_lap_data(input_file)
 
 if lap_data:
     # Export to JSON
-    export_to_json(lap_data, 'lap_positions_by_lap.json')
+    export_to_json(lap_data, 'lap_positions_by_lap2.json')
 
     # Export to CSV
-    export_to_csv(lap_data, 'lap_positions_by_lap.csv', num_laps)
+    export_to_csv(lap_data, 'lap_positions_by_lap2.csv', num_laps)
 else:
     print("No data was processed, skipping export.")

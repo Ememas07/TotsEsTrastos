@@ -91,6 +91,6 @@ def extract_lap_positions(input_file, output_file):
 
 # Example usage
 if __name__ == "__main__":
-    input_file = r"C:\Users\Marc Mas\Documents\Code\Other\PLM\input.json"
-    output_file = r"C:\Users\Marc Mas\Documents\Code\Other\PLM\output.json"
+    input_file = r"C:\Users\Marc Mas\Documents\Code\Other\PLM\input3.json"
+    output_file = r"C:\Users\Marc Mas\Documents\Code\Other\PLM\output3.json"
     extract_lap_positions(input_file, output_file)
