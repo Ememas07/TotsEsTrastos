@@ -1,0 +1,114 @@
+---
+title: "Anàlisi de Videojocs"
+author: "Marc Mas"
+date: "2026-02-03"
+output: 
+html_document: 
+css: estils.css
+---
+
+# Introducció
+
+Aquest document analitza un conjunt de dades de videojocs.
+
+```{r setup, include=FALSE}
+games <- read.csv("Video_Games.csv")
+```
+
+# Exploració inicial
+
+```{r}
+head(games)
+summary(games)
+str(games)
+names(games)
+unique(games$Genre)
+unique(games$Platform)
+```
+
+# Columnes a Factors
+
+```{r}
+games$Genre <- as.factor(games$Genre)
+games$Platform <- as.factor(games$Platform)
+levels(games$Genre)
+levels(games$Platform)
+```
+
+```{r}
+library(ggplot2)
+```
+
+```{r}
+ggplot(games, aes(x = Genre)) + geom_bar(fill = "red") + 
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5, hjust=1))  
+```
+
+```{r}
+any_naixement <- 2007   # Canvia-ho pel teu any
+games_year <- subset(games, Year_of_Release == any_naixement)
+```
+
+```{r}
+games_regions <- rbind(
+  data.frame(Genre = games_year$Genre, region = "NA",    Sales = games_year$NA_Sales),
+  data.frame(Genre = games_year$Genre, region = "EU",    Sales = games_year$EU_Sales),
+  data.frame(Genre = games_year$Genre, region = "JP",    Sales = games_year$JP_Sales),
+  data.frame(Genre = games_year$Genre, region = "Other", Sales = games_year$Other_Sales)
+)
+```
+
+
+# Conclusions:
+
+## Que has descobert?:
+
+Per començar, que les consoles com la DS o la PS2 van tenir molts més jocs que altres
+
+```{r}
+ggplot(games, aes(x = Platform)) + geom_bar() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + 
+  labs(
+    title = paste("Jocs per Plataforma"),
+    x = "Plataforma",
+    y = "Vendes (milions)"
+  )
+
+```
+
+També podem veure com hi ha una relació entre la puntuació d'un joc i les ventes del jocs
+
+```{r}
+ggplot(games, aes(x = Critic_Score, y = Global_Sales)) + geom_point()
+```
+ 
+
+## Quina regió domina segons gènere?
+
+```{r}
+ggplot(games_regions, aes(x = Genre, y = Sales)) +
+  geom_bar(stat = "summary", fun = "sum", fill = "steelblue") +
+  facet_wrap(~ region) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  labs(
+    title = paste("Vendes per gènere i regió (any", any_naixement,")"),
+    x = "Gènere",
+    y = "Vendes (milions)"
+  )
+```
+
+| Acció | Aventura | Lluita | Plataformes | Puzzle | Carreres | RolePlay | Shooter | Simulador | Sports | Estrategia
+|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+| NA | NA | NA | NA | EU | EU | NA | NA | NA | NA | JP
+
+
+## Hi ha diferències entre regions?
+
+Podem veure que els americans tenen una gran majoria de compres de jocs d'acció, mentres que els Japonesos compren més jocs de Role-Play
+També hi ha una majoria nortamericana als Shooters i jocs d'esports
+També podem veure com els Europeus i Japonesos tenen més varietat de jocs, i com hi ha menys ventes ja que hi ha menys persones que juguen videojocs, això tambè ens indica que aquests són més calmats que els Americans
+
+## Què t’ha sorprès?
+
+Principalment, la gran difèrencia de jocs entre plataformes, sobretot el gran lideratge de la PS2 i DS, ja sabia que eren molt populars, però no que hi haguès tanta disparitat entre plataformes
