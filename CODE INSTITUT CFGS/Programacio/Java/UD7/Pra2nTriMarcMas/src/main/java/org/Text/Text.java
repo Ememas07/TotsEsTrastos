@@ -22,7 +22,7 @@ public class Text {
     Scanner arxiu;
     Paraula[] paraules;
     Anagrama[] anagrames;
-    int[][] arrayAnagrames;
+    Anagrama[] anagramesUnics;
 
     public Text(String ruta) {
         try {
@@ -32,7 +32,7 @@ public class Text {
         }
         this.paraules = new Paraula[0];
         this.paraules = separarParaules();
-        this.arrayAnagrames = new int[0][0]; // int, Anagrama Unic, Quantitat Paraules
+        this.anagramesUnics = new Anagrama[0];
     }
 
     public Paraula[] separarParaules() {
@@ -126,35 +126,41 @@ public class Text {
     }
 
     public int sonAnagrames(Paraula p1, Paraula p2) {
-
         Anagrama a1 = new Anagrama(p1);
         Anagrama a2 = new Anagrama(p2);
         if (a1.getLletres().equals(a2.getLletres())) {
-            System.out.println("Si");
             return 1;
         } else {
-            System.out.println("No");
             return 0;
         }
     }
 
-    public void crearArrayAnagrames() {
-        for (int i = 0; i < paraules.length; i++) {
-
-        }
-
-    }
-
-    public boolean anagramaJaPosat() {
-        return false;
-    }
-
     public void crearAnagrames() {
-        anagrames = new Anagrama[paraules.length];
-        for (int i = 0; i < paraules.length; i++) {
-            anagrames[i] = new Anagrama(paraules[i]);
+        String[][] anagramesFrequencies = new String[1][1];
+        anagrames = new Anagrama[0];
+        for (Paraula paraula : paraules) {
+            if (paraula.teFrecuencies()) {
+                Anagrama a = new Anagrama(paraula);
+                boolean repetit = false;
+                for (int i = 0; i < anagrames.length; i++) {
+                    if (a.getLletres().equals(anagrames[i].getLletres()) && !a.source.equals(anagrames[i].source)) { //si la llista de lletres (d,i,p) es igual (estan sempre en el mateix ordre) i les paraules NO son iguales, ja tenim la combinacio entrada
+                        repetit = true;
+                    }
+                }
+                if (!repetit) {
+                    anagrames = Arrays.copyOf(anagrames, anagrames.length + 1);
+                    anagrames[anagrames.length - 1] = a;
+                    anagramesFrequencies = Arrays.copyOf(anagramesFrequencies, anagramesFrequencies.length + 1);
+                    int length1 = anagramesFrequencies.length;
+                    String[] dimensio2 = new String[length1 - 1];
+                    // String[] dimensio2 = anagramesFrequencies[length1 - 1];
+                    dimensio2 = Arrays.copyOf(dimensio2, dimensio2.length + 1);
+                    dimensio2[dimensio2.length - 1] = a.source;
+                    System.out.println("b");
+                    
+                }
+            }
         }
-
     }
 
 }

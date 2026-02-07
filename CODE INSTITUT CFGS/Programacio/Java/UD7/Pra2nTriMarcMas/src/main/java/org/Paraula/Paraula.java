@@ -104,6 +104,15 @@ public class Paraula {
         return this.frequencia;
     }
 
+    public boolean teFrecuencies() {
+        for (int i = 0; i < frequencia.length; i++) {
+            if (frequencia[i] > 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void setOcurrencies(int n) {
         this.ocurrencies = n;
     }

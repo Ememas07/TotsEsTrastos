@@ -29,6 +29,7 @@ public class Pra2nTriMarcMas {
         textBrut.setOcurrencies();
         textBrut.mostrarParaulaMesLlarga();
         textBrut.crearAnagrames();
+
         int sortir = 0;
         while (sortir != -1) {
             sortir = s.nextInt();

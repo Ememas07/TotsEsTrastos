@@ -14,13 +14,14 @@ import org.Paraula.Paraula;
  */
 public class Anagrama {
 
-    final String ALFABET = "abcdefghijklmnopqrstuvwxyz";
-    int[] frequencia;
     char[] lletres;
+    public String source;
 
     public Anagrama(Paraula p) {
-        frequencia = Arrays.copyOf(p.getFrecuencies(), p.getFrecuencies().length);
+        final String ALFABET = "abcdefghijklmnopqrstuvwxyz";
+        int[] frequencia = Arrays.copyOf(p.getFrecuencies(), p.getFrecuencies().length);
         lletres = new char[p.getLongitut()];
+        source = p.getText();
         int index = 0;
         while (index < p.getLongitut()) {
             for (int i = 0; i < frequencia.length; i++) {

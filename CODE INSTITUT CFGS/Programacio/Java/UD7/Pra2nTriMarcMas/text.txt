@@ -19,6 +19,11 @@ GT Daytona Pro (GTD Pro)
 GT Daytona (GTD)
 Former classes
 
+Gintour
+idp
+
+darng
+
 Sports Prototype classes
 Daytona Prototype International (DPi)
 Prototype (P)
