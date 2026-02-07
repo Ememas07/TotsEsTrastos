@@ -52,6 +52,7 @@ public class Paraula {
             text = null;
         } else {
             text = nouText;
+            longitut = text.length();
         }
     }
 
@@ -87,12 +88,20 @@ public class Paraula {
         mostrarFrecuencies();
     }
 
+    public int getLongitut() {
+        return this.longitut;
+    }
+
     public String getText() {
         return this.text;
     }
 
     public int getOcurrencies() {
         return this.ocurrencies;
+    }
+
+    public int[] getFrecuencies() {
+        return this.frequencia;
     }
 
     public void setOcurrencies(int n) {

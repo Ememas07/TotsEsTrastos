@@ -10,6 +10,7 @@ import java.io.FileReader;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import org.Anagrama.Anagrama;
 import org.Paraula.Paraula;
 
 /**
@@ -20,6 +21,8 @@ public class Text {
 
     Scanner arxiu;
     Paraula[] paraules;
+    Anagrama[] anagrames;
+    int[][] arrayAnagrames;
 
     public Text(String ruta) {
         try {
@@ -29,6 +32,7 @@ public class Text {
         }
         this.paraules = new Paraula[0];
         this.paraules = separarParaules();
+        this.arrayAnagrames = new int[0][0]; // int, Anagrama Unic, Quantitat Paraules
     }
 
     public Paraula[] separarParaules() {
@@ -96,6 +100,16 @@ public class Text {
         }
     }
 
+    public void mostrarParaulaMesLlarga() {
+        Paraula mesLlarga = new Paraula("");
+        for (Paraula paraula : paraules) {
+            if (mesLlarga.getLongitut() < paraula.getLongitut()) {
+                mesLlarga = paraula;
+            }
+        }
+        System.out.println("La paraula més llarga es " + mesLlarga.getText() + " amb una longitut de " + mesLlarga.getLongitut());
+    }
+
     public void netejarParaules() {
         for (Paraula paraula : paraules) {
             paraula.netejarParaula();
@@ -109,6 +123,38 @@ public class Text {
         } else {
             return paraules[i];
         }
+    }
+
+    public int sonAnagrames(Paraula p1, Paraula p2) {
+
+        Anagrama a1 = new Anagrama(p1);
+        Anagrama a2 = new Anagrama(p2);
+        if (a1.getLletres().equals(a2.getLletres())) {
+            System.out.println("Si");
+            return 1;
+        } else {
+            System.out.println("No");
+            return 0;
+        }
+    }
+
+    public void crearArrayAnagrames() {
+        for (int i = 0; i < paraules.length; i++) {
+
+        }
+
+    }
+
+    public boolean anagramaJaPosat() {
+        return false;
+    }
+
+    public void crearAnagrames() {
+        anagrames = new Anagrama[paraules.length];
+        for (int i = 0; i < paraules.length; i++) {
+            anagrames[i] = new Anagrama(paraules[i]);
+        }
+
     }
 
 }
