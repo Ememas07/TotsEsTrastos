@@ -22,6 +22,7 @@ public class Text {
     Scanner arxiu;
     Paraula[] paraules;
     Anagrama[] anagrames;
+    Anagrama[] anagramesUnics;
 
     public Text(String ruta) {
         try {
@@ -32,6 +33,7 @@ public class Text {
         this.paraules = new Paraula[0];
         this.paraules = separarParaules();
         this.anagrames = new Anagrama[0];
+        this.anagramesUnics = new Anagrama[0];
 
     }
 
@@ -116,8 +118,8 @@ public class Text {
         }
     }
 
-    public void crearAnagramesV2() {
-        for (Paraula paraula : paraules) {
+    public void crearAnagrames() {
+        for (Paraula paraula : paraules) { //cream tots els anagrames posibles
             //he de mirar totes les paraules
             if (paraula.teFrecuencies()) { //comprovar: la paraula no esta buida
                 //cream anagrama temporal
@@ -137,9 +139,28 @@ public class Text {
                             a.addParaules(paraula); //aficam la paraula a l'array de paraules de l'anagrama de dins el nostre array 
                         }
                     }
+                    // DE AQUI FINS ABAIX = CREAM ARRAY DE ANAGRAMES SENSE DUPLICAR
+                    if (anagramesUnics.length == 0) { // Si l'array d'anagrames unics
+                        anagramesUnics = Arrays.copyOf(anagramesUnics, anagramesUnics.length + 1);
+                        anagramesUnics[anagramesUnics.length - 1] = a;
+                    }
+                    boolean jaPresent = false;
+                    for (Anagrama anagramaUnic : anagramesUnics) {
+                        //per cada anagramaUnic existent, comprovam la paraula i miram les lletres
+                        // si son iguals, ja hi ha un anagrama present amb aquestes lletres i no farem res
+                        if (anagramaUnic.getLletres().equals(a.getLletres())) {
+                            jaPresent = true;
+                        }
+                    }
+                    if (!jaPresent && a.getParaules().length > 1) { //si no esta present i la combinacio de lletres està a més d'una paraula, l'afegim a AnagramesUnics
+                        anagramesUnics = Arrays.copyOf(anagramesUnics, anagramesUnics.length + 1);
+                        anagramesUnics[anagramesUnics.length - 1] = a;
+                    }
+                    // Fins aqui creació anagrames sense duplicar
                 }
                 if (!lletresDinsArray) {
-                    //les lletres no estan aficades a l'array de anagrames, aixi que es un anagrama nou, i el aficarem al nostre array
+                    // les lletres no estan aficades a l'array de anagrames
+                    // aixi que es un anagrama nou, i el aficarem al nostre array
                     anagrames = Arrays.copyOf(anagrames, anagrames.length + 1);
                     anagrames[anagrames.length - 1] = new Anagrama(paraula);
                 }
@@ -153,8 +174,19 @@ public class Text {
             //miram tots els anagrames
             if (temp.getLletres().equals(anagrama.getLletres())) {
                 //si les lletres del temporal son iguales a les lletres d'un anagram del nostre array, retornam totes les paraules
-                anagrama.mostrarParaulesDiferents(p);
+                if (anagrama.getParaules().length == 1) {
+                    System.out.println("La paraula no té anagrames");
+                } else {
+                    System.out.println("La paraula és anagrama de: ");
+                    anagrama.mostrarParaulesDiferents(p);
+                }
             }
+        }
+    }
+
+    public void pintarParellesAnagrames() {
+        for (Anagrama anagramaUnic : anagramesUnics) {
+            anagramaUnic.mostrarParaules();
         }
     }
 

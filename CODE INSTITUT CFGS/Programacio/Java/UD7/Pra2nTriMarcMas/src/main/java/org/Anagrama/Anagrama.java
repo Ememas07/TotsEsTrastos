@@ -45,20 +45,19 @@ public class Anagrama {
             if (i != 0) {
                 System.out.print(","); //pintam la coma a partir de la 2a paraula
             }
-            System.out.println(paraules[i]); //pintam les paraules
+            System.out.print(paraules[i]); //pintam les paraules
         }
+        System.out.println("");
     }
 
     public void mostrarParaulesDiferents(Paraula p) {
-        for (int i = 0; i < paraules.length; i++) {
-            if (!p.getText().equals(paraules[i])) { //no volem pintar la mateixa paraula 
-                if (i != 0) {
-                    System.out.print(","); //pintam la coma a partir de la 2a paraula
-                }
-                System.out.print(paraules[i]); //pintam les paraules
+        for (String paraula : paraules) {
+            if (!p.getText().equals(paraula)) {
+                //no volem pintar la mateixa paraula
+                System.out.print(paraula + " "); //pintam totes les paraules que no siguin iguals
             }
         }
-        System.out.println(""); //bot de linea
+
     }
 
     public String getParaula() {

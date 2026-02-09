@@ -28,9 +28,9 @@ public class Pra2nTriMarcMas {
         textBrut.mostrarPalindroms();
         textBrut.setOcurrencies();
         textBrut.mostrarParaulaMesLlarga();
-        // textBrut.crearAnagrames();
-        // textBrut.arrayDobleAnagrames();
-        textBrut.crearAnagramesV2();
+        textBrut.crearAnagrames();
+        System.out.println("Anagrames: ");
+        textBrut.pintarParellesAnagrames();
         int sortir = 0;
         while (sortir != -1) {
             sortir = s.nextInt();
