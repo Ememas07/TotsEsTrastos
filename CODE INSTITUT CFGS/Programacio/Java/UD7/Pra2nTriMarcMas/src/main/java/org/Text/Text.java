@@ -22,7 +22,6 @@ public class Text {
     Scanner arxiu;
     Paraula[] paraules;
     Anagrama[] anagrames;
-    Anagrama[] anagramesUnics;
 
     public Text(String ruta) {
         try {
@@ -32,7 +31,8 @@ public class Text {
         }
         this.paraules = new Paraula[0];
         this.paraules = separarParaules();
-        this.anagramesUnics = new Anagrama[0];
+        this.anagrames = new Anagrama[0];
+
     }
 
     public Paraula[] separarParaules() {
@@ -116,50 +116,54 @@ public class Text {
         }
     }
 
+    public void crearAnagramesV2() {
+        for (Paraula paraula : paraules) {
+            //he de mirar totes les paraules
+            if (paraula.teFrecuencies()) { //comprovar: la paraula no esta buida
+                //cream anagrama temporal
+                Anagrama temp = new Anagrama(paraula);
+                //mir que la combinacio de lletres actual no estigui ja posada a qualsevol anagrama de l'array
+                boolean paraulaPresent = false;
+                boolean lletresDinsArray = false;
+                for (Anagrama a : anagrames) {
+                    if (a.getLletres().equals(temp.getLletres())) { //si les lletres ja estan aficades a l'array de anagrames
+                        lletresDinsArray = true; // marcam com a que les lletres estan aficades a l'array per només aficar anagrames quan no hi estigui
+                        for (int i = 0; i < a.getParaules().length; i++) { //mir que la paraula no estigui ja dins l'array de paraules de l'anagrama
+                            if (a.getParaules()[i].equals(temp.getParaula())) {
+                                paraulaPresent = true; //si esta present, marcam i no farem res amb ella
+                            }
+                        }
+                        if (!paraulaPresent) { // si no esta present
+                            a.addParaules(paraula); //aficam la paraula a l'array de paraules de l'anagrama de dins el nostre array 
+                        }
+                    }
+                }
+                if (!lletresDinsArray) {
+                    //les lletres no estan aficades a l'array de anagrames, aixi que es un anagrama nou, i el aficarem al nostre array
+                    anagrames = Arrays.copyOf(anagrames, anagrames.length + 1);
+                    anagrames[anagrames.length - 1] = new Anagrama(paraula);
+                }
+            }
+        }
+    }
+
+    public void teAnagrames(Paraula p) {
+        Anagrama temp = new Anagrama(p); //cream anagrama tempora
+        for (Anagrama anagrama : anagrames) {
+            //miram tots els anagrames
+            if (temp.getLletres().equals(anagrama.getLletres())) {
+                //si les lletres del temporal son iguales a les lletres d'un anagram del nostre array, retornam totes les paraules
+                anagrama.mostrarParaulesDiferents(p);
+            }
+        }
+    }
+
     public Paraula getParaula(int i) {
         if (i > paraules.length) {
             System.out.println("Aquesta paraula no existeix!");
             return new Paraula("");
         } else {
             return paraules[i];
-        }
-    }
-
-    public int sonAnagrames(Paraula p1, Paraula p2) {
-        Anagrama a1 = new Anagrama(p1);
-        Anagrama a2 = new Anagrama(p2);
-        if (a1.getLletres().equals(a2.getLletres())) {
-            return 1;
-        } else {
-            return 0;
-        }
-    }
-
-    public void crearAnagrames() {
-        String[][] anagramesFrequencies = new String[1][1];
-        anagrames = new Anagrama[0];
-        for (Paraula paraula : paraules) {
-            if (paraula.teFrecuencies()) {
-                Anagrama a = new Anagrama(paraula);
-                boolean repetit = false;
-                for (int i = 0; i < anagrames.length; i++) {
-                    if (a.getLletres().equals(anagrames[i].getLletres()) && !a.source.equals(anagrames[i].source)) { //si la llista de lletres (d,i,p) es igual (estan sempre en el mateix ordre) i les paraules NO son iguales, ja tenim la combinacio entrada
-                        repetit = true;
-                    }
-                }
-                if (!repetit) {
-                    anagrames = Arrays.copyOf(anagrames, anagrames.length + 1);
-                    anagrames[anagrames.length - 1] = a;
-                    anagramesFrequencies = Arrays.copyOf(anagramesFrequencies, anagramesFrequencies.length + 1);
-                    int length1 = anagramesFrequencies.length;
-                    String[] dimensio2 = new String[length1 - 1];
-                    // String[] dimensio2 = anagramesFrequencies[length1 - 1];
-                    dimensio2 = Arrays.copyOf(dimensio2, dimensio2.length + 1);
-                    dimensio2[dimensio2.length - 1] = a.source;
-                    System.out.println("b");
-                    
-                }
-            }
         }
     }
 

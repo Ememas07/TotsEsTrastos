@@ -28,8 +28,9 @@ public class Pra2nTriMarcMas {
         textBrut.mostrarPalindroms();
         textBrut.setOcurrencies();
         textBrut.mostrarParaulaMesLlarga();
-        textBrut.crearAnagrames();
-
+        // textBrut.crearAnagrames();
+        // textBrut.arrayDobleAnagrames();
+        textBrut.crearAnagramesV2();
         int sortir = 0;
         while (sortir != -1) {
             sortir = s.nextInt();
@@ -37,7 +38,7 @@ public class Pra2nTriMarcMas {
                 Paraula p = textBrut.getParaula(sortir);
                 if (!p.getText().equals("")) {
                     p.estadistiques();
-                    textBrut.sonAnagrames(p, p);
+                    textBrut.teAnagrames(p);
                 }
             }
         }

@@ -48,7 +48,7 @@ public class Paraula {
                 nouText += c;
             } //si no, no afegim res (netejant)
         }
-        if (nouText.isBlank() || nouText.isEmpty() || nouText == "") {
+        if (nouText.isBlank() || nouText.isEmpty() || nouText.equals("")) {
             text = null;
         } else {
             text = nouText;
