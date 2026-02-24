@@ -34,7 +34,9 @@ public class Text {
         this.paraules = separarParaules();
         this.anagrames = new Anagrama[0];
         this.anagramesUnics = new Anagrama[0];
-
+        this.setOcurrencies();
+        this.crearAnagrames();
+        
     }
 
     public Paraula[] separarParaules() {
