@@ -33,10 +33,10 @@ public class Text {
         this.paraules = new Paraula[0]; //cream un array de paraules buit
         this.paraules = separarParaules(); //i l'omplim
         this.anagrames = new Anagrama[0]; //cream els dos arrays de anagrames (unics i tots)
-        this.anagramesUnics = new Anagrama[0]; 
+        this.anagramesUnics = new Anagrama[0];
         this.setOcurrencies(); //funcions per inicialitzar les ocurrencies de les paraules i crear els anagrames
         this.crearAnagrames();
-        
+
     }
 
     public Paraula[] separarParaules() {
@@ -77,7 +77,7 @@ public class Text {
     public void setOcurrencies() {
         for (Paraula paraula : paraules) { //recorrem totes les paraules
             if (paraula.getOcurrencies() == 0) { //si la paraula esta a 0 ocurrencies (es la primera vegada que surt aixi que no l'hem calculat)
-                int ocurrencies = 0; 
+                int ocurrencies = 0;
                 for (int i = 0; i < paraules.length - 1; i++) { //recorrem l'array de paraules
                     if (paraula.getText().equals(paraules[i].getText())) { //i miram quantes vegades tenim el mateix text a tot el text
                         ocurrencies++;
@@ -189,6 +189,14 @@ public class Text {
     public void pintarParellesAnagrames() {
         for (Anagrama anagramaUnic : anagramesUnics) {
             anagramaUnic.mostrarParaules();
+        }
+    }
+
+    public void mostrarParaulesLlargues(int longitut) {
+        for (Paraula p : paraules) {
+            if (p.getLongitut() > longitut) {
+                p.escriureParaula();
+            }
         }
     }
 

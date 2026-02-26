@@ -29,8 +29,9 @@ public class Pra2nTriMarcMas {
                 System.out.println("2: Mostrar Totes les paraules Uniques");
                 System.out.println("3: Mostrar Palindroms");
                 System.out.println("4: Mostrar Paraula mes llarga");
-                System.out.println("5: Mostrar Anagrames");
-                System.out.println("6: Mostrar estadistíques d'una paraula especifica");
+                System.out.println("5: Mostrar Paraules mes llargues que X");
+                System.out.println("6: Mostrar Anagrames");
+                System.out.println("7: Mostrar estadistíques d'una paraula especifica");
                 option = s.nextByte();
                 switch (option) {
                     case 1 -> { // Mostrar paraules
@@ -46,9 +47,15 @@ public class Pra2nTriMarcMas {
                         text.mostrarParaulaMesLlarga();
                     }
                     case 5 -> {
-                        text.pintarParellesAnagrames();
+                        int longitut = 0;
+                        System.out.println("Insereix quina es la longitut minima");
+                        longitut = s.nextInt();
+                        text.mostrarParaulesLlargues(longitut);
                     }
                     case 6 -> {
+                        text.pintarParellesAnagrames();
+                    }
+                    case 7 -> {
                         int sortir = 0;
                         System.out.println("Insereix el numero de la paraula");
                         sortir = s.nextInt();

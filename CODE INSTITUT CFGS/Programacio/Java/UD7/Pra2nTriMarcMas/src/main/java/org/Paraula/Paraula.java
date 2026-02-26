@@ -10,12 +10,12 @@ package org.Paraula;
  */
 public class Paraula {
 
-    final String ALFABET = "abcdefghijklmnopqrstuvwxyz";
-    String text;
-    int[] frequencia;
-    int longitut;
-    boolean esPalindrom;
-    int ocurrencies;
+    final private String ALFABET = "abcdefghijklmnopqrstuvwxyz";
+    private String text;
+    private int[] frequencia;
+    private int longitut;
+    private boolean esPalindrom;
+    private int ocurrencies;
 
     public Paraula(String text) {
         this.text = text;
