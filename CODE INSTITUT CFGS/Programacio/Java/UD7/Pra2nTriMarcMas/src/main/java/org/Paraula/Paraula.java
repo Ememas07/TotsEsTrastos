@@ -26,16 +26,16 @@ public class Paraula {
     }
 
     public boolean esPalindrom() {
-        if (text.length() < 3) {
+        if (text.length() < 3) { //una paraula de 1 o 2 lletres no pot ser palindroma
             return false;
         }
         String text2 = this.text;
-        for (int i = 0; i < text.length() / 2; i++) {
-            if (text.charAt(i) != text2.charAt(text2.length() - 1 - i)) {
+        for (int i = 0; i < text.length() / 2; i++) { //miram totes les lletres del text fins a la meitat
+            if (text.charAt(i) != text2.charAt(text2.length() - 1 - i)) { //si la lletra 0 (anirà pujant) NO es igual a la lletra final (longitut-offset, aixi que seria 0 i length, 1 i length-1 (anam cap a enmig) ), no pot ser un palindrom
                 return false;
             }
         }
-        return true;
+        return true; //si no ha caigut al bucle, es un palindrom
     }
 
     public void netejarParaula() {
@@ -43,7 +43,7 @@ public class Paraula {
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
             c = Character.toLowerCase(c); //passam a minuscules
-            if (posicioAlfabet(c) > -1) { //si esta al nostre alfabet, retornara un nombre positio, aixi que sumarem frequencia i afegim al text nou
+            if (posicioAlfabet(c) > -1) { //si esta al nostre alfabet, retornara un nombre position, aixi que sumarem frequencia i afegim al text nou
                 this.frequencia[posicioAlfabet(c)] += 1;
                 nouText += c;
             } //si no, no afegim res (netejant)

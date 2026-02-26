@@ -20,23 +20,23 @@ public class Anagrama {
     public Anagrama(Paraula p) {
         this.paraules = new String[1];
         final String ALFABET = "abcdefghijklmnopqrstuvwxyz";
-        int[] frequencia = Arrays.copyOf(p.getFrecuencies(), p.getFrecuencies().length);
-        lletres = new char[p.getLongitut()];
-        paraules[0] = p.getText();
+        int[] frequencia = Arrays.copyOf(p.getFrecuencies(), p.getFrecuencies().length); //guardam la frequencia de la paraula a un array
+        lletres = new char[p.getLongitut()]; //guardam les lletres a un array de caracters
+        paraules[0] = p.getText(); //ficam la paraula a l'array de paraules de l'anagrama
         int index = 0;
-        while (index < p.getLongitut()) {
-            for (int i = 0; i < frequencia.length; i++) {
-                while (frequencia[i] > 0) {
-                    lletres[index] = ALFABET.charAt(i);
-                    frequencia[i]--;
-                    index++;
+        while (index < p.getLongitut()) { //recorrem tota la paraula
+            for (int i = 0; i < frequencia.length; i++) { //recorrem tot l'array de frequencies
+                while (frequencia[i] > 0) { //si la frequencia de la lletra que esteim mirant es més que 0
+                    lletres[index] = ALFABET.charAt(i); //guardam la lletra corresponent al nostre array de lletres
+                    frequencia[i]--; //baixam la frequencia
+                    index++; //sumam a l'index
                 }
             }
         }
     }
 
     public void addParaules(Paraula p) {
-        this.paraules = Arrays.copyOf(this.paraules, this.paraules.length + 1);
+        this.paraules = Arrays.copyOf(this.paraules, this.paraules.length + 1); //copiam l'array i afegim paraula
         paraules[paraules.length - 1] = p.getText();
     }
 

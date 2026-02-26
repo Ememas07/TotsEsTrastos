@@ -30,20 +30,20 @@ public class Text {
         } catch (FileNotFoundException ex) {
             System.out.println("L'arxiu no s'ha trobat!");
         }
-        this.paraules = new Paraula[0];
-        this.paraules = separarParaules();
-        this.anagrames = new Anagrama[0];
-        this.anagramesUnics = new Anagrama[0];
-        this.setOcurrencies();
+        this.paraules = new Paraula[0]; //cream un array de paraules buit
+        this.paraules = separarParaules(); //i l'omplim
+        this.anagrames = new Anagrama[0]; //cream els dos arrays de anagrames (unics i tots)
+        this.anagramesUnics = new Anagrama[0]; 
+        this.setOcurrencies(); //funcions per inicialitzar les ocurrencies de les paraules i crear els anagrames
         this.crearAnagrames();
         
     }
 
     public Paraula[] separarParaules() {
-        while (arxiu.hasNext()) {
-            Paraula p = new Paraula(arxiu.next());
-            p.netejarParaula();
-            if (p.getText() != null) {
+        while (arxiu.hasNext()) { //mentres hi hagui més paraules
+            Paraula p = new Paraula(arxiu.next()); //cream una paraula nova amb el contingut de l'arxiu
+            p.netejarParaula(); //la netejam
+            if (p.getText() != null) { //si queda text a la paraula, la afegim a l'array
                 paraules = Arrays.copyOf(paraules, paraules.length + 1);
                 paraules[paraules.length - 1] = p;
             }
@@ -52,21 +52,21 @@ public class Text {
     }
 
     public void mostrarParaules() {
-        for (Paraula paraula : paraules) {
+        for (Paraula paraula : paraules) { //feim escriureParaula a totes les paraules
             paraula.escriureParaula();
         }
     }
 
     public void mostrarParaulesUniques() {
-        Paraula[] emprades = new Paraula[0];
-        for (Paraula paraula : paraules) {
+        Paraula[] emprades = new Paraula[0]; //feim un array amb les paraules que hem emprat
+        for (Paraula paraula : paraules) { //totes les paraules
             boolean jaEmprada = false;
-            for (Paraula emprada : emprades) {
-                if (paraula.getText().equals(emprada.getText())) {
+            for (Paraula emprada : emprades) { //recorrem l'array de paraules emprades
+                if (paraula.getText().equals(emprada.getText())) { //si el text es igual, marcam com a emprada
                     jaEmprada = true;
                 }
             }
-            if (!jaEmprada) {
+            if (!jaEmprada) { //si no esta emprada, l'afegim a l'array de paraules emprades i la escrivim
                 emprades = Arrays.copyOf(emprades, emprades.length + 1);
                 emprades[emprades.length - 1] = paraula;
                 paraula.escriureParaula();
@@ -75,11 +75,11 @@ public class Text {
     }
 
     public void setOcurrencies() {
-        for (Paraula paraula : paraules) {
-            if (paraula.getOcurrencies() == 0) {
-                int ocurrencies = 0;
-                for (int i = 0; i < paraules.length - 1; i++) {
-                    if (paraula.getText().equals(paraules[i].getText())) {
+        for (Paraula paraula : paraules) { //recorrem totes les paraules
+            if (paraula.getOcurrencies() == 0) { //si la paraula esta a 0 ocurrencies (es la primera vegada que surt aixi que no l'hem calculat)
+                int ocurrencies = 0; 
+                for (int i = 0; i < paraules.length - 1; i++) { //recorrem l'array de paraules
+                    if (paraula.getText().equals(paraules[i].getText())) { //i miram quantes vegades tenim el mateix text a tot el text
                         ocurrencies++;
                     }
                 }
@@ -97,8 +97,8 @@ public class Text {
     }
 
     public void mostrarPalindroms() {
-        for (Paraula paraula : paraules) {
-            if (paraula.esPalindrom()) {
+        for (Paraula paraula : paraules) { //miram totes les paraules
+            if (paraula.esPalindrom()) { //si es palindroma, l'imprimim
                 System.out.println(paraula.getText());
             }
         }
@@ -106,8 +106,8 @@ public class Text {
 
     public void mostrarParaulaMesLlarga() {
         Paraula mesLlarga = new Paraula("");
-        for (Paraula paraula : paraules) {
-            if (mesLlarga.getLongitut() < paraula.getLongitut()) {
+        for (Paraula paraula : paraules) { //miram totes les paraules
+            if (mesLlarga.getLongitut() < paraula.getLongitut()) { //si la paraules es mes llarga que la paraula actual, marcam la paraula mes llarga com a l'actual
                 mesLlarga = paraula;
             }
         }
@@ -142,7 +142,7 @@ public class Text {
                         }
                     }
                     // DE AQUI FINS ABAIX = CREAM ARRAY DE ANAGRAMES SENSE DUPLICAR
-                    if (anagramesUnics.length == 0) { // Si l'array d'anagrames unics
+                    if (anagramesUnics.length == 0) { // Si l'array d'anagrames unics esta buit, aficam el primer
                         anagramesUnics = Arrays.copyOf(anagramesUnics, anagramesUnics.length + 1);
                         anagramesUnics[anagramesUnics.length - 1] = a;
                     }
@@ -171,7 +171,7 @@ public class Text {
     }
 
     public void teAnagrames(Paraula p) {
-        Anagrama temp = new Anagrama(p); //cream anagrama tempora
+        Anagrama temp = new Anagrama(p); //cream anagrama temporal
         for (Anagrama anagrama : anagrames) {
             //miram tots els anagrames
             if (temp.getLletres().equals(anagrama.getLletres())) {

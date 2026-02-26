@@ -52,9 +52,9 @@ public class Pra2nTriMarcMas {
                         int sortir = 0;
                         System.out.println("Insereix el numero de la paraula");
                         sortir = s.nextInt();
-                        if (sortir > -1) {
+                        if (sortir > -1) { //si no hem posat -1, agafam el numero i agafam la paraula del text amb el numero inserit
                             Paraula p = text.getParaula(sortir);
-                            if (!p.getText().equals("")) {
+                            if (!p.getText().equals("")) { //si no esta buida, mostram estadisitques i si te anagrames
                                 p.estadistiques();
                                 text.teAnagrames(p);
                             }
