@@ -26,8 +26,6 @@ package org.yourcompany.yourproject;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
-// import org.yourcompany.Hora.Hora;
 /**
  *
  * @author Marc Mas
@@ -37,10 +35,12 @@ public class Ud8Act1MarcMas {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Introdueixi el valor de hores");
-        int h = s.nextInt();
+        int hora = s.nextInt();
         System.out.println("Introdueixi el valor de minuts");
-        int m = s.nextInt();
+        int minut = s.nextInt();
+        
         // Hora hora = new Hora(h, m);
+        // Temps h = new Minut();
         int opcio = 1;
         while (opcio > 0) { //-1 sortira
             try {
@@ -55,12 +55,12 @@ public class Ud8Act1MarcMas {
                     }
                     case 2 -> { //Posar Minuts
                         System.out.println("Introdueixi el minut que vol assignar");
-                        m = s.nextInt();
+                        // m = s.nextInt();
                         // hora.setMinuts(m);
                     }
                     case 3 -> { //Posar Hores
                         System.out.println("Introdueixi la hora que vol assignar");
-                        h = s.nextInt();
+                        // h = s.nextInt();
                         // hora.setHora(h);
                     }
                 }
