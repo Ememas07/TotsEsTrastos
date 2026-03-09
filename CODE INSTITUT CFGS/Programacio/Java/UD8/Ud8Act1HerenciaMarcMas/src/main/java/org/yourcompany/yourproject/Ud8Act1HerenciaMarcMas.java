@@ -28,11 +28,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 // import org.yourcompany.Hora.Hora;
+
 /**
  *
  * @author Marc Mas
  */
-public class Ud8Act1MarcMas {
+public class Ud8Act1HerenciaMarcMas {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
