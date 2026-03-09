@@ -7,10 +7,13 @@
  *
  * @author Marc Mas
  */
+import org.yourcompany.Temps.Temps;
+
 public class Minut extends Temps {
 
     public Minut(int valor) {
         super(60, valor);
     }
+    
 
 }

@@ -7,6 +7,7 @@
  *
  * @author Marc Mas
  */
+import org.yourcompany.Temps.Temps;
 public class Hora extends Temps {
 
     public Hora(int valor) {

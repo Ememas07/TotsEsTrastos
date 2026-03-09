@@ -2,6 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+package org.yourcompany.Temps;
 
 /**
  *
@@ -11,6 +12,11 @@ public class Temps {
 
     int max;
     int valor;
+
+    public Temps() {
+        this.max = 0;
+        this.valor = 0;
+    }
 
     public Temps(int max, int valor) {
         if (max > valor) {
