@@ -29,6 +29,7 @@ public class Ud8Act3MarcMas {
         int opcio = 1;
         while (opcio > 0) { //-1 sortira
             try {
+                System.out.println("Hora actual:" + h.toString());
                 System.out.println("1: Augmentar minuts");
                 System.out.println("2: Augmentar segons");
                 System.out.println("3: Posar hores");
@@ -67,10 +68,10 @@ public class Ud8Act3MarcMas {
                         System.out.println("Introdueixi el valor de segons");
                         segon = s.nextInt();
                         HoraExacta h2 = new HoraExacta(hora, minut, segon);
+                        h.equals(minut);
                         h.equals(h2);
                     }
                 }
-                System.out.println("Hora actual:" + h.toString());
 
             } catch (InputMismatchException e) {
                 System.out.println("Per favor introdueix una opcio valida");

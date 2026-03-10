@@ -55,16 +55,23 @@ public class HoraExacta extends Hora {
         return segon.getValor();
     }
 
-    public boolean equals(HoraExacta hora2) {
-        if (hora2.getHora() != this.getHora()) {
-            System.out.println("Les hores no son iguals");
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            System.out.println("Has posat el mateix objecte dues vegades!");
+            return true;
+        }
+        if (obj == null) {
+            System.out.println("Has posat un objecte nul!");
             return false;
         }
-        if (hora2.getMinut() != this.getMinut()) {
-            System.out.println("Les hores no son iguals");
+        if (getClass() != obj.getClass()) {
+            System.out.println("Les classes no son iguals!");
             return false;
         }
-        if (hora2.getSegon() != this.getSegon()) {
+        HoraExacta hora2 = (HoraExacta) obj;
+
+        if (hora2.getHora() != this.getHora() || hora2.getMinut() != this.getMinut() || hora2.getSegon() != this.getSegon()) {
             System.out.println("Les hores no son iguals");
             return false;
         }

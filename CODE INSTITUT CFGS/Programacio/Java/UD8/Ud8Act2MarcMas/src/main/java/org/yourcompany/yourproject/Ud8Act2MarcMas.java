@@ -36,6 +36,7 @@ public class Ud8Act2MarcMas {
         int opcio = 1;
         while (opcio > 0) { //-1 sortira
             try {
+                System.out.println("Hora actual:" + h.toString());
                 System.out.println("1: Augmentar minuts");
                 System.out.println("2: Augmentar segons");
                 System.out.println("3: Posar hores");
@@ -66,7 +67,6 @@ public class Ud8Act2MarcMas {
                         h.setSegon(segon);
                     }
                 }
-                System.out.println("Hora actual:" + h.toString());
 
             } catch (InputMismatchException e) {
                 System.out.println("Per favor introdueix una opcio valida");
