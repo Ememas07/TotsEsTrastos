@@ -33,7 +33,7 @@ public class HoraExacta extends Hora {
             this.hora.inc();
         }
     }
-    
+
     public void incMinuts() {
         super.inc();
     }
@@ -43,4 +43,32 @@ public class HoraExacta extends Hora {
         return this.hora.toString() + ":" + this.minut.toString() + ":" + this.segon.toString();
     }
 
+    public int getHora() {
+        return hora.getValor();
+    }
+
+    public int getMinut() {
+        return minut.getValor();
+    }
+
+    public int getSegon() {
+        return segon.getValor();
+    }
+
+    public boolean equals(HoraExacta hora2) {
+        if (hora2.getHora() != this.getHora()) {
+            System.out.println("Les hores no son iguals");
+            return false;
+        }
+        if (hora2.getMinut() != this.getMinut()) {
+            System.out.println("Les hores no son iguals");
+            return false;
+        }
+        if (hora2.getSegon() != this.getSegon()) {
+            System.out.println("Les hores no son iguals");
+            return false;
+        }
+        System.out.println("Les hores son iguals");
+        return true;
+    }
 }

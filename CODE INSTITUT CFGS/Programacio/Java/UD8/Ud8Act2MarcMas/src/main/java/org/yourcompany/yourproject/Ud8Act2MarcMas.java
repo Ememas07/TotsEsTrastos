@@ -1,25 +1,16 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 
+A partir de la classe Hora, implementar la classe HoraExacta, que inclogui a
+la hora els segons. A més a més dels mètodes heretats de Hora, disposarà
+de:
 
-Dissenyeu la classe Hora, que representa un instant de temps compost per l'hora
-(d'0 a 23) i els minuts. Disposa dels mètodes:
+HoraExacta(hora, minut, segon), que construeix un objecte amb
+les dades passades per paràmetre
 
-Hora (hora, minut), que construeix un objecte amb les dades passades com a paràmetres.
+setSegon(valor), que assigna un valor entre 0 i 59 als segons
 
-void inc(), que incrementa l'hora en un minut. 
-
-boolean setMinuts (valor), que assigna un valor, si és vàlid, als
-minuts. Torna true o false segons hagueu pogut modificar els minuts o
-no.
-
-
-boolean setHora (valor), que assigna un valor, si està comprès entre
-0 i 23, a l'hora. Torna true o false segons hagueu pogut canviar l'hora o
-no.
-
-String toString(), que torna un String amb la representació de
-l'hora.
+inc() que incrementa la hora en un segon
 
  */
 package org.yourcompany.yourproject;
