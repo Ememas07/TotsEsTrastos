@@ -13,16 +13,28 @@ public class Temps {
     int max;
     int valor;
 
+    public Temps() {
+        this.max = 0;
+        this.valor = 0;
+    }
+
     public Temps(int max, int valor) {
-        if (max > valor) {
+        if (valor > max) {
             valor = 0;
         }
-        this.max = max;
         this.valor = valor;
+        this.max = max;
+    }
+
+    public void inc() {
+        this.valor += 1; //sumam 1
+        if (this.valor >= this.max) { //si esteim al maxim, tornam a 0
+            this.valor = 0;
+        }
     }
 
     public boolean assignarValor(int v) {
-        if (v > max) {
+        if (v > max) { //si el valor es major al maxim no el permetem
             System.out.println("Valor no valid");
             return false;
         } else {
@@ -33,11 +45,15 @@ public class Temps {
 
     @Override
     public String toString() {
-        if (valor < 10) {
+        if (valor < 10) { //si volem mostra un numero de una xifra afegim un 0 per mostrar com a "09:03"
             return "0" + valor;
         } else {
             return "" + valor;
         }
+    }
+
+    public int getValor() {
+        return this.valor;
     }
 
 }

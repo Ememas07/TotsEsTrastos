@@ -8,13 +8,13 @@ package org.yourcompany.Temps;
  *
  * @author Marc Mas
  */
-public class Minut extends Temps {
+public class HoraPetita extends Temps {
 
-    public Minut(int valor) {
-        super(60, valor);
+    public HoraPetita(int valor) {
+        super(24, valor);
     }
 
-    public boolean setMinut(int v) {
+    public boolean setHora(int v) {
         return super.assignarValor(v);
     }
 
