@@ -26,6 +26,13 @@ public class Temps {
         this.valor = valor;
     }
 
+    public void inc() {
+        this.valor += 1;
+        if (this.valor >= this.max) {
+            this.valor = 0;
+        }
+    }
+
     public boolean assignarValor(int v) {
         if (v > max) {
             System.out.println("Valor no valid");
@@ -43,6 +50,10 @@ public class Temps {
         } else {
             return "" + valor;
         }
+    }
+
+    public int getValor() {
+        return this.valor;
     }
 
 }

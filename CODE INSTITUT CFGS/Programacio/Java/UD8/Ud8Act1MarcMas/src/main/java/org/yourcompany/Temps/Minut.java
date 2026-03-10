@@ -8,12 +8,14 @@ package org.yourcompany.Temps;
  *
  * @author Marc Mas
  */
-
 public class Minut extends Temps {
 
     public Minut(int valor) {
         super(60, valor);
     }
-    
+
+    public boolean setMinut(int v) {
+        return super.assignarValor(v);
+    }
 
 }
