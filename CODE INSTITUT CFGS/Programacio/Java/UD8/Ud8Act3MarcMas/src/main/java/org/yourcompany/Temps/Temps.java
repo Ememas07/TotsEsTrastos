@@ -10,36 +10,30 @@ package org.yourcompany.Temps;
  */
 public class Temps {
 
-    int max;
     int valor;
 
     public Temps() {
-        this.max = 0;
         this.valor = 0;
     }
 
-    public Temps(int max, int valor) {
-        if (valor > max) {
-            valor = 0;
-        }
+    public Temps(int valor) {
         this.valor = valor;
-        this.max = max;
     }
 
-    public void inc() {
-        this.valor += 1; //sumam 1
-        if (this.valor >= this.max) { //si esteim al maxim, tornam a 0
-            this.valor = 0;
-        }
-    }
-
-    public boolean assignarValor(int v) {
+    public boolean assignarValor(int v, int max) {
         if (v > max) { //si el valor es major al maxim no el permetem
             System.out.println("Valor no valid");
             return false;
         } else {
             valor = v;
             return true;
+        }
+    }
+
+    public void inc(int max) {
+        this.valor += 1; //sumam 1
+        if (this.valor >= max) { //si esteim al maxim, tornam a 0
+            this.valor = 0;
         }
     }
 
