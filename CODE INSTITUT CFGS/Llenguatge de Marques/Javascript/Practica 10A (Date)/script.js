@@ -1,9 +1,5 @@
-function mostrar() {
-    frase = document.getElementById("fraseOculta")
-    frase.style.visibility = "visible"
-}
-
-function ocultar() {
-    frase = document.getElementById("fraseOculta")
-    frase.style.visibility = "hidden"
-}
+window.onload = (event) => {
+    paragraf = document.getElementsByTagName('p');
+    data = new Date();
+    
+};

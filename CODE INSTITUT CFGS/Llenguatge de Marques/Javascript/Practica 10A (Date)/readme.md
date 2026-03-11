@@ -1,1 +1,1 @@
-Hem aprés a emprar getElementById per fer una frase que es pot ocultar
+Hem aprés a emprar l'element de JavaScript Date per mostrar una data
