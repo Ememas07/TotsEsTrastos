@@ -78,4 +78,9 @@ public class HoraExacta extends Hora {
         System.out.println("Les hores son iguals");
         return true;
     }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
 }

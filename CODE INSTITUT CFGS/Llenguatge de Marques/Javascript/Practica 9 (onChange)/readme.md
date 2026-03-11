@@ -1,0 +1,1 @@
+Hem aprés a emprar l'event onChange per fer que un paragraf canvii
