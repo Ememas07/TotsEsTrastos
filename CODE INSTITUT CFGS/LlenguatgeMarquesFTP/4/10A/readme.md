@@ -1,0 +1,1 @@
+Hem aprés a emprar l'element de JavaScript Date per mostrar una data

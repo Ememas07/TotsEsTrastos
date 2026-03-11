@@ -1,0 +1,1 @@
+Hem aprés a emprar addEventListener per a fer una acció quan pitjam un paragraf

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>UD4 CPE1 Ejercicio A</h1>
+    <p id="data"></p>
+</body>
+
+<script>
+    setInterval(
+        function actualitzar() {
+            paragraf = document.getElementById('data');
+            data = new Date();
+            diaMesAny = data.getDate() + "-" + (data.getMonth() + 1) + "-" + (1900 + data.getYear());
+            horaMinutSegon = data.getHours() + ":" + data.getMinutes() + ":" + data.getSeconds();
+            paragraf.innerHTML = "La fecha actual es " + diaMesAny + " y exactamente son las " + horaMinutSegon + " horas";
+        }
+        , 1000)
+
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+html {
+    text-align: center;
+    background-color: lightblue;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    border: 30px;
+    border-style: solid;
+    border-color: lightblue;
+    width: 15vw;
+    height: 30vh;
+}
+
+#vermell {
+    background-color: red;
+}
+
+#groc {
+    background-color: yellow;
+}
+
+#verd {
+    background-color: green;
+}
+
+#blau {
+    background-color: cyan;
+}
