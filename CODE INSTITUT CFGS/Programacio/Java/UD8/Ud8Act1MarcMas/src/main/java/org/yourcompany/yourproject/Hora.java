@@ -22,11 +22,11 @@ public class Hora {
     }
 
     public boolean setHora(int v) {
-        return this.hora.assignarValor(v);
+        return this.hora.assignarValor(v, HoraPetita.MAX);
     }
 
     public boolean setMinuts(int v) {
-        return this.minut.assignarValor(v);
+        return this.minut.assignarValor(v, Minut.MAX);
     }
 
     public void inc() {

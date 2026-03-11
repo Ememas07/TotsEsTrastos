@@ -10,12 +10,19 @@ package org.yourcompany.Temps;
  */
 public class HoraPetita extends Temps {
 
+    public static final int MAX = 24;
+
     public HoraPetita(int valor) {
-        super(24, valor);
+        super(valor);
     }
 
     public boolean setHora(int v) {
-        return super.assignarValor(v);
+        return super.assignarValor(v, HoraPetita.MAX);
     }
+
+    public void inc() {
+        super.inc(HoraPetita.MAX);
+    }
+
 
 }

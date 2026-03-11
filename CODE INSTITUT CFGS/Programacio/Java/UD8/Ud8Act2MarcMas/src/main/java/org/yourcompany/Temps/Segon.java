@@ -10,12 +10,17 @@ package org.yourcompany.Temps;
  */
 public class Segon extends Temps {
 
+    public static final int MAX = 60;
+
     public Segon(int valor) {
-        super(60, valor);
+        super(valor);
     }
 
-    public boolean setSegons(int v) {
-        return super.assignarValor(v);
+    public boolean setSegon(int v) {
+        return super.assignarValor(v, Segon.MAX);
     }
 
+    public void inc() {
+        super.inc(Minut.MAX);
+    }
 }

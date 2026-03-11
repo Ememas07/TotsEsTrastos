@@ -20,7 +20,7 @@ public class HoraExacta extends Hora {
     }
 
     public boolean setSegon(int v) {
-        return this.segon.assignarValor(v);
+        return this.segon.assignarValor(v, Segon.MAX);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class HoraExacta extends Hora {
             this.hora.inc();
         }
     }
-    
+
     public void incMinuts() {
         super.inc();
     }
