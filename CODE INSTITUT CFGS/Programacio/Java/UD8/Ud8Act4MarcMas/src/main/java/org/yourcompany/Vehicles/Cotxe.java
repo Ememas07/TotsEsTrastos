@@ -20,7 +20,7 @@ public class Cotxe extends Vehicle {
 
     @Override
     public void descripcio() {
-        System.out.println("Tipus de vehicle: Cotxe");
+        System.out.println("Tipus de vehicle: " + this.getClass().getSimpleName());
         System.out.println("Numero de places: " + numeroPlaces);
         System.out.println("Consum de benzina: " + consumBenzina + "l/100km");
     }

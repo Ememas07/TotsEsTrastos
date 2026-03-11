@@ -20,7 +20,7 @@ public class Camio extends Vehicle {
 
     @Override
     public void descripcio() {
-        System.out.println("Tipus de vehicle: Camio");
+        System.out.println("Tipus de vehicle: " + this.getClass().getSimpleName());
         System.out.println("Numero de places: " + numeroPlaces);
         System.out.println("Consum de benzina: " + consumBenzina + "l/100km");
     }
