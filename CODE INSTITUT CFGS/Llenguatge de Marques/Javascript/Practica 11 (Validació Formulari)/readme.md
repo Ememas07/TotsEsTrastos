@@ -1,0 +1,1 @@
+Hem aprés a emprar events de ratoli
