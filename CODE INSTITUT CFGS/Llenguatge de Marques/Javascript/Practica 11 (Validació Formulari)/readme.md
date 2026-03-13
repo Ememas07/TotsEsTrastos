@@ -1,1 +1,1 @@
-Hem aprés a emprar events de ratoli
+Hem aprés a validar un formulari

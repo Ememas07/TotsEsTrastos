@@ -1,0 +1,10 @@
+html {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: lightblue;
+}
+
+table {
+    width: 100%;
+}
