@@ -34,6 +34,14 @@ CREATE TABLE test (
     name VARCHAR(30) not null
 )
 
+INSERT INTO `test` VALUES (1, 'Marc');
+
+INSERT INTO `test` VALUES (2, 'Test');
+
+INSERT INTO `test` VALUES (3, 'ton pare');
+
+INSERT INTO `test` VALUES (4, 'Bon dia');
+
 CREATE ROLE admin;
 
 CREATE USER admin @localhost;
@@ -60,9 +68,9 @@ SET PASSWORD FOR dev @localhost = PASSWORD ('holadev');
 
 SET PASSWORD FOR dev @10.0.3.20 = PASSWORD ('holadev');
 
-CREATE ROLE `escriu`;
+CREATE ROLE escriu;
 
-CREATE USER `escriu`;
+CREATE USER escriu;
 
 CREATE USER escriu @10.0.3.20;
 
@@ -74,17 +82,17 @@ SET PASSWORD FOR escriu @localhost = PASSWORD ('holaescriu');
 
 SET PASSWORD FOR escriu @10.0.3.20 = PASSWORD ('holaescriu');
 
-CREATE ROLE `read`;
+CREATE ROLE `llegir`;
 
-CREATE USER `read`;
+CREATE USER `llegir` @10.0.3.20;
 
-CREATE USER `read@10.0.3.20`;
+CREATE USER `llegir` @localhost;
 
-SET PASSWORD FOR 'read' = PASSWORD ('holaread');
+SET PASSWORD FOR 'llegir' = PASSWORD ('holallegir');
 
-SET PASSWORD FOR 'read' @10.0.3.20 = PASSWORD ('holaread');
+SET PASSWORD FOR 'llegir' @10.0.3.20 = PASSWORD ('holallegir');
 
-SET PASSWORD FOR 'read' @localhost = PASSWORD ('holaread');
+SET PASSWORD FOR 'llegir' @localhost = PASSWORD ('holallegir');
 
 REVOKE ALL ON *.* FROM admin;
 
@@ -94,7 +102,7 @@ REVOKE ALL ON *.* FROM dev;
 
 REVOKE ALL ON *.* FROM escriu;
 
-REVOKE ALL ON *.* FROM `read`;
+REVOKE ALL ON *.* FROM `llegir`;
 
 REVOKE ALL ON *.* FROM admin @10.0.3.20;
 
@@ -102,13 +110,13 @@ REVOKE ALL ON *.* FROM dev @10.0.3.20;
 
 REVOKE ALL ON *.* FROM escriu @10.0.3.20;
 
-REVOKE ALL ON *.* FROM `read` @10.0.3.20;
+REVOKE ALL ON *.* FROM `llegir` @10.0.3.20;
 
 REVOKE ALL on *.* FROM `escriu`;
 
-Revoke ALL on *.* from `read`;
+Revoke ALL on *.* from `llegir`;
 
-Revoke ALL on *.* from `read` @localhost;
+Revoke ALL on *.* from `llegir` @localhost;
 
 GRANT ALL on *.* TO admin;
 
@@ -128,8 +136,8 @@ Grant CREATE on test.* TO `escriu` @10.0.3.20;
 
 Grant USAGE on test.* TO `escriu`;
 
-Grant USAGE on test.* TO `read`;
+Grant USAGE on test.* TO `llegir`;
 
-Grant USAGE on test.* TO `read` @localhost;
+Grant USAGE on test.* TO `llegir` @localhost;
 
-Grant USAGE on test.* TO `read` @10.0.3.20;
+Grant USAGE on test.* TO `llegir` @10.0.3.20;
