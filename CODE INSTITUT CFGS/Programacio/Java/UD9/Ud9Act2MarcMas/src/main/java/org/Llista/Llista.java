@@ -138,6 +138,10 @@ public class Llista implements Cua {
         }
     }
 
+    public void mostrarElement(int index) {
+        System.out.println(numeros[index]);
+    }
+
     public int length() {
         return this.numeros.length;
     }

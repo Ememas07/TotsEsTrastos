@@ -37,8 +37,6 @@ public class Ud9Act2MarcMas {
         while (opcio > -1) { //-1 sortirà 
             try {
                 System.out.println("1: Apilar un numero ");
-                System.out.println("2: Desapilar ");
-                System.out.println("3: Mostrar pila");
                 System.out.println("-1: Sortir");
                 opcio = s.nextInt();
                 switch (opcio) {
@@ -47,16 +45,11 @@ public class Ud9Act2MarcMas {
                         int numero = s.nextInt();
                         p.apilar(numero);
                     }
-                    case 2 -> { //desapilar
-                        p.desapilar();
-                    }
-                    case 3 -> { //mostrar
-                        p.mostrarElements();
-                    }
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Introdueixi un numero valid!");
             }
         }
+        p.desapilarTots();
     }
 }

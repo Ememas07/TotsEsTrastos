@@ -30,4 +30,12 @@ public class Pila {
         llista.mostrarElements(); //mostram els elements
     }
 
+    public void desapilarTots() {
+        while (llista.length() != 0) {
+            llista.mostrarElement(0);
+            llista.eliminarElement(0);
+        }
+
+    }
+
 }
