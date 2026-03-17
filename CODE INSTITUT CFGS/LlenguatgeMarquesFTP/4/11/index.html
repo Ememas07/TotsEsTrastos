@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validació formulari</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <form id="formulari" onsubmit="return validaEnvia()">
+        <label for="text">Nom:</label>
+        <input type="text" name="age" id="text">
+        <br>
+        <label for="age">Edat:</label>
+        <input type="text" name="age" id="age">
+        <br>
+
+        <label for="preference">Preferencia:</label>
+        <select name="preference" id="preference">
+            <option value="0">-- Selecioni una --</option>
+            <option value="GTP">GTP</option>
+            <option value="LMP2">LMP2</option>
+            <option value="GTD">GTD</option>
+        </select>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+<script>
+
+</script>
+
+</html>

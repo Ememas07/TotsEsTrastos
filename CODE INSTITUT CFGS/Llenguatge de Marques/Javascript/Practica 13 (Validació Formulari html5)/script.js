@@ -42,6 +42,6 @@ function validarEdat(valor) {
     return true;
 }
 function validarMatricula(text) {
-    const re = /\d{4} [A-z]{3}/;
+    const re = /\d{4}(\s)*[A-z]{3}/ ;
     return re.test(text);
 }

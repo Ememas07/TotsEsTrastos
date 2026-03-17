@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pàgina Principal</title>
+    <title>Contacte</title>
     <link rel="icon" href="../media/CRTLogoTransparent.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/style.css">
     <script src="../script.js"></script>
@@ -59,7 +59,13 @@
                             <label for="nationality">Nacionalitat</label>
                         </td>
                         <td>
-                            <input type="text" name="nationality" id="nationality"> <br>
+                            <select name="country" id="country">
+                                <option value="0">Seleccionar</option>
+                                <option value="ES">Espanya</option>
+                                <option value="UK">Regne Unit</option>
+                                <option value="PT">Portugal</option>
+                                <option value="DK">Dinamarca</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -100,9 +106,7 @@
                             <label for="comments">Altra informació sobre tu</label>
                         </td>
                         <td>
-                            <textarea>
-
-                        </textarea>
+                            <textarea id="comments"></textarea>
                         </td>
                     </tr>
                 </table>

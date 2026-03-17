@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validació formulari HTML5</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <form id="formulari" onsubmit="return validaEnvia()">
+        <label for="text">Nom:</label>
+        <input type="text" name="name" id="text">
+        <br>
+        <label for="surname">Llinatge:</label>
+        <input type="text" name="surname" id="surname">
+        <br>
+        <label for="age">Edat:</label>
+        <input type="text" name="age" id="age">
+        <br>
+        
+        <label for="matricula">Matricula:</label>
+        <input type="text" name="matricula" id="matricula">
+        <br>
+
+
+        <label for="province">Provincia:</label>
+        <select name="province" id="province">
+            <option value="0">-- Selecioni una --</option>
+            <option value="Balears">Balears</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Valencia">Valencia</option>
+        </select>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+<script>
+
+</script>
+
+</html>
