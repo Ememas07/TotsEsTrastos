@@ -1,0 +1,22 @@
+Accions
+
+Walk -> Idle / Running 							                        	--> Walking
+Run -> Idle / Walking 						                        		--> Running
+Jump -> Idle / Walking                       								--> Jumping
+Attack -> Idle / Walking / Running / Falling / Jumping      				--> Attacking
+Damage -> Idle 	/ Walking / Running / Jumping / Falling / Attacking 		--> Hit
+Death -> Idle / Walking / Running / Jumping / Falling / Attacking 	    	--> Dead
+Ground -> Falling / Jumping                      							--> Idle
+Time -> Attacking (time) 						                        	--> Idle
+
+Estats
+
+Idle
+Walking
+Running
+Falling
+Jumping
+Attacking
+Hit
+Damage 
+Death
