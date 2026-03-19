@@ -1,0 +1,38 @@
+# docker-compose yaml file for ARM based Macs
+version: "3.8"
+
+services:
+  # MariaDB 10.5.7
+  mariadb_clase:
+    image: ${MARIADB_IMAGE}:${DATABASE_MYSQL_SERVER_VERSION}
+    container_name: mariadb-clase
+    ports:
+      - "${DATABASE_MYSQL_PORT}:3306"
+    volumes:
+      # For the container to use the date in the host
+      # - "/etc/localtime:/etc/localtime:ro"
+      # MariaDB docker volume (optional)
+      - "../docker/mariadb_data:/var/lib/mysql"
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DATABASE_MYSQL_PASSWORD}
+    command: --sql_mode=ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+    networks:
+      - docker_traefik_default
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mariadb_clase.entrypoints=mariadb"
+      - "traefik.http.routers.mariadb_clase.rule=Host(`clase.localhost`)"
+      - "traefik.http.services.mariadb_clase.loadbalancer.server.port=3306"
+      - "traefik.docker.network=docker_traefik_default"
+
+networks:
+  docker_traefik_default:
+    external: true
+
+volumes:
+  apache_php_clase:
+  mariadb_clase:
+
+secrets:
+  host_ssh_key:
+    file: ~/.ssh/id_rsa
