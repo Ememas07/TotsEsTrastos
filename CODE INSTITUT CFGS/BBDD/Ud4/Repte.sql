@@ -96,27 +96,35 @@ SET PASSWORD FOR 'llegir' @localhost = PASSWORD ('holallegir');
 
 REVOKE ALL ON *.* FROM admin;
 
+REVOKE ALL ON *.* FROM admin @'%';
+
 REVOKE ALL ON *.* FROM admin @localhost;
-
-REVOKE ALL ON *.* FROM dev;
-
-REVOKE ALL ON *.* FROM escriu;
-
-REVOKE ALL ON *.* FROM `llegir`;
 
 REVOKE ALL ON *.* FROM admin @10.0.3.20;
 
+REVOKE ALL ON *.* FROM dev;
+
+REVOKE ALL ON *.* FROM dev @'%';
+
+REVOKE ALL ON *.* FROM dev @localhost;
+
 REVOKE ALL ON *.* FROM dev @10.0.3.20;
+
+REVOKE ALL ON *.* FROM escriu;
+
+REVOKE ALL ON *.* FROM escriu @'%';
+
+REVOKE ALL ON *.* FROM escriu @localhost;
 
 REVOKE ALL ON *.* FROM escriu @10.0.3.20;
 
-REVOKE ALL ON *.* FROM `llegir` @10.0.3.20;
+REVOKE ALL ON *.* FROM llegir;
 
-REVOKE ALL on *.* FROM `escriu`;
+REVOKE ALL ON *.* FROM llegir @'%';
 
-Revoke ALL on *.* from `llegir`;
+REVOKE ALL ON *.* FROM llegir @localhost;
 
-Revoke ALL on *.* from `llegir` @localhost;
+REVOKE ALL ON *.* FROM llegir @10.0.3.20;
 
 GRANT ALL on *.* TO admin;
 
@@ -130,14 +138,14 @@ GRANT ALL on test.* TO dev @localhost;
 
 Grant CREATE on test.* TO dev @10.0.3.20;
 
-Grant CREATE on test.* TO `escriu` @localhost;
+Grant CREATE on test.* TO escriu @localhost;
 
-Grant CREATE on test.* TO `escriu` @10.0.3.20;
+Grant CREATE on test.* TO escriu @10.0.3.20;
 
-Grant USAGE on test.* TO `escriu`;
+Grant USAGE on test.* TO escriu;
 
-Grant USAGE on test.* TO `llegir`;
+Grant USAGE on test.* TO llegir;
 
-Grant USAGE on test.* TO `llegir` @localhost;
+Grant USAGE on test.* TO llegir @localhost;
 
-Grant USAGE on test.* TO `llegir` @10.0.3.20;
+Grant USAGE on test.* TO llegir @10.0.3.20;
