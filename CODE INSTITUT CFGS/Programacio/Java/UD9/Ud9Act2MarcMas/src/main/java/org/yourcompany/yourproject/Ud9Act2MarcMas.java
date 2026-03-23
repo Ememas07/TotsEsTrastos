@@ -9,21 +9,10 @@ import java.util.Scanner;
 import org.Pila.Pila;
 
 /**
- * Una pila és una estructura dinàmica de dades on els elements s'insereixen
- * (s'apilen) i es retiren (es desapilen) seguint la norma que l'últim que
- * s'apila serà el primer a despilar-se, com passa amb una pila de plats.
+ * Emprant la llista anterior, escriu un programa en el que s'encoin nombres
+ * enters introduïts per teclat, fins que s'hi introdueix un de negatiu.
  *
- *
- * Quan retirarem un plat d'una pila a ningú se li acudeix estirar un dels de
- * baix; retirem (desapilem) el que està a sobre de tots, que va ser l'últim a
- * ser apilat. S'anomena cim de la pila l'últim element apilat (o el primer
- * element per desapilar). Els mètodes fonamentals d'una pila són apilar() i
- * desapilar().
- *
- *
- * Implementar la classe Pila per a números Integer, on s'usa una llista (un
- * objecte de la classe Llista implementada a l'Activitat resolta 7.10) per
- * guardar els elements apilats.
+ * A continuació, desencoar-los tots a mesura que es mostren per pantalla
  *
  * @author Marc Mas
  */
