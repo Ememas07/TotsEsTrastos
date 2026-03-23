@@ -31,14 +31,14 @@ CREATE DATABASE test;
 
 CREATE TABLE test (
     id int PRIMARY key AUTO_INCREMENT,
-    name VARCHAR(30) not null
+    name VARCHAR(30) not null llinatge VARCHAR(30) not null
 )
 
-INSERT INTO `test` VALUES (1, 'Marc');
+INSERT INTO `test` VALUES (1, 'Marc', 'mas');
 
-INSERT INTO `test` VALUES (2, 'Test');
+INSERT INTO `test` VALUES (2, 'Test', 'test');
 
-INSERT INTO `test` VALUES (3, 'ton pare');
+INSERT INTO `test` VALUES (3, 'ton pare', 'no te nas');
 
 INSERT INTO `test` VALUES (4, 'Bon dia');
 
@@ -82,17 +82,19 @@ SET PASSWORD FOR escriu @localhost = PASSWORD ('holaescriu');
 
 SET PASSWORD FOR escriu @10.0.3.20 = PASSWORD ('holaescriu');
 
-CREATE ROLE `llegir`;
+CREATE ROLE llegir;
 
-CREATE USER `llegir` @10.0.3.20;
+CREATE USER llegir @'%';
 
-CREATE USER `llegir` @localhost;
+CREATE USER llegir @10.0.3.20;
 
-SET PASSWORD FOR 'llegir' = PASSWORD ('holallegir');
+CREATE USER llegir @localhost;
 
-SET PASSWORD FOR 'llegir' @10.0.3.20 = PASSWORD ('holallegir');
+SET PASSWORD FOR llegir = PASSWORD ('holallegir');
 
-SET PASSWORD FOR 'llegir' @localhost = PASSWORD ('holallegir');
+SET PASSWORD FOR llegir @10.0.3.20 = PASSWORD ('holallegir');
+
+SET PASSWORD FOR llegir @localhost = PASSWORD ('holallegir');
 
 REVOKE ALL ON *.* FROM admin;
 
@@ -136,16 +138,22 @@ GRANT ALL on test.* TO dev;
 
 GRANT ALL on test.* TO dev @localhost;
 
-Grant CREATE on test.* TO dev @10.0.3.20;
+Grant SELECT, CREATE, ALTER, INSERT on test.* TO dev @10.0.3.20;
 
-Grant CREATE on test.* TO escriu @localhost;
+Grant SELECT, CREATE, ALTER, INSERT on test.* TO escriu @localhost;
 
-Grant CREATE on test.* TO escriu @10.0.3.20;
+Grant SELECT, CREATE, ALTER, INSERT on test.* TO escriu @10.0.3.20;
 
-Grant USAGE on test.* TO escriu;
+Grant SELECT, ALTER, INSERT on test.* TO escriu;
 
-Grant USAGE on test.* TO llegir;
+Grant SELECT, ALTER, INSERT on test.* TO escriu @'%';
 
-Grant USAGE on test.* TO llegir @localhost;
+GRANT INSERT on test.* to dev @'%';
 
-Grant USAGE on test.* TO llegir @10.0.3.20;
+Grant SELECT on test.* TO llegir;
+
+Grant SELECT on test.* TO llegir @'%';
+
+Grant SELECT on test.* TO llegir @localhost;
+
+Grant SELECT on test.* TO llegir @10.0.3.20;
