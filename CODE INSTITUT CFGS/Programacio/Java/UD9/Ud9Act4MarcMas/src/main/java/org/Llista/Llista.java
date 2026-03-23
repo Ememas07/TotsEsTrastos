@@ -161,7 +161,6 @@ public class Llista implements Cua, Pila {
             this.mostrarElement(0);
             this.eliminarElement(0);
         }
-
     }
 
 }

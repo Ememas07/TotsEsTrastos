@@ -35,7 +35,6 @@ public class Pila {
             llista.mostrarElement(0);
             llista.eliminarElement(0);
         }
-
     }
 
 }

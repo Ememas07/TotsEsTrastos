@@ -32,23 +32,18 @@ public class Ud9Act2MarcMas {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         Pila p = new Pila();
-        System.out.println("Quina operacio vol fer?");
-        int opcio = 0;
-        while (opcio > -1) { //-1 sortirà 
-            try {
-                System.out.println("1: Apilar un numero ");
-                System.out.println("-1: Sortir");
-                opcio = s.nextInt();
-                switch (opcio) {
-                    case 1 -> { //apilar
-                        System.out.println("Quin numero vol afegir?"); //demanam quin nombre posam
-                        int numero = s.nextInt();
-                        p.apilar(numero);
-                    }
+        System.out.println("Aquest programa encoarà nombres enters fins que posis un nombre negatiu");
+        try {
+            int numero = 0;
+            while (numero > -1) {
+                System.out.println("Quin numero vol afegir?"); //demanam quin nombre posam
+                numero = s.nextInt();
+                if (numero > -1) {
+                    p.apilar(numero);
                 }
-            } catch (InputMismatchException e) {
-                System.out.println("Introdueixi un numero valid!");
             }
+        } catch (InputMismatchException e) {
+            System.out.println("Introdueixi un numero valid!");
         }
         p.desapilarTots();
     }
