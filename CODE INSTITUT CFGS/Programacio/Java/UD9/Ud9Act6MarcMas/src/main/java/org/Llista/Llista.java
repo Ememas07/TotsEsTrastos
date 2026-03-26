@@ -12,7 +12,7 @@ import java.util.Arrays;
  */
 public class Llista implements Cua, Pila {
 
-    int[] numeros;
+    private int[] numeros;
 
     public Llista(int mida) {
         this.numeros = new int[mida];

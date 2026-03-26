@@ -10,7 +10,7 @@ package org.yourcompany.yourproject;
  */
 public interface Cua {
 
-    int[] numeros = new int[0];
+    int[] NUMEROS = new int[0];
 
     void insertarPrincipi(int numero);
 

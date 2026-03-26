@@ -12,7 +12,7 @@ import org.Llista.Llista;
  */
 public class Pila implements PilaInterficie {
 
-    Llista llista;
+    private final Llista llista;
 
     public Pila() {
         this.llista = new Llista();
