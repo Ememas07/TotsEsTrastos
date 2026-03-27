@@ -11,7 +11,7 @@ Target Server Type    : MariaDB
 Target Server Version : 100241 (10.2.41-MariaDB-1:10.2.41+maria~bionic)
 File Encoding         : 65001
 
-Date: 26/03/2026 18:53:54
+Date: 27/03/2026 11:25:47
 */
 
 SET NAMES utf8mb4;
@@ -30,7 +30,7 @@ CREATE TABLE `alumnes` (
     `llinatge2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NULL DEFAULT NULL,
     `esBilingue` tinyint(1) NULL DEFAULT NULL,
     `dataNaixement` date NOT NULL,
-    `poble` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+    `poble` int(11) NOT NULL,
     PRIMARY KEY (`dni`) USING BTREE,
     INDEX `poble` (`poble`) USING BTREE,
     CONSTRAINT `alumnes_ibfk_1` FOREIGN KEY (`poble`) REFERENCES `poble` (`codiPoble`) ON DELETE RESTRICT ON UPDATE RESTRICT
@@ -97,11 +97,11 @@ CREATE TABLE `departament` (
 DROP TABLE IF EXISTS `poble`;
 
 CREATE TABLE `poble` (
-    `codiPoble` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+    `codiPoble` int(255) NOT NULL AUTO_INCREMENT,
     `nom` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
     `ubicacioGps` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
     PRIMARY KEY (`codiPoble`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_spanish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for professor
