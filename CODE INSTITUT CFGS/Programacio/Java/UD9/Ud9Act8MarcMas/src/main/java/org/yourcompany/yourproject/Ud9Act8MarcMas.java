@@ -8,6 +8,10 @@ import java.util.Arrays;
 import org.Soci.Soci;
 
 /**
+ * Canviar la implementació de la classe Soci, per a que el seu criteri
+ * d'ordenació natural sigui per ordre alfabètic creixent de nombres.
+ */
+/**
  *
  * @author Marc Mas
  */

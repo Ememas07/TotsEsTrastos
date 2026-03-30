@@ -8,6 +8,8 @@ import java.util.Arrays;
 import org.Soci.Soci;
 
 /**
+ * Implementar la interfície Comparable a la classe Soci, per a que per defecte,
+ * s0ordeni segons els nombres d'identificació (id) creixents.
  *
  * @author Marc Mas
  */
