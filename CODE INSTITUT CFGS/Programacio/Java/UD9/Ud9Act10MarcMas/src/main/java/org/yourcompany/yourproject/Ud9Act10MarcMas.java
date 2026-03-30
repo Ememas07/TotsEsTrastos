@@ -19,9 +19,10 @@ public class Ud9Act10MarcMas {
     public static void main(String[] args) {
         int[] taula = new int[20];
         for (int i = 0; i < 10; i++) {
-            taula[i] = (int) ((Math.random() * 99))+ 1;
+            taula[i] = (int) ((Math.random() * 99)) + 1;
         }
-        Arrays.sort(taula);
+        ComparaEntersDecreixents c = new ComparaEntersDecreixents();
+        // Arrays.sort(taula, c);
         System.out.println("Aqui te la taula ordenada en ordre decreixent" + Arrays.toString(taula));
     }
 }
