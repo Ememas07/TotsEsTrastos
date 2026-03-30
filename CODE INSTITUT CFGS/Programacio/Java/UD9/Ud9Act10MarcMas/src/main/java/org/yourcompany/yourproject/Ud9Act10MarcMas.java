@@ -3,6 +3,8 @@
  */
 package org.yourcompany.yourproject;
 
+import java.util.Arrays;
+
 /**
  * Implementar una classe comparadora que permeti ordenar nombres enters en
  * sentit decreixent.
@@ -15,6 +17,11 @@ package org.yourcompany.yourproject;
 public class Ud9Act10MarcMas {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        int[] taula = new int[20];
+        for (int i = 0; i < 10; i++) {
+            taula[i] = (int) ((Math.random() * 99))+ 1;
+        }
+        Arrays.sort(taula);
+        System.out.println("Aqui te la taula ordenada en ordre decreixent" + Arrays.toString(taula));
     }
 }
