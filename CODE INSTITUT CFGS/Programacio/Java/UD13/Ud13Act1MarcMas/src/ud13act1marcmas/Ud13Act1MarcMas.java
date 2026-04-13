@@ -21,7 +21,26 @@ public class Ud13Act1MarcMas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Activitat4();
+        Scanner s = new Scanner(System.in);
+        int opcio = 0;
+        System.out.println("Quina activitat vol executar?");
+        opcio = s.nextInt();
+        switch (opcio) {
+            case 1:
+                Activitat1();
+            case 2:
+                Activitat2();
+            case 3:
+                Activitat3();
+            case 4:
+                Activitat4();
+            case 5:
+                Activitat5();
+            case 6:
+                Activitat6();
+            case 7:
+                Activitat7();
+        }
     }
 
     public static void Activitat1() {
@@ -116,6 +135,55 @@ public class Ud13Act1MarcMas {
 
     public static void Activitat5() {
         // 13.5 Invertir l'ordre de visualització de l'activitat anterior.
+        try {
+            Scanner s = new Scanner(System.in);
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:33700/f1_2023", "root", "holaquetal");
+            String sql = "SELECT * FROM Races";
+            Statement st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet gp = st.executeQuery(sql);
+            gp.afterLast();
+            while (gp.previous()) {
+                System.out.println("Carreres: " + gp.getInt("race_id") + " - " + gp.getString("race_name"));
+            }
+
+            System.out.println("ID del gran premi?");
+            int id = s.nextInt();
+            String sql2 = "select * from results left join drivers USING (driver_id) left join teams USING (team_id) where points > 1 && race_id = " + id;
+            Statement st2 = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet td = st2.executeQuery(sql2);
+            td.afterLast();
+            while (td.previous()) {
+                System.out.println(td.getString("first_name") + " " + td.getString("last_name") + " - " + td.getString("team_name"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error en la connexió");
+        }
+    }
+
+    public static void Activitat6() {
+        // 13.6 Mostra la classificació de pilots i després mostra la classificació de constructors.
+        try {
+            Scanner s = new Scanner(System.in);
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:33700/f1_2023", "root", "holaquetal");
+            String sql = "SELECT CONCAT(first_name,\" \",last_name) as pilot,SUM(points) as punts FROM `results` left join drivers USING (driver_id)  GROUP BY pilot order by punts desc";
+            Statement st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet gp = st.executeQuery(sql);
+            while (gp.next()) {
+                System.out.println("Carreres: " + gp.getInt("race_id") + " - " + gp.getString("race_name"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error en la connexió");
+        }
+    }
+
+    public static void Activitat7() {
+        //13.7 Implementar un programa que sol·liciti el nom d'un pilot i que l'esborri.
+        // Demostra amb un exemple com es pot realitzar SQL Injection.
+
         try {
             Scanner s = new Scanner(System.in);
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:33700/f1_2023", "root", "holaquetal");
