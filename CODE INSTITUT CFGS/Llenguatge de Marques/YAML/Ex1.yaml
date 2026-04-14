@@ -1,0 +1,21 @@
+servidor: localhost
+puerto: 3306
+usuario: username
+clave: password
+baseDeDatos: "agenda"
+tabla: "eventos"
+
+matrizDeEventos:
+  - 'evento_0':
+    - evento: "Examen"
+    - fecha: 17/06/2021
+    - hora: "12:00"
+    - lugar: "Aula 08"
+    - asistencia: true
+  - 'evento_1':
+    - evento: "Recuperación"
+    - fecha: 27/06/2021
+    - hora: "12:00"
+    - lugar: "Aula 08"
+    - asistencia: true
+  

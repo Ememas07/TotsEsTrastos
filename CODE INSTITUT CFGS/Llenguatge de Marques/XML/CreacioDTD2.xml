@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bizcochos [
+    <!ELEMENT bizcochos (ingredientes,tipos)>
+    <!ELEMENT ingredientes (ingrediente+)>
+    <!ELEMENT ingrediente (#PCDATA)>
+    <!ATTLIST ingrediente codigo ID #REQUIRED>
+    <!ELEMENT codigo (#PCDATA)>
+    <!ELEMENT tipos (tipo+)>
+    <!ELEMENT tipo (#PCDATA)>
+    <!ATTLIST tipo
+        nombre ID #REQUIRED
+        ingredientes CDATA #REQUIRED
+    >
+]>
+<bizcochos>
+    <ingredientes>
+        <ingrediente codigo="Hue">Huevos</ingrediente>
+        <ingrediente codigo="Pan">Panela</ingrediente>
+        <ingrediente codigo="Ace">Aceite</ingrediente>
+        <ingrediente codigo="Cal">Calabaza</ingrediente>
+        <ingrediente codigo="Har">Harina</ingrediente>
+        <ingrediente codigo="Lev">Levadura</ingrediente>
+        <ingrediente codigo="Cho">Chocolate</ingrediente>
+    </ingredientes>
+    <tipos>
+        <tipo nombre="Calabaza" ingredientes="Hue Pan Ace Cal Har Lev" />
+        <tipo nombre="Chocolate" ingredientes="Hue Pan Ace Cal Har Lev Cho" />
+    </tipos>
+</bizcochos>

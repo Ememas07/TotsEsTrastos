@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="botiga.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<botiga>
+    <zonaVenda>Entrada principal</zonaVenda>
+    <zonaGestio>Parking A</zonaGestio>
+    <comanda>
+        <codi>CCC000</codi>
+        <nomEmpleat>Josep</nomEmpleat>
+        <data>2026-04-14</data>
+        <observacions>Urgent</observacions>
+        <article>
+            <codiArticle>Patates</codiArticle>
+            <numQuilos>6</numQuilos>
+            <observacions>Només patates de més de 0.5kg cada una</observacions>
+        </article>
+        <article>
+            <codiArticle>Freses</codiArticle>
+            <numQuilos>3</numQuilos>
+        </article>
+    </comanda>
+
+</botiga>

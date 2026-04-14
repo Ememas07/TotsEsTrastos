@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="validacio.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<fichas xmlns:xsi="./validacio.xsd">
+    <ficha numero="1">
+        <nombre>Nombre1 Apellido1</nombre>
+        <edad>20</edad>
+    </ficha>
+    <ficha numero="2">
+        <nombre>Nombre2 Apellido2</nombre>
+        <edad>22</edad>
+    </ficha>
+</fichas>

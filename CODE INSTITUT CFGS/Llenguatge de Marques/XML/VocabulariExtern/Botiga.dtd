@@ -1,0 +1,13 @@
+
+<!ELEMENT botiga (zonaVenda,zonaGestio, article*,comanda*)>
+<!ELEMENT zonaVenda (#PCDATA)>
+<!ELEMENT zonaGestio (#PCDATA)>
+<!ELEMENT comanda (codi,nomEmpleat,data,observacions*,article*)>
+<!ELEMENT article (codiArticle,numQuilos,observacions*)>
+<!ELEMENT codi (#PCDATA)>
+<!ELEMENT codiArticle (#PCDATA)>
+<!ELEMENT numQuilos (#PCDATA)>
+<!ELEMENT observacions (#PCDATA)>
+<!ELEMENT nomEmpleat (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT observacions (#PCDATA)>
