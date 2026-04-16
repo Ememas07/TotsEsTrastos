@@ -7,15 +7,15 @@ tabla: "eventos"
 
 matrizDeEventos:
   - 'evento_0':
-    - evento: "Examen"
-    - fecha: 17/06/2021
-    - hora: "12:00"
-    - lugar: "Aula 08"
-    - asistencia: true
+      evento: "Examen"
+      fecha: 17/06/2021
+      hora: "12:00"
+      lugar: "Aula 08"
+      asistencia: true
   - 'evento_1':
-    - evento: "Recuperación"
-    - fecha: 27/06/2021
-    - hora: "12:00"
-    - lugar: "Aula 08"
-    - asistencia: true
+      evento: "Recuperación"
+      fecha: 27/06/2021
+      hora: "12:00"
+      lugar: "Aula 08"
+      asistencia: true
   

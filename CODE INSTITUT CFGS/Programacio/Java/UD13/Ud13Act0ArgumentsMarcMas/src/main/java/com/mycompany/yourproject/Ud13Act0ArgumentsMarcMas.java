@@ -86,7 +86,11 @@ public class Ud13Act0ArgumentsMarcMas {
     public static void menu(int[] opcions, String[] llistaJugadors, int[][] puntsJugadors, boolean sortir) {
         Scanner s = new Scanner(System.in);
         while (!sortir) {
-            cls();
+            // cls();
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
             puntsJugadors = canviarTaulaPunts(puntsJugadors, opcions[1]);
             imprimirMenu(opcions, llistaJugadors);
             int opcio = s.nextInt();
@@ -224,7 +228,9 @@ public class Ud13Act0ArgumentsMarcMas {
     }
 
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
         boolean[] parametres = {false, false, false, false, false, false};
+        int[] opcions = {1, 6, 4, 0, 0, 1}; //opcions per defecte
 
         // Mode de joc: 0 (0/1)
         // Num jugadors: 1 
@@ -233,56 +239,161 @@ public class Ud13Act0ArgumentsMarcMas {
         // Dibuix: 4 (0/1)
         // Llista d'errades: 5 (0/1)
         boolean jugarDirecte = false;
+        boolean mostrarAjuda = false;
 
-        for (int i = 0; i < args.length - 1; i++) {
+        for (int i = 0; i < args.length; i++) {
+            String seleccio = args[i + 1]; //pendent revisar
             switch (args[i]) {
                 case "-g", "-gamemode", "-m", "-modejoc", "-modojuego" -> {
-                    parametres[0] = true;
-                    
+                    if (!parametres[0]) {
+                        parametres[0] = true;
+                        seleccio = seleccio.toLowerCase();
+                        switch (seleccio) {
+                            case "pve":
+                                opcions[0] = 0;
+                                break;
+                            case "pvp":
+                                opcions[0] = 1;
+                                break;
+                            default:
+                                System.out.println("L'opció del mode de joc no és valida!");
+                        }
+                    }
+
                 }
                 case "-p", "-players", "-j", "-jugadors", "-jugadores" -> {
-                    parametres[1] = true;
+                    if (!parametres[1]) {
+                        parametres[1] = true;
+                        int opcio = Integer.parseInt(seleccio);
+                        if (opcio < 0) {
+                            System.out.println("Numero de jugadors no vàlid!");
+                        } else {
+                            opcions[1] = opcio;
+                        }
 
+                    }
                 }
 
                 case "-l", "-length", "-longitut", "-longitud" -> {
-                    parametres[2] = true;
-
+                    if (!parametres[2]) {
+                        parametres[2] = true;
+                        int opcio = Integer.parseInt(seleccio);
+                        if (opcio > 10 || opcio < 3) {
+                            System.out.println("Longitut no vàlida!");
+                        } else {
+                            opcions[2] = opcio;
+                        }
+                    }
                 }
 
                 case "-M", "-majuscules", "-mayusculas", "-c", "-case" -> {
-                    parametres[3] = true;
-
+                    if (!parametres[3]) {
+                        parametres[3] = true;
+                        switch (seleccio) {
+                            case "0":
+                                opcions[3] = 0;
+                                break;
+                            case "1":
+                                opcions[3] = 1;
+                                break;
+                            default:
+                                System.out.println("L'opció de les màjuscules no és valida!");
+                        }
+                    }
                 }
 
                 case "-d", "-dibuix", "-drawing", "-dibujo" -> {
-                    parametres[4] = true;
-
+                    if (!parametres[4]) {
+                        parametres[4] = true;
+                        switch (seleccio) {
+                            case "0":
+                                opcions[4] = 0;
+                                break;
+                            case "1":
+                                opcions[4] = 1;
+                                break;
+                            default:
+                                System.out.println("L'opció del dibuix no és valida!");
+                        }
+                    }
                 }
 
                 case "-e", "-errors", "-errades" -> {
-                    parametres[5] = true;
-
+                    if (!parametres[5]) {
+                        parametres[5] = true;
+                        switch (seleccio) {
+                            case "0":
+                                opcions[5] = 0;
+                                break;
+                            case "1":
+                                opcions[5] = 1;
+                                break;
+                            default:
+                                System.out.println("L'opció dels errors no és valida!");
+                        }
+                    }
                 }
-
                 case "-J", "-jugar", "-P", "-play" -> { //p i j serà jugadors, P i J serà play / jugar
                     jugarDirecte = true;
                 }
+                case "-?", "-help", "-ajuda", "-ayuda" -> {
+                    mostrarAjuda = true;
+                }
+
             }
         }
 
-        int[] opcions = {1, 6, 4, 0, 0, 1}; //opcions per defecte
-        String[] llistaJugadors = new String[opcions[1]];
-        for (int i = 0; i < opcions[1]; i++) {
-            llistaJugadors[i] = ("Jugador " + (i + 1));
-        }
-        int puntsJugadors[][] = new int[llistaJugadors.length][3];
+        if (mostrarAjuda) {
+            System.out.println("""
+Benvingut al joc del penjat, on tendràs una sèrie d'intents per endevinar una paraula aleatoria
+Hi ha una sèrie de parametres que pots executar:
 
-        if (jugarDirecte) {
-            jugar(opcions, llistaJugadors, puntsJugadors);
-        }
+-?, -help, -ajuda, -ayuda:
+Mostra aquesta ajuda
 
-        menu(opcions, llistaJugadors, puntsJugadors, false);
+-g, - gamemode, -m, -modejoc, -modojuego <pvp, pve>
+PVP: jugues contra un altre jugador
+PVE: jugues contra la màquina
+
+-p, -players, -j, -jugadors, -jugadores:
+Un numero positiu, serà el nombre de jugadors emprat a multijugador
+
+-l, -length, -longitut, -longitud:
+la longitut de la paraula
+
+
+-M, -majuscules, -mayusculas, -c, -case:
+0: no serà case sensitive
+1: serà case sensitive
+
+
+-d, -dibuix, -drawing, -dibujo:
+0: Dibuix de forca i penjat
+1: només penjat
+
+-e, -errors, -errades:
+0: no mostrar errors
+1: mostrar errors
+
+
+-J, -jugar, -P, -play:
+No vas al menu, jugues directament            
+            """);
+
+        } else {
+
+            String[] llistaJugadors = new String[opcions[1]];
+            for (int i = 0; i < opcions[1]; i++) {
+                llistaJugadors[i] = ("Jugador " + (i + 1));
+            }
+            int puntsJugadors[][] = new int[llistaJugadors.length][3];
+
+            if (jugarDirecte) {
+                jugar(opcions, llistaJugadors, puntsJugadors);
+            }
+
+            menu(opcions, llistaJugadors, puntsJugadors, false);
+        }
     }
 
     public static void jugar(int[] opcions, String[] nomJugadors, int[][] puntsJugadors) {
