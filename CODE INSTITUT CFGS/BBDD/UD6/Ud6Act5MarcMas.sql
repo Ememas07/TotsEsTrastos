@@ -25,20 +25,8 @@ BEGIN
     declare contrassenyaCorrecta int;
     set userPresent = (SELECT COUNT(*) FROM users WHERE user = usuari);
     set contrassenyaCorrecta = (SELECT COUNT(*) FROM users WHERE user = usuari and clau = contrassenya);
-
-    if contrassenyaCorrecta = 1 then set @sortida = "Usuari Correcte";
-    elseif userPresent = 1 then set @sortida = "Clau Incorrecta";
-    else set @sortida = "usuari inexistent";
+    if contrassenyaCorrecta = 1 then set sortida = "Usuari Correcte";
+    elseif userPresent = 1 then set sortida = "Clau Incorrecta";
+    else set sortida = "Usuari Inexistent"; 
+    END if; 
 END
-
-
-
-set
-    @present = (
-        SELECT COUNT(*)
-        FROM users
-            /* WHERE
-            user = usuari and 
-            clau = contrassenya
-            */
-    );
