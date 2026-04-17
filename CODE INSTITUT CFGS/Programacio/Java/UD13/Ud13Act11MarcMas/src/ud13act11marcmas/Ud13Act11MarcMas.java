@@ -13,25 +13,27 @@ import ud13act11marcmas.pilots.Pilot;
 import ud13act11marcmas.pilots.PilotDAO;
 
 /**
- * 13.10 Escriure la classe PilotDAO que gestionarà els objectes de la classe
- * Pilot a la BD.
+ * Activitat 13.11
  *
- * La classe tindrà els següents mètodes:
+ * Redissenyar la classe anterior per a que permeti una política distinta amb
+ * respecte a la connexió de BD
  *
- * void create(Pilot p)
+ * Connectam amb la BD al principi
  *
- * Pilot read(int id)
+ * Es realitzen operacions
  *
- * void update(Pilot p)
+ * Es tanca la connexió amb la BD quan ja no sigui necessari accedir-hi o en
+ * sortir de l'aplicació.
  *
- * void delete(int id)
+ * Per a implementar aquest enfoc, necessitam un atribut amb la connexió que
+ * s'obrirà al constructor del PilotDAO.
  *
- * connectar()
+ * Ara els mètodes ja no podràn ser estàtics.
  *
- * Tots mètodes tanquen la connexió al final de la seva execució.
+ * Podem aprofitar l'enfocament no estàtic per a definir constants que serveixin
+ * per a configurar els paràmetres de connexió de la BD
  *
- * Per aquest motiu, heu d'obrir la connexió amb connectar() i, a continuació,
- * cridar un dels mètodes CRUD.
+ *
  *
  * @author Marc Mas
  */
@@ -46,6 +48,13 @@ public class Ud13Act11MarcMas {
         Scanner s = new Scanner(System.in);
         Pilot p = new Pilot(0, "null", "null", "null");
         int opcio = 0;
+        PilotDAO pd = new PilotDAO();
+        try {
+            pd.connectar();
+        } catch (SQLException ex) {
+            System.out.println("Error");
+            ex.printStackTrace();
+        }
         while (opcio > -1) {
             System.out.println("Opcions:");
             System.out.println("1: Create");
@@ -55,13 +64,6 @@ public class Ud13Act11MarcMas {
             System.out.println("5: Mostrar Taula");
             System.out.println("-1: Sortir");
             opcio = s.nextInt();
-            PilotDAO pd = new PilotDAO();
-            try {
-                pd.connectar();
-            } catch (SQLException ex) {
-                System.out.println("Error");
-                ex.printStackTrace();
-            }
 
             switch (opcio) {
                 case 1 -> {
@@ -105,6 +107,12 @@ public class Ud13Act11MarcMas {
                     pd.mostrarTaula();
                 }
             }
+        }
+        try {
+            pd.desconnectar();
+        } catch (SQLException ex) {
+            System.out.println("Error");
+            ex.printStackTrace();
         }
     }
 }

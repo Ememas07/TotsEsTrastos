@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package ud13act11marcmas.pilots;
+package ud13act13marcmas.pilots;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -90,6 +90,21 @@ public class PilotDAO {
         try {
             String sql = "SELECT * from drivers";
             PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                System.out.println("Id: " + rs.getInt("driver_id") + " | " + "Nom:" + rs.getString("first_name") + " | " + "Llinatge:" + rs.getString("last_name") + " | " + "Pais: " + rs.getString("nationality"));
+            }
+        } catch (SQLException e) {
+            System.out.println("Error");
+            e.printStackTrace();
+        }
+    }
+
+    public void mostrarPais(String pais) {
+        try {
+            String sql = "SELECT * from drivers where nationality = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, pais);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 System.out.println("Id: " + rs.getInt("driver_id") + " | " + "Nom:" + rs.getString("first_name") + " | " + "Llinatge:" + rs.getString("last_name") + " | " + "Pais: " + rs.getString("nationality"));
