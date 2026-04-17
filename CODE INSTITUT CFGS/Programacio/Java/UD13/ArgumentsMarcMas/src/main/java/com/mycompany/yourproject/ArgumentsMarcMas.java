@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Marc Mas
  */
-public class Ud13Act0ArgumentsMarcMas {
+public class ArgumentsMarcMas {
 
     public static final String[] llistaParaules(int longitut) {
 // Length 3 
