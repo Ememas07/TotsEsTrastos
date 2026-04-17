@@ -241,9 +241,25 @@ public class Ud13Act0ArgumentsMarcMas {
         boolean jugarDirecte = false;
         boolean mostrarAjuda = false;
 
-        for (int i = 0; i < args.length; i++) {
-            String seleccio = args[i + 1]; //pendent revisar
-            switch (args[i]) {
+        String[] claus = new String[0];
+        String[] valors = new String[0];
+        for (String arg : args) {
+            if (arg.startsWith("-")) {
+                claus = Arrays.copyOf(claus, claus.length + 1);  //si té un guió, feim es
+                claus[claus.length - 1] = arg;
+                valors = Arrays.copyOf(valors, valors.length + 1); //aixi cream forats a l'array de valors, si hi ha dos parametres seguits, quedarà un forat amb -1, per després donar un error
+                valors[valors.length - 1] = "-1"; // -1 és un valor que donarà error quan intentem canviar el valor
+            } else {
+                if (valors[valors.length - 1].equals("-1")) {
+                    valors[valors.length - 1] = arg; // si l'argument no és -1, vol dir que ja l'hem canviat, i no volem sobreescriure-lo
+                }
+            }
+        }
+
+        for (int i = 0; i < claus.length; i++) {
+            String clau = claus[i];
+            String seleccio = valors[i];
+            switch (clau) {
                 case "-g", "-gamemode", "-m", "-modejoc", "-modojuego" -> {
                     if (!parametres[0]) {
                         parametres[0] = true;
@@ -336,7 +352,7 @@ public class Ud13Act0ArgumentsMarcMas {
                 case "-J", "-jugar", "-P", "-play" -> { //p i j serà jugadors, P i J serà play / jugar
                     jugarDirecte = true;
                 }
-                case "-?", "-help", "-ajuda", "-ayuda" -> {
+                case "-?", "-h", "-help", "-ajuda", "-ayuda" -> {
                     mostrarAjuda = true;
                 }
 
