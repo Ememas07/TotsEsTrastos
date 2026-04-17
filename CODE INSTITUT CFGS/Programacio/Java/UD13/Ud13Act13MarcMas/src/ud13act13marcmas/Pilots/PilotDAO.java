@@ -79,7 +79,8 @@ public class PilotDAO {
             String sql = "DELETE from drivers where driver_id = ?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
-            ResultSet rs = ps.executeQuery();
+            int filesAfectades = ps.executeUpdate();
+            System.out.println("S'han canviat " + filesAfectades + " Files");
         } catch (SQLException e) {
             System.out.println("Error");
             e.printStackTrace();

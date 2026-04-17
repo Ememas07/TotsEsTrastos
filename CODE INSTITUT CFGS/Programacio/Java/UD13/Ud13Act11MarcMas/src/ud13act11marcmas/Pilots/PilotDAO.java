@@ -33,7 +33,7 @@ public class PilotDAO {
     public void create(Pilot p) {
         try {
             Statement st = con.createStatement();
-            String sql = "INSERT INTO drivers (first_name,last_name,nationality) VALUES (" + "\'" + p.getNom() + "','" + p.getLlinatge() + "','" + p.getNacionalitat() + "')";
+            String sql = "INSERT INTO drivers (first_name,last_name,nationality) VALUES (" + "\'" + p.getNom() + "','" + p.getLlinatge() + "','" + p.getNacionalitat() + "')"; //agafam els valors del pilot que passam per parametre
             int filesAfectades = st.executeUpdate(sql);
             System.out.println("S'han canviat " + filesAfectades + " Files");
         } catch (SQLException e) {
@@ -49,13 +49,13 @@ public class PilotDAO {
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             rs.next();
-            Pilot p = new Pilot(id, rs.getString("first_name"), rs.getString("last_name"), rs.getString("nationality"));
+            Pilot p = new Pilot(id, rs.getString("first_name"), rs.getString("last_name"), rs.getString("nationality")); //llegim els valors de BBDD i cream un pilot que retornarem
             return p;
         } catch (SQLException e) {
             System.out.println("Error");
             e.printStackTrace();
         }
-        return new Pilot(0, "NULL", "NULL", "NULL");
+        return new Pilot(0, "NULL", "NULL", "NULL"); // si no, retornam un pilot NUL
     }
 
     public void update(Pilot p) {
@@ -65,7 +65,7 @@ public class PilotDAO {
             ps.setString(1, p.getNom());
             ps.setString(2, p.getLlinatge());
             ps.setString(3, p.getNacionalitat());
-            ps.setInt(4, p.getId());
+            ps.setInt(4, p.getId()); //preparam la consulta amb els parametres del pilot pasat per parametre
             int filesAfectades = ps.executeUpdate();
             System.out.println("S'han canviat " + filesAfectades + " Files");
         } catch (SQLException e) {
@@ -79,7 +79,8 @@ public class PilotDAO {
             String sql = "DELETE from drivers where driver_id = ?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
-            ResultSet rs = ps.executeQuery();
+            int filesAfectades = ps.executeUpdate();
+            System.out.println("S'han canviat " + filesAfectades + " Files");
         } catch (SQLException e) {
             System.out.println("Error");
             e.printStackTrace();

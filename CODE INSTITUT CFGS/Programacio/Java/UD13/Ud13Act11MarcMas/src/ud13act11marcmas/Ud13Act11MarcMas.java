@@ -43,12 +43,12 @@ public class Ud13Act11MarcMas {
      * @param args the command line arguments
      * @throws java.io.UnsupportedEncodingException
      */
-    public static void main(String[] args) throws UnsupportedEncodingException {
-        System.setOut(new PrintStream(System.out, true, "UTF-8"));
+    public static void main(String[] args) throws UnsupportedEncodingException { 
+        System.setOut(new PrintStream(System.out, true, "UTF-8")); //per mostrar accents
         Scanner s = new Scanner(System.in);
-        Pilot p = new Pilot(0, "null", "null", "null");
+        Pilot p = new Pilot(0, "null", "null", "null"); //iniciam la variable amb un pilot buit 
         int opcio = 0;
-        PilotDAO pd = new PilotDAO();
+        PilotDAO pd = new PilotDAO(); //cream la variable i connectam
         try {
             pd.connectar();
         } catch (SQLException ex) {
@@ -73,12 +73,12 @@ public class Ud13Act11MarcMas {
                     String llinatge = s.next();
                     System.out.println("Introdueix la nacionalitat del pilot");
                     String nacionalitat = s.next();
-                    p = new Pilot(0, nom, llinatge, nacionalitat);
+                    p = new Pilot(0, nom, llinatge, nacionalitat); //guardam el nom, llinatge i nacionalitat, cream un pilot i el cream a la BBDD
                     pd.create(p);
                 }
                 case 2 -> {
                     System.out.println("Introdueixi el ID per llegir");
-                    int id = s.nextInt();
+                    int id = s.nextInt(); //denamam per consola i llegim
                     try {
                         p = pd.read(id);
                         p.imprimir();
@@ -95,7 +95,7 @@ public class Ud13Act11MarcMas {
                     String nacionalitat = s.next();
                     System.out.println("Introdueix el id del pilot que vol actualitzar");
                     int id = s.nextInt();
-                    p = new Pilot(id, nom, llinatge, nacionalitat);
+                    p = new Pilot(id, nom, llinatge, nacionalitat); //cream un pilot amb tots els valors i l'actualitzam a la BBDD
                     pd.update(p);
                 }
                 case 4 -> {

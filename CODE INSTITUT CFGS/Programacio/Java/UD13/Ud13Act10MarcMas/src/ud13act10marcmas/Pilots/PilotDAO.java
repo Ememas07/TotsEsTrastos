@@ -23,10 +23,10 @@ public class PilotDAO {
     }
 
     public void connectar() throws SQLException {
-        con = DriverManager.getConnection("jdbc:mysql://localhost:33700/f1_2023", "root", "holaquetal");
+        con = DriverManager.getConnection("jdbc:mysql://localhost:33700/f1_2023", "root", "holaquetal"); //CANVIAR
     }
 
-    public void create(Pilot p) {
+    public void create(Pilot p) { //crearà un registre a BBDD; espera un pilot i agafarà el nom, llinatge, i nacionalitat del pilot que haguis triat
         try {
             Statement st = con.createStatement();
             String sql = "INSERT INTO drivers (first_name,last_name,nationality) VALUES (" + "\'" + p.getNom() + "','" + p.getLlinatge() + "','" + p.getNacionalitat() + "')";
@@ -39,9 +39,9 @@ public class PilotDAO {
         }
     }
 
-    public Pilot read(int id) throws SQLException {
+    public Pilot read(int id) throws SQLException { //reb un ID i retorna el pilot amb aquest ID
         try {
-            String sql = "SELECT * from drivers where driver_id = ?";
+            String sql = "SELECT * from drivers where driver_id = ?"; 
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
@@ -56,7 +56,7 @@ public class PilotDAO {
         return new Pilot(0, "NULL", "NULL", "NULL");
     }
 
-    public void update(Pilot p) {
+    public void update(Pilot p) { //actualitzarà la base de dades amb un pilot sencer, passat per parametre
         try {
             String sql = "UPDATE drivers set first_name = ?, last_name = ?, nationality = ? WHERE driver_id = ?";
             PreparedStatement ps = con.prepareStatement(sql);
@@ -73,7 +73,7 @@ public class PilotDAO {
         }
     }
 
-    public void delete(int id) {
+    public void delete(int id) { //passam un id, borram un pilot amb aquell ID
         try {
             String sql = "DELETE from drivers where driver_id = ?";
             PreparedStatement ps = con.prepareStatement(sql);
@@ -86,7 +86,7 @@ public class PilotDAO {
         }
     }
 
-    public void mostrarTaula() {
+    public void mostrarTaula() { //un select que imprimeix per consola
         try {
             String sql = "SELECT * from drivers";
             PreparedStatement ps = con.prepareStatement(sql);

@@ -27,30 +27,22 @@ public class Ud13Act1MarcMas {
         System.out.println("Quina activitat vol executar?");
         opcio = s.nextInt();
         switch (opcio) {
-            case 1:
+            case 1 ->
                 Activitat1();
-                break;
-            case 2:
+            case 2 ->
                 Activitat2();
-                break;
-            case 3:
+            case 3 ->
                 Activitat3();
-                break;
-            case 4:
+            case 4 ->
                 Activitat4();
-                break;
-            case 5:
+            case 5 ->
                 Activitat5();
-                break;
-            case 6:
+            case 6 ->
                 Activitat6();
-                break;
-            case 7:
+            case 7 ->
                 Activitat7();
-                break;
-            case 8:
+            case 8 ->
                 Activitat8();
-                break;
         }
     }
 
@@ -176,13 +168,21 @@ public class Ud13Act1MarcMas {
     public static void Activitat6() {
         // 13.6 Mostra la classificació de pilots i després mostra la classificació de constructors.
         try {
-            Scanner s = new Scanner(System.in);
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:33700/f1_2023", "root", "holaquetal");
             String sql = "SELECT CONCAT(first_name,\" \",last_name) as pilot,SUM(points) as punts FROM `results` left join drivers USING (driver_id)  GROUP BY pilot order by punts desc";
             Statement st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet gp = st.executeQuery(sql);
+            System.out.println("Pilots:");
             while (gp.next()) {
-                System.out.println("Carreres: " + gp.getInt("race_id") + " - " + gp.getString("race_name"));
+                System.out.println(gp.getString("pilot") + " - " + gp.getInt("punts"));
+            }
+
+            System.out.println("Equips:");
+            String sql2 = "SELECT team_name as equip ,SUM(points) as punts  FROM `results` left join teams USING (team_id)  GROUP BY equip order by punts desc";
+            Statement st2 = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet gp2 = st2.executeQuery(sql2);
+            while (gp2.next()) {
+                System.out.println(gp2.getString("equip") + " - " + gp2.getInt("punts"));
             }
 
         } catch (SQLException e) {

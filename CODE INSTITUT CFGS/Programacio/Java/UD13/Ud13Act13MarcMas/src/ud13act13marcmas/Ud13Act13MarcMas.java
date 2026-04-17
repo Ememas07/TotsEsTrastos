@@ -27,7 +27,7 @@ public class Ud13Act13MarcMas {
      * @param args the command line arguments
      * @throws java.io.UnsupportedEncodingException
      */
-    public static void main(String[] args) throws UnsupportedEncodingException {
+    public static void main(String[] args) throws UnsupportedEncodingException { //per mostrar accents correctament
         System.setOut(new PrintStream(System.out, true, "UTF-8"));
         Scanner s = new Scanner(System.in);
         Pilot p = new Pilot(0, "null", "null", "null");
