@@ -266,9 +266,11 @@ public class ArgumentsMarcMas {
                         seleccio = seleccio.toLowerCase();
                         switch (seleccio) {
                             case "pve":
+                                System.out.println("Opcio Mode de joc: PVE");
                                 opcions[0] = 0;
                                 break;
                             case "pvp":
+                                System.out.println("Opcio Mode de joc: PVP");
                                 opcions[0] = 1;
                                 break;
                             default:
@@ -284,6 +286,7 @@ public class ArgumentsMarcMas {
                         if (opcio < 0) {
                             System.out.println("Numero de jugadors no vàlid!");
                         } else {
+                            System.out.println("Numero de jugadors: " + opcio);
                             opcions[1] = opcio;
                         }
 
@@ -297,6 +300,7 @@ public class ArgumentsMarcMas {
                         if (opcio > 10 || opcio < 3) {
                             System.out.println("Longitut no vàlida!");
                         } else {
+                            System.out.println("Longitut: " + opcio);
                             opcions[2] = opcio;
                         }
                     }
@@ -307,9 +311,11 @@ public class ArgumentsMarcMas {
                         parametres[3] = true;
                         switch (seleccio) {
                             case "0":
+                                System.out.println("Majuscules: Desactivades");
                                 opcions[3] = 0;
                                 break;
                             case "1":
+                                System.out.println("Majuscules: Activades");
                                 opcions[3] = 1;
                                 break;
                             default:
@@ -323,9 +329,11 @@ public class ArgumentsMarcMas {
                         parametres[4] = true;
                         switch (seleccio) {
                             case "0":
+                                System.out.println("Dibuix: Forca i Penjat");
                                 opcions[4] = 0;
                                 break;
                             case "1":
+                                System.out.println("Dibuix: Penjat");
                                 opcions[4] = 1;
                                 break;
                             default:
@@ -339,9 +347,11 @@ public class ArgumentsMarcMas {
                         parametres[5] = true;
                         switch (seleccio) {
                             case "0":
+                                System.out.println("Mostrar Errades: Desactivat");
                                 opcions[5] = 0;
                                 break;
                             case "1":
+                                System.out.println("Mostrar Errades: Activat");
                                 opcions[5] = 1;
                                 break;
                             default:

@@ -9,7 +9,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -209,23 +212,31 @@ public class ResourcesMarcMas {
 
     public static int modeBucle(String nom) {
         try {
-            Scanner s = new Scanner(new BufferedReader(new FileReader("loop.txt"))); //llegim l'arxiu de bucle 
-            String paraula = s.next(); //agafam primera paraula
-            BufferedWriter fitxer = new BufferedWriter(new FileWriter("loopTmp.txt")); //guardam a loopTmp
-            while (s.hasNext()) { //anam llegint totes les linees de loop.txt i les escrivim a loopTmp
-                fitxer.write(s.next());
-                fitxer.newLine();
-            }
-            fitxer.write(paraula); //al final, escrivim la paraula
+            Scanner s = new Scanner(new BufferedReader(new FileReader("index.txt")));
+            int index = s.nextInt();
+            String[] paraules = new String[0];
+            BufferedWriter fitxer = new BufferedWriter(new FileWriter("index.txt", false)); //despres, re-escrivim el loop.txt a partir de loopTmp.txt
+            fitxer.write("" + (index + 1));
             fitxer.close();
-            BufferedWriter fitxer2 = new BufferedWriter(new FileWriter("loop.txt", false)); //despres, re-escrivim el loop.txt a partir de loopTmp.txt
-            Scanner s2 = new Scanner(new BufferedReader(new FileReader("loopTmp.txt")));
-            while (s2.hasNext()) {
-                fitxer2.write(s2.next());
-                fitxer2.newLine();
+            ClassLoader classLoader = ResourcesMarcMas.class.getClassLoader();
+            try (InputStream is = classLoader.getResourceAsStream("loop.txt"); BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
+
+                if (is == null) {
+                    throw new IOException("Resource not found: loop.txt");
+                }
+
+                // Read the file line by line
+                String paraula;
+                while ((paraula = br.readLine()) != null) {
+                    paraules = Arrays.copyOf(paraules, paraules.length + 1);
+                    paraules[paraules.length - 1] = paraula;
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            fitxer2.close();
-            s2.close();
+
+            String paraula = paraules[index % paraules.length];
             boolean victoria = jugar(paraula, nom);
             if (victoria) {
                 System.out.println("Has guanyat!");
@@ -233,18 +244,24 @@ public class ResourcesMarcMas {
                 System.out.println("Has perdut!");
             }
             s.close();
-
         } catch (FileNotFoundException ex) {
-            System.out.println("L'arxiu no s'ha trobat!");
+            System.out.println("L'arxiu no s'ha trobat i s'ha creat correctament");
+            try {
+                BufferedWriter fitxer = new BufferedWriter(new FileWriter("index.txt", false));
+                fitxer.write("0");
+                fitxer.close();
+            } catch (IOException e) {
+                System.out.println("Problema de I/O!");
+            }
         } catch (IOException ex) {
             System.out.println("Problema de I/O!");
         }
+
         Scanner s = new Scanner(System.in);
         System.out.println("Vol sortir del joc o tornar al menu?");
         System.out.println("0: Sortir al menu principal");
         System.out.println("1: Sortir del joc");
         System.out.println("2: Tornar a jugar");
         return s.nextInt();
-
     }
 }
