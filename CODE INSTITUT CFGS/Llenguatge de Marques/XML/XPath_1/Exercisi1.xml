@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+1. Nom del titular de l'agenda.
+/agenda/titular/nombreApellidos/nombre
+
+2. Telèfon fix del titular.
+/agenda/titular/telefonos/fijo
+
+3. Noms i cognoms dels contactes de l'agenda.
+/agenda/contactos/persona/nombreApellidos/nombre|/agenda/contactos/persona/nombreApellidos/apellidos
+
+4. Nom e identificador de cada contacte.
+//contactos/persona/nombreApellidos/nombre|//contactos/persona/@id
+
+5. Dades del contacte amb identificador "02".
+//contactos/persona[@id=02]
+
+6. Identificadors dels contactes que tenen fix.
+//contactos/persona[telefonos/fijo]/@id
+ -->

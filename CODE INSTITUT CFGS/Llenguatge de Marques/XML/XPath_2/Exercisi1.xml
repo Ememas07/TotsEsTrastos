@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+1. Mostrar els noms dels menús disponibles.
+//menu/nombre
+
+2. Mostrar els noms de tots els plats inclosos a la carta.
+/carta//platos//nombre
+
+3. Mostrar només els plats possibles en un menú econòmic.
+//platos/*/*[menu="eco"]
+
+4. Mostrar només els plats possibles en un menú mitjà.
+//platos/*/*[menu="med"]
+
+5. Mostrar només els plats possibles en un menú gourmet.
+//platos/*/*[menu="gou"]
+
+6. Mostrar les amanides disponibles al menú gourmet.
+//ensaladas/*[menu="gou"]
+
+7. Mostrar els menús que inclouen les espirals bolonyesa.
+//pasta[nombre="Espirales boloñesa"]/menu
+
+8. Indicar els menús de menys de 20 €.
+//menus/menu[precio<20]
+
+9. Mostrar els plats de menys de 300 calories.
+//platos/*/*[calorias[@cant<300]]
+
+10. Mostrar els noms dels plats vegans.
+//platos/*/*[vegana='Si']/nombre
+-->

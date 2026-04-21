@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE agenda>
+<agenda>
+    <titular>
+        <nombreApellidos>
+            <nombre>Angel</nombre>
+            <apellidos>Beltrán Cardona</apellidos>
+        </nombreApellidos>
+        <direccion>
+            <calle>Mayor, 2 3ªA</calle>
+            <localidad>Arévalo</localidad>
+            <cp>05200</cp>
+        </direccion>
+        <telefonos>
+            <movil>670898765</movil>
+            <fijo>920124567</fijo>
+            <trabajo>623973456</trabajo>
+        </telefonos>
+    </titular>
+
+    <contactos>
+        <persona id="01">
+            <nombreApellidos>
+                <nombre>Bernat</nombre>
+                <apellidos>Casas Darín</apellidos>
+            </nombreApellidos>
+            <direccion>
+                <calle>Menor 43, 2ºB</calle>
+                <localidad>Solsona</localidad>
+                <cp>25280</cp>
+            </direccion>
+            <telefonos>
+                <movil>626123123</movil>
+            </telefonos>
+        </persona>
+
+        <persona id="02">
+            <nombreApellidos>
+                <nombre>Consuelo</nombre>
+                <apellidos>Durán Echave</apellidos>
+            </nombreApellidos>
+            <direccion>
+                <calle>Acacias 5, 7ºC</calle>
+                <localidad>Cádiz</localidad>
+                <cp>11007</cp>
+            </direccion>
+            <telefonos>
+                <movil>600987456</movil>
+                <fijo>95642333323</fijo>
+            </telefonos>
+        </persona>
+
+        <persona id="03">
+            <nombreApellidos>
+                <nombre>David</nombre>
+                <apellidos>Echevarría Fernandez</apellidos>
+            </nombreApellidos>
+            <direccion>
+                <calle>Milagro 47</calle>
+                <localidad>Almendralejo</localidad>
+                <cp>06200</cp>
+            </direccion>
+            <telefonos>
+                <movil>622564343</movil>
+                <fijo>924687974</fijo>
+                <trabajo>600899234</trabajo>
+            </telefonos>
+        </persona>
+    </contactos>
+</agenda> 
