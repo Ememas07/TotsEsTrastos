@@ -41,7 +41,7 @@ public class Ud9Act4MarcMas {
                     case 3 -> { //mostrar
                         l.mostrarElements();
                     }
-                    case 4 -> { //desapilar tots
+                    case 4 -> { //desapilar totsç
                         l.desapilarTots();
                     }
                 }

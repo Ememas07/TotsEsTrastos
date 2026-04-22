@@ -122,7 +122,7 @@ public class Ud9Act5MarcMas {
         try {
             int numero = 0;
             while (numero > -1) {
-                System.out.println("Quin numero vol afegir?"); //demanam quin nombre posam
+                System.out.println("Quin numero vol afegir? (-1 per sortir)"); //demanam quin nombre posam
                 numero = s.nextInt();
                 if (numero > -1) {
                     c.insertarPrincipi(numero);
