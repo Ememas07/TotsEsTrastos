@@ -4,6 +4,8 @@
  */
 package ud14act1marcmas;
 
+import javax.persistence.*;
+
 /**
  *
  * @author Marc Mas
@@ -14,7 +16,18 @@ public class Ud14Act1MarcMas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        // Triam l'entitat de persistència pel seu nom
+        EntityManagerFactory emf;
+        emf = Persistence.createEntityManagerFactory("test");
+
+        //Cream l'objecte EntityManager 
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        Alumne a = new Alumne(4, "Pep", "Binissalem", 20.5f);
+        em.persist(a);
+        tx.commit();
+
     }
-    
+
 }
