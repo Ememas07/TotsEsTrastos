@@ -29,6 +29,12 @@ public class Alumne implements java.io.Serializable {
 
     }
 
+    public Alumne(String nom, String direccio, float notaMitjana) {
+        this.nom = nom;
+        this.direccio = direccio;
+        this.notaMitjana = notaMitjana;
+    }
+
     public int getNombreAlumne() {
         return nombreAlumne;
     }

@@ -9,8 +9,8 @@ import javax.persistence.Id;
 
 /**
  * Escriu la classe Alumne, amb els atributs: nombre d’alumne, nom, direcció i
- * nota mitjana. 
- * 
+ * nota mitjana.
+ *
  * Converteix la classe en una entitat.
  *
  * @author Marc Mas
@@ -26,6 +26,12 @@ public class Alumne implements java.io.Serializable {
 
     public Alumne() {
 
+    }
+
+    public Alumne(String nom, String direccio, float notaMitjana) {
+        this.nom = nom;
+        this.direccio = direccio;
+        this.notaMitjana = notaMitjana;
     }
 
     public int getNombreAlumne() {
