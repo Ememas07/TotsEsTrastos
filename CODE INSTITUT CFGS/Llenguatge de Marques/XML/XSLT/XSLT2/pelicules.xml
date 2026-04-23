@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE peliculas>
+<?xml-stylesheet href="Exercisi1.xsl"?>
+<peliculas>
+    <pelicula>
+        <titulo>El mago de Oz</titulo>
+        <direccion>Victor Fleming</direccion>
+        <pais>EEUU</pais>
+        <año>1939</año>
+        <duracion>98</duracion>
+        <genero>Fantástico, Musical</genero>
+    </pelicula>
+    <pelicula>
+        <titulo>Ciudadano Kane</titulo>
+        <direccion>Orson Welles</direccion>
+        <pais>EEUU</pais>
+        <año>1941</año>
+        <duracion>119</duracion>
+        <genero>Drama, Misterio</genero>
+    </pelicula>
+    <pelicula>
+        <titulo>Cadena perpetua</titulo>
+        <direccion>Frank Darabont</direccion>
+        <pais>EEUU</pais>
+        <año>1994</año>
+        <duracion>142</duracion>
+        <genero>Drama</genero>
+    </pelicula>
+    <pelicula>
+        <titulo>2001: Una odisea del espacio</titulo>
+        <direccion>Stanley Kubrick</direccion>
+        <pais>Reino Unido</pais>
+        <año>1968</año>
+        <duracion>139</duracion>
+        <genero>Ciencia-Ficción</genero>
+    </pelicula>
+    <pelicula>
+        <titulo>La lista de Schindler</titulo>
+<direccion>Steven Spielberg</direccion>
+<pais>EEUU</pais>
+        3 <año>1993</año>
+<duracion>195</duracion>
+<genero>Drama</genero>
+    </pelicula>
+    <pelicula>
+        <titulo>Forrest Gump</titulo>
+        <direccion>Robert Zemeckis</direccion>
+        <pais>EEUU</pais>
+        <año>1994</año>
+        <duracion>142</duracion>
+        <genero>Drama, Romance</genero>
+    </pelicula>
+</peliculas>
