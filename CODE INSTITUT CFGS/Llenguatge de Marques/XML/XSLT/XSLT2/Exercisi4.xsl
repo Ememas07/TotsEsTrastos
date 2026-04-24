@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="/">
         <html>
-            <table>
+            <table bgcolor="red">
                 <h1>Mis peliculas clasicas preferidas</h1>
                 <tr>
                     <td>
