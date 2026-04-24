@@ -5,14 +5,17 @@
 package ud14act3marcmas;
 
 /**
- * Es vol guardar la informació de tots els avistaments d’estels fugaços.
+ * Es vol guardar la informació de tots els avistaments d'estels fugaços.
  *
- * De cada avistament ens interessa guardar: la durada de l’estel (en segons),
- * l’intensitat (un nombre de 1 a 10) i saber si la llum que s’emetia era de
- * color verdós. ● Com no disposam de res que identifiqui a l’estel, serà JPA
- * l’encarregat d’assignar un ID a cada una. ● Crea un grapat d’estels i
- * persisteix-los a la BD. Comprova que són allà en fer commit, i que no hi són
- * si fas rollback.
+ * De cada avistament ens interessa guardar: la durada de l'estel (en segons),
+ * l'intensitat (un nombre de 1 a 10) i saber si la llum que s'emetia era de
+ * color verdós.
+ *
+ * Com no disposam de res que identifiqui a l'estel, serà JPA l'encarregat
+ * d'assignar un ID a cada una.
+ *
+ * Crea un grapat d'estels i persisteix-los a la BD. Comprova que són allà en
+ * fer commit, i que no hi són si fas rollback.
  *
  * @author Marc Mas
  */

@@ -5,6 +5,18 @@
 package ud14act13marcmas;
 
 /**
+ * És necessari saber quants empleats hi ha de cada tipus a l'empresa.
+ *
+ * Crear una consulta amb nom per a obtenir aquesta informació. Aquest informe
+ * ha de tenir el següent aspecte:
+ *
+ * Gerent: 3 empleats
+ *
+ * Informatic: 12 empleats
+ *
+ * Comercial: 5 empleats
+ *
+ *  *(Les xifres són un exemple, les vostres han de ser reals)
  *
  * @author Marc Mas
  */
@@ -16,5 +28,5 @@ public class Ud14Act13MarcMas {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
 }

@@ -5,6 +5,8 @@
 package ud14act6marcmas;
 
 /**
+ * Continua amb l'activitat anterior, permetent esborrar un cotxe a partir de la
+ * seva matrícula.
  *
  * @author Marc Mas
  */
@@ -16,5 +18,5 @@ public class Ud14Act6MarcMas {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
 }

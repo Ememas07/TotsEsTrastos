@@ -5,6 +5,7 @@
 package ud14act10marcmas;
 
 /**
+ * Assignar a tots els comercials un sou de 1500€
  *
  * @author Marc Mas
  */
@@ -16,5 +17,5 @@ public class Ud14Act10MarcMas {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
 }

@@ -4,11 +4,8 @@
  */
 package ud14act1marcmas;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
 /**
- * Escriu la classe Alumne, amb els atributs: nombre d’alumne, nom, direcció i
+ * Escriu la classe Alumne, amb els atributs: nombre d'alumne, nom, direcció i
  * nota mitjana.
  *
  * Converteix la classe en una entitat.
