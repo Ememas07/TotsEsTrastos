@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:math="http://www.w3.org/2005/xpath-functions/math"
-    exclude-result-prefixes="xs math"
-    version="3.0">
-    
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/">
+        <html>
+            <table>
+                <h1>Mis peliculas clasicas preferidas</h1>
+                <tr>
+                    <td>
+                        Titulo
+                    </td>
+                    <td>
+                        Director
+                    </td>
+                </tr>
+                <xsl:for-each select="//pelicula">
+                    <tr>
+                        <td>
+                            <p>
+                                <xsl:value-of select="titulo" />
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <xsl:value-of select="direccion" />
+                            </p>
+                        </td>
+                    </tr>
+                </xsl:for-each>
+            </table>
+        </html>
+    </xsl:template>
 </xsl:stylesheet>

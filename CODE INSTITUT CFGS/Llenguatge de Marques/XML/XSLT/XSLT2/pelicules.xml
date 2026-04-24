@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE peliculas>
-<?xml-stylesheet href="Exercisi1.xsl"?>
+<?xml-stylesheet href="Exercisi4.xsl"?>
 <peliculas>
     <pelicula>
         <titulo>El mago de Oz</titulo>
