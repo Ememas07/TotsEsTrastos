@@ -1,7 +1,6 @@
 org\yourcompany\yourproject\Llista\Llista.class
-org\yourcompany\yourproject\ArbresMarcMas.class
-org\yourcompany\yourproject\LinkedLlista\List.class
 org\yourcompany\yourproject\Pila\Pila.class
-org\yourcompany\yourproject\LinkedLlista\Data.class
-org\yourcompany\yourproject\LinkedLlista\List$Node.class
+org\yourcompany\yourproject\LinkedList\Tree.class
+org\yourcompany\yourproject\LinkedList\Tree$Node.class
+org\yourcompany\yourproject\ArbresMarcMas.class
 org\yourcompany\yourproject\Coa\Coa.class

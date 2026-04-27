@@ -24,7 +24,7 @@ public class Pila {
 
     public int desapilar() {
         int num = (int) llista.obtenirElement(llista.length() - 1);
-        llista.eliminarElement(llista.length()); //llevam el plat d'adalt de tot
+        llista.eliminarElement(llista.length() - 1); //llevam el plat d'adalt de tot
         return num;
     }
 

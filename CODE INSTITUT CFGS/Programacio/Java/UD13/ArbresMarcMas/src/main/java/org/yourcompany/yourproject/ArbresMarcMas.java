@@ -4,6 +4,7 @@
 package org.yourcompany.yourproject;
 
 import org.yourcompany.yourproject.Coa.Coa;
+import org.yourcompany.yourproject.LinkedList.Tree;
 import org.yourcompany.yourproject.Pila.Pila;
 
 /**
@@ -18,11 +19,17 @@ public class ArbresMarcMas {
         // -pre_arbre   - + 2 3 5
         // args = new String[6];
         // args = new String[]{"a","2","3","+","5","+"};
-        args = new String[]{"a", "-", "+", "2", "3", "5"};
+        // args = new String[]{"a", "-", "+", "2", "3", "5"};
+
+        if (args[0].equals("-post")) {
+            notacioPostfixa(args);
+        } else {
+            notacioPrefixaCoa(args);
+        }
 
         // notacioPostfixa(args);
         // notacioPrefixaCoa(args);
-        notacioPrefixaArbre(args);
+        // notacioPrefixaArbre(args, 1);
     }
 
     public static void notacioPostfixa(String[] operacio) {
@@ -35,15 +42,15 @@ public class ArbresMarcMas {
                 }
                 case "-" -> {
                     int[] numeros = conseguirNumeros(operacio[i], p);
-                    p.apilar(numeros[1] - numeros[0]);
+                    p.apilar((int) numeros[1] - numeros[0]);
                 }
                 case "*" -> {
                     int[] numeros = conseguirNumeros(operacio[i], p);
-                    p.apilar(numeros[1] * numeros[0]);
+                    p.apilar((int) numeros[1] * numeros[0]);
                 }
                 case "/" -> {
                     int[] numeros = conseguirNumeros(operacio[i], p);
-                    p.apilar(numeros[1] / numeros[0]);
+                    p.apilar((int) numeros[1] / numeros[0]);
                 }
                 default -> {
                     p.apilar(Integer.parseInt(operacio[i]));
@@ -92,8 +99,11 @@ public class ArbresMarcMas {
         return 0;
     }
 
-    public static void notacioPrefixaArbre(String[] operacions) {
-
+    public static boolean notacioPrefixaArbre(String[] operacions, int index) {
+        Tree t = new Tree();
+        String data = operacions[index];
+        t.root = t.add(false, data, null);
+        return false;
     }
 
     public static int[] conseguirNumeros(String op, Pila p) {
@@ -103,5 +113,4 @@ public class ArbresMarcMas {
         System.out.print(numeros[1] + op + numeros[0] + "=");
         return numeros;
     }
-
 }
