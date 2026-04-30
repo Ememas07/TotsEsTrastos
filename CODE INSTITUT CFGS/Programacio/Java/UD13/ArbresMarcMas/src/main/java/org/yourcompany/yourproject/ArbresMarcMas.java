@@ -29,13 +29,12 @@ public class ArbresMarcMas {
                 Tree a = construirArbre(args);
                 System.out.println(avaluar(a.getRoot()));
             }
-            default ->
+            case "-pre" -> {
                 notacioPrefixaCoa(args);
-        }
-
-        if (args[0].equals("-post")) {
-        } else {
-            notacioPrefixaCoa(args);
+            }
+            default -> {
+                System.out.println("Has de posar una opcio valida (-post: postfixa, -preA: arbre, -pre: prefixa)");
+            }
         }
 
         // notacioPostfixa(args);
@@ -131,7 +130,7 @@ public class ArbresMarcMas {
         }
         return node;
     }
-    
+
     public static int avaluar(Node n) {
         String op = n.getValor();
         if (!isOperacio(op)) {
