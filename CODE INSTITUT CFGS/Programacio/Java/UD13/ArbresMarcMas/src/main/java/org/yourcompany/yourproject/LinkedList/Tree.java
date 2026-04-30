@@ -10,52 +10,50 @@ package org.yourcompany.yourproject.LinkedList;
  */
 public class Tree {
 
-    public Node root;
+    private Node root;
 
     // ============================
     // INTERNAL NODE CLASS
     // ============================
-    private static class Node {
-
-        String data;
-        Node left;
-        Node right;
-        Node father;
-
-        // Later students will add: Node father;
-        Node(String data) {
-            this.data = data;
-        }
-
-        public boolean isRoot() {
-            return this.father == null; //si el pare es nul, jo som el pare
-        }
-
-        public boolean isLeaf() {
-            return left == null && right == null; //si no te fill, som una fulla
-        }
+    public Tree(String data) {
+        this.root = new Node(data);
     }
 
-    public static Node add(boolean isLeft, String data, Node father) {
+    public Tree(Node n) {
+        this.root = n;
+    }
+
+    public Tree() {
+
+    }
+
+    public Node addBranch(boolean isLeft, String data, Node father) {
         if (isLeft) {
-            if (father.left == null) {
+            if (father.left != null) {
                 System.out.println("No se pot inserir a aquesta posicio!");
             }
         } else {
-            if (father.right == null) {
+            if (father.right != null) {
                 System.out.println("No se pot inserir a aquesta posicio!");
             }
         }
         Node n = new Node(data);
-        n.father = father;
-        n.left = null;
-        n.right = null;
         if (isLeft) {
-            father.left = n;
+            father.setLeft(n);
         } else {
-            father.right = n;
+            father.setRight(n);
         }
         return n;
+
+    }
+
+    public static Node removeBranch(boolean isLeft, Node father) {
+        if (isLeft) {
+            father.setLeft(null);
+        } else {
+            father.setRight(null);
+        }
+        return father;
     }
 
     public static int operate(Node node) {
@@ -79,12 +77,12 @@ public class Tree {
         };
     }
 
-    /**
-     * int a = 0; int b = 0; while (c.length() > 0) { String s = (String)
-     * c.desencoar(); try { return Integer.parseInt(s); } catch (Exception e) {
-     * a = solucioNPC(c); b = solucioNPC(c); } return switch (s) { case "+" -> a
-     * + b; case "-" -> a - b; case "*" -> a * b; case "/" -> a / b; default ->
-     * throw new IllegalStateException("Unexpected value: " + (s)); }; } return
-     * 0;
-     */
+    public Node getRoot() {
+        return root;
+    }
+
+    public void setRoot(Node root) {
+        this.root = root;
+    }
+
 }

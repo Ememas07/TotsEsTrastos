@@ -4,6 +4,7 @@
 package org.yourcompany.yourproject;
 
 import org.yourcompany.yourproject.Coa.Coa;
+import org.yourcompany.yourproject.LinkedList.Node;
 import org.yourcompany.yourproject.LinkedList.Tree;
 import org.yourcompany.yourproject.Pila.Pila;
 
@@ -21,8 +22,18 @@ public class ArbresMarcMas {
         // args = new String[]{"a","2","3","+","5","+"};
         // args = new String[]{"a", "-", "+", "2", "3", "5"};
 
+        switch (args[0]) {
+            case "-post" ->
+                notacioPostfixa(args);
+            case "-preA" -> {
+                Tree a = construirArbre(args);
+                System.out.println(avaluar(a.getRoot()));
+            }
+            default ->
+                notacioPrefixaCoa(args);
+        }
+
         if (args[0].equals("-post")) {
-            notacioPostfixa(args);
         } else {
             notacioPrefixaCoa(args);
         }
@@ -56,12 +67,18 @@ public class ArbresMarcMas {
                     p.apilar(Integer.parseInt(operacio[i]));
                 }
             }
-            switch (operacio[i]) {
-                case "+", "-", "/", "*" -> {
-                    System.out.println(p.mostrarDarrerElement());
-                }
+            if (isOperacio(operacio[i])) {
+                System.out.println(p.mostrarDarrerElement());
             }
         }
+    }
+
+    public static int[] conseguirNumeros(String op, Pila p) {
+        int[] numeros = new int[2];
+        numeros[0] = p.desapilar();
+        numeros[1] = p.desapilar();
+        System.out.print(numeros[1] + op + numeros[0] + "=");
+        return numeros;
     }
 
     public static void notacioPrefixaCoa(String[] operacio) {
@@ -99,18 +116,49 @@ public class ArbresMarcMas {
         return 0;
     }
 
-    public static boolean notacioPrefixaArbre(String[] operacions, int index) {
-        Tree t = new Tree();
-        String data = operacions[index];
-        t.root = t.add(false, data, null);
-        return false;
+    public static Tree construirArbre(String tokens[]) {
+        int[] index = {1};
+        Node arrel = construirNodes(tokens, index);
+        return new Tree(arrel);
     }
 
-    public static int[] conseguirNumeros(String op, Pila p) {
-        int[] numeros = new int[2];
-        numeros[0] = p.desapilar();
-        numeros[1] = p.desapilar();
-        System.out.print(numeros[1] + op + numeros[0] + "=");
-        return numeros;
+    public static Node construirNodes(String tokens[], int[] index) {
+        String token = tokens[index[0]++];
+        Node node = new Node(token);
+        if (isOperacio(token)) {
+            node.setLeft(construirNodes(tokens, index));
+            node.setRight(construirNodes(tokens, index));
+        }
+        return node;
+    }
+    
+    public static int avaluar(Node n) {
+        String op = n.getValor();
+        if (!isOperacio(op)) {
+            return Integer.parseInt(op);
+        }
+        int a = avaluar(n.getLeft());
+        int b = avaluar(n.getRight());
+        return switch (op) {
+            case "+" ->
+                a + b;
+            case "-" ->
+                a - b;
+            case "*" ->
+                a * b;
+            case "/" ->
+                a / b;
+            default ->
+                throw new IllegalStateException("Unexpected value: " + (op));
+        };
+    }
+
+    public static boolean isOperacio(String s) {
+        return switch (s) {
+            case "+", "-", "/", "*" ->
+                true;
+            default ->
+                false;
+        };
     }
 }
