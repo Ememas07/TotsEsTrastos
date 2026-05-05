@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2. Fitxer referencias.xml
+Aquest fitxer és necessari per resoldre la consulta número 6, ja que heu de creuar
+dades (ús de la funció doc()). -->
+<referencias>
+    <entrada>
+        <nombre>Máquina analítica</nombre>
+        <url>https://www.gtd.es/es/blog/la-maquina-analitica-de-babbage</url>
+    </entrada>
+    <entrada>
+        <nombre>Máquina de Turing</nombre>
+        <url>https://formatalent.com/que-es-una-maquina-de-turing-y-como-
+            funciona/</url>
+    </entrada>
+    <entrada>
+        <nombre>Código ASCII</nombre>
+        <url>https://elcodigoascii.com.ar/</url>
+        <url>https://es.wikipedia.org/wiki/ASCII</url>
+    </entrada>
+    <entrada>
+        <nombre>Ordenadores cuánticos</nombre>
+        <url>https://www.adslzone.net/reportajes/tecnologia/ordenadores-
+            cuanticos/</url>
+        <url>https://www.geeknetic.es/Guia/1841/Ordenadores-Cuanticos-Todo-lo-
+            que-necesitas-saber.html</url>
+    </entrada>
+</referencias>
