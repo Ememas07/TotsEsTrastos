@@ -15,6 +15,8 @@ INSERT OR UPDATE OR DELETE ON despesa
 for each row
 execute PROCEDURE PUBLIC.omplirLog();
 
+
+
 CREATE OR REPLACE FUNCTION public.actualitzarImport()
     RETURNS trigger
     LANGUAGE plpgsql
@@ -34,6 +36,8 @@ CREATE OR REPLACE TRIGGER actualitzarImport AFTER
 INSERT OR UPDATE OR DELETE ON pagador
 for each row
 execute PROCEDURE PUBLIC.actualitzarImport();
+
+
 
 CREATE OR REPLACE FUNCTION public.arrodonirImport()
     RETURNS trigger
