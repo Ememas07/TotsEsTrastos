@@ -1,3 +1,4 @@
+
 DO $$
 DECLARE
     domains text[] := ARRAY['gmail.com', 'hotmail.com', 'icloud.com', 'mail.com', 'outlook.com', 'yahoo.com'];

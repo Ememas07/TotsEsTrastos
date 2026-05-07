@@ -31,13 +31,14 @@ CREATE TABLE usuariGrup (
 
 CREATE TABLE despesa (
     id SERIAL PRIMARY KEY,
-    idGrup INTEGER,
-    pagadorOriginal VARCHAR(300),
+    idGrup INTEGER NOT NULL,
+    pagadorOriginal VARCHAR(300) NOT NULL,
     dataDespesa TIMESTAMP(5) with time zone NOT NULL,
     descripcio VARCHAR(500),
     categoria VARCHAR(100),
     importTotal MONEY NOT NULL,
     importPagat MONEY NOT NULL,
+    FOREIGN KEY (idGrup) REFERENCES public.grup (id),
     FOREIGN KEY (pagadorOriginal) REFERENCES public.usuari (correu)
 )
 
