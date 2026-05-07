@@ -1,9 +1,18 @@
 -- Active: 1778078067998@@127.0.0.1@5432@TricountMarcMas@public
+
+CREATE TYPE public.IBAN AS
+(
+	Lletres character(2),
+	Numeros bigint
+);
+
 CREATE TABLE usuari (
-    id SERIAL PRIMARY KEY,
+    correu VARCHAR(300) PRIMARY KEY,
     nom VARCHAR(100) NOT NULL,
     llinatge1 VARCHAR(100) NOT NULL,
-    llinatge2 VARCHAR(100)
+    llinatge2 VARCHAR(100),
+    IBAN iban NOT NULL,
+    alias VARCHAR(100)
 )
 
 CREATE TABLE grup (
@@ -13,39 +22,38 @@ CREATE TABLE grup (
 )
 
 CREATE TABLE usuariGrup (
-    idUsuari INTEGER,
+    idUsuari VARCHAR(300),
     idGrup INTEGER,
     PRIMARY KEY (idUsuari, idGrup),
-    FOREIGN KEY (idUsuari) REFERENCES public.usuari (id),
+    FOREIGN KEY (idUsuari) REFERENCES public.usuari (correu),
     FOREIGN KEY (idGrup) REFERENCES public.grup (id)
 );
 
 CREATE TABLE despesa (
     id SERIAL PRIMARY KEY,
     idGrup INTEGER,
+    pagadorOriginal VARCHAR(300),
     dataDespesa TIMESTAMP(5) with time zone NOT NULL,
     descripcio VARCHAR(500),
     categoria VARCHAR(100),
     importTotal MONEY NOT NULL,
-    importPagat MONEY NOT NULL
+    importPagat MONEY NOT NULL,
+    FOREIGN KEY (pagadorOriginal) REFERENCES public.usuari (correu)
 )
 
 CREATE TABLE pagador (
     id SERIAL PRIMARY KEY,
     idDespesa INTEGER NOT NULL,
-    idUsuari INTEGER NOT NULL,
+    idUsuari VARCHAR(300) NOT NULL,
     contribucio MONEY NOT NULL,
     haPagat boolean NOT NULL,
     FOREIGN KEY (idDespesa) REFERENCES public.despesa (id),
-    FOREIGN KEY (idUsuari) REFERENCES public.usuari (id)
+    FOREIGN KEY (idUsuari) REFERENCES public.usuari (correu)
 )
 
 CREATE TABLE log(
     id SERIAL PRIMARY KEY,
-    idDespesa INTEGER NOT NULL,
-    idUsuari INTEGER NOT NULL,
+    datetime TIMESTAMP(5) with time zone NOT NULL,
     oldRow VARCHAR(1000),
-    newRow VARCHAR(1000),
-    FOREIGN KEY (idDespesa) REFERENCES public.despesa (id),
-    FOREIGN KEY (idUsuari) REFERENCES public.usuari (id)
+    newRow VARCHAR(1000)
 )
