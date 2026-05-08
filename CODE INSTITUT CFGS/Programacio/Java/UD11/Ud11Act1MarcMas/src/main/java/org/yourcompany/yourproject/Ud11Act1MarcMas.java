@@ -6,6 +6,11 @@ package org.yourcompany.yourproject;
 import java.util.Arrays;
 
 /**
+ * Implementar un mètode genèric estàtic que realitzi la inserció d'un objecte
+ * al final d'un array, tots dos del mateix tipus, que es passen com a
+ * paràmetres.
+ *
+ * Retorna una nova taula amb el resultat de la inserció.
  *
  * @author Marc Mas
  */
