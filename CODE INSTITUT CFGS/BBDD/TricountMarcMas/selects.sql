@@ -1,0 +1,37 @@
+-- Active: 1778078067998@@127.0.0.1@5432@TricountMarcMas@public
+-- Mostrar el % de despeses de cada categoria
+SELECT categoria, sumatotal, TO_CHAR(
+        sumatotal * 100 / SUM(sumatotal) OVER (), 'fm90D00%'
+    ) AS percent
+FROM (
+        SELECT categoria, SUM(importtotal) AS sumatotal
+        FROM despesa
+        GROUP BY
+            categoria
+    )
+
+-- Doblers gastat per cada usuari (pagats)
+SELECT idusuari, sum(contribucio)
+FROM pagador
+WHERE
+    hapagat = true
+GROUP BY
+    idusuari;
+
+-- Doblers pendents per pagar a cada usuari
+SELECT idusuari, sum(contribucio)
+FROM pagador
+WHERE
+    hapagat = false
+GROUP BY
+    idusuari;
+
+-- Doblers gastat per cada grup
+SELECT sum(importtotal), idgrup
+FROM pagador p
+    LEFT JOIN despesa d ON (p.iddespesa = d.id)
+GROUP BY
+    d.idgrup
+
+-- Nombre de despeses que ha pagat cada usuari per advantat
+SELECT count(*) as recompte,pagadororiginal from despesa group by pagadororiginal ORDER BY recompte 

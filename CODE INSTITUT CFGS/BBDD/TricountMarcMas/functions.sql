@@ -13,26 +13,10 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE OR REPLACE FUNCTION arrodonirDespesa(idDespesa INT) -- TODO
-RETURNS MONEY AS $$
-DECLARE
-    pagat MONEY;
-    total MONEY;
-BEGIN
-    pagat = (SELECT importpagat FROM despesa WHERE despesa.id = idDespesa);
-    total = (SELECT importtotal FROM despesa WHERE despesa.id = idDespesa);
-    IF (pagat + 0.01::money) = total THEN
-        RETURN total;
-    ELSE
-        RETURN pagat;
-    END IF;
-END;
-$$ LANGUAGE plpgsql;
-
 CREATE OR REPLACE PROCEDURE assignarPreuPartsIguals(IN preu MONEY,IN despesa INT)
 LANGUAGE plpgsql 
 AS $$
-DECLARE numPagadors int;
+DECLARE numPagadors INTEGER;
 BEGIN
 numPagadors = (
     SELECT COUNT(*)
@@ -41,12 +25,18 @@ numPagadors = (
         pagador.idDespesa = despesa
 );
 UPDATE pagador
-set
+SET
     contribucio = (preu / numPagadors)
 WHERE
     pagador.iddespesa = despesa;
 END
 $$;
+
+
+
+
+
+
 
 -- select count noseque amb idDespesa
 -- separar
@@ -63,3 +53,19 @@ IN idDespesa INT
 -- calcular el total nou
 -- assignar-lo a tots els usuari -1 pero dividit entre el nou numero (120-50 = 70 /3 i assignar a tots)
 -- assignar import especific a l'usuari especific
+
+/* CREATE OR REPLACE FUNCTION arrodonirDespesa(idDespesa INT) -- TODO
+RETURNS MONEY AS $$
+DECLARE
+    pagat MONEY;
+    total MONEY;
+BEGIN
+    pagat = (SELECT importpagat FROM despesa WHERE despesa.id = idDespesa);
+    total = (SELECT importtotal FROM despesa WHERE despesa.id = idDespesa);
+    IF (pagat + 0.01::money) = total THEN
+        RETURN total;
+    ELSE
+        RETURN pagat;
+    END IF;
+END;
+$$ LANGUAGE plpgsql; */
