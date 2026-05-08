@@ -46,6 +46,7 @@ CREATE OR REPLACE FUNCTION public.arrodonirImport()
 AS $BODY$
 BEGIN
 NEW.importpagat := arrodonir(NEW.importpagat,NEW.importtotal);
+/* NEW.importpagat := arrodonirDespesa(NEW.id); */ -- TODO
 RETURN NEW;
 END;
 $BODY$;
@@ -53,5 +54,5 @@ $BODY$;
 CREATE OR REPLACE TRIGGER arrodonirImport
 BEFORE UPDATE OF importpagat
 ON despesa
-for each row
+FOR EACH ROW
 execute PROCEDURE PUBLIC.arrodonirImport();
