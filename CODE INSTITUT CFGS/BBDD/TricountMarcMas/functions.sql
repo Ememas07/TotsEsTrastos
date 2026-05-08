@@ -13,7 +13,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-
 CREATE OR REPLACE FUNCTION arrodonirDespesa(idDespesa INT) -- TODO
 RETURNS MONEY AS $$
 DECLARE
@@ -30,30 +29,33 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE OR REPLACE PROCEDURE assignarPreuPartsIguals(IN preu MONEY,IN idDespesa INT);
-
-DECLARE numPagadors = (
+CREATE OR REPLACE PROCEDURE assignarPreuPartsIguals(IN preu MONEY,IN despesa INT)
+LANGUAGE plpgsql 
+AS $$
+DECLARE numPagadors int;
+BEGIN
+numPagadors = (
     SELECT COUNT(*)
     FROM pagador
     WHERE
-        pagador.idDespesa = idDespesa
+        pagador.idDespesa = despesa
 );
-
-DECLARE contribucio = preu / numPagadors;
-
-UPDATE despesa
+UPDATE pagador
+set
+    contribucio = (preu / numPagadors)
 WHERE
-    despesa.id = idDespesa;
+    pagador.iddespesa = despesa;
+END
+$$;
 
 -- select count noseque amb idDespesa
 -- separar
 --  i fer un insert
-CREATE
-OR REPLACE PROCEDURE asignarImportUsuari (
-    IN import MONEY,
-    IN idUsuari VARCHAR(300),
-    IN idDespesa INT
-);
+/* CREATE OR REPLACE PROCEDURE asignarImportUsuari (
+IN import MONEY,
+IN idUsuari VARCHAR(300),
+IN idDespesa INT
+); */
 
 -- create procedure asignarUsuari (import, idUsuari, idDespesa)
 -- agafar import total de la despesa
