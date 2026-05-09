@@ -1,10 +1,10 @@
 -- Active: 1778078067998@@127.0.0.1@5432@TricountMarcMas@public
-CREATE OR REPLACE FUNCTION arrodonir(pagat MONEY, total MONEY)
-RETURNS MONEY AS $$
+CREATE OR REPLACE FUNCTION arrodonir(pagat NUMERIC, total NUMERIC)
+RETURNS NUMERIC AS $$
 DECLARE
-    result MONEY;
+    result NUMERIC;
 BEGIN
-    IF (pagat + 0.01::money) = total THEN
+    IF (pagat + 0.01) = total THEN
         result = total;
     ELSE
         result = pagat;

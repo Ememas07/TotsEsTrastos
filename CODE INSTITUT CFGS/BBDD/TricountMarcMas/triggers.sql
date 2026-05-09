@@ -46,7 +46,6 @@ CREATE OR REPLACE FUNCTION public.arrodonirImport()
 AS $BODY$
 BEGIN
 NEW.importpagat := arrodonir(NEW.importpagat,NEW.importtotal);
-/* NEW.importpagat := arrodonirDespesa(NEW.id); */ -- TODO
 RETURN NEW;
 END;
 $BODY$;
