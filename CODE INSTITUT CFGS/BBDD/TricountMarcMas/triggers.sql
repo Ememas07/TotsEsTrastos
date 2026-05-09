@@ -1,4 +1,3 @@
-
 CREATE OR REPLACE FUNCTION public.omplirLog()
   RETURNS trigger
   LANGUAGE plpgsql 
@@ -16,29 +15,24 @@ INSERT OR UPDATE OR DELETE ON despesa
 for each row
 execute PROCEDURE PUBLIC.omplirLog();
 
-
-
 CREATE OR REPLACE FUNCTION public.actualitzarImport()
     RETURNS trigger
     LANGUAGE plpgsql
 AS $BODY$
 BEGIN
-UPDATE despesa set importPagat = (
+UPDATE despesa set importpagat = (
     SELECT sum(contribucio) 
 	FROM pagador 
-	WHERE iddespesa = old.iddespesa
-	AND hapagat='t') 
-    WHERE despesa.id = old.iddespesa;
+	WHERE pagador.iddespesa = despesa.id
+	AND hapagat='true')::numeric 
+    WHERE despesa.id = id;
 RETURN NULL;
 END;
 $BODY$;
 
 CREATE OR REPLACE TRIGGER actualitzarImport AFTER
 INSERT OR UPDATE OR DELETE ON pagador
-for each row
 execute PROCEDURE PUBLIC.actualitzarImport();
-
-
 
 CREATE OR REPLACE FUNCTION public.arrodonirImport()
     RETURNS trigger
