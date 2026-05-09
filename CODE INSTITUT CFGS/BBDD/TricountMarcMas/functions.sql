@@ -32,6 +32,19 @@ WHERE
 END
 $$;
 
+CREATE OR REPLACE PROCEDURE castIban(IN input VARCHAR(50), OUT resultat iban)
+LANGUAGE plpgsql AS $$
+DECLARE l CHAR;
+DECLARE n BIGINT;
+BEGIN
+l = left(input,2);
+n = right(input, input.length-2);
+resultat.lletres = l;
+resultat.numeros = n;
+END;
+$$;
+
+
 
 
 
