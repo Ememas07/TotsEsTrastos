@@ -196,6 +196,7 @@ public class TricountMarcMas {
                         p = new Pagador(contribucio, u, d, false);
                         pDAO.create(p);
                     }
+                    dDAO.actualitzarImport(d);
 
                 }
             }

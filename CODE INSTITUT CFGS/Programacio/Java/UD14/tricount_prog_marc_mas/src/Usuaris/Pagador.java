@@ -88,11 +88,11 @@ public class Pagador implements Serializable {
         this.contribucio = contribucio;
     }
 
-    public boolean getHapagat() {
+    public boolean haPagat() {
         return hapagat;
     }
 
-    public void setHapagat(boolean hapagat) {
+    public void setPagat(boolean hapagat) {
         this.hapagat = hapagat;
     }
 

@@ -6,6 +6,8 @@ package tricountmarcmas;
 
 import Usuaris.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.List;
 import javax.persistence.*;
 
 /**
@@ -13,17 +15,17 @@ import javax.persistence.*;
  * @author Marc Mas
  */
 public class DespesaDAO implements Serializable {
-
+    
     private EntityManager em;
-
+    
     DespesaDAO(EntityManagerFactory emf) {
         this.em = emf.createEntityManager();
     }
-
+    
     DespesaDAO(EntityManager em) {
         this.em = em;
     }
-
+    
     public void create(Despesa d, String correu, int idGrup) {
         // UsuariDAO uDAO = new UsuariDAO(em);
         // Usuari u = uDAO.obtenirUsuari(correu); //recuperam l'usuari amb el correu
@@ -40,7 +42,28 @@ public class DespesaDAO implements Serializable {
             tx.commit(); //i feim commit
         }
     }
-
+    
+    public void edit(Despesa d) {
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        em.flush();
+        tx.commit(); //i feim commit
+    }
+    
+    public void actualitzarImport(Despesa d) {
+        List<Pagador> l = d.getPagadorList();
+        Object pagadors[] = l.toArray();
+        BigDecimal totalPagat = new BigDecimal(0);
+        for (int i = 0; i < pagadors.length; i++) {
+            Pagador p = (Pagador) pagadors[i];
+            if (p.haPagat()) {
+                totalPagat = totalPagat.add(p.getContribucio());
+            }
+        }
+        d.setImportpagat(totalPagat);
+        this.edit(d);
+    }
+    
     public EntityManager getEM() {
         return this.em;
     }
