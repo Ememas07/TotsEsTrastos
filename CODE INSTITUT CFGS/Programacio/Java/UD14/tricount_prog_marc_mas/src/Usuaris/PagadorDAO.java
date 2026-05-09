@@ -4,10 +4,33 @@
  */
 package Usuaris;
 
+import javax.persistence.*;
+import tricountmarcmas.*;
+
 /**
  *
  * @author Marc Mas
  */
 public class PagadorDAO {
+
+    private EntityManager em;
     
+    PagadorDAO(){
+    }
+
+    PagadorDAO(EntityManagerFactory emf) {
+        this.em = emf.createEntityManager();
+    }
+
+    PagadorDAO(EntityManager em) {
+        this.em = em;
+    }
+
+    public void create(Pagador p) {
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        em.persist(p);
+        tx.commit(); //i feim commit
+    }
+
 }

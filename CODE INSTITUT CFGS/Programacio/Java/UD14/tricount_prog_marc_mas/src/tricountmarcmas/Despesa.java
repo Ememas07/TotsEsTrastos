@@ -91,7 +91,7 @@ public class Despesa implements Serializable {
 
     public Despesa(Scanner s) {
         System.out.println("Quina es la data de la despesa?");
-        System.out.println("Es pot deixar buid si ha estat creada ara");
+        System.out.println("Es pot deixar buit si ha estat creada ara");
         String d = s.nextLine();
         if (d.length() == 0) {
             this.datadespesa = new Date();
@@ -153,11 +153,19 @@ public class Despesa implements Serializable {
         return importtotal;
     }
 
+    public BigDecimal getImporttotalBD() {
+        return importtotal;
+    }
+
     public void setImporttotal(BigDecimal importtotal) {
         this.importtotal = importtotal;
     }
 
     public BigDecimal getImportpagat() {
+        return importpagat;
+    }
+
+    public BigDecimal getImportpagatBD() {
         return importpagat;
     }
 
@@ -211,7 +219,7 @@ public class Despesa implements Serializable {
 
     @Override
     public String toString() {
-        return "tricountmarcmas.Despesa[ id=" + id + " ]";
+        return "tricountmarcmas.Despesa[ id=" + id + " Descripcio: " + descripcio + " Categoria: " + categoria + " ]";
     }
 
 }

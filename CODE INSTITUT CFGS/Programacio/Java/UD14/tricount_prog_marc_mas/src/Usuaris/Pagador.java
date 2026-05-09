@@ -5,6 +5,7 @@
 package Usuaris;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,6 +16,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import tricountmarcmas.Despesa;
 
@@ -39,7 +41,7 @@ public class Pagador implements Serializable {
     private Integer id;
     @Basic(optional = false)
     @Column(name = "contribucio")
-    private double contribucio;
+    private BigDecimal contribucio;
     @Basic(optional = false)
     @Column(name = "hapagat")
     private boolean hapagat;
@@ -57,10 +59,17 @@ public class Pagador implements Serializable {
         this.id = id;
     }
 
-    public Pagador(Integer id, double contribucio, boolean hapagat) {
+    public Pagador(Integer id, BigDecimal contribucio, boolean hapagat) {
         this.id = id;
         this.contribucio = contribucio;
         this.hapagat = hapagat;
+    }
+    
+    public Pagador(BigDecimal contribucio, Usuari u, Despesa d, boolean esPO){ //po = pagador original
+        this.contribucio = contribucio;
+        this.idusuari = u;
+        this.iddespesa = d;
+        this.hapagat = esPO;
     }
 
     public Integer getId() {
@@ -71,11 +80,11 @@ public class Pagador implements Serializable {
         this.id = id;
     }
 
-    public double getContribucio() {
+    public BigDecimal getContribucio() {
         return contribucio;
     }
 
-    public void setContribucio(double contribucio) {
+    public void setContribucio(BigDecimal contribucio) {
         this.contribucio = contribucio;
     }
 
@@ -127,5 +136,5 @@ public class Pagador implements Serializable {
     public String toString() {
         return "tricountmarcmas.Pagador[ id=" + id + " ]";
     }
-    
+
 }

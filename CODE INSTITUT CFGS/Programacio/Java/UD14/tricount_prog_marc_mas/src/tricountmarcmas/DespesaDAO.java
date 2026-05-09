@@ -25,10 +25,12 @@ public class DespesaDAO implements Serializable {
     }
 
     public void create(Despesa d, String correu, int idGrup) {
-        UsuariDAO uDAO = new UsuariDAO(em);
-        Usuari u = uDAO.obtenirUsuari(correu); //recuperam l'usuari amb el correu
-        GrupDAO gDAO = new GrupDAO(em);
-        Grup g = gDAO.obtenirGrup(idGrup); //recuperam el grup amb l'id
+        // UsuariDAO uDAO = new UsuariDAO(em);
+        // Usuari u = uDAO.obtenirUsuari(correu); //recuperam l'usuari amb el correu
+        // GrupDAO gDAO = new GrupDAO(em);
+        // Grup g = gDAO.obtenirGrup(idGrup); //recuperam el grup amb l'id
+        Usuari u = em.find(Usuari.class, correu); //pues a re-escriure tot divendres 
+        Grup g = em.find(Grup.class, idGrup);
         if (u != null && d != null) {
             d.setPagadororiginal(u);
             d.setIdgrup(g);

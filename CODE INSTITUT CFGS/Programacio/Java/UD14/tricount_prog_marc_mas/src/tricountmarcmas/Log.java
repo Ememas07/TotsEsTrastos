@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -115,5 +116,5 @@ public class Log implements Serializable {
     public String toString() {
         return "tricountmarcmas.Log[ id=" + id + " ]";
     }
-    
+
 }

@@ -23,8 +23,8 @@ public class TricountMarcMas {
     public static void main(String[] args) throws UnsupportedEncodingException {
         System.setOut(new PrintStream(System.out, true, "UTF8"));
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("tricount_prog_marc_masPU");
-
         Scanner s = new Scanner(System.in);
+
         int opcio = 0;
         while (opcio > -1) {
             System.out.println("Menús:");
@@ -48,7 +48,7 @@ public class TricountMarcMas {
                 }
                 case 3 -> {
                     DespesaDAO dDAO = new DespesaDAO(emf);
-                    menuDespeses(s, dDAO);
+                    menuDespeses(s, dDAO, emf);
                 }
                 case 4 -> {
                     menuEstadistiques(s);
@@ -88,6 +88,7 @@ public class TricountMarcMas {
             System.out.println("1: Crear");
             System.out.println("2: Assignar usuaris a un grup");
             System.out.println("3: Veure usuaris d'un grup");
+            System.out.println("4: Veure despeses d'un grup");
             System.out.println("-1: Tornar Enrere");
             opcio = s.nextInt();
             switch (opcio) {
@@ -126,11 +127,19 @@ public class TricountMarcMas {
                     int id = s.nextInt();
                     gDAO.veureUsuaris(id);
                 }
+
+                case 4 -> {
+                    s.nextLine();
+                    System.out.println("Introdueix l'id del grup");
+                    int id = s.nextInt();
+                    gDAO.veureDespeses(id);
+                }
             }
         }
     }
 
-    public static void menuDespeses(Scanner s, DespesaDAO dDAO) {
+    public static void menuDespeses(Scanner s, DespesaDAO dDAO, EntityManagerFactory emf) {
+        EntityManager em = emf.createEntityManager();
         int opcio = 0;
         while (opcio > -1) {
             System.out.println("Menú Despeses:");
@@ -145,6 +154,15 @@ public class TricountMarcMas {
                     System.out.println("Introdueix l'id del grup per assignar la despesa");
                     int idGrup = s.nextInt();
                     dDAO.create(d, correu, idGrup);
+                    System.out.println("Quants de pagadors hi ha?");
+                    int numPagadors = s.nextInt();
+                    System.out.println("Quin es el correu del pagador original?");
+                    correu = s.nextLine();
+                    PagadorDAO pDAO = new PagadorDAO(emf);
+                    for (int i = 0; i < numPagadors; i++) {
+                        
+                    }
+
                 }
             }
         }

@@ -9,6 +9,7 @@ import java.util.Scanner;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.*;
+import tricountmarcmas.Despesa;
 
 /**
  *
@@ -92,6 +93,22 @@ public class GrupDAO {
                 System.out.println("Usuaris actuals:");
                 for (int i = 0; i < usuaris.length; i++) {
                     System.out.println((Usuari) usuaris[i]); //imprimesc tots els usuaris del grup
+                }
+            }
+        }
+    }
+
+    public void veureDespeses(int id) {
+        Grup g = obtenirGrup(id);
+        if (g != null) {
+            List<Despesa> l = g.getDespesaList(); //agafam la llista dins el grup
+            Object despeses[] = l.toArray(); //ho convertesc a un array
+            if (despeses.length == 0) {
+                System.out.println("Actualment no hi ha despeses al grup!");
+            } else {
+                System.out.println("Despeses del grup:");
+                for (int i = 0; i < despeses.length; i++) {
+                    System.out.println((Despesa) despeses[i]); //imprimesc tots els usuaris del grup
                 }
             }
         }

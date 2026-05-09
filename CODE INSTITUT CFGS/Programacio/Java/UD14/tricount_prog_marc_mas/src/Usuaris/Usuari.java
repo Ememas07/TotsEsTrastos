@@ -40,7 +40,7 @@ public class Usuari implements Serializable {
     @Column(name = "llinatge2")
     private String llinatge2;
     @Basic(optional = false)
-    @Column(name = "iban2")
+    @Column(name = "iban")
     private String iban;
     @Column(name = "alias")
     private String alias;
@@ -72,7 +72,7 @@ public class Usuari implements Serializable {
         this.llinatge2 = llinatge2;
         this.iban = iban;
     }
-    
+
     public Usuari(String correu, String nom, String llinatge1, String llinatge2, String alias, String iban) {
         this.correu = correu;
         this.nom = nom;
@@ -191,14 +191,14 @@ public class Usuari implements Serializable {
 
     @Override
     public String toString() {
-        return "tricountmarcmas.Usuari[ correu=" + correu + " ]";
+        return "tricountmarcmas.Usuari[ correu=" + correu + " Nom Complet =" + nom + " " + llinatge1 + " " + " " + llinatge2 + "]";
     }
-    
-    public void printFull(){
-        System.out.println("Correu: "+correu);
-        System.out.println("Nom: "+nom);
-        System.out.println("Llinatges: "+llinatge1+" "+llinatge2);
-        System.out.println("Alias: "+alias);
-        System.out.println("IBAN: "+iban);
+
+    public void printFull() {
+        System.out.println("Correu: " + correu);
+        System.out.println("Nom: " + nom);
+        System.out.println("Llinatges: " + llinatge1 + " " + llinatge2);
+        System.out.println("Alias: " + alias);
+        System.out.println("IBAN: " + iban);
     }
 }
