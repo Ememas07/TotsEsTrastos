@@ -4,12 +4,42 @@
  */
 package tricountmarcmas;
 
+import Usuaris.*;
 import java.io.Serializable;
+import javax.persistence.*;
 
 /**
  *
  * @author Marc Mas
  */
 public class DespesaDAO implements Serializable {
-    
+
+    private EntityManager em;
+
+    DespesaDAO(EntityManagerFactory emf) {
+        this.em = emf.createEntityManager();
+    }
+
+    DespesaDAO(EntityManager em) {
+        this.em = em;
+    }
+
+    public void create(Despesa d, String correu, int idGrup) {
+        UsuariDAO uDAO = new UsuariDAO(em);
+        Usuari u = uDAO.obtenirUsuari(correu); //recuperam l'usuari amb el correu
+        GrupDAO gDAO = new GrupDAO(em);
+        Grup g = gDAO.obtenirGrup(idGrup); //recuperam el grup amb l'id
+        if (u != null && d != null) {
+            d.setPagadororiginal(u);
+            d.setIdgrup(g);
+            EntityTransaction tx = em.getTransaction();
+            tx.begin();
+            em.persist(d);
+            tx.commit(); //i feim commit
+        }
+    }
+
+    public EntityManager getEM() {
+        return this.em;
+    }
 }

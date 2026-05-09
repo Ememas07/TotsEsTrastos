@@ -14,7 +14,7 @@ import javax.persistence.*;
  */
 public class UsuariDAO {
 
-    EntityManager em;
+    private EntityManager em;
 
     public UsuariDAO(EntityManagerFactory emf) {
         this.em = emf.createEntityManager();

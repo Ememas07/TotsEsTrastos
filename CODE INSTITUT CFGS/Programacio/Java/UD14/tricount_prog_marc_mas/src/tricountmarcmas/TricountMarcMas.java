@@ -31,7 +31,8 @@ public class TricountMarcMas {
             System.out.println("1: Usuaris");
             System.out.println("2: Grups");
             System.out.println("3: Despeses");
-            System.out.println("4: Debug");
+            System.out.println("4: Estadistiques");
+            System.out.println("5: Debug");
             System.out.println("-1: Sortir");
             opcio = s.nextInt();
             // opcio = 4;
@@ -46,10 +47,11 @@ public class TricountMarcMas {
                     menuGrups(s, gDAO);
                 }
                 case 3 -> {
-                    menuEstadistiques(s);
+                    DespesaDAO dDAO = new DespesaDAO(emf);
+                    menuDespeses(s, dDAO);
                 }
                 case 4 -> {
-
+                    menuEstadistiques(s);
                 }
             }
         }
@@ -123,6 +125,26 @@ public class TricountMarcMas {
                     System.out.println("Introdueix l'id del grup");
                     int id = s.nextInt();
                     gDAO.veureUsuaris(id);
+                }
+            }
+        }
+    }
+
+    public static void menuDespeses(Scanner s, DespesaDAO dDAO) {
+        int opcio = 0;
+        while (opcio > -1) {
+            System.out.println("Menú Despeses:");
+            System.out.println("1: Crear");
+            opcio = s.nextInt();
+            switch (opcio) {
+                case 1 -> {
+                    s.nextLine();
+                    Despesa d = new Despesa(s);
+                    System.out.println("Introdueix el correu del pagador original");
+                    String correu = s.nextLine();
+                    System.out.println("Introdueix l'id del grup per assignar la despesa");
+                    int idGrup = s.nextInt();
+                    dDAO.create(d, correu, idGrup);
                 }
             }
         }

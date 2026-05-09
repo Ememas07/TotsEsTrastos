@@ -16,7 +16,7 @@ import javax.persistence.*;
  */
 public class GrupDAO {
 
-    EntityManager em;
+    private EntityManager em;
 
     public GrupDAO(EntityManagerFactory emf) {
         this.em = emf.createEntityManager();

@@ -8,8 +8,12 @@ import Usuaris.Grup;
 import Usuaris.Pagador;
 import Usuaris.Usuari;
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -58,10 +62,10 @@ public class Despesa implements Serializable {
     private String categoria;
     @Basic(optional = false)
     @Column(name = "importtotal")
-    private double importtotal;
+    private BigDecimal importtotal;
     @Basic(optional = false)
     @Column(name = "importpagat")
-    private double importpagat;
+    private BigDecimal importpagat;
     @JoinColumn(name = "idgrup", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Grup idgrup;
@@ -78,11 +82,39 @@ public class Despesa implements Serializable {
         this.id = id;
     }
 
-    public Despesa(Integer id, Date datadespesa, double importtotal, double importpagat) {
+    public Despesa(Integer id, Date datadespesa, BigDecimal importtotal, BigDecimal importpagat) {
         this.id = id;
         this.datadespesa = datadespesa;
         this.importtotal = importtotal;
         this.importpagat = importpagat;
+    }
+
+    public Despesa(Scanner s) {
+        System.out.println("Quina es la data de la despesa?");
+        System.out.println("Es pot deixar buid si ha estat creada ara");
+        String d = s.nextLine();
+        if (d.length() == 0) {
+            this.datadespesa = new Date();
+        } else {
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+            try {
+                this.datadespesa = formatter.parse(d);
+            } catch (ParseException ex) {
+                System.out.println("Error guardant la data");
+                this.datadespesa = new Date();
+            }
+        }
+        this.pagadororiginal = new Usuari();
+        this.idgrup = new Grup();
+        System.out.println("Quin va ser l'import total de la depesa?");
+        BigDecimal bd = new BigDecimal(s.nextFloat());
+        this.importtotal = bd;
+        this.importpagat = new BigDecimal(0);
+        s.nextLine();
+        System.out.println("Descripcio de la despesa");
+        this.descripcio = s.nextLine();
+        System.out.println("Categoria de la despesa");
+        this.categoria = s.nextLine();
     }
 
     public Integer getId() {
@@ -117,19 +149,19 @@ public class Despesa implements Serializable {
         this.categoria = categoria;
     }
 
-    public double getImporttotal() {
+    public BigDecimal getImporttotal() {
         return importtotal;
     }
 
-    public void setImporttotal(double importtotal) {
+    public void setImporttotal(BigDecimal importtotal) {
         this.importtotal = importtotal;
     }
 
-    public double getImportpagat() {
+    public BigDecimal getImportpagat() {
         return importpagat;
     }
 
-    public void setImportpagat(double importpagat) {
+    public void setImportpagat(BigDecimal importpagat) {
         this.importpagat = importpagat;
     }
 
@@ -181,5 +213,5 @@ public class Despesa implements Serializable {
     public String toString() {
         return "tricountmarcmas.Despesa[ id=" + id + " ]";
     }
-    
+
 }
