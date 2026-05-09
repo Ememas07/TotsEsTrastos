@@ -37,7 +37,7 @@ CREATE TABLE despesa (
     descripcio VARCHAR(500),
     categoria VARCHAR(100),
     importTotal NUMERIC(10,2) NOT NULL,
-    importPagat NUMERIC(10,2) NOT NULL,
+    importPagat NUMERIC(10,2),
     FOREIGN KEY (idGrup) REFERENCES public.grup (id),
     FOREIGN KEY (pagadorOriginal) REFERENCES public.usuari (correu)
 )

@@ -1,3 +1,4 @@
+
 CREATE OR REPLACE FUNCTION public.omplirLog()
   RETURNS trigger
   LANGUAGE plpgsql 
@@ -45,7 +46,7 @@ END;
 $BODY$;
 
 CREATE OR REPLACE TRIGGER arrodonirImport
-BEFORE UPDATE OF importpagat
+AFTER UPDATE OF importpagat
 ON despesa
 FOR EACH ROW
 execute PROCEDURE PUBLIC.arrodonirImport();

@@ -173,8 +173,8 @@ public class TricountMarcMas {
                         contribucio = new BigDecimal(s.nextFloat());
                     }
                     Pagador p = new Pagador(contribucio, u, d, true); //la primera se guarda com true perque es l'original
-                    importPendent = importPendent.subtract(contribucio);
                     pDAO.create(p);
+                    importPendent = importPendent.subtract(contribucio);
                     for (int i = 0; i < numPagadors; i++) {
                         System.out.println("Quin es el correu del pagador " + (i + 1) + " ?");
                         correu = s.nextLine();

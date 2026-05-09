@@ -15,17 +15,17 @@ import javax.persistence.*;
  * @author Marc Mas
  */
 public class DespesaDAO implements Serializable {
-    
+
     private EntityManager em;
-    
+
     DespesaDAO(EntityManagerFactory emf) {
         this.em = emf.createEntityManager();
     }
-    
+
     DespesaDAO(EntityManager em) {
         this.em = em;
     }
-    
+
     public void create(Despesa d, String correu, int idGrup) {
         // UsuariDAO uDAO = new UsuariDAO(em);
         // Usuari u = uDAO.obtenirUsuari(correu); //recuperam l'usuari amb el correu
@@ -42,14 +42,14 @@ public class DespesaDAO implements Serializable {
             tx.commit(); //i feim commit
         }
     }
-    
+
     public void edit(Despesa d) {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         em.flush();
         tx.commit(); //i feim commit
     }
-    
+
     public void actualitzarImport(Despesa d) {
         List<Pagador> l = d.getPagadorList();
         Object pagadors[] = l.toArray();
@@ -63,7 +63,7 @@ public class DespesaDAO implements Serializable {
         d.setImportpagat(totalPagat);
         this.edit(d);
     }
-    
+
     public EntityManager getEM() {
         return this.em;
     }
