@@ -7,6 +7,8 @@ package tricountmarcmas;
 import Usuaris.*;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Scanner;
 import javax.persistence.*;
 
@@ -150,17 +152,49 @@ public class TricountMarcMas {
                     s.nextLine();
                     Despesa d = new Despesa(s);
                     System.out.println("Introdueix el correu del pagador original");
-                    String correu = s.nextLine();
+                    String correu = s.next();
                     System.out.println("Introdueix l'id del grup per assignar la despesa");
                     int idGrup = s.nextInt();
                     dDAO.create(d, correu, idGrup);
-                    System.out.println("Quants de pagadors hi ha?");
-                    int numPagadors = s.nextInt();
-                    System.out.println("Quin es el correu del pagador original?");
-                    correu = s.nextLine();
+                    System.out.println("Vol pagar a parts iguals o assignar imports manuals?");
+                    System.out.println("1: Asignar imports manuals");
+                    System.out.println("2: Parts iguals");
+                    int distribucio = s.nextInt();
+                    Usuari u = em.find(Usuari.class, correu);
+                    System.out.println("Quants de pagadors més hi ha?");
+                    int numPagadors = (int) s.nextFloat();
                     PagadorDAO pDAO = new PagadorDAO(emf);
+                    BigDecimal importPendent = d.getImporttotal();
+                    BigDecimal partsIguals = importPendent.divide(new BigDecimal(numPagadors), 2, RoundingMode.DOWN);
+                    BigDecimal contribucio = partsIguals;
+                    if (distribucio != 2) {
+                        System.out.println("Import total: " + importPendent);
+                        System.out.println("Quin es l'import que paga " + u.getFullName() + "?");
+                        contribucio = new BigDecimal(s.nextFloat());
+                    }
+                    Pagador p = new Pagador(contribucio, u, d, true); //la primera se guarda com true perque es l'original
+                    importPendent = importPendent.subtract(contribucio);
+                    pDAO.create(p);
                     for (int i = 0; i < numPagadors; i++) {
-                        
+                        System.out.println("Quin es el correu del pagador " + (i + 1) + " ?");
+                        correu = s.nextLine();
+                        u = em.find(Usuari.class, correu);
+                        while (u == null) {
+                            correu = s.nextLine();
+                            u = em.find(Usuari.class, correu);
+                            if (u == null) {
+                                System.out.println("El correu introduit no existeix!");
+                                System.out.println("Introdueix un correu valid");
+                            }
+                        }
+                        if (distribucio != 2) {
+                            System.out.println("Pendent per pagar: " + importPendent);
+                            System.out.println("Quin es l'import que paga " + u.getFullName() + "?");
+                            contribucio = new BigDecimal(s.nextFloat());
+                            importPendent = importPendent.subtract(contribucio);
+                        }
+                        p = new Pagador(contribucio, u, d, false);
+                        pDAO.create(p);
                     }
 
                 }

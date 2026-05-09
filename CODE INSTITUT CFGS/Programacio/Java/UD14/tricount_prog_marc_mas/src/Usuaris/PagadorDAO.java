@@ -18,7 +18,7 @@ public class PagadorDAO {
     PagadorDAO(){
     }
 
-    PagadorDAO(EntityManagerFactory emf) {
+    public PagadorDAO(EntityManagerFactory emf) {
         this.em = emf.createEntityManager();
     }
 

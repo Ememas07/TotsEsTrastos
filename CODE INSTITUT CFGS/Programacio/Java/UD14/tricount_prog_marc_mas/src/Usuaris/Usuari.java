@@ -201,4 +201,8 @@ public class Usuari implements Serializable {
         System.out.println("Alias: " + alias);
         System.out.println("IBAN: " + iban);
     }
+
+    public String getFullName() {
+        return "" + nom + " " + llinatge1 + " " + llinatge2;
+    }
 }
