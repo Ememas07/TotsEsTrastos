@@ -44,12 +44,11 @@ resultat.numeros = n;
 END;
 $$;
 
-drop Function mostrardeutes
-
-CREATE OR REPLACE FUNCTION mostrarDeutes(grup int) RETURNS TABLE(usuariRep VARCHAR(300),usuariDeu VARCHAR(300),quantitat NUMERIC) AS
+CREATE OR REPLACE FUNCTION mostrarDeutes(grup INT)
+RETURNS TABLE(usuariRep VARCHAR(300),usuariDeu VARCHAR(300),quantitat NUMERIC) AS
 $BODY$
 BEGIN
-    RETURN QUERY SELECT pagadororiginal as usuariRep, idusuari as usuariDeu , sum(contribucio) as quantitat 
+    RETURN QUERY SELECT pagadororiginal AS usuariRep, idusuari AS usuariDeu , sum(contribucio) AS quantitat 
                 FROM despesa 
                 LEFT JOIN pagador ON pagador.iddespesa = despesa.id 
                 WHERE hapagat = false AND idGrup = grup
@@ -58,36 +57,23 @@ BEGIN
     RETURN;
 END;
 $BODY$
-language PLPGSQL;
+LANGUAGE plpgsql;
 
--- select count noseque amb idDespesa
--- separar
---  i fer un insert
-/* CREATE OR REPLACE PROCEDURE asignarImportUsuari (
-IN import MONEY,
-IN idUsuari VARCHAR(300),
-IN idDespesa INT
-); */
-
--- create procedure asignarUsuari (import, idUsuari, idDespesa)
--- agafar import total de la despesa
--- comprovar que import no sigui major al total
--- calcular el total nou
--- assignar-lo a tots els usuari -1 pero dividit entre el nou numero (120-50 = 70 /3 i assignar a tots)
--- assignar import especific a l'usuari especific
-
-/* CREATE OR REPLACE FUNCTION arrodonirDespesa(idDespesa INT) -- TODO
-RETURNS MONEY AS $$
-DECLARE
-pagat MONEY;
-total MONEY;
+CREATE OR REPLACE FUNCTION mostrarDespesesCategoria(grup INT) 
+RETURNS TABLE (cat varchar(300),import NUMERIC, percent VARCHAR) AS
+$BODY$
 BEGIN
-pagat = (SELECT importpagat FROM despesa WHERE despesa.id = idDespesa);
-total = (SELECT importtotal FROM despesa WHERE despesa.id = idDespesa);
-IF (pagat + 0.01::money) = total THEN
-RETURN total;
-ELSE
-RETURN pagat;
-END IF;
+    RETURN QUERY SELECT 
+    categoria,
+    sumatotal, 
+    TO_CHAR(sumatotal * 100 / SUM(sumatotal) OVER (), 'fm90D00%')::VARCHAR AS percent
+    FROM (
+        SELECT categoria, SUM(importtotal) AS sumatotal
+        FROM despesa
+        WHERE despesa.idgrup = grup
+        GROUP BY categoria
+    )
+    RETURN;
 END;
-$$ LANGUAGE plpgsql; */
+$BODY$
+LANGUAGE plpgsql;
