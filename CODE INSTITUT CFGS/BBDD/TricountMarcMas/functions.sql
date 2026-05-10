@@ -44,12 +44,21 @@ resultat.numeros = n;
 END;
 $$;
 
+drop Function mostrardeutes
 
-
-
-
-
-
+CREATE OR REPLACE FUNCTION mostrarDeutes(grup int) RETURNS TABLE(usuariRep VARCHAR(300),usuariDeu VARCHAR(300),quantitat NUMERIC) AS
+$BODY$
+BEGIN
+    RETURN QUERY SELECT pagadororiginal as usuariRep, idusuari as usuariDeu , sum(contribucio) as quantitat 
+                FROM despesa 
+                LEFT JOIN pagador ON pagador.iddespesa = despesa.id 
+                WHERE hapagat = false AND idGrup = grup
+                GROUP BY pagadororiginal,idusuari
+                ORDER BY pagadororiginal;
+    RETURN;
+END;
+$BODY$
+language PLPGSQL;
 
 -- select count noseque amb idDespesa
 -- separar
@@ -70,15 +79,15 @@ IN idDespesa INT
 /* CREATE OR REPLACE FUNCTION arrodonirDespesa(idDespesa INT) -- TODO
 RETURNS MONEY AS $$
 DECLARE
-    pagat MONEY;
-    total MONEY;
+pagat MONEY;
+total MONEY;
 BEGIN
-    pagat = (SELECT importpagat FROM despesa WHERE despesa.id = idDespesa);
-    total = (SELECT importtotal FROM despesa WHERE despesa.id = idDespesa);
-    IF (pagat + 0.01::money) = total THEN
-        RETURN total;
-    ELSE
-        RETURN pagat;
-    END IF;
+pagat = (SELECT importpagat FROM despesa WHERE despesa.id = idDespesa);
+total = (SELECT importtotal FROM despesa WHERE despesa.id = idDespesa);
+IF (pagat + 0.01::money) = total THEN
+RETURN total;
+ELSE
+RETURN pagat;
+END IF;
 END;
 $$ LANGUAGE plpgsql; */

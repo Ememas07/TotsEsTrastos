@@ -46,7 +46,7 @@ END;
 $BODY$;
 
 CREATE OR REPLACE TRIGGER arrodonirImport
-AFTER UPDATE OF importpagat
+BEFORE UPDATE OF importpagat
 ON despesa
 FOR EACH ROW
 execute PROCEDURE PUBLIC.arrodonirImport();

@@ -34,4 +34,23 @@ GROUP BY
     d.idgrup
 
 -- Nombre de despeses que ha pagat cada usuari per advantat
-SELECT count(*) as recompte,pagadororiginal from despesa group by pagadororiginal ORDER BY recompte 
+SELECT count(*) as recompte, pagadororiginal
+from despesa
+group by
+    pagadororiginal
+ORDER BY recompte
+
+-- Doblers pendents de cada persona a cada persona
+SELECT
+    pagadororiginal as recaudador,
+    idusuari as debtor,
+    sum(contribucio) as quantitat
+FROM despesa
+    LEFT JOIN pagador ON pagador.iddespesa = despesa.id
+WHERE
+    hapagat = false
+    AND idGrup = 100
+GROUP BY
+    pagadororiginal,
+    idusuari
+ORDER BY pagadororiginal;
