@@ -97,6 +97,34 @@ public class Usuari implements Serializable {
         this.iban = s.nextLine();
     }
 
+    public void mostrarDespeses() {
+        List<Despesa> l = this.getDespesaList();
+        Object despeses[] = l.toArray(); //ho convertesc a un array
+        if (despeses.length == 0) {
+            System.out.println("No has fet cap despesa");
+        } else {
+            System.out.println("Formes part de les seguents despeses: ");
+            for (int i = 0; i < despeses.length; i++) {
+                Despesa d = (Despesa) despeses[i];
+                d.mostrarPart(this);
+            }
+        }
+    }
+    
+    public void mostrarDespesesPendents() {
+        List<Despesa> l = this.getDespesaList();
+        Object despeses[] = l.toArray(); //ho convertesc a un array
+        if (despeses.length == 0) {
+            System.out.println("No has fet cap despesa");
+        } else {
+            System.out.println("Formes part de les seguents despeses: ");
+            for (int i = 0; i < despeses.length; i++) {
+                Despesa d = (Despesa) despeses[i];
+                d.mostrarPartPendent(this);
+            }
+        }
+    }
+
     public String getCorreu() {
         return correu;
     }

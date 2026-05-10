@@ -22,7 +22,7 @@ public class PagadorDAO {
         this.em = emf.createEntityManager();
     }
 
-    PagadorDAO(EntityManager em) {
+    public PagadorDAO(EntityManager em) {
         this.em = em;
     }
 
@@ -30,6 +30,13 @@ public class PagadorDAO {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         em.persist(p);
+        tx.commit(); //i feim commit
+    }
+    
+      public void edit(Pagador p) {
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        em.flush();
         tx.commit(); //i feim commit
     }
 

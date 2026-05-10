@@ -147,6 +147,7 @@ public class TricountMarcMas {
             System.out.println("Menú Despeses:");
             System.out.println("1: Crear");
             System.out.println("2: Marcar pagament");
+            System.out.println("3: Mostrar pagaments pendents");
             opcio = s.nextInt();
             switch (opcio) {
                 case 1 -> {
@@ -218,7 +219,48 @@ public class TricountMarcMas {
                 }
                 case 2 -> {
                     s.nextLine(); //reiniciam escaner
-                    
+                    System.out.println("Quin es el seu correu?");
+                    String correu = s.next();
+                    Usuari u = em.find(Usuari.class, correu);
+                    while (u == null) {
+                        correu = s.nextLine();
+                        u = em.find(Usuari.class, correu);
+                        if (u == null) {
+                            System.out.println("El correu introduit no existeix!");
+                            System.out.println("Introdueix un correu valid");
+                        }
+                    }
+                    System.out.println("Formes part de les seguents despeses: ");
+                    u.mostrarDespeses();
+                    System.out.println("Introdueixi l'id de la despesa que vol pagar");
+                    int idDespesa = s.nextInt();
+                    Despesa d = em.find(Despesa.class, idDespesa);
+                    while (d == null) {
+                        idDespesa = s.nextInt();
+                        d = em.find(Despesa.class, idDespesa);
+                        if (d == null) {
+                            System.out.println("la id introduida no existeix!");
+                            System.out.println("Introdueix una id valida");
+                        }
+                    }
+                    d.marcarPagament(u, s, em);
+
+                }
+                case 3 -> {
+                    s.nextLine(); //reiniciam escaner
+                    System.out.println("Quin es el seu correu?");
+                    String correu = s.next();
+                    Usuari u = em.find(Usuari.class, correu);
+                    while (u == null) {
+                        correu = s.nextLine();
+                        u = em.find(Usuari.class, correu);
+                        if (u == null) {
+                            System.out.println("El correu introduit no existeix!");
+                            System.out.println("Introdueix un correu valid");
+                        }
+                    }
+                    System.out.println("Formes part de les seguents despeses: ");
+                    u.mostrarDespesesPendents();
                 }
             }
         }

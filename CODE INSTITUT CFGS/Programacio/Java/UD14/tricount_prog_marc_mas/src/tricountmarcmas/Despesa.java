@@ -6,6 +6,7 @@ package tricountmarcmas;
 
 import Usuaris.Grup;
 import Usuaris.Pagador;
+import Usuaris.PagadorDAO;
 import Usuaris.Usuari;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -18,6 +19,7 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityManager;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -49,7 +51,7 @@ public class Despesa implements Serializable {
 
     //private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="despesa_id_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "despesa_id_seq")
     @SequenceGenerator(name = "despesa_id_seq", sequenceName = "despesa_id_seq", allocationSize = 1, initialValue = 1)
     @Basic(optional = false)
     @Column(name = "id")
@@ -222,6 +224,62 @@ public class Despesa implements Serializable {
     @Override
     public String toString() {
         return "tricountmarcmas.Despesa[ id=" + id + " Descripcio: " + descripcio + " Categoria: " + categoria + " ]";
+    }
+
+    public void mostrarPart(Usuari u) {
+        List<Pagador> l = this.getPagadorList();
+        Object pagadors[] = l.toArray(); //ho convertesc a un array
+        for (int i = 0; i < pagadors.length; i++) {
+            Pagador p = (Pagador) pagadors[i];
+            if (p.getUsuari().getCorreu().equals(u.getCorreu())) {
+                System.out.println(this);
+                System.out.print("La teva part és: " + p.getContribucio());
+                if (p.haPagat()) {
+                    System.out.println("(Pagada)");
+                } else {
+                    System.out.println("(No Pagada)");
+                }
+            }
+        }
+    }
+
+    public void mostrarPartPendent(Usuari u) {
+        List<Pagador> l = this.getPagadorList();
+        Object pagadors[] = l.toArray(); //ho convertesc a un array
+        for (int i = 0; i < pagadors.length; i++) {
+            Pagador p = (Pagador) pagadors[i];
+            if (p.getUsuari().getCorreu().equals(u.getCorreu())) {
+                if (!p.haPagat()) {
+                    System.out.println(this);
+                    System.out.println("La teva part és: " + p.getContribucio());
+                }
+            }
+        }
+    }
+
+    public void marcarPagament(Usuari u, Scanner s, EntityManager em) {
+        List<Pagador> l = this.getPagadorList();
+        Object pagadors[] = l.toArray(); //ho convertesc a un array
+        boolean trobat = false; //ho emprarem per si introdueix una despesa on ell no pertany per mostrar un error
+        for (int i = 0; i < pagadors.length; i++) {
+            Pagador p = (Pagador) pagadors[i];
+            if (p.getUsuari().getCorreu().equals(u.getCorreu())) {
+                trobat = true;
+                System.out.println("Despesa: " + this);
+                System.out.println("Confirmi que vol pagar " + p.getContribucio() + " de la despesa ");
+                System.out.println("Introdueixi 1 per confirmar, 0 per cancellar");
+                int decisio = s.nextInt();
+                if (decisio == 1) {
+                    p.setPagat(true);
+                    System.out.println("S'ha confirmat el pagament de " + p.getContribucio());
+                    PagadorDAO pDAO = new PagadorDAO(em);
+                    pDAO.edit(p);
+                }
+            }
+        }
+        if (!trobat) {
+            System.out.println("No s'ha trobat el vostre registre de pagador a la despesa seleccionada!");
+        }
     }
 
 }

@@ -6,6 +6,7 @@ package Usuaris;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -35,7 +36,7 @@ public class Pagador implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="pagador_id_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pagador_id_seq")
     @SequenceGenerator(name = "pagador_id_seq", sequenceName = "pagador_id_seq", allocationSize = 1, initialValue = 1)
     @Basic(optional = false)
     @Column(name = "id")
@@ -65,8 +66,8 @@ public class Pagador implements Serializable {
         this.contribucio = contribucio;
         this.hapagat = hapagat;
     }
-    
-    public Pagador(BigDecimal contribucio, Usuari u, Despesa d, boolean esPO){ //po = pagador original
+
+    public Pagador(BigDecimal contribucio, Usuari u, Despesa d, boolean esPO) { //po = pagador original
         this.contribucio = contribucio;
         this.idusuari = u;
         this.iddespesa = d;
@@ -105,11 +106,11 @@ public class Pagador implements Serializable {
         this.iddespesa = iddespesa;
     }
 
-    public Usuari getIdusuari() {
+    public Usuari getUsuari() {
         return idusuari;
     }
 
-    public void setIdusuari(Usuari idusuari) {
+    public void setUsuari(Usuari idusuari) {
         this.idusuari = idusuari;
     }
 
