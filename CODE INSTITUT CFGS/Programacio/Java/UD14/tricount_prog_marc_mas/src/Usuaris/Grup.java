@@ -27,7 +27,9 @@ public class Grup implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)@Basic(optional = false)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="grup_id_seq")
+    @SequenceGenerator(name = "grup_id_seq", sequenceName = "grup_id_seq", allocationSize = 1, initialValue = 1)
+    @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
     @Column(name = "descripcio")
@@ -55,12 +57,12 @@ public class Grup implements Serializable {
         this.id = id;
         this.datacreacio = datacreacio;
     }
-    
+
     public Grup(String descripcio) {
         this.descripcio = descripcio;
     }
-    
-    public Grup(Scanner s){
+
+    public Grup(Scanner s) {
         System.out.println("Introdueix la descripcio del teu grup");
         this.descripcio = s.nextLine();
         this.datacreacio = new Date();
@@ -130,5 +132,5 @@ public class Grup implements Serializable {
     public String toString() {
         return "tricountmarcmas.Grup[ id=" + id + " ]";
     }
-    
+
 }

@@ -146,6 +146,7 @@ public class TricountMarcMas {
         while (opcio > -1) {
             System.out.println("Menú Despeses:");
             System.out.println("1: Crear");
+            System.out.println("2: Marcar pagament");
             opcio = s.nextInt();
             switch (opcio) {
                 case 1 -> {
@@ -156,11 +157,20 @@ public class TricountMarcMas {
                     System.out.println("Introdueix l'id del grup per assignar la despesa");
                     int idGrup = s.nextInt();
                     dDAO.create(d, correu, idGrup);
-                    System.out.println("Vol pagar a parts iguals o assignar imports manuals?");
+                    int distribucio = 0;
+                    System.out.println("Vol assignar un import manual o pagar a parts iguals entre els pagadors restants?");
                     System.out.println("1: Asignar imports manuals");
                     System.out.println("2: Parts iguals");
-                    int distribucio = s.nextInt();
+                    distribucio = s.nextInt();
                     Usuari u = em.find(Usuari.class, correu);
+                    while (u == null) {
+                        correu = s.nextLine();
+                        u = em.find(Usuari.class, correu);
+                        if (u == null) {
+                            System.out.println("El correu introduit no existeix!");
+                            System.out.println("Introdueix un correu valid");
+                        }
+                    }
                     System.out.println("Quants de pagadors més hi ha?");
                     int numPagadors = (int) s.nextFloat();
                     PagadorDAO pDAO = new PagadorDAO(emf);
@@ -173,10 +183,11 @@ public class TricountMarcMas {
                         contribucio = new BigDecimal(s.nextFloat());
                     }
                     Pagador p = new Pagador(contribucio, u, d, true); //la primera se guarda com true perque es l'original
+                    int valorsAssignats = 1;
                     pDAO.create(p);
                     importPendent = importPendent.subtract(contribucio);
                     for (int i = 0; i < numPagadors; i++) {
-                        System.out.println("Quin es el correu del pagador " + (i + 1) + " ?");
+                        System.out.println("Quin es el correu del pagador extra " + (i + 1) + " ?");
                         correu = s.nextLine();
                         u = em.find(Usuari.class, correu);
                         while (u == null) {
@@ -188,6 +199,13 @@ public class TricountMarcMas {
                             }
                         }
                         if (distribucio != 2) {
+                            System.out.println("Si vol seguir assignants imports individuals, introdueix 1");
+                            System.out.println("Si vol assignar imports iguals a tots els usuaris restants, introdueix 2");
+                            distribucio = s.nextInt();
+                        }
+                        contribucio = importPendent.divide(new BigDecimal(numPagadors + 1 - valorsAssignats), 2, RoundingMode.DOWN);
+                        if (distribucio != 2) {
+                            valorsAssignats += 1;
                             System.out.println("Pendent per pagar: " + importPendent);
                             System.out.println("Quin es l'import que paga " + u.getFullName() + "?");
                             contribucio = new BigDecimal(s.nextFloat());
@@ -197,7 +215,10 @@ public class TricountMarcMas {
                         pDAO.create(p);
                     }
                     dDAO.actualitzarImport(d);
-
+                }
+                case 2 -> {
+                    s.nextLine(); //reiniciam escaner
+                    
                 }
             }
         }

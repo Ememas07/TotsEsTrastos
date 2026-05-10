@@ -33,6 +33,7 @@ public class GrupDAO {
         em.persist(g);
         tx.commit();
         System.out.println("S'ha creat el grup amb exit");
+        System.out.println("ID: "+g.getId());
     }
 
     public void afegirUsuaris(int idGrup, String mailUsuari) {

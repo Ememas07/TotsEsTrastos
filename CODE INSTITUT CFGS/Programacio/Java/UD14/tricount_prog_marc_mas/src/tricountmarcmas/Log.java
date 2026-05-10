@@ -35,7 +35,8 @@ public class Log implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="log_id_seq")
+    @SequenceGenerator(name = "log_id_seq", sequenceName = "log_id_seq", allocationSize = 1, initialValue = 1)
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;

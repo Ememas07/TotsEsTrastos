@@ -16,7 +16,7 @@ CREATE TABLE usuari (
 )
 
 CREATE TABLE grup (
-    id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     descripcio VARCHAR(300),
     dataCreacio TIMESTAMP(5) with time zone NOT NULL
 )
@@ -30,7 +30,7 @@ CREATE TABLE usuariGrup (
 );
 
 CREATE TABLE despesa (
-    id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     idGrup INTEGER NOT NULL,
     pagadorOriginal VARCHAR(300) NOT NULL,
     dataDespesa TIMESTAMP(5) with time zone NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE despesa (
 )
 
 CREATE TABLE pagador (
-    id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     idDespesa INTEGER NOT NULL,
     idUsuari VARCHAR(300) NOT NULL,
     contribucio NUMERIC(10,2) NOT NULL,
