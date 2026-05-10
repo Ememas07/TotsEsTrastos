@@ -27,7 +27,7 @@ public class Grup implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="grup_id_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "grup_id_seq")
     @SequenceGenerator(name = "grup_id_seq", sequenceName = "grup_id_seq", allocationSize = 1, initialValue = 1)
     @Basic(optional = false)
     @Column(name = "id")
@@ -131,6 +131,58 @@ public class Grup implements Serializable {
     @Override
     public String toString() {
         return "tricountmarcmas.Grup[ id=" + id + " ]";
+    }
+
+    public void mostrarDeutes(EntityManager em) {
+        String jpql = "SELECT * FROM mostrarDeutes(?)";
+        Query q = em.createNativeQuery(jpql).setParameter(1, this.getId());
+        List<Object> l = q.getResultList();
+        Object[] files = l.toArray();
+        // Aquesta llista conté dos arrays
+        // La llista es converteix a un array (files) que conté un Objecte per cada fila
+        for (Object columnes : files) {
+            //Recorresc tot l'array de files, i per cada element, agaf un element i el guard a "columnes" (temporalment)
+            Object[] c = (Object[]) columnes;
+            // Després, com "columnes" és un array amb les 3 columnes, faig un cast de objecte a array de objectes
+            // i ho assigna a la variable c (columna)
+            // despres faig un print, 0 es el recaudador, 1 el debtor, 2 la quantitat, per com está la funció a PostgresQL
+            System.out.println("" + c[1] + " deu " + c[2] + " € a " + c[0]);
+        }
+    }
+
+    public void mostrarDespesesPerCategoria(EntityManager em) {
+        String jpql = "SELECT * FROM mostrarDespesesCategoria(?)";
+        Query q = em.createNativeQuery(jpql).setParameter(1, this.getId());
+        List<Object> l = q.getResultList();
+        Object[] files = l.toArray();
+        // Aquesta llista conté dos arrays
+        // La llista es converteix a un array (files) que conté un Objecte per cada fila
+        for (Object columnes : files) {
+            //Recorresc tot l'array de files, i per cada element, agaf un element i el guard a "columnes" (temporalment)
+            Object[] c = (Object[]) columnes;
+            // Després, com "columnes" és un array amb les 3 columnes, faig un cast de objecte a array de objectes
+            // i ho assigna a la variable c (columna)
+            // despres faig un print, 0 es la categoria, 1 l'import, 2 el %, per com está la funció a PostgresQL
+            System.out.println("Categoria: " + c[0]);
+            System.out.println("Import Gastat " + c[1] + " (" + c[2] + ")");
+        }
+    }
+    
+    public void mostrarDespesesPerUsuari(EntityManager em) {
+        String jpql = "SELECT * FROM mostrarDespesesUsuari(?)";
+        Query q = em.createNativeQuery(jpql).setParameter(1, this.getId());
+        List<Object> l = q.getResultList();
+        Object[] files = l.toArray();
+        // Aquesta llista conté dos arrays
+        // La llista es converteix a un array (files) que conté un Objecte per cada fila
+        for (Object columnes : files) {
+            //Recorresc tot l'array de files, i per cada element, agaf un element i el guard a "columnes" (temporalment)
+            Object[] c = (Object[]) columnes;
+            // Després, com "columnes" és un array amb les 3 columnes, faig un cast de objecte a array de objectes
+            // i ho assigna a la variable c (columna)
+            // despres faig un print, 0 es el recaudador, 1 el debtor, 2 la quantitat, per com está la funció a PostgresQL
+            System.out.println("Usuari" + c[0] + " Import Gastat: " + c[1] + " €");
+        }
     }
 
 }

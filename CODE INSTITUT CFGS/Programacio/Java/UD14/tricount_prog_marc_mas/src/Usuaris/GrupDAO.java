@@ -125,4 +125,8 @@ public class GrupDAO {
         }
         return g;
     }
+    
+    public EntityManager getEM(){
+        return this.em;
+    }
 }

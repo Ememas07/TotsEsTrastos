@@ -84,6 +84,7 @@ public class TricountMarcMas {
     }
 
     public static void menuGrups(Scanner s, GrupDAO gDAO) {
+        EntityManager em = gDAO.getEM();
         int opcio = 0;
         while (opcio > -1) {
             System.out.println("Menú Grups:");
@@ -91,6 +92,9 @@ public class TricountMarcMas {
             System.out.println("2: Assignar usuaris a un grup");
             System.out.println("3: Veure usuaris d'un grup");
             System.out.println("4: Veure despeses d'un grup");
+            System.out.println("5: Veure deutes entre usuaris");
+            System.out.println("6: Veure despeses per categoria");
+            System.out.println("7: Veure despeses per usuari");
             System.out.println("-1: Tornar Enrere");
             opcio = s.nextInt();
             switch (opcio) {
@@ -136,6 +140,48 @@ public class TricountMarcMas {
                     int id = s.nextInt();
                     gDAO.veureDespeses(id);
                 }
+                case 5 -> {
+                    s.nextLine();
+                    System.out.println("Quin grup vol consultar?");
+                    Grup g = null;
+                    while (g == null) {
+                        int idGrup = s.nextInt();
+                        g = em.find(Grup.class, idGrup);
+                        if (g == null) {
+                            System.out.println("El grup introduit no existeix!");
+                            System.out.println("Introdueix una id de grup valida");
+                        }
+                    }
+                    g.mostrarDeutes(em);
+                }
+                case 6 -> {
+                    s.nextLine();
+                    System.out.println("Quin grup vol consultar?");
+                    Grup g = null;
+                    while (g == null) {
+                        int idGrup = s.nextInt();
+                        g = em.find(Grup.class, idGrup);
+                        if (g == null) {
+                            System.out.println("El grup introduit no existeix!");
+                            System.out.println("Introdueix una id de grup valida");
+                        }
+                    }
+                    g.mostrarDespesesPerCategoria(em);
+                }
+                case 7 -> {
+                    s.nextLine();
+                    System.out.println("Quin grup vol consultar?");
+                    Grup g = null;
+                    while (g == null) {
+                        int idGrup = s.nextInt();
+                        g = em.find(Grup.class, idGrup);
+                        if (g == null) {
+                            System.out.println("El grup introduit no existeix!");
+                            System.out.println("Introdueix una id de grup valida");
+                        }
+                    }
+                    g.mostrarDespesesPerUsuari(em);
+                }
             }
         }
     }
@@ -148,6 +194,9 @@ public class TricountMarcMas {
             System.out.println("1: Crear");
             System.out.println("2: Marcar pagament");
             System.out.println("3: Mostrar pagaments pendents");
+            System.out.println("4: Mostrar deutes d'un grup");
+            System.out.println("5: Mostrar deutes d'una categoria");
+            System.out.println("-1: Sortir");
             opcio = s.nextInt();
             switch (opcio) {
                 case 1 -> {
@@ -249,10 +298,9 @@ public class TricountMarcMas {
                 case 3 -> {
                     s.nextLine(); //reiniciam escaner
                     System.out.println("Quin es el seu correu?");
-                    String correu = s.next();
-                    Usuari u = em.find(Usuari.class, correu);
+                    Usuari u = null;
                     while (u == null) {
-                        correu = s.nextLine();
+                        String correu = s.nextLine();
                         u = em.find(Usuari.class, correu);
                         if (u == null) {
                             System.out.println("El correu introduit no existeix!");
@@ -261,6 +309,34 @@ public class TricountMarcMas {
                     }
                     System.out.println("Formes part de les seguents despeses: ");
                     u.mostrarDespesesPendents();
+                }
+                case 4 -> {
+                    s.nextLine();
+                    System.out.println("Quin grup vol consultar?");
+                    Grup g = null;
+                    while (g == null) {
+                        int idGrup = s.nextInt();
+                        g = em.find(Grup.class, idGrup);
+                        if (g == null) {
+                            System.out.println("El grup introduit no existeix!");
+                            System.out.println("Introdueix una id de grup valida");
+                        }
+                    }
+                    g.mostrarDeutes(em);
+                }
+                case 5 -> {
+                    s.nextLine();
+                    System.out.println("Quin grup vol consultar?");
+                    Grup g = null;
+                    while (g == null) {
+                        int idGrup = s.nextInt();
+                        g = em.find(Grup.class, idGrup);
+                        if (g == null) {
+                            System.out.println("El grup introduit no existeix!");
+                            System.out.println("Introdueix una id de grup valida");
+                        }
+                    }
+                    g.mostrarDespesesPerCategoria(em);
                 }
             }
         }
