@@ -1,5 +1,6 @@
 -- Active: 1778078067998@@127.0.0.1@5432@TricountMarcMas@public
--- Mostrar el % de despeses de cada categoria
+
+-- Mostrar import i % de despeses de cada categoria
 SELECT categoria, sumatotal, TO_CHAR(
         sumatotal * 100 / SUM(sumatotal) OVER (), 'fm90D00%'
     ) AS percent
@@ -49,8 +50,22 @@ FROM despesa
     LEFT JOIN pagador ON pagador.iddespesa = despesa.id
 WHERE
     hapagat = false
-    AND idGrup = 100
+    -- AND idGrup = 100 -- opcionalment es pot filtrar per nomes un grup
 GROUP BY
     pagadororiginal,
     idusuari
 ORDER BY pagadororiginal;
+
+-- Mostrar import de despeses de cada usuari per cada grup
+SELECT idusuari, sumatotal, idgrup
+FROM (
+        SELECT idusuari, sum(contribucio) AS sumatotal, idgrup
+        from despesa
+            LEFT JOIN pagador ON pagador.iddespesa = despesa.id
+        WHERE
+            hapagat = true
+        GROUP BY
+            idgrup, idusuari
+        ORDER BY idgrup
+    )
+/* WHERE idGrup = 100 -- opcionalment es pot filtrar per nomes un grup */

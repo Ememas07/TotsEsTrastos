@@ -77,3 +77,24 @@ BEGIN
 END;
 $BODY$
 LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION mostrarDespesesUsuari(grup INT) 
+RETURNS TABLE (usuari varchar(300),import NUMERIC) AS
+$BODY$
+BEGIN
+    RETURN QUERY SELECT idusuari, sumatotal
+FROM (
+        SELECT idusuari, sum(contribucio) AS sumatotal, idgrup
+        from despesa
+            LEFT JOIN pagador ON pagador.iddespesa = despesa.id
+        WHERE
+            hapagat = true
+        GROUP BY
+            idgrup, idusuari
+        ORDER BY idgrup
+    )
+    WHERE idGrup = grup;
+    RETURN;
+END;
+$BODY$
+LANGUAGE plpgsql;
