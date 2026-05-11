@@ -25,6 +25,7 @@ public class TricountMarcMas {
     public static void main(String[] args) throws UnsupportedEncodingException {
         System.setOut(new PrintStream(System.out, true, "UTF8"));
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("tricount_prog_marc_masPU");
+        EntityManager em = emf.createEntityManager();
         Scanner s = new Scanner(System.in);
 
         int opcio = 0;
@@ -46,7 +47,7 @@ public class TricountMarcMas {
                 }
                 case 2 -> {
                     GrupDAO gDAO = new GrupDAO(emf);
-                    menuGrups(s, gDAO);
+                    menuGrups(s, em);
                 }
                 case 3 -> {
                     DespesaDAO dDAO = new DespesaDAO(emf);
@@ -83,8 +84,7 @@ public class TricountMarcMas {
         }
     }
 
-    public static void menuGrups(Scanner s, GrupDAO gDAO) {
-        EntityManager em = gDAO.getEM();
+    public static void menuGrups(Scanner s, EntityManager em) {
         int opcio = 0;
         while (opcio > -1) {
             System.out.println("Menú Grups:");
@@ -101,6 +101,7 @@ public class TricountMarcMas {
                 case 1 -> {
                     s.nextLine(); //buidam el búfer de scanner
                     Grup g = Grup.crearGrupConsola(s);
+                    GrupDAO gDAO = new GrupDAO(em);
                     gDAO.create(g);
                     System.out.println("S'ha creat el grup amb exit");
                     System.out.println("ID: " + g.getId());

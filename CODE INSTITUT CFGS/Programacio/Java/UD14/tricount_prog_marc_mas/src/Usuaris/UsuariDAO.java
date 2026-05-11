@@ -48,8 +48,10 @@ public class UsuariDAO {
                 System.out.println("Per aturar d'introduir, escrigui un nombre negatiu");
                 System.out.println("Introdueixi l'id del grup");
                 idGrup = s.nextInt();
-                GrupDAO gDAO = new GrupDAO(em);
-                gDAO.afegirUsuaris(idGrup, correu); //idGrup es valida a gDAO
+                // GrupDAO gDAO = new GrupDAO(em);
+                Grup g = Grup.consultarGrupConsola(s, em);
+                g.afegirUsuari(correu, em);
+                // gDAO.afegirUsuaris(idGrup, correu); //idGrup es valida a gDAO
                 em.refresh(u); //per actualitzar la llista interna de l'usuari
             }
         }
@@ -84,7 +86,7 @@ public class UsuariDAO {
 
     public boolean correuExisteix(String correu) {
         Usuari u = obtenirUsuari(correu); //si no existeix, escriu una excepcio i assigna null
-        if (u == null) { 
+        if (u == null) {
             return false;
         }
         return true;

@@ -75,7 +75,7 @@ public class Grup implements Serializable {
 
     public static Grup consultarGrupConsola(Scanner s, EntityManager em) {
         GrupDAO gDAO = new GrupDAO(em);
-        System.out.println("Quin grup vol consultar?");
+        System.out.println("Introdueix la id del grup");
         Grup g = null;
         while (g == null) {
             int idGrup = s.nextInt();
