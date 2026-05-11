@@ -33,7 +33,7 @@ public class PagadorDAO {
         tx.commit(); //i feim commit
     }
     
-      public void edit(Pagador p) {
+    public void edit(Pagador p) {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         em.flush();

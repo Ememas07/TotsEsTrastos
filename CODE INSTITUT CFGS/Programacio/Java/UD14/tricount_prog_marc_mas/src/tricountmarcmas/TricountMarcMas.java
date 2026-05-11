@@ -100,86 +100,40 @@ public class TricountMarcMas {
             switch (opcio) {
                 case 1 -> {
                     s.nextLine(); //buidam el búfer de scanner
-                    Grup g = new Grup(s);
+                    Grup g = Grup.crearGrupConsola(s);
                     gDAO.create(g);
+                    System.out.println("S'ha creat el grup amb exit");
+                    System.out.println("ID: " + g.getId());
                 }
                 case 2 -> {
                     s.nextLine();
-                    System.out.println("Introdueix l'ID del grup on vol afegir usuaris");
-                    int idGrup = s.nextInt();
-                    Grup g = gDAO.obtenirGrup(idGrup);
-                    if (g != null) {
-                        String correu = "";
-                        s.nextLine(); //per resetejar scanner
-                        while (!correu.equals("Atura")) {
-                            System.out.println("Introduint Usuaris al grup: " + g.getId());
-                            gDAO.veureUsuaris(g.getId());
-                            System.out.println("Per aturar d'introduir, escrigui \"Atura\"");
-                            System.out.println("Introdueixi el correu de l'usuari");
-                            correu = s.nextLine();
-                            if (!correu.equals("Atura")) {
-                                gDAO.afegirUsuaris(g, correu);
-                            }
-                        }
-                    }
+                    Grup g = Grup.consultarGrupConsola(s, em);
+                    g.afegirUsuaris(s, em);
                 }
-                case 22 -> {
-                    gDAO.menuAfegirUsuaris(s); //no se que es millor :sob:
-                }
-
                 case 3 -> {
                     s.nextLine();
-                    System.out.println("Introdueix l'id del grup");
-                    int id = s.nextInt();
-                    gDAO.veureUsuaris(id);
+                    Grup g = Grup.consultarGrupConsola(s, em);
+                    g.veureUsuaris();
                 }
 
                 case 4 -> {
                     s.nextLine();
-                    System.out.println("Introdueix l'id del grup");
-                    int id = s.nextInt();
-                    gDAO.veureDespeses(id);
+                    Grup g = Grup.consultarGrupConsola(s, em);
+                    g.veureDespeses();
                 }
                 case 5 -> {
                     s.nextLine();
-                    System.out.println("Quin grup vol consultar?");
-                    Grup g = null;
-                    while (g == null) {
-                        int idGrup = s.nextInt();
-                        g = em.find(Grup.class, idGrup);
-                        if (g == null) {
-                            System.out.println("El grup introduit no existeix!");
-                            System.out.println("Introdueix una id de grup valida");
-                        }
-                    }
+                    Grup g = Grup.consultarGrupConsola(s, em);
                     g.mostrarDeutes(em);
                 }
                 case 6 -> {
                     s.nextLine();
-                    System.out.println("Quin grup vol consultar?");
-                    Grup g = null;
-                    while (g == null) {
-                        int idGrup = s.nextInt();
-                        g = em.find(Grup.class, idGrup);
-                        if (g == null) {
-                            System.out.println("El grup introduit no existeix!");
-                            System.out.println("Introdueix una id de grup valida");
-                        }
-                    }
+                    Grup g = Grup.consultarGrupConsola(s, em);
                     g.mostrarDespesesPerCategoria(em);
                 }
                 case 7 -> {
                     s.nextLine();
-                    System.out.println("Quin grup vol consultar?");
-                    Grup g = null;
-                    while (g == null) {
-                        int idGrup = s.nextInt();
-                        g = em.find(Grup.class, idGrup);
-                        if (g == null) {
-                            System.out.println("El grup introduit no existeix!");
-                            System.out.println("Introdueix una id de grup valida");
-                        }
-                    }
+                    Grup g = Grup.consultarGrupConsola(s, em);
                     g.mostrarDespesesPerUsuari(em);
                 }
             }

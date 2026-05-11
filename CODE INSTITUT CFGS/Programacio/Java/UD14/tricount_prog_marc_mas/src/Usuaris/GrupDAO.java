@@ -32,8 +32,17 @@ public class GrupDAO {
         tx.begin();
         em.persist(g);
         tx.commit();
-        System.out.println("S'ha creat el grup amb exit");
-        System.out.println("ID: "+g.getId());
+    }
+
+    public void edit(Grup g) {
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        em.flush();
+        tx.commit(); //i feim commit
+    }
+    
+    public Grup find(int id){
+        return em.find(Grup.class, id);
     }
 
     public void afegirUsuaris(int idGrup, String mailUsuari) {
@@ -125,8 +134,8 @@ public class GrupDAO {
         }
         return g;
     }
-    
-    public EntityManager getEM(){
+
+    public EntityManager getEM() {
         return this.em;
     }
 }
