@@ -87,6 +87,7 @@ public class Grup implements Serializable {
     }
 
     public static Grup crearGrupConsola(Scanner s) {
+        s.nextLine(); //buidam el búfer de scanner
         System.out.println("Introdueix la descripcio del teu grup");
         String descripcio = s.nextLine();
         Date datacreacio = new Date();
@@ -94,6 +95,7 @@ public class Grup implements Serializable {
     }
 
     public static Grup obtenirGrupConsola(Scanner s, EntityManager em) {
+        s.nextLine(); //buidam el búfer de scanner
         GrupDAO gDAO = new GrupDAO(em);
         System.out.println("Introdueix la id del grup");
         Grup g = null;
@@ -234,6 +236,31 @@ public class Grup implements Serializable {
         }
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (id != null ? id.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Grup)) {
+            return false;
+        }
+        Grup other = (Grup) object;
+        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "tricountmarcmas.Grup[ id=" + id + " ]";
+    }
+
     public Integer getId() {
         return id;
     }
@@ -272,31 +299,6 @@ public class Grup implements Serializable {
 
     public void setDespesaList(List<Despesa> despesaList) {
         this.despesaList = despesaList;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Grup)) {
-            return false;
-        }
-        Grup other = (Grup) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "tricountmarcmas.Grup[ id=" + id + " ]";
     }
 
 }

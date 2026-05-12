@@ -96,6 +96,7 @@ public class Usuari implements Serializable {
     }
 
     public static Usuari crearUsuariConsola(Scanner s) {
+        s.nextLine(); //buidam el búfer de scanner
         System.out.println("Quin es el seu correu?");
         String correu = s.nextLine();
         while (Usuari.correuExisteix(correu)) {
@@ -178,6 +179,7 @@ public class Usuari implements Serializable {
     }
 
     public static Usuari obtenirUsuariConsola(Scanner s, EntityManager em) {
+        s.nextLine(); //buidam el búfer de scanner
         System.out.println("Introdueix el correu de l'usuari");
         String correu = s.next();
         Usuari u = UsuariDAO.find(correu, em);
@@ -241,6 +243,40 @@ public class Usuari implements Serializable {
     public static boolean correuExisteix(String correu) {
         Usuari u = UsuariDAO.find(correu);
         return u != null;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (correu != null ? correu.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Usuari)) {
+            return false;
+        }
+        Usuari other = (Usuari) object;
+        return !((this.correu == null && other.correu != null) || (this.correu != null && !this.correu.equals(other.correu)));
+    }
+
+    @Override
+    public String toString() {
+        return "tricountmarcmas.Usuari[ correu=" + correu + " Nom Complet =" + nom + " " + llinatge1 + " " + " " + llinatge2 + "]";
+    }
+
+    public void printFull() {
+        System.out.println("Correu: " + correu);
+        System.out.println("Nom: " + nom);
+        System.out.println("Llinatges: " + llinatge1 + " " + llinatge2);
+        System.out.println("Alias: " + alias);
+        System.out.println("IBAN: " + iban);
+    }
+
+    public String getFullName() {
+        return "" + nom + " " + llinatge1 + " " + llinatge2;
     }
 
     public String getCorreu() {
@@ -313,39 +349,5 @@ public class Usuari implements Serializable {
 
     public void setPagadorList(List<Pagador> pagadorList) {
         this.pagadorList = pagadorList;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (correu != null ? correu.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Usuari)) {
-            return false;
-        }
-        Usuari other = (Usuari) object;
-        return !((this.correu == null && other.correu != null) || (this.correu != null && !this.correu.equals(other.correu)));
-    }
-
-    @Override
-    public String toString() {
-        return "tricountmarcmas.Usuari[ correu=" + correu + " Nom Complet =" + nom + " " + llinatge1 + " " + " " + llinatge2 + "]";
-    }
-
-    public void printFull() {
-        System.out.println("Correu: " + correu);
-        System.out.println("Nom: " + nom);
-        System.out.println("Llinatges: " + llinatge1 + " " + llinatge2);
-        System.out.println("Alias: " + alias);
-        System.out.println("IBAN: " + iban);
-    }
-
-    public String getFullName() {
-        return "" + nom + " " + llinatge1 + " " + llinatge2;
     }
 }

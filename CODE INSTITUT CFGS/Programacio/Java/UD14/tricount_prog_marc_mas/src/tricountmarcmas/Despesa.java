@@ -108,6 +108,7 @@ public class Despesa implements Serializable {
     }
 
     public static Despesa crearDespesaConsola(Scanner s, EntityManager em) {
+        s.nextLine(); //buidam el búfer de scanner
         System.out.println("Quina es la data de la despesa?");
         System.out.println("Es pot deixar buit si ha estat creada ara");
         String d = s.nextLine();
@@ -132,108 +133,6 @@ public class Despesa implements Serializable {
         System.out.println("Categoria de la despesa");
         String categoria = s.nextLine();
         return new Despesa(datadespesa, pagadororiginal, grup, importtotal, descripcio, categoria);
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Date getDatadespesa() {
-        return datadespesa;
-    }
-
-    public void setDatadespesa(Date datadespesa) {
-        this.datadespesa = datadespesa;
-    }
-
-    public String getDescripcio() {
-        return descripcio;
-    }
-
-    public void setDescripcio(String descripcio) {
-        this.descripcio = descripcio;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
-    public BigDecimal getImporttotal() {
-        return importtotal;
-    }
-
-    public BigDecimal getImporttotalBD() {
-        return importtotal;
-    }
-
-    public void setImporttotal(BigDecimal importtotal) {
-        this.importtotal = importtotal;
-    }
-
-    public BigDecimal getImportpagat() {
-        return importpagat;
-    }
-
-    public BigDecimal getImportpagatBD() {
-        return importpagat;
-    }
-
-    public void setImportpagat(BigDecimal importpagat) {
-        this.importpagat = importpagat;
-    }
-
-    public Grup getIdgrup() {
-        return idgrup;
-    }
-
-    public void setIdgrup(Grup idgrup) {
-        this.idgrup = idgrup;
-    }
-
-    public Usuari getPagadororiginal() {
-        return pagadororiginal;
-    }
-
-    public void setPagadororiginal(Usuari pagadororiginal) {
-        this.pagadororiginal = pagadororiginal;
-    }
-
-    public List<Pagador> getPagadorList() {
-        return pagadorList;
-    }
-
-    public void setPagadorList(List<Pagador> pagadorList) {
-        this.pagadorList = pagadorList;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Despesa)) {
-            return false;
-        }
-        Despesa other = (Despesa) object;
-        return !((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id)));
-    }
-
-    @Override
-    public String toString() {
-        return "tricountmarcmas.Despesa[ id=" + id + " Descripcio: " + descripcio + " Categoria: " + categoria + " ]";
     }
 
     public void actualitzarImport(EntityManager em) {
@@ -327,6 +226,7 @@ public class Despesa implements Serializable {
     }
 
     public static void marcarPagament(Scanner s, EntityManager em) {
+        s.nextLine(); //buidam el búfer de scanner
         Usuari u = Usuari.obtenirUsuariConsola(s, em);
         if (u.teDespesesPendents()) {
             u.mostrarDespesesPendents();
@@ -381,4 +281,105 @@ public class Despesa implements Serializable {
         return d;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (id != null ? id.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Despesa)) {
+            return false;
+        }
+        Despesa other = (Despesa) object;
+        return !((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id)));
+    }
+
+    @Override
+    public String toString() {
+        return "tricountmarcmas.Despesa[ id=" + id + " Descripcio: " + descripcio + " Categoria: " + categoria + " ]";
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Date getDatadespesa() {
+        return datadespesa;
+    }
+
+    public void setDatadespesa(Date datadespesa) {
+        this.datadespesa = datadespesa;
+    }
+
+    public String getDescripcio() {
+        return descripcio;
+    }
+
+    public void setDescripcio(String descripcio) {
+        this.descripcio = descripcio;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public BigDecimal getImporttotal() {
+        return importtotal;
+    }
+
+    public BigDecimal getImporttotalBD() {
+        return importtotal;
+    }
+
+    public void setImporttotal(BigDecimal importtotal) {
+        this.importtotal = importtotal;
+    }
+
+    public BigDecimal getImportpagat() {
+        return importpagat;
+    }
+
+    public BigDecimal getImportpagatBD() {
+        return importpagat;
+    }
+
+    public void setImportpagat(BigDecimal importpagat) {
+        this.importpagat = importpagat;
+    }
+
+    public Grup getIdgrup() {
+        return idgrup;
+    }
+
+    public void setIdgrup(Grup idgrup) {
+        this.idgrup = idgrup;
+    }
+
+    public Usuari getPagadororiginal() {
+        return pagadororiginal;
+    }
+
+    public void setPagadororiginal(Usuari pagadororiginal) {
+        this.pagadororiginal = pagadororiginal;
+    }
+
+    public List<Pagador> getPagadorList() {
+        return pagadorList;
+    }
+
+    public void setPagadorList(List<Pagador> pagadorList) {
+        this.pagadorList = pagadorList;
+    }
 }
