@@ -153,7 +153,6 @@ public class Usuari implements Serializable {
     }
 
     public static Usuari obtenirUsuariConsola(Scanner s, EntityManager em) {
-        // Usuari u = new Usuari(); //faig la crida a new per re-inicialitzar l'objecte perque si no la llista de grups no se actualitza, no se perque, no m'importa
         System.out.println("Introdueix el correu de l'usuari que vol afegir a grups");
         String correu = s.next();
         Usuari u = UsuariDAO.find(correu, em);
@@ -167,7 +166,7 @@ public class Usuari implements Serializable {
     }
 
     public void afegirGrups(Scanner s, EntityManager em) {
-        int idGrup = 10; //per que el bucle s'executi
+        int idGrup = 1; //per que el bucle s'executi
         s.nextLine(); //per resetejar scanner
         while (idGrup > 0) {
             System.out.println("Introduint l'usuari " + this.getCorreu() + " a grups: ");
