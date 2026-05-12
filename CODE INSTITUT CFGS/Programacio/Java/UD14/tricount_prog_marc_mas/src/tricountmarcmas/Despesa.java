@@ -6,6 +6,7 @@ package tricountmarcmas;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -40,6 +41,7 @@ import Usuaris.Usuari;
  * @author Marc Mas
  */
 @Entity
+
 @Table(name = "despesa")
 @NamedQueries({
     @NamedQuery(name = "Despesa.findAll", query = "SELECT d FROM Despesa d"),
@@ -95,32 +97,41 @@ public class Despesa implements Serializable {
         this.importpagat = importpagat;
     }
 
-    public Despesa(Scanner s) {
+    private Despesa(Date datadespesa, Usuari pagadororiginal, Grup grup, BigDecimal importtotal, String descripcio, String categoria) {
+        this.datadespesa = datadespesa;
+        this.pagadororiginal = pagadororiginal;
+        this.idgrup = grup;
+        this.importtotal = importtotal;
+        this.importpagat = new BigDecimal(0);
+        this.descripcio = descripcio;
+        this.categoria = categoria;
+    }
+
+    public static Despesa crearDespesaConsola(Scanner s, EntityManager em) {
         System.out.println("Quina es la data de la despesa?");
         System.out.println("Es pot deixar buit si ha estat creada ara");
         String d = s.nextLine();
-        if (d.length() == 0) {
-            this.datadespesa = new Date();
-        } else {
+        Date datadespesa = new Date();
+        if (d.length() != 0) {
             SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
             try {
-                this.datadespesa = formatter.parse(d);
+                datadespesa = formatter.parse(d);
             } catch (ParseException ex) {
                 System.out.println("Error guardant la data");
-                this.datadespesa = new Date();
+                datadespesa = new Date();
             }
         }
-        this.pagadororiginal = new Usuari();
-        this.idgrup = new Grup();
+        Usuari pagadororiginal = Usuari.obtenirUsuariConsola(s, em);
+        Grup grup = Grup.obtenirGrupConsola(s, em);
         System.out.println("Quin va ser l'import total de la depesa?");
         BigDecimal bd = new BigDecimal(s.nextFloat());
-        this.importtotal = bd;
-        this.importpagat = new BigDecimal(0);
+        BigDecimal importtotal = bd;
         s.nextLine();
         System.out.println("Descripcio de la despesa");
-        this.descripcio = s.nextLine();
+        String descripcio = s.nextLine();
         System.out.println("Categoria de la despesa");
-        this.categoria = s.nextLine();
+        String categoria = s.nextLine();
+        return new Despesa(datadespesa, pagadororiginal, grup, importtotal, descripcio, categoria);
     }
 
     public Integer getId() {
@@ -225,6 +236,65 @@ public class Despesa implements Serializable {
         return "tricountmarcmas.Despesa[ id=" + id + " Descripcio: " + descripcio + " Categoria: " + categoria + " ]";
     }
 
+    public void actualitzarImport(EntityManager em) {
+        List<Pagador> l = this.getPagadorList();
+        Object pagadors[] = l.toArray();
+        BigDecimal totalPagat = new BigDecimal(0);
+        for (Object pagador : pagadors) {
+            Pagador p = (Pagador) pagador;
+            if (p.haPagat()) {
+                totalPagat = totalPagat.add(p.getContribucio());
+            }
+        }
+        this.setImportpagat(totalPagat);
+        DespesaDAO dDAO = new DespesaDAO(em);
+        dDAO.edit(this);
+    }
+
+    public void assignarPagadorsTeclat(Scanner s, EntityManager em) {
+        System.out.println("Vol assignar un import manual o pagar a parts iguals entre els pagadors restants?");
+        System.out.println("1: Asignar imports manuals");
+        System.out.println("2: Parts iguals");
+        int distribucio = s.nextInt();
+        System.out.println("Quants de pagadors més hi ha?");
+        int numPagadors = (int) s.nextFloat();
+        PagadorDAO pDAO = new PagadorDAO(em);
+        BigDecimal importPendent = this.getImporttotal();
+        BigDecimal partsIguals = importPendent.divide(new BigDecimal(numPagadors), 2, RoundingMode.DOWN);
+        BigDecimal contribucio = partsIguals;
+        if (distribucio != 2) {
+            System.out.println("Import total: " + importPendent);
+            System.out.println("Quin es l'import que paga " + this.getPagadororiginal().getFullName() + "?");
+            contribucio = new BigDecimal(s.nextFloat());
+        }
+        Pagador[] pagadors = new Pagador[numPagadors + 1]; //guardam a un array per poder crear tots els pagadors al final i no poder deixar la despesa a mitges
+        pagadors[0] = new Pagador(contribucio, this.getPagadororiginal(), this, true); //la primera se guarda com true perque es l'original
+        int valorsAssignats = 1;
+        importPendent = importPendent.subtract(contribucio);
+        for (int i = 0; i < numPagadors; i++) {
+            System.out.println("Pagador extra " + (i + 1));
+            Usuari u = Usuari.obtenirUsuariConsola(s, em);
+            if (distribucio != 2) {
+                System.out.println("Si vol seguir assignants imports individuals, introdueix 1");
+                System.out.println("Si vol assignar imports iguals a tots els usuaris restants, introdueix 2");
+                distribucio = s.nextInt();
+            }
+            contribucio = importPendent.divide(new BigDecimal(numPagadors + 1 - valorsAssignats), 2, RoundingMode.DOWN);
+            if (distribucio != 2) {
+                valorsAssignats += 1;
+                System.out.println("Pendent per pagar: " + importPendent);
+                System.out.println("Quin es l'import que paga " + u.getFullName() + "?");
+                contribucio = new BigDecimal(s.nextFloat());
+                importPendent = importPendent.subtract(contribucio);
+            }
+            pagadors[i + 1] = new Pagador(contribucio, u, this, false);
+        }
+        for (Pagador pagador : pagadors) {
+            pDAO.create(pagador); //recorresc tot l'array i afegesc tots els pagadors
+        }
+        this.actualitzarImport(em);
+    }
+
     public void mostrarPart(Usuari u) {
         List<Pagador> l = this.getPagadorList();
         Object pagadors[] = l.toArray(); //ho convertesc a un array
@@ -256,12 +326,20 @@ public class Despesa implements Serializable {
         }
     }
 
+    public static void marcarPagament(Scanner s, EntityManager em) {
+        System.out.println("Formes part de les seguents despeses: ");
+        Usuari u = Usuari.obtenirUsuariConsola(s, em);
+        u.mostrarDespeses();
+        Despesa d = Despesa.obtenirDespesaConsola(s);
+        d.marcarPagament(u, s, em);
+    }
+
     public void marcarPagament(Usuari u, Scanner s, EntityManager em) {
         List<Pagador> l = this.getPagadorList();
         Object pagadors[] = l.toArray(); //ho convertesc a un array
         boolean trobat = false; //ho emprarem per si introdueix una despesa on ell no pertany per mostrar un error
-        for (int i = 0; i < pagadors.length; i++) {
-            Pagador p = (Pagador) pagadors[i];
+        for (Object pagador : pagadors) {
+            Pagador p = (Pagador) pagador;
             if (p.getUsuari().getCorreu().equals(u.getCorreu())) {
                 trobat = true;
                 System.out.println("Despesa: " + this);
@@ -279,6 +357,27 @@ public class Despesa implements Serializable {
         if (!trobat) {
             System.out.println("No s'ha trobat el vostre registre de pagador a la despesa seleccionada!");
         }
+    }
+
+    public static Despesa obtenirDespesa(int idDespesa) {
+        Despesa d = DespesaDAO.find(idDespesa);
+        if (d == null) {
+            System.out.println("Aquesta despesa no s'ha trobat!");
+        }
+        return d;
+    }
+
+    public static Despesa obtenirDespesaConsola(Scanner s) {
+        System.out.println("Introdueix l'id de la despesa");
+        int idDespesa = s.nextInt();
+        Despesa d = DespesaDAO.find(idDespesa);
+        while (d == null) {
+            System.out.println("Aquesta despesa no s'ha trobat!");
+            System.out.println("Introdueix una despesa valida");
+            idDespesa = s.nextInt();
+            d = DespesaDAO.find(idDespesa);
+        }
+        return d;
     }
 
 }

@@ -152,8 +152,16 @@ public class Usuari implements Serializable {
         return u;
     }
 
+    public static Usuari obtenirUsuari(String correu, EntityManager em) {
+        Usuari u = UsuariDAO.find(correu, em);
+        if (u == null) {
+            System.out.println("Aquest email no està la BBDD!"); //si obtenc resultats, l'usuari ja està a la BBDD aixi que rollback i mostram error
+        }
+        return u;
+    }
+
     public static Usuari obtenirUsuariConsola(Scanner s, EntityManager em) {
-        System.out.println("Introdueix el correu de l'usuari que vol afegir a grups");
+        System.out.println("Introdueix el correu de l'usuari");
         String correu = s.next();
         Usuari u = UsuariDAO.find(correu, em);
         while (u == null) {
