@@ -4,8 +4,9 @@
  */
 package Usuaris;
 
-import javax.persistence.*;
-import tricountmarcmas.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 
 /**
  *
@@ -13,17 +14,17 @@ import tricountmarcmas.*;
  */
 public class PagadorDAO {
 
-    private EntityManager em;
+    private static EntityManager em;
     
-    PagadorDAO(){
+    public PagadorDAO(){
     }
 
     public PagadorDAO(EntityManagerFactory emf) {
-        this.em = emf.createEntityManager();
+        PagadorDAO.em = emf.createEntityManager();
     }
 
     public PagadorDAO(EntityManager em) {
-        this.em = em;
+        PagadorDAO.em = em;
     }
 
     public void create(Pagador p) {
@@ -38,6 +39,10 @@ public class PagadorDAO {
         tx.begin();
         em.flush();
         tx.commit(); //i feim commit
+    }
+
+    public static Pagador find(int id) {
+        return em.find(Pagador.class, id);
     }
 
 }

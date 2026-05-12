@@ -7,7 +7,19 @@ package Usuaris;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Scanner;
-import javax.persistence.*;
+
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
 import tricountmarcmas.Despesa;
 
 /**
@@ -15,6 +27,7 @@ import tricountmarcmas.Despesa;
  * @author Marc Mas
  */
 @Entity
+
 @Table(name = "usuari")
 @NamedQueries({
     @NamedQuery(name = "Usuari.findAll", query = "SELECT u FROM Usuari u"),
@@ -82,19 +95,25 @@ public class Usuari implements Serializable {
         this.iban = iban;
     }
 
-    public Usuari(Scanner s) {
+    public static Usuari crearUsuariConsola(Scanner s) {
         System.out.println("Quin es el seu correu?");
-        this.correu = s.nextLine();
+        String correu = s.nextLine();
+        while (Usuari.correuExisteix(correu)) {
+            System.out.println("El correu introduit ja està a la base de dades!");
+            System.out.println("Introdueix un correu que no estigui present!");
+            correu = s.nextLine();
+        }
         System.out.println("Quin es el seu nom d'usuari?");
-        this.alias = s.nextLine();
+        String alias = s.nextLine();
         System.out.println("Quin es el seu nom");
-        this.nom = s.nextLine();
+        String nom = s.nextLine();
         System.out.println("Quin es el seu primer llinatge?");
-        this.llinatge1 = s.nextLine();
+        String llinatge1 = s.nextLine();
         System.out.println("Quin es el seu segon llinatge");
-        this.llinatge2 = s.nextLine();
+        String llinatge2 = s.nextLine();
         System.out.println("Quin es el seu IBAN?");
-        this.iban = s.nextLine();
+        String iban = s.nextLine();
+        return new Usuari(correu, alias, nom, llinatge1, llinatge2, iban);
     }
 
     public void mostrarDespeses() {
@@ -104,13 +123,13 @@ public class Usuari implements Serializable {
             System.out.println("No has fet cap despesa");
         } else {
             System.out.println("Formes part de les seguents despeses: ");
-            for (int i = 0; i < despeses.length; i++) {
-                Despesa d = (Despesa) despeses[i];
+            for (Object despesa : despeses) {
+                Despesa d = (Despesa) despesa;
                 d.mostrarPart(this);
             }
         }
     }
-    
+
     public void mostrarDespesesPendents() {
         List<Despesa> l = this.getDespesaList();
         Object despeses[] = l.toArray(); //ho convertesc a un array
@@ -118,11 +137,86 @@ public class Usuari implements Serializable {
             System.out.println("No has fet cap despesa");
         } else {
             System.out.println("Formes part de les seguents despeses: ");
-            for (int i = 0; i < despeses.length; i++) {
-                Despesa d = (Despesa) despeses[i];
+            for (Object despesa : despeses) {
+                Despesa d = (Despesa) despesa;
                 d.mostrarPartPendent(this);
             }
         }
+    }
+
+    public static Usuari obtenirUsuari(String correu) {
+        Usuari u = UsuariDAO.find(correu);
+        if (u == null) {
+            System.out.println("Aquest email no està la BBDD!"); //si obtenc resultats, l'usuari ja està a la BBDD aixi que rollback i mostram error
+        }
+        return u;
+    }
+
+    public static Usuari obtenirUsuariConsola(Scanner s, EntityManager em) {
+        // Usuari u = new Usuari(); //faig la crida a new per re-inicialitzar l'objecte perque si no la llista de grups no se actualitza, no se perque, no m'importa
+        System.out.println("Introdueix el correu de l'usuari que vol afegir a grups");
+        String correu = s.next();
+        Usuari u = UsuariDAO.find(correu, em);
+        while (u == null) {
+            System.out.println("Aquest email no està la BBDD!");
+            System.out.println("Introdueix un correu valid!");
+            correu = s.next();
+            u = UsuariDAO.find(correu);
+        }
+        return u;
+    }
+
+    public void afegirGrups(Scanner s, EntityManager em) {
+        int idGrup = 10; //per que el bucle s'executi
+        s.nextLine(); //per resetejar scanner
+        while (idGrup > 0) {
+            System.out.println("Introduint l'usuari " + this.getCorreu() + " a grups: ");
+            this.veureGrups();
+            System.out.println("Per aturar d'introduir, escrigui un nombre negatiu");
+            System.out.println("Introdueixi l'id del grup");
+            idGrup = s.nextInt();
+            if (idGrup > 0) {
+                Grup g = Grup.obtenirGrup(idGrup, em);
+                while (g == null && idGrup > 0) {
+                    System.out.println("Introdueix una id valida!");
+                    idGrup = s.nextInt();
+                    g = Grup.obtenirGrup(idGrup, em);
+                }
+                if (idGrup > 0 && g != null) {
+                    g.afegirUsuari(correu, em);
+                    this.afegirGrup(g.getId(), em);
+                }
+            }
+        }
+
+    }
+
+    public void afegirGrup(int idGrup, EntityManager em) {
+        List<Grup> grupsAntics = this.getGrupList();
+        Grup g = Grup.obtenirGrup(idGrup);
+        grupsAntics.add(g);
+        this.setGrupList(grupsAntics);
+        UsuariDAO uDAO = new UsuariDAO(em);
+        uDAO.edit(this);
+    }
+
+    public void veureGrups() {
+        List<Grup> l = this.getGrupList(); //agafam la llista de l'usuari
+        Object grups[] = l.toArray(); //ho convertesc a un array
+        System.out.println("Llista: " + grups.length);
+        if (grups.length == 0) {
+            System.out.println("Actualment no pertany a cap grup!");
+        } else {
+            System.out.println("Grups actuals:");
+            for (Object grup : grups) {
+                System.out.println((Grup) grup); //imprimesc tots els grups de l'usuari
+            }
+        }
+    }
+
+    public static boolean correuExisteix(String correu) {
+        Usuari u = UsuariDAO.find(correu);
+        return u != null;
     }
 
     public String getCorreu() {
@@ -211,10 +305,7 @@ public class Usuari implements Serializable {
             return false;
         }
         Usuari other = (Usuari) object;
-        if ((this.correu == null && other.correu != null) || (this.correu != null && !this.correu.equals(other.correu))) {
-            return false;
-        }
-        return true;
+        return !((this.correu == null && other.correu != null) || (this.correu != null && !this.correu.equals(other.correu)));
     }
 
     @Override

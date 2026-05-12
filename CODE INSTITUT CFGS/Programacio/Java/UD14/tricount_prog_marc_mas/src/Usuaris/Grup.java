@@ -8,7 +8,27 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
-import javax.persistence.*;
+
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Query;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
 import tricountmarcmas.Despesa;
 
 /**
@@ -73,19 +93,27 @@ public class Grup implements Serializable {
         return new Grup(descripcio, datacreacio);
     }
 
-    public static Grup consultarGrupConsola(Scanner s, EntityManager em) {
+    public static Grup obtenirGrupConsola(Scanner s, EntityManager em) {
         GrupDAO gDAO = new GrupDAO(em);
         System.out.println("Introdueix la id del grup");
         Grup g = null;
         while (g == null) {
             int idGrup = s.nextInt();
-            g = gDAO.find(idGrup);
+            g = GrupDAO.find(idGrup);
             if (g == null) {
                 System.out.println("El grup introduit no existeix!");
                 System.out.println("Introdueix una id de grup valida");
             }
         }
         return g;
+    }
+
+    public static Grup obtenirGrup(int idGrup) {
+        return GrupDAO.find(idGrup);
+    }
+
+    public static Grup obtenirGrup(int idGrup, EntityManager em) {
+        return GrupDAO.find(idGrup, em);
     }
 
     public void afegirUsuaris(Scanner s, EntityManager em) {
@@ -105,8 +133,7 @@ public class Grup implements Serializable {
 
     public void afegirUsuari(String mailUsuari, EntityManager em) {
         List<Usuari> usuarisAntics = this.getUsuariList();
-        UsuariDAO uDAO = new UsuariDAO(em);
-        Usuari u = uDAO.obtenirUsuari(mailUsuari);
+        Usuari u = Usuari.obtenirUsuari(mailUsuari);
         if (usuarisAntics.contains(u)) {
             System.out.println("L'usuari ja està al grup!");
         } else {

@@ -4,13 +4,22 @@
  */
 package tricountmarcmas;
 
-import Usuaris.*;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Scanner;
-import javax.persistence.*;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import Usuaris.Grup;
+import Usuaris.GrupDAO;
+import Usuaris.Pagador;
+import Usuaris.PagadorDAO;
+import Usuaris.Usuari;
+import Usuaris.UsuariDAO;
 
 /**
  *
@@ -43,7 +52,7 @@ public class TricountMarcMas {
             switch (opcio) {
                 case 1 -> {
                     UsuariDAO uDAO = new UsuariDAO(emf);
-                    menuUsuaris(s, uDAO);
+                    menuUsuaris(s, uDAO, em);
                 }
                 case 2 -> {
                     GrupDAO gDAO = new GrupDAO(emf);
@@ -60,7 +69,7 @@ public class TricountMarcMas {
         }
     }
 
-    public static void menuUsuaris(Scanner s, UsuariDAO uDAO) {
+    public static void menuUsuaris(Scanner s, UsuariDAO uDAO, EntityManager em) {
         int opcio = 0;
         while (opcio > -1) {
             System.out.println("Menú Usuaris:");
@@ -71,14 +80,13 @@ public class TricountMarcMas {
             switch (opcio) {
                 case 1 -> {
                     s.nextLine();
-                    Usuari u = new Usuari(s);
+                    Usuari u = Usuari.crearUsuariConsola(s);
                     uDAO.create(u);
                 }
                 case 2 -> {
                     s.nextLine();
-                    System.out.println("Introdueix el correu de l'usuari que vol afegir a grups");
-                    String correu = s.next();
-                    uDAO.afegirGrups(s, correu);
+                    Usuari u = Usuari.obtenirUsuariConsola(s, em);
+                    u.afegirGrups(s, em);
                 }
             }
         }
@@ -108,33 +116,33 @@ public class TricountMarcMas {
                 }
                 case 2 -> {
                     s.nextLine();
-                    Grup g = Grup.consultarGrupConsola(s, em);
+                    Grup g = Grup.obtenirGrupConsola(s, em);
                     g.afegirUsuaris(s, em);
                 }
                 case 3 -> {
                     s.nextLine();
-                    Grup g = Grup.consultarGrupConsola(s, em);
+                    Grup g = Grup.obtenirGrupConsola(s, em);
                     g.veureUsuaris();
                 }
 
                 case 4 -> {
                     s.nextLine();
-                    Grup g = Grup.consultarGrupConsola(s, em);
+                    Grup g = Grup.obtenirGrupConsola(s, em);
                     g.veureDespeses();
                 }
                 case 5 -> {
                     s.nextLine();
-                    Grup g = Grup.consultarGrupConsola(s, em);
+                    Grup g = Grup.obtenirGrupConsola(s, em);
                     g.mostrarDeutes(em);
                 }
                 case 6 -> {
                     s.nextLine();
-                    Grup g = Grup.consultarGrupConsola(s, em);
+                    Grup g = Grup.obtenirGrupConsola(s, em);
                     g.mostrarDespesesPerCategoria(em);
                 }
                 case 7 -> {
                     s.nextLine();
-                    Grup g = Grup.consultarGrupConsola(s, em);
+                    Grup g = Grup.obtenirGrupConsola(s, em);
                     g.mostrarDespesesPerUsuari(em);
                 }
             }

@@ -4,12 +4,9 @@
  */
 package Usuaris;
 
-import java.util.List;
-import java.util.Scanner;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.*;
-import tricountmarcmas.Despesa;
+import javax.persistence.EntityTransaction;
 
 /**
  *
@@ -17,14 +14,14 @@ import tricountmarcmas.Despesa;
  */
 public class GrupDAO {
 
-    private EntityManager em;
+    private static EntityManager em;
 
     public GrupDAO(EntityManagerFactory emf) {
-        this.em = emf.createEntityManager();
+        GrupDAO.em = emf.createEntityManager();
     }
 
     public GrupDAO(EntityManager em) {
-        this.em = em;
+        GrupDAO.em = em;
     }
 
     public void create(Grup g) {
@@ -41,7 +38,11 @@ public class GrupDAO {
         tx.commit(); //i feim commit
     }
     
-    public Grup find(int id){
+    public static Grup find(int id){
+        return em.find(Grup.class, id);
+    }
+    
+    public static Grup find(int id, EntityManager em){
         return em.find(Grup.class, id);
     }
 }

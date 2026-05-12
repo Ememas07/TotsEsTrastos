@@ -43,6 +43,13 @@ public class DespesaDAO implements Serializable {
         }
     }
 
+    public void create(Despesa d) {
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        em.persist(d);
+        tx.commit(); //i feim commit
+    }
+
     public void edit(Despesa d) {
         EntityTransaction tx = em.getTransaction();
         tx.begin();

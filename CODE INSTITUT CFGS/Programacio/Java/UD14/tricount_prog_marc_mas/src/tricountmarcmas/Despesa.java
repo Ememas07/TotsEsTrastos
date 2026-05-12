@@ -4,10 +4,6 @@
  */
 package tricountmarcmas;
 
-import Usuaris.Grup;
-import Usuaris.Pagador;
-import Usuaris.PagadorDAO;
-import Usuaris.Usuari;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.text.ParseException;
@@ -15,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
+
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -28,11 +25,15 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
-import javax.persistence.Query;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import Usuaris.Grup;
+import Usuaris.Pagador;
+import Usuaris.PagadorDAO;
+import Usuaris.Usuari;
 
 /**
  *
@@ -216,10 +217,7 @@ public class Despesa implements Serializable {
             return false;
         }
         Despesa other = (Despesa) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
+        return !((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id)));
     }
 
     @Override
