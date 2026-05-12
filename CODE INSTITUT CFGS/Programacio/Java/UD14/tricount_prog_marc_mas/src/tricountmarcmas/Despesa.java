@@ -327,11 +327,12 @@ public class Despesa implements Serializable {
     }
 
     public static void marcarPagament(Scanner s, EntityManager em) {
-        System.out.println("Formes part de les seguents despeses: ");
         Usuari u = Usuari.obtenirUsuariConsola(s, em);
-        u.mostrarDespeses();
-        Despesa d = Despesa.obtenirDespesaConsola(s);
-        d.marcarPagament(u, s, em);
+        if (u.teDespesesPendents()) {
+            u.mostrarDespesesPendents();
+            Despesa d = Despesa.obtenirDespesaConsola(s);
+            d.marcarPagament(u, s, em);
+        }
     }
 
     public void marcarPagament(Usuari u, Scanner s, EntityManager em) {

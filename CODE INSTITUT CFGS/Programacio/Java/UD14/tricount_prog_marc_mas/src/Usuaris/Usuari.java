@@ -117,31 +117,48 @@ public class Usuari implements Serializable {
     }
 
     public void mostrarDespeses() {
-        List<Despesa> l = this.getDespesaList();
-        Object despeses[] = l.toArray(); //ho convertesc a un array
-        if (despeses.length == 0) {
+        List<Pagador> l = this.getPagadorList(); //agaf tots els pagadors que pengen de l'usuari
+        Object pagadors[] = l.toArray(); //ho convertesc a un array
+        if (pagadors.length == 0) {
             System.out.println("No has fet cap despesa");
         } else {
             System.out.println("Formes part de les seguents despeses: ");
-            for (Object despesa : despeses) {
-                Despesa d = (Despesa) despesa;
+            for (Object pagador : pagadors) { //per cada element pagador, agaf la seva despesa i deman la part de l'usuari d'aquella despesa
+                Pagador p = (Pagador) pagador;
+                Despesa d = p.getDespesa();
                 d.mostrarPart(this);
             }
         }
     }
 
     public void mostrarDespesesPendents() {
-        List<Despesa> l = this.getDespesaList();
-        Object despeses[] = l.toArray(); //ho convertesc a un array
-        if (despeses.length == 0) {
-            System.out.println("No has fet cap despesa");
-        } else {
-            System.out.println("Formes part de les seguents despeses: ");
-            for (Object despesa : despeses) {
-                Despesa d = (Despesa) despesa;
-                d.mostrarPartPendent(this);
+        if (teDespesesPendents()) {
+            List<Pagador> l = this.getPagadorList(); //agaf tots els pagadors que pengen de l'usuari
+            Object pagadors[] = l.toArray(); //ho convertesc a un array
+            if (pagadors.length == 0) {
+                System.out.println("No tens despeses pendents!");
+            } else {
+                System.out.println("Formes part de les seguents despeses: ");
+                for (Object pagador : pagadors) { //per cada element pagador, agaf la seva despesa i deman la part pendent de l'usuari d'aquella despesa
+                    Pagador p = (Pagador) pagador;
+                    Despesa d = p.getDespesa();
+                    d.mostrarPartPendent(this);
+                }
             }
         }
+    }
+
+    public boolean teDespesesPendents() {
+        List<Pagador> l = this.getPagadorList(); //agaf tots els pagadors que pengen de l'usuari
+        Object pagadors[] = l.toArray(); //ho convertesc a un array
+        for (Object pagador : pagadors) {
+            Pagador p = (Pagador) pagador;
+            if (!p.haPagat()) {
+                return true; //vaig per tot l'array, si hi ha cap despesa que NO hagui pagat, te despeses pendents
+            }
+        }
+        System.out.println("No tens despeses pendents!");
+        return false;
     }
 
     public static Usuari obtenirUsuari(String correu) {

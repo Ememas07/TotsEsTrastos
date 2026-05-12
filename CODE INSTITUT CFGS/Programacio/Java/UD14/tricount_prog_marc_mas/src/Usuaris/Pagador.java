@@ -6,7 +6,7 @@ package Usuaris;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.List;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,6 +19,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
 import tricountmarcmas.Despesa;
 
 /**
@@ -98,11 +99,11 @@ public class Pagador implements Serializable {
         this.hapagat = hapagat;
     }
 
-    public Despesa getIddespesa() {
+    public Despesa getDespesa() {
         return iddespesa;
     }
 
-    public void setIddespesa(Despesa iddespesa) {
+    public void setDespesa(Despesa iddespesa) {
         this.iddespesa = iddespesa;
     }
 
