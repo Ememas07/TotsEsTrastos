@@ -7,11 +7,16 @@ package tricountmarcmas;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
@@ -109,18 +114,13 @@ public class Despesa implements Serializable {
 
     public static Despesa crearDespesaConsola(Scanner s, EntityManager em) {
         s.nextLine(); //buidam el búfer de scanner
-        System.out.println("Quina es la data de la despesa?");
-        System.out.println("Es pot deixar buit si ha estat creada ara");
-        String d = s.nextLine();
+        System.out.println("La despesa s'ha creat ara o vol introduir una data?");
+        System.out.println("1: Introduir data");
+        System.out.println("2: Emprar data actual");
+        int seleccioData = s.nextInt();
         Date datadespesa = new Date();
-        if (d.length() != 0) {
-            SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-            try {
-                datadespesa = formatter.parse(d);
-            } catch (ParseException ex) {
-                System.out.println("Error guardant la data");
-                datadespesa = new Date();
-            }
+        if (seleccioData == 1) {
+            datadespesa = demanarDataConsola(s);
         }
         Usuari pagadororiginal = Usuari.obtenirUsuariConsola(s, em);
         Grup grup = Grup.obtenirGrupConsola(s, em);
@@ -133,6 +133,32 @@ public class Despesa implements Serializable {
         System.out.println("Categoria de la despesa");
         String categoria = s.nextLine();
         return new Despesa(datadespesa, pagadororiginal, grup, importtotal, descripcio, categoria);
+    }
+
+    public static Date demanarDataConsola(Scanner s) {
+        System.out.println("Per favor, introdueixi la dada en format DD/MM/YYYY");
+        System.out.println("Assegura't de posar 0s si cal, es a dir, 03/07/2026");
+        String text = s.next();
+        Pattern p = Pattern.compile("[0-9]{2}/[0-9]{2}/[0-9]{4}");
+        Matcher m = p.matcher(text);
+        while (!m.find()) {
+            System.out.println("Introdueix una data amb el format correcte!");
+            System.out.println("Assegura't de posar 0s si cal, es a dir, 03/07/2026");
+            text = s.next();
+            m = p.matcher(text);
+        }
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            LocalDate parsedDate = LocalDate.parse(text, formatter);
+            LocalTime currentTime = LocalTime.now();
+            LocalDateTime combinedDateTime = LocalDateTime.of(parsedDate, currentTime);
+            return Date.from(combinedDateTime.atZone(ZoneId.systemDefault()).toInstant());
+        } catch (Exception e) {
+            System.out.println("Ha ocorregut un error guardant la data");
+            System.out.println("La despesa es crearà amb la data actual");
+        }
+        return new Date();
+
     }
 
     public void actualitzarImport(EntityManager em) {
@@ -156,38 +182,53 @@ public class Despesa implements Serializable {
         System.out.println("2: Parts iguals");
         int distribucio = s.nextInt();
         System.out.println("Quants de pagadors més hi ha?");
-        int numPagadors = (int) s.nextFloat();
-        PagadorDAO pDAO = new PagadorDAO(em);
-        BigDecimal importPendent = this.getImporttotal();
+        int numPagadors = s.nextInt();
+        BigDecimal importPendent = this.getImporttotal(); //import Pendent per pagar a la despesa
         BigDecimal partsIguals = importPendent.divide(new BigDecimal(numPagadors), 2, RoundingMode.DOWN);
-        BigDecimal contribucio = partsIguals;
-        if (distribucio != 2) {
+        //dividesc l'import total de la despesa entre els pagadors que hi ha
+        BigDecimal contribucio = partsIguals; //la contribucio sera a parts iguals 
+        if (distribucio != 2) { //si la contribucio NO son parts iguals, demanam quan paga el pagador original
             System.out.println("Import total: " + importPendent);
             System.out.println("Quin es l'import que paga " + this.getPagadororiginal().getFullName() + "?");
-            contribucio = new BigDecimal(s.nextFloat());
+            contribucio = new BigDecimal(s.nextFloat()); //i li assignam la seva contribució
         }
         Pagador[] pagadors = new Pagador[numPagadors + 1]; //guardam a un array per poder crear tots els pagadors al final i no poder deixar la despesa a mitges
         pagadors[0] = new Pagador(contribucio, this.getPagadororiginal(), this, true); //la primera se guarda com true perque es l'original
-        int valorsAssignats = 1;
-        importPendent = importPendent.subtract(contribucio);
+        int valorsAssignats = 1; //valors assignats es quants de pagadors han pagat ja, en aquest cas, 1, perque el pagador original ha posat el seu troç
+        importPendent = importPendent.subtract(contribucio); //actualitzam importPendent
         for (int i = 0; i < numPagadors; i++) {
             System.out.println("Pagador extra " + (i + 1));
             Usuari u = Usuari.obtenirUsuariConsola(s, em);
-            if (distribucio != 2) {
+            if (distribucio != 2) { //si hem posat parts iguals per tots, no entram aqui
                 System.out.println("Si vol seguir assignants imports individuals, introdueix 1");
                 System.out.println("Si vol assignar imports iguals a tots els usuaris restants, introdueix 2");
                 distribucio = s.nextInt();
             }
-            contribucio = importPendent.divide(new BigDecimal(numPagadors + 1 - valorsAssignats), 2, RoundingMode.DOWN);
-            if (distribucio != 2) {
-                valorsAssignats += 1;
+            contribucio = importPendent.divide(new BigDecimal(numPagadors - valorsAssignats), 2, RoundingMode.DOWN);
+            // la contribucio = numPagadors - valors assignats, i la necessitam per quan volguem assignar parts iguals a tots els pagadors
+            // si posam imports manuals, sobre-escrivim el valor cada vegada
+            // si anam per parts iguals, numPagadors i valorsAssignats no canvien, per lo qual sempre tenim el mateix resultat
+            // cada import manual que assignam fa que valors assignats pugi
+            // exemple:
+            // total: 5000
+            // pagador original: 500 -> valorsAssignats: 1
+            // pagadors apart de l'original: 4 (total: 5 pagadors)
+            // queden 4500
+            // assignam manualment 1000 al pagador 2
+            // queden 3500 -> valorsAssignats: 2
+            // parts iguals per els restants
+            // queden 2 pagadors (3 i 4)
+            // part igual per ells: 3500 / (4-2 = 2 
+            if (distribucio != 2) { //si esteim posant valors manuals
+                valorsAssignats += 1; //sumam valors assignats (per que la part restant seguesqui correcta)
                 System.out.println("Pendent per pagar: " + importPendent);
                 System.out.println("Quin es l'import que paga " + u.getFullName() + "?");
                 contribucio = new BigDecimal(s.nextFloat());
-                importPendent = importPendent.subtract(contribucio);
+                importPendent = importPendent.subtract(contribucio); //actualitzam import pendent
             }
             pagadors[i + 1] = new Pagador(contribucio, u, this, false);
         }
+        PagadorDAO pDAO = new PagadorDAO(em);
         for (Pagador pagador : pagadors) {
             pDAO.create(pagador); //recorresc tot l'array i afegesc tots els pagadors
         }
@@ -197,8 +238,8 @@ public class Despesa implements Serializable {
     public void mostrarPart(Usuari u) {
         List<Pagador> l = this.getPagadorList();
         Object pagadors[] = l.toArray(); //ho convertesc a un array
-        for (int i = 0; i < pagadors.length; i++) {
-            Pagador p = (Pagador) pagadors[i];
+        for (Object pagador : pagadors) {
+            Pagador p = (Pagador) pagador;
             if (p.getUsuari().getCorreu().equals(u.getCorreu())) {
                 System.out.println(this);
                 System.out.print("La teva part és: " + p.getContribucio());
@@ -214,8 +255,8 @@ public class Despesa implements Serializable {
     public void mostrarPartPendent(Usuari u) {
         List<Pagador> l = this.getPagadorList();
         Object pagadors[] = l.toArray(); //ho convertesc a un array
-        for (int i = 0; i < pagadors.length; i++) {
-            Pagador p = (Pagador) pagadors[i];
+        for (Object pagador : pagadors) {
+            Pagador p = (Pagador) pagador;
             if (p.getUsuari().getCorreu().equals(u.getCorreu())) {
                 if (!p.haPagat()) {
                     System.out.println(this);

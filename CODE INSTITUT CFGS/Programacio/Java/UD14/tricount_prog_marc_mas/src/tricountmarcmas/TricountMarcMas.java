@@ -31,8 +31,11 @@ public class TricountMarcMas {
         System.setOut(new PrintStream(System.out, true, "UTF8"));
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("tricount_prog_marc_masPU");
         EntityManager em = emf.createEntityManager();
+        // aquestes variables no son necessaries per res, pero a vegades cridar mètodes estàtics pot fallar, i instanciar-les una vegada ho soluciona
+        UsuariDAO uDAO = new UsuariDAO(emf);
+        GrupDAO gDAO = new GrupDAO(emf);
+        DespesaDAO dDAO = new DespesaDAO(emf);
         Scanner s = new Scanner(System.in);
-
         int opcio = 0;
         while (opcio > -1) {
             System.out.println("Menús:");

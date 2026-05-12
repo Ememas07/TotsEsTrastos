@@ -7,6 +7,8 @@ package Usuaris;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
@@ -114,6 +116,11 @@ public class Usuari implements Serializable {
         String llinatge2 = s.nextLine();
         System.out.println("Quin es el seu IBAN?");
         String iban = s.nextLine();
+        while (!ibanValid(iban)) { 
+            System.out.println("Introdueixi un IBAN vàlid!");
+            System.out.println("Format: 2 lletres, de 4 a 30 nombres");
+            iban = s.nextLine();
+        }
         return new Usuari(correu, alias, nom, llinatge1, llinatge2, iban);
     }
 
@@ -179,7 +186,7 @@ public class Usuari implements Serializable {
     }
 
     public static Usuari obtenirUsuariConsola(Scanner s, EntityManager em) {
-        s.nextLine(); //buidam el búfer de scanner
+        // s.nextLine(); //buidam el búfer de scanner
         System.out.println("Introdueix el correu de l'usuari");
         String correu = s.next();
         Usuari u = UsuariDAO.find(correu, em);
@@ -245,6 +252,12 @@ public class Usuari implements Serializable {
         return u != null;
     }
 
+    public static boolean ibanValid(String iban){
+        Pattern p = Pattern.compile("^[A-z]{2}[0-9]{3,30}");
+        Matcher m = p.matcher(iban);
+        return m.find();
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -269,8 +282,7 @@ public class Usuari implements Serializable {
 
     public void printFull() {
         System.out.println("Correu: " + correu);
-        System.out.println("Nom: " + nom);
-        System.out.println("Llinatges: " + llinatge1 + " " + llinatge2);
+        System.out.println("Nom Complet: " + nom + " " + llinatge1 + " " + " " + llinatge2);
         System.out.println("Alias: " + alias);
         System.out.println("IBAN: " + iban);
     }
