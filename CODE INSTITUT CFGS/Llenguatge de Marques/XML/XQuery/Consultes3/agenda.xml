@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE agenda>
+<agenda>
+    <titular>
+        <nomCognoms>
+            <nom>Ángel</nom>
+            <cognoms>Beltrán Cardona</cognoms>
+        </nomCognoms>
+        <adreça>
+            <carrer>Mayor, 2, 3r A</carrer>
+            <localitat>Arévalo</localitat>
+            <cp>05200</cp>
+        </adreça>
+        <telefons>
+            <mobil>670898765</mobil>
+            <fix>920124567</fix>
+            <feina>623973456</feina>
+        </telefons>
+    </titular>
+    <contactes>
+        <persona id="01">
+            <nomCognoms>
+                <nom>Bernat</nom>
+                <cognoms>Casas Darín</cognoms>
+            </nomCognoms>
+            <adreça>
+                <carrer>Menor, 43, 2n B</carrer>
+                <localitat>Solsona</localitat>
+                <cp>25280</cp>
+            </adreça>
+            <telefons>
+                <mobil>626123123</mobil>
+            </telefons>
+        </persona>
+        <persona id="02">
+            <nomCognoms>
+                <nom>Consuelo</nom>
+                <cognoms>Durán Echave</cognoms>
+            </nomCognoms>
+            <adreça>
+                <carrer>Acacias, 5, 7è C</carrer>
+                <localitat>Cádiz</localitat>
+                <cp>11007</cp>
+            </adreça>
+            <telefons>
+                <mobil>600987456</mobil>
+                <fix>956423333</fix>
+            </telefons>
+        </persona>
+        <persona id="03">
+            <nomCognoms>
+                <nom>David</nom>
+                <cognoms>Echevarría Fernandez</cognoms>
+            </nomCognoms>
+            <adreça>
+                <carrer>Milagro, 47</carrer>
+                <localitat>Almendralejo</localitat>
+                <cp>06200</cp>
+            </adreça>
+            <telefons>
+                <mobil>622564343</mobil>
+                <fix>924687974</fix>
+                <feina>600899234</feina>
+            </telefons>
+        </persona>
+        <persona id="04">
+            <nomCognoms>
+                <nom>Elena</nom>
+                <cognoms>Echevarría Gómez</cognoms>
+            </nomCognoms>
+            <adreça>
+                <carrer>Iglesia, 7</carrer>
+                <localitat>Almendralejo</localitat>
+                <cp>06200</cp>
+            </adreça>
+            <telefons>
+                <mobil>622564343</mobil>
+                <fix>924687974</fix>
+                <feina>600899234</feina>
+            </telefons>
+        </persona>
+        <persona id="05">
+            <nomCognoms>
+                <nom>Luis</nom>
+                <cognoms>Durán Gómez</cognoms>
+            </nomCognoms>
+            <adreça>
+                <carrer>Milagro, 4</carrer>
+                <localitat>Solsona</localitat>
+                <cp>06200</cp>
+            </adreça>
+            <telefons>
+                <mobil>626554243</mobil>
+                <feina>602898234</feina>
+            </telefons>
+        </persona>
+    </contactes>
+</agenda>
