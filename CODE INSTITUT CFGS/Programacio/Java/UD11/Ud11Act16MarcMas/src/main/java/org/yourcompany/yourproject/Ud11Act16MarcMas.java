@@ -25,7 +25,7 @@ package org.yourcompany.yourproject;
  * 7. Filtrar per preu. Donar l'opció d'escriure només preu mínim, només preu
  * màxim o articles entre preu mínim i preu màxim
  *
- *  *8. Sortir
+ * 8. Sortir
  *
  * @author Marc Mas
  */

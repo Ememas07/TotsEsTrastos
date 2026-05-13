@@ -24,9 +24,8 @@ public class Ud11Act3MarcMas {
     public static void main(String[] args) {
         Contenidor<Integer> contenidor = new Contenidor();
         Scanner s = new Scanner(System.in);
-        System.out.println("Introdueixi nombres enters per omplir la pila, Introdueixi un nombre negatiu per atura");
-        int n = s.nextInt();
-        contenidor.push(n);
+        System.out.println("Introdueixi nombres enters per omplir la pila, Introdueixi un nombre negatiu per aturar");
+        int n = 1;
         while (n > 0) {
             n = s.nextInt();
             if (n > 0) {

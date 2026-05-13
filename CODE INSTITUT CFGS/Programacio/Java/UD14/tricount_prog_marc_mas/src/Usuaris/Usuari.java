@@ -106,6 +106,11 @@ public class Usuari implements Serializable {
             System.out.println("Introdueix un correu que no estigui present!");
             correu = s.nextLine();
         }
+        while (!Usuari.correuValid(correu)) {
+            System.out.println("El correu introduit no es vàlid!");
+            System.out.println("Introdueix un correu vàlid");
+            correu = s.nextLine();
+        }
         System.out.println("Quin es el seu nom d'usuari?");
         String alias = s.nextLine();
         System.out.println("Quin es el seu nom");
@@ -116,7 +121,7 @@ public class Usuari implements Serializable {
         String llinatge2 = s.nextLine();
         System.out.println("Quin es el seu IBAN?");
         String iban = s.nextLine();
-        while (!ibanValid(iban)) { 
+        while (!ibanValid(iban)) {
             System.out.println("Introdueixi un IBAN vàlid!");
             System.out.println("Format: 2 lletres, de 4 a 30 nombres");
             iban = s.nextLine();
@@ -252,9 +257,15 @@ public class Usuari implements Serializable {
         return u != null;
     }
 
-    public static boolean ibanValid(String iban){
+    public static boolean ibanValid(String iban) {
         Pattern p = Pattern.compile("^[A-z]{2}[0-9]{3,30}");
         Matcher m = p.matcher(iban);
+        return m.find();
+    }
+
+    public static boolean correuValid(String correu) {
+        Pattern p = Pattern.compile("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+        Matcher m = p.matcher(correu);
         return m.find();
     }
 
