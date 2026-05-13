@@ -5,7 +5,7 @@
 package org.yourcompany.yourproject;
 
 /**
- *
+ * Implementa l'activitat anterior amb mètodes globals
  * @author Marc Mas
  */
 public class Ud11Act7MarcMas {

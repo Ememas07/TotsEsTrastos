@@ -6,6 +6,16 @@ package org.yourcompany.yourproject;
 import java.util.Scanner;
 
 /**
+ * Definir la interfície Pila amb paràmetre genèrics. A continuació implementar
+ * la interfície Pila genèrica en la classe Contenidor
+ *
+ * Per últim, escriure un programa on s'empri un objecte contenidor com a pila.
+ *
+ * Dins la pila apilem nombres enters llegits del teclat fins que s'hi
+ * introdueixi un nombre negatiu
+ *
+ * Després, mitjançant un bucle es desapilen tots els nombres fins que la pila
+ * sigui buida i els mostrem per consola.
  *
  * @author Marc Mas
  */
@@ -19,7 +29,9 @@ public class Ud11Act3MarcMas {
         contenidor.push(n);
         while (n > 0) {
             n = s.nextInt();
-            contenidor.push(n);
+            if (n > 0) {
+                contenidor.push(n);
+            }
         }
         while (!contenidor.esBuida()) {
             Integer num = contenidor.pop();

@@ -4,6 +4,24 @@
 package org.yourcompany.yourproject;
 
 /**
+ * Implementar, amb tipus genèrics, la classe Contenidor, on podrem guardar
+ * tants objectes com desitjem.
+ *
+ * Per a això utilitzarem una taula, que inicialment tindrà tamany zero i
+ * s'anirà redimensionant segons afegim o esborrem elements.
+ *
+ * La classe, a més del constructor i el mètode toString(), tindrà els següents
+ * mètodes:
+ *
+ * void insertarAlPrincipi(T nou)
+ *
+ * void insertarAlFinal(T nou)
+ *
+ * T extreureDelPrincipi()
+ *
+ * T extreureDelFinal()
+ *
+ * void ordenar()
  *
  * @author Marc Mas
  */
