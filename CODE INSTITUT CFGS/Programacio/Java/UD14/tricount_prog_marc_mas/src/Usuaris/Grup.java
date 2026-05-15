@@ -243,9 +243,13 @@ public class Grup implements Serializable {
     }
 
     public void mostrarDespesesPerUsuari() {
-        List<Usuari> llistaUsuaris = this.getUsuariList();
-        List<Despesa> llistaDespeses = this.getDespesaList();
-
+        List<Usuari> lUsuaris = this.getUsuariList();
+        List<Despesa> lDespeses = this.getDespesaList();
+        Object[] despeses = lDespeses.toArray();
+        Object[] usuaris = lUsuaris.toArray();
+        for (int i = 0; i < despeses.length - 1; i++) {
+            Despesa d = (Despesa) despeses[i];
+        }
     }
 
     @Override
