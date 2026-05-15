@@ -5,6 +5,7 @@
 package Usuaris;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
@@ -98,11 +99,11 @@ public class Grup implements Serializable {
         s.nextLine(); //buidam el búfer de scanner
         GrupDAO gDAO = new GrupDAO(em);
         System.out.println("Introdueix la id del grup");
-        Grup g = null;
+        Grup g = null; //inicializam com a null
         while (g == null) {
-            int idGrup = s.nextInt();
-            g = GrupDAO.find(idGrup);
-            if (g == null) {
+            int idGrup = s.nextInt(); //agafam la id del grup
+            g = GrupDAO.find(idGrup); // assignam el grup que trobem a la variable, si no el trobam serà null
+            if (g == null) { //mostram un error per consola
                 System.out.println("El grup introduit no existeix!");
                 System.out.println("Introdueix una id de grup valida");
             }
@@ -121,8 +122,8 @@ public class Grup implements Serializable {
     public void afegirUsuaris(Scanner s, EntityManager em) {
         String correu = "";
         s.nextLine(); //per resetejar scanner
-        while (!correu.equals("Atura")) {
-            System.out.println("Introduint Usuaris al grup: " + this.getId());
+        while (!correu.equals("Atura")) { //mentres no introduesqui "atura", afegirem usuaris
+            System.out.println("Introduint Usuaris al grup: " + this.getId()); //mostram l'id del grup al que esteim afegint
             this.veureUsuaris();
             System.out.println("Per aturar d'introduir, escrigui \"Atura\"");
             System.out.println("Introdueixi el correu de l'usuari");
@@ -135,11 +136,11 @@ public class Grup implements Serializable {
 
     public void afegirUsuari(String mailUsuari, EntityManager em) {
         List<Usuari> usuarisAntics = this.getUsuariList();
-        Usuari u = Usuari.obtenirUsuari(mailUsuari);
-        if (usuarisAntics.contains(u)) {
+        Usuari u = Usuari.obtenirUsuari(mailUsuari); //retornarà null i un missatge per consola si l'usuari no és valid
+        if (usuarisAntics.contains(u)) { //comprovam si la llista d'usuari ja conté l'usuari que intentam agregar
             System.out.println("L'usuari ja està al grup!");
         } else {
-            if (u != null) {
+            if (u != null) { //si l'usuari és vàlid, i no està al grup, l'afegim al grup
                 usuarisAntics.add(u);
                 this.setUsuariList(usuarisAntics);
                 GrupDAO gDAO = new GrupDAO(em);
@@ -170,7 +171,7 @@ public class Grup implements Serializable {
         } else {
             System.out.println("Despeses del grup:");
             for (int i = 0; i < despeses.length; i++) {
-                System.out.println((Despesa) despeses[i]); //imprimesc tots els usuaris del grup
+                System.out.println((Despesa) despeses[i]); //imprimesc totes les despeses
             }
         }
     }
@@ -196,7 +197,7 @@ public class Grup implements Serializable {
     }
 
     public void mostrarDespesesPerCategoria(EntityManager em) {
-        String jpql = "SELECT * FROM mostrarDespesesCategoria(?)";
+        String jpql = "SELECT * FROM mostrarDespesesCategoriaGrup(?)";
         Query q = em.createNativeQuery(jpql).setParameter(1, this.getId());
         List<Object> l = q.getResultList(); // mirar
         Object[] files = l.toArray();
@@ -217,7 +218,7 @@ public class Grup implements Serializable {
     }
 
     public void mostrarDespesesPerUsuari(EntityManager em) {
-        String jpql = "SELECT * FROM mostrarDespesesUsuari(?)";
+        String jpql = "SELECT * FROM mostrarDespesesUsuarisGrup(?)";
         Query q = em.createNativeQuery(jpql).setParameter(1, this.getId());
         List<Object> l = q.getResultList();
         Object[] files = l.toArray();
@@ -232,7 +233,7 @@ public class Grup implements Serializable {
             // Després, com "columnes" és un array amb les 3 columnes, faig un cast de objecte a array de objectes
             // i ho assigna a la variable c (columna)
             // despres faig un print, 0 es el recaudador, 1 el debtor, 2 la quantitat, per com está la funció a PostgresQL
-            System.out.println("Usuari" + c[0] + " Import Gastat: " + c[1] + " €");
+            System.out.println("L'usuari " + c[0] + " ha Gastat: " + c[1] + " €");
         }
     }
 
@@ -258,7 +259,7 @@ public class Grup implements Serializable {
 
     @Override
     public String toString() {
-        return "tricountmarcmas.Grup[ id=" + id + " ]";
+        return "Grup[id=" + id + "Data creacio: " + datacreacio + "]";
     }
 
     public Integer getId() {

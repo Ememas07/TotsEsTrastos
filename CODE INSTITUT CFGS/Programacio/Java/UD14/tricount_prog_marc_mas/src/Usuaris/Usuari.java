@@ -5,6 +5,7 @@
 package Usuaris;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -101,12 +102,12 @@ public class Usuari implements Serializable {
         s.nextLine(); //buidam el búfer de scanner
         System.out.println("Quin es el seu correu?");
         String correu = s.nextLine();
-        while (Usuari.correuExisteix(correu)) {
+        while (Usuari.correuExisteix(correu)) { //si el correu ja existeix, demanam el correu un altre vegada
             System.out.println("El correu introduit ja està a la base de dades!");
             System.out.println("Introdueix un correu que no estigui present!");
             correu = s.nextLine();
         }
-        while (!Usuari.correuValid(correu)) {
+        while (!Usuari.correuValid(correu)) { //si falla la validacio de regex, el tornam a demanar
             System.out.println("El correu introduit no es vàlid!");
             System.out.println("Introdueix un correu vàlid");
             correu = s.nextLine();
@@ -121,7 +122,7 @@ public class Usuari implements Serializable {
         String llinatge2 = s.nextLine();
         System.out.println("Quin es el seu IBAN?");
         String iban = s.nextLine();
-        while (!ibanValid(iban)) {
+        while (!ibanValid(iban)) { //fa una validacio de regex per validar l'iban
             System.out.println("Introdueixi un IBAN vàlid!");
             System.out.println("Format: 2 lletres, de 4 a 30 nombres");
             iban = s.nextLine();
@@ -129,34 +130,18 @@ public class Usuari implements Serializable {
         return new Usuari(correu, alias, nom, llinatge1, llinatge2, iban);
     }
 
-    public void mostrarDespeses() {
+    public void mostrarDespeses(boolean nomesPendents) {
         List<Pagador> l = this.getPagadorList(); //agaf tots els pagadors que pengen de l'usuari
         Object pagadors[] = l.toArray(); //ho convertesc a un array
         if (pagadors.length == 0) {
             System.out.println("No has fet cap despesa");
         } else {
             System.out.println("Formes part de les seguents despeses: ");
-            for (Object pagador : pagadors) { //per cada element pagador, agaf la seva despesa i deman la part de l'usuari d'aquella despesa
+            for (Object pagador : pagadors) {
+                //per cada element pagador, agaf la seva despesa i deman la part de l'usuari d'aquella despesa
                 Pagador p = (Pagador) pagador;
                 Despesa d = p.getDespesa();
-                d.mostrarPart(this);
-            }
-        }
-    }
-
-    public void mostrarDespesesPendents() {
-        if (teDespesesPendents()) {
-            List<Pagador> l = this.getPagadorList(); //agaf tots els pagadors que pengen de l'usuari
-            Object pagadors[] = l.toArray(); //ho convertesc a un array
-            if (pagadors.length == 0) {
-                System.out.println("No tens despeses pendents!");
-            } else {
-                System.out.println("Formes part de les seguents despeses: ");
-                for (Object pagador : pagadors) { //per cada element pagador, agaf la seva despesa i deman la part pendent de l'usuari d'aquella despesa
-                    Pagador p = (Pagador) pagador;
-                    Despesa d = p.getDespesa();
-                    d.mostrarPartPendent(this);
-                }
+                d.mostrarPart(this, nomesPendents);
             }
         }
     }
@@ -292,10 +277,27 @@ public class Usuari implements Serializable {
     }
 
     public void printFull() {
-        System.out.println("Correu: " + correu);
+        System.out.println("Correu: " + correuCensurat());
         System.out.println("Nom Complet: " + nom + " " + llinatge1 + " " + " " + llinatge2);
         System.out.println("Alias: " + alias);
-        System.out.println("IBAN: " + iban);
+        System.out.println("IBAN: " + ibanCensurat());
+    }
+
+    public String correuCensurat() {
+        String correuSeparat[] = this.correu.split("@");
+        String correuCensurat = "";
+        for (int i = 0; i < correuSeparat.length; i++) {
+            String part1 = correuSeparat[i].substring(0, 3);
+            String part2 = correuSeparat[i].substring(3, correuSeparat[i].length()).replaceAll("[A-z]", "*");
+            correuCensurat += part1 + part2;
+        }
+        return correuCensurat;
+    }
+
+    public String ibanCensurat() {
+        String part1 = iban.substring(0, 4);
+        String part2 = iban.substring(4, iban.length()).replaceAll("[0-9]", "*");
+        return part1 + part2;
     }
 
     public String getFullName() {

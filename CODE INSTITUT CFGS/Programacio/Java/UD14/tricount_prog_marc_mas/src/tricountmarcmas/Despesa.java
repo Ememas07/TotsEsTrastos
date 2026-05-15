@@ -235,32 +235,24 @@ public class Despesa implements Serializable {
         this.actualitzarImport(em);
     }
 
-    public void mostrarPart(Usuari u) {
+    public void mostrarPart(Usuari u, boolean nomesPendents) {
         List<Pagador> l = this.getPagadorList();
         Object pagadors[] = l.toArray(); //ho convertesc a un array
         for (Object pagador : pagadors) {
             Pagador p = (Pagador) pagador;
             if (p.getUsuari().getCorreu().equals(u.getCorreu())) {
                 System.out.println(this);
-                System.out.print("La teva part és: " + p.getContribucio());
-                if (p.haPagat()) {
-                    System.out.println("(Pagada)");
+                if (nomesPendents == true) {
+                    if (!p.haPagat()) {
+                        System.out.println("La teva part és: " + p.getContribucio());
+                    }
                 } else {
-                    System.out.println("(No Pagada)");
-                }
-            }
-        }
-    }
-
-    public void mostrarPartPendent(Usuari u) {
-        List<Pagador> l = this.getPagadorList();
-        Object pagadors[] = l.toArray(); //ho convertesc a un array
-        for (Object pagador : pagadors) {
-            Pagador p = (Pagador) pagador;
-            if (p.getUsuari().getCorreu().equals(u.getCorreu())) {
-                if (!p.haPagat()) {
-                    System.out.println(this);
-                    System.out.println("La teva part és: " + p.getContribucio());
+                    System.out.print("La teva part és: " + p.getContribucio());
+                    if (p.haPagat()) {
+                        System.out.println("(Pagada)");
+                    } else {
+                        System.out.println("(No Pagada)");
+                    }
                 }
             }
         }
@@ -270,7 +262,7 @@ public class Despesa implements Serializable {
         s.nextLine(); //buidam el búfer de scanner
         Usuari u = Usuari.obtenirUsuariConsola(s, em);
         if (u.teDespesesPendents()) {
-            u.mostrarDespesesPendents();
+            u.mostrarDespeses(true);
             Despesa d = Despesa.obtenirDespesaConsola(s);
             d.marcarPagament(u, s, em);
         }
