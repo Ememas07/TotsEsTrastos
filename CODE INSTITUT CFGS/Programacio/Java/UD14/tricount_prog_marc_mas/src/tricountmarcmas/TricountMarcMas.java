@@ -14,6 +14,7 @@ import javax.persistence.Persistence;
 
 import Usuaris.Grup;
 import Usuaris.GrupDAO;
+import Usuaris.PagadorDAO;
 import Usuaris.Usuari;
 import Usuaris.UsuariDAO;
 
@@ -32,9 +33,7 @@ public class TricountMarcMas {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("tricount_prog_marc_masPU"); //cream un entityManagerFactory amb l'unitat de persistència ja creada
         EntityManager em = emf.createEntityManager(); //cream un entityManager per passar-lo a mètodes que el necessitin
         // cream els DAO, ja que a vegades cridar els seus mètodes estàtics pot fallar si no hi ha cap instància creada, ja que el seu EntityManager seria null
-        UsuariDAO uDAO = new UsuariDAO(emf);
-        GrupDAO gDAO = new GrupDAO(emf);
-        DespesaDAO dDAO = new DespesaDAO(emf);
+        setEntityManagers(em);
         Scanner s = new Scanner(System.in); //cream un scanner per poder demanar a l'usuari coses per consola
         int opcio = 0;
         while (opcio > -1) { //si introduim un nombre negatiu, sortirem del bucle
@@ -46,19 +45,20 @@ public class TricountMarcMas {
             opcio = s.nextInt(); //agafam opcio per consola
             switch (opcio) {
                 case 1 -> {
-                    menuUsuaris(s, em, uDAO);
+                    menuUsuaris(s, em);
                 }
                 case 2 -> {
-                    menuGrups(s, em, gDAO);
+                    menuGrups(s, em);
                 }
                 case 3 -> {
-                    menuDespeses(s, em, dDAO);
+                    menuDespeses(s, em);
                 }
             }
         }
     }
 
-    public static void menuUsuaris(Scanner s, EntityManager em, UsuariDAO uDAO) {
+    public static void menuUsuaris(Scanner s, EntityManager em) {
+        UsuariDAO uDAO = new UsuariDAO(em);
         int opcio = 0;
         while (opcio > -1) { //-1 tornarà enrere
             System.out.println("Menú Usuaris:");
@@ -66,6 +66,7 @@ public class TricountMarcMas {
             System.out.println("2: Assignar grups a un usuari");
             System.out.println("3: Consultar grups d'un usuari");
             System.out.println("4: Consultar dades personals d'un usuari");
+            System.out.println("5: Eliminar un usuari");
             System.out.println("-1: Tornar Enrere");
             opcio = s.nextInt();
             switch (opcio) {
@@ -79,7 +80,7 @@ public class TricountMarcMas {
                     Usuari u = Usuari.obtenirUsuariConsola(s, em);
                     u.afegirGrups(s, em);
                 }
-                case 3 ->{
+                case 3 -> {
                     Usuari u = Usuari.obtenirUsuariConsola(s, em);
                     u.veureGrups();
                 }
@@ -87,11 +88,17 @@ public class TricountMarcMas {
                     Usuari u = Usuari.obtenirUsuariConsola(s, em);
                     u.printFull();
                 }
+                case 5 -> {
+                    Usuari u = Usuari.obtenirUsuariConsola(s, em);
+                    uDAO.destroy(u);
+                    System.out.println("L'usuari " + u + " s'ha eliminat amb èxit");
+                }
             }
         }
     }
 
-    public static void menuGrups(Scanner s, EntityManager em, GrupDAO gDAO) {
+    public static void menuGrups(Scanner s, EntityManager em) {
+        GrupDAO gDAO = new GrupDAO(em);
         int opcio = 0;
         while (opcio > -1) {
             System.out.println("Menú Grups:");
@@ -102,6 +109,7 @@ public class TricountMarcMas {
             System.out.println("5: Veure deutes entre usuaris");
             System.out.println("6: Veure despeses per categoria");
             System.out.println("7: Veure despeses per usuari");
+            System.out.println("8: Eliminar un grup");
             System.out.println("-1: Tornar Enrere");
             opcio = s.nextInt();
             switch (opcio) {
@@ -116,7 +124,6 @@ public class TricountMarcMas {
                     g.afegirUsuaris(s, em);
                 }
                 case 3 -> {
-                    s.nextLine();
                     Grup g = Grup.obtenirGrupConsola(s, em);
                     g.veureUsuaris();
                 }
@@ -136,11 +143,17 @@ public class TricountMarcMas {
                     Grup g = Grup.obtenirGrupConsola(s, em);
                     g.mostrarDespesesPerUsuari(em);
                 }
+                case 8 -> {
+                    Grup g = Grup.obtenirGrupConsola(s, em);
+                    gDAO.destroy(g);
+                    System.out.println("El grup " + g + " s'ha eliminat amb exit");
+                }
             }
         }
     }
 
-    public static void menuDespeses(Scanner s, EntityManager em, DespesaDAO dDAO) {
+    public static void menuDespeses(Scanner s, EntityManager em) {
+        DespesaDAO dDAO = new DespesaDAO(em);
         int opcio = 0;
         while (opcio > -1) {
             System.out.println("Menú Despeses:");
@@ -172,8 +185,19 @@ public class TricountMarcMas {
                     Grup g = Grup.obtenirGrupConsola(s, em);
                     g.mostrarDespesesPerCategoria(em);
                 }
+                case 6 -> {
+                    Despesa d = Despesa.obtenirDespesaConsola(s);
+                    dDAO.destroy(d);
+                }
             }
         }
+    }
+
+    public static void setEntityManagers(EntityManager em) {
+        UsuariDAO.setEntityManager(em);
+        GrupDAO.setEntityManager(em);
+        DespesaDAO.setEntityManager(em);
+        PagadorDAO.setEntityManager(em);
     }
 
 }

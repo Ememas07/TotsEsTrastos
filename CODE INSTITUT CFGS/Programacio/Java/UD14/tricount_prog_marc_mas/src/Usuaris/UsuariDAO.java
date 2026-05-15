@@ -31,11 +31,23 @@ public class UsuariDAO {
         tx.commit(); //i feim commit
     }
 
-    public void edit(Usuari u) {
+    public void updateDatabase() {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         em.flush();
         tx.commit(); //i feim commit
+    }
+    
+    public void destroy(Usuari u) {
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        em.remove(u);
+        tx.commit();
+    }
+    
+     public void destroy(String correu) {
+        Usuari u = UsuariDAO.find(correu);
+        this.destroy(u);
     }
 
     public static Usuari find(String correu) {
@@ -44,5 +56,9 @@ public class UsuariDAO {
     
     public static Usuari find(String correu, EntityManager em){
         return em.find(Usuari.class, correu);
+    }
+    
+    public static void setEntityManager(EntityManager e){
+        em = e;
     }
 }

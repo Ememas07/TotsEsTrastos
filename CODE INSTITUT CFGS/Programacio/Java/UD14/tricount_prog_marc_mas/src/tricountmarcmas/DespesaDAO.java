@@ -4,6 +4,8 @@
  */
 package tricountmarcmas;
 
+import Usuaris.Usuari;
+import Usuaris.UsuariDAO;
 import java.io.Serializable;
 
 import javax.persistence.EntityManager;
@@ -33,18 +35,29 @@ public class DespesaDAO implements Serializable {
         tx.commit(); //i feim commit
     }
 
-    public void edit(Despesa d) {
+    public void updateDatabase() {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         em.flush();
         tx.commit(); //i feim commit
     }
 
+    public void destroy(Despesa d) {
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        em.remove(d);
+        tx.commit();
+    }
+
     public static Despesa find(int id) {
-        return em.find(Despesa.class,id);
+        return em.find(Despesa.class, id);
     }
 
     public static Despesa find(int id, EntityManager em) {
         return em.find(Despesa.class, id);
+    }
+    
+    public static void setEntityManager(EntityManager e){
+        em = e;
     }
 }

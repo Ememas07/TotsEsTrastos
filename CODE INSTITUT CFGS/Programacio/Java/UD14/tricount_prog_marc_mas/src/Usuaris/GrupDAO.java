@@ -31,18 +31,34 @@ public class GrupDAO {
         tx.commit();
     }
 
-    public void edit(Grup g) {
+    public void updateDatabase() {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         em.flush();
         tx.commit(); //i feim commit
     }
-    
-    public static Grup find(int id){
+
+    public void destroy(Grup g) {
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        em.remove(g);
+        tx.commit();
+    }
+
+    public void destroy(int id) {
+        Grup g = GrupDAO.find(id);
+        this.destroy(g);
+    }
+
+    public static Grup find(int id) {
         return em.find(Grup.class, id);
     }
-    
-    public static Grup find(int id, EntityManager em){
+
+    public static Grup find(int id, EntityManager em) {
         return em.find(Grup.class, id);
+    }
+
+    public static void setEntityManager(EntityManager e) {
+        em = e;
     }
 }

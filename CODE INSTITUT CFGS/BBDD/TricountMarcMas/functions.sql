@@ -1,4 +1,4 @@
--- Active: 1778078067998@@127.0.0.1@5432@TricountMarcMas@public
+-- Active: 1778856311013@@127.0.0.1@5432@TricountMarcMas@public
 CREATE OR REPLACE FUNCTION arrodonir(pagat NUMERIC, total NUMERIC)
 RETURNS NUMERIC AS $$
 DECLARE
@@ -13,7 +13,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE OR REPLACE PROCEDURE assignarPreuPartsIguals(IN preu MONEY,IN despesa INT)
+CREATE OR REPLACE PROCEDURE assignarPreuPartsIguals(IN preu NUMERIC,IN despesa INT)
 LANGUAGE plpgsql 
 AS $$
 DECLARE numPagadors INTEGER;

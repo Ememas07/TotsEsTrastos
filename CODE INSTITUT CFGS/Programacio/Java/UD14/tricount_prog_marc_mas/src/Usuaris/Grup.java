@@ -52,6 +52,8 @@ public class Grup implements Serializable {
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
+    @Column(name = "nom")
+    private String nom;
     @Column(name = "descripcio")
     private String descripcio;
     @Basic(optional = false)
@@ -82,17 +84,20 @@ public class Grup implements Serializable {
         this.descripcio = descripcio;
     }
 
-    public Grup(String descripcio, Date datacreacio) {
+    public Grup(String nom, String descripcio, Date datacreacio) {
+        this.nom = nom;
         this.descripcio = descripcio;
         this.datacreacio = new Date();
     }
 
     public static Grup crearGrupConsola(Scanner s) {
         s.nextLine(); //buidam el búfer de scanner
+        System.out.println("Quin es el nom del grup?");
+        String nom = s.nextLine();
         System.out.println("Introdueix la descripcio del teu grup");
         String descripcio = s.nextLine();
         Date datacreacio = new Date();
-        return new Grup(descripcio, datacreacio);
+        return new Grup(nom, descripcio, datacreacio);
     }
 
     public static Grup obtenirGrupConsola(Scanner s, EntityManager em) {
@@ -144,7 +149,7 @@ public class Grup implements Serializable {
                 usuarisAntics.add(u);
                 this.setUsuariList(usuarisAntics);
                 GrupDAO gDAO = new GrupDAO(em);
-                gDAO.edit(this);
+                gDAO.updateDatabase();
                 System.out.println("S'ha afegit l'usuari " + u.toString() + " al grup " + this.getId());
             }
         }
@@ -178,12 +183,12 @@ public class Grup implements Serializable {
 
     public void mostrarDeutes(EntityManager em) {
         String jpql = "SELECT * FROM mostrarDeutes(?)";
-        Query q = em.createNativeQuery(jpql).setParameter(1, this.getId());
-        List<Object> l = q.getResultList();
+        Query q = em.createNativeQuery(jpql).setParameter(1, this.getId()); //feim la consulta emprant l'id del grup com a parametre
+        List<Object> l = q.getResultList(); // obtenim la llista de resultats
+        Object[] files = l.toArray(); //i ho convertim a array
         if (l.isEmpty()) {
             System.out.println("No hi ha deutes al grup!");
         }
-        Object[] files = l.toArray();
         // Aquesta llista conté dos arrays
         // La llista es converteix a un array (files) que conté un Objecte per cada fila
         for (Object columnes : files) {
@@ -198,9 +203,9 @@ public class Grup implements Serializable {
 
     public void mostrarDespesesPerCategoria(EntityManager em) {
         String jpql = "SELECT * FROM mostrarDespesesCategoriaGrup(?)";
-        Query q = em.createNativeQuery(jpql).setParameter(1, this.getId());
-        List<Object> l = q.getResultList(); // mirar
-        Object[] files = l.toArray();
+        Query q = em.createNativeQuery(jpql).setParameter(1, this.getId()); //feim la consulta emprant l'id del grup com a parametre
+        List<Object> l = q.getResultList(); // obtenim la llista de resultats
+        Object[] files = l.toArray(); //i ho convertim a array
         if (l.isEmpty()) {
             System.out.println("No hi ha despeses al grup!");
         }
@@ -219,9 +224,9 @@ public class Grup implements Serializable {
 
     public void mostrarDespesesPerUsuari(EntityManager em) {
         String jpql = "SELECT * FROM mostrarDespesesUsuarisGrup(?)";
-        Query q = em.createNativeQuery(jpql).setParameter(1, this.getId());
-        List<Object> l = q.getResultList();
-        Object[] files = l.toArray();
+        Query q = em.createNativeQuery(jpql).setParameter(1, this.getId()); //feim la consulta emprant l'id del grup com a parametre
+        List<Object> l = q.getResultList(); // obtenim la llista de resultats
+        Object[] files = l.toArray(); //i ho convertim a array
         if (l.isEmpty()) {
             System.out.println("No hi ha despeses al grup!");
         }
@@ -235,6 +240,12 @@ public class Grup implements Serializable {
             // despres faig un print, 0 es el recaudador, 1 el debtor, 2 la quantitat, per com está la funció a PostgresQL
             System.out.println("L'usuari " + c[0] + " ha Gastat: " + c[1] + " €");
         }
+    }
+
+    public void mostrarDespesesPerUsuari() {
+        List<Usuari> llistaUsuaris = this.getUsuariList();
+        List<Despesa> llistaDespeses = this.getDespesaList();
+
     }
 
     @Override
@@ -259,7 +270,7 @@ public class Grup implements Serializable {
 
     @Override
     public String toString() {
-        return "Grup[id=" + id + "Data creacio: " + datacreacio + "]";
+        return "Grup[id=" + id + "Nom:" + nom + "//// Data creacio: " + datacreacio + "]";
     }
 
     public Integer getId() {

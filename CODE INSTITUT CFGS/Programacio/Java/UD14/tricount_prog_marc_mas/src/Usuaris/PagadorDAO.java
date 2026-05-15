@@ -15,8 +15,8 @@ import javax.persistence.EntityTransaction;
 public class PagadorDAO {
 
     private static EntityManager em;
-    
-    public PagadorDAO(){
+
+    public PagadorDAO() {
     }
 
     public PagadorDAO(EntityManagerFactory emf) {
@@ -33,16 +33,27 @@ public class PagadorDAO {
         em.persist(p);
         tx.commit(); //i feim commit
     }
-    
-    public void edit(Pagador p) {
+
+    public void updateDatabase() {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         em.flush();
         tx.commit(); //i feim commit
     }
 
+    public void destroy(Pagador p) {
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        em.remove(p);
+        tx.commit();
+    }
+
     public static Pagador find(int id) {
         return em.find(Pagador.class, id);
+    }
+
+    public static void setEntityManager(EntityManager e) {
+        em = e;
     }
 
 }

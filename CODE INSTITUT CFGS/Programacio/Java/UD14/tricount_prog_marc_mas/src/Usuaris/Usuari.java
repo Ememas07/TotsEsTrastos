@@ -107,12 +107,12 @@ public class Usuari implements Serializable {
             System.out.println("Introdueix un correu que no estigui present!");
             correu = s.nextLine();
         }
-        while (!Usuari.correuValid(correu)) { //si falla la validacio de regex, el tornam a demanar
+        while (!correuValid(correu)) { //si falla la validacio de regex, el tornam a demanar
             System.out.println("El correu introduit no es vàlid!");
             System.out.println("Introdueix un correu vàlid");
             correu = s.nextLine();
         }
-        System.out.println("Quin es el seu nom d'usuari?");
+        System.out.println("Quin es el seu nom d'usuari?"); //agafam tots els paràmetres per consola
         String alias = s.nextLine();
         System.out.println("Quin es el seu nom");
         String nom = s.nextLine();
@@ -127,7 +127,7 @@ public class Usuari implements Serializable {
             System.out.println("Format: 2 lletres, de 4 a 30 nombres");
             iban = s.nextLine();
         }
-        return new Usuari(correu, alias, nom, llinatge1, llinatge2, iban);
+        return new Usuari(correu, nom, llinatge1, llinatge2, alias, iban);
     }
 
     public void mostrarDespeses(boolean nomesPendents) {
@@ -193,40 +193,37 @@ public class Usuari implements Serializable {
         int idGrup = 1; //per que el bucle s'executi
         s.nextLine(); //per resetejar scanner
         while (idGrup > 0) {
-            System.out.println("Introduint l'usuari " + this.getCorreu() + " a grups: ");
-            this.veureGrups();
+            System.out.println("Introduint l'usuari " + this.getCorreu() + " a grups: "); //mostram quin usuari esteim afegint
+            this.veureGrups(); //mostram els grups actuals de l'usuari
             System.out.println("Per aturar d'introduir, escrigui un nombre negatiu");
-            System.out.println("Introdueixi l'id del grup");
+            System.out.println("Introdueixi l'id del grup"); //demanam l'id del grup
             idGrup = s.nextInt();
-            if (idGrup > 0) {
+            if (idGrup > 0) { //si es positiva, volem afegir un altre grup, aixi que obtenim el grup 
                 Grup g = Grup.obtenirGrup(idGrup, em);
                 while (g == null && idGrup > 0) {
                     System.out.println("Introdueix una id valida!");
                     idGrup = s.nextInt();
                     g = Grup.obtenirGrup(idGrup, em);
                 }
-                if (idGrup > 0 && g != null) {
-                    g.afegirUsuari(correu, em);
-                    this.afegirGrup(g.getId(), em);
-                }
+                g.afegirUsuari(correu, em); //afegim l'usuari al grup, i afegim el grup a l'usuari també (per evitar que no es mostri a la llista)
+                this.afegirGrup(g.getId(), em);
             }
         }
 
     }
 
     public void afegirGrup(int idGrup, EntityManager em) {
-        List<Grup> grupsAntics = this.getGrupList();
-        Grup g = Grup.obtenirGrup(idGrup);
-        grupsAntics.add(g);
-        this.setGrupList(grupsAntics);
-        UsuariDAO uDAO = new UsuariDAO(em);
-        uDAO.edit(this);
+        List<Grup> grupsAntics = this.getGrupList(); //agafam la llista de grups de l'usuari
+        Grup g = Grup.obtenirGrup(idGrup); //trobam el grup amb l'id passat per consola
+        grupsAntics.add(g); //afegim el grup a la llista de grups
+        this.setGrupList(grupsAntics); //actualitazam
+        UsuariDAO uDAO = new UsuariDAO(em); //cridam un DAO i persistim a BBDD
+        uDAO.updateDatabase();
     }
 
     public void veureGrups() {
         List<Grup> l = this.getGrupList(); //agafam la llista de l'usuari
         Object grups[] = l.toArray(); //ho convertesc a un array
-        System.out.println("Llista: " + grups.length);
         if (grups.length == 0) {
             System.out.println("Actualment no pertany a cap grup!");
         } else {
@@ -243,13 +240,21 @@ public class Usuari implements Serializable {
     }
 
     public static boolean ibanValid(String iban) {
-        Pattern p = Pattern.compile("^[A-z]{2}[0-9]{3,30}");
+        Pattern p = Pattern.compile("^[A-Z]{2}[0-9]{4,30}"); //regex que comprova que hi ha dues lletres, i despres entre 4 i 30 numeros
+        // ES30 -> no passa
+        // 300000 -> no passa
+        // ES300603 -> passa
+        // 3000ES -> no passa
         Matcher m = p.matcher(iban);
         return m.find();
     }
 
     public static boolean correuValid(String correu) {
-        Pattern p = Pattern.compile("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+        Pattern p = Pattern.compile("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"); //regex per comprovar que hi ha una paraula, una @, una altra paraula, un . i entre 2 i 4 caràcters
+        // test@gmail.com -> passa
+        // test@gmail -> no passa
+        // test -> no passa
+        // testgmail.com -> no passa
         Matcher m = p.matcher(correu);
         return m.find();
     }
@@ -288,16 +293,14 @@ public class Usuari implements Serializable {
         String correuCensurat = "";
         for (int i = 0; i < correuSeparat.length; i++) {
             String part1 = correuSeparat[i].substring(0, 3);
-            String part2 = correuSeparat[i].substring(3, correuSeparat[i].length()).replaceAll("[A-z]", "*");
-            correuCensurat += part1 + part2;
+            correuCensurat += part1 + "****";
         }
         return correuCensurat;
     }
 
     public String ibanCensurat() {
         String part1 = iban.substring(0, 4);
-        String part2 = iban.substring(4, iban.length()).replaceAll("[0-9]", "*");
-        return part1 + part2;
+        return part1 + "*******";
     }
 
     public String getFullName() {
