@@ -179,6 +179,16 @@ public class Despesa implements Serializable {
         this.setImportpagat(totalPagat); //posam l'import pagat de la despesa com a la suma
         DespesaDAO dDAO = new DespesaDAO(em); //cream un DAO
         dDAO.updateDatabase(); //i editam 
+        actualitzarLlistesPagadors(em);
+    }
+
+    public void actualitzarLlistesPagadors(EntityManager em) { //per assegurar-nos que els usuaris tenen totes les despeses assignades correctament i que no només estàn a BD i no als objectes
+        List<Pagador> l = this.getPagadorList();
+        Object pagadors[] = l.toArray();
+        for (Object pagador : pagadors) { // per cada pagador
+            Pagador p = (Pagador) pagador;
+            p.getUsuari().afegirPagador(p, em); //instanciam el seu usuari i li penjam el pagador nou
+        }
     }
 
     public void assignarPagadorsTeclat(Scanner s, EntityManager em) {
@@ -249,6 +259,7 @@ public class Despesa implements Serializable {
         PagadorDAO pDAO = new PagadorDAO(em);
         for (Pagador pagador : pagadors) {
             pDAO.create(pagador); //recorresc tot l'array i afegesc tots els pagadors
+            this.pagadorList.add(pagador);
         }
         this.actualitzarImport(em);
     }
@@ -373,7 +384,7 @@ public class Despesa implements Serializable {
 
     @Override
     public String toString() {
-        return "Despesa[ id=" + id + " Descripcio: " + descripcio + " Categoria: " + categoria + "Import total: " + importtotal + " ]";
+        return "Despesa[ id=" + id + " Descripcio: " + descripcio + " Categoria: " + categoria + " Import total: " + importtotal + " ]";
     }
 
     public Integer getId() {

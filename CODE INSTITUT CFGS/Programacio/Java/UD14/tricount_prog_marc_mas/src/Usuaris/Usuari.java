@@ -170,6 +170,14 @@ public class Usuari implements Serializable {
         return false;
     }
 
+    public void afegirPagador(Pagador p, EntityManager em) {
+        List<Pagador> llistaPagadors = getPagadorList(); //carregam llista de pagadors
+        llistaPagadors.add(p); //afegim pagador
+        setPagadorList(llistaPagadors); //i setejam
+        UsuariDAO uDAO = new UsuariDAO(em); //cream un DAO
+        uDAO.updateDatabase(); //i editam 
+    }
+
     public static Usuari obtenirUsuari(String correu) {
         Usuari u = UsuariDAO.find(correu);
         if (u == null) {

@@ -3,7 +3,7 @@
 CREATE TABLE usuari (
     correu TEXT PRIMARY KEY,
     nom TEXT NOT NULL,
-    llinatge1 TEXT NOT NULL,
+    llinatge1 TEXT,
     llinatge2 TEXT,
     IBAN TEXT NOT NULL,
     alias TEXT
@@ -13,9 +13,7 @@ CREATE TABLE grup (
     id SERIAL PRIMARY KEY,
     nom TEXT,
     descripcio TEXT,
-    dataCreacio TIMESTAMP(5)
-    WITH
-        TIME ZONE NOT NULL
+    dataCreacio TIMESTAMP(5) WITH TIME ZONE NOT NULL
 )
 
 CREATE TABLE usuariGrup (
@@ -30,15 +28,13 @@ CREATE TABLE despesa (
     id SERIAL PRIMARY KEY,
     idGrup INTEGER NOT NULL,
     pagadorOriginal TEXT NOT NULL,
-    dataDespesa TIMESTAMP(5)
-    WITH
-        TIME ZONE NOT NULL,
-        descripcio TEXT,
-        categoria TEXT,
-        importTotal NUMERIC(10, 2) NOT NULL,
-        importPagat NUMERIC(10, 2),
-        FOREIGN KEY (idGrup) REFERENCES public.grup (id),
-        FOREIGN KEY (pagadorOriginal) REFERENCES public.usuari (correu)
+    dataDespesa TIMESTAMP(5) WITH TIME ZONE NOT NULL,
+    descripcio TEXT,
+    categoria TEXT,
+    importTotal NUMERIC(10, 2) NOT NULL,
+    importPagat NUMERIC(10, 2),
+    FOREIGN KEY (idGrup) REFERENCES public.grup (id),
+    FOREIGN KEY (pagadorOriginal) REFERENCES public.usuari (correu)
 )
 
 CREATE TABLE pagador (
@@ -53,9 +49,7 @@ CREATE TABLE pagador (
 
 CREATE TABLE log(
     id SERIAL PRIMARY KEY,
-    datetime TIMESTAMP(5)
-    WITH
-        TIME ZONE NOT NULL,
-        oldRow TEXT,
-        newRow TEXT
+    datetime TIMESTAMP(5) WITH TIME ZONE NOT NULL,
+    oldRow TEXT,
+    newRow TEXT
 )
