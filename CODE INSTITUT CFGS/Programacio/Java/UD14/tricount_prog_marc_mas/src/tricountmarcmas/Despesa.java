@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
@@ -199,9 +198,8 @@ public class Despesa implements Serializable {
             numPagadors = s.nextInt();
         }
         BigDecimal importPendent = this.getImporttotal(); //import Pendent per pagar a la despesa
-        BigDecimal partsIguals = importPendent.divide(new BigDecimal(numPagadors + 1), 2, RoundingMode.DOWN);
+        BigDecimal contribucio = importPendent.divide(new BigDecimal(numPagadors + 1), 2, RoundingMode.DOWN);
         //dividesc l'import total de la despesa entre els pagadors que hi ha
-        BigDecimal contribucio = partsIguals; //la contribucio sera a parts iguals 
         if (distribucio != 2) { //si la contribucio NO son parts iguals, demanam quan paga el pagador original
             System.out.println("Import total: " + importPendent);
             System.out.println("Quin es l'import que paga " + this.getPagadororiginal().getFullName() + "?");
@@ -288,17 +286,20 @@ public class Despesa implements Serializable {
         for (Object pagador : pagadors) {
             Pagador p = (Pagador) pagador;
             if (p.getUsuari().getCorreu().equals(u.getCorreu())) {
-                System.out.println(this);
-                if (nomesPendents == true) {
-                    if (!p.haPagat()) {
-                        System.out.println("La teva part és: " + p.getContribucio());
+                if (nomesPendents) { //nomes pendents
+                    if (u.teDespesesPendents()) { //mostrarà un missatge si no hi ha despeses pendents
+                        if (!p.haPagat()) {
+                            System.out.println(this);
+                            System.out.println("La teva part és: " + p.getContribucio());
+                        }
                     }
-                } else {
+                } else { //totes
+                    System.out.println(this);
                     System.out.print("La teva part és: " + p.getContribucio());
                     if (p.haPagat()) {
-                        System.out.println("(Pagada)");
+                        System.out.println(" (Pagada)");
                     } else {
-                        System.out.println("(No Pagada)");
+                        System.out.println(" (No Pagada)");
                     }
                 }
             }
@@ -308,7 +309,7 @@ public class Despesa implements Serializable {
     public static void marcarPagament(Scanner s, EntityManager em) {
         s.nextLine(); //buidam el búfer de scanner
         Usuari u = Usuari.obtenirUsuariConsola(s, em);
-        if (u.teDespesesPendents()) {
+        if (u.teDespesesPendents()) { //ens mostra un missatge si no en té
             u.mostrarDespeses(true);
             Despesa d = Despesa.obtenirDespesaConsola(s);
             d.marcarPagament(u, s, em);
@@ -338,14 +339,6 @@ public class Despesa implements Serializable {
         if (!trobat) {
             System.out.println("No s'ha trobat el vostre registre de pagador a la despesa seleccionada!");
         }
-    }
-
-    public static Despesa obtenirDespesa(int idDespesa) {
-        Despesa d = DespesaDAO.find(idDespesa);
-        if (d == null) {
-            System.out.println("Aquesta despesa no s'ha trobat!");
-        }
-        return d;
     }
 
     public static Despesa obtenirDespesaConsola(Scanner s) {
@@ -380,7 +373,7 @@ public class Despesa implements Serializable {
 
     @Override
     public String toString() {
-        return "tricountmarcmas.Despesa[ id=" + id + " Descripcio: " + descripcio + " Categoria: " + categoria + " ]";
+        return "Despesa[ id=" + id + " Descripcio: " + descripcio + " Categoria: " + categoria + "Import total: " + importtotal + " ]";
     }
 
     public Integer getId() {
@@ -419,19 +412,11 @@ public class Despesa implements Serializable {
         return importtotal;
     }
 
-    public BigDecimal getImporttotalBD() {
-        return importtotal;
-    }
-
     public void setImporttotal(BigDecimal importtotal) {
         this.importtotal = importtotal;
     }
 
     public BigDecimal getImportpagat() {
-        return importpagat;
-    }
-
-    public BigDecimal getImportpagatBD() {
         return importpagat;
     }
 

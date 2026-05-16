@@ -5,7 +5,9 @@
 package Usuaris;
 
 import java.io.Serializable;
-import java.util.Arrays;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
@@ -24,7 +26,6 @@ import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
-import javax.persistence.Query;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -37,6 +38,7 @@ import tricountmarcmas.Despesa;
  * @author Marc Mas
  */
 @Entity
+
 @Table(name = "grup")
 @NamedQueries({
     @NamedQuery(name = "Grup.findAll", query = "SELECT g FROM Grup g"),
@@ -102,7 +104,6 @@ public class Grup implements Serializable {
 
     public static Grup obtenirGrupConsola(Scanner s, EntityManager em) {
         s.nextLine(); //buidam el búfer de scanner
-        GrupDAO gDAO = new GrupDAO(em);
         System.out.println("Introdueix la id del grup");
         Grup g = null; //inicializam com a null
         while (g == null) {
@@ -128,7 +129,7 @@ public class Grup implements Serializable {
         String correu = "";
         s.nextLine(); //per resetejar scanner
         while (!correu.equals("Atura")) { //mentres no introduesqui "atura", afegirem usuaris
-            System.out.println("Introduint Usuaris al grup: " + this.getId()); //mostram l'id del grup al que esteim afegint
+            System.out.println("Introduint Usuaris al grup: " + this); //mostram l'id del grup al que esteim afegint
             this.veureUsuaris();
             System.out.println("Per aturar d'introduir, escrigui \"Atura\"");
             System.out.println("Introdueixi el correu de l'usuari");
@@ -150,7 +151,7 @@ public class Grup implements Serializable {
                 this.setUsuariList(usuarisAntics);
                 GrupDAO gDAO = new GrupDAO(em);
                 gDAO.updateDatabase();
-                System.out.println("S'ha afegit l'usuari " + u.toString() + " al grup " + this.getId());
+                System.out.println("S'ha afegit l'usuari " + u + " al grup " + this);
             }
         }
     }
@@ -162,8 +163,8 @@ public class Grup implements Serializable {
             System.out.println("Actualment no hi ha usuaris al grup!");
         } else {
             System.out.println("Usuaris actuals:");
-            for (int i = 0; i < usuaris.length; i++) {
-                System.out.println((Usuari) usuaris[i]); //imprimesc tots els usuaris del grup
+            for (Object usuari : usuaris) {
+                System.out.println((Usuari) usuari); //imprimesc tots els usuaris del grup
             }
         }
     }
@@ -175,80 +176,128 @@ public class Grup implements Serializable {
             System.out.println("Actualment no hi ha despeses al grup!");
         } else {
             System.out.println("Despeses del grup:");
-            for (int i = 0; i < despeses.length; i++) {
-                System.out.println((Despesa) despeses[i]); //imprimesc totes les despeses
+            for (Object despesa : despeses) {
+                System.out.println((Despesa) despesa); //imprimesc totes les despeses
             }
         }
     }
 
-    public void mostrarDeutes(EntityManager em) {
-        String jpql = "SELECT * FROM mostrarDeutes(?)";
-        Query q = em.createNativeQuery(jpql).setParameter(1, this.getId()); //feim la consulta emprant l'id del grup com a parametre
-        List<Object> l = q.getResultList(); // obtenim la llista de resultats
-        Object[] files = l.toArray(); //i ho convertim a array
-        if (l.isEmpty()) {
-            System.out.println("No hi ha deutes al grup!");
+    public void mostrarPagamentsEntreUsuaris(boolean nomesPendents) {
+        boolean hiHaDeutes = false;
+        List<Despesa> lDespeses = this.getDespesaList();
+        Object[] despeses = lDespeses.toArray();
+        List<Usuari> pagadorsOriginals = new ArrayList();
+        for (Object despesa : despeses) { //per cada despesa (del grup)
+            // vaig despesa per despesa i agaf els seus pagadors a una llista
+            Despesa d = (Despesa) despesa;
+            Usuari PO = d.getPagadororiginal(); // PO = PagadorOriginal
+            if (!pagadorsOriginals.contains(PO)) {
+                pagadorsOriginals.add(PO);
+            }
         }
-        // Aquesta llista conté dos arrays
-        // La llista es converteix a un array (files) que conté un Objecte per cada fila
-        for (Object columnes : files) {
-            //Recorresc tot l'array de files, i per cada element, agaf un element i el guard a "columnes" (temporalment)
-            Object[] c = (Object[]) columnes;
-            // Després, com "columnes" és un array amb les 3 columnes, faig un cast de objecte a array de objectes
-            // i ho assigna a la variable c (columna)
-            // despres faig un print, 0 es el recaudador, 1 el debtor, 2 la quantitat, per com está la funció a PostgresQL
-            System.out.println("" + c[1] + " deu " + c[2] + " € a " + c[0]);
+        List<Usuari> lUsuaris = this.getUsuariList(); //agaf tots els usuaris i despeses del grup, les pas a array per iterar
+        Object[] usuaris = lUsuaris.toArray();
+        for (Usuari pagadorOriginal : pagadorsOriginals) {
+            // per cada pagador original
+            for (Object usuari : usuaris) {
+                BigDecimal importPagat = new BigDecimal(0);
+                //hem d'agrup per usuari i pagadorOriginal, aixi que agaf tots els pagadors per després agafar les despeses de cada usuari del grup
+                Usuari u = (Usuari) usuari;
+                if (!u.equals(pagadorOriginal)) { //si el pagador original no som nosaltres
+                    List<Pagador> pagadorsUsuari = u.getPagadorList();
+                    for (Object pagador : pagadorsUsuari) { //per cada despesa, mir si el pagadorOriginal és el que esteim mirant
+                        Pagador p = (Pagador) pagador;
+                        if (p.getDespesa().getPagadororiginal().equals(pagadorOriginal)) {
+                            // agafam la despesa del pagador
+                            // i de la despesa agafam el pagador original
+                            // si el pagador original és el que esteim mirant
+
+                            if ((nomesPendents && !p.haPagat()) || (!nomesPendents && p.haPagat())) {
+                                // si nomes vull pendents i no han pagat
+                                // o les vull totes i han pagat
+                                importPagat = importPagat.add(p.getContribucio());
+                            }
+
+                        }
+                    }
+                    if (!importPagat.equals(new BigDecimal(0))) { //si l'import no es 0
+                        hiHaDeutes = true;
+                        if (nomesPendents) {
+                            System.out.println(u + " deu " + importPagat + " € a " + pagadorOriginal.getFullName());
+                        } else {
+                            System.out.println(u + " ha pagat " + importPagat + " € a " + pagadorOriginal.getFullName());
+                        }
+                    }
+                }
+            }
+        }
+
+        if (!hiHaDeutes) {
+            System.out.println("El grup seleccionat no té deutes entre cap usuari!");
         }
     }
 
-    public void mostrarDespesesPerCategoria(EntityManager em) {
-        String jpql = "SELECT * FROM mostrarDespesesCategoriaGrup(?)";
-        Query q = em.createNativeQuery(jpql).setParameter(1, this.getId()); //feim la consulta emprant l'id del grup com a parametre
-        List<Object> l = q.getResultList(); // obtenim la llista de resultats
-        Object[] files = l.toArray(); //i ho convertim a array
-        if (l.isEmpty()) {
-            System.out.println("No hi ha despeses al grup!");
+    public void mostrarDespesesPerCategoria() {
+        List<Despesa> lDespeses = this.getDespesaList();
+        Object[] despeses = lDespeses.toArray();
+        List<String> categories = new ArrayList();
+        for (Object despesa : despeses) { //anam per totes les despeses
+            Despesa d = (Despesa) despesa;
+            String categoria = d.getCategoria(); //agafam la seva categoria
+            if (!categories.contains(categoria)) { // si l'array de categories NO conté la despesa, l'afegim
+                categories.add(categoria);
+            }
         }
-        // Aquesta llista conté dos arrays
-        // La llista es converteix a un array (files) que conté un Objecte per cada fila
-        for (Object columnes : files) {
-            //Recorresc tot l'array de files, i per cada element, agaf un element i el guard a "columnes" (temporalment)
-            Object[] c = (Object[]) columnes;
-            // Després, com "columnes" és un array amb les 3 columnes, faig un cast de objecte a array de objectes
-            // i ho assigna a la variable c (columna)
-            // despres faig un print, 0 es la categoria, 1 l'import, 2 el %, per com está la funció a PostgresQL
-            System.out.println("Categoria: " + c[0]);
-            System.out.println("Import Gastat " + c[1] + " (" + c[2] + ")");
+        //ara tenim totes les categories a un arrayList, podem anar per totes les categories i anar sumant cada despesa
+        for (int i = 0; i < categories.size(); i++) {
+            BigDecimal importTotal = new BigDecimal(0);
+            for (Object despesa : despeses) { //anam per totes les despeses
+                Despesa d = (Despesa) despesa;
+                if (d.getCategoria().equals(categories.get(i))) { //si la categoria que esteim mirant es igual a la categoria de la despesa, sumam a l'import de la despesa
+                    importTotal = importTotal.add(d.getImportpagat());
+                }
+            }
+            System.out.print("La categoria " + categories.get(i) + " té un total de " + importTotal + " en despeses");
+            System.out.println("(" + (importTotal.divide(totalGastatGrup(), 4, RoundingMode.HALF_EVEN).multiply(new BigDecimal(100))) + "%)");
+            //divideix import total gastat entre total gastat del grup i multiplica per 100
         }
     }
 
-    public void mostrarDespesesPerUsuari(EntityManager em) {
-        String jpql = "SELECT * FROM mostrarDespesesUsuarisGrup(?)";
-        Query q = em.createNativeQuery(jpql).setParameter(1, this.getId()); //feim la consulta emprant l'id del grup com a parametre
-        List<Object> l = q.getResultList(); // obtenim la llista de resultats
-        Object[] files = l.toArray(); //i ho convertim a array
-        if (l.isEmpty()) {
-            System.out.println("No hi ha despeses al grup!");
+    public BigDecimal totalGastatGrup() {
+        BigDecimal importGastat = new BigDecimal(0);
+        List<Despesa> lDespeses = this.getDespesaList();
+        Object[] despeses = lDespeses.toArray();
+        for (Object despesa : despeses) { //anam per totes les despeses
+            Despesa d = (Despesa) despesa;
+            importGastat = importGastat.add(d.getImportpagat());
         }
-        // Aquesta llista conté dos arrays
-        // La llista es converteix a un array (files) que conté un Objecte per cada fila
-        for (Object columnes : files) {
-            //Recorresc tot l'array de files, i per cada element, agaf un element i el guard a "columnes" (temporalment)
-            Object[] c = (Object[]) columnes;
-            // Després, com "columnes" és un array amb les 3 columnes, faig un cast de objecte a array de objectes
-            // i ho assigna a la variable c (columna)
-            // despres faig un print, 0 es el recaudador, 1 el debtor, 2 la quantitat, per com está la funció a PostgresQL
-            System.out.println("L'usuari " + c[0] + " ha Gastat: " + c[1] + " €");
-        }
+        return importGastat;
     }
 
     public void mostrarDespesesPerUsuari() {
-        List<Usuari> lUsuaris = this.getUsuariList();
+        List<Usuari> lUsuaris = this.getUsuariList(); //agaf tots els usuaris i despeses del grup, les pas a array per iterar
+        Object[] usuaris = lUsuaris.toArray();
         List<Despesa> lDespeses = this.getDespesaList();
         Object[] despeses = lDespeses.toArray();
-        Object[] usuaris = lUsuaris.toArray();
-        for (int i = 0; i < despeses.length - 1; i++) {
-            Despesa d = (Despesa) despeses[i];
+        for (Object usuari : usuaris) {
+            //per cada usuari del grup, faré un bucle 
+            BigDecimal importPagat = new BigDecimal(0);
+            Usuari u = (Usuari) usuari; //convertesc objecte a usuari
+            List<Pagador> lPagadorsUsuari = u.getPagadorList(); //agaf tots els pagadors que pengen de l'usuari
+            Object[] pagadorsUsuaris = lPagadorsUsuari.toArray(); //ho convertesc a un array per iterar després
+            for (Object despesa : despeses) { //per cada despesa (del grup)
+                // vaig despesa per despesa i agaf els seus pagadors a una llista
+                Despesa d = (Despesa) despesa;
+                List<Pagador> lPagadorDespesa = d.getPagadorList();
+                for (Object pagadorsUsuari : pagadorsUsuaris) {
+                    // per cada pagador de l'usuari, mir si està a la llista de pagadors de la despesa
+                    Pagador pagadorUsuari = (Pagador) pagadorsUsuari;
+                    if (lPagadorDespesa.contains(pagadorUsuari) && pagadorUsuari.haPagat()) { //si hi està hi han pagat, sum 
+                        importPagat = importPagat.add(pagadorUsuari.getContribucio());
+                    }
+                }
+            }
+            System.out.println("L'usuari " + u + "ha pagat " + importPagat + " €"); //al final del bucle, imprimesc
         }
     }
 
@@ -266,15 +315,12 @@ public class Grup implements Serializable {
             return false;
         }
         Grup other = (Grup) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
+        return !((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id)));
     }
 
     @Override
     public String toString() {
-        return "Grup[id=" + id + "Nom:" + nom + "//// Data creacio: " + datacreacio + "]";
+        return "Grup[id= " + id + " Nom:" + nom + " ]";
     }
 
     public Integer getId() {

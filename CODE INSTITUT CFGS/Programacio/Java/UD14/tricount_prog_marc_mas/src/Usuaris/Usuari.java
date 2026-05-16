@@ -5,7 +5,6 @@
 package Usuaris;
 
 import java.io.Serializable;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -133,15 +132,23 @@ public class Usuari implements Serializable {
     public void mostrarDespeses(boolean nomesPendents) {
         List<Pagador> l = this.getPagadorList(); //agaf tots els pagadors que pengen de l'usuari
         Object pagadors[] = l.toArray(); //ho convertesc a un array
-        if (pagadors.length == 0) {
-            System.out.println("No has fet cap despesa");
-        } else {
-            System.out.println("Formes part de les seguents despeses: ");
+        boolean hiHaDespeses = true;
+        if (pagadors.length == 0) {  //si no existeix cap pagador assignat a l'usuari
+            System.out.println("No formes part de cap despesa!");
+            hiHaDespeses = false;
+        }
+        if (nomesPendents) {
+            if (!this.teDespesesPendents()) { //mostrà un missatge si no hi ha despeses pendents
+                hiHaDespeses = false;
+            }
+        }
+        if (hiHaDespeses) { //si tenim més d'un pagador, i tenim despeses pendents (en cas de que ho haguem especificat), mostram
+            System.out.println("Formes part de les seguents despeses");
             for (Object pagador : pagadors) {
                 //per cada element pagador, agaf la seva despesa i deman la part de l'usuari d'aquella despesa
                 Pagador p = (Pagador) pagador;
                 Despesa d = p.getDespesa();
-                d.mostrarPart(this, nomesPendents);
+                d.mostrarPart((Usuari) this, nomesPendents);
             }
         }
     }
@@ -176,7 +183,6 @@ public class Usuari implements Serializable {
     }
 
     public static Usuari obtenirUsuariConsola(Scanner s, EntityManager em) {
-        // s.nextLine(); //buidam el búfer de scanner
         System.out.println("Introdueix el correu de l'usuari");
         String correu = s.next();
         Usuari u = UsuariDAO.find(correu, em);
@@ -278,7 +284,7 @@ public class Usuari implements Serializable {
 
     @Override
     public String toString() {
-        return "tricountmarcmas.Usuari[ correu=" + correu + " Nom Complet =" + nom + " " + llinatge1 + " " + " " + llinatge2 + "]";
+        return this.getFullName() + "(" + correu + ")";
     }
 
     public void printFull() {
@@ -291,9 +297,8 @@ public class Usuari implements Serializable {
     public String correuCensurat() {
         String correuSeparat[] = this.correu.split("@");
         String correuCensurat = "";
-        for (int i = 0; i < correuSeparat.length; i++) {
-            String part1 = correuSeparat[i].substring(0, 3);
-            correuCensurat += part1 + "****";
+        for (String tros : correuSeparat) {
+            correuCensurat += tros.substring(0, 3) + "****";
         }
         return correuCensurat;
     }

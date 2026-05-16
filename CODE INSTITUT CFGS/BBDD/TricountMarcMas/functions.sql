@@ -32,8 +32,9 @@ WHERE
 END
 $$;
 
+
 CREATE OR REPLACE FUNCTION mostrarDeutesGrup(grup INT)
-RETURNS TABLE(usuariRep VARCHAR(300),usuariDeu VARCHAR(300),quantitat NUMERIC) AS
+RETURNS TABLE(usuariRep TEXT,usuariDeu TEXT,quantitat NUMERIC) AS
 $BODY$
 BEGIN
     RETURN QUERY SELECT pagadororiginal AS usuariRep, idusuari AS usuariDeu , sum(contribucio) AS quantitat 
@@ -48,13 +49,13 @@ $BODY$
 LANGUAGE plpgsql;
 
 CREATE OR REPLACE FUNCTION mostrarDespesesCategoriaGrup(grup INT) 
-RETURNS TABLE (cat varchar(300),import NUMERIC, percent VARCHAR) AS
+RETURNS TABLE (cat TEXT,import NUMERIC, percent TEXT) AS
 $BODY$
 BEGIN
     RETURN QUERY SELECT 
     categoria,
     sumatotal, 
-    TO_CHAR(sumatotal * 100 / SUM(sumatotal) OVER (), 'fm90D00%')::VARCHAR AS percent
+    TO_CHAR(sumatotal * 100 / SUM(sumatotal) OVER (), 'fm90D00%')::TEXT AS percent
     FROM (
         SELECT categoria, SUM(importtotal) AS sumatotal
         FROM despesa
@@ -67,7 +68,7 @@ $BODY$
 LANGUAGE plpgsql;
 
 CREATE OR REPLACE FUNCTION mostrarDespesesUsuarisGrup(grup INT) 
-RETURNS TABLE (usuari varchar(300),import NUMERIC) AS
+RETURNS TABLE (usuari TEXT,import NUMERIC) AS
 $BODY$
 BEGIN
     RETURN QUERY SELECT idusuari, sumatotal
@@ -85,4 +86,4 @@ FROM (
     RETURN;
 END;
 $BODY$
-LANGUAGE plpgsql;
+LANGUAGE plpgsql;       

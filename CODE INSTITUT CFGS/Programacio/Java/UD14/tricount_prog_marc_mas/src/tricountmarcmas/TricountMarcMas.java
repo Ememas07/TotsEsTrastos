@@ -65,8 +65,10 @@ public class TricountMarcMas {
             System.out.println("1: Crear");
             System.out.println("2: Assignar grups a un usuari");
             System.out.println("3: Consultar grups d'un usuari");
-            System.out.println("4: Consultar dades personals d'un usuari");
-            System.out.println("5: Eliminar un usuari");
+            System.out.println("4: Consultar despeses d'un usuari");
+            System.out.println("5: Consultar despeses pendents d'un usuari");
+            System.out.println("6: Consultar dades personals d'un usuari");
+            System.out.println("7: Eliminar un usuari");
             System.out.println("-1: Tornar Enrere");
             opcio = s.nextInt();
             switch (opcio) {
@@ -86,9 +88,17 @@ public class TricountMarcMas {
                 }
                 case 4 -> {
                     Usuari u = Usuari.obtenirUsuariConsola(s, em);
-                    u.printFull();
+                    u.mostrarDespeses(false);
                 }
                 case 5 -> {
+                    Usuari u = Usuari.obtenirUsuariConsola(s, em);
+                    u.mostrarDespeses(true);
+                }
+                case 6 -> {
+                    Usuari u = Usuari.obtenirUsuariConsola(s, em);
+                    u.printFull();
+                }
+                case 7 -> {
                     Usuari u = Usuari.obtenirUsuariConsola(s, em);
                     uDAO.destroy(u);
                     System.out.println("L'usuari " + u + " s'ha eliminat amb èxit");
@@ -107,9 +117,10 @@ public class TricountMarcMas {
             System.out.println("3: Veure usuaris d'un grup");
             System.out.println("4: Veure despeses d'un grup");
             System.out.println("5: Veure deutes entre usuaris");
-            System.out.println("6: Veure despeses per categoria");
-            System.out.println("7: Veure despeses per usuari");
-            System.out.println("8: Eliminar un grup");
+            System.out.println("6: Veure pagaments entre usuaris");
+            System.out.println("7: Veure total gastat per categoria");
+            System.out.println("8: Veure total gastat per usuari");
+            System.out.println("9: Eliminar un grup");
             System.out.println("-1: Tornar Enrere");
             opcio = s.nextInt();
             switch (opcio) {
@@ -133,17 +144,21 @@ public class TricountMarcMas {
                 }
                 case 5 -> {
                     Grup g = Grup.obtenirGrupConsola(s, em);
-                    g.mostrarDeutes(em);
+                    g.mostrarPagamentsEntreUsuaris(true);
                 }
                 case 6 -> {
                     Grup g = Grup.obtenirGrupConsola(s, em);
-                    g.mostrarDespesesPerCategoria(em);
+                    g.mostrarPagamentsEntreUsuaris(false);
                 }
                 case 7 -> {
                     Grup g = Grup.obtenirGrupConsola(s, em);
-                    g.mostrarDespesesPerUsuari(em);
+                    g.mostrarDespesesPerCategoria();
                 }
                 case 8 -> {
+                    Grup g = Grup.obtenirGrupConsola(s, em);
+                    g.mostrarDespesesPerUsuari();
+                }
+                case 9 -> {
                     Grup g = Grup.obtenirGrupConsola(s, em);
                     gDAO.destroy(g);
                     System.out.println("El grup " + g + " s'ha eliminat amb exit");
@@ -159,9 +174,11 @@ public class TricountMarcMas {
             System.out.println("Menú Despeses:");
             System.out.println("1: Crear");
             System.out.println("2: Marcar pagament");
-            System.out.println("3: Mostrar pagaments pendents");
-            System.out.println("4: Mostrar deutes d'un grup");
-            System.out.println("5: Mostrar deutes d'una categoria");
+            System.out.println("3: Mostrar pagaments pendents d'un usuari");
+            System.out.println("4: Mostrar deutes entre usuaris d'un grup");
+            System.out.println("5: Mostrar tots els pagament entre usuaris d'un grup");
+            System.out.println("6: Mostrar total pagat d'un grup a cada categoria");
+            System.out.println("7: Eliminar una despesa");
             System.out.println("-1: Sortir");
             opcio = s.nextInt();
             switch (opcio) {
@@ -179,13 +196,17 @@ public class TricountMarcMas {
                 }
                 case 4 -> {
                     Grup g = Grup.obtenirGrupConsola(s, em);
-                    g.mostrarDeutes(em);
+                    g.mostrarPagamentsEntreUsuaris(true);
                 }
                 case 5 -> {
                     Grup g = Grup.obtenirGrupConsola(s, em);
-                    g.mostrarDespesesPerCategoria(em);
+                    g.mostrarPagamentsEntreUsuaris(false);
                 }
                 case 6 -> {
+                    Grup g = Grup.obtenirGrupConsola(s, em);
+                    g.mostrarDespesesPerCategoria();
+                }
+                case 7 -> {
                     Despesa d = Despesa.obtenirDespesaConsola(s);
                     dDAO.destroy(d);
                 }
