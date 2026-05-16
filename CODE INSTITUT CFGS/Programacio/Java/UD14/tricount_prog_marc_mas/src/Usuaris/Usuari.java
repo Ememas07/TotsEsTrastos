@@ -115,6 +115,10 @@ public class Usuari implements Serializable {
         String alias = s.nextLine();
         System.out.println("Quin es el seu nom");
         String nom = s.nextLine();
+        while (nom.length() == 0) {
+            System.out.println("Not pot deixar el nom buit, per favor, introdueixi un nom");
+            nom = s.nextLine();
+        }
         System.out.println("Quin es el seu primer llinatge?");
         String llinatge1 = s.nextLine();
         System.out.println("Quin es el seu segon llinatge");
