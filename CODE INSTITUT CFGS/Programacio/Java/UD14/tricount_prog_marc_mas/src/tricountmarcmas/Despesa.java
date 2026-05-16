@@ -115,8 +115,10 @@ public class Despesa implements Serializable {
     public static Despesa crearDespesaConsola(Scanner s, EntityManager em) {
         s.nextLine(); //buidam el búfer de scanner
         Date datadespesa = demanarDataConsola(s); //demanam la data i feim comprovacions al mètode
+        Grup.printAll();
         Grup grup = Grup.obtenirGrupConsola(s, em); //obtenim el grup i feim comprovacions al mètode
         System.out.println("Pagador original:");
+        grup.veureUsuaris();
         Usuari pagadororiginal = Usuari.obtenirUsuariConsola(s, em);
         while (!esPossiblePagador(pagadororiginal, grup)) {
             pagadororiginal = Usuari.obtenirUsuariConsola(s, em); //demanam l'usuari i feim comprovacions al mètode 
@@ -139,11 +141,10 @@ public class Despesa implements Serializable {
             System.out.println("Per favor, introdueixi la data de la despesa en format DD/MM/YYYY");
             System.out.println("Assegura't de posar 0s si cal, es a dir, 03/07/2026");
             System.out.println("Si vol emprar la data d'avui, introdueixi 1");
-            String opcio = s.next();
-            if (opcio.equals("1")) {
+            String text = s.next();
+            if (text.equals("1")) {
                 return new Date(); //new Date serà la data actual
             }
-            String text = s.next();
             Pattern p = Pattern.compile("[0-9]{2}/[0-9]{2}/[0-9]{4}"); //comprovam que el format sigui XX/YY/ZZZZ, amb 0s si cal
             Matcher m = p.matcher(text);
             while (!m.find()) {
@@ -259,9 +260,12 @@ public class Despesa implements Serializable {
         PagadorDAO pDAO = new PagadorDAO(em);
         for (Pagador pagador : pagadors) {
             pDAO.create(pagador); //recorresc tot l'array i afegesc tots els pagadors
-            this.pagadorList.add(pagador);
+            if (!this.pagadorList.contains(pagador)) {
+                this.pagadorList.add(pagador);
+            }
         }
         this.actualitzarImport(em);
+        System.out.println("La despesa s'ha creat amb èxit!");
     }
 
     public boolean esPossiblePagador(Usuari u, Pagador[] pagadors) {

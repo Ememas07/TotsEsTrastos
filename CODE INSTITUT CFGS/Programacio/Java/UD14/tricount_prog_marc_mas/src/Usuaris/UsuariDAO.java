@@ -4,6 +4,8 @@
  */
 package Usuaris;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -37,15 +39,15 @@ public class UsuariDAO {
         em.flush();
         tx.commit(); //i feim commit
     }
-    
+
     public void destroy(Usuari u) {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         em.remove(u);
         tx.commit();
     }
-    
-     public void destroy(String correu) {
+
+    public void destroy(String correu) {
         Usuari u = UsuariDAO.find(correu);
         this.destroy(u);
     }
@@ -53,12 +55,16 @@ public class UsuariDAO {
     public static Usuari find(String correu) {
         return em.find(Usuari.class, correu);
     }
-    
-    public static Usuari find(String correu, EntityManager em){
+
+    public static Usuari find(String correu, EntityManager em) {
         return em.find(Usuari.class, correu);
     }
-    
-    public static void setEntityManager(EntityManager e){
+
+    public static List<Usuari> getAll() {
+        return em.createQuery("SELECT u FROM Usuari u", Usuari.class).getResultList();
+    }
+
+    public static void setEntityManager(EntityManager e) {
         em = e;
     }
 }

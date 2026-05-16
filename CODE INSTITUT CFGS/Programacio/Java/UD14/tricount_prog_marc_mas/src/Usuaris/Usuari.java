@@ -172,10 +172,12 @@ public class Usuari implements Serializable {
 
     public void afegirPagador(Pagador p, EntityManager em) {
         List<Pagador> llistaPagadors = getPagadorList(); //carregam llista de pagadors
-        llistaPagadors.add(p); //afegim pagador
-        setPagadorList(llistaPagadors); //i setejam
-        UsuariDAO uDAO = new UsuariDAO(em); //cream un DAO
-        uDAO.updateDatabase(); //i editam 
+        if (!llistaPagadors.contains(p)) {
+            llistaPagadors.add(p); //afegim pagador
+            setPagadorList(llistaPagadors); //i setejam
+            UsuariDAO uDAO = new UsuariDAO(em); //cream un DAO
+            uDAO.updateDatabase(); //i editam 
+        }
     }
 
     public static Usuari obtenirUsuari(String correu) {
@@ -212,7 +214,8 @@ public class Usuari implements Serializable {
         s.nextLine(); //per resetejar scanner
         while (idGrup > 0) {
             System.out.println("Introduint l'usuari " + this.getCorreu() + " a grups: "); //mostram quin usuari esteim afegint
-            this.veureGrups(); //mostram els grups actuals de l'usuari
+            this.veureGrups(); //mostram els grups actuals i disponibles a l'usuari
+            this.veureGrupsDisponibles();
             System.out.println("Per aturar d'introduir, escrigui un nombre negatiu");
             System.out.println("Introdueixi l'id del grup"); //demanam l'id del grup
             idGrup = s.nextInt();
@@ -224,7 +227,9 @@ public class Usuari implements Serializable {
                     g = Grup.obtenirGrup(idGrup, em);
                 }
                 g.afegirUsuari(correu, em); //afegim l'usuari al grup, i afegim el grup a l'usuari també (per evitar que no es mostri a la llista)
-                this.afegirGrup(g.getId(), em);
+                if (!this.getGrupList().contains(g)) { //per evitar duplicats
+                    this.afegirGrup(g.getId(), em);
+                }
             }
         }
 
@@ -248,6 +253,18 @@ public class Usuari implements Serializable {
             System.out.println("Grups actuals:");
             for (Object grup : grups) {
                 System.out.println((Grup) grup); //imprimesc tots els grups de l'usuari
+            }
+        }
+    }
+
+    public void veureGrupsDisponibles() {
+        List<Grup> l = GrupDAO.getAll();
+        Object grups[] = l.toArray(); //ho convertesc a un array
+        System.out.println("Grups disponibles: ");
+        for (Object grup : grups) {
+            Grup g = (Grup) grup;
+            if (!g.getUsuariList().contains(this)) { //si la llista d'usuaris no conté l'usuari, el mostram
+                System.out.println(g);
             }
         }
     }

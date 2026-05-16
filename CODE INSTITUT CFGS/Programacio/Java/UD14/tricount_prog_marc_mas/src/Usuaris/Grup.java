@@ -131,6 +131,7 @@ public class Grup implements Serializable {
         while (!correu.equals("Atura")) { //mentres no introduesqui "atura", afegirem usuaris
             System.out.println("Introduint Usuaris al grup: " + this); //mostram l'id del grup al que esteim afegint
             this.veureUsuaris();
+            this.veureUsuarisDisponibles();
             System.out.println("Per aturar d'introduir, escrigui \"Atura\"");
             System.out.println("Introdueixi el correu de l'usuari");
             correu = s.nextLine();
@@ -165,6 +166,27 @@ public class Grup implements Serializable {
             System.out.println("Usuaris actuals:");
             for (Object usuari : usuaris) {
                 System.out.println((Usuari) usuari); //imprimesc tots els usuaris del grup
+            }
+        }
+    }
+
+    public static void printAll() {
+        List<Grup> l = GrupDAO.getAll();
+        Object grups[] = l.toArray(); //ho convertesc a un array
+        for (Object grup : grups) {
+            Grup g = (Grup) grup;
+            System.out.println(g);
+        }
+    }
+
+    public void veureUsuarisDisponibles() {
+        List<Usuari> l = UsuariDAO.getAll();
+        Object usuaris[] = l.toArray(); //ho convertesc a un array
+        System.out.println("Grups disponibles: ");
+        for (Object usuari : usuaris) {
+            Usuari u = (Usuari) usuari;
+            if (!this.getUsuariList().contains(u)) { //si la llista d'usuaris no conté l'usuari, el mostram
+                System.out.println(u);
             }
         }
     }

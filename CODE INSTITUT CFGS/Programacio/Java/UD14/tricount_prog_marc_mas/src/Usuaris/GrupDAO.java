@@ -4,6 +4,8 @@
  */
 package Usuaris;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -56,6 +58,10 @@ public class GrupDAO {
 
     public static Grup find(int id, EntityManager em) {
         return em.find(Grup.class, id);
+    }
+
+    public static List<Grup> getAll() {
+        return em.createQuery("SELECT g FROM Grup g", Grup.class).getResultList();
     }
 
     public static void setEntityManager(EntityManager e) {

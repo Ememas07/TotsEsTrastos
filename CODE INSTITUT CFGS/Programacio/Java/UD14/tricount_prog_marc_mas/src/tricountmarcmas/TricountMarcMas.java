@@ -178,7 +178,6 @@ public class TricountMarcMas {
             System.out.println("4: Mostrar deutes entre usuaris d'un grup");
             System.out.println("5: Mostrar tots els pagament entre usuaris d'un grup");
             System.out.println("6: Mostrar total pagat d'un grup a cada categoria");
-            System.out.println("7: Eliminar una despesa");
             System.out.println("-1: Sortir");
             opcio = s.nextInt();
             switch (opcio) {
@@ -205,10 +204,6 @@ public class TricountMarcMas {
                 case 6 -> {
                     Grup g = Grup.obtenirGrupConsola(s, em);
                     g.mostrarDespesesPerCategoria();
-                }
-                case 7 -> {
-                    Despesa d = Despesa.obtenirDespesaConsola(s);
-                    dDAO.destroy(d);
                 }
             }
         }

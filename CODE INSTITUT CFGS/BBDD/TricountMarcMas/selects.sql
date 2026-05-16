@@ -1,4 +1,4 @@
--- Active: 1778078067998@@127.0.0.1@5432@TricountMarcMas@public
+-- Active: 1778856311013@@127.0.0.1@5432@TricountMarcMas@public
 
 -- Mostrar import i % de despeses de cada categoria
 SELECT categoria, sumatotal, TO_CHAR(
@@ -64,8 +64,8 @@ FROM (
             LEFT JOIN pagador ON pagador.iddespesa = despesa.id
         WHERE
             hapagat = true
+            -- AND idGrup = 100 -- opcionalment es pot filtrar per nomes un grup */
         GROUP BY
             idgrup, idusuari
         ORDER BY idgrup
     )
-/* WHERE idGrup = 100 -- opcionalment es pot filtrar per nomes un grup */
