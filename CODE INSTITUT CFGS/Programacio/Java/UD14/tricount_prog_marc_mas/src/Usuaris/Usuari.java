@@ -226,8 +226,10 @@ public class Usuari implements Serializable {
                     idGrup = s.nextInt();
                     g = Grup.obtenirGrup(idGrup, em);
                 }
-                g.afegirUsuari(correu, em); //afegim l'usuari al grup, i afegim el grup a l'usuari també (per evitar que no es mostri a la llista)
-                if (!this.getGrupList().contains(g)) { //per evitar duplicats
+                if (g != null) {
+                    g.afegirUsuari(correu, em);
+                } //afegim l'usuari al grup, i afegim el grup a l'usuari també (per evitar que no es mostri a la llista)
+                if (!this.getGrupList().contains(g) && g != null) { //per evitar duplicats
                     this.afegirGrup(g.getId(), em);
                 }
             }
