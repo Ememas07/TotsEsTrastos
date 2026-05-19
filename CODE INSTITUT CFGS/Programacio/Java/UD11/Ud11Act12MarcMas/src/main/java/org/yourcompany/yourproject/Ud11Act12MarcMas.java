@@ -3,6 +3,9 @@
  */
 package org.yourcompany.yourproject;
 
+import java.util.Scanner;
+import java.util.Set;
+
 /**
  * Implementar la classe Sorteig amb paràmetres genèrics. Haurà de guardar un
  * conjunt de valors distints de tipus genèric, subministrats per consola i serà
@@ -21,6 +24,20 @@ package org.yourcompany.yourproject;
 public class Ud11Act12MarcMas {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Sorteig<Integer> sorteig = new Sorteig();
+        Scanner s = new Scanner(System.in);
+        System.out.println("Benvingut al meu sorteig!");
+        int num = 1;
+        System.out.println("Introdueix un nombre per afegir al sorteig, o un nombre negatiu per atura");
+        while (num > 0) {
+            num = s.nextInt();
+            if (num > 0) {
+                sorteig.add(num);
+            }
+        }
+        System.out.println("Quants de nombres guanyadors vol generar?");
+        num = s.nextInt();
+        Set<Integer> premiats = sorteig.premiats(num+1); //la funció genera un nombre menys del que demanes, així que sumam 1 per generar el nombre correcte
+        System.out.println(premiats.toString());
     }
 }
