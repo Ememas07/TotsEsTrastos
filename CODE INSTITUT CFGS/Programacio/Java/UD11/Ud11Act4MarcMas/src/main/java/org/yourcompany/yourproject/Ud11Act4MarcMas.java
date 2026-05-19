@@ -35,13 +35,16 @@ public class Ud11Act4MarcMas {
                 c.add(n);
             }
         }
+        System.out.println("Nombres:");
         System.out.println(c.toString());
+        System.out.println("Nombres parells:");
         for (Integer num : c) {
             if (num % 2 == 0) {
-                System.out.print(num+" ");
+                System.out.print(num + " ");
             }
         }
         System.out.println("");
+        System.out.println("Nombre que no son multiples de 3:");
         Iterator<Integer> it = c.iterator();
         while (it.hasNext()) {
             if (it.next() % 3 == 0) {
