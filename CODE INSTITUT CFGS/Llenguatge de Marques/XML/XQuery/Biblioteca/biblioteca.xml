@@ -1,0 +1,23 @@
+<biblioteca>
+    <libro>
+        <titulo>Transbordo en Moscú</titulo>
+        <autor>Eduardo Mendoza</autor>
+        <fechaPublicacion año="1973" />
+        <numPaginas>376</numPaginas>
+        <editorial>Seix Barral</editorial>
+    </libro>
+    <libro>
+        <titulo>Pequeña historia de la Transición</titulo>
+        <autor fechaNacimiento="11/11/1948">Victoria Prego</autor>
+        <fechaPublicacion año="2021" />
+        <numPaginas>248</numPaginas>
+        <editorial>Espasa</editorial>
+    </libro>
+    <libro>
+        <titulo>DESPUES</titulo>
+        <autor fechaNacimiento="21/09/1947">Stephen King</autor>
+        <fechaPublicacion año="2021" />
+        <numPaginas>248</numPaginas>
+        <editorial>PLAZA JANES EDITORES</editorial>
+    </libro>
+</biblioteca>

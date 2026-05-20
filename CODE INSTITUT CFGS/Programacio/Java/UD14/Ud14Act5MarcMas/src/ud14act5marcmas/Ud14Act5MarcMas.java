@@ -5,6 +5,8 @@
 package ud14act5marcmas;
 
 /**
+ * Continua amb l'activitat anterior, permetent modificar tots els camps,
+ * excepte la matrícula.
  *
  * @author Marc Mas
  */
@@ -16,5 +18,5 @@ public class Ud14Act5MarcMas {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
 }

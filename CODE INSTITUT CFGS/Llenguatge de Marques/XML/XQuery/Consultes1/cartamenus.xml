@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carta>
+    <nombre>Carta de menús</nombre>
+    <autor>Nombre Apellidos</autor>
+    <menus>
+        <menu id="eco">
+            <nombre>Economico</nombre>
+            <precio>9</precio>
+        </menu>
+        <menu id="med">
+            <nombre>Medio</nombre>
+            <precio>18</precio>
+        </menu>
+        <menu id="gou">
+            <nombre>Gourmet</nombre>
+            <precio>30</precio>
+        </menu>
+    </menus>
+    <platos>
+        <ensaladas>
+            <ensalada id="01">
+                <nombre>Ensalada de langostinos con foie</nombre>
+                <vegana>Si</vegana>
+                <calorias cant="300" />
+                <menu>gou</menu>
+            </ensalada>
+            <ensalada id="02">
+                <nombre>Ensalada César</nombre>
+                <vegana>No</vegana>
+                <calorias cant="350" />
+                <menu>med</menu>
+            </ensalada>
+            <ensalada id="03">
+                <nombre>Ensalada valenciana completa</nombre>
+                <vegana>Si</vegana>
+                <calorias cant="200" />
+                <menu>eco</menu>
+            </ensalada>
+        </ensaladas>
+        <pastas>
+            <pasta id="04">
+                <nombre>Tagliatelle al pesto</nombre>
+                <vegana>Si</vegana>
+                <calorias cant="350" />
+                <menu>med</menu>
+            </pasta>
+            <pasta id="05">
+                <nombre>Espirales boloñesa</nombre>
+                <vegana>No</vegana>
+                <calorias cant="350" />
+                <menu>gou</menu>
+                <menu>med</menu>
+            </pasta>
+            <pasta id="06">
+                <nombre>Espaguetti carbonara</nombre> 3 <vegana>No</vegana>
+<calorias cant="400" />
+<menu>
+                eco</menu>
+            </pasta>
+        </pastas>
+        <postres>
+            <postre id="07">
+                <nombre>Macedonia fruta natural</nombre>
+                <vegana>Si</vegana>
+                <calorias cant="150" />
+                <menu>eco</menu>
+            </postre>
+            <postre id="08">
+                <nombre>Mousse de chocolate</nombre>
+                <vegana>Si</vegana>
+                <calorias cant="400" />
+                <menu>med</menu>
+            </postre>
+            <postre id="09">
+                <nombre>Tarta de naranja</nombre>
+                <vegana>Si</vegana>
+                <calorias cant="400" />
+                <menu>gou</menu>
+                <menu>med</menu>
+            </postre>
+        </postres>
+    </platos>
+</carta>

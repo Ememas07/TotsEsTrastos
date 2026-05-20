@@ -4,13 +4,8 @@
  */
 package ud14act2marcmas;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
 /**
- * Modifica la classe Alumne per a que la JPA s’encarregui d’assignar un nom
+ * Modifica la classe Alumne per a que la JPA s'encarregui d'assignar un nom
  * distint a cada alumne
  *
  * @author Marc Mas

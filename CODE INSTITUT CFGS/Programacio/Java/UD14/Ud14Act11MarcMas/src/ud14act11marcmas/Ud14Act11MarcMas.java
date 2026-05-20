@@ -5,6 +5,8 @@
 package ud14act11marcmas;
 
 /**
+ * Esborrar tots els empleats que tenen un sou negatiu (que pot haver estat per
+ * qualque error)
  *
  * @author Marc Mas
  */
@@ -16,5 +18,5 @@ public class Ud14Act11MarcMas {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
 }

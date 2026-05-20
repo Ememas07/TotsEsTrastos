@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="http://localhost/UD6/caso_practico_3.xsl"?>
+<agenda>
+    <persona id="01">
+        <identificadores>
+            <nombre>Nombre1</nombre>
+            <apellidos>Apellido1</apellidos>
+        </identificadores>
+        <direccion>
+            <calle>Avenida 1</calle>
+            <localidad>Ciudad1</localidad>
+            <cp>11111</cp>
+        </direccion>
+        <telefonos>
+            <movil>611111111</movil>
+        </telefonos>
+    </persona>
+    <persona id="02">
+        <identificadores>
+            <nombre>Nombre2</nombre>
+            <apellidos>Apellido2</apellidos>
+        </identificadores>
+        <direccion>
+            <calle>Plaza 2</calle>
+            <localidad>Ciudad2</localidad>
+            <cp>22222</cp>
+        </direccion>
+        <telefonos>
+            <movil>622222222</movil>
+            <fijo>922222222</fijo>
+        </telefonos>
+    </persona>
+</agenda>

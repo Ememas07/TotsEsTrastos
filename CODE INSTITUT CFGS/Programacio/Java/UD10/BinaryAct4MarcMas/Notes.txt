@@ -1,0 +1,5 @@
+La capçalera està marcada com a "GFV" i "GFV(espai)" així que la longitut són 4 bytes
+El numero d'algoritme no existeix (?)
+el nom Original està a dins cada Vehicle
+midaOriginal no està
+quantita de fragments està després d'algoritme

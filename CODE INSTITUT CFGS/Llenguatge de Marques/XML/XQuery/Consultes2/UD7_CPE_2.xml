@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<evolucion>
+<hecho>
+<nombre>Ábaco</nombre>
+<descripcion>Es el dispositivo más antiguo utilizado para realizar
+operaciones aritméticas.</descripcion>
+<autor></autor>
+<fecha>
+<dia></dia>
+<mes></mes>
+<anyo>-3500</anyo>
+</fecha>
+</hecho>
+<hecho>
+<nombre>Calculadora universal</nombre>
+<descripcion>Máquina que suma, resta, multiplica, divide y hace raíces
+cuadradas.</descripcion>
+<autor>Leibnitz</autor>
+<fecha>
+<dia>8</dia>
+<mes>Marzo</mes>
+<anyo>1646</anyo>
+</fecha>
+</hecho>
+<hecho>
+<nombre>Máquina analítica</nombre>
+<descripcion>Máquina que resolvía funciones y obtenía
+tablas.</descripcion>
+<autor>Charles Babbage</autor>
+<autor>Ada Lovelace</autor>
+<fecha>
+<dia>14</dia>
+<mes>Marzo</mes>
+<anyo>1792</anyo>
+</fecha>
+</hecho>
+<hecho>
+<nombre>Varias máquinas</nombre>
+<descripcion>Construyó una máquina para jugar al ajedrez y
+calculadora.</descripcion>
+<autor>Torres Quevedo</autor>
+<fecha>
+<dia>12</dia>
+<mes>Abril</mes>
+<anyo>1852</anyo>
+</fecha>
+</hecho>
+<hecho>
+<nombre>Máquina de Turing</nombre>
+<descripcion>Máquina capaz de resolver todo tipo de problemas con la
+solución algorítmica. Con Turing se inició la teoría matemática de la
+computación.</descripcion>
+<autor>Alan Turing</autor>
+<fecha>
+<dia>15</dia>
+<mes>Septiembre</mes>
+<anyo>1936</anyo>
+</fecha>
+</hecho>
+<hecho>
+<nombre>Ordenador digital electrónico</nombre>
+<descripcion>El primer ordenador del mundo fue el EDSAC, desarrollado en
+la Universidad de Cambridge.</descripcion>
+<autor>Maurice V. Wilkes</autor>
+<fecha>
+<dia></dia>
+<mes></mes>
+<anyo>1943</anyo>
+</fecha>
+</hecho>
+<hecho>
+<nombre>Segunda generacion de ordenadores</nombre>
+<descripcion>Reemplaza las válvulas de vacío por los transistores. Son más
+pequeños y consumen menos electricidad.</descripcion>
+<autor>Empresa IBM</autor>
+<fecha>
+<dia></dia>
+<mes></mes>
+<anyo>1958</anyo>
+</fecha>
+</hecho>
+<hecho>
+<nombre>Código ASCII</nombre>
+<descripcion>Nace a partir de reordenar y expandir el conjunto de símbolos
+y caracteres utilizados en aquel momento en telegrafía por la compañía
+Bell.</descripcion>
+<autor>Organismo ANSI</autor>
+<fecha>
+<dia></dia>
+<mes></mes>
+<anyo>1963</anyo>
+</fecha>
+</hecho>
+<hecho>
+<nombre>Chips</nombre>
+<descripcion>Estructura de pequeñas dimensiones de material
+semiconductor, sobre la que se fabrican circuitos electrónicos.</descripcion>
+<autor>Jack S. Kilby</autor>
+<autor>Robert Noyce</autor>
+<fecha>
+<dia></dia>
+<mes></mes>
+<anyo>1964</anyo>
+</fecha>
+</hecho>
+<hecho>
+<nombre>ARPANET</nombre>
+<descripcion>Red de computadoras construida como un medio para enviar
+datos militares y conectar grupos de investigación a través de los Estados
+Unidos.</descripcion>
+<autor>MIT (Massachusetts Institute of Technology)</autor>
+<fecha>
+<dia></dia>
+<mes></mes>
+<anyo>1969</anyo>
+</fecha>
+</hecho>
+<hecho>
+<nombre>MS-DOS</nombre>
+<descripcion>Es un sistema operativo de disco para el IBM PC y sistemas
+compatibles. Este sistema operativo dominó el mercado de los ordenadores
+personales entre 1985 y 1995.</descripcion>
+<autor>Empresa Microsoft</autor>
+<fecha>
+<dia></dia>
+<mes></mes>
+<anyo>1981</anyo>
+</fecha>
+</hecho>
+<hecho>
+<nombre>World Wide Web</nombre>
+<descripcion>Es un sistema de distribución de documentos de hipertexto o
+hipermedios interconectados y accesibles vía Internet.</descripcion>
+<autor>Tim Berners Lee</autor>
+<fecha>
+<dia></dia>
+<mes></mes>
+<anyo>1990</anyo>
+</fecha>
+</hecho>
+<hecho>
+<nombre>Núcleo Linux</nombre>
+<descripcion>Linux es el núcleo de un sistema operativo libre, basado en
+Unix. Linux está licenciado bajo la GPL v2 y está desarrollado por
+colaboradores de todo el mundo.</descripcion>
+<autor>Linus Torvalds</autor>
+<fecha>
+<dia></dia>
+<mes></mes>
+<anyo>1991</anyo>
+</fecha>
+</hecho>
+<hecho>
+<nombre>Pentium 2</nombre>
+<descripcion>El Pentium II es un microprocesador con arquitectura x86
+diseñado por Intel.</descripcion>
+<autor>Empresa INTEL</autor>
+<fecha>
+<dia>7</dia>
+<mes>Mayo</mes>
+<anyo>1997</anyo>
+</fecha>
+</hecho>
+<hecho>
+<nombre>Ordenadores cuánticos</nombre>
+<descripcion>Se basan en los principios de la mecánica cuántica. En lugar
+de utilizar bits usan qubits, que pueden tener los dos estados de
+procesamiento al mismo tiempo, o ninguno. Esta tecnología mejora mucho la
+velocidad de procesamiento.</descripcion>
+<autor>Empresa IBM</autor>
+<fecha>
+<dia></dia>
+<mes>Enero</mes>
+<anyo>2019</anyo>
+</fecha>
+</hecho>
+</evolucion>
