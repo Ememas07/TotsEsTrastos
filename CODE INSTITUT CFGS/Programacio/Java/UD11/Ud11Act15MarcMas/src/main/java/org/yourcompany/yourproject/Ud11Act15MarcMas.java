@@ -32,7 +32,7 @@ import java.util.Set;
 public class Ud11Act15MarcMas {
 
     public static void main(String[] args) {
-        Map<String, Jugador> jugadors = new HashMap<>();
+        Map<String, Jugador> jugadors = new HashMap<>(); //cream un mapa que tendrà el nom del jugador i un jugador com a clau i valor
         jugadors.put("Casillas", new Jugador(1, "Casillas", "Portero"));
         jugadors.put("Ramos", new Jugador(15, "Ramos", "Lateral Derecho"));
         jugadors.put("Pique", new Jugador(13, "Pique", "Central"));
@@ -45,8 +45,8 @@ public class Ud11Act15MarcMas {
         jugadors.put("Iniesta", new Jugador(6, "Iniesta", "Interior Derecho"));
         jugadors.put("Villa", new Jugador(7, "Villa", "Delantero"));
         System.out.println("Mapa sencer:");
-        System.out.println(jugadors.toString());
-        Set<Map.Entry<String, Jugador>> set = jugadors.entrySet(); //agafam un set amb totes les entrades
+        System.out.println(jugadors.toString()); //imprimesc el mapa sencer
+        Set<Map.Entry<String, Jugador>> set = jugadors.entrySet(); //faig un set amb totes les entrades
         Iterator<Map.Entry<String, Jugador>> it; //cream un iterador
         for (it = set.iterator(); it.hasNext();) { //iniciam un iterador amb el set, i feim el bucle mentres hi hagui entrades seguents
             Entry<String, Jugador> entrada = it.next(); //agafam l'entrada del mapa

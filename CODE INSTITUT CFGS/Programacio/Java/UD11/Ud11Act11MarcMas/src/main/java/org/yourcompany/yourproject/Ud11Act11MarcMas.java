@@ -28,30 +28,29 @@ import java.util.Set;
 public class Ud11Act11MarcMas {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        ArrayList<Integer> l = new ArrayList();
+        ArrayList<Integer> l = new ArrayList(); //cream dues ArrayList 
         ArrayList<Integer> l2 = new ArrayList();
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 9; i++) { //les omplim amb 10 nombre de 1 a 20
             int n = 1 + (int) (Math.random() * 19);
             l.add(n);
             n = 1 + (int) (Math.random() * 19);
             l2.add(n);
         }
-        HashSet h1 = new HashSet(l);
+        HashSet h1 = new HashSet(l); //cream dos conjunts, un amb cada llista
         HashSet h2 = new HashSet(l2);
-        System.out.println("Llista 1:"+h1.toString());
+        System.out.println("Llista 1:"+h1.toString()); //imprimim les llistes abans
         System.out.println("Llista 2:"+h2.toString());
-        Set h3 = unio(h1, h2);
+        Set h3 = unio(h1, h2); //cream un nou set i li assignam el valor de la unio
         System.out.println("Unio:"+h3.toString());
-        Set h4 = inters(h1, h2);
+        Set h4 = inters(h1, h2); //cream un nou set i li assignam el valor de la interseccio
         System.out.println("Interseccio:"+h4.toString());
 
     }
 
     public static <E> Set<E> unio(Set<E> conj1, Set<E> conj2) {
-        Set<E> unio = new HashSet(conj1);
-        unio.addAll(conj2);
-        return unio;
+        Set<E> unio = new HashSet(conj1); //feim una copia del conjunt 1
+        unio.addAll(conj2); //per unir, afegim tots els valors del conjunt 2 al conjunt 1
+        return unio; //retornam el conjunt amb els valors afegits
     }
 
     public static <E> Set<E> inters(Set<E> conj1, Set<E> conj2) {
@@ -59,14 +58,14 @@ public class Ud11Act11MarcMas {
         //cream dos sets buits
         Set<E> setGran;
         Set<E> setPetit;
-        if (conj1.size() > conj2.size()) { //he de agafar el set més gran dels dos per iterar, i l'altre per comprar
+        if (conj1.size() > conj2.size()) { //he de agafar el set més gran dels dos per iterar, i l'altre per veure si l'he d'afegir o no
             setGran = conj1;
             setPetit = conj2;
         } else {
             setGran = conj2;        
             setPetit = conj1;
         }
-        for (E element : setGran) { //per cada element del set gran, mir si està al petit, i si ho està, el pos al set interseccion
+        for (E element : setGran) { //per cada element del set gran, mir si està al petit, i si ho està, el pos al set interseccio
             if (setPetit.contains(element)) {
                 interseccio.add(element);
             }

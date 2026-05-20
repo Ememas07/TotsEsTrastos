@@ -25,16 +25,16 @@ public class Ud11Act3MarcMas {
         Contenidor<Integer> contenidor = new Contenidor();
         Scanner s = new Scanner(System.in);
         System.out.println("Introdueixi nombres enters per omplir la pila, Introdueixi un nombre negatiu per aturar");
-        int n = 1;
-        while (n > 0) {
-            n = s.nextInt();
-            if (n > 0) {
+        int n = 1; //iniciam el bucle
+        while (n > 0) { //demanam un numero mentre N sigui positiu
+            n = s.nextInt(); 
+            if (n > 0) { //si n es positiu, l'afegim
                 contenidor.push(n);
             }
         }
-        while (!contenidor.esBuida()) {
-            Integer num = contenidor.pop();
-            System.out.println(num);
+        while (!contenidor.esBuida()) { //mentre el contenidor no estigui buit
+            Integer num = contenidor.pop(); //treim un numero 
+            System.out.println(num); //i el mostram per pantalla
         }
 
     }

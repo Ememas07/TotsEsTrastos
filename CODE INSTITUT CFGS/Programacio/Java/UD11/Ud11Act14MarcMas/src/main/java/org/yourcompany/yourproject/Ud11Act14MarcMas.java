@@ -23,7 +23,7 @@ package org.yourcompany.yourproject;
  * amb lletra, per ordre de lletra (clau), nom i data d'ingrés. Cal recordar
  * que, en codi Unicode, les majúscules van abans que les minúscules.
  *
- *  *66 @author Marc Mas
+ * @author Marc Mas
  */
 public class Ud11Act14MarcMas {
 
