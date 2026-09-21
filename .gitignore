@@ -2,17 +2,20 @@
 .Rhistory
 .RData
 .Ruserdata
-CODE INSTITUT CFGS/BBDD/MariaDB/.env.local
-CODE INSTITUT CFGS/BBDD/MariaDB/docker/mariadb_data/
-CODE INSTITUT CFGS/BBDD/MariaDB2/.env.local
-CODE INSTITUT CFGS/BBDD/MariaDB2/docker/mariadb_data/
-CODE INSTITUT CFGS/Programacio/Java/UD14/tricount_prog_marc_mas/src/javax/
-/CODE INSTITUT CFGS/Programacio/Java/UD14/tricount_prog_marc_mas/build/classes/javax
-/CODE INSTITUT CFGS/Programacio/Java/UD10/BinarisAct1MarcMas/target/
-/CODE INSTITUT CFGS/Programacio/Java/UD10/BinaryAct1MarcMas/target/
-/CODE INSTITUT CFGS/Programacio/Java/UD10/BinaryAct2MarcMas/target/
-/CODE INSTITUT CFGS/Programacio/Java/UD10/BinaryAct3MarcMas/target/
-CODE INSTITUT CFGS/Programacio/Projecte-Lode-Runner/
-CODE INSTITUT CFGS/Programacio/Projecte-Lode-Runner
+CODE INSTITUT CFGS/PRIMER/BBDD/MariaDB/.env.local
+CODE INSTITUT CFGS/PRIMER/BBDD/MariaDB/docker/mariadb_data/
+CODE INSTITUT CFGS/PRIMER/BBDD/MariaDB2/.env.local
+CODE INSTITUT CFGS/PRIMER/BBDD/MariaDB2/docker/mariadb_data/
+CODE INSTITUT CFGS/PRIMER/Programacio/Java/UD14/tricount_prog_marc_mas/src/javax/
+/CODE INSTITUT CFGS/PRIMER/Programacio/Java/UD14/tricount_prog_marc_mas/build/classes/javax
+/CODE INSTITUT CFGS/PRIMER/Programacio/Java/UD10/BinarisAct1MarcMas/target/
+/CODE INSTITUT CFGS/PRIMER/Programacio/Java/UD10/BinaryAct1MarcMas/target/
+/CODE INSTITUT CFGS/PRIMER/Programacio/Java/UD10/BinaryAct2MarcMas/target/
+/CODE INSTITUT CFGS/PRIMER/Programacio/Java/UD10/BinaryAct3MarcMas/target/
+CODE INSTITUT CFGS/PRIMER/Programacio/Projecte-Lode-Runner/
+CODE INSTITUT CFGS/PRIMER/Programacio/Projecte-Lode-Runner
 Penguin-Runner/
 Penguin Runner/
+TorreRondalles/
+MPI Torre/
+Torre/
